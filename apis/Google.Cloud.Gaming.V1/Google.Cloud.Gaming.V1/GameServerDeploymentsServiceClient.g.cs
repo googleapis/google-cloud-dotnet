@@ -270,10 +270,10 @@ namespace Google.Cloud.Gaming.V1
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Timeout: 120 seconds.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings FetchDeploymentStateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(120000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings FetchDeploymentStateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="GameServerDeploymentsServiceSettings"/> object.</returns>
@@ -462,7 +462,7 @@ namespace Google.Cloud.Gaming.V1
         /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -487,7 +487,7 @@ namespace Google.Cloud.Gaming.V1
         /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -512,7 +512,7 @@ namespace Google.Cloud.Gaming.V1
         /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -537,7 +537,7 @@ namespace Google.Cloud.Gaming.V1
         /// Lists game server deployments in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="pageToken">
@@ -589,8 +589,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -605,8 +604,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -621,8 +619,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -634,8 +631,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -650,8 +646,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -666,8 +661,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details of a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -733,7 +727,7 @@ namespace Google.Cloud.Gaming.V1
         /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
@@ -752,7 +746,7 @@ namespace Google.Cloud.Gaming.V1
         /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
@@ -771,7 +765,7 @@ namespace Google.Cloud.Gaming.V1
         /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
@@ -786,7 +780,7 @@ namespace Google.Cloud.Gaming.V1
         /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
@@ -805,7 +799,7 @@ namespace Google.Cloud.Gaming.V1
         /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
@@ -824,7 +818,7 @@ namespace Google.Cloud.Gaming.V1
         /// Creates a new game server deployment in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource name. Uses the form:
+        /// Required. The parent resource name, in the following form:
         /// `projects/{project}/locations/{location}`.
         /// </param>
         /// <param name="gameServerDeployment">
@@ -893,8 +887,7 @@ namespace Google.Cloud.Gaming.V1
         /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to delete. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to delete, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -909,8 +902,7 @@ namespace Google.Cloud.Gaming.V1
         /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to delete. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to delete, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -925,8 +917,7 @@ namespace Google.Cloud.Gaming.V1
         /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to delete. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to delete, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -938,8 +929,7 @@ namespace Google.Cloud.Gaming.V1
         /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to delete. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to delete, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -954,8 +944,7 @@ namespace Google.Cloud.Gaming.V1
         /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to delete. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to delete, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -970,8 +959,7 @@ namespace Google.Cloud.Gaming.V1
         /// Deletes a single game server deployment.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to delete. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to delete, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1043,10 +1031,7 @@ namespace Google.Cloud.Gaming.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. For the `FieldMask` definition, see
-        /// 
-        /// https:
-        /// //developers.google.com/protocol-buffers
-        /// // /docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1067,10 +1052,7 @@ namespace Google.Cloud.Gaming.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. For the `FieldMask` definition, see
-        /// 
-        /// https:
-        /// //developers.google.com/protocol-buffers
-        /// // /docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1091,10 +1073,7 @@ namespace Google.Cloud.Gaming.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. For the `FieldMask` definition, see
-        /// 
-        /// https:
-        /// //developers.google.com/protocol-buffers
-        /// // /docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1132,8 +1111,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1148,8 +1126,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1164,8 +1141,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1177,8 +1153,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1193,8 +1168,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1209,8 +1183,7 @@ namespace Google.Cloud.Gaming.V1
         /// Gets details a single game server deployment rollout.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-        /// 
+        /// Required. The name of the game server delpoyment to retrieve, in the following form:
         /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1302,10 +1275,7 @@ namespace Google.Cloud.Gaming.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. For the `FieldMask` definition, see
-        /// 
-        /// https:
-        /// //developers.google.com/protocol-buffers
-        /// // /docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1331,10 +1301,7 @@ namespace Google.Cloud.Gaming.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. For the `FieldMask` definition, see
-        /// 
-        /// https:
-        /// //developers.google.com/protocol-buffers
-        /// // /docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1360,10 +1327,7 @@ namespace Google.Cloud.Gaming.V1
         /// <param name="updateMask">
         /// Required. Mask of fields to update. At least one path must be supplied in
         /// this field. For the `FieldMask` definition, see
-        /// 
-        /// https:
-        /// //developers.google.com/protocol-buffers
-        /// // /docs/reference/google.protobuf#fieldmask
+        /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

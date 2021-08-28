@@ -1577,7 +1577,6 @@ namespace Google.Cloud.Gaming.V1 {
     private string gameServerConfigName_ = "";
     /// <summary>
     /// The game server config resource. Uses the form:
-    ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1798,7 +1797,6 @@ namespace Google.Cloud.Gaming.V1 {
     private string gameServerClusterName_ = "";
     /// <summary>
     /// The game server cluster name. Uses the form:
-    ///
     /// `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1814,7 +1812,6 @@ namespace Google.Cloud.Gaming.V1 {
     private string gameServerDeploymentName_ = "";
     /// <summary>
     /// The game server deployment name. Uses the form:
-    ///
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

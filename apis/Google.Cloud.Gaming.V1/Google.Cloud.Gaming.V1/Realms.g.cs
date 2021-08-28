@@ -131,7 +131,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -703,7 +703,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the realm to retrieve. Uses the form:
+    /// Required. The name of the realm to retrieve, in the following form:
     /// `projects/{project}/locations/{location}/realms/{realm}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -884,7 +884,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1148,7 +1148,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the realm to delete. Uses the form:
+    /// Required. The name of the realm to delete, in the following form:
     /// `projects/{project}/locations/{location}/realms/{realm}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1345,10 +1345,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// Required. The update mask applies to the resource. For the `FieldMask`
     /// definition, see
-    ///
-    /// https:
-    /// //developers.google.com/protocol-buffers
-    /// // /docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -1587,10 +1584,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// Required. The update mask applies to the resource. For the `FieldMask`
     /// definition, see
-    ///
-    /// https:
-    /// //developers.google.com/protocol-buffers
-    /// // /docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -2089,7 +2083,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the realm. Uses the form:
+    /// The resource name of the realm, in the following form:
     /// `projects/{project}/locations/{location}/realms/{realm}`. For
     /// example, `projects/my-project/locations/{location}/realms/my-realm`.
     /// </summary>

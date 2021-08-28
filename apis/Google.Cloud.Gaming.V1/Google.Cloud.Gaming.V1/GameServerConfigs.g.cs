@@ -132,8 +132,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
-    ///
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -704,8 +703,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server config to retrieve. Uses the form:
-    ///
+    /// Required. The name of the game server config to retrieve, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -886,8 +884,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
-    ///
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1151,8 +1148,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server config to delete. Uses the form:
-    ///
+    /// Required. The name of the game server config to delete, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1831,11 +1827,9 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the game server config. Uses the form:
-    ///
+    /// The resource name of the game server config, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`.
     /// For example,
-    ///
     /// `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

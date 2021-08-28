@@ -30,77 +30,101 @@ namespace Google.Cloud.Gaming.V1 {
             "GiNnb29nbGUvY2xvdWQvZ2FtaW5nL3YxL2NvbW1vbi5wcm90bxogZ29vZ2xl",
             "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
             "aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i",
-            "wwEKHUxpc3RHYW1lU2VydmVyQ2x1c3RlcnNSZXF1ZXN0EkUKBnBhcmVudBgB",
+            "hQIKHUxpc3RHYW1lU2VydmVyQ2x1c3RlcnNSZXF1ZXN0EkUKBnBhcmVudBgB",
             "IAEoCUI14EEC+kEvEi1nYW1lc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vR2Ft",
             "ZVNlcnZlckNsdXN0ZXISFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFn",
             "ZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9y",
-            "ZGVyX2J5GAUgASgJQgPgQQEilwEKHkxpc3RHYW1lU2VydmVyQ2x1c3RlcnNS",
-            "ZXNwb25zZRJHChRnYW1lX3NlcnZlcl9jbHVzdGVycxgBIAMoCzIpLmdvb2ds",
-            "ZS5jbG91ZC5nYW1pbmcudjEuR2FtZVNlcnZlckNsdXN0ZXISFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAQgAygJImIKG0dldEdh",
-            "bWVTZXJ2ZXJDbHVzdGVyUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8K",
-            "LWdhbWVzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9HYW1lU2VydmVyQ2x1c3Rl",
-            "ciLZAQoeQ3JlYXRlR2FtZVNlcnZlckNsdXN0ZXJSZXF1ZXN0EkUKBnBhcmVu",
+            "ZGVyX2J5GAUgASgJQgPgQQESQAoEdmlldxgGIAEoDjItLmdvb2dsZS5jbG91",
+            "ZC5nYW1pbmcudjEuR2FtZVNlcnZlckNsdXN0ZXJWaWV3QgPgQQEilwEKHkxp",
+            "c3RHYW1lU2VydmVyQ2x1c3RlcnNSZXNwb25zZRJHChRnYW1lX3NlcnZlcl9j",
+            "bHVzdGVycxgBIAMoCzIpLmdvb2dsZS5jbG91ZC5nYW1pbmcudjEuR2FtZVNl",
+            "cnZlckNsdXN0ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVh",
+            "Y2hhYmxlGAQgAygJIqQBChtHZXRHYW1lU2VydmVyQ2x1c3RlclJlcXVlc3QS",
+            "QwoEbmFtZRgBIAEoCUI14EEC+kEvCi1nYW1lc2VydmljZXMuZ29vZ2xlYXBp",
+            "cy5jb20vR2FtZVNlcnZlckNsdXN0ZXISQAoEdmlldxgGIAEoDjItLmdvb2ds",
+            "ZS5jbG91ZC5nYW1pbmcudjEuR2FtZVNlcnZlckNsdXN0ZXJWaWV3QgPgQQEi",
+            "2QEKHkNyZWF0ZUdhbWVTZXJ2ZXJDbHVzdGVyUmVxdWVzdBJFCgZwYXJlbnQY",
+            "ASABKAlCNeBBAvpBLxItZ2FtZXNlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0dh",
+            "bWVTZXJ2ZXJDbHVzdGVyEiMKFmdhbWVfc2VydmVyX2NsdXN0ZXJfaWQYAiAB",
+            "KAlCA+BBAhJLChNnYW1lX3NlcnZlcl9jbHVzdGVyGAMgASgLMikuZ29vZ2xl",
+            "LmNsb3VkLmdhbWluZy52MS5HYW1lU2VydmVyQ2x1c3RlckID4EECItsCCiVQ",
+            "cmV2aWV3Q3JlYXRlR2FtZVNlcnZlckNsdXN0ZXJSZXF1ZXN0EkUKBnBhcmVu",
             "dBgBIAEoCUI14EEC+kEvEi1nYW1lc2VydmljZXMuZ29vZ2xlYXBpcy5jb20v",
             "R2FtZVNlcnZlckNsdXN0ZXISIwoWZ2FtZV9zZXJ2ZXJfY2x1c3Rlcl9pZBgC",
             "IAEoCUID4EECEksKE2dhbWVfc2VydmVyX2NsdXN0ZXIYAyABKAsyKS5nb29n",
-            "bGUuY2xvdWQuZ2FtaW5nLnYxLkdhbWVTZXJ2ZXJDbHVzdGVyQgPgQQIilwIK",
-            "JVByZXZpZXdDcmVhdGVHYW1lU2VydmVyQ2x1c3RlclJlcXVlc3QSRQoGcGFy",
-            "ZW50GAEgASgJQjXgQQL6QS8SLWdhbWVzZXJ2aWNlcy5nb29nbGVhcGlzLmNv",
-            "bS9HYW1lU2VydmVyQ2x1c3RlchIjChZnYW1lX3NlcnZlcl9jbHVzdGVyX2lk",
-            "GAIgASgJQgPgQQISSwoTZ2FtZV9zZXJ2ZXJfY2x1c3RlchgDIAEoCzIpLmdv",
-            "b2dsZS5jbG91ZC5nYW1pbmcudjEuR2FtZVNlcnZlckNsdXN0ZXJCA+BBAhI1",
-            "CgxwcmV2aWV3X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQEicQomUHJldmlld0NyZWF0ZUdhbWVTZXJ2ZXJDbHVzdGVyUmVz",
-            "cG9uc2USDAoEZXRhZxgCIAEoCRI5Cgx0YXJnZXRfc3RhdGUYAyABKAsyIy5n",
-            "b29nbGUuY2xvdWQuZ2FtaW5nLnYxLlRhcmdldFN0YXRlImUKHkRlbGV0ZUdh",
-            "bWVTZXJ2ZXJDbHVzdGVyUmVxdWVzdBJDCgRuYW1lGAEgASgJQjXgQQL6QS8K",
-            "LWdhbWVzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9HYW1lU2VydmVyQ2x1c3Rl",
-            "ciKjAQolUHJldmlld0RlbGV0ZUdhbWVTZXJ2ZXJDbHVzdGVyUmVxdWVzdBJD",
-            "CgRuYW1lGAEgASgJQjXgQQL6QS8KLWdhbWVzZXJ2aWNlcy5nb29nbGVhcGlz",
-            "LmNvbS9HYW1lU2VydmVyQ2x1c3RlchI1CgxwcmV2aWV3X3RpbWUYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQEicQomUHJldmlld0Rl",
-            "bGV0ZUdhbWVTZXJ2ZXJDbHVzdGVyUmVzcG9uc2USDAoEZXRhZxgCIAEoCRI5",
-            "Cgx0YXJnZXRfc3RhdGUYAyABKAsyIy5nb29nbGUuY2xvdWQuZ2FtaW5nLnYx",
-            "LlRhcmdldFN0YXRlIqMBCh5VcGRhdGVHYW1lU2VydmVyQ2x1c3RlclJlcXVl",
-            "c3QSSwoTZ2FtZV9zZXJ2ZXJfY2x1c3RlchgBIAEoCzIpLmdvb2dsZS5jbG91",
-            "ZC5nYW1pbmcudjEuR2FtZVNlcnZlckNsdXN0ZXJCA+BBAhI0Cgt1cGRhdGVf",
-            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAiLh",
-            "AQolUHJldmlld1VwZGF0ZUdhbWVTZXJ2ZXJDbHVzdGVyUmVxdWVzdBJLChNn",
-            "YW1lX3NlcnZlcl9jbHVzdGVyGAEgASgLMikuZ29vZ2xlLmNsb3VkLmdhbWlu",
-            "Zy52MS5HYW1lU2VydmVyQ2x1c3RlckID4EECEjQKC3VwZGF0ZV9tYXNrGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEjUKDHByZXZp",
-            "ZXdfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "ASJxCiZQcmV2aWV3VXBkYXRlR2FtZVNlcnZlckNsdXN0ZXJSZXNwb25zZRIM",
-            "CgRldGFnGAIgASgJEjkKDHRhcmdldF9zdGF0ZRgDIAEoCzIjLmdvb2dsZS5j",
-            "bG91ZC5nYW1pbmcudjEuVGFyZ2V0U3RhdGUilwEKH0dhbWVTZXJ2ZXJDbHVz",
-            "dGVyQ29ubmVjdGlvbkluZm8STAoVZ2tlX2NsdXN0ZXJfcmVmZXJlbmNlGAcg",
-            "ASgLMisuZ29vZ2xlLmNsb3VkLmdhbWluZy52MS5Ha2VDbHVzdGVyUmVmZXJl",
-            "bmNlSAASEQoJbmFtZXNwYWNlGAUgASgJQhMKEWNsdXN0ZXJfcmVmZXJlbmNl",
-            "IiYKE0drZUNsdXN0ZXJSZWZlcmVuY2USDwoHY2x1c3RlchgBIAEoCSKIBAoR",
-            "R2FtZVNlcnZlckNsdXN0ZXISEQoEbmFtZRgBIAEoCUID4EECEjQKC2NyZWF0",
-            "ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEkUKBmxhYmVscxgEIAMoCzI1Lmdvb2dsZS5jbG91ZC5nYW1p",
-            "bmcudjEuR2FtZVNlcnZlckNsdXN0ZXIuTGFiZWxzRW50cnkSUAoPY29ubmVj",
-            "dGlvbl9pbmZvGAUgASgLMjcuZ29vZ2xlLmNsb3VkLmdhbWluZy52MS5HYW1l",
-            "U2VydmVyQ2x1c3RlckNvbm5lY3Rpb25JbmZvEgwKBGV0YWcYBiABKAkSEwoL",
-            "ZGVzY3JpcHRpb24YByABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ATqIAepBhAEKLWdhbWVzZXJ2aWNlcy5nb29n",
-            "bGVhcGlzLmNvbS9HYW1lU2VydmVyQ2x1c3RlchJTcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlYWxtcy97cmVhbG19L2dhbWVT",
-            "ZXJ2ZXJDbHVzdGVycy97Y2x1c3Rlcn1CXAoaY29tLmdvb2dsZS5jbG91ZC5n",
-            "YW1pbmcudjFQAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC9nYW1pbmcvdjE7Z2FtaW5nYgZwcm90bzM="));
+            "bGUuY2xvdWQuZ2FtaW5nLnYxLkdhbWVTZXJ2ZXJDbHVzdGVyQgPgQQISNQoM",
+            "cHJldmlld190aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEBEkIKBHZpZXcYBiABKA4yLS5nb29nbGUuY2xvdWQuZ2FtaW5nLnYx",
+            "LkdhbWVTZXJ2ZXJDbHVzdGVyVmlld0IFGAHgQQEivQEKJlByZXZpZXdDcmVh",
+            "dGVHYW1lU2VydmVyQ2x1c3RlclJlc3BvbnNlEgwKBGV0YWcYAiABKAkSOQoM",
+            "dGFyZ2V0X3N0YXRlGAMgASgLMiMuZ29vZ2xlLmNsb3VkLmdhbWluZy52MS5U",
+            "YXJnZXRTdGF0ZRJKCg1jbHVzdGVyX3N0YXRlGAQgASgLMi4uZ29vZ2xlLmNs",
+            "b3VkLmdhbWluZy52MS5LdWJlcm5ldGVzQ2x1c3RlclN0YXRlQgPgQQMiZQoe",
+            "RGVsZXRlR2FtZVNlcnZlckNsdXN0ZXJSZXF1ZXN0EkMKBG5hbWUYASABKAlC",
+            "NeBBAvpBLwotZ2FtZXNlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0dhbWVTZXJ2",
+            "ZXJDbHVzdGVyIqMBCiVQcmV2aWV3RGVsZXRlR2FtZVNlcnZlckNsdXN0ZXJS",
+            "ZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwotZ2FtZXNlcnZpY2VzLmdv",
+            "b2dsZWFwaXMuY29tL0dhbWVTZXJ2ZXJDbHVzdGVyEjUKDHByZXZpZXdfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBASJxCiZQ",
+            "cmV2aWV3RGVsZXRlR2FtZVNlcnZlckNsdXN0ZXJSZXNwb25zZRIMCgRldGFn",
+            "GAIgASgJEjkKDHRhcmdldF9zdGF0ZRgDIAEoCzIjLmdvb2dsZS5jbG91ZC5n",
+            "YW1pbmcudjEuVGFyZ2V0U3RhdGUiowEKHlVwZGF0ZUdhbWVTZXJ2ZXJDbHVz",
+            "dGVyUmVxdWVzdBJLChNnYW1lX3NlcnZlcl9jbHVzdGVyGAEgASgLMikuZ29v",
+            "Z2xlLmNsb3VkLmdhbWluZy52MS5HYW1lU2VydmVyQ2x1c3RlckID4EECEjQK",
+            "C3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFz",
+            "a0ID4EECIuEBCiVQcmV2aWV3VXBkYXRlR2FtZVNlcnZlckNsdXN0ZXJSZXF1",
+            "ZXN0EksKE2dhbWVfc2VydmVyX2NsdXN0ZXIYASABKAsyKS5nb29nbGUuY2xv",
+            "dWQuZ2FtaW5nLnYxLkdhbWVTZXJ2ZXJDbHVzdGVyQgPgQQISNAoLdXBkYXRl",
+            "X21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIS",
+            "NQoMcHJldmlld190aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEBInEKJlByZXZpZXdVcGRhdGVHYW1lU2VydmVyQ2x1c3RlclJl",
+            "c3BvbnNlEgwKBGV0YWcYAiABKAkSOQoMdGFyZ2V0X3N0YXRlGAMgASgLMiMu",
+            "Z29vZ2xlLmNsb3VkLmdhbWluZy52MS5UYXJnZXRTdGF0ZSKXAQofR2FtZVNl",
+            "cnZlckNsdXN0ZXJDb25uZWN0aW9uSW5mbxJMChVna2VfY2x1c3Rlcl9yZWZl",
+            "cmVuY2UYByABKAsyKy5nb29nbGUuY2xvdWQuZ2FtaW5nLnYxLkdrZUNsdXN0",
+            "ZXJSZWZlcmVuY2VIABIRCgluYW1lc3BhY2UYBSABKAlCEwoRY2x1c3Rlcl9y",
+            "ZWZlcmVuY2UiJgoTR2tlQ2x1c3RlclJlZmVyZW5jZRIPCgdjbHVzdGVyGAEg",
+            "ASgJItQEChFHYW1lU2VydmVyQ2x1c3RlchIRCgRuYW1lGAEgASgJQgPgQQIS",
+            "NAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSRQoGbGFiZWxzGAQgAygLMjUuZ29vZ2xlLmNs",
+            "b3VkLmdhbWluZy52MS5HYW1lU2VydmVyQ2x1c3Rlci5MYWJlbHNFbnRyeRJQ",
+            "Cg9jb25uZWN0aW9uX2luZm8YBSABKAsyNy5nb29nbGUuY2xvdWQuZ2FtaW5n",
+            "LnYxLkdhbWVTZXJ2ZXJDbHVzdGVyQ29ubmVjdGlvbkluZm8SDAoEZXRhZxgG",
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCRJKCg1jbHVzdGVyX3N0YXRlGAsg",
+            "ASgLMi4uZ29vZ2xlLmNsb3VkLmdhbWluZy52MS5LdWJlcm5ldGVzQ2x1c3Rl",
+            "clN0YXRlQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ATqIAepBhAEKLWdhbWVzZXJ2aWNlcy5nb29nbGVhcGlz",
+            "LmNvbS9HYW1lU2VydmVyQ2x1c3RlchJTcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3JlYWxtcy97cmVhbG19L2dhbWVTZXJ2ZXJD",
+            "bHVzdGVycy97Y2x1c3Rlcn0i5wQKFkt1YmVybmV0ZXNDbHVzdGVyU3RhdGUS",
+            "JQoYYWdvbmVzX3ZlcnNpb25faW5zdGFsbGVkGAEgASgJQgPgQQMSKQoca3Vi",
+            "ZXJuZXRlc192ZXJzaW9uX2luc3RhbGxlZBgCIAEoCUID4EEDEmEKEmluc3Rh",
+            "bGxhdGlvbl9zdGF0ZRgDIAEoDjJALmdvb2dsZS5jbG91ZC5nYW1pbmcudjEu",
+            "S3ViZXJuZXRlc0NsdXN0ZXJTdGF0ZS5JbnN0YWxsYXRpb25TdGF0ZUID4EED",
+            "EiwKH3ZlcnNpb25faW5zdGFsbGVkX2Vycm9yX21lc3NhZ2UYBCABKAlCA+BB",
+            "AxIVCghwcm92aWRlchgFIAEoCUID4EEDEiQKF2Fnb25lc192ZXJzaW9uX3Rh",
+            "cmdldGVkGAYgASgJQgPgQQMirAIKEUluc3RhbGxhdGlvblN0YXRlEiIKHklO",
+            "U1RBTExBVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEicKI0FHT05FU19LVUJF",
+            "Uk5FVEVTX1ZFUlNJT05fU1VQUE9SVEVEEAESHgoaQUdPTkVTX1ZFUlNJT05f",
+            "VU5TVVBQT1JURUQQAhIpCiVBR09ORVNfS1VCRVJORVRFU19WRVJTSU9OX1VO",
+            "U1VQUE9SVEVEEAMSHwobQUdPTkVTX1ZFUlNJT05fVU5SRUNPR05JWkVEEAQS",
+            "IwofS1VCRVJORVRFU19WRVJTSU9OX1VOUkVDT0dOSVpFRBAFEh8KG1ZFUlNJ",
+            "T05fVkVSSUZJQ0FUSU9OX0ZBSUxFRBAGEhgKFEFHT05FU19OT1RfSU5TVEFM",
+            "TEVEEAcqVgoVR2FtZVNlcnZlckNsdXN0ZXJWaWV3EigKJEdBTUVfU0VSVkVS",
+            "X0NMVVNURVJfVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVM",
+            "TBACQlwKGmNvbS5nb29nbGUuY2xvdWQuZ2FtaW5nLnYxUAFaPGdvb2dsZS5n",
+            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZ2FtaW5nL3Yx",
+            "O2dhbWluZ2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Gaming.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.ListGameServerClustersRequest), global::Google.Cloud.Gaming.V1.ListGameServerClustersRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Gaming.V1.GameServerClusterView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.ListGameServerClustersRequest), global::Google.Cloud.Gaming.V1.ListGameServerClustersRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "View" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.ListGameServerClustersResponse), global::Google.Cloud.Gaming.V1.ListGameServerClustersResponse.Parser, new[]{ "GameServerClusters", "NextPageToken", "Unreachable" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.GetGameServerClusterRequest), global::Google.Cloud.Gaming.V1.GetGameServerClusterRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.GetGameServerClusterRequest), global::Google.Cloud.Gaming.V1.GetGameServerClusterRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.CreateGameServerClusterRequest), global::Google.Cloud.Gaming.V1.CreateGameServerClusterRequest.Parser, new[]{ "Parent", "GameServerClusterId", "GameServerCluster" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterRequest), global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterRequest.Parser, new[]{ "Parent", "GameServerClusterId", "GameServerCluster", "PreviewTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterResponse), global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterResponse.Parser, new[]{ "Etag", "TargetState" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterRequest), global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterRequest.Parser, new[]{ "Parent", "GameServerClusterId", "GameServerCluster", "PreviewTime", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterResponse), global::Google.Cloud.Gaming.V1.PreviewCreateGameServerClusterResponse.Parser, new[]{ "Etag", "TargetState", "ClusterState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.DeleteGameServerClusterRequest), global::Google.Cloud.Gaming.V1.DeleteGameServerClusterRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.PreviewDeleteGameServerClusterRequest), global::Google.Cloud.Gaming.V1.PreviewDeleteGameServerClusterRequest.Parser, new[]{ "Name", "PreviewTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.PreviewDeleteGameServerClusterResponse), global::Google.Cloud.Gaming.V1.PreviewDeleteGameServerClusterResponse.Parser, new[]{ "Etag", "TargetState" }, null, null, null, null),
@@ -109,12 +133,37 @@ namespace Google.Cloud.Gaming.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.PreviewUpdateGameServerClusterResponse), global::Google.Cloud.Gaming.V1.PreviewUpdateGameServerClusterResponse.Parser, new[]{ "Etag", "TargetState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.GameServerClusterConnectionInfo), global::Google.Cloud.Gaming.V1.GameServerClusterConnectionInfo.Parser, new[]{ "GkeClusterReference", "Namespace" }, new[]{ "ClusterReference" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.GkeClusterReference), global::Google.Cloud.Gaming.V1.GkeClusterReference.Parser, new[]{ "Cluster" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.GameServerCluster), global::Google.Cloud.Gaming.V1.GameServerCluster.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "ConnectionInfo", "Etag", "Description" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.GameServerCluster), global::Google.Cloud.Gaming.V1.GameServerCluster.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "ConnectionInfo", "Etag", "Description", "ClusterState" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Gaming.V1.KubernetesClusterState), global::Google.Cloud.Gaming.V1.KubernetesClusterState.Parser, new[]{ "AgonesVersionInstalled", "KubernetesVersionInstalled", "InstallationState", "VersionInstalledErrorMessage", "Provider", "AgonesVersionTargeted" }, null, new[]{ typeof(global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState) }, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// A view for GameServerCluster objects.
+  /// </summary>
+  public enum GameServerClusterView {
+    /// <summary>
+    /// The default / unset value.
+    /// The API will default to the BASIC view.
+    /// </summary>
+    [pbr::OriginalName("GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Include basic information of a GameServerCluster resource and omit
+    /// `cluster_state`. This is the default value (for ListGameServerClusters,
+    /// GetGameServerCluster and PreviewCreateGameServerCluster).
+    /// </summary>
+    [pbr::OriginalName("BASIC")] Basic = 1,
+    /// <summary>
+    /// Include everything.
+    /// </summary>
+    [pbr::OriginalName("FULL")] Full = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Request message for GameServerClustersService.ListGameServerClusters.
@@ -153,6 +202,7 @@ namespace Google.Cloud.Gaming.V1 {
       pageToken_ = other.pageToken_;
       filter_ = other.filter_;
       orderBy_ = other.orderBy_;
+      view_ = other.view_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -165,7 +215,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
+    /// Required. The parent resource name, in the following form:
     /// "projects/{project}/locations/{location}/realms/{realm}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -180,7 +230,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. The maximum number of items to return.  If unspecified, the server
+    /// Optional. The maximum number of items to return. If unspecified, the server
     /// will pick an appropriate default. The server may return fewer items than
     /// requested. A caller should only rely on response's
     /// [next_page_token][google.cloud.gaming.v1.ListGameServerClustersResponse.next_page_token] to
@@ -237,6 +287,25 @@ namespace Google.Cloud.Gaming.V1 {
       }
     }
 
+    /// <summary>Field number for the "view" field.</summary>
+    public const int ViewFieldNumber = 6;
+    private global::Google.Cloud.Gaming.V1.GameServerClusterView view_ = global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified;
+    /// <summary>
+    /// Optional. View for the returned GameServerCluster objects. When `FULL` is
+    /// specified, the `cluster_state` field is also returned in the
+    /// GameServerCluster object, which includes the state of the referenced
+    /// Kubernetes cluster such as versions and provider info. The default/unset
+    /// value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC, which does
+    /// not return the `cluster_state` field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Gaming.V1.GameServerClusterView View {
+      get { return view_; }
+      set {
+        view_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListGameServerClustersRequest);
@@ -255,6 +324,7 @@ namespace Google.Cloud.Gaming.V1 {
       if (PageToken != other.PageToken) return false;
       if (Filter != other.Filter) return false;
       if (OrderBy != other.OrderBy) return false;
+      if (View != other.View) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -266,6 +336,7 @@ namespace Google.Cloud.Gaming.V1 {
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OrderBy.Length != 0) hash ^= OrderBy.GetHashCode();
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -302,6 +373,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(42);
         output.WriteString(OrderBy);
       }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) View);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -331,6 +406,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(42);
         output.WriteString(OrderBy);
       }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) View);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -354,6 +433,9 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (OrderBy.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OrderBy);
+      }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -380,6 +462,9 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (other.OrderBy.Length != 0) {
         OrderBy = other.OrderBy;
+      }
+      if (other.View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -415,6 +500,10 @@ namespace Google.Cloud.Gaming.V1 {
             OrderBy = input.ReadString();
             break;
           }
+          case 48: {
+            View = (global::Google.Cloud.Gaming.V1.GameServerClusterView) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -447,6 +536,10 @@ namespace Google.Cloud.Gaming.V1 {
           }
           case 42: {
             OrderBy = input.ReadString();
+            break;
+          }
+          case 48: {
+            View = (global::Google.Cloud.Gaming.V1.GameServerClusterView) input.ReadEnum();
             break;
           }
         }
@@ -724,6 +817,7 @@ namespace Google.Cloud.Gaming.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetGameServerClusterRequest(GetGameServerClusterRequest other) : this() {
       name_ = other.name_;
+      view_ = other.view_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -736,8 +830,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server cluster to retrieve. Uses the form:
-    ///
+    /// Required. The name of the game server cluster to retrieve, in the following form:
     /// `projects/{project}/locations/{location}/realms/{realm-id}/gameServerClusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -745,6 +838,25 @@ namespace Google.Cloud.Gaming.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "view" field.</summary>
+    public const int ViewFieldNumber = 6;
+    private global::Google.Cloud.Gaming.V1.GameServerClusterView view_ = global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified;
+    /// <summary>
+    /// Optional. View for the returned GameServerCluster objects. When `FULL` is
+    /// specified, the `cluster_state` field is also returned in the
+    /// GameServerCluster object, which includes the state of the referenced
+    /// Kubernetes cluster such as versions and provider info. The default/unset
+    /// value is GAME_SERVER_CLUSTER_VIEW_UNSPECIFIED, same as BASIC, which does
+    /// not return the `cluster_state` field.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Gaming.V1.GameServerClusterView View {
+      get { return view_; }
+      set {
+        view_ = value;
       }
     }
 
@@ -762,6 +874,7 @@ namespace Google.Cloud.Gaming.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (View != other.View) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -769,6 +882,7 @@ namespace Google.Cloud.Gaming.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -789,6 +903,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) View);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -802,6 +920,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) View);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -813,6 +935,9 @@ namespace Google.Cloud.Gaming.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -827,6 +952,9 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -846,6 +974,10 @@ namespace Google.Cloud.Gaming.V1 {
             Name = input.ReadString();
             break;
           }
+          case 48: {
+            View = (global::Google.Cloud.Gaming.V1.GameServerClusterView) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -862,6 +994,10 @@ namespace Google.Cloud.Gaming.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 48: {
+            View = (global::Google.Cloud.Gaming.V1.GameServerClusterView) input.ReadEnum();
             break;
           }
         }
@@ -918,7 +1054,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}/realms/{realm-id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1173,6 +1309,7 @@ namespace Google.Cloud.Gaming.V1 {
       gameServerClusterId_ = other.gameServerClusterId_;
       gameServerCluster_ = other.gameServerCluster_ != null ? other.gameServerCluster_.Clone() : null;
       previewTime_ = other.previewTime_ != null ? other.previewTime_.Clone() : null;
+      view_ = other.view_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1185,7 +1322,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}/realms/{realm}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1238,6 +1375,22 @@ namespace Google.Cloud.Gaming.V1 {
       }
     }
 
+    /// <summary>Field number for the "view" field.</summary>
+    public const int ViewFieldNumber = 6;
+    private global::Google.Cloud.Gaming.V1.GameServerClusterView view_ = global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified;
+    /// <summary>
+    /// Optional. This field is deprecated, preview will always return
+    /// KubernetesClusterState.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Gaming.V1.GameServerClusterView View {
+      get { return view_; }
+      set {
+        view_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PreviewCreateGameServerClusterRequest);
@@ -1255,6 +1408,7 @@ namespace Google.Cloud.Gaming.V1 {
       if (GameServerClusterId != other.GameServerClusterId) return false;
       if (!object.Equals(GameServerCluster, other.GameServerCluster)) return false;
       if (!object.Equals(PreviewTime, other.PreviewTime)) return false;
+      if (View != other.View) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1265,6 +1419,7 @@ namespace Google.Cloud.Gaming.V1 {
       if (GameServerClusterId.Length != 0) hash ^= GameServerClusterId.GetHashCode();
       if (gameServerCluster_ != null) hash ^= GameServerCluster.GetHashCode();
       if (previewTime_ != null) hash ^= PreviewTime.GetHashCode();
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1297,6 +1452,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(PreviewTime);
       }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) View);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1322,6 +1481,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(PreviewTime);
       }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) View);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1342,6 +1505,9 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (previewTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PreviewTime);
+      }
+      if (View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1371,6 +1537,9 @@ namespace Google.Cloud.Gaming.V1 {
           PreviewTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PreviewTime.MergeFrom(other.PreviewTime);
+      }
+      if (other.View != global::Google.Cloud.Gaming.V1.GameServerClusterView.Unspecified) {
+        View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1408,6 +1577,10 @@ namespace Google.Cloud.Gaming.V1 {
             input.ReadMessage(PreviewTime);
             break;
           }
+          case 48: {
+            View = (global::Google.Cloud.Gaming.V1.GameServerClusterView) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -1442,6 +1615,10 @@ namespace Google.Cloud.Gaming.V1 {
               PreviewTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(PreviewTime);
+            break;
+          }
+          case 48: {
+            View = (global::Google.Cloud.Gaming.V1.GameServerClusterView) input.ReadEnum();
             break;
           }
         }
@@ -1486,6 +1663,7 @@ namespace Google.Cloud.Gaming.V1 {
     public PreviewCreateGameServerClusterResponse(PreviewCreateGameServerClusterResponse other) : this() {
       etag_ = other.etag_;
       targetState_ = other.targetState_ != null ? other.targetState_.Clone() : null;
+      clusterState_ = other.clusterState_ != null ? other.clusterState_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1522,6 +1700,21 @@ namespace Google.Cloud.Gaming.V1 {
       }
     }
 
+    /// <summary>Field number for the "cluster_state" field.</summary>
+    public const int ClusterStateFieldNumber = 4;
+    private global::Google.Cloud.Gaming.V1.KubernetesClusterState clusterState_;
+    /// <summary>
+    /// Output only. The state of the Kubernetes cluster in preview, this will be available if
+    /// 'view' is set to `FULL` in the relevant List/Get/Preview request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Gaming.V1.KubernetesClusterState ClusterState {
+      get { return clusterState_; }
+      set {
+        clusterState_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PreviewCreateGameServerClusterResponse);
@@ -1537,6 +1730,7 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (Etag != other.Etag) return false;
       if (!object.Equals(TargetState, other.TargetState)) return false;
+      if (!object.Equals(ClusterState, other.ClusterState)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1545,6 +1739,7 @@ namespace Google.Cloud.Gaming.V1 {
       int hash = 1;
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (targetState_ != null) hash ^= TargetState.GetHashCode();
+      if (clusterState_ != null) hash ^= ClusterState.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1569,6 +1764,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(TargetState);
       }
+      if (clusterState_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ClusterState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1586,6 +1785,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(TargetState);
       }
+      if (clusterState_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ClusterState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1600,6 +1803,9 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (targetState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetState);
+      }
+      if (clusterState_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClusterState);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1620,6 +1826,12 @@ namespace Google.Cloud.Gaming.V1 {
           TargetState = new global::Google.Cloud.Gaming.V1.TargetState();
         }
         TargetState.MergeFrom(other.TargetState);
+      }
+      if (other.clusterState_ != null) {
+        if (clusterState_ == null) {
+          ClusterState = new global::Google.Cloud.Gaming.V1.KubernetesClusterState();
+        }
+        ClusterState.MergeFrom(other.ClusterState);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1646,6 +1858,13 @@ namespace Google.Cloud.Gaming.V1 {
             input.ReadMessage(TargetState);
             break;
           }
+          case 34: {
+            if (clusterState_ == null) {
+              ClusterState = new global::Google.Cloud.Gaming.V1.KubernetesClusterState();
+            }
+            input.ReadMessage(ClusterState);
+            break;
+          }
         }
       }
     #endif
@@ -1669,6 +1888,13 @@ namespace Google.Cloud.Gaming.V1 {
               TargetState = new global::Google.Cloud.Gaming.V1.TargetState();
             }
             input.ReadMessage(TargetState);
+            break;
+          }
+          case 34: {
+            if (clusterState_ == null) {
+              ClusterState = new global::Google.Cloud.Gaming.V1.KubernetesClusterState();
+            }
+            input.ReadMessage(ClusterState);
             break;
           }
         }
@@ -1723,7 +1949,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server cluster to delete. Uses the form:
+    /// Required. The name of the game server cluster to delete, in the following form:
     /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1903,7 +2129,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server cluster to delete. Uses the form:
+    /// Required. The name of the game server cluster to delete, in the following form:
     /// `projects/{project}/locations/{location}/gameServerClusters/{cluster}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2374,10 +2600,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    ///
-    /// https:
-    /// //developers.google.com/protocol-buffers
-    /// // /docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -2616,10 +2839,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    ///
-    /// https:
-    /// //developers.google.com/protocol-buffers
-    /// // /docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -3551,6 +3771,7 @@ namespace Google.Cloud.Gaming.V1 {
       connectionInfo_ = other.connectionInfo_ != null ? other.connectionInfo_.Clone() : null;
       etag_ = other.etag_;
       description_ = other.description_;
+      clusterState_ = other.clusterState_ != null ? other.clusterState_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3563,11 +3784,9 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the game server cluster. Uses the form:
-    ///
+    /// Required. The resource name of the game server cluster, in the following form:
     /// `projects/{project}/locations/{location}/realms/{realm}/gameServerClusters/{cluster}`.
     /// For example,
-    ///
     /// `projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3663,6 +3882,21 @@ namespace Google.Cloud.Gaming.V1 {
       }
     }
 
+    /// <summary>Field number for the "cluster_state" field.</summary>
+    public const int ClusterStateFieldNumber = 11;
+    private global::Google.Cloud.Gaming.V1.KubernetesClusterState clusterState_;
+    /// <summary>
+    /// Output only. The state of the Kubernetes cluster, this will be available if
+    /// 'view' is set to `FULL` in the relevant List/Get/Preview request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Gaming.V1.KubernetesClusterState ClusterState {
+      get { return clusterState_; }
+      set {
+        clusterState_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GameServerCluster);
@@ -3683,6 +3917,7 @@ namespace Google.Cloud.Gaming.V1 {
       if (!object.Equals(ConnectionInfo, other.ConnectionInfo)) return false;
       if (Etag != other.Etag) return false;
       if (Description != other.Description) return false;
+      if (!object.Equals(ClusterState, other.ClusterState)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3696,6 +3931,7 @@ namespace Google.Cloud.Gaming.V1 {
       if (connectionInfo_ != null) hash ^= ConnectionInfo.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (clusterState_ != null) hash ^= ClusterState.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3737,6 +3973,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (clusterState_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ClusterState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3771,6 +4011,10 @@ namespace Google.Cloud.Gaming.V1 {
         output.WriteRawTag(58);
         output.WriteString(Description);
       }
+      if (clusterState_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ClusterState);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3798,6 +4042,9 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (clusterState_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClusterState);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3837,6 +4084,12 @@ namespace Google.Cloud.Gaming.V1 {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.clusterState_ != null) {
+        if (clusterState_ == null) {
+          ClusterState = new global::Google.Cloud.Gaming.V1.KubernetesClusterState();
+        }
+        ClusterState.MergeFrom(other.ClusterState);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3887,6 +4140,13 @@ namespace Google.Cloud.Gaming.V1 {
           }
           case 58: {
             Description = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (clusterState_ == null) {
+              ClusterState = new global::Google.Cloud.Gaming.V1.KubernetesClusterState();
+            }
+            input.ReadMessage(ClusterState);
             break;
           }
         }
@@ -3940,10 +4200,448 @@ namespace Google.Cloud.Gaming.V1 {
             Description = input.ReadString();
             break;
           }
+          case 90: {
+            if (clusterState_ == null) {
+              ClusterState = new global::Google.Cloud.Gaming.V1.KubernetesClusterState();
+            }
+            input.ReadMessage(ClusterState);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// The state of the Kubernetes cluster.
+  /// </summary>
+  public sealed partial class KubernetesClusterState : pb::IMessage<KubernetesClusterState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KubernetesClusterState> _parser = new pb::MessageParser<KubernetesClusterState>(() => new KubernetesClusterState());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<KubernetesClusterState> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Gaming.V1.GameServerClustersReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KubernetesClusterState() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KubernetesClusterState(KubernetesClusterState other) : this() {
+      agonesVersionInstalled_ = other.agonesVersionInstalled_;
+      kubernetesVersionInstalled_ = other.kubernetesVersionInstalled_;
+      installationState_ = other.installationState_;
+      versionInstalledErrorMessage_ = other.versionInstalledErrorMessage_;
+      provider_ = other.provider_;
+      agonesVersionTargeted_ = other.agonesVersionTargeted_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public KubernetesClusterState Clone() {
+      return new KubernetesClusterState(this);
+    }
+
+    /// <summary>Field number for the "agones_version_installed" field.</summary>
+    public const int AgonesVersionInstalledFieldNumber = 1;
+    private string agonesVersionInstalled_ = "";
+    /// <summary>
+    /// Output only. The version of Agones currently installed in the registered Kubernetes
+    /// cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AgonesVersionInstalled {
+      get { return agonesVersionInstalled_; }
+      set {
+        agonesVersionInstalled_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kubernetes_version_installed" field.</summary>
+    public const int KubernetesVersionInstalledFieldNumber = 2;
+    private string kubernetesVersionInstalled_ = "";
+    /// <summary>
+    /// Output only. The version of Kubernetes that is currently used in the registered
+    /// Kubernetes cluster (as detected by the Cloud Game Servers service).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KubernetesVersionInstalled {
+      get { return kubernetesVersionInstalled_; }
+      set {
+        kubernetesVersionInstalled_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "installation_state" field.</summary>
+    public const int InstallationStateFieldNumber = 3;
+    private global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState installationState_ = global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState.Unspecified;
+    /// <summary>
+    /// Output only. The state for the installed versions of Agones/Kubernetes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState InstallationState {
+      get { return installationState_; }
+      set {
+        installationState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "version_installed_error_message" field.</summary>
+    public const int VersionInstalledErrorMessageFieldNumber = 4;
+    private string versionInstalledErrorMessage_ = "";
+    /// <summary>
+    /// Output only. The detailed error message for the installed versions of Agones/Kubernetes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string VersionInstalledErrorMessage {
+      get { return versionInstalledErrorMessage_; }
+      set {
+        versionInstalledErrorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "provider" field.</summary>
+    public const int ProviderFieldNumber = 5;
+    private string provider_ = "";
+    /// <summary>
+    /// Output only. The cloud provider type reported by the first node's providerID in the list
+    /// of nodes on the Kubernetes endpoint. On Kubernetes platforms that support
+    /// zero-node clusters (like GKE-on-GCP), the provider type will be empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Provider {
+      get { return provider_; }
+      set {
+        provider_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "agones_version_targeted" field.</summary>
+    public const int AgonesVersionTargetedFieldNumber = 6;
+    private string agonesVersionTargeted_ = "";
+    /// <summary>
+    /// Output only. The version of Agones that is targeted to be installed in the cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AgonesVersionTargeted {
+      get { return agonesVersionTargeted_; }
+      set {
+        agonesVersionTargeted_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as KubernetesClusterState);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(KubernetesClusterState other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AgonesVersionInstalled != other.AgonesVersionInstalled) return false;
+      if (KubernetesVersionInstalled != other.KubernetesVersionInstalled) return false;
+      if (InstallationState != other.InstallationState) return false;
+      if (VersionInstalledErrorMessage != other.VersionInstalledErrorMessage) return false;
+      if (Provider != other.Provider) return false;
+      if (AgonesVersionTargeted != other.AgonesVersionTargeted) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AgonesVersionInstalled.Length != 0) hash ^= AgonesVersionInstalled.GetHashCode();
+      if (KubernetesVersionInstalled.Length != 0) hash ^= KubernetesVersionInstalled.GetHashCode();
+      if (InstallationState != global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState.Unspecified) hash ^= InstallationState.GetHashCode();
+      if (VersionInstalledErrorMessage.Length != 0) hash ^= VersionInstalledErrorMessage.GetHashCode();
+      if (Provider.Length != 0) hash ^= Provider.GetHashCode();
+      if (AgonesVersionTargeted.Length != 0) hash ^= AgonesVersionTargeted.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AgonesVersionInstalled.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AgonesVersionInstalled);
+      }
+      if (KubernetesVersionInstalled.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KubernetesVersionInstalled);
+      }
+      if (InstallationState != global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) InstallationState);
+      }
+      if (VersionInstalledErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VersionInstalledErrorMessage);
+      }
+      if (Provider.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Provider);
+      }
+      if (AgonesVersionTargeted.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AgonesVersionTargeted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AgonesVersionInstalled.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AgonesVersionInstalled);
+      }
+      if (KubernetesVersionInstalled.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(KubernetesVersionInstalled);
+      }
+      if (InstallationState != global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) InstallationState);
+      }
+      if (VersionInstalledErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VersionInstalledErrorMessage);
+      }
+      if (Provider.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Provider);
+      }
+      if (AgonesVersionTargeted.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AgonesVersionTargeted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (AgonesVersionInstalled.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AgonesVersionInstalled);
+      }
+      if (KubernetesVersionInstalled.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KubernetesVersionInstalled);
+      }
+      if (InstallationState != global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InstallationState);
+      }
+      if (VersionInstalledErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VersionInstalledErrorMessage);
+      }
+      if (Provider.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Provider);
+      }
+      if (AgonesVersionTargeted.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AgonesVersionTargeted);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(KubernetesClusterState other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AgonesVersionInstalled.Length != 0) {
+        AgonesVersionInstalled = other.AgonesVersionInstalled;
+      }
+      if (other.KubernetesVersionInstalled.Length != 0) {
+        KubernetesVersionInstalled = other.KubernetesVersionInstalled;
+      }
+      if (other.InstallationState != global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState.Unspecified) {
+        InstallationState = other.InstallationState;
+      }
+      if (other.VersionInstalledErrorMessage.Length != 0) {
+        VersionInstalledErrorMessage = other.VersionInstalledErrorMessage;
+      }
+      if (other.Provider.Length != 0) {
+        Provider = other.Provider;
+      }
+      if (other.AgonesVersionTargeted.Length != 0) {
+        AgonesVersionTargeted = other.AgonesVersionTargeted;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AgonesVersionInstalled = input.ReadString();
+            break;
+          }
+          case 18: {
+            KubernetesVersionInstalled = input.ReadString();
+            break;
+          }
+          case 24: {
+            InstallationState = (global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            VersionInstalledErrorMessage = input.ReadString();
+            break;
+          }
+          case 42: {
+            Provider = input.ReadString();
+            break;
+          }
+          case 50: {
+            AgonesVersionTargeted = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AgonesVersionInstalled = input.ReadString();
+            break;
+          }
+          case 18: {
+            KubernetesVersionInstalled = input.ReadString();
+            break;
+          }
+          case 24: {
+            InstallationState = (global::Google.Cloud.Gaming.V1.KubernetesClusterState.Types.InstallationState) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            VersionInstalledErrorMessage = input.ReadString();
+            break;
+          }
+          case 42: {
+            Provider = input.ReadString();
+            break;
+          }
+          case 50: {
+            AgonesVersionTargeted = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the KubernetesClusterState message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// The state of the installed versions of Agones/Kubernetes. See also
+      /// https://cloud.google.com/game-servers/docs/versions-and-upgrades.
+      /// </summary>
+      public enum InstallationState {
+        /// <summary>
+        /// The default value. This value is used if the state is omitted.
+        /// </summary>
+        [pbr::OriginalName("INSTALLATION_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The combination of Agones and Kubernetes versions is supported by Google
+        /// Cloud Game Servers.
+        /// </summary>
+        [pbr::OriginalName("AGONES_KUBERNETES_VERSION_SUPPORTED")] AgonesKubernetesVersionSupported = 1,
+        /// <summary>
+        /// The installed version of Agones is not supported by Google Cloud Game
+        /// Servers.
+        /// </summary>
+        [pbr::OriginalName("AGONES_VERSION_UNSUPPORTED")] AgonesVersionUnsupported = 2,
+        /// <summary>
+        /// The installed version of Agones is supported by Google Cloud Game
+        /// Servers, but the installed version of Kubernetes is not recommended or
+        /// supported by the version of Agones.
+        /// </summary>
+        [pbr::OriginalName("AGONES_KUBERNETES_VERSION_UNSUPPORTED")] AgonesKubernetesVersionUnsupported = 3,
+        /// <summary>
+        /// The installed version of Agones is not recognized because the Agones
+        /// controller's image name does not have a version string reported as
+        /// {major}.{minor}(.{patch}).
+        /// </summary>
+        [pbr::OriginalName("AGONES_VERSION_UNRECOGNIZED")] AgonesVersionUnrecognized = 4,
+        /// <summary>
+        /// The server version of Kubernetes cluster is not recognized because the
+        /// API server didn't return parsable version info on path/version.
+        /// </summary>
+        [pbr::OriginalName("KUBERNETES_VERSION_UNRECOGNIZED")] KubernetesVersionUnrecognized = 5,
+        /// <summary>
+        /// Failed to read or verify the version of Agones or Kubernetes. See
+        /// version_installed_error_message for details.
+        /// </summary>
+        [pbr::OriginalName("VERSION_VERIFICATION_FAILED")] VersionVerificationFailed = 6,
+        /// <summary>
+        /// Agones is not installed.
+        /// </summary>
+        [pbr::OriginalName("AGONES_NOT_INSTALLED")] AgonesNotInstalled = 7,
+      }
+
+    }
+    #endregion
 
   }
 
