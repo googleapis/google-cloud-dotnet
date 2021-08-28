@@ -232,6 +232,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Kicks off a test case run.
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+      /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -557,6 +563,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Kicks off a test case run.
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+      /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -569,6 +581,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Kicks off a test case run.
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+      /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -579,6 +597,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Kicks off a test case run.
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+      /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -591,6 +615,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Kicks off a test case run.
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+      /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
