@@ -3953,7 +3953,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Updates project-level settings.
         /// </summary>
         /// <param name="settings">
-        /// Required. The new values for the conversation.
+        /// Required. The new settings values.
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to be updated.
@@ -3971,7 +3971,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Updates project-level settings.
         /// </summary>
         /// <param name="settings">
-        /// Required. The new values for the conversation.
+        /// Required. The new settings values.
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to be updated.
@@ -3989,7 +3989,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Updates project-level settings.
         /// </summary>
         /// <param name="settings">
-        /// Required. The new values for the conversation.
+        /// Required. The new settings values.
         /// </param>
         /// <param name="updateMask">
         /// Required. The list of fields to be updated.
