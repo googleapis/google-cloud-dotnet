@@ -1046,6 +1046,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Kicks off a test case run.
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+        /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1055,6 +1061,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Kicks off a test case run.
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+        /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1064,6 +1076,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Kicks off a test case run.
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+        /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1801,6 +1819,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Kicks off a test case run.
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+        /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1813,6 +1837,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Kicks off a test case run.
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [RunTestCaseMetadata][google.cloud.dialogflow.cx.v3.RunTestCaseMetadata]
+        /// - `response`: [RunTestCaseResponse][google.cloud.dialogflow.cx.v3.RunTestCaseResponse]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

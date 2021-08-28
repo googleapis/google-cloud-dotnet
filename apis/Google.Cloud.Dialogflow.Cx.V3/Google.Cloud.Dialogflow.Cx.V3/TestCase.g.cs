@@ -1969,7 +1969,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// <summary>
         /// Required. Input only. The diagnostic
         /// [info][Session.DetectIntentResponse.QueryResult.diagnostic_info]
-        /// output for the turn.
+        /// output for the turn. Required to calculate the testing coverage.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Protobuf.WellKnownTypes.Struct DiagnosticInfo {
@@ -7071,6 +7071,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
   /// <summary>
   /// Metadata returned for the [TestCases.RunTestCase][google.cloud.dialogflow.cx.v3.TestCases.RunTestCase] long running operation.
+  /// This message currently has no fields.
   /// </summary>
   public sealed partial class RunTestCaseMetadata : pb::IMessage<RunTestCaseMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
