@@ -36,6 +36,7 @@ namespace Google.Cloud.Gaming.V1.Tests
             GetGameServerClusterRequest request = new GetGameServerClusterRequest
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                View = GameServerClusterView.Basic,
             };
             GameServerCluster expectedResponse = new GameServerCluster
             {
@@ -52,6 +53,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 ConnectionInfo = new GameServerClusterConnectionInfo(),
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.GetGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -68,6 +70,7 @@ namespace Google.Cloud.Gaming.V1.Tests
             GetGameServerClusterRequest request = new GetGameServerClusterRequest
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                View = GameServerClusterView.Basic,
             };
             GameServerCluster expectedResponse = new GameServerCluster
             {
@@ -84,6 +87,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 ConnectionInfo = new GameServerClusterConnectionInfo(),
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.GetGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -118,6 +122,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 ConnectionInfo = new GameServerClusterConnectionInfo(),
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.GetGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -150,6 +155,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 ConnectionInfo = new GameServerClusterConnectionInfo(),
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.GetGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -184,6 +190,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 ConnectionInfo = new GameServerClusterConnectionInfo(),
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.GetGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -216,6 +223,7 @@ namespace Google.Cloud.Gaming.V1.Tests
                 ConnectionInfo = new GameServerClusterConnectionInfo(),
                 Etag = "etage8ad7218",
                 Description = "description2cf9da67",
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.GetGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<GameServerCluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -237,11 +245,15 @@ namespace Google.Cloud.Gaming.V1.Tests
                 GameServerClusterId = "game_server_cluster_ida2310829",
                 GameServerCluster = new GameServerCluster(),
                 PreviewTime = new wkt::Timestamp(),
+#pragma warning disable CS0612
+                View = GameServerClusterView.Basic,
+#pragma warning restore CS0612
             };
             PreviewCreateGameServerClusterResponse expectedResponse = new PreviewCreateGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
                 TargetState = new TargetState(),
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.PreviewCreateGameServerCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);
@@ -261,11 +273,15 @@ namespace Google.Cloud.Gaming.V1.Tests
                 GameServerClusterId = "game_server_cluster_ida2310829",
                 GameServerCluster = new GameServerCluster(),
                 PreviewTime = new wkt::Timestamp(),
+#pragma warning disable CS0612
+                View = GameServerClusterView.Basic,
+#pragma warning restore CS0612
             };
             PreviewCreateGameServerClusterResponse expectedResponse = new PreviewCreateGameServerClusterResponse
             {
                 Etag = "etage8ad7218",
                 TargetState = new TargetState(),
+                ClusterState = new KubernetesClusterState(),
             };
             mockGrpcClient.Setup(x => x.PreviewCreateGameServerClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PreviewCreateGameServerClusterResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GameServerClustersServiceClient client = new GameServerClustersServiceClientImpl(mockGrpcClient.Object, null);

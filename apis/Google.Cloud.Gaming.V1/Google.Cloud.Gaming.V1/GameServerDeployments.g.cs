@@ -172,7 +172,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -744,8 +744,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-    ///
+    /// Required. The name of the game server delpoyment to retrieve, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -925,8 +924,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server delpoyment to retrieve. Uses the form:
-    ///
+    /// Required. The name of the game server delpoyment to retrieve, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1107,7 +1105,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource name. Uses the form:
+    /// Required. The parent resource name, in the following form:
     /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1371,8 +1369,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server delpoyment to delete. Uses the form:
-    ///
+    /// Required. The name of the game server delpoyment to delete, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1570,10 +1567,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    ///
-    /// https:
-    /// //developers.google.com/protocol-buffers
-    /// // /docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -1812,10 +1806,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// Required. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    ///
-    /// https:
-    /// //developers.google.com/protocol-buffers
-    /// // /docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -2035,8 +2026,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the game server delpoyment. Uses the form:
-    ///
+    /// Required. The name of the game server delpoyment, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2629,8 +2619,7 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the game server deployment. Uses the form:
-    ///
+    /// The resource name of the game server deployment, in the following form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// For example,
     /// `projects/my-project/locations/global/gameServerDeployments/my-deployment`.
@@ -3301,11 +3290,10 @@ namespace Google.Cloud.Gaming.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the game server deployment rollout. Uses the form:
-    ///
+    /// The resource name of the game server deployment rollout, in the following
+    /// form:
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
     /// For example,
-    ///
     /// `projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3350,7 +3338,6 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// The default game server config is applied to all realms unless overridden
     /// in the rollout. For example,
-    ///
     /// `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3705,10 +3692,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// <summary>
     /// Optional. Mask of fields to update. At least one path must be supplied in
     /// this field. For the `FieldMask` definition, see
-    ///
-    /// https:
-    /// //developers.google.com/protocol-buffers
-    /// // /docs/reference/google.protobuf#fieldmask
+    /// https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {

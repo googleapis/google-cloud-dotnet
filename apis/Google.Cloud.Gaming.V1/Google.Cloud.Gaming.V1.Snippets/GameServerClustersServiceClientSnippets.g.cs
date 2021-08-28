@@ -38,6 +38,7 @@ namespace Google.Cloud.Gaming.V1.Snippets
                 ParentAsRealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
                 Filter = "",
                 OrderBy = "",
+                View = GameServerClusterView.Unspecified,
             };
             // Make the request
             PagedEnumerable<ListGameServerClustersResponse, GameServerCluster> response = gameServerClustersServiceClient.ListGameServerClusters(request);
@@ -88,6 +89,7 @@ namespace Google.Cloud.Gaming.V1.Snippets
                 ParentAsRealmName = RealmName.FromProjectLocationRealm("[PROJECT]", "[LOCATION]", "[REALM]"),
                 Filter = "",
                 OrderBy = "",
+                View = GameServerClusterView.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<ListGameServerClustersResponse, GameServerCluster> response = gameServerClustersServiceClient.ListGameServerClustersAsync(request);
@@ -316,6 +318,7 @@ namespace Google.Cloud.Gaming.V1.Snippets
             GetGameServerClusterRequest request = new GetGameServerClusterRequest
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                View = GameServerClusterView.Unspecified,
             };
             // Make the request
             GameServerCluster response = gameServerClustersServiceClient.GetGameServerCluster(request);
@@ -333,6 +336,7 @@ namespace Google.Cloud.Gaming.V1.Snippets
             GetGameServerClusterRequest request = new GetGameServerClusterRequest
             {
                 GameServerClusterName = GameServerClusterName.FromProjectLocationRealmCluster("[PROJECT]", "[LOCATION]", "[REALM]", "[CLUSTER]"),
+                View = GameServerClusterView.Unspecified,
             };
             // Make the request
             GameServerCluster response = await gameServerClustersServiceClient.GetGameServerClusterAsync(request);
