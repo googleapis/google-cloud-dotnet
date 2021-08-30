@@ -416,6 +416,53 @@ namespace Google.Cloud.Translate.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for TranslateDocument</summary>
+        public void TranslateDocumentRequestObject()
+        {
+            // Snippet: TranslateDocument(TranslateDocumentRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            TranslateDocumentRequest request = new TranslateDocumentRequest
+            {
+                Parent = "",
+                SourceLanguageCode = "",
+                TargetLanguageCode = "",
+                DocumentInputConfig = new DocumentInputConfig(),
+                DocumentOutputConfig = new DocumentOutputConfig(),
+                Model = "",
+                GlossaryConfig = new TranslateTextGlossaryConfig(),
+                Labels = { { "", "" }, },
+            };
+            // Make the request
+            TranslateDocumentResponse response = translationServiceClient.TranslateDocument(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TranslateDocumentAsync</summary>
+        public async Task TranslateDocumentRequestObjectAsync()
+        {
+            // Snippet: TranslateDocumentAsync(TranslateDocumentRequest, CallSettings)
+            // Additional: TranslateDocumentAsync(TranslateDocumentRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TranslateDocumentRequest request = new TranslateDocumentRequest
+            {
+                Parent = "",
+                SourceLanguageCode = "",
+                TargetLanguageCode = "",
+                DocumentInputConfig = new DocumentInputConfig(),
+                DocumentOutputConfig = new DocumentOutputConfig(),
+                Model = "",
+                GlossaryConfig = new TranslateTextGlossaryConfig(),
+                Labels = { { "", "" }, },
+            };
+            // Make the request
+            TranslateDocumentResponse response = await translationServiceClient.TranslateDocumentAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for BatchTranslateText</summary>
         public void BatchTranslateTextRequestObject()
         {
@@ -503,6 +550,103 @@ namespace Google.Cloud.Translate.V3.Snippets
             {
                 // If it has completed, then access the result
                 BatchTranslateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchTranslateDocument</summary>
+        public void BatchTranslateDocumentRequestObject()
+        {
+            // Snippet: BatchTranslateDocument(BatchTranslateDocumentRequest, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            BatchTranslateDocumentRequest request = new BatchTranslateDocumentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SourceLanguageCode = "",
+                TargetLanguageCodes = { "", },
+                InputConfigs =
+                {
+                    new BatchDocumentInputConfig(),
+                },
+                OutputConfig = new BatchDocumentOutputConfig(),
+                Models = { { "", "" }, },
+                Glossaries =
+                {
+                    {
+                        "",
+                        new TranslateTextGlossaryConfig()
+                    },
+                },
+                FormatConversions = { { "", "" }, },
+            };
+            // Make the request
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = translationServiceClient.BatchTranslateDocument(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchTranslateDocumentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> retrievedResponse = translationServiceClient.PollOnceBatchTranslateDocument(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchTranslateDocumentResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchTranslateDocumentAsync</summary>
+        public async Task BatchTranslateDocumentRequestObjectAsync()
+        {
+            // Snippet: BatchTranslateDocumentAsync(BatchTranslateDocumentRequest, CallSettings)
+            // Additional: BatchTranslateDocumentAsync(BatchTranslateDocumentRequest, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchTranslateDocumentRequest request = new BatchTranslateDocumentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                SourceLanguageCode = "",
+                TargetLanguageCodes = { "", },
+                InputConfigs =
+                {
+                    new BatchDocumentInputConfig(),
+                },
+                OutputConfig = new BatchDocumentOutputConfig(),
+                Models = { { "", "" }, },
+                Glossaries =
+                {
+                    {
+                        "",
+                        new TranslateTextGlossaryConfig()
+                    },
+                },
+                FormatConversions = { { "", "" }, },
+            };
+            // Make the request
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = await translationServiceClient.BatchTranslateDocumentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchTranslateDocumentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> retrievedResponse = await translationServiceClient.PollOnceBatchTranslateDocumentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchTranslateDocumentResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

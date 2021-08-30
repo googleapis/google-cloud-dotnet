@@ -666,6 +666,80 @@ namespace Google.Cloud.Translate.V3.Tests
         }
 
         [xunit::FactAttribute]
+        public void TranslateDocumentRequestObject()
+        {
+            moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            TranslateDocumentRequest request = new TranslateDocumentRequest
+            {
+                Parent = "parent7858e4d0",
+                SourceLanguageCode = "source_language_code14998292",
+                TargetLanguageCode = "target_language_code6ec12c87",
+                DocumentInputConfig = new DocumentInputConfig(),
+                DocumentOutputConfig = new DocumentOutputConfig(),
+                Model = "model635ef320",
+                GlossaryConfig = new TranslateTextGlossaryConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            TranslateDocumentResponse expectedResponse = new TranslateDocumentResponse
+            {
+                DocumentTranslation = new DocumentTranslation(),
+                GlossaryDocumentTranslation = new DocumentTranslation(),
+                Model = "model635ef320",
+                GlossaryConfig = new TranslateTextGlossaryConfig(),
+            };
+            mockGrpcClient.Setup(x => x.TranslateDocument(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslateDocumentResponse response = client.TranslateDocument(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task TranslateDocumentRequestObjectAsync()
+        {
+            moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            TranslateDocumentRequest request = new TranslateDocumentRequest
+            {
+                Parent = "parent7858e4d0",
+                SourceLanguageCode = "source_language_code14998292",
+                TargetLanguageCode = "target_language_code6ec12c87",
+                DocumentInputConfig = new DocumentInputConfig(),
+                DocumentOutputConfig = new DocumentOutputConfig(),
+                Model = "model635ef320",
+                GlossaryConfig = new TranslateTextGlossaryConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+            };
+            TranslateDocumentResponse expectedResponse = new TranslateDocumentResponse
+            {
+                DocumentTranslation = new DocumentTranslation(),
+                GlossaryDocumentTranslation = new DocumentTranslation(),
+                Model = "model635ef320",
+                GlossaryConfig = new TranslateTextGlossaryConfig(),
+            };
+            mockGrpcClient.Setup(x => x.TranslateDocumentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TranslateDocumentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            TranslationServiceClient client = new TranslationServiceClientImpl(mockGrpcClient.Object, null);
+            TranslateDocumentResponse responseCallSettings = await client.TranslateDocumentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            TranslateDocumentResponse responseCancellationToken = await client.TranslateDocumentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetGlossaryRequestObject()
         {
             moq::Mock<TranslationService.TranslationServiceClient> mockGrpcClient = new moq::Mock<TranslationService.TranslationServiceClient>(moq::MockBehavior.Strict);

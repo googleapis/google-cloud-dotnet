@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "TranslationServiceClient",
           "rpcs": {
+            "BatchTranslateDocument": {
+              "methods": [
+                "BatchTranslateDocument",
+                "BatchTranslateDocumentAsync"
+              ]
+            },
             "BatchTranslateText": {
               "methods": [
                 "BatchTranslateText",
@@ -50,6 +56,12 @@
               "methods": [
                 "ListGlossaries",
                 "ListGlossariesAsync"
+              ]
+            },
+            "TranslateDocument": {
+              "methods": [
+                "TranslateDocument",
+                "TranslateDocumentAsync"
               ]
             },
             "TranslateText": {
