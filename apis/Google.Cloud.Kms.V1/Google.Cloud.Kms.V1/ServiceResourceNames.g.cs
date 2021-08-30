@@ -174,6 +174,16 @@ namespace Google.Cloud.Kms.V1
             get => string.IsNullOrEmpty(Parent) ? null : CryptoKeyName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CryptoKeyVersionName"/>-typed view over the <see cref="CryptoKeyVersion"/> resource name
+        /// property.
+        /// </summary>
+        public CryptoKeyVersionName CryptoKeyVersionAsCryptoKeyVersionName
+        {
+            get => string.IsNullOrEmpty(CryptoKeyVersion) ? null : CryptoKeyVersionName.Parse(CryptoKeyVersion, allowUnparsed: true);
+            set => CryptoKeyVersion = value?.ToString() ?? "";
+        }
     }
 
     public partial class CreateImportJobRequest
