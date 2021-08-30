@@ -31,12 +31,12 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>.
+            /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
             /// </summary>
             ProjectLocationPrivateConnection = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationPrivateConnection = new gax::PathTemplate("projects/{project}/locations/{location}/privateConnections/{privateConnection}");
+        private static gax::PathTemplate s_projectLocationPrivateConnection = new gax::PathTemplate("projects/{project}/locations/{location}/privateConnections/{private_connection}");
 
         /// <summary>Creates a <see cref="PrivateConnectionName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -49,7 +49,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Creates a <see cref="PrivateConnectionName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -60,28 +60,28 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="PrivateConnectionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="privateConnectionId">The <c>PrivateConnection</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="PrivateConnectionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string privateConnectionId) =>
             FormatProjectLocationPrivateConnection(projectId, locationId, privateConnectionId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="PrivateConnectionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="privateConnectionId">The <c>PrivateConnection</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="PrivateConnectionName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>.
         /// </returns>
         public static string FormatProjectLocationPrivateConnection(string projectId, string locationId, string privateConnectionId) =>
             s_projectLocationPrivateConnection.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)));
@@ -94,7 +94,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -112,7 +112,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -136,7 +136,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -158,7 +158,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -206,7 +206,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="PrivateConnectionName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -282,12 +282,12 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>.
+            /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>.
             /// </summary>
             ProjectLocationPrivateConnectionRoute = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationPrivateConnectionRoute = new gax::PathTemplate("projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}");
+        private static gax::PathTemplate s_projectLocationPrivateConnectionRoute = new gax::PathTemplate("projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}");
 
         /// <summary>Creates a <see cref="RouteName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -299,7 +299,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Creates a <see cref="RouteName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -311,7 +311,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="RouteName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -319,14 +319,14 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <param name="routeId">The <c>Route</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="RouteName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string privateConnectionId, string routeId) =>
             FormatProjectLocationPrivateConnectionRoute(projectId, locationId, privateConnectionId, routeId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="RouteName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -334,7 +334,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <param name="routeId">The <c>Route</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="RouteName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>.
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>.
         /// </returns>
         public static string FormatProjectLocationPrivateConnectionRoute(string projectId, string locationId, string privateConnectionId, string routeId) =>
             s_projectLocationPrivateConnectionRoute.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(privateConnectionId, nameof(privateConnectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(routeId, nameof(routeId)));
@@ -345,7 +345,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -363,7 +363,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -387,7 +387,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -408,7 +408,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -457,7 +457,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="RouteName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/privateConnections/{privateConnection}/routes/{route}</c>
+        /// <c>projects/{project}/locations/{location}/privateConnections/{private_connection}/routes/{route}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -539,12 +539,12 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
             /// <summary>
             /// A resource name with pattern
-            /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>.
+            /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>.
             /// </summary>
             ProjectLocationConnectionProfile = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationConnectionProfile = new gax::PathTemplate("projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}");
+        private static gax::PathTemplate s_projectLocationConnectionProfile = new gax::PathTemplate("projects/{project}/locations/{location}/connectionProfiles/{connection_profile}");
 
         /// <summary>Creates a <see cref="ConnectionProfileName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -557,7 +557,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Creates a <see cref="ConnectionProfileName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>.
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -568,28 +568,28 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConnectionProfileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>.
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="connectionProfileId">The <c>ConnectionProfile</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ConnectionProfileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>.
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>.
         /// </returns>
         public static string Format(string projectId, string locationId, string connectionProfileId) =>
             FormatProjectLocationConnectionProfile(projectId, locationId, connectionProfileId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConnectionProfileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>.
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="connectionProfileId">The <c>ConnectionProfile</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="ConnectionProfileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>.
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>.
         /// </returns>
         public static string FormatProjectLocationConnectionProfile(string projectId, string locationId, string connectionProfileId) =>
             s_projectLocationConnectionProfile.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(connectionProfileId, nameof(connectionProfileId)));
@@ -602,7 +602,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -620,7 +620,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -644,7 +644,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -666,7 +666,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
         /// <list type="bullet">
         /// <item>
         /// <description>
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -714,7 +714,7 @@ namespace Google.Cloud.Datastream.V1Alpha1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="ConnectionProfileName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}</c>
+        /// <c>projects/{project}/locations/{location}/connectionProfiles/{connection_profile}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
