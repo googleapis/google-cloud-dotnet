@@ -389,6 +389,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -420,6 +421,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -453,6 +455,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -484,6 +487,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -517,6 +521,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -548,6 +553,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1262,6 +1268,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1294,6 +1301,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1328,6 +1336,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1360,6 +1369,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1394,6 +1404,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1426,6 +1437,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1446,6 +1458,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.ExternalSymmetricEncryption,
                 ImportJob = "import_job02c374ab",
                 RsaAesWrappedKey = proto::ByteString.CopyFromUtf8("rsa_aes_wrapped_keyeffad66d"),
+                CryptoKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
@@ -1462,6 +1475,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.ImportCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1480,6 +1494,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.ExternalSymmetricEncryption,
                 ImportJob = "import_job02c374ab",
                 RsaAesWrappedKey = proto::ByteString.CopyFromUtf8("rsa_aes_wrapped_keyeffad66d"),
+                CryptoKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
             };
             CryptoKeyVersion expectedResponse = new CryptoKeyVersion
             {
@@ -1496,6 +1511,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.ImportCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1860,6 +1876,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1892,6 +1909,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1926,6 +1944,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1958,6 +1977,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2207,6 +2227,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2238,6 +2259,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2271,6 +2293,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2302,6 +2325,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2335,6 +2359,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2366,6 +2391,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.DestroyCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2399,6 +2425,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2430,6 +2457,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2463,6 +2491,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2494,6 +2523,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2527,6 +2557,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2558,6 +2589,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 ImportTime = new wkt::Timestamp(),
                 ImportFailureReason = "import_failure_reason8924b287",
                 ExternalProtectionLevelOptions = new ExternalProtectionLevelOptions(),
+                ReimportEligible = false,
             };
             mockGrpcClient.Setup(x => x.RestoreCryptoKeyVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKeyVersion>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
