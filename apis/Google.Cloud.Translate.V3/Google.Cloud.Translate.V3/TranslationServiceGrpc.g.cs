@@ -3,7 +3,7 @@
 //     source: google/cloud/translate/v3/translation_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 //
 #pragma warning disable 0414, 1591
 #region Designer generated code
@@ -67,8 +66,11 @@ namespace Google.Cloud.Translate.V3 {
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.DetectLanguageResponse> __Marshaller_google_cloud_translation_v3_DetectLanguageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.DetectLanguageResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest> __Marshaller_google_cloud_translation_v3_GetSupportedLanguagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.SupportedLanguages> __Marshaller_google_cloud_translation_v3_SupportedLanguages = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.SupportedLanguages.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.TranslateDocumentRequest> __Marshaller_google_cloud_translation_v3_TranslateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.TranslateDocumentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.TranslateDocumentResponse> __Marshaller_google_cloud_translation_v3_TranslateDocumentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.TranslateDocumentResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.BatchTranslateTextRequest> __Marshaller_google_cloud_translation_v3_BatchTranslateTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.BatchTranslateTextRequest.Parser));
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest> __Marshaller_google_cloud_translation_v3_BatchTranslateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.CreateGlossaryRequest> __Marshaller_google_cloud_translation_v3_CreateGlossaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.CreateGlossaryRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesRequest> __Marshaller_google_cloud_translation_v3_ListGlossariesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossariesRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Translate.V3.ListGlossariesResponse> __Marshaller_google_cloud_translation_v3_ListGlossariesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Translate.V3.ListGlossariesResponse.Parser));
@@ -97,11 +99,25 @@ namespace Google.Cloud.Translate.V3 {
         __Marshaller_google_cloud_translation_v3_GetSupportedLanguagesRequest,
         __Marshaller_google_cloud_translation_v3_SupportedLanguages);
 
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.TranslateDocumentRequest, global::Google.Cloud.Translate.V3.TranslateDocumentResponse> __Method_TranslateDocument = new grpc::Method<global::Google.Cloud.Translate.V3.TranslateDocumentRequest, global::Google.Cloud.Translate.V3.TranslateDocumentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TranslateDocument",
+        __Marshaller_google_cloud_translation_v3_TranslateDocumentRequest,
+        __Marshaller_google_cloud_translation_v3_TranslateDocumentResponse);
+
     static readonly grpc::Method<global::Google.Cloud.Translate.V3.BatchTranslateTextRequest, global::Google.LongRunning.Operation> __Method_BatchTranslateText = new grpc::Method<global::Google.Cloud.Translate.V3.BatchTranslateTextRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchTranslateText",
         __Marshaller_google_cloud_translation_v3_BatchTranslateTextRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest, global::Google.LongRunning.Operation> __Method_BatchTranslateDocument = new grpc::Method<global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchTranslateDocument",
+        __Marshaller_google_cloud_translation_v3_BatchTranslateDocumentRequest,
         __Marshaller_google_longrunning_Operation);
 
     static readonly grpc::Method<global::Google.Cloud.Translate.V3.CreateGlossaryRequest, global::Google.LongRunning.Operation> __Method_CreateGlossary = new grpc::Method<global::Google.Cloud.Translate.V3.CreateGlossaryRequest, global::Google.LongRunning.Operation>(
@@ -176,6 +192,17 @@ namespace Google.Cloud.Translate.V3 {
       }
 
       /// <summary>
+      /// Translates documents in synchronous mode.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Translate.V3.TranslateDocumentResponse> TranslateDocument(global::Google.Cloud.Translate.V3.TranslateDocumentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Translates a large volume of text in asynchronous batch mode.
       /// This function provides real-time output as the inputs are being processed.
       /// If caller cancels a request, the partial results (for an input file, it's
@@ -188,6 +215,23 @@ namespace Google.Cloud.Translate.V3 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchTranslateText(global::Google.Cloud.Translate.V3.BatchTranslateTextRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Translates a large volume of document in asynchronous batch mode.
+      /// This function provides real-time output as the inputs are being processed.
+      /// If caller cancels a request, the partial results (for an input file, it's
+      /// all or nothing) may still be available on the specified output location.
+      ///
+      /// This call returns immediately and you can use
+      /// google.longrunning.Operation.name to poll the status of the call.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchTranslateDocument(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -399,6 +443,50 @@ namespace Google.Cloud.Translate.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSupportedLanguages, null, options, request);
       }
       /// <summary>
+      /// Translates documents in synchronous mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Translate.V3.TranslateDocumentResponse TranslateDocument(global::Google.Cloud.Translate.V3.TranslateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TranslateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Translates documents in synchronous mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Translate.V3.TranslateDocumentResponse TranslateDocument(global::Google.Cloud.Translate.V3.TranslateDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TranslateDocument, null, options, request);
+      }
+      /// <summary>
+      /// Translates documents in synchronous mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.TranslateDocumentResponse> TranslateDocumentAsync(global::Google.Cloud.Translate.V3.TranslateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TranslateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Translates documents in synchronous mode.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Translate.V3.TranslateDocumentResponse> TranslateDocumentAsync(global::Google.Cloud.Translate.V3.TranslateDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TranslateDocument, null, options, request);
+      }
+      /// <summary>
       /// Translates a large volume of text in asynchronous batch mode.
       /// This function provides real-time output as the inputs are being processed.
       /// If caller cancels a request, the partial results (for an input file, it's
@@ -465,6 +553,74 @@ namespace Google.Cloud.Translate.V3 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchTranslateTextAsync(global::Google.Cloud.Translate.V3.BatchTranslateTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchTranslateText, null, options, request);
+      }
+      /// <summary>
+      /// Translates a large volume of document in asynchronous batch mode.
+      /// This function provides real-time output as the inputs are being processed.
+      /// If caller cancels a request, the partial results (for an input file, it's
+      /// all or nothing) may still be available on the specified output location.
+      ///
+      /// This call returns immediately and you can use
+      /// google.longrunning.Operation.name to poll the status of the call.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchTranslateDocument(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchTranslateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Translates a large volume of document in asynchronous batch mode.
+      /// This function provides real-time output as the inputs are being processed.
+      /// If caller cancels a request, the partial results (for an input file, it's
+      /// all or nothing) may still be available on the specified output location.
+      ///
+      /// This call returns immediately and you can use
+      /// google.longrunning.Operation.name to poll the status of the call.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation BatchTranslateDocument(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchTranslateDocument, null, options, request);
+      }
+      /// <summary>
+      /// Translates a large volume of document in asynchronous batch mode.
+      /// This function provides real-time output as the inputs are being processed.
+      /// If caller cancels a request, the partial results (for an input file, it's
+      /// all or nothing) may still be available on the specified output location.
+      ///
+      /// This call returns immediately and you can use
+      /// google.longrunning.Operation.name to poll the status of the call.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchTranslateDocumentAsync(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchTranslateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Translates a large volume of document in asynchronous batch mode.
+      /// This function provides real-time output as the inputs are being processed.
+      /// If caller cancels a request, the partial results (for an input file, it's
+      /// all or nothing) may still be available on the specified output location.
+      ///
+      /// This call returns immediately and you can use
+      /// google.longrunning.Operation.name to poll the status of the call.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchTranslateDocumentAsync(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchTranslateDocument, null, options, request);
       }
       /// <summary>
       /// Creates a glossary and returns the long-running operation. Returns
@@ -677,7 +833,9 @@ namespace Google.Cloud.Translate.V3 {
           .AddMethod(__Method_TranslateText, serviceImpl.TranslateText)
           .AddMethod(__Method_DetectLanguage, serviceImpl.DetectLanguage)
           .AddMethod(__Method_GetSupportedLanguages, serviceImpl.GetSupportedLanguages)
+          .AddMethod(__Method_TranslateDocument, serviceImpl.TranslateDocument)
           .AddMethod(__Method_BatchTranslateText, serviceImpl.BatchTranslateText)
+          .AddMethod(__Method_BatchTranslateDocument, serviceImpl.BatchTranslateDocument)
           .AddMethod(__Method_CreateGlossary, serviceImpl.CreateGlossary)
           .AddMethod(__Method_ListGlossaries, serviceImpl.ListGlossaries)
           .AddMethod(__Method_GetGlossary, serviceImpl.GetGlossary)
@@ -693,7 +851,9 @@ namespace Google.Cloud.Translate.V3 {
       serviceBinder.AddMethod(__Method_TranslateText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.TranslateTextRequest, global::Google.Cloud.Translate.V3.TranslateTextResponse>(serviceImpl.TranslateText));
       serviceBinder.AddMethod(__Method_DetectLanguage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.DetectLanguageRequest, global::Google.Cloud.Translate.V3.DetectLanguageResponse>(serviceImpl.DetectLanguage));
       serviceBinder.AddMethod(__Method_GetSupportedLanguages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetSupportedLanguagesRequest, global::Google.Cloud.Translate.V3.SupportedLanguages>(serviceImpl.GetSupportedLanguages));
+      serviceBinder.AddMethod(__Method_TranslateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.TranslateDocumentRequest, global::Google.Cloud.Translate.V3.TranslateDocumentResponse>(serviceImpl.TranslateDocument));
       serviceBinder.AddMethod(__Method_BatchTranslateText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.BatchTranslateTextRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchTranslateText));
+      serviceBinder.AddMethod(__Method_BatchTranslateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.BatchTranslateDocument));
       serviceBinder.AddMethod(__Method_CreateGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.CreateGlossaryRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateGlossary));
       serviceBinder.AddMethod(__Method_ListGlossaries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.ListGlossariesRequest, global::Google.Cloud.Translate.V3.ListGlossariesResponse>(serviceImpl.ListGlossaries));
       serviceBinder.AddMethod(__Method_GetGlossary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Translate.V3.GetGlossaryRequest, global::Google.Cloud.Translate.V3.Glossary>(serviceImpl.GetGlossary));

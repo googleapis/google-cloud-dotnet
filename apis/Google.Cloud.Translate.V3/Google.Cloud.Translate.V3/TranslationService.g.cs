@@ -29,177 +29,258 @@ namespace Google.Cloud.Translate.V3 {
             "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJv",
             "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
             "cGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRp",
-            "b25zLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIk4K",
-            "G1RyYW5zbGF0ZVRleHRHbG9zc2FyeUNvbmZpZxIVCghnbG9zc2FyeRgBIAEo",
-            "CUID4EECEhgKC2lnbm9yZV9jYXNlGAIgASgIQgPgQQEitQMKFFRyYW5zbGF0",
-            "ZVRleHRSZXF1ZXN0EhUKCGNvbnRlbnRzGAEgAygJQgPgQQISFgoJbWltZV90",
-            "eXBlGAMgASgJQgPgQQESIQoUc291cmNlX2xhbmd1YWdlX2NvZGUYBCABKAlC",
-            "A+BBARIhChR0YXJnZXRfbGFuZ3VhZ2VfY29kZRgFIAEoCUID4EECEjkKBnBh",
-            "cmVudBgIIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
-            "TG9jYXRpb24SEgoFbW9kZWwYBiABKAlCA+BBARJWCg9nbG9zc2FyeV9jb25m",
-            "aWcYByABKAsyOC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJhbnNs",
-            "YXRlVGV4dEdsb3NzYXJ5Q29uZmlnQgPgQQESUgoGbGFiZWxzGAogAygLMj0u",
-            "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZVRleHRSZXF1",
-            "ZXN0LkxhYmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASKgAQoVVHJhbnNsYXRlVGV4dFJlc3Bv",
-            "bnNlEj4KDHRyYW5zbGF0aW9ucxgBIAMoCzIoLmdvb2dsZS5jbG91ZC50cmFu",
-            "c2xhdGlvbi52My5UcmFuc2xhdGlvbhJHChVnbG9zc2FyeV90cmFuc2xhdGlv",
-            "bnMYAyADKAsyKC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJhbnNs",
-            "YXRpb24iqAEKC1RyYW5zbGF0aW9uEhcKD3RyYW5zbGF0ZWRfdGV4dBgBIAEo",
-            "CRINCgVtb2RlbBgCIAEoCRIeChZkZXRlY3RlZF9sYW5ndWFnZV9jb2RlGAQg",
-            "ASgJElEKD2dsb3NzYXJ5X2NvbmZpZxgDIAEoCzI4Lmdvb2dsZS5jbG91ZC50",
-            "cmFuc2xhdGlvbi52My5UcmFuc2xhdGVUZXh0R2xvc3NhcnlDb25maWcinwIK",
-            "FURldGVjdExhbmd1YWdlUmVxdWVzdBI5CgZwYXJlbnQYBSABKAlCKeBBAvpB",
-            "IwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhIKBW1vZGVs",
-            "GAQgASgJQgPgQQESEQoHY29udGVudBgBIAEoCUgAEhYKCW1pbWVfdHlwZRgD",
-            "IAEoCUID4EEBElMKBmxhYmVscxgGIAMoCzI+Lmdvb2dsZS5jbG91ZC50cmFu",
-            "c2xhdGlvbi52My5EZXRlY3RMYW5ndWFnZVJlcXVlc3QuTGFiZWxzRW50cnlC",
-            "A+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBQggKBnNvdXJjZSI9ChBEZXRlY3RlZExhbmd1YWdlEhUKDWxhbmd1",
-            "YWdlX2NvZGUYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAiJaChZEZXRlY3RM",
-            "YW5ndWFnZVJlc3BvbnNlEkAKCWxhbmd1YWdlcxgBIAMoCzItLmdvb2dsZS5j",
-            "bG91ZC50cmFuc2xhdGlvbi52My5EZXRlY3RlZExhbmd1YWdlIpEBChxHZXRT",
-            "dXBwb3J0ZWRMYW5ndWFnZXNSZXF1ZXN0EjkKBnBhcmVudBgDIAEoCUIp4EEC",
-            "+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SIgoVZGlz",
-            "cGxheV9sYW5ndWFnZV9jb2RlGAEgASgJQgPgQQESEgoFbW9kZWwYAiABKAlC",
-            "A+BBASJXChJTdXBwb3J0ZWRMYW5ndWFnZXMSQQoJbGFuZ3VhZ2VzGAEgAygL",
-            "Mi4uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlN1cHBvcnRlZExhbmd1",
-            "YWdlInAKEVN1cHBvcnRlZExhbmd1YWdlEhUKDWxhbmd1YWdlX2NvZGUYASAB",
-            "KAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEhYKDnN1cHBvcnRfc291cmNlGAMg",
-            "ASgIEhYKDnN1cHBvcnRfdGFyZ2V0GAQgASgIIh4KCUdjc1NvdXJjZRIRCglp",
-            "bnB1dF91cmkYASABKAkibQoLSW5wdXRDb25maWcSFgoJbWltZV90eXBlGAEg",
-            "ASgJQgPgQQESPAoKZ2NzX3NvdXJjZRgCIAEoCzImLmdvb2dsZS5jbG91ZC50",
-            "cmFuc2xhdGlvbi52My5HY3NTb3VyY2VIAEIICgZzb3VyY2UiKwoOR2NzRGVz",
-            "dGluYXRpb24SGQoRb3V0cHV0X3VyaV9wcmVmaXgYASABKAkiZQoMT3V0cHV0",
-            "Q29uZmlnEkYKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIrLmdvb2dsZS5jbG91",
-            "ZC50cmFuc2xhdGlvbi52My5HY3NEZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0",
-            "aW9uIogGChlCYXRjaFRyYW5zbGF0ZVRleHRSZXF1ZXN0EjkKBnBhcmVudBgB",
+            "b25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVz",
+            "LnByb3RvIk4KG1RyYW5zbGF0ZVRleHRHbG9zc2FyeUNvbmZpZxIVCghnbG9z",
+            "c2FyeRgBIAEoCUID4EECEhgKC2lnbm9yZV9jYXNlGAIgASgIQgPgQQEitQMK",
+            "FFRyYW5zbGF0ZVRleHRSZXF1ZXN0EhUKCGNvbnRlbnRzGAEgAygJQgPgQQIS",
+            "FgoJbWltZV90eXBlGAMgASgJQgPgQQESIQoUc291cmNlX2xhbmd1YWdlX2Nv",
+            "ZGUYBCABKAlCA+BBARIhChR0YXJnZXRfbGFuZ3VhZ2VfY29kZRgFIAEoCUID",
+            "4EECEjkKBnBhcmVudBgIIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
+            "YXBpcy5jb20vTG9jYXRpb24SEgoFbW9kZWwYBiABKAlCA+BBARJWCg9nbG9z",
+            "c2FyeV9jb25maWcYByABKAsyOC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24u",
+            "djMuVHJhbnNsYXRlVGV4dEdsb3NzYXJ5Q29uZmlnQgPgQQESUgoGbGFiZWxz",
+            "GAogAygLMj0uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0",
+            "ZVRleHRSZXF1ZXN0LkxhYmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKgAQoVVHJhbnNsYXRl",
+            "VGV4dFJlc3BvbnNlEj4KDHRyYW5zbGF0aW9ucxgBIAMoCzIoLmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGlvbhJHChVnbG9zc2FyeV90",
+            "cmFuc2xhdGlvbnMYAyADKAsyKC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24u",
+            "djMuVHJhbnNsYXRpb24iqAEKC1RyYW5zbGF0aW9uEhcKD3RyYW5zbGF0ZWRf",
+            "dGV4dBgBIAEoCRINCgVtb2RlbBgCIAEoCRIeChZkZXRlY3RlZF9sYW5ndWFn",
+            "ZV9jb2RlGAQgASgJElEKD2dsb3NzYXJ5X2NvbmZpZxgDIAEoCzI4Lmdvb2ds",
+            "ZS5jbG91ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGVUZXh0R2xvc3NhcnlD",
+            "b25maWcinwIKFURldGVjdExhbmd1YWdlUmVxdWVzdBI5CgZwYXJlbnQYBSAB",
+            "KAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9u",
+            "EhIKBW1vZGVsGAQgASgJQgPgQQESEQoHY29udGVudBgBIAEoCUgAEhYKCW1p",
+            "bWVfdHlwZRgDIAEoCUID4EEBElMKBmxhYmVscxgGIAMoCzI+Lmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5EZXRlY3RMYW5ndWFnZVJlcXVlc3QuTGFi",
+            "ZWxzRW50cnlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBQggKBnNvdXJjZSI9ChBEZXRlY3RlZExhbmd1YWdl",
+            "EhUKDWxhbmd1YWdlX2NvZGUYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAiJa",
+            "ChZEZXRlY3RMYW5ndWFnZVJlc3BvbnNlEkAKCWxhbmd1YWdlcxgBIAMoCzIt",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5EZXRlY3RlZExhbmd1YWdl",
+            "IpEBChxHZXRTdXBwb3J0ZWRMYW5ndWFnZXNSZXF1ZXN0EjkKBnBhcmVudBgD",
             "IAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24SIQoUc291cmNlX2xhbmd1YWdlX2NvZGUYAiABKAlCA+BBAhIiChV0YXJn",
-            "ZXRfbGFuZ3VhZ2VfY29kZXMYAyADKAlCA+BBAhJXCgZtb2RlbHMYBCADKAsy",
-            "Qi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQmF0Y2hUcmFuc2xhdGVU",
-            "ZXh0UmVxdWVzdC5Nb2RlbHNFbnRyeUID4EEBEkQKDWlucHV0X2NvbmZpZ3MY",
-            "BSADKAsyKC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuSW5wdXRDb25m",
-            "aWdCA+BBAhJFCg1vdXRwdXRfY29uZmlnGAYgASgLMikuZ29vZ2xlLmNsb3Vk",
-            "LnRyYW5zbGF0aW9uLnYzLk91dHB1dENvbmZpZ0ID4EECEl8KCmdsb3NzYXJp",
-            "ZXMYByADKAsyRi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQmF0Y2hU",
-            "cmFuc2xhdGVUZXh0UmVxdWVzdC5HbG9zc2FyaWVzRW50cnlCA+BBARJXCgZs",
-            "YWJlbHMYCSADKAsyQi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuQmF0",
-            "Y2hUcmFuc2xhdGVUZXh0UmVxdWVzdC5MYWJlbHNFbnRyeUID4EEBGi0KC01v",
-            "ZGVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaawoP",
-            "R2xvc3Nhcmllc0VudHJ5EgsKA2tleRgBIAEoCRJHCgV2YWx1ZRgCIAEoCzI4",
-            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGVUZXh0R2xv",
-            "c3NhcnlDb25maWc6AjgBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEizgIKFkJhdGNoVHJhbnNsYXRlTWV0YWRhdGES",
-            "SAoFc3RhdGUYASABKA4yOS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
-            "QmF0Y2hUcmFuc2xhdGVNZXRhZGF0YS5TdGF0ZRIdChV0cmFuc2xhdGVkX2No",
-            "YXJhY3RlcnMYAiABKAMSGQoRZmFpbGVkX2NoYXJhY3RlcnMYAyABKAMSGAoQ",
-            "dG90YWxfY2hhcmFjdGVycxgEIAEoAxIvCgtzdWJtaXRfdGltZRgFIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiZQoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESDQoJU1VDQ0VFREVEEAISCgoG",
-            "RkFJTEVEEAMSDgoKQ0FOQ0VMTElORxAEEg0KCUNBTkNFTExFRBAFIssBChZC",
-            "YXRjaFRyYW5zbGF0ZVJlc3BvbnNlEhgKEHRvdGFsX2NoYXJhY3RlcnMYASAB",
-            "KAMSHQoVdHJhbnNsYXRlZF9jaGFyYWN0ZXJzGAIgASgDEhkKEWZhaWxlZF9j",
-            "aGFyYWN0ZXJzGAMgASgDEi8KC3N1Ym1pdF90aW1lGAQgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIsCghlbmRfdGltZRgFIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAiXQoTR2xvc3NhcnlJbnB1dENvbmZpZxI8",
-            "CgpnY3Nfc291cmNlGAEgASgLMiYuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9u",
-            "LnYzLkdjc1NvdXJjZUgAQggKBnNvdXJjZSL6BAoIR2xvc3NhcnkSDAoEbmFt",
-            "ZRgBIAEoCRJPCg1sYW5ndWFnZV9wYWlyGAMgASgLMjYuZ29vZ2xlLmNsb3Vk",
-            "LnRyYW5zbGF0aW9uLnYzLkdsb3NzYXJ5Lkxhbmd1YWdlQ29kZVBhaXJIABJU",
-            "ChJsYW5ndWFnZV9jb2Rlc19zZXQYBCABKAsyNi5nb29nbGUuY2xvdWQudHJh",
-            "bnNsYXRpb24udjMuR2xvc3NhcnkuTGFuZ3VhZ2VDb2Rlc1NldEgAEkYKDGlu",
-            "cHV0X2NvbmZpZxgFIAEoCzIwLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52",
-            "My5HbG9zc2FyeUlucHV0Q29uZmlnEhgKC2VudHJ5X2NvdW50GAYgASgFQgPg",
-            "QQMSNAoLc3VibWl0X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMaTgoQTGFuZ3VhZ2VDb2RlUGFpchIcChRzb3Vy",
-            "Y2VfbGFuZ3VhZ2VfY29kZRgBIAEoCRIcChR0YXJnZXRfbGFuZ3VhZ2VfY29k",
-            "ZRgCIAEoCRoqChBMYW5ndWFnZUNvZGVzU2V0EhYKDmxhbmd1YWdlX2NvZGVz",
-            "GAEgAygJOmXqQWIKIXRyYW5zbGF0ZS5nb29nbGVhcGlzLmNvbS9HbG9zc2Fy",
-            "eRI9cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2ds",
-            "b3NzYXJpZXMve2dsb3NzYXJ5fUILCglsYW5ndWFnZXMikAEKFUNyZWF0ZUds",
-            "b3NzYXJ5UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRp",
-            "b25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEjwKCGdsb3NzYXJ5GAIgASgL",
-            "MiUuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdsb3NzYXJ5QgPgQQIi",
-            "TQoSR2V0R2xvc3NhcnlSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwoh",
-            "dHJhbnNsYXRlLmdvb2dsZWFwaXMuY29tL0dsb3NzYXJ5IlAKFURlbGV0ZUds",
-            "b3NzYXJ5UmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIXRyYW5zbGF0",
-            "ZS5nb29nbGVhcGlzLmNvbS9HbG9zc2FyeSKYAQoVTGlzdEdsb3NzYXJpZXNS",
-            "ZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29v",
-            "Z2xlYXBpcy5jb20vTG9jYXRpb24SFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
-            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEB",
-            "ImwKFkxpc3RHbG9zc2FyaWVzUmVzcG9uc2USOQoKZ2xvc3NhcmllcxgBIAMo",
-            "CzIlLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HbG9zc2FyeRIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiiAIKFkNyZWF0ZUdsb3NzYXJ5TWV0YWRh",
-            "dGESDAoEbmFtZRgBIAEoCRJICgVzdGF0ZRgCIAEoDjI5Lmdvb2dsZS5jbG91",
-            "ZC50cmFuc2xhdGlvbi52My5DcmVhdGVHbG9zc2FyeU1ldGFkYXRhLlN0YXRl",
-            "Ei8KC3N1Ym1pdF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcCJlCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1JVTk5J",
-            "TkcQARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQAxIOCgpDQU5DRUxMSU5H",
-            "EAQSDQoJQ0FOQ0VMTEVEEAUiiAIKFkRlbGV0ZUdsb3NzYXJ5TWV0YWRhdGES",
-            "DAoEbmFtZRgBIAEoCRJICgVzdGF0ZRgCIAEoDjI5Lmdvb2dsZS5jbG91ZC50",
-            "cmFuc2xhdGlvbi52My5EZWxldGVHbG9zc2FyeU1ldGFkYXRhLlN0YXRlEi8K",
-            "C3N1Ym1pdF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cCJlCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQ",
-            "ARINCglTVUNDRUVERUQQAhIKCgZGQUlMRUQQAxIOCgpDQU5DRUxMSU5HEAQS",
-            "DQoJQ0FOQ0VMTEVEEAUihQEKFkRlbGV0ZUdsb3NzYXJ5UmVzcG9uc2USDAoE",
-            "bmFtZRgBIAEoCRIvCgtzdWJtaXRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wMo4QChJUcmFuc2xhdGlvblNlcnZpY2US1AIKDVRy",
-            "YW5zbGF0ZVRleHQSMS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJh",
-            "bnNsYXRlVGV4dFJlcXVlc3QaMi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24u",
-            "djMuVHJhbnNsYXRlVGV4dFJlc3BvbnNlItsBgtPkkwJiIjEvdjMve3BhcmVu",
-            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTp0cmFuc2xhdGVUZXh0OgEqWioi",
-            "JS92My97cGFyZW50PXByb2plY3RzLyp9OnRyYW5zbGF0ZVRleHQ6ASraQSRw",
-            "YXJlbnQsdGFyZ2V0X2xhbmd1YWdlX2NvZGUsY29udGVudHPaQUlwYXJlbnQs",
-            "bW9kZWwsbWltZV90eXBlLHNvdXJjZV9sYW5ndWFnZV9jb2RlLHRhcmdldF9s",
-            "YW5ndWFnZV9jb2RlLGNvbnRlbnRzEocCCg5EZXRlY3RMYW5ndWFnZRIyLmdv",
-            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5EZXRlY3RMYW5ndWFnZVJlcXVl",
-            "c3QaMy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuRGV0ZWN0TGFuZ3Vh",
-            "Z2VSZXNwb25zZSKLAYLT5JMCZCIyL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn06ZGV0ZWN0TGFuZ3VhZ2U6ASpaKyImL3YzL3twYXJlbnQ9",
-            "cHJvamVjdHMvKn06ZGV0ZWN0TGFuZ3VhZ2U6ASraQR5wYXJlbnQsbW9kZWws",
-            "bWltZV90eXBlLGNvbnRlbnQSlwIKFUdldFN1cHBvcnRlZExhbmd1YWdlcxI5",
-            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HZXRTdXBwb3J0ZWRMYW5n",
-            "dWFnZXNSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlN1",
-            "cHBvcnRlZExhbmd1YWdlcyKRAYLT5JMCZhI2L3YzL3twYXJlbnQ9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKn0vc3VwcG9ydGVkTGFuZ3VhZ2VzWiwSKi92My97",
-            "cGFyZW50PXByb2plY3RzLyp9L3N1cHBvcnRlZExhbmd1YWdlc9pBInBhcmVu",
-            "dCxtb2RlbCxkaXNwbGF5X2xhbmd1YWdlX2NvZGUS4QEKEkJhdGNoVHJhbnNs",
-            "YXRlVGV4dBI2Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaFRy",
-            "YW5zbGF0ZVRleHRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiJ0gtPkkwI7IjYvdjMve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfTpiYXRjaFRyYW5zbGF0ZVRleHQ6ASrKQTAKFkJhdGNoVHJhbnNsYXRl",
-            "UmVzcG9uc2USFkJhdGNoVHJhbnNsYXRlTWV0YWRhdGES3AEKDkNyZWF0ZUds",
-            "b3NzYXJ5EjIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkNyZWF0ZUds",
-            "b3NzYXJ5UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "d4LT5JMCOiIuL3YzL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "Z2xvc3NhcmllczoIZ2xvc3NhcnnaQQ9wYXJlbnQsZ2xvc3NhcnnKQSIKCEds",
-            "b3NzYXJ5EhZDcmVhdGVHbG9zc2FyeU1ldGFkYXRhEroBCg5MaXN0R2xvc3Nh",
-            "cmllcxIyLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5MaXN0R2xvc3Nh",
-            "cmllc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuTGlz",
-            "dEdsb3NzYXJpZXNSZXNwb25zZSI/gtPkkwIwEi4vdjMve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9nbG9zc2FyaWVz2kEGcGFyZW50EqQBCgtH",
-            "ZXRHbG9zc2FyeRIvLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HZXRH",
-            "bG9zc2FyeVJlcXVlc3QaJS5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
-            "R2xvc3NhcnkiPYLT5JMCMBIuL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovZ2xvc3Nhcmllcy8qfdpBBG5hbWUS1QEKDkRlbGV0ZUdsb3NzYXJ5",
-            "EjIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkRlbGV0ZUdsb3NzYXJ5",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icILT5JMC",
-            "MCouL3YzL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZ2xvc3Nhcmll",
-            "cy8qfdpBBG5hbWXKQTAKFkRlbGV0ZUdsb3NzYXJ5UmVzcG9uc2USFkRlbGV0",
-            "ZUdsb3NzYXJ5TWV0YWRhdGEafspBGHRyYW5zbGF0ZS5nb29nbGVhcGlzLmNv",
-            "bdJBYGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
-            "dGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC10",
-            "cmFuc2xhdGlvbkLYAQodY29tLmdvb2dsZS5jbG91ZC50cmFuc2xhdGUudjNC",
-            "F1RyYW5zbGF0aW9uU2VydmljZVByb3RvUAFaQmdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvdHJhbnNsYXRlL3YzO3RyYW5z",
-            "bGF0ZfgBAaoCGUdvb2dsZS5DbG91ZC5UcmFuc2xhdGUuVjPKAhlHb29nbGVc",
-            "Q2xvdWRcVHJhbnNsYXRlXFYz6gIcR29vZ2xlOjpDbG91ZDo6VHJhbnNsYXRl",
-            "OjpWM2IGcHJvdG8z"));
+            "b24SIgoVZGlzcGxheV9sYW5ndWFnZV9jb2RlGAEgASgJQgPgQQESEgoFbW9k",
+            "ZWwYAiABKAlCA+BBASJXChJTdXBwb3J0ZWRMYW5ndWFnZXMSQQoJbGFuZ3Vh",
+            "Z2VzGAEgAygLMi4uZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlN1cHBv",
+            "cnRlZExhbmd1YWdlInAKEVN1cHBvcnRlZExhbmd1YWdlEhUKDWxhbmd1YWdl",
+            "X2NvZGUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEhYKDnN1cHBvcnRf",
+            "c291cmNlGAMgASgIEhYKDnN1cHBvcnRfdGFyZ2V0GAQgASgIIiMKCUdjc1Nv",
+            "dXJjZRIWCglpbnB1dF91cmkYASABKAlCA+BBAiJtCgtJbnB1dENvbmZpZxIW",
+            "CgltaW1lX3R5cGUYASABKAlCA+BBARI8CgpnY3Nfc291cmNlGAIgASgLMiYu",
+            "Z29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdjc1NvdXJjZUgAQggKBnNv",
+            "dXJjZSIwCg5HY3NEZXN0aW5hdGlvbhIeChFvdXRwdXRfdXJpX3ByZWZpeBgB",
+            "IAEoCUID4EECImUKDE91dHB1dENvbmZpZxJGCg9nY3NfZGVzdGluYXRpb24Y",
+            "ASABKAsyKy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuR2NzRGVzdGlu",
+            "YXRpb25IAEINCgtkZXN0aW5hdGlvbiKDAQoTRG9jdW1lbnRJbnB1dENvbmZp",
+            "ZxIRCgdjb250ZW50GAEgASgMSAASPAoKZ2NzX3NvdXJjZRgCIAEoCzImLmdv",
+            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HY3NTb3VyY2VIABIRCgltaW1l",
+            "X3R5cGUYBCABKAlCCAoGc291cmNlIooBChREb2N1bWVudE91dHB1dENvbmZp",
+            "ZxJLCg9nY3NfZGVzdGluYXRpb24YASABKAsyKy5nb29nbGUuY2xvdWQudHJh",
+            "bnNsYXRpb24udjMuR2NzRGVzdGluYXRpb25CA+BBAUgAEhYKCW1pbWVfdHlw",
+            "ZRgDIAEoCUID4EEBQg0KC2Rlc3RpbmF0aW9uIpYEChhUcmFuc2xhdGVEb2N1",
+            "bWVudFJlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISIQoUc291cmNlX2xh",
+            "bmd1YWdlX2NvZGUYAiABKAlCA+BBARIhChR0YXJnZXRfbGFuZ3VhZ2VfY29k",
+            "ZRgDIAEoCUID4EECElQKFWRvY3VtZW50X2lucHV0X2NvbmZpZxgEIAEoCzIw",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5Eb2N1bWVudElucHV0Q29u",
+            "ZmlnQgPgQQISVgoWZG9jdW1lbnRfb3V0cHV0X2NvbmZpZxgFIAEoCzIxLmdv",
+            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5Eb2N1bWVudE91dHB1dENvbmZp",
+            "Z0ID4EEBEhIKBW1vZGVsGAYgASgJQgPgQQESVgoPZ2xvc3NhcnlfY29uZmln",
+            "GAcgASgLMjguZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0",
+            "ZVRleHRHbG9zc2FyeUNvbmZpZ0ID4EEBElYKBmxhYmVscxgIIAMoCzJBLmdv",
+            "b2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGVEb2N1bWVudFJl",
+            "cXVlc3QuTGFiZWxzRW50cnlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImUKE0RvY3VtZW50VHJhbnNsYXRp",
+            "b24SGwoTYnl0ZV9zdHJlYW1fb3V0cHV0cxgBIAMoDBIRCgltaW1lX3R5cGUY",
+            "AiABKAkSHgoWZGV0ZWN0ZWRfbGFuZ3VhZ2VfY29kZRgDIAEoCSKmAgoZVHJh",
+            "bnNsYXRlRG9jdW1lbnRSZXNwb25zZRJOChRkb2N1bWVudF90cmFuc2xhdGlv",
+            "bhgBIAEoCzIwLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5Eb2N1bWVu",
+            "dFRyYW5zbGF0aW9uElcKHWdsb3NzYXJ5X2RvY3VtZW50X3RyYW5zbGF0aW9u",
+            "GAIgASgLMjAuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkRvY3VtZW50",
+            "VHJhbnNsYXRpb24SDQoFbW9kZWwYAyABKAkSUQoPZ2xvc3NhcnlfY29uZmln",
+            "GAQgASgLMjguZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0",
+            "ZVRleHRHbG9zc2FyeUNvbmZpZyKIBgoZQmF0Y2hUcmFuc2xhdGVUZXh0UmVx",
+            "dWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2ds",
+            "ZWFwaXMuY29tL0xvY2F0aW9uEiEKFHNvdXJjZV9sYW5ndWFnZV9jb2RlGAIg",
+            "ASgJQgPgQQISIgoVdGFyZ2V0X2xhbmd1YWdlX2NvZGVzGAMgAygJQgPgQQIS",
+            "VwoGbW9kZWxzGAQgAygLMkIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYz",
+            "LkJhdGNoVHJhbnNsYXRlVGV4dFJlcXVlc3QuTW9kZWxzRW50cnlCA+BBARJE",
+            "Cg1pbnB1dF9jb25maWdzGAUgAygLMiguZ29vZ2xlLmNsb3VkLnRyYW5zbGF0",
+            "aW9uLnYzLklucHV0Q29uZmlnQgPgQQISRQoNb3V0cHV0X2NvbmZpZxgGIAEo",
+            "CzIpLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5PdXRwdXRDb25maWdC",
+            "A+BBAhJfCgpnbG9zc2FyaWVzGAcgAygLMkYuZ29vZ2xlLmNsb3VkLnRyYW5z",
+            "bGF0aW9uLnYzLkJhdGNoVHJhbnNsYXRlVGV4dFJlcXVlc3QuR2xvc3Nhcmll",
+            "c0VudHJ5QgPgQQESVwoGbGFiZWxzGAkgAygLMkIuZ29vZ2xlLmNsb3VkLnRy",
+            "YW5zbGF0aW9uLnYzLkJhdGNoVHJhbnNsYXRlVGV4dFJlcXVlc3QuTGFiZWxz",
+            "RW50cnlCA+BBARotCgtNb2RlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBGmsKD0dsb3NzYXJpZXNFbnRyeRILCgNrZXkYASABKAkS",
+            "RwoFdmFsdWUYAiABKAsyOC5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMu",
+            "VHJhbnNsYXRlVGV4dEdsb3NzYXJ5Q29uZmlnOgI4ARotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIs4CChZCYXRjaFRy",
+            "YW5zbGF0ZU1ldGFkYXRhEkgKBXN0YXRlGAEgASgOMjkuZ29vZ2xlLmNsb3Vk",
+            "LnRyYW5zbGF0aW9uLnYzLkJhdGNoVHJhbnNsYXRlTWV0YWRhdGEuU3RhdGUS",
+            "HQoVdHJhbnNsYXRlZF9jaGFyYWN0ZXJzGAIgASgDEhkKEWZhaWxlZF9jaGFy",
+            "YWN0ZXJzGAMgASgDEhgKEHRvdGFsX2NoYXJhY3RlcnMYBCABKAMSLwoLc3Vi",
+            "bWl0X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wImUK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEg0K",
+            "CVNVQ0NFRURFRBACEgoKBkZBSUxFRBADEg4KCkNBTkNFTExJTkcQBBINCglD",
+            "QU5DRUxMRUQQBSLLAQoWQmF0Y2hUcmFuc2xhdGVSZXNwb25zZRIYChB0b3Rh",
+            "bF9jaGFyYWN0ZXJzGAEgASgDEh0KFXRyYW5zbGF0ZWRfY2hhcmFjdGVycxgC",
+            "IAEoAxIZChFmYWlsZWRfY2hhcmFjdGVycxgDIAEoAxIvCgtzdWJtaXRfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
+            "bWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIl0KE0dsb3Nz",
+            "YXJ5SW5wdXRDb25maWcSPAoKZ2NzX3NvdXJjZRgBIAEoCzImLmdvb2dsZS5j",
+            "bG91ZC50cmFuc2xhdGlvbi52My5HY3NTb3VyY2VIAEIICgZzb3VyY2Ui/wQK",
+            "CEdsb3NzYXJ5EhEKBG5hbWUYASABKAlCA+BBAhJPCg1sYW5ndWFnZV9wYWly",
+            "GAMgASgLMjYuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdsb3NzYXJ5",
+            "Lkxhbmd1YWdlQ29kZVBhaXJIABJUChJsYW5ndWFnZV9jb2Rlc19zZXQYBCAB",
+            "KAsyNi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuR2xvc3NhcnkuTGFu",
+            "Z3VhZ2VDb2Rlc1NldEgAEkYKDGlucHV0X2NvbmZpZxgFIAEoCzIwLmdvb2ds",
+            "ZS5jbG91ZC50cmFuc2xhdGlvbi52My5HbG9zc2FyeUlucHV0Q29uZmlnEhgK",
+            "C2VudHJ5X2NvdW50GAYgASgFQgPgQQMSNAoLc3VibWl0X3RpbWUYByABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUY",
+            "CCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaTgoQTGFu",
+            "Z3VhZ2VDb2RlUGFpchIcChRzb3VyY2VfbGFuZ3VhZ2VfY29kZRgBIAEoCRIc",
+            "ChR0YXJnZXRfbGFuZ3VhZ2VfY29kZRgCIAEoCRoqChBMYW5ndWFnZUNvZGVz",
+            "U2V0EhYKDmxhbmd1YWdlX2NvZGVzGAEgAygJOmXqQWIKIXRyYW5zbGF0ZS5n",
+            "b29nbGVhcGlzLmNvbS9HbG9zc2FyeRI9cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2dsb3NzYXJpZXMve2dsb3NzYXJ5fUILCgls",
+            "YW5ndWFnZXMikAEKFUNyZWF0ZUdsb3NzYXJ5UmVxdWVzdBI5CgZwYXJlbnQY",
+            "ASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0",
+            "aW9uEjwKCGdsb3NzYXJ5GAIgASgLMiUuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0",
+            "aW9uLnYzLkdsb3NzYXJ5QgPgQQIiTQoSR2V0R2xvc3NhcnlSZXF1ZXN0EjcK",
+            "BG5hbWUYASABKAlCKeBBAvpBIwohdHJhbnNsYXRlLmdvb2dsZWFwaXMuY29t",
+            "L0dsb3NzYXJ5IlAKFURlbGV0ZUdsb3NzYXJ5UmVxdWVzdBI3CgRuYW1lGAEg",
+            "ASgJQingQQL6QSMKIXRyYW5zbGF0ZS5nb29nbGVhcGlzLmNvbS9HbG9zc2Fy",
+            "eSKYAQoVTGlzdEdsb3NzYXJpZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp",
+            "4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SFgoJ",
+            "cGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEB",
+            "EhMKBmZpbHRlchgEIAEoCUID4EEBImwKFkxpc3RHbG9zc2FyaWVzUmVzcG9u",
+            "c2USOQoKZ2xvc3NhcmllcxgBIAMoCzIlLmdvb2dsZS5jbG91ZC50cmFuc2xh",
+            "dGlvbi52My5HbG9zc2FyeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiiAIK",
+            "FkNyZWF0ZUdsb3NzYXJ5TWV0YWRhdGESDAoEbmFtZRgBIAEoCRJICgVzdGF0",
+            "ZRgCIAEoDjI5Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5DcmVhdGVH",
+            "bG9zc2FyeU1ldGFkYXRhLlN0YXRlEi8KC3N1Ym1pdF90aW1lGAMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJlCgVTdGF0ZRIVChFTVEFURV9V",
+            "TlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQARINCglTVUNDRUVERUQQAhIKCgZG",
+            "QUlMRUQQAxIOCgpDQU5DRUxMSU5HEAQSDQoJQ0FOQ0VMTEVEEAUiiAIKFkRl",
+            "bGV0ZUdsb3NzYXJ5TWV0YWRhdGESDAoEbmFtZRgBIAEoCRJICgVzdGF0ZRgC",
+            "IAEoDjI5Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5EZWxldGVHbG9z",
+            "c2FyeU1ldGFkYXRhLlN0YXRlEi8KC3N1Ym1pdF90aW1lGAMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCJlCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgsKB1JVTk5JTkcQARINCglTVUNDRUVERUQQAhIKCgZGQUlM",
+            "RUQQAxIOCgpDQU5DRUxMSU5HEAQSDQoJQ0FOQ0VMTEVEEAUihQEKFkRlbGV0",
+            "ZUdsb3NzYXJ5UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIvCgtzdWJtaXRfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wItQGCh1CYXRj",
+            "aFRyYW5zbGF0ZURvY3VtZW50UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBB",
+            "AvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEiEKFHNv",
+            "dXJjZV9sYW5ndWFnZV9jb2RlGAIgASgJQgPgQQISIgoVdGFyZ2V0X2xhbmd1",
+            "YWdlX2NvZGVzGAMgAygJQgPgQQISUQoNaW5wdXRfY29uZmlncxgEIAMoCzI1",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaERvY3VtZW50SW5w",
+            "dXRDb25maWdCA+BBAhJSCg1vdXRwdXRfY29uZmlnGAUgASgLMjYuZ29vZ2xl",
+            "LmNsb3VkLnRyYW5zbGF0aW9uLnYzLkJhdGNoRG9jdW1lbnRPdXRwdXRDb25m",
+            "aWdCA+BBAhJbCgZtb2RlbHMYBiADKAsyRi5nb29nbGUuY2xvdWQudHJhbnNs",
+            "YXRpb24udjMuQmF0Y2hUcmFuc2xhdGVEb2N1bWVudFJlcXVlc3QuTW9kZWxz",
+            "RW50cnlCA+BBARJjCgpnbG9zc2FyaWVzGAcgAygLMkouZ29vZ2xlLmNsb3Vk",
+            "LnRyYW5zbGF0aW9uLnYzLkJhdGNoVHJhbnNsYXRlRG9jdW1lbnRSZXF1ZXN0",
+            "Lkdsb3NzYXJpZXNFbnRyeUID4EEBEnIKEmZvcm1hdF9jb252ZXJzaW9ucxgI",
+            "IAMoCzJRLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5CYXRjaFRyYW5z",
+            "bGF0ZURvY3VtZW50UmVxdWVzdC5Gb3JtYXRDb252ZXJzaW9uc0VudHJ5QgPg",
+            "QQEaLQoLTW9kZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ARprCg9HbG9zc2FyaWVzRW50cnkSCwoDa2V5GAEgASgJEkcKBXZhbHVl",
+            "GAIgASgLMjguZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0",
+            "ZVRleHRHbG9zc2FyeUNvbmZpZzoCOAEaOAoWRm9ybWF0Q29udmVyc2lvbnNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImIKGEJhdGNo",
+            "RG9jdW1lbnRJbnB1dENvbmZpZxI8CgpnY3Nfc291cmNlGAEgASgLMiYuZ29v",
+            "Z2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkdjc1NvdXJjZUgAQggKBnNvdXJj",
+            "ZSJyChlCYXRjaERvY3VtZW50T3V0cHV0Q29uZmlnEkYKD2djc19kZXN0aW5h",
+            "dGlvbhgBIAEoCzIrLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5HY3NE",
+            "ZXN0aW5hdGlvbkgAQg0KC2Rlc3RpbmF0aW9uItkCCh5CYXRjaFRyYW5zbGF0",
+            "ZURvY3VtZW50UmVzcG9uc2USEwoLdG90YWxfcGFnZXMYASABKAMSGAoQdHJh",
+            "bnNsYXRlZF9wYWdlcxgCIAEoAxIUCgxmYWlsZWRfcGFnZXMYAyABKAMSHAoU",
+            "dG90YWxfYmlsbGFibGVfcGFnZXMYBCABKAMSGAoQdG90YWxfY2hhcmFjdGVy",
+            "cxgFIAEoAxIdChV0cmFuc2xhdGVkX2NoYXJhY3RlcnMYBiABKAMSGQoRZmFp",
+            "bGVkX2NoYXJhY3RlcnMYByABKAMSIQoZdG90YWxfYmlsbGFibGVfY2hhcmFj",
+            "dGVycxgIIAEoAxIvCgtzdWJtaXRfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYCiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wIuQDCh5CYXRjaFRyYW5zbGF0ZURvY3VtZW50TWV0",
+            "YWRhdGESUAoFc3RhdGUYASABKA4yQS5nb29nbGUuY2xvdWQudHJhbnNsYXRp",
+            "b24udjMuQmF0Y2hUcmFuc2xhdGVEb2N1bWVudE1ldGFkYXRhLlN0YXRlEhMK",
+            "C3RvdGFsX3BhZ2VzGAIgASgDEhgKEHRyYW5zbGF0ZWRfcGFnZXMYAyABKAMS",
+            "FAoMZmFpbGVkX3BhZ2VzGAQgASgDEhwKFHRvdGFsX2JpbGxhYmxlX3BhZ2Vz",
+            "GAUgASgDEhgKEHRvdGFsX2NoYXJhY3RlcnMYBiABKAMSHQoVdHJhbnNsYXRl",
+            "ZF9jaGFyYWN0ZXJzGAcgASgDEhkKEWZhaWxlZF9jaGFyYWN0ZXJzGAggASgD",
+            "EiEKGXRvdGFsX2JpbGxhYmxlX2NoYXJhY3RlcnMYCSABKAMSLwoLc3VibWl0",
+            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wImUKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklORxABEg0KCVNV",
+            "Q0NFRURFRBACEgoKBkZBSUxFRBADEg4KCkNBTkNFTExJTkcQBBINCglDQU5D",
+            "RUxMRUQQBTLWEwoSVHJhbnNsYXRpb25TZXJ2aWNlEtQCCg1UcmFuc2xhdGVU",
+            "ZXh0EjEuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5zbGF0ZVRl",
+            "eHRSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLlRyYW5z",
+            "bGF0ZVRleHRSZXNwb25zZSLbAYLT5JMCYiIxL3YzL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn06dHJhbnNsYXRlVGV4dDoBKloqIiUvdjMve3Bh",
+            "cmVudD1wcm9qZWN0cy8qfTp0cmFuc2xhdGVUZXh0OgEq2kEkcGFyZW50LHRh",
+            "cmdldF9sYW5ndWFnZV9jb2RlLGNvbnRlbnRz2kFJcGFyZW50LG1vZGVsLG1p",
+            "bWVfdHlwZSxzb3VyY2VfbGFuZ3VhZ2VfY29kZSx0YXJnZXRfbGFuZ3VhZ2Vf",
+            "Y29kZSxjb250ZW50cxKHAgoORGV0ZWN0TGFuZ3VhZ2USMi5nb29nbGUuY2xv",
+            "dWQudHJhbnNsYXRpb24udjMuRGV0ZWN0TGFuZ3VhZ2VSZXF1ZXN0GjMuZ29v",
+            "Z2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkRldGVjdExhbmd1YWdlUmVzcG9u",
+            "c2UiiwGC0+STAmQiMi92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9OmRldGVjdExhbmd1YWdlOgEqWisiJi92My97cGFyZW50PXByb2plY3Rz",
+            "Lyp9OmRldGVjdExhbmd1YWdlOgEq2kEecGFyZW50LG1vZGVsLG1pbWVfdHlw",
+            "ZSxjb250ZW50EpcCChVHZXRTdXBwb3J0ZWRMYW5ndWFnZXMSOS5nb29nbGUu",
+            "Y2xvdWQudHJhbnNsYXRpb24udjMuR2V0U3VwcG9ydGVkTGFuZ3VhZ2VzUmVx",
+            "dWVzdBovLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5TdXBwb3J0ZWRM",
+            "YW5ndWFnZXMikQGC0+STAmYSNi92My97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L3N1cHBvcnRlZExhbmd1YWdlc1osEiovdjMve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9zdXBwb3J0ZWRMYW5ndWFnZXPaQSJwYXJlbnQsbW9kZWws",
+            "ZGlzcGxheV9sYW5ndWFnZV9jb2RlEsQBChFUcmFuc2xhdGVEb2N1bWVudBI1",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5UcmFuc2xhdGVEb2N1bWVu",
+            "dFJlcXVlc3QaNi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuVHJhbnNs",
+            "YXRlRG9jdW1lbnRSZXNwb25zZSJAgtPkkwI6IjUvdjMve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qfTp0cmFuc2xhdGVEb2N1bWVudDoBKhLhAQoS",
+            "QmF0Y2hUcmFuc2xhdGVUZXh0EjYuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9u",
+            "LnYzLkJhdGNoVHJhbnNsYXRlVGV4dFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
+            "bm5pbmcuT3BlcmF0aW9uInSC0+STAjsiNi92My97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyp9OmJhdGNoVHJhbnNsYXRlVGV4dDoBKspBMAoWQmF0",
+            "Y2hUcmFuc2xhdGVSZXNwb25zZRIWQmF0Y2hUcmFuc2xhdGVNZXRhZGF0YRL+",
+            "AQoWQmF0Y2hUcmFuc2xhdGVEb2N1bWVudBI6Lmdvb2dsZS5jbG91ZC50cmFu",
+            "c2xhdGlvbi52My5CYXRjaFRyYW5zbGF0ZURvY3VtZW50UmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iiAGC0+STAj8iOi92My97cGFy",
+            "ZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9OmJhdGNoVHJhbnNsYXRlRG9j",
+            "dW1lbnQ6ASrKQUAKHkJhdGNoVHJhbnNsYXRlRG9jdW1lbnRSZXNwb25zZRIe",
+            "QmF0Y2hUcmFuc2xhdGVEb2N1bWVudE1ldGFkYXRhEtwBCg5DcmVhdGVHbG9z",
+            "c2FyeRIyLmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5DcmVhdGVHbG9z",
+            "c2FyeVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIneC",
+            "0+STAjoiLi92My97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2ds",
+            "b3NzYXJpZXM6CGdsb3NzYXJ52kEPcGFyZW50LGdsb3NzYXJ5ykEiCghHbG9z",
+            "c2FyeRIWQ3JlYXRlR2xvc3NhcnlNZXRhZGF0YRK6AQoOTGlzdEdsb3NzYXJp",
+            "ZXMSMi5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuTGlzdEdsb3NzYXJp",
+            "ZXNSZXF1ZXN0GjMuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkxpc3RH",
+            "bG9zc2FyaWVzUmVzcG9uc2UiP4LT5JMCMBIuL3YzL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vZ2xvc3Nhcmllc9pBBnBhcmVudBKkAQoLR2V0",
+            "R2xvc3NhcnkSLy5nb29nbGUuY2xvdWQudHJhbnNsYXRpb24udjMuR2V0R2xv",
+            "c3NhcnlSZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLnRyYW5zbGF0aW9uLnYzLkds",
+            "b3NzYXJ5Ij2C0+STAjASLi92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2dsb3NzYXJpZXMvKn3aQQRuYW1lEtUBCg5EZWxldGVHbG9zc2FyeRIy",
+            "Lmdvb2dsZS5jbG91ZC50cmFuc2xhdGlvbi52My5EZWxldGVHbG9zc2FyeVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInCC0+STAjAq",
+            "Li92My97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2dsb3NzYXJpZXMv",
+            "Kn3aQQRuYW1lykEwChZEZWxldGVHbG9zc2FyeVJlc3BvbnNlEhZEZWxldGVH",
+            "bG9zc2FyeU1ldGFkYXRhGn7KQRh0cmFuc2xhdGUuZ29vZ2xlYXBpcy5jb23S",
+            "QWBodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtdHJh",
+            "bnNsYXRpb25C2AEKHWNvbS5nb29nbGUuY2xvdWQudHJhbnNsYXRlLnYzQhdU",
+            "cmFuc2xhdGlvblNlcnZpY2VQcm90b1ABWkJnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3RyYW5zbGF0ZS92Mzt0cmFuc2xh",
+            "dGX4AQGqAhlHb29nbGUuQ2xvdWQuVHJhbnNsYXRlLlYzygIZR29vZ2xlXENs",
+            "b3VkXFRyYW5zbGF0ZVxWM+oCHEdvb2dsZTo6Q2xvdWQ6OlRyYW5zbGF0ZTo6",
+            "VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig), global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig.Parser, new[]{ "Glossary", "IgnoreCase" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.TranslateTextRequest), global::Google.Cloud.Translate.V3.TranslateTextRequest.Parser, new[]{ "Contents", "MimeType", "SourceLanguageCode", "TargetLanguageCode", "Parent", "Model", "GlossaryConfig", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -215,6 +296,11 @@ namespace Google.Cloud.Translate.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.InputConfig), global::Google.Cloud.Translate.V3.InputConfig.Parser, new[]{ "MimeType", "GcsSource" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.GcsDestination), global::Google.Cloud.Translate.V3.GcsDestination.Parser, new[]{ "OutputUriPrefix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.OutputConfig), global::Google.Cloud.Translate.V3.OutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DocumentInputConfig), global::Google.Cloud.Translate.V3.DocumentInputConfig.Parser, new[]{ "Content", "GcsSource", "MimeType" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DocumentOutputConfig), global::Google.Cloud.Translate.V3.DocumentOutputConfig.Parser, new[]{ "GcsDestination", "MimeType" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.TranslateDocumentRequest), global::Google.Cloud.Translate.V3.TranslateDocumentRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCode", "DocumentInputConfig", "DocumentOutputConfig", "Model", "GlossaryConfig", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DocumentTranslation), global::Google.Cloud.Translate.V3.DocumentTranslation.Parser, new[]{ "ByteStreamOutputs", "MimeType", "DetectedLanguageCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.TranslateDocumentResponse), global::Google.Cloud.Translate.V3.TranslateDocumentResponse.Parser, new[]{ "DocumentTranslation", "GlossaryDocumentTranslation", "Model", "GlossaryConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateTextRequest), global::Google.Cloud.Translate.V3.BatchTranslateTextRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCodes", "Models", "InputConfigs", "OutputConfig", "Glossaries", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateMetadata), global::Google.Cloud.Translate.V3.BatchTranslateMetadata.Parser, new[]{ "State", "TranslatedCharacters", "FailedCharacters", "TotalCharacters", "SubmitTime" }, null, new[]{ typeof(global::Google.Cloud.Translate.V3.BatchTranslateMetadata.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateResponse), global::Google.Cloud.Translate.V3.BatchTranslateResponse.Parser, new[]{ "TotalCharacters", "TranslatedCharacters", "FailedCharacters", "SubmitTime", "EndTime" }, null, null, null, null),
@@ -228,7 +314,12 @@ namespace Google.Cloud.Translate.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.ListGlossariesResponse), global::Google.Cloud.Translate.V3.ListGlossariesResponse.Parser, new[]{ "Glossaries", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.CreateGlossaryMetadata), global::Google.Cloud.Translate.V3.CreateGlossaryMetadata.Parser, new[]{ "Name", "State", "SubmitTime" }, null, new[]{ typeof(global::Google.Cloud.Translate.V3.CreateGlossaryMetadata.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DeleteGlossaryMetadata), global::Google.Cloud.Translate.V3.DeleteGlossaryMetadata.Parser, new[]{ "Name", "State", "SubmitTime" }, null, new[]{ typeof(global::Google.Cloud.Translate.V3.DeleteGlossaryMetadata.Types.State) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DeleteGlossaryResponse), global::Google.Cloud.Translate.V3.DeleteGlossaryResponse.Parser, new[]{ "Name", "SubmitTime", "EndTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.DeleteGlossaryResponse), global::Google.Cloud.Translate.V3.DeleteGlossaryResponse.Parser, new[]{ "Name", "SubmitTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest), global::Google.Cloud.Translate.V3.BatchTranslateDocumentRequest.Parser, new[]{ "Parent", "SourceLanguageCode", "TargetLanguageCodes", "InputConfigs", "OutputConfig", "Models", "Glossaries", "FormatConversions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchDocumentInputConfig), global::Google.Cloud.Translate.V3.BatchDocumentInputConfig.Parser, new[]{ "GcsSource" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig), global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig.Parser, new[]{ "GcsDestination" }, new[]{ "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateDocumentResponse), global::Google.Cloud.Translate.V3.BatchTranslateDocumentResponse.Parser, new[]{ "TotalPages", "TranslatedPages", "FailedPages", "TotalBillablePages", "TotalCharacters", "TranslatedCharacters", "FailedCharacters", "TotalBillableCharacters", "SubmitTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata), global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Parser, new[]{ "State", "TotalPages", "TranslatedPages", "FailedPages", "TotalBillablePages", "TotalCharacters", "TranslatedCharacters", "FailedCharacters", "TotalBillableCharacters", "SubmitTime" }, null, new[]{ typeof(global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -282,8 +373,12 @@ namespace Google.Cloud.Translate.V3 {
     public const int GlossaryFieldNumber = 1;
     private string glossary_ = "";
     /// <summary>
-    /// Required. Specifies the glossary used for this translation. Use
-    /// this format: projects/*/locations/*/glossaries/*
+    /// Required. The `glossary` to be applied for this translation.
+    ///
+    /// The format depends on glossary:
+    ///
+    /// - User provided custom glossary:
+    ///   `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Glossary {
@@ -510,7 +605,8 @@ namespace Google.Cloud.Translate.V3 {
     private readonly pbc::RepeatedField<string> contents_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. The content of the input in string format.
-    /// We recommend the total content be less than 30k codepoints.
+    /// We recommend the total content be less than 30k codepoints. The max length
+    /// of this field is 1024.
     /// Use BatchTranslateText for larger text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -606,13 +702,12 @@ namespace Google.Cloud.Translate.V3 {
     ///
     /// - General (built-in) models:
     ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
-    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
     ///
     /// For global (non-regionalized) requests, use `location-id` `global`.
     /// For example,
     /// `projects/{project-number-or-id}/locations/global/models/general/nmt`.
     ///
-    /// If missing, the system decides which google base model to use.
+    /// If not provided, the default Google model (NMT) will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Model {
@@ -651,7 +746,8 @@ namespace Google.Cloud.Translate.V3 {
     /// characters, underscores and dashes. International characters are allowed.
     /// Label values are optional. Label keys must start with a letter.
     ///
-    /// See https://cloud.google.com/translate/docs/labels for more information.
+    /// See https://cloud.google.com/translate/docs/advanced/labels for more
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -1185,6 +1281,8 @@ namespace Google.Cloud.Translate.V3 {
     private string translatedText_ = "";
     /// <summary>
     /// Text translated into the target language.
+    /// If an error occurs during translation, this field might be excluded from
+    /// the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TranslatedText {
@@ -1588,7 +1686,8 @@ namespace Google.Cloud.Translate.V3 {
     /// characters, underscores and dashes. International characters are allowed.
     /// Label values are optional. Label keys must start with a letter.
     ///
-    /// See https://cloud.google.com/translate/docs/labels for more information.
+    /// See https://cloud.google.com/translate/docs/advanced/labels for more
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -2092,8 +2191,8 @@ namespace Google.Cloud.Translate.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Translate.V3.DetectedLanguage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Translate.V3.DetectedLanguage> languages_ = new pbc::RepeatedField<global::Google.Cloud.Translate.V3.DetectedLanguage>();
     /// <summary>
-    /// A list of detected languages sorted by detection confidence in descending
-    /// order. The most probable language first.
+    /// The most probable language detected by the Translation API. For each
+    /// request, the Translation API will always return only one result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Translate.V3.DetectedLanguage> Languages {
@@ -2311,10 +2410,9 @@ namespace Google.Cloud.Translate.V3 {
     ///
     /// - General (built-in) models:
     ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
-    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
     ///
     /// Returns languages supported by the specified model.
-    /// If missing, we get supported languages of Google general base (PBMT) model.
+    /// If missing, we get supported languages of Google general NMT model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Model {
@@ -3464,9 +3562,11 @@ namespace Google.Cloud.Translate.V3 {
     public const int OutputUriPrefixFieldNumber = 1;
     private string outputUriPrefix_ = "";
     /// <summary>
-    /// Required. There must be no files under 'output_uri_prefix'.
-    /// 'output_uri_prefix' must end with "/" and start with "gs://", otherwise an
-    /// INVALID_ARGUMENT (400) error is returned.
+    /// Required. The bucket used in 'output_uri_prefix' must exist and there must
+    /// be no files under 'output_uri_prefix'. 'output_uri_prefix' must end with
+    /// "/" and start with "gs://". One 'output_uri_prefix' can only be used by one
+    /// batch translation job at a time. Otherwise an INVALID_ARGUMENT (400) error
+    /// is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OutputUriPrefix {
@@ -3680,8 +3780,13 @@ namespace Google.Cloud.Translate.V3 {
     /// processed and ready to be consumed (that is, no partial output file is
     /// written).
     ///
+    /// Since index.csv will be keeping updated during the process, please make
+    /// sure there is no custom retention policy applied on the output bucket
+    /// that may avoid file updating.
+    /// (https://cloud.google.com/storage/docs/bucket-lock?hl=en#retention-policy)
+    ///
     /// The format of translations_file (for target language code 'trg') is:
-    /// `gs://translation_test/a_b_c_'trg'_translations.[extension]`
+    /// gs://translation_test/a_b_c_'trg'_translations.[extension]
     ///
     /// If the input file extension is tsv, the output has the following
     /// columns:
@@ -3698,10 +3803,10 @@ namespace Google.Cloud.Translate.V3 {
     /// If input file extension is a txt or html, the translation is directly
     /// written to the output file. If glossary is requested, a separate
     /// glossary_translations_file has format of
-    /// `gs://translation_test/a_b_c_'trg'_glossary_translations.[extension]`
+    /// gs://translation_test/a_b_c_'trg'_glossary_translations.[extension]
     ///
     /// The format of errors file (for target language code 'trg') is:
-    /// `gs://translation_test/a_b_c_'trg'_errors.[extension]`
+    /// gs://translation_test/a_b_c_'trg'_errors.[extension]
     ///
     /// If the input file extension is tsv, errors_file contains the following:
     /// Column 1: ID of the request provided in the input, if it's not
@@ -3713,7 +3818,7 @@ namespace Google.Cloud.Translate.V3 {
     ///
     /// If the input file extension is txt or html, glossary_error_file will be
     /// generated that contains error details. glossary_error_file has format of
-    /// `gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]`
+    /// gs://translation_test/a_b_c_'trg'_glossary_errors.[extension]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Translate.V3.GcsDestination GcsDestination {
@@ -3884,6 +3989,1713 @@ namespace Google.Cloud.Translate.V3 {
   }
 
   /// <summary>
+  /// A document translation request input config.
+  /// </summary>
+  public sealed partial class DocumentInputConfig : pb::IMessage<DocumentInputConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DocumentInputConfig> _parser = new pb::MessageParser<DocumentInputConfig>(() => new DocumentInputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DocumentInputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentInputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentInputConfig(DocumentInputConfig other) : this() {
+      mimeType_ = other.mimeType_;
+      switch (other.SourceCase) {
+        case SourceOneofCase.Content:
+          Content = other.Content;
+          break;
+        case SourceOneofCase.GcsSource:
+          GcsSource = other.GcsSource.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentInputConfig Clone() {
+      return new DocumentInputConfig(this);
+    }
+
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 1;
+    /// <summary>
+    /// Document's content represented as a stream of bytes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Content {
+      get { return sourceCase_ == SourceOneofCase.Content ? (pb::ByteString) source_ : pb::ByteString.Empty; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.Content;
+      }
+    }
+
+    /// <summary>Field number for the "gcs_source" field.</summary>
+    public const int GcsSourceFieldNumber = 2;
+    /// <summary>
+    /// Google Cloud Storage location. This must be a single file.
+    /// For example: gs://example_bucket/example_file.pdf
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.GcsSource GcsSource {
+      get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.Translate.V3.GcsSource) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.GcsSource;
+      }
+    }
+
+    /// <summary>Field number for the "mime_type" field.</summary>
+    public const int MimeTypeFieldNumber = 4;
+    private string mimeType_ = "";
+    /// <summary>
+    /// Specifies the input document's mime_type.
+    ///
+    /// If not specified it will be determined using the file extension for
+    /// gcs_source provided files. For a file provided through bytes content the
+    /// mime_type must be provided.
+    /// Currently supported mime types are:
+    /// - application/pdf
+    /// - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    /// - application/vnd.openxmlformats-officedocument.presentationml.presentation
+    /// - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MimeType {
+      get { return mimeType_; }
+      set {
+        mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      Content = 1,
+      GcsSource = 2,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DocumentInputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DocumentInputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Content != other.Content) return false;
+      if (!object.Equals(GcsSource, other.GcsSource)) return false;
+      if (MimeType != other.MimeType) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sourceCase_ == SourceOneofCase.Content) hash ^= Content.GetHashCode();
+      if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
+      if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (sourceCase_ == SourceOneofCase.Content) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Content);
+      }
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GcsSource);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MimeType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (sourceCase_ == SourceOneofCase.Content) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Content);
+      }
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GcsSource);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MimeType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (sourceCase_ == SourceOneofCase.Content) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Content);
+      }
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
+      }
+      if (MimeType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DocumentInputConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MimeType.Length != 0) {
+        MimeType = other.MimeType;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.Content:
+          Content = other.Content;
+          break;
+        case SourceOneofCase.GcsSource:
+          if (GcsSource == null) {
+            GcsSource = new global::Google.Cloud.Translate.V3.GcsSource();
+          }
+          GcsSource.MergeFrom(other.GcsSource);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Content = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Translate.V3.GcsSource subBuilder = new global::Google.Cloud.Translate.V3.GcsSource();
+            if (sourceCase_ == SourceOneofCase.GcsSource) {
+              subBuilder.MergeFrom(GcsSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsSource = subBuilder;
+            break;
+          }
+          case 34: {
+            MimeType = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Content = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Translate.V3.GcsSource subBuilder = new global::Google.Cloud.Translate.V3.GcsSource();
+            if (sourceCase_ == SourceOneofCase.GcsSource) {
+              subBuilder.MergeFrom(GcsSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsSource = subBuilder;
+            break;
+          }
+          case 34: {
+            MimeType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A document translation request output config.
+  /// </summary>
+  public sealed partial class DocumentOutputConfig : pb::IMessage<DocumentOutputConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DocumentOutputConfig> _parser = new pb::MessageParser<DocumentOutputConfig>(() => new DocumentOutputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DocumentOutputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentOutputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentOutputConfig(DocumentOutputConfig other) : this() {
+      mimeType_ = other.mimeType_;
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          GcsDestination = other.GcsDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentOutputConfig Clone() {
+      return new DocumentOutputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_destination" field.</summary>
+    public const int GcsDestinationFieldNumber = 1;
+    /// <summary>
+    /// Optional. Google Cloud Storage destination for the translation output,
+    /// e.g., `gs://my_bucket/my_directory/`.
+    ///
+    /// The destination directory provided does not have to be empty, but the
+    /// bucket must exist. If a file with the same name as the output file
+    /// already exists in the destination an error will be returned.
+    ///
+    /// For a DocumentInputConfig.contents provided document, the output file
+    /// will have the name "output_[trg]_translations.[ext]", where
+    /// - [trg] corresponds to the translated file's language code,
+    /// - [ext] corresponds to the translated file's extension according to its
+    /// mime type.
+    ///
+    /// For a DocumentInputConfig.gcs_uri provided document, the output file will
+    /// have a name according to its URI. For example: an input file with URI:
+    /// "gs://a/b/c.[extension]" stored in a gcs_destination bucket with name
+    /// "my_bucket" will have an output URI:
+    /// "gs://my_bucket/a_b_c_[trg]_translations.[ext]", where
+    /// - [trg] corresponds to the translated file's language code,
+    /// - [ext] corresponds to the translated file's extension according to its
+    /// mime type.
+    ///
+    /// If the document was directly provided through the request, then the
+    /// output document will have the format:
+    /// "gs://my_bucket/translated_document_[trg]_translations.[ext], where
+    /// - [trg] corresponds to the translated file's language code,
+    /// - [ext] corresponds to the translated file's extension according to its
+    /// mime type.
+    ///
+    /// If a glossary was provided, then the output URI for the glossary
+    /// translation will be equal to the default output URI but have
+    /// `glossary_translations` instead of `translations`. For the previous
+    /// example, its glossary URI would be:
+    /// "gs://my_bucket/a_b_c_[trg]_glossary_translations.[ext]".
+    ///
+    /// Thus the max number of output files will be 2 (Translated document,
+    /// Glossary translated document).
+    ///
+    /// Callers should expect no partial outputs. If there is any error during
+    /// document translation, no output will be stored in the Cloud Storage
+    /// bucket.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.GcsDestination GcsDestination {
+      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.Translate.V3.GcsDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.GcsDestination;
+      }
+    }
+
+    /// <summary>Field number for the "mime_type" field.</summary>
+    public const int MimeTypeFieldNumber = 3;
+    private string mimeType_ = "";
+    /// <summary>
+    /// Optional. Specifies the translated document's mime_type.
+    /// If not specified, the translated file's mime type will be the same as the
+    /// input file's mime type.
+    /// Currently only support the output mime type to be the same as input mime
+    /// type.
+    /// - application/pdf
+    /// - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    /// - application/vnd.openxmlformats-officedocument.presentationml.presentation
+    /// - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MimeType {
+      get { return mimeType_; }
+      set {
+        mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      GcsDestination = 1,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DocumentOutputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DocumentOutputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
+      if (MimeType != other.MimeType) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
+      if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MimeType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(MimeType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
+      }
+      if (MimeType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DocumentOutputConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MimeType.Length != 0) {
+        MimeType = other.MimeType;
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          if (GcsDestination == null) {
+            GcsDestination = new global::Google.Cloud.Translate.V3.GcsDestination();
+          }
+          GcsDestination.MergeFrom(other.GcsDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Translate.V3.GcsDestination subBuilder = new global::Google.Cloud.Translate.V3.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+          case 26: {
+            MimeType = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Translate.V3.GcsDestination subBuilder = new global::Google.Cloud.Translate.V3.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+          case 26: {
+            MimeType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A document translation request.
+  /// </summary>
+  public sealed partial class TranslateDocumentRequest : pb::IMessage<TranslateDocumentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TranslateDocumentRequest> _parser = new pb::MessageParser<TranslateDocumentRequest>(() => new TranslateDocumentRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TranslateDocumentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranslateDocumentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranslateDocumentRequest(TranslateDocumentRequest other) : this() {
+      parent_ = other.parent_;
+      sourceLanguageCode_ = other.sourceLanguageCode_;
+      targetLanguageCode_ = other.targetLanguageCode_;
+      documentInputConfig_ = other.documentInputConfig_ != null ? other.documentInputConfig_.Clone() : null;
+      documentOutputConfig_ = other.documentOutputConfig_ != null ? other.documentOutputConfig_.Clone() : null;
+      model_ = other.model_;
+      glossaryConfig_ = other.glossaryConfig_ != null ? other.glossaryConfig_.Clone() : null;
+      labels_ = other.labels_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranslateDocumentRequest Clone() {
+      return new TranslateDocumentRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Location to make a regional call.
+    ///
+    /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+    ///
+    /// For global calls, use `projects/{project-number-or-id}/locations/global` or
+    /// `projects/{project-number-or-id}`.
+    ///
+    /// Non-global location is required for requests using AutoML models or custom
+    /// glossaries.
+    ///
+    /// Models and glossaries must be within the same region (have the same
+    /// location-id), otherwise an INVALID_ARGUMENT (400) error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_language_code" field.</summary>
+    public const int SourceLanguageCodeFieldNumber = 2;
+    private string sourceLanguageCode_ = "";
+    /// <summary>
+    /// Optional. The BCP-47 language code of the input document if known, for
+    /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+    /// Language Support. If the source language isn't specified, the API attempts
+    /// to identify the source language automatically and returns the source
+    /// language within the response. Source language must be specified if the
+    /// request contains a glossary or a custom model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SourceLanguageCode {
+      get { return sourceLanguageCode_; }
+      set {
+        sourceLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target_language_code" field.</summary>
+    public const int TargetLanguageCodeFieldNumber = 3;
+    private string targetLanguageCode_ = "";
+    /// <summary>
+    /// Required. The BCP-47 language code to use for translation of the input
+    /// document, set to one of the language codes listed in Language Support.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TargetLanguageCode {
+      get { return targetLanguageCode_; }
+      set {
+        targetLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "document_input_config" field.</summary>
+    public const int DocumentInputConfigFieldNumber = 4;
+    private global::Google.Cloud.Translate.V3.DocumentInputConfig documentInputConfig_;
+    /// <summary>
+    /// Required. Input configurations.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.DocumentInputConfig DocumentInputConfig {
+      get { return documentInputConfig_; }
+      set {
+        documentInputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "document_output_config" field.</summary>
+    public const int DocumentOutputConfigFieldNumber = 5;
+    private global::Google.Cloud.Translate.V3.DocumentOutputConfig documentOutputConfig_;
+    /// <summary>
+    /// Optional. Output configurations.
+    /// Defines if the output file should be stored within Cloud Storage as well
+    /// as the desired output format. If not provided the translated file will
+    /// only be returned through a byte-stream and its output mime type will be
+    /// the same as the input file's mime type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.DocumentOutputConfig DocumentOutputConfig {
+      get { return documentOutputConfig_; }
+      set {
+        documentOutputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 6;
+    private string model_ = "";
+    /// <summary>
+    /// Optional. The `model` type requested for this translation.
+    ///
+    /// The format depends on model type:
+    ///
+    /// - AutoML Translation models:
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/{model-id}`
+    ///
+    /// - General (built-in) models:
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
+    ///
+    /// If not provided, the default Google model (NMT) will be used for
+    /// translation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "glossary_config" field.</summary>
+    public const int GlossaryConfigFieldNumber = 7;
+    private global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig glossaryConfig_;
+    /// <summary>
+    /// Optional. Glossary to be applied. The glossary must be within the same
+    /// region (have the same location-id) as the model, otherwise an
+    /// INVALID_ARGUMENT (400) error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig GlossaryConfig {
+      get { return glossaryConfig_; }
+      set {
+        glossaryConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "labels" field.</summary>
+    public const int LabelsFieldNumber = 8;
+    private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
+    private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The labels with user-defined metadata for the request.
+    ///
+    /// Label keys and values can be no longer than 63 characters (Unicode
+    /// codepoints), can only contain lowercase letters, numeric characters,
+    /// underscores and dashes. International characters are allowed. Label values
+    /// are optional. Label keys must start with a letter.
+    ///
+    /// See https://cloud.google.com/translate/docs/advanced/labels for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Labels {
+      get { return labels_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TranslateDocumentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TranslateDocumentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (SourceLanguageCode != other.SourceLanguageCode) return false;
+      if (TargetLanguageCode != other.TargetLanguageCode) return false;
+      if (!object.Equals(DocumentInputConfig, other.DocumentInputConfig)) return false;
+      if (!object.Equals(DocumentOutputConfig, other.DocumentOutputConfig)) return false;
+      if (Model != other.Model) return false;
+      if (!object.Equals(GlossaryConfig, other.GlossaryConfig)) return false;
+      if (!Labels.Equals(other.Labels)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (SourceLanguageCode.Length != 0) hash ^= SourceLanguageCode.GetHashCode();
+      if (TargetLanguageCode.Length != 0) hash ^= TargetLanguageCode.GetHashCode();
+      if (documentInputConfig_ != null) hash ^= DocumentInputConfig.GetHashCode();
+      if (documentOutputConfig_ != null) hash ^= DocumentOutputConfig.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (glossaryConfig_ != null) hash ^= GlossaryConfig.GetHashCode();
+      hash ^= Labels.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (SourceLanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLanguageCode);
+      }
+      if (TargetLanguageCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TargetLanguageCode);
+      }
+      if (documentInputConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DocumentInputConfig);
+      }
+      if (documentOutputConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DocumentOutputConfig);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Model);
+      }
+      if (glossaryConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(GlossaryConfig);
+      }
+      labels_.WriteTo(output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (SourceLanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLanguageCode);
+      }
+      if (TargetLanguageCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(TargetLanguageCode);
+      }
+      if (documentInputConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DocumentInputConfig);
+      }
+      if (documentOutputConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(DocumentOutputConfig);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Model);
+      }
+      if (glossaryConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(GlossaryConfig);
+      }
+      labels_.WriteTo(ref output, _map_labels_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (SourceLanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceLanguageCode);
+      }
+      if (TargetLanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TargetLanguageCode);
+      }
+      if (documentInputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentInputConfig);
+      }
+      if (documentOutputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentOutputConfig);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (glossaryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GlossaryConfig);
+      }
+      size += labels_.CalculateSize(_map_labels_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TranslateDocumentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.SourceLanguageCode.Length != 0) {
+        SourceLanguageCode = other.SourceLanguageCode;
+      }
+      if (other.TargetLanguageCode.Length != 0) {
+        TargetLanguageCode = other.TargetLanguageCode;
+      }
+      if (other.documentInputConfig_ != null) {
+        if (documentInputConfig_ == null) {
+          DocumentInputConfig = new global::Google.Cloud.Translate.V3.DocumentInputConfig();
+        }
+        DocumentInputConfig.MergeFrom(other.DocumentInputConfig);
+      }
+      if (other.documentOutputConfig_ != null) {
+        if (documentOutputConfig_ == null) {
+          DocumentOutputConfig = new global::Google.Cloud.Translate.V3.DocumentOutputConfig();
+        }
+        DocumentOutputConfig.MergeFrom(other.DocumentOutputConfig);
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      if (other.glossaryConfig_ != null) {
+        if (glossaryConfig_ == null) {
+          GlossaryConfig = new global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig();
+        }
+        GlossaryConfig.MergeFrom(other.GlossaryConfig);
+      }
+      labels_.Add(other.labels_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            TargetLanguageCode = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (documentInputConfig_ == null) {
+              DocumentInputConfig = new global::Google.Cloud.Translate.V3.DocumentInputConfig();
+            }
+            input.ReadMessage(DocumentInputConfig);
+            break;
+          }
+          case 42: {
+            if (documentOutputConfig_ == null) {
+              DocumentOutputConfig = new global::Google.Cloud.Translate.V3.DocumentOutputConfig();
+            }
+            input.ReadMessage(DocumentOutputConfig);
+            break;
+          }
+          case 50: {
+            Model = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (glossaryConfig_ == null) {
+              GlossaryConfig = new global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig();
+            }
+            input.ReadMessage(GlossaryConfig);
+            break;
+          }
+          case 66: {
+            labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            TargetLanguageCode = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (documentInputConfig_ == null) {
+              DocumentInputConfig = new global::Google.Cloud.Translate.V3.DocumentInputConfig();
+            }
+            input.ReadMessage(DocumentInputConfig);
+            break;
+          }
+          case 42: {
+            if (documentOutputConfig_ == null) {
+              DocumentOutputConfig = new global::Google.Cloud.Translate.V3.DocumentOutputConfig();
+            }
+            input.ReadMessage(DocumentOutputConfig);
+            break;
+          }
+          case 50: {
+            Model = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (glossaryConfig_ == null) {
+              GlossaryConfig = new global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig();
+            }
+            input.ReadMessage(GlossaryConfig);
+            break;
+          }
+          case 66: {
+            labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A translated document message.
+  /// </summary>
+  public sealed partial class DocumentTranslation : pb::IMessage<DocumentTranslation>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DocumentTranslation> _parser = new pb::MessageParser<DocumentTranslation>(() => new DocumentTranslation());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DocumentTranslation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentTranslation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentTranslation(DocumentTranslation other) : this() {
+      byteStreamOutputs_ = other.byteStreamOutputs_.Clone();
+      mimeType_ = other.mimeType_;
+      detectedLanguageCode_ = other.detectedLanguageCode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DocumentTranslation Clone() {
+      return new DocumentTranslation(this);
+    }
+
+    /// <summary>Field number for the "byte_stream_outputs" field.</summary>
+    public const int ByteStreamOutputsFieldNumber = 1;
+    private static readonly pb::FieldCodec<pb::ByteString> _repeated_byteStreamOutputs_codec
+        = pb::FieldCodec.ForBytes(10);
+    private readonly pbc::RepeatedField<pb::ByteString> byteStreamOutputs_ = new pbc::RepeatedField<pb::ByteString>();
+    /// <summary>
+    /// The array of translated documents. It is expected to be size 1 for now. We
+    /// may produce multiple translated documents in the future for other type of
+    /// file formats.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<pb::ByteString> ByteStreamOutputs {
+      get { return byteStreamOutputs_; }
+    }
+
+    /// <summary>Field number for the "mime_type" field.</summary>
+    public const int MimeTypeFieldNumber = 2;
+    private string mimeType_ = "";
+    /// <summary>
+    /// The translated document's mime type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MimeType {
+      get { return mimeType_; }
+      set {
+        mimeType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "detected_language_code" field.</summary>
+    public const int DetectedLanguageCodeFieldNumber = 3;
+    private string detectedLanguageCode_ = "";
+    /// <summary>
+    /// The detected language for the input document.
+    /// If the user did not provide the source language for the input document,
+    /// this field will have the language code automatically detected. If the
+    /// source language was passed, auto-detection of the language does not occur
+    /// and this field is empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DetectedLanguageCode {
+      get { return detectedLanguageCode_; }
+      set {
+        detectedLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DocumentTranslation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DocumentTranslation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!byteStreamOutputs_.Equals(other.byteStreamOutputs_)) return false;
+      if (MimeType != other.MimeType) return false;
+      if (DetectedLanguageCode != other.DetectedLanguageCode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= byteStreamOutputs_.GetHashCode();
+      if (MimeType.Length != 0) hash ^= MimeType.GetHashCode();
+      if (DetectedLanguageCode.Length != 0) hash ^= DetectedLanguageCode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      byteStreamOutputs_.WriteTo(output, _repeated_byteStreamOutputs_codec);
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MimeType);
+      }
+      if (DetectedLanguageCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DetectedLanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      byteStreamOutputs_.WriteTo(ref output, _repeated_byteStreamOutputs_codec);
+      if (MimeType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(MimeType);
+      }
+      if (DetectedLanguageCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DetectedLanguageCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += byteStreamOutputs_.CalculateSize(_repeated_byteStreamOutputs_codec);
+      if (MimeType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MimeType);
+      }
+      if (DetectedLanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DetectedLanguageCode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DocumentTranslation other) {
+      if (other == null) {
+        return;
+      }
+      byteStreamOutputs_.Add(other.byteStreamOutputs_);
+      if (other.MimeType.Length != 0) {
+        MimeType = other.MimeType;
+      }
+      if (other.DetectedLanguageCode.Length != 0) {
+        DetectedLanguageCode = other.DetectedLanguageCode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            byteStreamOutputs_.AddEntriesFrom(input, _repeated_byteStreamOutputs_codec);
+            break;
+          }
+          case 18: {
+            MimeType = input.ReadString();
+            break;
+          }
+          case 26: {
+            DetectedLanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            byteStreamOutputs_.AddEntriesFrom(ref input, _repeated_byteStreamOutputs_codec);
+            break;
+          }
+          case 18: {
+            MimeType = input.ReadString();
+            break;
+          }
+          case 26: {
+            DetectedLanguageCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A translated document response message.
+  /// </summary>
+  public sealed partial class TranslateDocumentResponse : pb::IMessage<TranslateDocumentResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TranslateDocumentResponse> _parser = new pb::MessageParser<TranslateDocumentResponse>(() => new TranslateDocumentResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TranslateDocumentResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranslateDocumentResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranslateDocumentResponse(TranslateDocumentResponse other) : this() {
+      documentTranslation_ = other.documentTranslation_ != null ? other.documentTranslation_.Clone() : null;
+      glossaryDocumentTranslation_ = other.glossaryDocumentTranslation_ != null ? other.glossaryDocumentTranslation_.Clone() : null;
+      model_ = other.model_;
+      glossaryConfig_ = other.glossaryConfig_ != null ? other.glossaryConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TranslateDocumentResponse Clone() {
+      return new TranslateDocumentResponse(this);
+    }
+
+    /// <summary>Field number for the "document_translation" field.</summary>
+    public const int DocumentTranslationFieldNumber = 1;
+    private global::Google.Cloud.Translate.V3.DocumentTranslation documentTranslation_;
+    /// <summary>
+    /// Translated document.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.DocumentTranslation DocumentTranslation {
+      get { return documentTranslation_; }
+      set {
+        documentTranslation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "glossary_document_translation" field.</summary>
+    public const int GlossaryDocumentTranslationFieldNumber = 2;
+    private global::Google.Cloud.Translate.V3.DocumentTranslation glossaryDocumentTranslation_;
+    /// <summary>
+    /// The document's translation output if a glossary is provided in the request.
+    /// This can be the same as [TranslateDocumentResponse.document_translation]
+    /// if no glossary terms apply.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.DocumentTranslation GlossaryDocumentTranslation {
+      get { return glossaryDocumentTranslation_; }
+      set {
+        glossaryDocumentTranslation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 3;
+    private string model_ = "";
+    /// <summary>
+    /// Only present when 'model' is present in the request.
+    /// 'model' is normalized to have a project number.
+    ///
+    /// For example:
+    /// If the 'model' field in TranslateDocumentRequest is:
+    /// `projects/{project-id}/locations/{location-id}/models/general/nmt` then
+    /// `model` here would be normalized to
+    /// `projects/{project-number}/locations/{location-id}/models/general/nmt`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "glossary_config" field.</summary>
+    public const int GlossaryConfigFieldNumber = 4;
+    private global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig glossaryConfig_;
+    /// <summary>
+    /// The `glossary_config` used for this translation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig GlossaryConfig {
+      get { return glossaryConfig_; }
+      set {
+        glossaryConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TranslateDocumentResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TranslateDocumentResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DocumentTranslation, other.DocumentTranslation)) return false;
+      if (!object.Equals(GlossaryDocumentTranslation, other.GlossaryDocumentTranslation)) return false;
+      if (Model != other.Model) return false;
+      if (!object.Equals(GlossaryConfig, other.GlossaryConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (documentTranslation_ != null) hash ^= DocumentTranslation.GetHashCode();
+      if (glossaryDocumentTranslation_ != null) hash ^= GlossaryDocumentTranslation.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (glossaryConfig_ != null) hash ^= GlossaryConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (documentTranslation_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DocumentTranslation);
+      }
+      if (glossaryDocumentTranslation_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GlossaryDocumentTranslation);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      if (glossaryConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(GlossaryConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (documentTranslation_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DocumentTranslation);
+      }
+      if (glossaryDocumentTranslation_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GlossaryDocumentTranslation);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      if (glossaryConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(GlossaryConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (documentTranslation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DocumentTranslation);
+      }
+      if (glossaryDocumentTranslation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GlossaryDocumentTranslation);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (glossaryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GlossaryConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TranslateDocumentResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.documentTranslation_ != null) {
+        if (documentTranslation_ == null) {
+          DocumentTranslation = new global::Google.Cloud.Translate.V3.DocumentTranslation();
+        }
+        DocumentTranslation.MergeFrom(other.DocumentTranslation);
+      }
+      if (other.glossaryDocumentTranslation_ != null) {
+        if (glossaryDocumentTranslation_ == null) {
+          GlossaryDocumentTranslation = new global::Google.Cloud.Translate.V3.DocumentTranslation();
+        }
+        GlossaryDocumentTranslation.MergeFrom(other.GlossaryDocumentTranslation);
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      if (other.glossaryConfig_ != null) {
+        if (glossaryConfig_ == null) {
+          GlossaryConfig = new global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig();
+        }
+        GlossaryConfig.MergeFrom(other.GlossaryConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (documentTranslation_ == null) {
+              DocumentTranslation = new global::Google.Cloud.Translate.V3.DocumentTranslation();
+            }
+            input.ReadMessage(DocumentTranslation);
+            break;
+          }
+          case 18: {
+            if (glossaryDocumentTranslation_ == null) {
+              GlossaryDocumentTranslation = new global::Google.Cloud.Translate.V3.DocumentTranslation();
+            }
+            input.ReadMessage(GlossaryDocumentTranslation);
+            break;
+          }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (glossaryConfig_ == null) {
+              GlossaryConfig = new global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig();
+            }
+            input.ReadMessage(GlossaryConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (documentTranslation_ == null) {
+              DocumentTranslation = new global::Google.Cloud.Translate.V3.DocumentTranslation();
+            }
+            input.ReadMessage(DocumentTranslation);
+            break;
+          }
+          case 18: {
+            if (glossaryDocumentTranslation_ == null) {
+              GlossaryDocumentTranslation = new global::Google.Cloud.Translate.V3.DocumentTranslation();
+            }
+            input.ReadMessage(GlossaryDocumentTranslation);
+            break;
+          }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (glossaryConfig_ == null) {
+              GlossaryConfig = new global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig();
+            }
+            input.ReadMessage(GlossaryConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The batch translation request.
   /// </summary>
   public sealed partial class BatchTranslateTextRequest : pb::IMessage<BatchTranslateTextRequest>
@@ -3898,7 +5710,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3997,7 +5809,6 @@ namespace Google.Cloud.Translate.V3 {
     ///
     /// - General (built-in) models:
     ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
-    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
     ///
     /// If the map is empty or a specific model is
     /// not requested for a language pair, then default google model (nmt) is used.
@@ -4014,7 +5825,7 @@ namespace Google.Cloud.Translate.V3 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Translate.V3.InputConfig> inputConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Translate.V3.InputConfig>();
     /// <summary>
     /// Required. Input configurations.
-    /// The total number of files matched should be &lt;= 1000.
+    /// The total number of files matched should be &lt;= 100.
     /// The total content size should be &lt;= 100M Unicode codepoints.
     /// The files must use UTF-8 encoding.
     /// </summary>
@@ -4066,7 +5877,8 @@ namespace Google.Cloud.Translate.V3 {
     /// characters, underscores and dashes. International characters are allowed.
     /// Label values are optional. Label keys must start with a letter.
     ///
-    /// See https://cloud.google.com/translate/docs/labels for more information.
+    /// See https://cloud.google.com/translate/docs/advanced/labels for more
+    /// information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -4338,7 +6150,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4728,7 +6540,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5082,7 +6894,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5135,9 +6947,8 @@ namespace Google.Cloud.Translate.V3 {
     /// For equivalent term sets glossaries:
     ///
     /// - CSV (`.csv`): Multi-column CSV file defining equivalent glossary terms
-    ///   in multiple languages. The format is defined for Google Translation
-    ///   Toolkit and documented in [Use a
-    ///   glossary](https://support.google.com/translatortoolkit/answer/6306379?hl=en).
+    ///   in multiple languages. See documentation for more information -
+    ///   [glossaries](https://cloud.google.com/translate/docs/advanced/glossary).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Translate.V3.GcsSource GcsSource {
@@ -5322,7 +7133,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6215,7 +8026,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6441,7 +8252,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6619,7 +8430,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6797,7 +8608,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6877,7 +8688,20 @@ namespace Google.Cloud.Translate.V3 {
     private string filter_ = "";
     /// <summary>
     /// Optional. Filter specifying constraints of a list operation.
-    /// Filtering is not supported yet, and the parameter currently has no effect.
+    /// Specify the constraint by the format of "key=value", where key must be
+    /// "src" or "tgt", and the value must be a valid language code.
+    /// For multiple restrictions, concatenate them by "AND" (uppercase only),
+    /// such as: "src=en-US AND tgt=zh-CN". Notice that the exact match is used
+    /// here, which means using 'en-US' and 'en' can lead to different results,
+    /// which depends on the language code you used when you create the glossary.
+    /// For the unidirectional glossaries, the "src" and "tgt" add restrictions
+    /// on the source and target language code separately.
+    /// For the equivalent term set glossaries, the "src" and/or "tgt" add
+    /// restrictions on the term set.
+    /// For example: "src=en-US AND tgt=zh-CN" will only pick the unidirectional
+    /// glossaries which exactly match the source language code as "en-US" and the
+    /// target language code "zh-CN", but all equivalent term set glossaries which
+    /// contain "en-US" and "zh-CN" in their language set will be picked.
     /// If missing, no filtering is performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7098,7 +8922,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7308,7 +9132,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7613,7 +9437,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7918,7 +9742,7 @@ namespace Google.Cloud.Translate.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8176,6 +10000,2093 @@ namespace Google.Cloud.Translate.V3 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// The BatchTranslateDocument request.
+  /// </summary>
+  public sealed partial class BatchTranslateDocumentRequest : pb::IMessage<BatchTranslateDocumentRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchTranslateDocumentRequest> _parser = new pb::MessageParser<BatchTranslateDocumentRequest>(() => new BatchTranslateDocumentRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchTranslateDocumentRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentRequest(BatchTranslateDocumentRequest other) : this() {
+      parent_ = other.parent_;
+      sourceLanguageCode_ = other.sourceLanguageCode_;
+      targetLanguageCodes_ = other.targetLanguageCodes_.Clone();
+      inputConfigs_ = other.inputConfigs_.Clone();
+      outputConfig_ = other.outputConfig_ != null ? other.outputConfig_.Clone() : null;
+      models_ = other.models_.Clone();
+      glossaries_ = other.glossaries_.Clone();
+      formatConversions_ = other.formatConversions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentRequest Clone() {
+      return new BatchTranslateDocumentRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Location to make a regional call.
+    ///
+    /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+    ///
+    /// The `global` location is not supported for batch translation.
+    ///
+    /// Only AutoML Translation models or glossaries within the same region (have
+    /// the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
+    /// error is returned.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_language_code" field.</summary>
+    public const int SourceLanguageCodeFieldNumber = 2;
+    private string sourceLanguageCode_ = "";
+    /// <summary>
+    /// Required. The BCP-47 language code of the input document if known, for
+    /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+    /// Language Support (https://cloud.google.com/translate/docs/languages).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SourceLanguageCode {
+      get { return sourceLanguageCode_; }
+      set {
+        sourceLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target_language_codes" field.</summary>
+    public const int TargetLanguageCodesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_targetLanguageCodes_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> targetLanguageCodes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The BCP-47 language code to use for translation of the input
+    /// document. Specify up to 10 language codes here.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> TargetLanguageCodes {
+      get { return targetLanguageCodes_; }
+    }
+
+    /// <summary>Field number for the "input_configs" field.</summary>
+    public const int InputConfigsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Translate.V3.BatchDocumentInputConfig> _repeated_inputConfigs_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Translate.V3.BatchDocumentInputConfig.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Translate.V3.BatchDocumentInputConfig> inputConfigs_ = new pbc::RepeatedField<global::Google.Cloud.Translate.V3.BatchDocumentInputConfig>();
+    /// <summary>
+    /// Required. Input configurations.
+    /// The total number of files matched should be &lt;= 100.
+    /// The total content size to translate should be &lt;= 100M Unicode codepoints.
+    /// The files must use UTF-8 encoding.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Translate.V3.BatchDocumentInputConfig> InputConfigs {
+      get { return inputConfigs_; }
+    }
+
+    /// <summary>Field number for the "output_config" field.</summary>
+    public const int OutputConfigFieldNumber = 5;
+    private global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig outputConfig_;
+    /// <summary>
+    /// Required. Output configuration.
+    /// If 2 input configs match to the same file (that is, same input path),
+    /// we don't generate output for duplicate inputs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig OutputConfig {
+      get { return outputConfig_; }
+      set {
+        outputConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "models" field.</summary>
+    public const int ModelsFieldNumber = 6;
+    private static readonly pbc::MapField<string, string>.Codec _map_models_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
+    private readonly pbc::MapField<string, string> models_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The models to use for translation. Map's key is target language
+    /// code. Map's value is the model name. Value can be a built-in general model,
+    /// or an AutoML Translation model.
+    ///
+    /// The value format depends on model type:
+    ///
+    /// - AutoML Translation models:
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/{model-id}`
+    ///
+    /// - General (built-in) models:
+    ///   `projects/{project-number-or-id}/locations/{location-id}/models/general/nmt`,
+    ///
+    /// If the map is empty or a specific model is
+    /// not requested for a language pair, then default google model (nmt) is used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Models {
+      get { return models_; }
+    }
+
+    /// <summary>Field number for the "glossaries" field.</summary>
+    public const int GlossariesFieldNumber = 7;
+    private static readonly pbc::MapField<string, global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig>.Codec _map_glossaries_codec
+        = new pbc::MapField<string, global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig.Parser), 58);
+    private readonly pbc::MapField<string, global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig> glossaries_ = new pbc::MapField<string, global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig>();
+    /// <summary>
+    /// Optional. Glossaries to be applied. It's keyed by target language code.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, global::Google.Cloud.Translate.V3.TranslateTextGlossaryConfig> Glossaries {
+      get { return glossaries_; }
+    }
+
+    /// <summary>Field number for the "format_conversions" field.</summary>
+    public const int FormatConversionsFieldNumber = 8;
+    private static readonly pbc::MapField<string, string>.Codec _map_formatConversions_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
+    private readonly pbc::MapField<string, string> formatConversions_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. File format conversion map to be applied to all input files.
+    /// Map's key is the original mime_type. Map's value is the target mime_type of
+    /// translated documents.
+    ///
+    /// Supported file format conversion includes:
+    /// - `application/pdf` to
+    ///   `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
+    ///
+    /// If nothing specified, output files will be in the same format as the
+    /// original file.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> FormatConversions {
+      get { return formatConversions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchTranslateDocumentRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchTranslateDocumentRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (SourceLanguageCode != other.SourceLanguageCode) return false;
+      if(!targetLanguageCodes_.Equals(other.targetLanguageCodes_)) return false;
+      if(!inputConfigs_.Equals(other.inputConfigs_)) return false;
+      if (!object.Equals(OutputConfig, other.OutputConfig)) return false;
+      if (!Models.Equals(other.Models)) return false;
+      if (!Glossaries.Equals(other.Glossaries)) return false;
+      if (!FormatConversions.Equals(other.FormatConversions)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (SourceLanguageCode.Length != 0) hash ^= SourceLanguageCode.GetHashCode();
+      hash ^= targetLanguageCodes_.GetHashCode();
+      hash ^= inputConfigs_.GetHashCode();
+      if (outputConfig_ != null) hash ^= OutputConfig.GetHashCode();
+      hash ^= Models.GetHashCode();
+      hash ^= Glossaries.GetHashCode();
+      hash ^= FormatConversions.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (SourceLanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLanguageCode);
+      }
+      targetLanguageCodes_.WriteTo(output, _repeated_targetLanguageCodes_codec);
+      inputConfigs_.WriteTo(output, _repeated_inputConfigs_codec);
+      if (outputConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(OutputConfig);
+      }
+      models_.WriteTo(output, _map_models_codec);
+      glossaries_.WriteTo(output, _map_glossaries_codec);
+      formatConversions_.WriteTo(output, _map_formatConversions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (SourceLanguageCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLanguageCode);
+      }
+      targetLanguageCodes_.WriteTo(ref output, _repeated_targetLanguageCodes_codec);
+      inputConfigs_.WriteTo(ref output, _repeated_inputConfigs_codec);
+      if (outputConfig_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(OutputConfig);
+      }
+      models_.WriteTo(ref output, _map_models_codec);
+      glossaries_.WriteTo(ref output, _map_glossaries_codec);
+      formatConversions_.WriteTo(ref output, _map_formatConversions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (SourceLanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceLanguageCode);
+      }
+      size += targetLanguageCodes_.CalculateSize(_repeated_targetLanguageCodes_codec);
+      size += inputConfigs_.CalculateSize(_repeated_inputConfigs_codec);
+      if (outputConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputConfig);
+      }
+      size += models_.CalculateSize(_map_models_codec);
+      size += glossaries_.CalculateSize(_map_glossaries_codec);
+      size += formatConversions_.CalculateSize(_map_formatConversions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchTranslateDocumentRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.SourceLanguageCode.Length != 0) {
+        SourceLanguageCode = other.SourceLanguageCode;
+      }
+      targetLanguageCodes_.Add(other.targetLanguageCodes_);
+      inputConfigs_.Add(other.inputConfigs_);
+      if (other.outputConfig_ != null) {
+        if (outputConfig_ == null) {
+          OutputConfig = new global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig();
+        }
+        OutputConfig.MergeFrom(other.OutputConfig);
+      }
+      models_.Add(other.models_);
+      glossaries_.Add(other.glossaries_);
+      formatConversions_.Add(other.formatConversions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            targetLanguageCodes_.AddEntriesFrom(input, _repeated_targetLanguageCodes_codec);
+            break;
+          }
+          case 34: {
+            inputConfigs_.AddEntriesFrom(input, _repeated_inputConfigs_codec);
+            break;
+          }
+          case 42: {
+            if (outputConfig_ == null) {
+              OutputConfig = new global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig();
+            }
+            input.ReadMessage(OutputConfig);
+            break;
+          }
+          case 50: {
+            models_.AddEntriesFrom(input, _map_models_codec);
+            break;
+          }
+          case 58: {
+            glossaries_.AddEntriesFrom(input, _map_glossaries_codec);
+            break;
+          }
+          case 66: {
+            formatConversions_.AddEntriesFrom(input, _map_formatConversions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLanguageCode = input.ReadString();
+            break;
+          }
+          case 26: {
+            targetLanguageCodes_.AddEntriesFrom(ref input, _repeated_targetLanguageCodes_codec);
+            break;
+          }
+          case 34: {
+            inputConfigs_.AddEntriesFrom(ref input, _repeated_inputConfigs_codec);
+            break;
+          }
+          case 42: {
+            if (outputConfig_ == null) {
+              OutputConfig = new global::Google.Cloud.Translate.V3.BatchDocumentOutputConfig();
+            }
+            input.ReadMessage(OutputConfig);
+            break;
+          }
+          case 50: {
+            models_.AddEntriesFrom(ref input, _map_models_codec);
+            break;
+          }
+          case 58: {
+            glossaries_.AddEntriesFrom(ref input, _map_glossaries_codec);
+            break;
+          }
+          case 66: {
+            formatConversions_.AddEntriesFrom(ref input, _map_formatConversions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Input configuration for BatchTranslateDocument request.
+  /// </summary>
+  public sealed partial class BatchDocumentInputConfig : pb::IMessage<BatchDocumentInputConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDocumentInputConfig> _parser = new pb::MessageParser<BatchDocumentInputConfig>(() => new BatchDocumentInputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchDocumentInputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchDocumentInputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchDocumentInputConfig(BatchDocumentInputConfig other) : this() {
+      switch (other.SourceCase) {
+        case SourceOneofCase.GcsSource:
+          GcsSource = other.GcsSource.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchDocumentInputConfig Clone() {
+      return new BatchDocumentInputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_source" field.</summary>
+    public const int GcsSourceFieldNumber = 1;
+    /// <summary>
+    /// Google Cloud Storage location for the source input.
+    /// This can be a single file (for example,
+    /// `gs://translation-test/input.docx`) or a wildcard (for example,
+    /// `gs://translation-test/*`).
+    ///
+    /// File mime type is determined based on extension. Supported mime type
+    /// includes:
+    /// - `pdf`, application/pdf
+    /// - `docx`,
+    /// application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    /// - `pptx`,
+    /// application/vnd.openxmlformats-officedocument.presentationml.presentation
+    /// - `xlsx`,
+    /// application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    ///
+    /// The max file size to support for `.docx`, `.pptx` and `.xlsx` is 100MB.
+    /// The max file size to support for `.pdf` is 1GB and the max page limit is
+    /// 1000 pages.
+    /// The max file size to support for all input documents is 1GB.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.GcsSource GcsSource {
+      get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.Translate.V3.GcsSource) source_ : null; }
+      set {
+        source_ = value;
+        sourceCase_ = value == null ? SourceOneofCase.None : SourceOneofCase.GcsSource;
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      GcsSource = 1,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDocumentInputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchDocumentInputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsSource, other.GcsSource)) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (sourceCase_ == SourceOneofCase.GcsSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchDocumentInputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.GcsSource:
+          if (GcsSource == null) {
+            GcsSource = new global::Google.Cloud.Translate.V3.GcsSource();
+          }
+          GcsSource.MergeFrom(other.GcsSource);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Translate.V3.GcsSource subBuilder = new global::Google.Cloud.Translate.V3.GcsSource();
+            if (sourceCase_ == SourceOneofCase.GcsSource) {
+              subBuilder.MergeFrom(GcsSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsSource = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Translate.V3.GcsSource subBuilder = new global::Google.Cloud.Translate.V3.GcsSource();
+            if (sourceCase_ == SourceOneofCase.GcsSource) {
+              subBuilder.MergeFrom(GcsSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsSource = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Output configuration for BatchTranslateDocument request.
+  /// </summary>
+  public sealed partial class BatchDocumentOutputConfig : pb::IMessage<BatchDocumentOutputConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDocumentOutputConfig> _parser = new pb::MessageParser<BatchDocumentOutputConfig>(() => new BatchDocumentOutputConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchDocumentOutputConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchDocumentOutputConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchDocumentOutputConfig(BatchDocumentOutputConfig other) : this() {
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          GcsDestination = other.GcsDestination.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchDocumentOutputConfig Clone() {
+      return new BatchDocumentOutputConfig(this);
+    }
+
+    /// <summary>Field number for the "gcs_destination" field.</summary>
+    public const int GcsDestinationFieldNumber = 1;
+    /// <summary>
+    /// Google Cloud Storage destination for output content.
+    /// For every single input document (for example, gs://a/b/c.[extension]), we
+    /// generate at most 2 * n output files. (n is the # of target_language_codes
+    /// in the BatchTranslateDocumentRequest).
+    ///
+    /// While the input documents are being processed, we write/update an index
+    /// file `index.csv` under `gcs_destination.output_uri_prefix` (for example,
+    /// gs://translation_output/index.csv) The index file is generated/updated as
+    /// new files are being translated. The format is:
+    ///
+    /// input_document,target_language_code,translation_output,error_output,
+    /// glossary_translation_output,glossary_error_output
+    ///
+    /// `input_document` is one file we matched using gcs_source.input_uri.
+    /// `target_language_code` is provided in the request.
+    /// `translation_output` contains the translations. (details provided below)
+    /// `error_output` contains the error message during processing of the file.
+    /// Both translations_file and errors_file could be empty strings if we have
+    /// no content to output.
+    /// `glossary_translation_output` and `glossary_error_output` are the
+    /// translated output/error when we apply glossaries. They could also be
+    /// empty if we have no content to output.
+    ///
+    /// Once a row is present in index.csv, the input/output matching never
+    /// changes. Callers should also expect all the content in input_file are
+    /// processed and ready to be consumed (that is, no partial output file is
+    /// written).
+    ///
+    /// Since index.csv will be keeping updated during the process, please make
+    /// sure there is no custom retention policy applied on the output bucket
+    /// that may avoid file updating.
+    /// (https://cloud.google.com/storage/docs/bucket-lock?hl=en#retention-policy)
+    ///
+    /// The naming format of translation output files follows (for target
+    /// language code [trg]): `translation_output`:
+    /// gs://translation_output/a_b_c_[trg]_translation.[extension]
+    /// `glossary_translation_output`:
+    /// gs://translation_test/a_b_c_[trg]_glossary_translation.[extension] The
+    /// output document will maintain the same file format as the input document.
+    ///
+    /// The naming format of error output files follows (for target language code
+    /// [trg]): `error_output`: gs://translation_test/a_b_c_[trg]_errors.txt
+    /// `glossary_error_output`:
+    /// gs://translation_test/a_b_c_[trg]_glossary_translation.txt The error
+    /// output is a txt file containing error details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.GcsDestination GcsDestination {
+      get { return destinationCase_ == DestinationOneofCase.GcsDestination ? (global::Google.Cloud.Translate.V3.GcsDestination) destination_ : null; }
+      set {
+        destination_ = value;
+        destinationCase_ = value == null ? DestinationOneofCase.None : DestinationOneofCase.GcsDestination;
+      }
+    }
+
+    private object destination_;
+    /// <summary>Enum of possible cases for the "destination" oneof.</summary>
+    public enum DestinationOneofCase {
+      None = 0,
+      GcsDestination = 1,
+    }
+    private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestinationOneofCase DestinationCase {
+      get { return destinationCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearDestination() {
+      destinationCase_ = DestinationOneofCase.None;
+      destination_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDocumentOutputConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchDocumentOutputConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
+      if (DestinationCase != other.DestinationCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
+      hash ^= (int) destinationCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDestination);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchDocumentOutputConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.DestinationCase) {
+        case DestinationOneofCase.GcsDestination:
+          if (GcsDestination == null) {
+            GcsDestination = new global::Google.Cloud.Translate.V3.GcsDestination();
+          }
+          GcsDestination.MergeFrom(other.GcsDestination);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Translate.V3.GcsDestination subBuilder = new global::Google.Cloud.Translate.V3.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Translate.V3.GcsDestination subBuilder = new global::Google.Cloud.Translate.V3.GcsDestination();
+            if (destinationCase_ == DestinationOneofCase.GcsDestination) {
+              subBuilder.MergeFrom(GcsDestination);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDestination = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Stored in the
+  /// [google.longrunning.Operation.response][google.longrunning.Operation.response]
+  /// field returned by BatchTranslateDocument if at least one document is
+  /// translated successfully.
+  /// </summary>
+  public sealed partial class BatchTranslateDocumentResponse : pb::IMessage<BatchTranslateDocumentResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchTranslateDocumentResponse> _parser = new pb::MessageParser<BatchTranslateDocumentResponse>(() => new BatchTranslateDocumentResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchTranslateDocumentResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[35]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentResponse(BatchTranslateDocumentResponse other) : this() {
+      totalPages_ = other.totalPages_;
+      translatedPages_ = other.translatedPages_;
+      failedPages_ = other.failedPages_;
+      totalBillablePages_ = other.totalBillablePages_;
+      totalCharacters_ = other.totalCharacters_;
+      translatedCharacters_ = other.translatedCharacters_;
+      failedCharacters_ = other.failedCharacters_;
+      totalBillableCharacters_ = other.totalBillableCharacters_;
+      submitTime_ = other.submitTime_ != null ? other.submitTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentResponse Clone() {
+      return new BatchTranslateDocumentResponse(this);
+    }
+
+    /// <summary>Field number for the "total_pages" field.</summary>
+    public const int TotalPagesFieldNumber = 1;
+    private long totalPages_;
+    /// <summary>
+    /// Total number of pages to translate in all documents. Documents without
+    /// clear page definition (such as XLSX) are not counted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalPages {
+      get { return totalPages_; }
+      set {
+        totalPages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "translated_pages" field.</summary>
+    public const int TranslatedPagesFieldNumber = 2;
+    private long translatedPages_;
+    /// <summary>
+    /// Number of successfully translated pages in all documents. Documents without
+    /// clear page definition (such as XLSX) are not counted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TranslatedPages {
+      get { return translatedPages_; }
+      set {
+        translatedPages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "failed_pages" field.</summary>
+    public const int FailedPagesFieldNumber = 3;
+    private long failedPages_;
+    /// <summary>
+    /// Number of pages that failed to process in all documents. Documents without
+    /// clear page definition (such as XLSX) are not counted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long FailedPages {
+      get { return failedPages_; }
+      set {
+        failedPages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_billable_pages" field.</summary>
+    public const int TotalBillablePagesFieldNumber = 4;
+    private long totalBillablePages_;
+    /// <summary>
+    /// Number of billable pages in documents with clear page definition (such as
+    /// PDF, DOCX, PPTX)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalBillablePages {
+      get { return totalBillablePages_; }
+      set {
+        totalBillablePages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_characters" field.</summary>
+    public const int TotalCharactersFieldNumber = 5;
+    private long totalCharacters_;
+    /// <summary>
+    /// Total number of characters (Unicode codepoints) in all documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalCharacters {
+      get { return totalCharacters_; }
+      set {
+        totalCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "translated_characters" field.</summary>
+    public const int TranslatedCharactersFieldNumber = 6;
+    private long translatedCharacters_;
+    /// <summary>
+    /// Number of successfully translated characters (Unicode codepoints) in all
+    /// documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TranslatedCharacters {
+      get { return translatedCharacters_; }
+      set {
+        translatedCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "failed_characters" field.</summary>
+    public const int FailedCharactersFieldNumber = 7;
+    private long failedCharacters_;
+    /// <summary>
+    /// Number of characters that have failed to process (Unicode codepoints) in
+    /// all documents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long FailedCharacters {
+      get { return failedCharacters_; }
+      set {
+        failedCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_billable_characters" field.</summary>
+    public const int TotalBillableCharactersFieldNumber = 8;
+    private long totalBillableCharacters_;
+    /// <summary>
+    /// Number of billable characters (Unicode codepoints) in documents without
+    /// clear page definition, such as XLSX.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalBillableCharacters {
+      get { return totalBillableCharacters_; }
+      set {
+        totalBillableCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "submit_time" field.</summary>
+    public const int SubmitTimeFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp submitTime_;
+    /// <summary>
+    /// Time when the operation was submitted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SubmitTime {
+      get { return submitTime_; }
+      set {
+        submitTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// The time when the operation is finished and
+    /// [google.longrunning.Operation.done][google.longrunning.Operation.done] is
+    /// set to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchTranslateDocumentResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchTranslateDocumentResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TotalPages != other.TotalPages) return false;
+      if (TranslatedPages != other.TranslatedPages) return false;
+      if (FailedPages != other.FailedPages) return false;
+      if (TotalBillablePages != other.TotalBillablePages) return false;
+      if (TotalCharacters != other.TotalCharacters) return false;
+      if (TranslatedCharacters != other.TranslatedCharacters) return false;
+      if (FailedCharacters != other.FailedCharacters) return false;
+      if (TotalBillableCharacters != other.TotalBillableCharacters) return false;
+      if (!object.Equals(SubmitTime, other.SubmitTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TotalPages != 0L) hash ^= TotalPages.GetHashCode();
+      if (TranslatedPages != 0L) hash ^= TranslatedPages.GetHashCode();
+      if (FailedPages != 0L) hash ^= FailedPages.GetHashCode();
+      if (TotalBillablePages != 0L) hash ^= TotalBillablePages.GetHashCode();
+      if (TotalCharacters != 0L) hash ^= TotalCharacters.GetHashCode();
+      if (TranslatedCharacters != 0L) hash ^= TranslatedCharacters.GetHashCode();
+      if (FailedCharacters != 0L) hash ^= FailedCharacters.GetHashCode();
+      if (TotalBillableCharacters != 0L) hash ^= TotalBillableCharacters.GetHashCode();
+      if (submitTime_ != null) hash ^= SubmitTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TotalPages != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TotalPages);
+      }
+      if (TranslatedPages != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(TranslatedPages);
+      }
+      if (FailedPages != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(FailedPages);
+      }
+      if (TotalBillablePages != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(TotalBillablePages);
+      }
+      if (TotalCharacters != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(TotalCharacters);
+      }
+      if (TranslatedCharacters != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(TranslatedCharacters);
+      }
+      if (FailedCharacters != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(FailedCharacters);
+      }
+      if (TotalBillableCharacters != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(TotalBillableCharacters);
+      }
+      if (submitTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SubmitTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TotalPages != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TotalPages);
+      }
+      if (TranslatedPages != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(TranslatedPages);
+      }
+      if (FailedPages != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(FailedPages);
+      }
+      if (TotalBillablePages != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(TotalBillablePages);
+      }
+      if (TotalCharacters != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(TotalCharacters);
+      }
+      if (TranslatedCharacters != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(TranslatedCharacters);
+      }
+      if (FailedCharacters != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(FailedCharacters);
+      }
+      if (TotalBillableCharacters != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(TotalBillableCharacters);
+      }
+      if (submitTime_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(SubmitTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(EndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TotalPages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalPages);
+      }
+      if (TranslatedPages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TranslatedPages);
+      }
+      if (FailedPages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FailedPages);
+      }
+      if (TotalBillablePages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalBillablePages);
+      }
+      if (TotalCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalCharacters);
+      }
+      if (TranslatedCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TranslatedCharacters);
+      }
+      if (FailedCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FailedCharacters);
+      }
+      if (TotalBillableCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalBillableCharacters);
+      }
+      if (submitTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SubmitTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchTranslateDocumentResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TotalPages != 0L) {
+        TotalPages = other.TotalPages;
+      }
+      if (other.TranslatedPages != 0L) {
+        TranslatedPages = other.TranslatedPages;
+      }
+      if (other.FailedPages != 0L) {
+        FailedPages = other.FailedPages;
+      }
+      if (other.TotalBillablePages != 0L) {
+        TotalBillablePages = other.TotalBillablePages;
+      }
+      if (other.TotalCharacters != 0L) {
+        TotalCharacters = other.TotalCharacters;
+      }
+      if (other.TranslatedCharacters != 0L) {
+        TranslatedCharacters = other.TranslatedCharacters;
+      }
+      if (other.FailedCharacters != 0L) {
+        FailedCharacters = other.FailedCharacters;
+      }
+      if (other.TotalBillableCharacters != 0L) {
+        TotalBillableCharacters = other.TotalBillableCharacters;
+      }
+      if (other.submitTime_ != null) {
+        if (submitTime_ == null) {
+          SubmitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SubmitTime.MergeFrom(other.SubmitTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TotalPages = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            TranslatedPages = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            FailedPages = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            TotalBillablePages = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            TotalCharacters = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            TranslatedCharacters = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            FailedCharacters = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            TotalBillableCharacters = input.ReadInt64();
+            break;
+          }
+          case 74: {
+            if (submitTime_ == null) {
+              SubmitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SubmitTime);
+            break;
+          }
+          case 82: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            TotalPages = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            TranslatedPages = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            FailedPages = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            TotalBillablePages = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            TotalCharacters = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            TranslatedCharacters = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            FailedCharacters = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            TotalBillableCharacters = input.ReadInt64();
+            break;
+          }
+          case 74: {
+            if (submitTime_ == null) {
+              SubmitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SubmitTime);
+            break;
+          }
+          case 82: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// State metadata for the batch translation operation.
+  /// </summary>
+  public sealed partial class BatchTranslateDocumentMetadata : pb::IMessage<BatchTranslateDocumentMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchTranslateDocumentMetadata> _parser = new pb::MessageParser<BatchTranslateDocumentMetadata>(() => new BatchTranslateDocumentMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BatchTranslateDocumentMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Translate.V3.TranslationServiceReflection.Descriptor.MessageTypes[36]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentMetadata(BatchTranslateDocumentMetadata other) : this() {
+      state_ = other.state_;
+      totalPages_ = other.totalPages_;
+      translatedPages_ = other.translatedPages_;
+      failedPages_ = other.failedPages_;
+      totalBillablePages_ = other.totalBillablePages_;
+      totalCharacters_ = other.totalCharacters_;
+      translatedCharacters_ = other.translatedCharacters_;
+      failedCharacters_ = other.failedCharacters_;
+      totalBillableCharacters_ = other.totalBillableCharacters_;
+      submitTime_ = other.submitTime_ != null ? other.submitTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BatchTranslateDocumentMetadata Clone() {
+      return new BatchTranslateDocumentMetadata(this);
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State state_ = global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State.Unspecified;
+    /// <summary>
+    /// The state of the operation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_pages" field.</summary>
+    public const int TotalPagesFieldNumber = 2;
+    private long totalPages_;
+    /// <summary>
+    /// Total number of pages to translate in all documents so far. Documents
+    /// without clear page definition (such as XLSX) are not counted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalPages {
+      get { return totalPages_; }
+      set {
+        totalPages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "translated_pages" field.</summary>
+    public const int TranslatedPagesFieldNumber = 3;
+    private long translatedPages_;
+    /// <summary>
+    /// Number of successfully translated pages in all documents so far. Documents
+    /// without clear page definition (such as XLSX) are not counted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TranslatedPages {
+      get { return translatedPages_; }
+      set {
+        translatedPages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "failed_pages" field.</summary>
+    public const int FailedPagesFieldNumber = 4;
+    private long failedPages_;
+    /// <summary>
+    /// Number of pages that failed to process in all documents so far. Documents
+    /// without clear page definition (such as XLSX) are not counted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long FailedPages {
+      get { return failedPages_; }
+      set {
+        failedPages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_billable_pages" field.</summary>
+    public const int TotalBillablePagesFieldNumber = 5;
+    private long totalBillablePages_;
+    /// <summary>
+    /// Number of billable pages in documents with clear page definition (such as
+    /// PDF, DOCX, PPTX) so far.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalBillablePages {
+      get { return totalBillablePages_; }
+      set {
+        totalBillablePages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_characters" field.</summary>
+    public const int TotalCharactersFieldNumber = 6;
+    private long totalCharacters_;
+    /// <summary>
+    /// Total number of characters (Unicode codepoints) in all documents so far.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalCharacters {
+      get { return totalCharacters_; }
+      set {
+        totalCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "translated_characters" field.</summary>
+    public const int TranslatedCharactersFieldNumber = 7;
+    private long translatedCharacters_;
+    /// <summary>
+    /// Number of successfully translated characters (Unicode codepoints) in all
+    /// documents so far.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TranslatedCharacters {
+      get { return translatedCharacters_; }
+      set {
+        translatedCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "failed_characters" field.</summary>
+    public const int FailedCharactersFieldNumber = 8;
+    private long failedCharacters_;
+    /// <summary>
+    /// Number of characters that have failed to process (Unicode codepoints) in
+    /// all documents so far.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long FailedCharacters {
+      get { return failedCharacters_; }
+      set {
+        failedCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_billable_characters" field.</summary>
+    public const int TotalBillableCharactersFieldNumber = 9;
+    private long totalBillableCharacters_;
+    /// <summary>
+    /// Number of billable characters (Unicode codepoints) in documents without
+    /// clear page definition (such as XLSX) so far.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TotalBillableCharacters {
+      get { return totalBillableCharacters_; }
+      set {
+        totalBillableCharacters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "submit_time" field.</summary>
+    public const int SubmitTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp submitTime_;
+    /// <summary>
+    /// Time when the operation was submitted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp SubmitTime {
+      get { return submitTime_; }
+      set {
+        submitTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BatchTranslateDocumentMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BatchTranslateDocumentMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (State != other.State) return false;
+      if (TotalPages != other.TotalPages) return false;
+      if (TranslatedPages != other.TranslatedPages) return false;
+      if (FailedPages != other.FailedPages) return false;
+      if (TotalBillablePages != other.TotalBillablePages) return false;
+      if (TotalCharacters != other.TotalCharacters) return false;
+      if (TranslatedCharacters != other.TranslatedCharacters) return false;
+      if (FailedCharacters != other.FailedCharacters) return false;
+      if (TotalBillableCharacters != other.TotalBillableCharacters) return false;
+      if (!object.Equals(SubmitTime, other.SubmitTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (State != global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (TotalPages != 0L) hash ^= TotalPages.GetHashCode();
+      if (TranslatedPages != 0L) hash ^= TranslatedPages.GetHashCode();
+      if (FailedPages != 0L) hash ^= FailedPages.GetHashCode();
+      if (TotalBillablePages != 0L) hash ^= TotalBillablePages.GetHashCode();
+      if (TotalCharacters != 0L) hash ^= TotalCharacters.GetHashCode();
+      if (TranslatedCharacters != 0L) hash ^= TranslatedCharacters.GetHashCode();
+      if (FailedCharacters != 0L) hash ^= FailedCharacters.GetHashCode();
+      if (TotalBillableCharacters != 0L) hash ^= TotalBillableCharacters.GetHashCode();
+      if (submitTime_ != null) hash ^= SubmitTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (State != global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (TotalPages != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(TotalPages);
+      }
+      if (TranslatedPages != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TranslatedPages);
+      }
+      if (FailedPages != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(FailedPages);
+      }
+      if (TotalBillablePages != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(TotalBillablePages);
+      }
+      if (TotalCharacters != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(TotalCharacters);
+      }
+      if (TranslatedCharacters != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(TranslatedCharacters);
+      }
+      if (FailedCharacters != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(FailedCharacters);
+      }
+      if (TotalBillableCharacters != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(TotalBillableCharacters);
+      }
+      if (submitTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(SubmitTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) State);
+      }
+      if (TotalPages != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(TotalPages);
+      }
+      if (TranslatedPages != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TranslatedPages);
+      }
+      if (FailedPages != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(FailedPages);
+      }
+      if (TotalBillablePages != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(TotalBillablePages);
+      }
+      if (TotalCharacters != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(TotalCharacters);
+      }
+      if (TranslatedCharacters != 0L) {
+        output.WriteRawTag(56);
+        output.WriteInt64(TranslatedCharacters);
+      }
+      if (FailedCharacters != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(FailedCharacters);
+      }
+      if (TotalBillableCharacters != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(TotalBillableCharacters);
+      }
+      if (submitTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(SubmitTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (State != global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (TotalPages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalPages);
+      }
+      if (TranslatedPages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TranslatedPages);
+      }
+      if (FailedPages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FailedPages);
+      }
+      if (TotalBillablePages != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalBillablePages);
+      }
+      if (TotalCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalCharacters);
+      }
+      if (TranslatedCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TranslatedCharacters);
+      }
+      if (FailedCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FailedCharacters);
+      }
+      if (TotalBillableCharacters != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalBillableCharacters);
+      }
+      if (submitTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SubmitTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BatchTranslateDocumentMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.State != global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.TotalPages != 0L) {
+        TotalPages = other.TotalPages;
+      }
+      if (other.TranslatedPages != 0L) {
+        TranslatedPages = other.TranslatedPages;
+      }
+      if (other.FailedPages != 0L) {
+        FailedPages = other.FailedPages;
+      }
+      if (other.TotalBillablePages != 0L) {
+        TotalBillablePages = other.TotalBillablePages;
+      }
+      if (other.TotalCharacters != 0L) {
+        TotalCharacters = other.TotalCharacters;
+      }
+      if (other.TranslatedCharacters != 0L) {
+        TranslatedCharacters = other.TranslatedCharacters;
+      }
+      if (other.FailedCharacters != 0L) {
+        FailedCharacters = other.FailedCharacters;
+      }
+      if (other.TotalBillableCharacters != 0L) {
+        TotalBillableCharacters = other.TotalBillableCharacters;
+      }
+      if (other.submitTime_ != null) {
+        if (submitTime_ == null) {
+          SubmitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        SubmitTime.MergeFrom(other.SubmitTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            TotalPages = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            TranslatedPages = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            FailedPages = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            TotalBillablePages = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            TotalCharacters = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            TranslatedCharacters = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            FailedCharacters = input.ReadInt64();
+            break;
+          }
+          case 72: {
+            TotalBillableCharacters = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            if (submitTime_ == null) {
+              SubmitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SubmitTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            State = (global::Google.Cloud.Translate.V3.BatchTranslateDocumentMetadata.Types.State) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            TotalPages = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            TranslatedPages = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            FailedPages = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            TotalBillablePages = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            TotalCharacters = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            TranslatedCharacters = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            FailedCharacters = input.ReadInt64();
+            break;
+          }
+          case 72: {
+            TotalBillableCharacters = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            if (submitTime_ == null) {
+              SubmitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(SubmitTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BatchTranslateDocumentMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// State of the job.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Invalid.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Request is being processed.
+        /// </summary>
+        [pbr::OriginalName("RUNNING")] Running = 1,
+        /// <summary>
+        /// The batch is processed, and at least one item was successfully processed.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED")] Succeeded = 2,
+        /// <summary>
+        /// The batch is done and no item was successfully processed.
+        /// </summary>
+        [pbr::OriginalName("FAILED")] Failed = 3,
+        /// <summary>
+        /// Request is in the process of being canceled after caller invoked
+        /// longrunning.Operations.CancelOperation on the request id.
+        /// </summary>
+        [pbr::OriginalName("CANCELLING")] Cancelling = 4,
+        /// <summary>
+        /// The batch is done after the user has called the
+        /// longrunning.Operations.CancelOperation. Any records processed before the
+        /// cancel command are output as specified in the request.
+        /// </summary>
+        [pbr::OriginalName("CANCELLED")] Cancelled = 5,
+      }
+
+    }
+    #endregion
 
   }
 
