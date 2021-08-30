@@ -26,74 +26,80 @@ namespace Google.Cloud.OsConfig.V1 {
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvb3Njb25maWcvdjEvaW52ZW50b3J5LnByb3RvEhhn",
             "b29nbGUuY2xvdWQub3Njb25maWcudjEaH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8isxIKCUludmVudG9yeRI7Cgdvc19pbmZvGAEgASgLMiou",
-            "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5Pc0luZm8SPQoF",
-            "aXRlbXMYAiADKAsyLi5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50",
-            "b3J5Lkl0ZW1zRW50cnkauAEKBk9zSW5mbxIQCghob3N0bmFtZRgJIAEoCRIR",
-            "Cglsb25nX25hbWUYAiABKAkSEgoKc2hvcnRfbmFtZRgDIAEoCRIPCgd2ZXJz",
-            "aW9uGAQgASgJEhQKDGFyY2hpdGVjdHVyZRgFIAEoCRIWCg5rZXJuZWxfdmVy",
-            "c2lvbhgGIAEoCRIWCg5rZXJuZWxfcmVsZWFzZRgHIAEoCRIeChZvc2NvbmZp",
-            "Z19hZ2VudF92ZXJzaW9uGAggASgJGrcECgRJdGVtEgoKAmlkGAEgASgJEkgK",
-            "C29yaWdpbl90eXBlGAIgASgOMjMuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
-            "LkludmVudG9yeS5JdGVtLk9yaWdpblR5cGUSLwoLY3JlYXRlX3RpbWUYCCAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3VwZGF0ZV90aW1l",
-            "GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI7CgR0eXBlGAUg",
-            "ASgOMi0uZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5JdGVt",
-            "LlR5cGUSUAoRaW5zdGFsbGVkX3BhY2thZ2UYBiABKAsyMy5nb29nbGUuY2xv",
-            "dWQub3Njb25maWcudjEuSW52ZW50b3J5LlNvZnR3YXJlUGFja2FnZUgAElAK",
-            "EWF2YWlsYWJsZV9wYWNrYWdlGAcgASgLMjMuZ29vZ2xlLmNsb3VkLm9zY29u",
-            "ZmlnLnYxLkludmVudG9yeS5Tb2Z0d2FyZVBhY2thZ2VIACI/CgpPcmlnaW5U",
-            "eXBlEhsKF09SSUdJTl9UWVBFX1VOU1BFQ0lGSUVEEAASFAoQSU5WRU5UT1JZ",
-            "X1JFUE9SVBABIkoKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEhUKEUlO",
-            "U1RBTExFRF9QQUNLQUdFEAESFQoRQVZBSUxBQkxFX1BBQ0tBR0UQAkIJCgdk",
-            "ZXRhaWxzGpsFCg9Tb2Z0d2FyZVBhY2thZ2USSwoLeXVtX3BhY2thZ2UYASAB",
-            "KAsyNC5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5LlZlcnNp",
-            "b25lZFBhY2thZ2VIABJLCgthcHRfcGFja2FnZRgCIAEoCzI0Lmdvb2dsZS5j",
-            "bG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuVmVyc2lvbmVkUGFja2FnZUgA",
-            "Ek4KDnp5cHBlcl9wYWNrYWdlGAMgASgLMjQuZ29vZ2xlLmNsb3VkLm9zY29u",
-            "ZmlnLnYxLkludmVudG9yeS5WZXJzaW9uZWRQYWNrYWdlSAASTgoOZ29vZ2V0",
-            "X3BhY2thZ2UYBCABKAsyNC5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52",
-            "ZW50b3J5LlZlcnNpb25lZFBhY2thZ2VIABJHCgx6eXBwZXJfcGF0Y2gYBSAB",
-            "KAsyLy5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5Llp5cHBl",
-            "clBhdGNoSAASTwoLd3VhX3BhY2thZ2UYBiABKAsyOC5nb29nbGUuY2xvdWQu",
-            "b3Njb25maWcudjEuSW52ZW50b3J5LldpbmRvd3NVcGRhdGVQYWNrYWdlSAAS",
-            "XAoLcWZlX3BhY2thZ2UYByABKAsyRS5nb29nbGUuY2xvdWQub3Njb25maWcu",
-            "djEuSW52ZW50b3J5LldpbmRvd3NRdWlja0ZpeEVuZ2luZWVyaW5nUGFja2Fn",
-            "ZUgAEksKC2Nvc19wYWNrYWdlGAggASgLMjQuZ29vZ2xlLmNsb3VkLm9zY29u",
-            "ZmlnLnYxLkludmVudG9yeS5WZXJzaW9uZWRQYWNrYWdlSABCCQoHZGV0YWls",
-            "cxpPChBWZXJzaW9uZWRQYWNrYWdlEhQKDHBhY2thZ2VfbmFtZRgEIAEoCRIU",
-            "CgxhcmNoaXRlY3R1cmUYAiABKAkSDwoHdmVyc2lvbhgDIAEoCRqDAwoUV2lu",
-            "ZG93c1VwZGF0ZVBhY2thZ2USDQoFdGl0bGUYASABKAkSEwoLZGVzY3JpcHRp",
-            "b24YAiABKAkSYgoKY2F0ZWdvcmllcxgDIAMoCzJOLmdvb2dsZS5jbG91ZC5v",
-            "c2NvbmZpZy52MS5JbnZlbnRvcnkuV2luZG93c1VwZGF0ZVBhY2thZ2UuV2lu",
-            "ZG93c1VwZGF0ZUNhdGVnb3J5EhYKDmtiX2FydGljbGVfaWRzGAQgAygJEhMK",
-            "C3N1cHBvcnRfdXJsGAsgASgJEhYKDm1vcmVfaW5mb191cmxzGAUgAygJEhEK",
-            "CXVwZGF0ZV9pZBgGIAEoCRIXCg9yZXZpc2lvbl9udW1iZXIYByABKAUSPwob",
-            "bGFzdF9kZXBsb3ltZW50X2NoYW5nZV90aW1lGAogASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcBoxChVXaW5kb3dzVXBkYXRlQ2F0ZWdvcnkSCgoC",
-            "aWQYASABKAkSDAoEbmFtZRgCIAEoCRpWCgtaeXBwZXJQYXRjaBISCgpwYXRj",
-            "aF9uYW1lGAUgASgJEhAKCGNhdGVnb3J5GAIgASgJEhAKCHNldmVyaXR5GAMg",
-            "ASgJEg8KB3N1bW1hcnkYBCABKAkajwEKIVdpbmRvd3NRdWlja0ZpeEVuZ2lu",
-            "ZWVyaW5nUGFja2FnZRIPCgdjYXB0aW9uGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
-            "GAIgASgJEhIKCmhvdF9maXhfaWQYAyABKAkSMAoMaW5zdGFsbF90aW1lGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBpWCgpJdGVtc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRI3CgV2YWx1ZRgCIAEoCzIoLmdvb2dsZS5jbG91ZC5v",
-            "c2NvbmZpZy52MS5JbnZlbnRvcnkuSXRlbToCOAFCwwEKHGNvbS5nb29nbGUu",
-            "Y2xvdWQub3Njb25maWcudjFCC0ludmVudG9yaWVzUAFaQGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvb3Njb25maWcvdjE7",
-            "b3Njb25maWeqAhhHb29nbGUuQ2xvdWQuT3NDb25maWcuVjHKAhhHb29nbGVc",
-            "Q2xvdWRcT3NDb25maWdcVjHqAhtHb29nbGU6OkNsb3VkOjpPc0NvbmZpZzo6",
-            "VjFiBnByb3RvMw=="));
+            "c3RhbXAucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8inxQKCUludmVu",
+            "dG9yeRI7Cgdvc19pbmZvGAEgASgLMiouZ29vZ2xlLmNsb3VkLm9zY29uZmln",
+            "LnYxLkludmVudG9yeS5Pc0luZm8SPQoFaXRlbXMYAiADKAsyLi5nb29nbGUu",
+            "Y2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5Lkl0ZW1zRW50cnkauAEKBk9z",
+            "SW5mbxIQCghob3N0bmFtZRgJIAEoCRIRCglsb25nX25hbWUYAiABKAkSEgoK",
+            "c2hvcnRfbmFtZRgDIAEoCRIPCgd2ZXJzaW9uGAQgASgJEhQKDGFyY2hpdGVj",
+            "dHVyZRgFIAEoCRIWCg5rZXJuZWxfdmVyc2lvbhgGIAEoCRIWCg5rZXJuZWxf",
+            "cmVsZWFzZRgHIAEoCRIeChZvc2NvbmZpZ19hZ2VudF92ZXJzaW9uGAggASgJ",
+            "GrcECgRJdGVtEgoKAmlkGAEgASgJEkgKC29yaWdpbl90eXBlGAIgASgOMjMu",
+            "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5JdGVtLk9yaWdp",
+            "blR5cGUSLwoLY3JlYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBI7CgR0eXBlGAUgASgOMi0uZ29vZ2xlLmNsb3VkLm9z",
+            "Y29uZmlnLnYxLkludmVudG9yeS5JdGVtLlR5cGUSUAoRaW5zdGFsbGVkX3Bh",
+            "Y2thZ2UYBiABKAsyMy5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50",
+            "b3J5LlNvZnR3YXJlUGFja2FnZUgAElAKEWF2YWlsYWJsZV9wYWNrYWdlGAcg",
+            "ASgLMjMuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5Tb2Z0",
+            "d2FyZVBhY2thZ2VIACI/CgpPcmlnaW5UeXBlEhsKF09SSUdJTl9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASFAoQSU5WRU5UT1JZX1JFUE9SVBABIkoKBFR5cGUSFAoQ",
+            "VFlQRV9VTlNQRUNJRklFRBAAEhUKEUlOU1RBTExFRF9QQUNLQUdFEAESFQoR",
+            "QVZBSUxBQkxFX1BBQ0tBR0UQAkIJCgdkZXRhaWxzGvIFCg9Tb2Z0d2FyZVBh",
+            "Y2thZ2USSwoLeXVtX3BhY2thZ2UYASABKAsyNC5nb29nbGUuY2xvdWQub3Nj",
+            "b25maWcudjEuSW52ZW50b3J5LlZlcnNpb25lZFBhY2thZ2VIABJLCgthcHRf",
+            "cGFja2FnZRgCIAEoCzI0Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZl",
+            "bnRvcnkuVmVyc2lvbmVkUGFja2FnZUgAEk4KDnp5cHBlcl9wYWNrYWdlGAMg",
+            "ASgLMjQuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5WZXJz",
+            "aW9uZWRQYWNrYWdlSAASTgoOZ29vZ2V0X3BhY2thZ2UYBCABKAsyNC5nb29n",
+            "bGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5LlZlcnNpb25lZFBhY2th",
+            "Z2VIABJHCgx6eXBwZXJfcGF0Y2gYBSABKAsyLy5nb29nbGUuY2xvdWQub3Nj",
+            "b25maWcudjEuSW52ZW50b3J5Llp5cHBlclBhdGNoSAASTwoLd3VhX3BhY2th",
+            "Z2UYBiABKAsyOC5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5",
+            "LldpbmRvd3NVcGRhdGVQYWNrYWdlSAASXAoLcWZlX3BhY2thZ2UYByABKAsy",
+            "RS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5LldpbmRvd3NR",
+            "dWlja0ZpeEVuZ2luZWVyaW5nUGFja2FnZUgAEksKC2Nvc19wYWNrYWdlGAgg",
+            "ASgLMjQuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5WZXJz",
+            "aW9uZWRQYWNrYWdlSAASVQoTd2luZG93c19hcHBsaWNhdGlvbhgJIAEoCzI2",
+            "Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuV2luZG93c0Fw",
+            "cGxpY2F0aW9uSABCCQoHZGV0YWlscxpPChBWZXJzaW9uZWRQYWNrYWdlEhQK",
+            "DHBhY2thZ2VfbmFtZRgEIAEoCRIUCgxhcmNoaXRlY3R1cmUYAiABKAkSDwoH",
+            "dmVyc2lvbhgDIAEoCRqDAwoUV2luZG93c1VwZGF0ZVBhY2thZ2USDQoFdGl0",
+            "bGUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSYgoKY2F0ZWdvcmllcxgD",
+            "IAMoCzJOLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuV2lu",
+            "ZG93c1VwZGF0ZVBhY2thZ2UuV2luZG93c1VwZGF0ZUNhdGVnb3J5EhYKDmti",
+            "X2FydGljbGVfaWRzGAQgAygJEhMKC3N1cHBvcnRfdXJsGAsgASgJEhYKDm1v",
+            "cmVfaW5mb191cmxzGAUgAygJEhEKCXVwZGF0ZV9pZBgGIAEoCRIXCg9yZXZp",
+            "c2lvbl9udW1iZXIYByABKAUSPwobbGFzdF9kZXBsb3ltZW50X2NoYW5nZV90",
+            "aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBoxChVXaW5k",
+            "b3dzVXBkYXRlQ2F0ZWdvcnkSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRpW",
+            "CgtaeXBwZXJQYXRjaBISCgpwYXRjaF9uYW1lGAUgASgJEhAKCGNhdGVnb3J5",
+            "GAIgASgJEhAKCHNldmVyaXR5GAMgASgJEg8KB3N1bW1hcnkYBCABKAkajwEK",
+            "IVdpbmRvd3NRdWlja0ZpeEVuZ2luZWVyaW5nUGFja2FnZRIPCgdjYXB0aW9u",
+            "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhIKCmhvdF9maXhfaWQYAyAB",
+            "KAkSMAoMaW5zdGFsbF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBqSAQoSV2luZG93c0FwcGxpY2F0aW9uEhQKDGRpc3BsYXlfbmFt",
+            "ZRgBIAEoCRIXCg9kaXNwbGF5X3ZlcnNpb24YAiABKAkSEQoJcHVibGlzaGVy",
+            "GAMgASgJEicKDGluc3RhbGxfZGF0ZRgEIAEoCzIRLmdvb2dsZS50eXBlLkRh",
+            "dGUSEQoJaGVscF9saW5rGAUgASgJGlYKCkl0ZW1zRW50cnkSCwoDa2V5GAEg",
+            "ASgJEjcKBXZhbHVlGAIgASgLMiguZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
+            "LkludmVudG9yeS5JdGVtOgI4AULDAQocY29tLmdvb2dsZS5jbG91ZC5vc2Nv",
+            "bmZpZy52MUILSW52ZW50b3JpZXNQAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9vc2NvbmZpZy92MTtvc2NvbmZpZ6oC",
+            "GEdvb2dsZS5DbG91ZC5Pc0NvbmZpZy5WMcoCGEdvb2dsZVxDbG91ZFxPc0Nv",
+            "bmZpZ1xWMeoCG0dvb2dsZTo6Q2xvdWQ6Ok9zQ29uZmlnOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory), global::Google.Cloud.OsConfig.V1.Inventory.Parser, new[]{ "OsInfo", "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.OsInfo), global::Google.Cloud.OsConfig.V1.Inventory.Types.OsInfo.Parser, new[]{ "Hostname", "LongName", "ShortName", "Version", "Architecture", "KernelVersion", "KernelRelease", "OsconfigAgentVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.Item), global::Google.Cloud.OsConfig.V1.Inventory.Types.Item.Parser, new[]{ "Id", "OriginType", "CreateTime", "UpdateTime", "Type", "InstalledPackage", "AvailablePackage" }, new[]{ "Details" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.Item.Types.OriginType), typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.Item.Types.Type) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.SoftwarePackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.SoftwarePackage.Parser, new[]{ "YumPackage", "AptPackage", "ZypperPackage", "GoogetPackage", "ZypperPatch", "WuaPackage", "QfePackage", "CosPackage" }, new[]{ "Details" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.SoftwarePackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.SoftwarePackage.Parser, new[]{ "YumPackage", "AptPackage", "ZypperPackage", "GoogetPackage", "ZypperPatch", "WuaPackage", "QfePackage", "CosPackage", "WindowsApplication" }, new[]{ "Details" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.VersionedPackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.VersionedPackage.Parser, new[]{ "PackageName", "Architecture", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Parser, new[]{ "Title", "Description", "Categories", "KbArticleIds", "SupportUrl", "MoreInfoUrls", "UpdateId", "RevisionNumber", "LastDeploymentChangeTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Types.WindowsUpdateCategory), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Types.WindowsUpdateCategory.Parser, new[]{ "Id", "Name" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.ZypperPatch), global::Google.Cloud.OsConfig.V1.Inventory.Types.ZypperPatch.Parser, new[]{ "PatchName", "Category", "Severity", "Summary" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsQuickFixEngineeringPackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsQuickFixEngineeringPackage.Parser, new[]{ "Caption", "Description", "HotFixId", "InstallTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication.Parser, new[]{ "DisplayName", "DisplayVersion", "Publisher", "InstallDate", "HelpLink" }, null, null, null, null),
             null, })
           }));
     }
@@ -1359,6 +1365,9 @@ namespace Google.Cloud.OsConfig.V1 {
             case DetailsOneofCase.CosPackage:
               CosPackage = other.CosPackage.Clone();
               break;
+            case DetailsOneofCase.WindowsApplication:
+              WindowsApplication = other.WindowsApplication.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1496,6 +1505,20 @@ namespace Google.Cloud.OsConfig.V1 {
           }
         }
 
+        /// <summary>Field number for the "windows_application" field.</summary>
+        public const int WindowsApplicationFieldNumber = 9;
+        /// <summary>
+        /// Details of a Windows Application
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication WindowsApplication {
+          get { return detailsCase_ == DetailsOneofCase.WindowsApplication ? (global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication) details_ : null; }
+          set {
+            details_ = value;
+            detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.WindowsApplication;
+          }
+        }
+
         private object details_;
         /// <summary>Enum of possible cases for the "details" oneof.</summary>
         public enum DetailsOneofCase {
@@ -1508,6 +1531,7 @@ namespace Google.Cloud.OsConfig.V1 {
           WuaPackage = 6,
           QfePackage = 7,
           CosPackage = 8,
+          WindowsApplication = 9,
         }
         private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1542,6 +1566,7 @@ namespace Google.Cloud.OsConfig.V1 {
           if (!object.Equals(WuaPackage, other.WuaPackage)) return false;
           if (!object.Equals(QfePackage, other.QfePackage)) return false;
           if (!object.Equals(CosPackage, other.CosPackage)) return false;
+          if (!object.Equals(WindowsApplication, other.WindowsApplication)) return false;
           if (DetailsCase != other.DetailsCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1557,6 +1582,7 @@ namespace Google.Cloud.OsConfig.V1 {
           if (detailsCase_ == DetailsOneofCase.WuaPackage) hash ^= WuaPackage.GetHashCode();
           if (detailsCase_ == DetailsOneofCase.QfePackage) hash ^= QfePackage.GetHashCode();
           if (detailsCase_ == DetailsOneofCase.CosPackage) hash ^= CosPackage.GetHashCode();
+          if (detailsCase_ == DetailsOneofCase.WindowsApplication) hash ^= WindowsApplication.GetHashCode();
           hash ^= (int) detailsCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1606,6 +1632,10 @@ namespace Google.Cloud.OsConfig.V1 {
             output.WriteRawTag(66);
             output.WriteMessage(CosPackage);
           }
+          if (detailsCase_ == DetailsOneofCase.WindowsApplication) {
+            output.WriteRawTag(74);
+            output.WriteMessage(WindowsApplication);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1647,6 +1677,10 @@ namespace Google.Cloud.OsConfig.V1 {
             output.WriteRawTag(66);
             output.WriteMessage(CosPackage);
           }
+          if (detailsCase_ == DetailsOneofCase.WindowsApplication) {
+            output.WriteRawTag(74);
+            output.WriteMessage(WindowsApplication);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1679,6 +1713,9 @@ namespace Google.Cloud.OsConfig.V1 {
           }
           if (detailsCase_ == DetailsOneofCase.CosPackage) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(CosPackage);
+          }
+          if (detailsCase_ == DetailsOneofCase.WindowsApplication) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(WindowsApplication);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1739,6 +1776,12 @@ namespace Google.Cloud.OsConfig.V1 {
                 CosPackage = new global::Google.Cloud.OsConfig.V1.Inventory.Types.VersionedPackage();
               }
               CosPackage.MergeFrom(other.CosPackage);
+              break;
+            case DetailsOneofCase.WindowsApplication:
+              if (WindowsApplication == null) {
+                WindowsApplication = new global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication();
+              }
+              WindowsApplication.MergeFrom(other.WindowsApplication);
               break;
           }
 
@@ -1828,6 +1871,15 @@ namespace Google.Cloud.OsConfig.V1 {
                 CosPackage = subBuilder;
                 break;
               }
+              case 74: {
+                global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication subBuilder = new global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication();
+                if (detailsCase_ == DetailsOneofCase.WindowsApplication) {
+                  subBuilder.MergeFrom(WindowsApplication);
+                }
+                input.ReadMessage(subBuilder);
+                WindowsApplication = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -1912,6 +1964,15 @@ namespace Google.Cloud.OsConfig.V1 {
                 }
                 input.ReadMessage(subBuilder);
                 CosPackage = subBuilder;
+                break;
+              }
+              case 74: {
+                global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication subBuilder = new global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication();
+                if (detailsCase_ == DetailsOneofCase.WindowsApplication) {
+                  subBuilder.MergeFrom(WindowsApplication);
+                }
+                input.ReadMessage(subBuilder);
+                WindowsApplication = subBuilder;
                 break;
               }
             }
@@ -3468,6 +3529,356 @@ namespace Google.Cloud.OsConfig.V1 {
                   InstallTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
                 }
                 input.ReadMessage(InstallTime);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Contains information about a Windows application as retrieved from the
+      /// Windows Registry. For more information about these fields, see
+      ///
+      /// [Windows Installer Properties for the Uninstall
+      /// Registry](https://docs.microsoft.com/en-us/windows/win32/msi/uninstall-registry-key){:
+      /// class="external" }
+      /// </summary>
+      public sealed partial class WindowsApplication : pb::IMessage<WindowsApplication>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<WindowsApplication> _parser = new pb::MessageParser<WindowsApplication>(() => new WindowsApplication());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<WindowsApplication> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.OsConfig.V1.Inventory.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WindowsApplication() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WindowsApplication(WindowsApplication other) : this() {
+          displayName_ = other.displayName_;
+          displayVersion_ = other.displayVersion_;
+          publisher_ = other.publisher_;
+          installDate_ = other.installDate_ != null ? other.installDate_.Clone() : null;
+          helpLink_ = other.helpLink_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public WindowsApplication Clone() {
+          return new WindowsApplication(this);
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 1;
+        private string displayName_ = "";
+        /// <summary>
+        /// The name of the application or product.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "display_version" field.</summary>
+        public const int DisplayVersionFieldNumber = 2;
+        private string displayVersion_ = "";
+        /// <summary>
+        /// The version of the product or application in string format.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string DisplayVersion {
+          get { return displayVersion_; }
+          set {
+            displayVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "publisher" field.</summary>
+        public const int PublisherFieldNumber = 3;
+        private string publisher_ = "";
+        /// <summary>
+        /// The name of the manufacturer for the product or application.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Publisher {
+          get { return publisher_; }
+          set {
+            publisher_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "install_date" field.</summary>
+        public const int InstallDateFieldNumber = 4;
+        private global::Google.Type.Date installDate_;
+        /// <summary>
+        /// The last time this product received service. The value of this property
+        /// is replaced each time a patch is applied or removed from the product or
+        /// the command-line option is used to repair the product.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Google.Type.Date InstallDate {
+          get { return installDate_; }
+          set {
+            installDate_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "help_link" field.</summary>
+        public const int HelpLinkFieldNumber = 5;
+        private string helpLink_ = "";
+        /// <summary>
+        /// The internet address for technical support.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string HelpLink {
+          get { return helpLink_; }
+          set {
+            helpLink_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as WindowsApplication);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(WindowsApplication other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DisplayName != other.DisplayName) return false;
+          if (DisplayVersion != other.DisplayVersion) return false;
+          if (Publisher != other.Publisher) return false;
+          if (!object.Equals(InstallDate, other.InstallDate)) return false;
+          if (HelpLink != other.HelpLink) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (DisplayVersion.Length != 0) hash ^= DisplayVersion.GetHashCode();
+          if (Publisher.Length != 0) hash ^= Publisher.GetHashCode();
+          if (installDate_ != null) hash ^= InstallDate.GetHashCode();
+          if (HelpLink.Length != 0) hash ^= HelpLink.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DisplayName);
+          }
+          if (DisplayVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayVersion);
+          }
+          if (Publisher.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Publisher);
+          }
+          if (installDate_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(InstallDate);
+          }
+          if (HelpLink.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(HelpLink);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(DisplayName);
+          }
+          if (DisplayVersion.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayVersion);
+          }
+          if (Publisher.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Publisher);
+          }
+          if (installDate_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(InstallDate);
+          }
+          if (HelpLink.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(HelpLink);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (DisplayVersion.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayVersion);
+          }
+          if (Publisher.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Publisher);
+          }
+          if (installDate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstallDate);
+          }
+          if (HelpLink.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(HelpLink);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(WindowsApplication other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          if (other.DisplayVersion.Length != 0) {
+            DisplayVersion = other.DisplayVersion;
+          }
+          if (other.Publisher.Length != 0) {
+            Publisher = other.Publisher;
+          }
+          if (other.installDate_ != null) {
+            if (installDate_ == null) {
+              InstallDate = new global::Google.Type.Date();
+            }
+            InstallDate.MergeFrom(other.InstallDate);
+          }
+          if (other.HelpLink.Length != 0) {
+            HelpLink = other.HelpLink;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayVersion = input.ReadString();
+                break;
+              }
+              case 26: {
+                Publisher = input.ReadString();
+                break;
+              }
+              case 34: {
+                if (installDate_ == null) {
+                  InstallDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(InstallDate);
+                break;
+              }
+              case 42: {
+                HelpLink = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayVersion = input.ReadString();
+                break;
+              }
+              case 26: {
+                Publisher = input.ReadString();
+                break;
+              }
+              case 34: {
+                if (installDate_ == null) {
+                  InstallDate = new global::Google.Type.Date();
+                }
+                input.ReadMessage(InstallDate);
+                break;
+              }
+              case 42: {
+                HelpLink = input.ReadString();
                 break;
               }
             }
