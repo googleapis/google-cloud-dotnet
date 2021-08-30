@@ -36,11 +36,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
             };
             ConnectionProfile expectedResponse = new ConnectionProfile
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -73,11 +73,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
             };
             ConnectionProfile expectedResponse = new ConnectionProfile
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -112,11 +112,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
             };
             ConnectionProfile expectedResponse = new ConnectionProfile
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -149,11 +149,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
             };
             ConnectionProfile expectedResponse = new ConnectionProfile
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -188,11 +188,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
             };
             ConnectionProfile expectedResponse = new ConnectionProfile
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -225,11 +225,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetConnectionProfileRequest request = new GetConnectionProfileRequest
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
             };
             ConnectionProfile expectedResponse = new ConnectionProfile
             {
-                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTIONPROFILE]"),
+                ConnectionProfileName = ConnectionProfileName.FromProjectLocationConnectionProfile("[PROJECT]", "[LOCATION]", "[CONNECTION_PROFILE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -542,11 +542,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -575,11 +575,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -610,11 +610,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -643,11 +643,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -678,11 +678,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -711,11 +711,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPrivateConnectionRequest request = new GetPrivateConnectionRequest
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
             };
             PrivateConnection expectedResponse = new PrivateConnection
             {
-                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]"),
+                PrivateConnectionName = PrivateConnectionName.FromProjectLocationPrivateConnection("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -746,11 +746,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -778,11 +778,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -812,11 +812,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -844,11 +844,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -878,11 +878,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
@@ -910,11 +910,11 @@ namespace Google.Cloud.Datastream.V1Alpha1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouteRequest request = new GetRouteRequest
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
             };
             Route expectedResponse = new Route
             {
-                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATECONNECTION]", "[ROUTE]"),
+                RouteName = RouteName.FromProjectLocationPrivateConnectionRoute("[PROJECT]", "[LOCATION]", "[PRIVATE_CONNECTION]", "[ROUTE]"),
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Labels =
