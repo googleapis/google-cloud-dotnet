@@ -1248,7 +1248,7 @@
     },
     {
       "id": "Google.Cloud.GkeConnect.Gateway.V1Beta1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "Connect Gateway",
       "productUrl": "https://cloud.google.com/anthos/multicluster-management/gateway/",
