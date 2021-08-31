@@ -1045,7 +1045,7 @@
     },
     {
       "id": "Google.Cloud.EssentialContacts.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Essential Contacts",
       "productUrl": "https://cloud.google.com/resource-manager/docs/reference/essentialcontacts/rest",
