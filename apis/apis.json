@@ -1620,7 +1620,7 @@
       "protoPath": "google/cloud/memcache/v1beta2",
       "productName": "Google Cloud Memorystore for Memcache",
       "productUrl": "https://cloud.google.com/memorystore/",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "description": "Recommended Google client library to administer Cloud Memorystore for Memcache (v1beta2).",
       "dependencies": {
