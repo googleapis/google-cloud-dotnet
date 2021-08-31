@@ -247,30 +247,12 @@ namespace Google.Cloud.Tools.ReleaseManager
         public static void RewriteRenovate(ApiCatalog catalog)
         {
             var root = DirectoryLayout.DetermineRootDirectory();
-            var config = new JObject
-            {
-                ["extends"] = new JArray { "config:base" },
-                ["ignorePaths"] = new JArray(catalog.Apis.Select(api => $"apis/{api.Id}/{api.Id}/**").ToArray()),
-                ["packageRules"] = new JArray
-                {
-                    new JObject
-                    {
-                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore/**" },
-                        ["matchPackagePrefixes"] = new JArray { "Microsoft.AspNetCore.", "Microsoft.Extensions." },
-                        ["allowedVersions"] = "<2.2.0"
-                    },
-                    new JObject
-                    {
-                        ["matchPaths"] = new JArray { "apis/Google.Cloud.Diagnostics.AspNetCore3/**" },
-                        ["matchPackagePrefixes"] = new JArray { "Microsoft.AspNetCore." },
-                        ["allowedVersions"] = "<3.2.0"
-                    },
-                },
-                ["schedule"] = new JArray { "before 8am" },
-                ["timezone"] = "Europe/London"
-            };
-            string json = config.ToString(Formatting.Indented);
-            File.WriteAllText(Path.Combine(root, ".github", "renovate.json"), json);
+            string path = Path.Combine(root, ".github", "renovate.json");
+            string json = File.ReadAllText(path);
+            JObject jobj = JObject.Parse(json);
+            jobj["ignorePaths"] = new JArray(catalog.Apis.Select(api => $"apis/{api.Id}/{api.Id}/**").ToArray());
+            json = jobj.ToString(Formatting.Indented);
+            File.WriteAllText(path, json);
         }
 
         /// <summary>
