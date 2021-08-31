@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0-beta05, released 2021-08-31
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.0.0-beta04, released 2021-04-29
 
 - [Commit a31e0d5](https://github.com/googleapis/google-cloud-dotnet/commit/a31e0d5): fix: Remove dependency on AppEngine's proto definitions. This also removes the source_references field.

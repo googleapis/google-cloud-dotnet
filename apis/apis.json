@@ -1034,7 +1034,7 @@
       "protoPath": "google/devtools/clouderrorreporting/v1beta1",
       "productName": "Google Cloud Error Reporting",
       "productUrl": "https://cloud.google.com/error-reporting/",
-      "version": "2.0.0-beta04",
+      "version": "2.0.0-beta05",
       "releaseLevelOverride": "beta",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Error Reporting API, which groups and counts similar errors from cloud services. The Googe Cloud Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
