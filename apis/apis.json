@@ -1430,7 +1430,7 @@
       "protoPath": "google/cloud/language/v1",
       "productName": "Google Cloud Natural Language",
       "productUrl": "https://cloud.google.com/natural-language",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Natural Language API, which provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
       "dependencies": {
