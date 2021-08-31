@@ -28,7 +28,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "bW9uaXRvcmluZy52MxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoeZ29v",
             "Z2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYv",
             "dGltZXN0YW1wLnByb3RvGiFnb29nbGUvdHlwZS9jYWxlbmRhcl9wZXJpb2Qu",
-            "cHJvdG8i0ggKB1NlcnZpY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25h",
+            "cHJvdG8iyQkKB1NlcnZpY2USDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25h",
             "bWUYAiABKAkSNgoGY3VzdG9tGAYgASgLMiQuZ29vZ2xlLm1vbml0b3Jpbmcu",
             "djMuU2VydmljZS5DdXN0b21IABI9CgphcHBfZW5naW5lGAcgASgLMicuZ29v",
             "Z2xlLm1vbml0b3JpbmcudjMuU2VydmljZS5BcHBFbmdpbmVIABJHCg9jbG91",
@@ -39,86 +39,92 @@ namespace Google.Cloud.Monitoring.V3 {
             "cnZpY2UuTWVzaElzdGlvSAASVgoXaXN0aW9fY2Fub25pY2FsX3NlcnZpY2UY",
             "CyABKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5TZXJ2aWNlLklzdGlvQ2Fu",
             "b25pY2FsU2VydmljZUgAEjoKCXRlbGVtZXRyeRgNIAEoCzInLmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLlNlcnZpY2UuVGVsZW1ldHJ5GggKBkN1c3RvbRoeCglB",
-            "cHBFbmdpbmUSEQoJbW9kdWxlX2lkGAEgASgJGiEKDkNsb3VkRW5kcG9pbnRz",
-            "Eg8KB3NlcnZpY2UYASABKAkaZwoMQ2x1c3RlcklzdGlvEhAKCGxvY2F0aW9u",
-            "GAEgASgJEhQKDGNsdXN0ZXJfbmFtZRgCIAEoCRIZChFzZXJ2aWNlX25hbWVz",
-            "cGFjZRgDIAEoCRIUCgxzZXJ2aWNlX25hbWUYBCABKAkaTgoJTWVzaElzdGlv",
-            "EhAKCG1lc2hfdWlkGAEgASgJEhkKEXNlcnZpY2VfbmFtZXNwYWNlGAMgASgJ",
-            "EhQKDHNlcnZpY2VfbmFtZRgEIAEoCRppChVJc3Rpb0Nhbm9uaWNhbFNlcnZp",
-            "Y2USEAoIbWVzaF91aWQYASABKAkSIwobY2Fub25pY2FsX3NlcnZpY2VfbmFt",
-            "ZXNwYWNlGAMgASgJEhkKEWNhbm9uaWNhbF9zZXJ2aWNlGAQgASgJGiIKCVRl",
-            "bGVtZXRyeRIVCg1yZXNvdXJjZV9uYW1lGAEgASgJOqcB6kGjAQohbW9uaXRv",
-            "cmluZy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlEiVwcm9qZWN0cy97cHJvamVj",
-            "dH0vc2VydmljZXMve3NlcnZpY2V9Ei9vcmdhbml6YXRpb25zL3tvcmdhbml6",
-            "YXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfRIjZm9sZGVycy97Zm9sZGVyfS9z",
-            "ZXJ2aWNlcy97c2VydmljZX0SASpCDAoKaWRlbnRpZmllciKRBQoVU2Vydmlj",
-            "ZUxldmVsT2JqZWN0aXZlEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1l",
-            "GAsgASgJEkwKF3NlcnZpY2VfbGV2ZWxfaW5kaWNhdG9yGAMgASgLMisuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuU2VydmljZUxldmVsSW5kaWNhdG9yEgwKBGdv",
-            "YWwYBCABKAESMwoOcm9sbGluZ19wZXJpb2QYBSABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25IABI2Cg9jYWxlbmRhcl9wZXJpb2QYBiABKA4yGy5n",
-            "b29nbGUudHlwZS5DYWxlbmRhclBlcmlvZEgAIjQKBFZpZXcSFAoQVklFV19V",
-            "TlNQRUNJRklFRBAAEggKBEZVTEwQAhIMCghFWFBMSUNJVBABOsoC6kHGAgov",
-            "bW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlTGV2ZWxPYmplY3Rp",
-            "dmUSVnByb2plY3RzL3twcm9qZWN0fS9zZXJ2aWNlcy97c2VydmljZX0vc2Vy",
-            "dmljZUxldmVsT2JqZWN0aXZlcy97c2VydmljZV9sZXZlbF9vYmplY3RpdmV9",
-            "EmBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NlcnZpY2VzL3tzZXJ2",
-            "aWNlfS9zZXJ2aWNlTGV2ZWxPYmplY3RpdmVzL3tzZXJ2aWNlX2xldmVsX29i",
-            "amVjdGl2ZX0SVGZvbGRlcnMve2ZvbGRlcn0vc2VydmljZXMve3NlcnZpY2V9",
-            "L3NlcnZpY2VMZXZlbE9iamVjdGl2ZXMve3NlcnZpY2VfbGV2ZWxfb2JqZWN0",
-            "aXZlfRIBKiABQggKBnBlcmlvZCLUAQoVU2VydmljZUxldmVsSW5kaWNhdG9y",
-            "EjMKCWJhc2ljX3NsaRgEIAEoCzIeLmdvb2dsZS5tb25pdG9yaW5nLnYzLkJh",
-            "c2ljU2xpSAASPgoNcmVxdWVzdF9iYXNlZBgBIAEoCzIlLmdvb2dsZS5tb25p",
-            "dG9yaW5nLnYzLlJlcXVlc3RCYXNlZFNsaUgAEj4KDXdpbmRvd3NfYmFzZWQY",
-            "AiABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGlI",
-            "AEIGCgR0eXBlIrYCCghCYXNpY1NsaRIOCgZtZXRob2QYByADKAkSEAoIbG9j",
-            "YXRpb24YCCADKAkSDwoHdmVyc2lvbhgJIAMoCRJLCgxhdmFpbGFiaWxpdHkY",
-            "AiABKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5CYXNpY1NsaS5BdmFpbGFi",
-            "aWxpdHlDcml0ZXJpYUgAEkEKB2xhdGVuY3kYAyABKAsyLi5nb29nbGUubW9u",
-            "aXRvcmluZy52My5CYXNpY1NsaS5MYXRlbmN5Q3JpdGVyaWFIABoWChRBdmFp",
-            "bGFiaWxpdHlDcml0ZXJpYRo/Cg9MYXRlbmN5Q3JpdGVyaWESLAoJdGhyZXNo",
-            "b2xkGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQg4KDHNsaV9j",
-            "cml0ZXJpYSIhCgVSYW5nZRILCgNtaW4YASABKAESCwoDbWF4GAIgASgBIqEB",
-            "Cg9SZXF1ZXN0QmFzZWRTbGkSQQoQZ29vZF90b3RhbF9yYXRpbxgBIAEoCzIl",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzLlRpbWVTZXJpZXNSYXRpb0gAEkEKEGRp",
-            "c3RyaWJ1dGlvbl9jdXQYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5E",
-            "aXN0cmlidXRpb25DdXRIAEIICgZtZXRob2QiaAoPVGltZVNlcmllc1JhdGlv",
-            "EhsKE2dvb2Rfc2VydmljZV9maWx0ZXIYBCABKAkSGgoSYmFkX3NlcnZpY2Vf",
-            "ZmlsdGVyGAUgASgJEhwKFHRvdGFsX3NlcnZpY2VfZmlsdGVyGAYgASgJIloK",
-            "D0Rpc3RyaWJ1dGlvbkN1dBIbChNkaXN0cmlidXRpb25fZmlsdGVyGAQgASgJ",
-            "EioKBXJhbmdlGAUgASgLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUmFuZ2Ui",
-            "gwUKD1dpbmRvd3NCYXNlZFNsaRIgChZnb29kX2JhZF9tZXRyaWNfZmlsdGVy",
-            "GAUgASgJSAASYAoaZ29vZF90b3RhbF9yYXRpb190aHJlc2hvbGQYAiABKAsy",
-            "Oi5nb29nbGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGkuUGVyZm9y",
-            "bWFuY2VUaHJlc2hvbGRIABJRChRtZXRyaWNfbWVhbl9pbl9yYW5nZRgGIAEo",
-            "CzIxLmdvb2dsZS5tb25pdG9yaW5nLnYzLldpbmRvd3NCYXNlZFNsaS5NZXRy",
-            "aWNSYW5nZUgAElAKE21ldHJpY19zdW1faW5fcmFuZ2UYByABKAsyMS5nb29n",
-            "bGUubW9uaXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGkuTWV0cmljUmFuZ2VI",
-            "ABIwCg13aW5kb3dfcGVyaW9kGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uGrABChRQZXJmb3JtYW5jZVRocmVzaG9sZBI8CgtwZXJmb3JtYW5j",
-            "ZRgBIAEoCzIlLmdvb2dsZS5tb25pdG9yaW5nLnYzLlJlcXVlc3RCYXNlZFNs",
-            "aUgAEj8KFWJhc2ljX3NsaV9wZXJmb3JtYW5jZRgDIAEoCzIeLmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLkJhc2ljU2xpSAASEQoJdGhyZXNob2xkGAIgASgBQgYK",
-            "BHR5cGUaTgoLTWV0cmljUmFuZ2USEwoLdGltZV9zZXJpZXMYASABKAkSKgoF",
-            "cmFuZ2UYBCABKAsyGy5nb29nbGUubW9uaXRvcmluZy52My5SYW5nZUISChB3",
-            "aW5kb3dfY3JpdGVyaW9uQs4BChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNC",
-            "FlNlcnZpY2VNb25pdG9yaW5nUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3Jpbmeq",
-            "AhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxN",
-            "b25pdG9yaW5nXFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNi",
-            "BnByb3RvMw=="));
+            "b25pdG9yaW5nLnYzLlNlcnZpY2UuVGVsZW1ldHJ5EkIKC3VzZXJfbGFiZWxz",
+            "GA4gAygLMi0uZ29vZ2xlLm1vbml0b3JpbmcudjMuU2VydmljZS5Vc2VyTGFi",
+            "ZWxzRW50cnkaCAoGQ3VzdG9tGh4KCUFwcEVuZ2luZRIRCgltb2R1bGVfaWQY",
+            "ASABKAkaIQoOQ2xvdWRFbmRwb2ludHMSDwoHc2VydmljZRgBIAEoCRpnCgxD",
+            "bHVzdGVySXN0aW8SEAoIbG9jYXRpb24YASABKAkSFAoMY2x1c3Rlcl9uYW1l",
+            "GAIgASgJEhkKEXNlcnZpY2VfbmFtZXNwYWNlGAMgASgJEhQKDHNlcnZpY2Vf",
+            "bmFtZRgEIAEoCRpOCglNZXNoSXN0aW8SEAoIbWVzaF91aWQYASABKAkSGQoR",
+            "c2VydmljZV9uYW1lc3BhY2UYAyABKAkSFAoMc2VydmljZV9uYW1lGAQgASgJ",
+            "GmkKFUlzdGlvQ2Fub25pY2FsU2VydmljZRIQCghtZXNoX3VpZBgBIAEoCRIj",
+            "ChtjYW5vbmljYWxfc2VydmljZV9uYW1lc3BhY2UYAyABKAkSGQoRY2Fub25p",
+            "Y2FsX3NlcnZpY2UYBCABKAkaIgoJVGVsZW1ldHJ5EhUKDXJlc291cmNlX25h",
+            "bWUYASABKAkaMQoPVXNlckxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAE6pwHqQaMBCiFtb25pdG9yaW5nLmdvb2dsZWFwaXMu",
+            "Y29tL1NlcnZpY2USJXByb2plY3RzL3twcm9qZWN0fS9zZXJ2aWNlcy97c2Vy",
+            "dmljZX0SL29yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc2VydmljZXMv",
+            "e3NlcnZpY2V9EiNmb2xkZXJzL3tmb2xkZXJ9L3NlcnZpY2VzL3tzZXJ2aWNl",
+            "fRIBKkIMCgppZGVudGlmaWVyIpYGChVTZXJ2aWNlTGV2ZWxPYmplY3RpdmUS",
+            "DAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYCyABKAkSTAoXc2Vydmlj",
+            "ZV9sZXZlbF9pbmRpY2F0b3IYAyABKAsyKy5nb29nbGUubW9uaXRvcmluZy52",
+            "My5TZXJ2aWNlTGV2ZWxJbmRpY2F0b3ISDAoEZ29hbBgEIAEoARIzCg5yb2xs",
+            "aW5nX3BlcmlvZBgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgA",
+            "EjYKD2NhbGVuZGFyX3BlcmlvZBgGIAEoDjIbLmdvb2dsZS50eXBlLkNhbGVu",
+            "ZGFyUGVyaW9kSAASUAoLdXNlcl9sYWJlbHMYDCADKAsyOy5nb29nbGUubW9u",
+            "aXRvcmluZy52My5TZXJ2aWNlTGV2ZWxPYmplY3RpdmUuVXNlckxhYmVsc0Vu",
+            "dHJ5GjEKD1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIjQKBFZpZXcSFAoQVklFV19VTlNQRUNJRklFRBAAEggKBEZV",
+            "TEwQAhIMCghFWFBMSUNJVBABOsoC6kHGAgovbW9uaXRvcmluZy5nb29nbGVh",
+            "cGlzLmNvbS9TZXJ2aWNlTGV2ZWxPYmplY3RpdmUSVnByb2plY3RzL3twcm9q",
+            "ZWN0fS9zZXJ2aWNlcy97c2VydmljZX0vc2VydmljZUxldmVsT2JqZWN0aXZl",
+            "cy97c2VydmljZV9sZXZlbF9vYmplY3RpdmV9EmBvcmdhbml6YXRpb25zL3tv",
+            "cmdhbml6YXRpb259L3NlcnZpY2VzL3tzZXJ2aWNlfS9zZXJ2aWNlTGV2ZWxP",
+            "YmplY3RpdmVzL3tzZXJ2aWNlX2xldmVsX29iamVjdGl2ZX0SVGZvbGRlcnMv",
+            "e2ZvbGRlcn0vc2VydmljZXMve3NlcnZpY2V9L3NlcnZpY2VMZXZlbE9iamVj",
+            "dGl2ZXMve3NlcnZpY2VfbGV2ZWxfb2JqZWN0aXZlfRIBKiABQggKBnBlcmlv",
+            "ZCLUAQoVU2VydmljZUxldmVsSW5kaWNhdG9yEjMKCWJhc2ljX3NsaRgEIAEo",
+            "CzIeLmdvb2dsZS5tb25pdG9yaW5nLnYzLkJhc2ljU2xpSAASPgoNcmVxdWVz",
+            "dF9iYXNlZBgBIAEoCzIlLmdvb2dsZS5tb25pdG9yaW5nLnYzLlJlcXVlc3RC",
+            "YXNlZFNsaUgAEj4KDXdpbmRvd3NfYmFzZWQYAiABKAsyJS5nb29nbGUubW9u",
+            "aXRvcmluZy52My5XaW5kb3dzQmFzZWRTbGlIAEIGCgR0eXBlIrYCCghCYXNp",
+            "Y1NsaRIOCgZtZXRob2QYByADKAkSEAoIbG9jYXRpb24YCCADKAkSDwoHdmVy",
+            "c2lvbhgJIAMoCRJLCgxhdmFpbGFiaWxpdHkYAiABKAsyMy5nb29nbGUubW9u",
+            "aXRvcmluZy52My5CYXNpY1NsaS5BdmFpbGFiaWxpdHlDcml0ZXJpYUgAEkEK",
+            "B2xhdGVuY3kYAyABKAsyLi5nb29nbGUubW9uaXRvcmluZy52My5CYXNpY1Ns",
+            "aS5MYXRlbmN5Q3JpdGVyaWFIABoWChRBdmFpbGFiaWxpdHlDcml0ZXJpYRo/",
+            "Cg9MYXRlbmN5Q3JpdGVyaWESLAoJdGhyZXNob2xkGAMgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uQg4KDHNsaV9jcml0ZXJpYSIhCgVSYW5nZRIL",
+            "CgNtaW4YASABKAESCwoDbWF4GAIgASgBIqEBCg9SZXF1ZXN0QmFzZWRTbGkS",
+            "QQoQZ29vZF90b3RhbF9yYXRpbxgBIAEoCzIlLmdvb2dsZS5tb25pdG9yaW5n",
+            "LnYzLlRpbWVTZXJpZXNSYXRpb0gAEkEKEGRpc3RyaWJ1dGlvbl9jdXQYAyAB",
+            "KAsyJS5nb29nbGUubW9uaXRvcmluZy52My5EaXN0cmlidXRpb25DdXRIAEII",
+            "CgZtZXRob2QiaAoPVGltZVNlcmllc1JhdGlvEhsKE2dvb2Rfc2VydmljZV9m",
+            "aWx0ZXIYBCABKAkSGgoSYmFkX3NlcnZpY2VfZmlsdGVyGAUgASgJEhwKFHRv",
+            "dGFsX3NlcnZpY2VfZmlsdGVyGAYgASgJIloKD0Rpc3RyaWJ1dGlvbkN1dBIb",
+            "ChNkaXN0cmlidXRpb25fZmlsdGVyGAQgASgJEioKBXJhbmdlGAUgASgLMhsu",
+            "Z29vZ2xlLm1vbml0b3JpbmcudjMuUmFuZ2UigwUKD1dpbmRvd3NCYXNlZFNs",
+            "aRIgChZnb29kX2JhZF9tZXRyaWNfZmlsdGVyGAUgASgJSAASYAoaZ29vZF90",
+            "b3RhbF9yYXRpb190aHJlc2hvbGQYAiABKAsyOi5nb29nbGUubW9uaXRvcmlu",
+            "Zy52My5XaW5kb3dzQmFzZWRTbGkuUGVyZm9ybWFuY2VUaHJlc2hvbGRIABJR",
+            "ChRtZXRyaWNfbWVhbl9pbl9yYW5nZRgGIAEoCzIxLmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLldpbmRvd3NCYXNlZFNsaS5NZXRyaWNSYW5nZUgAElAKE21ldHJp",
+            "Y19zdW1faW5fcmFuZ2UYByABKAsyMS5nb29nbGUubW9uaXRvcmluZy52My5X",
+            "aW5kb3dzQmFzZWRTbGkuTWV0cmljUmFuZ2VIABIwCg13aW5kb3dfcGVyaW9k",
+            "GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGrABChRQZXJmb3Jt",
+            "YW5jZVRocmVzaG9sZBI8CgtwZXJmb3JtYW5jZRgBIAEoCzIlLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLlJlcXVlc3RCYXNlZFNsaUgAEj8KFWJhc2ljX3NsaV9w",
+            "ZXJmb3JtYW5jZRgDIAEoCzIeLmdvb2dsZS5tb25pdG9yaW5nLnYzLkJhc2lj",
+            "U2xpSAASEQoJdGhyZXNob2xkGAIgASgBQgYKBHR5cGUaTgoLTWV0cmljUmFu",
+            "Z2USEwoLdGltZV9zZXJpZXMYASABKAkSKgoFcmFuZ2UYBCABKAsyGy5nb29n",
+            "bGUubW9uaXRvcmluZy52My5SYW5nZUISChB3aW5kb3dfY3JpdGVyaW9uQs4B",
+            "Chhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCFlNlcnZpY2VNb25pdG9yaW5n",
+            "UHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9u",
+            "aXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz6gIdR29v",
+            "Z2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.CalendarPeriodReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service), global::Google.Cloud.Monitoring.V3.Service.Parser, new[]{ "Name", "DisplayName", "Custom", "AppEngine", "CloudEndpoints", "ClusterIstio", "MeshIstio", "IstioCanonicalService", "Telemetry" }, new[]{ "Identifier" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Custom), global::Google.Cloud.Monitoring.V3.Service.Types.Custom.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service), global::Google.Cloud.Monitoring.V3.Service.Parser, new[]{ "Name", "DisplayName", "Custom", "AppEngine", "CloudEndpoints", "ClusterIstio", "MeshIstio", "IstioCanonicalService", "Telemetry", "UserLabels" }, new[]{ "Identifier" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Custom), global::Google.Cloud.Monitoring.V3.Service.Types.Custom.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.AppEngine), global::Google.Cloud.Monitoring.V3.Service.Types.AppEngine.Parser, new[]{ "ModuleId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.CloudEndpoints), global::Google.Cloud.Monitoring.V3.Service.Types.CloudEndpoints.Parser, new[]{ "Service" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio), global::Google.Cloud.Monitoring.V3.Service.Types.ClusterIstio.Parser, new[]{ "Location", "ClusterName", "ServiceNamespace", "ServiceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.MeshIstio), global::Google.Cloud.Monitoring.V3.Service.Types.MeshIstio.Parser, new[]{ "MeshUid", "ServiceNamespace", "ServiceName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService), global::Google.Cloud.Monitoring.V3.Service.Types.IstioCanonicalService.Parser, new[]{ "MeshUid", "CanonicalServiceNamespace", "CanonicalService" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry), global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry.Parser, new[]{ "ResourceName" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective), global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Parser, new[]{ "Name", "DisplayName", "ServiceLevelIndicator", "Goal", "RollingPeriod", "CalendarPeriod" }, new[]{ "Period" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry), global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry.Parser, new[]{ "ResourceName" }, null, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective), global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Parser, new[]{ "Name", "DisplayName", "ServiceLevelIndicator", "Goal", "RollingPeriod", "CalendarPeriod", "UserLabels" }, new[]{ "Period" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelObjective.Types.View) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ServiceLevelIndicator), global::Google.Cloud.Monitoring.V3.ServiceLevelIndicator.Parser, new[]{ "BasicSli", "RequestBased", "WindowsBased" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.BasicSli), global::Google.Cloud.Monitoring.V3.BasicSli.Parser, new[]{ "Method", "Location", "Version", "Availability", "Latency" }, new[]{ "SliCriteria" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.BasicSli.Types.AvailabilityCriteria), global::Google.Cloud.Monitoring.V3.BasicSli.Types.AvailabilityCriteria.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.BasicSli.Types.LatencyCriteria), global::Google.Cloud.Monitoring.V3.BasicSli.Types.LatencyCriteria.Parser, new[]{ "Threshold" }, null, null, null, null)}),
@@ -173,6 +179,7 @@ namespace Google.Cloud.Monitoring.V3 {
       name_ = other.name_;
       displayName_ = other.displayName_;
       telemetry_ = other.telemetry_ != null ? other.telemetry_.Clone() : null;
+      userLabels_ = other.userLabels_.Clone();
       switch (other.IdentifierCase) {
         case IdentifierOneofCase.Custom:
           Custom = other.Custom.Clone();
@@ -332,6 +339,24 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+    /// <summary>Field number for the "user_labels" field.</summary>
+    public const int UserLabelsFieldNumber = 14;
+    private static readonly pbc::MapField<string, string>.Codec _map_userLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 114);
+    private readonly pbc::MapField<string, string> userLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels which have been used to annotate the service. Label keys must start
+    /// with a letter. Label keys and values may contain lowercase letters,
+    /// numbers, underscores, and dashes. Label keys and values have a maximum
+    /// length of 63 characters, and must be less than 128 bytes in size. Up to 64
+    /// label entries may be stored. For labels which do not have a semantic value,
+    /// the empty string may be supplied for the label value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> UserLabels {
+      get { return userLabels_; }
+    }
+
     private object identifier_;
     /// <summary>Enum of possible cases for the "identifier" oneof.</summary>
     public enum IdentifierOneofCase {
@@ -377,6 +402,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (!object.Equals(MeshIstio, other.MeshIstio)) return false;
       if (!object.Equals(IstioCanonicalService, other.IstioCanonicalService)) return false;
       if (!object.Equals(Telemetry, other.Telemetry)) return false;
+      if (!UserLabels.Equals(other.UserLabels)) return false;
       if (IdentifierCase != other.IdentifierCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -393,6 +419,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (identifierCase_ == IdentifierOneofCase.MeshIstio) hash ^= MeshIstio.GetHashCode();
       if (identifierCase_ == IdentifierOneofCase.IstioCanonicalService) hash ^= IstioCanonicalService.GetHashCode();
       if (telemetry_ != null) hash ^= Telemetry.GetHashCode();
+      hash ^= UserLabels.GetHashCode();
       hash ^= (int) identifierCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -446,6 +473,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(106);
         output.WriteMessage(Telemetry);
       }
+      userLabels_.WriteTo(output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -491,6 +519,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(106);
         output.WriteMessage(Telemetry);
       }
+      userLabels_.WriteTo(ref output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -527,6 +556,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (telemetry_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Telemetry);
       }
+      size += userLabels_.CalculateSize(_map_userLabels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -550,6 +580,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
         Telemetry.MergeFrom(other.Telemetry);
       }
+      userLabels_.Add(other.userLabels_);
       switch (other.IdentifierCase) {
         case IdentifierOneofCase.Custom:
           if (Custom == null) {
@@ -672,6 +703,10 @@ namespace Google.Cloud.Monitoring.V3 {
             input.ReadMessage(Telemetry);
             break;
           }
+          case 114: {
+            userLabels_.AddEntriesFrom(input, _map_userLabels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -753,6 +788,10 @@ namespace Google.Cloud.Monitoring.V3 {
               Telemetry = new global::Google.Cloud.Monitoring.V3.Service.Types.Telemetry();
             }
             input.ReadMessage(Telemetry);
+            break;
+          }
+          case 114: {
+            userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
             break;
           }
         }
@@ -2317,6 +2356,7 @@ namespace Google.Cloud.Monitoring.V3 {
       displayName_ = other.displayName_;
       serviceLevelIndicator_ = other.serviceLevelIndicator_ != null ? other.serviceLevelIndicator_.Clone() : null;
       goal_ = other.goal_;
+      userLabels_ = other.userLabels_.Clone();
       switch (other.PeriodCase) {
         case PeriodOneofCase.RollingPeriod:
           RollingPeriod = other.RollingPeriod.Clone();
@@ -2426,6 +2466,24 @@ namespace Google.Cloud.Monitoring.V3 {
       }
     }
 
+    /// <summary>Field number for the "user_labels" field.</summary>
+    public const int UserLabelsFieldNumber = 12;
+    private static readonly pbc::MapField<string, string>.Codec _map_userLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 98);
+    private readonly pbc::MapField<string, string> userLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Labels which have been used to annotate the service-level objective. Label
+    /// keys must start with a letter. Label keys and values may contain lowercase
+    /// letters, numbers, underscores, and dashes. Label keys and values have a
+    /// maximum length of 63 characters, and must be less than 128 bytes in size.
+    /// Up to 64 label entries may be stored. For labels which do not have a
+    /// semantic value, the empty string may be supplied for the label value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> UserLabels {
+      get { return userLabels_; }
+    }
+
     private object period_;
     /// <summary>Enum of possible cases for the "period" oneof.</summary>
     public enum PeriodOneofCase {
@@ -2464,6 +2522,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Goal, other.Goal)) return false;
       if (!object.Equals(RollingPeriod, other.RollingPeriod)) return false;
       if (CalendarPeriod != other.CalendarPeriod) return false;
+      if (!UserLabels.Equals(other.UserLabels)) return false;
       if (PeriodCase != other.PeriodCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2477,6 +2536,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (Goal != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Goal);
       if (periodCase_ == PeriodOneofCase.RollingPeriod) hash ^= RollingPeriod.GetHashCode();
       if (periodCase_ == PeriodOneofCase.CalendarPeriod) hash ^= CalendarPeriod.GetHashCode();
+      hash ^= UserLabels.GetHashCode();
       hash ^= (int) periodCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2518,6 +2578,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(90);
         output.WriteString(DisplayName);
       }
+      userLabels_.WriteTo(output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2551,6 +2612,7 @@ namespace Google.Cloud.Monitoring.V3 {
         output.WriteRawTag(90);
         output.WriteString(DisplayName);
       }
+      userLabels_.WriteTo(ref output, _map_userLabels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2578,6 +2640,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (periodCase_ == PeriodOneofCase.CalendarPeriod) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CalendarPeriod);
       }
+      size += userLabels_.CalculateSize(_map_userLabels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2604,6 +2667,7 @@ namespace Google.Cloud.Monitoring.V3 {
       if (other.Goal != 0D) {
         Goal = other.Goal;
       }
+      userLabels_.Add(other.userLabels_);
       switch (other.PeriodCase) {
         case PeriodOneofCase.RollingPeriod:
           if (RollingPeriod == null) {
@@ -2663,6 +2727,10 @@ namespace Google.Cloud.Monitoring.V3 {
             DisplayName = input.ReadString();
             break;
           }
+          case 98: {
+            userLabels_.AddEntriesFrom(input, _map_userLabels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2708,6 +2776,10 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 90: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 98: {
+            userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
             break;
           }
         }
@@ -3802,9 +3874,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// Range of numerical values, inclusive of `min` and exclusive of `max`. If the
-  /// open range "&lt; range.max" is desired, set `range.min = -infinity`. If the open
-  /// range ">= range.min" is desired, set `range.max = infinity`.
+  /// Range of numerical values within `min` and `max`.
   /// </summary>
   public sealed partial class Range : pb::IMessage<Range>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4574,8 +4644,8 @@ namespace Google.Cloud.Monitoring.V3 {
   /// A `DistributionCut` defines a `TimeSeries` and thresholds used for measuring
   /// good service and total service. The `TimeSeries` must have `ValueType =
   /// DISTRIBUTION` and `MetricKind = DELTA` or `MetricKind = CUMULATIVE`. The
-  /// computed `good_service` will be the count of values x in the `Distribution`
-  /// such that `range.min &lt;= x &lt; range.max`.
+  /// computed `good_service` will be the estimated count of values in the
+  /// `Distribution` that fall within the specified `min` and `max`.
   /// </summary>
   public sealed partial class DistributionCut : pb::IMessage<DistributionCut>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5547,7 +5617,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// A `MetricRange` is used when each window is good when the value x of a
-      /// single `TimeSeries` satisfies `range.min &lt;= x &lt; range.max`. The provided
+      /// single `TimeSeries` satisfies `range.min &lt;= x &lt;= range.max`. The provided
       /// `TimeSeries` must have `ValueType = INT64` or `ValueType = DOUBLE` and
       /// `MetricKind = GAUGE`.
       /// </summary>

@@ -50,6 +50,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -79,6 +86,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -109,6 +123,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -137,6 +158,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -167,6 +195,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -195,6 +230,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -225,6 +267,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -253,6 +302,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -283,6 +339,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -311,6 +374,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -341,6 +411,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -369,6 +446,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -398,6 +482,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -425,6 +516,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -454,6 +552,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -481,6 +586,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -510,6 +622,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -537,6 +656,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -566,6 +692,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -593,6 +726,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -623,6 +763,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -651,6 +798,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -680,6 +834,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -707,6 +868,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 MeshIstio = new Service.Types.MeshIstio(),
                 IstioCanonicalService = new Service.Types.IstioCanonicalService(),
                 Telemetry = new Service.Types.Telemetry(),
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Service>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -859,6 +1027,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -885,6 +1060,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -912,6 +1094,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -937,6 +1126,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -964,6 +1160,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -989,6 +1192,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1016,6 +1226,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1041,6 +1258,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1068,6 +1292,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1093,6 +1324,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1119,6 +1357,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1143,6 +1388,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1169,6 +1421,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1193,6 +1452,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1219,6 +1485,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1243,6 +1516,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1270,6 +1550,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1295,6 +1582,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1321,6 +1615,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceLevelObjective(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);
@@ -1345,6 +1646,13 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 RollingPeriod = new wkt::Duration(),
                 CalendarPeriod = gt::CalendarPeriod.Month,
                 DisplayName = "display_name137f65c2",
+                UserLabels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateServiceLevelObjectiveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ServiceLevelObjective>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ServiceMonitoringServiceClient client = new ServiceMonitoringServiceClientImpl(mockGrpcClient.Object, null);

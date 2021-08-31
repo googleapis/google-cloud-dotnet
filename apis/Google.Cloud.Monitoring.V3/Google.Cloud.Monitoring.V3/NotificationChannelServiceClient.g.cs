@@ -77,7 +77,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListNotificationChannelDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListNotificationChannelDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -93,7 +93,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetNotificationChannelDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetNotificationChannelDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -109,7 +109,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListNotificationChannelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListNotificationChannelsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -125,7 +125,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetNotificationChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetNotificationChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -167,7 +167,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteNotificationChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteNotificationChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -196,7 +196,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetNotificationChannelVerificationCodeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetNotificationChannelVerificationCodeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -212,7 +212,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings VerifyNotificationChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings VerifyNotificationChannelSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="NotificationChannelServiceSettings"/> object.</returns>
@@ -415,8 +415,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -448,8 +450,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -483,8 +487,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -516,8 +522,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -551,8 +559,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -584,8 +594,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -619,8 +631,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -652,8 +666,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -687,8 +703,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -720,8 +738,10 @@ namespace Google.Cloud.Monitoring.V3
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
-        /// Note that this names the parent container in which to look for the
-        /// descriptors; to retrieve a single descriptor by name, use the
+        /// Note that this
+        /// [names](https://cloud.google.com/monitoring/api/v3#project_name) the parent
+        /// container in which to look for the descriptors; to retrieve a single
+        /// descriptor by name, use the
         /// [GetNotificationChannelDescriptor][google.monitoring.v3.NotificationChannelService.GetNotificationChannelDescriptor]
         /// operation, instead.
         /// </param>
@@ -941,7 +961,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -974,7 +995,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1007,7 +1029,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1040,7 +1063,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1073,7 +1097,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1106,7 +1131,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1139,7 +1165,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1172,7 +1199,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1205,7 +1233,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1238,7 +1267,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists the notification channels that have been created for the project.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1512,7 +1542,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1538,7 +1569,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1564,7 +1596,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1586,7 +1619,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1612,7 +1646,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1638,7 +1673,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1660,7 +1696,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1686,7 +1723,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1712,7 +1750,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1734,7 +1773,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1760,7 +1800,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1786,7 +1827,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1808,7 +1850,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1834,7 +1877,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 
@@ -1860,7 +1904,8 @@ namespace Google.Cloud.Monitoring.V3
         /// endpoint such as an email address, SMS number, or PagerDuty service.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// 

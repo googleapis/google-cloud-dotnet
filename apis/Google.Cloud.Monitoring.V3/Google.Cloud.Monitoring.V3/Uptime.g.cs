@@ -693,12 +693,13 @@ namespace Google.Cloud.Monitoring.V3 {
     /// The [monitored
     /// resource](https://cloud.google.com/monitoring/api/resources) associated
     /// with the configuration.
-    /// The following monitored resource types are supported for Uptime checks:
+    /// The following monitored resource types are valid for this field:
     ///   `uptime_url`,
     ///   `gce_instance`,
     ///   `gae_app`,
     ///   `aws_ec2_instance`,
     ///   `aws_elb_load_balancer`
+    ///   `k8s_service`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResource MonitoredResource {
@@ -2806,12 +2807,14 @@ namespace Google.Cloud.Monitoring.V3 {
             /// <summary>
             /// Selects regular-expression matching. The match succeeds of the output
             /// matches the regular expression specified in the `content` string.
+            /// Regex matching is only supported for HTTP/HTTPS checks.
             /// </summary>
             [pbr::OriginalName("MATCHES_REGEX")] MatchesRegex = 3,
             /// <summary>
             /// Selects negation of regular-expression matching. The match succeeds if
             /// the output does _NOT_ match the regular expression specified in the
-            /// `content` string.
+            /// `content` string. Regex matching is only supported for HTTP/HTTPS
+            /// checks.
             /// </summary>
             [pbr::OriginalName("NOT_MATCHES_REGEX")] NotMatchesRegex = 4,
           }

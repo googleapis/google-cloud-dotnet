@@ -58,17 +58,14 @@ namespace Google.Cloud.Monitoring.V3 {
             "VHlwZRIaChZDT01QQVJJU09OX1VOU1BFQ0lGSUVEEAASEQoNQ09NUEFSSVNP",
             "Tl9HVBABEhEKDUNPTVBBUklTT05fR0UQAhIRCg1DT01QQVJJU09OX0xUEAMS",
             "EQoNQ09NUEFSSVNPTl9MRRAEEhEKDUNPTVBBUklTT05fRVEQBRIRCg1DT01Q",
-            "QVJJU09OX05FEAYqYQoLU2VydmljZVRpZXISHAoYU0VSVklDRV9USUVSX1VO",
-            "U1BFQ0lGSUVEEAASFgoSU0VSVklDRV9USUVSX0JBU0lDEAESGAoUU0VSVklD",
-            "RV9USUVSX1BSRU1JVU0QAhoCGAFCwwEKGGNvbS5nb29nbGUubW9uaXRvcmlu",
-            "Zy52M0ILQ29tbW9uUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29n",
-            "bGUuQ2xvdWQuTW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9y",
-            "aW5nXFYz6gIdR29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3Rv",
-            "Mw=="));
+            "QVJJU09OX05FEAZCwwEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ILQ29t",
+            "bW9uUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9tb25pdG9yaW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQu",
+            "TW9uaXRvcmluZy5WM8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz6gId",
+            "R29vZ2xlOjpDbG91ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.ComparisonType), typeof(global::Google.Cloud.Monitoring.V3.ServiceTier), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Monitoring.V3.ComparisonType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TypedValue), global::Google.Cloud.Monitoring.V3.TypedValue.Parser, new[]{ "BoolValue", "Int64Value", "DoubleValue", "StringValue", "DistributionValue" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeInterval), global::Google.Cloud.Monitoring.V3.TimeInterval.Parser, new[]{ "EndTime", "StartTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Aggregation), global::Google.Cloud.Monitoring.V3.Aggregation.Parser, new[]{ "AlignmentPeriod", "PerSeriesAligner", "CrossSeriesReducer", "GroupByFields" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner), typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) }, null, null)
@@ -111,36 +108,6 @@ namespace Google.Cloud.Monitoring.V3 {
     /// True if the left argument is not equal to the right argument.
     /// </summary>
     [pbr::OriginalName("COMPARISON_NE")] ComparisonNe = 6,
-  }
-
-  /// <summary>
-  /// The tier of service for a Workspace. Please see the
-  /// [service tiers
-  /// documentation](https://cloud.google.com/monitoring/workspaces/tiers) for more
-  /// details.
-  /// </summary>
-  public enum ServiceTier {
-    /// <summary>
-    /// An invalid sentinel value, used to indicate that a tier has not
-    /// been provided explicitly.
-    /// </summary>
-    [pbr::OriginalName("SERVICE_TIER_UNSPECIFIED")] Unspecified = 0,
-    /// <summary>
-    /// The Stackdriver Basic tier, a free tier of service that provides basic
-    /// features, a moderate allotment of logs, and access to built-in metrics.
-    /// A number of features are not available in this tier. For more details,
-    /// see [the service tiers
-    /// documentation](https://cloud.google.com/monitoring/workspaces/tiers).
-    /// </summary>
-    [pbr::OriginalName("SERVICE_TIER_BASIC")] Basic = 1,
-    /// <summary>
-    /// The Stackdriver Premium tier, a higher, more expensive tier of service
-    /// that provides access to all Stackdriver features, lets you use Stackdriver
-    /// with AWS accounts, and has a larger allotments for logs and metrics. For
-    /// more details, see [the service tiers
-    /// documentation](https://cloud.google.com/monitoring/workspaces/tiers).
-    /// </summary>
-    [pbr::OriginalName("SERVICE_TIER_PREMIUM")] Premium = 2,
   }
 
   #endregion
@@ -536,7 +503,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  /// A closed time interval. It extends from the start time to the end time, and includes both: `[startTime, endTime]`. Valid time intervals depend on the [`MetricKind`](/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors#MetricKind) of the metric value. The end time must not be earlier than the start time. When writing data points, the start time must not be more than 25 hours in the past and the end time must not be more than five minutes in the future.
+  /// A closed time interval. It extends from the start time to the end time, and includes both: `[startTime, endTime]`. Valid time intervals depend on the [`MetricKind`](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors#MetricKind) of the metric value. The end time must not be earlier than the start time. When writing data points, the start time must not be more than 25 hours in the past and the end time must not be more than five minutes in the future.
   ///
   /// * For `GAUGE` metrics, the `startTime` value is technically optional; if
   ///   no value is specified, the start time defaults to the value of the
