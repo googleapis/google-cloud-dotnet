@@ -1702,6 +1702,7 @@
       "dependencies": {
         "Google.Api.CommonProtos": "2.3.0",
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Google.LongRunning": "2.2.0",
         "Grpc.Core": "2.38.1"
       }
     },
