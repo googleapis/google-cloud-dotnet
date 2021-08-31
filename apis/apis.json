@@ -1654,7 +1654,7 @@
     },
     {
       "id": "Google.Cloud.Metastore.V1Alpha",
-      "version": "1.0.0-alpha02",
+      "version": "1.0.0-alpha03",
       "type": "grpc",
       "productName": "Dataproc Metastore",
       "productUrl": "https://cloud.google.com/dataproc-metastore/docs",
