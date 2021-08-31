@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.3.0, released 2021-08-31
+
+- [Commit 1440a7c](https://github.com/googleapis/google-cloud-dotnet/commit/1440a7c): feat: added v3 proto for online/batch document translation and updated v3beta1 proto for format conversion
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.2.0, released 2021-05-26
 
 No API surface changes; just dependency updates.
