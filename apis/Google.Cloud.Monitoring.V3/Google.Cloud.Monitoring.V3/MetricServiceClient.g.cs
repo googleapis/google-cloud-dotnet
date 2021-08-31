@@ -74,7 +74,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -90,7 +90,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetMonitoredResourceDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetMonitoredResourceDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -105,7 +105,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListMetricDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListMetricDescriptorsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -120,7 +120,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetMetricDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetMetricDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -149,7 +149,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteMetricDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteMetricDescriptorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -161,10 +161,10 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 30000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: 5</description></item>
-        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// <item><description>Timeout: 90 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListTimeSeriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListTimeSeriesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(90000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -370,7 +370,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -396,7 +397,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -424,7 +426,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -450,7 +453,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -478,7 +482,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -504,7 +509,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -532,7 +538,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -558,7 +565,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -586,7 +594,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -612,7 +621,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists monitored resource descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -847,7 +857,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -873,7 +884,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -899,7 +911,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -925,7 +938,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -951,7 +965,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -977,7 +992,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1003,7 +1019,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1029,7 +1046,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1055,7 +1073,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1081,7 +1100,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists metric descriptors that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1331,8 +1351,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1354,8 +1375,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1377,8 +1399,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1396,8 +1419,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1419,8 +1443,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1442,8 +1467,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1461,8 +1487,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1484,8 +1511,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1507,8 +1535,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1526,8 +1555,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1549,8 +1579,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1572,8 +1603,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1591,8 +1623,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1614,8 +1647,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1637,8 +1671,9 @@ namespace Google.Cloud.Monitoring.V3
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
-        /// 
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 4
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
         /// <param name="metricDescriptor">
@@ -1885,8 +1920,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -1934,8 +1969,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -1983,8 +2018,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -2032,8 +2067,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -2081,8 +2116,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -2130,8 +2165,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -2179,8 +2214,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -2228,8 +2263,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Lists time series that match a filter. This method does not require a Workspace.
         /// </summary>
         /// <param name="name">
-        /// Required. The project, organization or folder on which to execute the request. The
-        /// format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name),
+        /// organization or folder on which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// organizations/[ORGANIZATION_ID]
@@ -2316,7 +2351,8 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2348,7 +2384,8 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2380,7 +2417,8 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2405,7 +2443,8 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2437,7 +2476,8 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -2469,7 +2509,8 @@ namespace Google.Cloud.Monitoring.V3
         /// included in the error response.
         /// </summary>
         /// <param name="name">
-        /// Required. The project on which to execute the request. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>

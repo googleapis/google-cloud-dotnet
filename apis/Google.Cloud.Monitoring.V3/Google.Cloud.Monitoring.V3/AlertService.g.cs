@@ -137,7 +137,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    /// Required. The project in which to create the alerting policy. The format is:
+    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+    /// which to create the alerting policy. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///
@@ -558,7 +559,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// Required. The project whose alert policies are to be listed. The format is:
+    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+    /// whose alert policies are to be listed. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///

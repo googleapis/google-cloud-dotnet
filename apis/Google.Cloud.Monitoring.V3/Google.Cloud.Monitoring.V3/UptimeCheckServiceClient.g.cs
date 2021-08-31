@@ -71,7 +71,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListUptimeCheckConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListUptimeCheckConfigsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -87,7 +87,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetUptimeCheckConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings GetUptimeCheckConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -129,7 +129,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteUptimeCheckConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings DeleteUptimeCheckConfigSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -145,7 +145,7 @@ namespace Google.Cloud.Monitoring.V3
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListUptimeCheckIpsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+        public gaxgrpc::CallSettings ListUptimeCheckIpsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(30000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="UptimeCheckServiceSettings"/> object.</returns>
@@ -347,7 +347,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -374,7 +375,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -401,7 +403,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -428,7 +431,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -455,7 +459,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -482,7 +487,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -509,7 +515,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -536,7 +543,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -563,7 +571,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -590,7 +599,8 @@ namespace Google.Cloud.Monitoring.V3
         /// (leaving out any invalid configurations).
         /// </summary>
         /// <param name="parent">
-        /// Required. The project whose Uptime check configurations are listed. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+        /// whose Uptime check configurations are listed. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -805,7 +815,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -825,7 +836,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -845,7 +857,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -861,7 +874,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -881,7 +895,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -901,7 +916,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -917,7 +933,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -937,7 +954,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -957,7 +975,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -973,7 +992,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -993,7 +1013,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1013,7 +1034,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1029,7 +1051,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1049,7 +1072,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>
@@ -1069,7 +1093,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Creates a new Uptime check configuration.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project in which to create the Uptime check. The format is:
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+        /// which to create the Uptime check. The format is:
         /// 
         /// projects/[PROJECT_ID_OR_NUMBER]
         /// </param>

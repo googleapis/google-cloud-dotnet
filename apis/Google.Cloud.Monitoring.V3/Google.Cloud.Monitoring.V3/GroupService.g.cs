@@ -161,7 +161,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 7;
     private string name_ = "";
     /// <summary>
-    /// Required. The project whose groups are to be listed. The format is:
+    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name)
+    /// whose groups are to be listed. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -966,7 +967,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// Required. The project in which to create the group. The format is:
+    /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) in
+    /// which to create the group. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>

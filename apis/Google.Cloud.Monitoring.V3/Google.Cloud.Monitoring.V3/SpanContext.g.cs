@@ -42,8 +42,8 @@ namespace Google.Cloud.Monitoring.V3 {
   }
   #region Messages
   /// <summary>
-  /// The context of a span, attached to
-  /// [Exemplars][google.api.Distribution.Exemplars]
+  /// The context of a span. This is attached to an
+  /// [Exemplar][google.api.Distribution.Exemplar]
   /// in [Distribution][google.api.Distribution] values during aggregation.
   ///
   /// It contains the name of a span with format:

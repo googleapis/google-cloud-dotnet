@@ -187,7 +187,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the parent workspace. The format is:
+    /// Required. Resource [name](https://cloud.google.com/monitoring/api/v3#project_name) of
+    /// the parent workspace. The format is:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     /// </summary>
@@ -637,7 +638,8 @@ namespace Google.Cloud.Monitoring.V3 {
     private string parent_ = "";
     /// <summary>
     /// Required. Resource name of the parent containing the listed services, either a
-    /// project or a Monitoring Workspace. The formats are:
+    /// [project](https://cloud.google.com/monitoring/api/v3#project_name) or a
+    /// Monitoring Workspace. The formats are:
     ///
     ///     projects/[PROJECT_ID_OR_NUMBER]
     ///     workspaces/[HOST_PROJECT_ID_OR_NUMBER]
