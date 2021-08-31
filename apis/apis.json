@@ -1936,7 +1936,7 @@
       "protoPath": "google/cloud/phishingprotection/v1beta1",
       "productName": "Cloud Phishing Protection",
       "productUrl": "https://cloud.google.com/phishing-protection/",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Phishing Protection API.",
       "tags": [
