@@ -1014,7 +1014,7 @@
     },
     {
       "id": "Google.Cloud.Domains.V1Beta1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Cloud Domains",
       "productUrl": "https://cloud.google.com/domains/",
