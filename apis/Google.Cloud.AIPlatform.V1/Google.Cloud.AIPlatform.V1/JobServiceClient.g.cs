@@ -71,6 +71,16 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteBatchPredictionJobSettings = existing.DeleteBatchPredictionJobSettings;
             DeleteBatchPredictionJobOperationsSettings = existing.DeleteBatchPredictionJobOperationsSettings.Clone();
             CancelBatchPredictionJobSettings = existing.CancelBatchPredictionJobSettings;
+            CreateModelDeploymentMonitoringJobSettings = existing.CreateModelDeploymentMonitoringJobSettings;
+            SearchModelDeploymentMonitoringStatsAnomaliesSettings = existing.SearchModelDeploymentMonitoringStatsAnomaliesSettings;
+            GetModelDeploymentMonitoringJobSettings = existing.GetModelDeploymentMonitoringJobSettings;
+            ListModelDeploymentMonitoringJobsSettings = existing.ListModelDeploymentMonitoringJobsSettings;
+            UpdateModelDeploymentMonitoringJobSettings = existing.UpdateModelDeploymentMonitoringJobSettings;
+            UpdateModelDeploymentMonitoringJobOperationsSettings = existing.UpdateModelDeploymentMonitoringJobOperationsSettings.Clone();
+            DeleteModelDeploymentMonitoringJobSettings = existing.DeleteModelDeploymentMonitoringJobSettings;
+            DeleteModelDeploymentMonitoringJobOperationsSettings = existing.DeleteModelDeploymentMonitoringJobOperationsSettings.Clone();
+            PauseModelDeploymentMonitoringJobSettings = existing.PauseModelDeploymentMonitoringJobSettings;
+            ResumeModelDeploymentMonitoringJobSettings = existing.ResumeModelDeploymentMonitoringJobSettings;
             OnCopy(existing);
         }
 
@@ -83,10 +93,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CreateCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -95,10 +105,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings GetCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -107,10 +117,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListCustomJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings ListCustomJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -119,10 +129,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings DeleteCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>JobServiceClient.DeleteCustomJob</c> and
@@ -149,10 +159,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CancelCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CancelCustomJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -161,10 +171,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CreateDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -173,10 +183,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings GetDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -185,10 +195,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListDataLabelingJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings ListDataLabelingJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -197,10 +207,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings DeleteDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>JobServiceClient.DeleteDataLabelingJob</c> and
@@ -227,10 +237,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CancelDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CancelDataLabelingJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -240,10 +250,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CreateHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -253,10 +263,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings GetHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -266,10 +276,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListHyperparameterTuningJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings ListHyperparameterTuningJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -279,10 +289,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings DeleteHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>JobServiceClient.DeleteHyperparameterTuningJob</c> and
@@ -310,10 +320,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CancelHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CancelHyperparameterTuningJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -322,10 +332,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CreateBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -334,10 +344,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings GetBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -346,10 +356,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListBatchPredictionJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings ListBatchPredictionJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -358,10 +368,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings DeleteBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>JobServiceClient.DeleteBatchPredictionJob</c> and
@@ -388,10 +398,150 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CancelBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CancelBatchPredictionJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.CreateModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.CreateModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateModelDeploymentMonitoringJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.SearchModelDeploymentMonitoringStatsAnomalies</c> and
+        /// <c>JobServiceClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchModelDeploymentMonitoringStatsAnomaliesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.GetModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.GetModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetModelDeploymentMonitoringJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.ListModelDeploymentMonitoringJobs</c> and
+        /// <c>JobServiceClient.ListModelDeploymentMonitoringJobsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListModelDeploymentMonitoringJobsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.UpdateModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.UpdateModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateModelDeploymentMonitoringJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>JobServiceClient.UpdateModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.UpdateModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateModelDeploymentMonitoringJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.DeleteModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.DeleteModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteModelDeploymentMonitoringJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>JobServiceClient.DeleteModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.DeleteModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteModelDeploymentMonitoringJobOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.PauseModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.PauseModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PauseModelDeploymentMonitoringJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>JobServiceClient.ResumeModelDeploymentMonitoringJob</c> and
+        /// <c>JobServiceClient.ResumeModelDeploymentMonitoringJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResumeModelDeploymentMonitoringJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="JobServiceSettings"/> object.</returns>
@@ -3337,6 +3487,1052 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task CancelBatchPredictionJobAsync(BatchPredictionJobName name, st::CancellationToken cancellationToken) =>
             CancelBatchPredictionJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelDeploymentMonitoringJob CreateModelDeploymentMonitoringJob(CreateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(CreateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(CreateModelDeploymentMonitoringJobRequest request, st::CancellationToken cancellationToken) =>
+            CreateModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The ModelDeploymentMonitoringJob to create
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelDeploymentMonitoringJob CreateModelDeploymentMonitoringJob(string parent, ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModelDeploymentMonitoringJob(new CreateModelDeploymentMonitoringJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The ModelDeploymentMonitoringJob to create
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(string parent, ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModelDeploymentMonitoringJobAsync(new CreateModelDeploymentMonitoringJobRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The ModelDeploymentMonitoringJob to create
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(string parent, ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, st::CancellationToken cancellationToken) =>
+            CreateModelDeploymentMonitoringJobAsync(parent, modelDeploymentMonitoringJob, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The ModelDeploymentMonitoringJob to create
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelDeploymentMonitoringJob CreateModelDeploymentMonitoringJob(gagr::LocationName parent, ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModelDeploymentMonitoringJob(new CreateModelDeploymentMonitoringJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The ModelDeploymentMonitoringJob to create
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(gagr::LocationName parent, ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, gaxgrpc::CallSettings callSettings = null) =>
+            CreateModelDeploymentMonitoringJobAsync(new CreateModelDeploymentMonitoringJobRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The ModelDeploymentMonitoringJob to create
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(gagr::LocationName parent, ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, st::CancellationToken cancellationToken) =>
+            CreateModelDeploymentMonitoringJobAsync(parent, modelDeploymentMonitoringJob, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(SearchModelDeploymentMonitoringStatsAnomaliesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(SearchModelDeploymentMonitoringStatsAnomaliesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. ModelDeploymentMonitoring Job resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// </param>
+        /// <param name="deployedModelId">
+        /// Required. The DeployedModel ID of the
+        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(string modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchModelDeploymentMonitoringStatsAnomalies(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+            {
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNullOrEmpty(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+                DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. ModelDeploymentMonitoring Job resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// </param>
+        /// <param name="deployedModelId">
+        /// Required. The DeployedModel ID of the
+        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(string modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchModelDeploymentMonitoringStatsAnomaliesAsync(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+            {
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNullOrEmpty(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+                DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. ModelDeploymentMonitoring Job resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// </param>
+        /// <param name="deployedModelId">
+        /// Required. The DeployedModel ID of the
+        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchModelDeploymentMonitoringStatsAnomalies(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+            {
+                ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+                DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. ModelDeploymentMonitoring Job resource name.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}
+        /// </param>
+        /// <param name="deployedModelId">
+        /// Required. The DeployedModel ID of the
+        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob, string deployedModelId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchModelDeploymentMonitoringStatsAnomaliesAsync(new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+            {
+                ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+                DeployedModelId = gax::GaxPreconditions.CheckNotNullOrEmpty(deployedModelId, nameof(deployedModelId)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelDeploymentMonitoringJob GetModelDeploymentMonitoringJob(GetModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(GetModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(GetModelDeploymentMonitoringJobRequest request, st::CancellationToken cancellationToken) =>
+            GetModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelDeploymentMonitoringJob GetModelDeploymentMonitoringJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelDeploymentMonitoringJob(new GetModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelDeploymentMonitoringJobAsync(new GetModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(string name, st::CancellationToken cancellationToken) =>
+            GetModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ModelDeploymentMonitoringJob GetModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelDeploymentMonitoringJob(new GetModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetModelDeploymentMonitoringJobAsync(new GetModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, st::CancellationToken cancellationToken) =>
+            GetModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(ListModelDeploymentMonitoringJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(ListModelDeploymentMonitoringJobsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelDeploymentMonitoringJobs(new ListModelDeploymentMonitoringJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelDeploymentMonitoringJobsAsync(new ListModelDeploymentMonitoringJobsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelDeploymentMonitoringJobs(new ListModelDeploymentMonitoringJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the ModelDeploymentMonitoringJob.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListModelDeploymentMonitoringJobsAsync(new ListModelDeploymentMonitoringJobsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> UpdateModelDeploymentMonitoringJob(UpdateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>> UpdateModelDeploymentMonitoringJobAsync(UpdateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>> UpdateModelDeploymentMonitoringJobAsync(UpdateModelDeploymentMonitoringJobRequest request, st::CancellationToken cancellationToken) =>
+            UpdateModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateModelDeploymentMonitoringJob</c>.</summary>
+        public virtual lro::OperationsClient UpdateModelDeploymentMonitoringJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateModelDeploymentMonitoringJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> PollOnceUpdateModelDeploymentMonitoringJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateModelDeploymentMonitoringJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateModelDeploymentMonitoringJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>> PollOnceUpdateModelDeploymentMonitoringJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateModelDeploymentMonitoringJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The model monitoring configuration which replaces the resource on the
+        /// server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> UpdateModelDeploymentMonitoringJob(ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateModelDeploymentMonitoringJob(new UpdateModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The model monitoring configuration which replaces the resource on the
+        /// server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>> UpdateModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateModelDeploymentMonitoringJobAsync(new UpdateModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJob = gax::GaxPreconditions.CheckNotNull(modelDeploymentMonitoringJob, nameof(modelDeploymentMonitoringJob)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="modelDeploymentMonitoringJob">
+        /// Required. The model monitoring configuration which replaces the resource on the
+        /// server.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The update mask applies to the resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>> UpdateModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJob modelDeploymentMonitoringJob, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateModelDeploymentMonitoringJobAsync(modelDeploymentMonitoringJob, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelDeploymentMonitoringJob(DeleteModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelDeploymentMonitoringJobAsync(DeleteModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelDeploymentMonitoringJobAsync(DeleteModelDeploymentMonitoringJobRequest request, st::CancellationToken cancellationToken) =>
+            DeleteModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteModelDeploymentMonitoringJob</c>.</summary>
+        public virtual lro::OperationsClient DeleteModelDeploymentMonitoringJobOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteModelDeploymentMonitoringJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> PollOnceDeleteModelDeploymentMonitoringJob(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteModelDeploymentMonitoringJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteModelDeploymentMonitoringJob</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> PollOnceDeleteModelDeploymentMonitoringJobAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteModelDeploymentMonitoringJobOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model monitoring job to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelDeploymentMonitoringJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelDeploymentMonitoringJob(new DeleteModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model monitoring job to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelDeploymentMonitoringJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelDeploymentMonitoringJobAsync(new DeleteModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model monitoring job to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelDeploymentMonitoringJobAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model monitoring job to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelDeploymentMonitoringJob(new DeleteModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model monitoring job to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteModelDeploymentMonitoringJobAsync(new DeleteModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the model monitoring job to delete.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, st::CancellationToken cancellationToken) =>
+            DeleteModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void PauseModelDeploymentMonitoringJob(PauseModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task PauseModelDeploymentMonitoringJobAsync(PauseModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task PauseModelDeploymentMonitoringJobAsync(PauseModelDeploymentMonitoringJobRequest request, st::CancellationToken cancellationToken) =>
+            PauseModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to pause.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void PauseModelDeploymentMonitoringJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseModelDeploymentMonitoringJob(new PauseModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to pause.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task PauseModelDeploymentMonitoringJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseModelDeploymentMonitoringJobAsync(new PauseModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to pause.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task PauseModelDeploymentMonitoringJobAsync(string name, st::CancellationToken cancellationToken) =>
+            PauseModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to pause.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void PauseModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseModelDeploymentMonitoringJob(new PauseModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to pause.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task PauseModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseModelDeploymentMonitoringJobAsync(new PauseModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to pause.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task PauseModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, st::CancellationToken cancellationToken) =>
+            PauseModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ResumeModelDeploymentMonitoringJob(ResumeModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ResumeModelDeploymentMonitoringJobAsync(ResumeModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ResumeModelDeploymentMonitoringJobAsync(ResumeModelDeploymentMonitoringJobRequest request, st::CancellationToken cancellationToken) =>
+            ResumeModelDeploymentMonitoringJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to resume.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ResumeModelDeploymentMonitoringJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeModelDeploymentMonitoringJob(new ResumeModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to resume.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ResumeModelDeploymentMonitoringJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeModelDeploymentMonitoringJobAsync(new ResumeModelDeploymentMonitoringJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to resume.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ResumeModelDeploymentMonitoringJobAsync(string name, st::CancellationToken cancellationToken) =>
+            ResumeModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to resume.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void ResumeModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeModelDeploymentMonitoringJob(new ResumeModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to resume.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ResumeModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeModelDeploymentMonitoringJobAsync(new ResumeModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the ModelDeploymentMonitoringJob to resume.
+        /// Format:
+        /// `projects/{project}/locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monitoring_job}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task ResumeModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName name, st::CancellationToken cancellationToken) =>
+            ResumeModelDeploymentMonitoringJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>JobService client wrapper implementation, for convenient use.</summary>
@@ -3385,6 +4581,22 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<CancelBatchPredictionJobRequest, wkt::Empty> _callCancelBatchPredictionJob;
 
+        private readonly gaxgrpc::ApiCall<CreateModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob> _callCreateModelDeploymentMonitoringJob;
+
+        private readonly gaxgrpc::ApiCall<SearchModelDeploymentMonitoringStatsAnomaliesRequest, SearchModelDeploymentMonitoringStatsAnomaliesResponse> _callSearchModelDeploymentMonitoringStatsAnomalies;
+
+        private readonly gaxgrpc::ApiCall<GetModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob> _callGetModelDeploymentMonitoringJob;
+
+        private readonly gaxgrpc::ApiCall<ListModelDeploymentMonitoringJobsRequest, ListModelDeploymentMonitoringJobsResponse> _callListModelDeploymentMonitoringJobs;
+
+        private readonly gaxgrpc::ApiCall<UpdateModelDeploymentMonitoringJobRequest, lro::Operation> _callUpdateModelDeploymentMonitoringJob;
+
+        private readonly gaxgrpc::ApiCall<DeleteModelDeploymentMonitoringJobRequest, lro::Operation> _callDeleteModelDeploymentMonitoringJob;
+
+        private readonly gaxgrpc::ApiCall<PauseModelDeploymentMonitoringJobRequest, wkt::Empty> _callPauseModelDeploymentMonitoringJob;
+
+        private readonly gaxgrpc::ApiCall<ResumeModelDeploymentMonitoringJobRequest, wkt::Empty> _callResumeModelDeploymentMonitoringJob;
+
         /// <summary>
         /// Constructs a client wrapper for the JobService service, with the specified gRPC client and settings.
         /// </summary>
@@ -3399,6 +4611,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteDataLabelingJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataLabelingJobOperationsSettings);
             DeleteHyperparameterTuningJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteHyperparameterTuningJobOperationsSettings);
             DeleteBatchPredictionJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBatchPredictionJobOperationsSettings);
+            UpdateModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateModelDeploymentMonitoringJobOperationsSettings);
+            DeleteModelDeploymentMonitoringJobOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteModelDeploymentMonitoringJobOperationsSettings);
             _callCreateCustomJob = clientHelper.BuildApiCall<CreateCustomJobRequest, CustomJob>(grpcClient.CreateCustomJobAsync, grpcClient.CreateCustomJob, effectiveSettings.CreateCustomJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateCustomJob);
             Modify_CreateCustomJobApiCall(ref _callCreateCustomJob);
@@ -3459,6 +4673,30 @@ namespace Google.Cloud.AIPlatform.V1
             _callCancelBatchPredictionJob = clientHelper.BuildApiCall<CancelBatchPredictionJobRequest, wkt::Empty>(grpcClient.CancelBatchPredictionJobAsync, grpcClient.CancelBatchPredictionJob, effectiveSettings.CancelBatchPredictionJobSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelBatchPredictionJob);
             Modify_CancelBatchPredictionJobApiCall(ref _callCancelBatchPredictionJob);
+            _callCreateModelDeploymentMonitoringJob = clientHelper.BuildApiCall<CreateModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob>(grpcClient.CreateModelDeploymentMonitoringJobAsync, grpcClient.CreateModelDeploymentMonitoringJob, effectiveSettings.CreateModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateModelDeploymentMonitoringJob);
+            Modify_CreateModelDeploymentMonitoringJobApiCall(ref _callCreateModelDeploymentMonitoringJob);
+            _callSearchModelDeploymentMonitoringStatsAnomalies = clientHelper.BuildApiCall<SearchModelDeploymentMonitoringStatsAnomaliesRequest, SearchModelDeploymentMonitoringStatsAnomaliesResponse>(grpcClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync, grpcClient.SearchModelDeploymentMonitoringStatsAnomalies, effectiveSettings.SearchModelDeploymentMonitoringStatsAnomaliesSettings).WithGoogleRequestParam("model_deployment_monitoring_job", request => request.ModelDeploymentMonitoringJob);
+            Modify_ApiCall(ref _callSearchModelDeploymentMonitoringStatsAnomalies);
+            Modify_SearchModelDeploymentMonitoringStatsAnomaliesApiCall(ref _callSearchModelDeploymentMonitoringStatsAnomalies);
+            _callGetModelDeploymentMonitoringJob = clientHelper.BuildApiCall<GetModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob>(grpcClient.GetModelDeploymentMonitoringJobAsync, grpcClient.GetModelDeploymentMonitoringJob, effectiveSettings.GetModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetModelDeploymentMonitoringJob);
+            Modify_GetModelDeploymentMonitoringJobApiCall(ref _callGetModelDeploymentMonitoringJob);
+            _callListModelDeploymentMonitoringJobs = clientHelper.BuildApiCall<ListModelDeploymentMonitoringJobsRequest, ListModelDeploymentMonitoringJobsResponse>(grpcClient.ListModelDeploymentMonitoringJobsAsync, grpcClient.ListModelDeploymentMonitoringJobs, effectiveSettings.ListModelDeploymentMonitoringJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListModelDeploymentMonitoringJobs);
+            Modify_ListModelDeploymentMonitoringJobsApiCall(ref _callListModelDeploymentMonitoringJobs);
+            _callUpdateModelDeploymentMonitoringJob = clientHelper.BuildApiCall<UpdateModelDeploymentMonitoringJobRequest, lro::Operation>(grpcClient.UpdateModelDeploymentMonitoringJobAsync, grpcClient.UpdateModelDeploymentMonitoringJob, effectiveSettings.UpdateModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("model_deployment_monitoring_job.name", request => request.ModelDeploymentMonitoringJob?.Name);
+            Modify_ApiCall(ref _callUpdateModelDeploymentMonitoringJob);
+            Modify_UpdateModelDeploymentMonitoringJobApiCall(ref _callUpdateModelDeploymentMonitoringJob);
+            _callDeleteModelDeploymentMonitoringJob = clientHelper.BuildApiCall<DeleteModelDeploymentMonitoringJobRequest, lro::Operation>(grpcClient.DeleteModelDeploymentMonitoringJobAsync, grpcClient.DeleteModelDeploymentMonitoringJob, effectiveSettings.DeleteModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteModelDeploymentMonitoringJob);
+            Modify_DeleteModelDeploymentMonitoringJobApiCall(ref _callDeleteModelDeploymentMonitoringJob);
+            _callPauseModelDeploymentMonitoringJob = clientHelper.BuildApiCall<PauseModelDeploymentMonitoringJobRequest, wkt::Empty>(grpcClient.PauseModelDeploymentMonitoringJobAsync, grpcClient.PauseModelDeploymentMonitoringJob, effectiveSettings.PauseModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callPauseModelDeploymentMonitoringJob);
+            Modify_PauseModelDeploymentMonitoringJobApiCall(ref _callPauseModelDeploymentMonitoringJob);
+            _callResumeModelDeploymentMonitoringJob = clientHelper.BuildApiCall<ResumeModelDeploymentMonitoringJobRequest, wkt::Empty>(grpcClient.ResumeModelDeploymentMonitoringJobAsync, grpcClient.ResumeModelDeploymentMonitoringJob, effectiveSettings.ResumeModelDeploymentMonitoringJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callResumeModelDeploymentMonitoringJob);
+            Modify_ResumeModelDeploymentMonitoringJobApiCall(ref _callResumeModelDeploymentMonitoringJob);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3504,6 +4742,22 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_CancelBatchPredictionJobApiCall(ref gaxgrpc::ApiCall<CancelBatchPredictionJobRequest, wkt::Empty> call);
 
+        partial void Modify_CreateModelDeploymentMonitoringJobApiCall(ref gaxgrpc::ApiCall<CreateModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob> call);
+
+        partial void Modify_SearchModelDeploymentMonitoringStatsAnomaliesApiCall(ref gaxgrpc::ApiCall<SearchModelDeploymentMonitoringStatsAnomaliesRequest, SearchModelDeploymentMonitoringStatsAnomaliesResponse> call);
+
+        partial void Modify_GetModelDeploymentMonitoringJobApiCall(ref gaxgrpc::ApiCall<GetModelDeploymentMonitoringJobRequest, ModelDeploymentMonitoringJob> call);
+
+        partial void Modify_ListModelDeploymentMonitoringJobsApiCall(ref gaxgrpc::ApiCall<ListModelDeploymentMonitoringJobsRequest, ListModelDeploymentMonitoringJobsResponse> call);
+
+        partial void Modify_UpdateModelDeploymentMonitoringJobApiCall(ref gaxgrpc::ApiCall<UpdateModelDeploymentMonitoringJobRequest, lro::Operation> call);
+
+        partial void Modify_DeleteModelDeploymentMonitoringJobApiCall(ref gaxgrpc::ApiCall<DeleteModelDeploymentMonitoringJobRequest, lro::Operation> call);
+
+        partial void Modify_PauseModelDeploymentMonitoringJobApiCall(ref gaxgrpc::ApiCall<PauseModelDeploymentMonitoringJobRequest, wkt::Empty> call);
+
+        partial void Modify_ResumeModelDeploymentMonitoringJobApiCall(ref gaxgrpc::ApiCall<ResumeModelDeploymentMonitoringJobRequest, wkt::Empty> call);
+
         partial void OnConstruction(JobService.JobServiceClient grpcClient, JobServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC JobService client</summary>
@@ -3548,6 +4802,22 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeleteBatchPredictionJobRequest(ref DeleteBatchPredictionJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelBatchPredictionJobRequest(ref CancelBatchPredictionJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateModelDeploymentMonitoringJobRequest(ref CreateModelDeploymentMonitoringJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchModelDeploymentMonitoringStatsAnomaliesRequest(ref SearchModelDeploymentMonitoringStatsAnomaliesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetModelDeploymentMonitoringJobRequest(ref GetModelDeploymentMonitoringJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListModelDeploymentMonitoringJobsRequest(ref ListModelDeploymentMonitoringJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateModelDeploymentMonitoringJobRequest(ref UpdateModelDeploymentMonitoringJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteModelDeploymentMonitoringJobRequest(ref DeleteModelDeploymentMonitoringJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PauseModelDeploymentMonitoringJobRequest(ref PauseModelDeploymentMonitoringJobRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ResumeModelDeploymentMonitoringJobRequest(ref ResumeModelDeploymentMonitoringJobRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a CustomJob. A created CustomJob right away
@@ -4100,6 +5370,216 @@ namespace Google.Cloud.AIPlatform.V1
             Modify_CancelBatchPredictionJobRequest(ref request, ref callSettings);
             return _callCancelBatchPredictionJob.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ModelDeploymentMonitoringJob CreateModelDeploymentMonitoringJob(CreateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return _callCreateModelDeploymentMonitoringJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+        /// configured interval.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(CreateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return _callCreateModelDeploymentMonitoringJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomalies(SearchModelDeploymentMonitoringStatsAnomaliesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchModelDeploymentMonitoringStatsAnomaliesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesRequest, SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies>(_callSearchModelDeploymentMonitoringStatsAnomalies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Searches Model Monitoring Statistics generated within a given time window.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ModelMonitoringStatsAnomalies"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> SearchModelDeploymentMonitoringStatsAnomaliesAsync(SearchModelDeploymentMonitoringStatsAnomaliesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchModelDeploymentMonitoringStatsAnomaliesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesRequest, SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies>(_callSearchModelDeploymentMonitoringStatsAnomalies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ModelDeploymentMonitoringJob GetModelDeploymentMonitoringJob(GetModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return _callGetModelDeploymentMonitoringJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(GetModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return _callGetModelDeploymentMonitoringJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public override gax::PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobs(ListModelDeploymentMonitoringJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelDeploymentMonitoringJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListModelDeploymentMonitoringJobsRequest, ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob>(_callListModelDeploymentMonitoringJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists ModelDeploymentMonitoringJobs in a Location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelDeploymentMonitoringJob"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> ListModelDeploymentMonitoringJobsAsync(ListModelDeploymentMonitoringJobsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelDeploymentMonitoringJobsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListModelDeploymentMonitoringJobsRequest, ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob>(_callListModelDeploymentMonitoringJobs, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateModelDeploymentMonitoringJob</c>.</summary>
+        public override lro::OperationsClient UpdateModelDeploymentMonitoringJobOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> UpdateModelDeploymentMonitoringJob(UpdateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return new lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>(_callUpdateModelDeploymentMonitoringJob.Sync(request, callSettings), UpdateModelDeploymentMonitoringJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>> UpdateModelDeploymentMonitoringJobAsync(UpdateModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return new lro::Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata>(await _callUpdateModelDeploymentMonitoringJob.Async(request, callSettings).ConfigureAwait(false), UpdateModelDeploymentMonitoringJobOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteModelDeploymentMonitoringJob</c>.</summary>
+        public override lro::OperationsClient DeleteModelDeploymentMonitoringJobOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteOperationMetadata> DeleteModelDeploymentMonitoringJob(DeleteModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(_callDeleteModelDeploymentMonitoringJob.Sync(request, callSettings), DeleteModelDeploymentMonitoringJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a ModelDeploymentMonitoringJob.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteOperationMetadata>> DeleteModelDeploymentMonitoringJobAsync(DeleteModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteOperationMetadata>(await _callDeleteModelDeploymentMonitoringJob.Async(request, callSettings).ConfigureAwait(false), DeleteModelDeploymentMonitoringJobOperationsClient);
+        }
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void PauseModelDeploymentMonitoringJob(PauseModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            _callPauseModelDeploymentMonitoringJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+        /// makes a best effort to cancel the job. Will mark
+        /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task PauseModelDeploymentMonitoringJobAsync(PauseModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return _callPauseModelDeploymentMonitoringJob.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void ResumeModelDeploymentMonitoringJob(ResumeModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            _callResumeModelDeploymentMonitoringJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+        /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+        /// resumed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task ResumeModelDeploymentMonitoringJobAsync(ResumeModelDeploymentMonitoringJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeModelDeploymentMonitoringJobRequest(ref request, ref callSettings);
+            return _callResumeModelDeploymentMonitoringJob.Async(request, callSettings);
+        }
     }
 
     public partial class ListCustomJobsRequest : gaxgrpc::IPageRequest
@@ -4115,6 +5595,14 @@ namespace Google.Cloud.AIPlatform.V1
     }
 
     public partial class ListBatchPredictionJobsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchModelDeploymentMonitoringStatsAnomaliesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListModelDeploymentMonitoringJobsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4146,6 +5634,23 @@ namespace Google.Cloud.AIPlatform.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BatchPredictionJob> GetEnumerator() => BatchPredictionJobs.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchModelDeploymentMonitoringStatsAnomaliesResponse : gaxgrpc::IPageResponse<ModelMonitoringStatsAnomalies>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ModelMonitoringStatsAnomalies> GetEnumerator() => MonitoringStats.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListModelDeploymentMonitoringJobsResponse : gaxgrpc::IPageResponse<ModelDeploymentMonitoringJob>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ModelDeploymentMonitoringJob> GetEnumerator() =>
+            ModelDeploymentMonitoringJobs.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

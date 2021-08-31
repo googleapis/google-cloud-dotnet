@@ -31,60 +31,63 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bG91ZC9haXBsYXRmb3JtL3YxL2RlcGxveWVkX21vZGVsX3JlZi5wcm90bxow",
             "Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnBy",
             "b3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnByb3Rv",
-            "Ghxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
-            "b3RvIt0LCgVNb2RlbBIMCgRuYW1lGAEgASgJEhkKDGRpc3BsYXlfbmFtZRgC",
-            "IAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEkUKEHByZWRpY3Rfc2No",
-            "ZW1hdGEYBCABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5QcmVk",
-            "aWN0U2NoZW1hdGESIAoTbWV0YWRhdGFfc2NoZW1hX3VyaRgFIAEoCUID4EEF",
-            "Ei0KCG1ldGFkYXRhGAYgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPg",
-            "QQUSVQoYc3VwcG9ydGVkX2V4cG9ydF9mb3JtYXRzGBQgAygLMi4uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWwuRXhwb3J0Rm9ybWF0QgPgQQMS",
-            "TQoRdHJhaW5pbmdfcGlwZWxpbmUYByABKAlCMuBBA/pBLAoqYWlwbGF0Zm9y",
-            "bS5nb29nbGVhcGlzLmNvbS9UcmFpbmluZ1BpcGVsaW5lEksKDmNvbnRhaW5l",
-            "cl9zcGVjGAkgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9k",
-            "ZWxDb250YWluZXJTcGVjQgPgQQQSGQoMYXJ0aWZhY3RfdXJpGBogASgJQgPg",
-            "QQUSbAokc3VwcG9ydGVkX2RlcGxveW1lbnRfcmVzb3VyY2VzX3R5cGVzGAog",
-            "AygOMjkuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWwuRGVwbG95",
-            "bWVudFJlc291cmNlc1R5cGVCA+BBAxIsCh9zdXBwb3J0ZWRfaW5wdXRfc3Rv",
-            "cmFnZV9mb3JtYXRzGAsgAygJQgPgQQMSLQogc3VwcG9ydGVkX291dHB1dF9z",
-            "dG9yYWdlX2Zvcm1hdHMYDCADKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgNIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVf",
-            "dGltZRgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJK",
-            "Cg9kZXBsb3llZF9tb2RlbHMYDyADKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MS5EZXBsb3llZE1vZGVsUmVmQgPgQQMSDAoEZXRhZxgQIAEoCRI9",
-            "CgZsYWJlbHMYESADKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5N",
-            "b2RlbC5MYWJlbHNFbnRyeRJDCg9lbmNyeXB0aW9uX3NwZWMYGCABKAsyKi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxrVAQoM",
-            "RXhwb3J0Rm9ybWF0Eg8KAmlkGAEgASgJQgPgQQMSYgoTZXhwb3J0YWJsZV9j",
-            "b250ZW50cxgCIAMoDjJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1v",
-            "ZGVsLkV4cG9ydEZvcm1hdC5FeHBvcnRhYmxlQ29udGVudEID4EEDIlAKEUV4",
-            "cG9ydGFibGVDb250ZW50EiIKHkVYUE9SVEFCTEVfQ09OVEVOVF9VTlNQRUNJ",
-            "RklFRBAAEgwKCEFSVElGQUNUEAESCQoFSU1BR0UQAhotCgtMYWJlbHNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInYKF0RlcGxveW1l",
-            "bnRSZXNvdXJjZXNUeXBlEikKJURFUExPWU1FTlRfUkVTT1VSQ0VTX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABIXChNERURJQ0FURURfUkVTT1VSQ0VTEAESFwoTQVVU",
-            "T01BVElDX1JFU09VUkNFUxACOlzqQVkKH2FpcGxhdGZvcm0uZ29vZ2xlYXBp",
-            "cy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9tb2RlbHMve21vZGVsfSJ7Cg9QcmVkaWN0U2NoZW1hdGESIAoT",
-            "aW5zdGFuY2Vfc2NoZW1hX3VyaRgBIAEoCUID4EEFEiIKFXBhcmFtZXRlcnNf",
-            "c2NoZW1hX3VyaRgCIAEoCUID4EEFEiIKFXByZWRpY3Rpb25fc2NoZW1hX3Vy",
-            "aRgDIAEoCUID4EEFIvsBChJNb2RlbENvbnRhaW5lclNwZWMSGQoJaW1hZ2Vf",
-            "dXJpGAEgASgJQgbgQQLgQQUSFAoHY29tbWFuZBgCIAMoCUID4EEFEhEKBGFy",
-            "Z3MYAyADKAlCA+BBBRI0CgNlbnYYBCADKAsyIi5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MS5FbnZWYXJCA+BBBRI0CgVwb3J0cxgFIAMoCzIgLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlBvcnRCA+BBBRIaCg1wcmVkaWN0X3Jv",
-            "dXRlGAYgASgJQgPgQQUSGQoMaGVhbHRoX3JvdXRlGAcgASgJQgPgQQUiHgoE",
-            "UG9ydBIWCg5jb250YWluZXJfcG9ydBgDIAEoBULOAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQgpNb2RlbFByb3RvUAFaRGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92",
-            "MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpH",
-            "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJ",
-            "UGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "Gixnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9leHBsYW5hdGlvbi5wcm90",
+            "bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3Rv",
+            "YnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "cm90byKkDAoFTW9kZWwSDAoEbmFtZRgBIAEoCRIZCgxkaXNwbGF5X25hbWUY",
+            "AiABKAlCA+BBAhITCgtkZXNjcmlwdGlvbhgDIAEoCRJFChBwcmVkaWN0X3Nj",
+            "aGVtYXRhGAQgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJl",
+            "ZGljdFNjaGVtYXRhEiAKE21ldGFkYXRhX3NjaGVtYV91cmkYBSABKAlCA+BB",
+            "BRItCghtZXRhZGF0YRgGIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUID",
+            "4EEFElUKGHN1cHBvcnRlZF9leHBvcnRfZm9ybWF0cxgUIAMoCzIuLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsLkV4cG9ydEZvcm1hdEID4EED",
+            "Ek0KEXRyYWluaW5nX3BpcGVsaW5lGAcgASgJQjLgQQP6QSwKKmFpcGxhdGZv",
+            "cm0uZ29vZ2xlYXBpcy5jb20vVHJhaW5pbmdQaXBlbGluZRJLCg5jb250YWlu",
+            "ZXJfc3BlYxgJIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1v",
+            "ZGVsQ29udGFpbmVyU3BlY0ID4EEEEhkKDGFydGlmYWN0X3VyaRgaIAEoCUID",
+            "4EEFEmwKJHN1cHBvcnRlZF9kZXBsb3ltZW50X3Jlc291cmNlc190eXBlcxgK",
+            "IAMoDjI5Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsLkRlcGxv",
+            "eW1lbnRSZXNvdXJjZXNUeXBlQgPgQQMSLAofc3VwcG9ydGVkX2lucHV0X3N0",
+            "b3JhZ2VfZm9ybWF0cxgLIAMoCUID4EEDEi0KIHN1cHBvcnRlZF9vdXRwdXRf",
+            "c3RvcmFnZV9mb3JtYXRzGAwgAygJQgPgQQMSNAoLY3JlYXRlX3RpbWUYDSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
+            "X3RpbWUYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "SgoPZGVwbG95ZWRfbW9kZWxzGA8gAygLMiwuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRGVwbG95ZWRNb2RlbFJlZkID4EEDEkUKEGV4cGxhbmF0aW9u",
+            "X3NwZWMYFyABKAsyKy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBs",
+            "YW5hdGlvblNwZWMSDAoEZXRhZxgQIAEoCRI9CgZsYWJlbHMYESADKAsyLS5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbC5MYWJlbHNFbnRyeRJD",
+            "Cg9lbmNyeXB0aW9uX3NwZWMYGCABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxrVAQoMRXhwb3J0Rm9ybWF0Eg8KAmlk",
+            "GAEgASgJQgPgQQMSYgoTZXhwb3J0YWJsZV9jb250ZW50cxgCIAMoDjJALmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsLkV4cG9ydEZvcm1hdC5F",
+            "eHBvcnRhYmxlQ29udGVudEID4EEDIlAKEUV4cG9ydGFibGVDb250ZW50EiIK",
+            "HkVYUE9SVEFCTEVfQ09OVEVOVF9VTlNQRUNJRklFRBAAEgwKCEFSVElGQUNU",
+            "EAESCQoFSU1BR0UQAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBInYKF0RlcGxveW1lbnRSZXNvdXJjZXNUeXBlEikK",
+            "JURFUExPWU1FTlRfUkVTT1VSQ0VTX1RZUEVfVU5TUEVDSUZJRUQQABIXChNE",
+            "RURJQ0FURURfUkVTT1VSQ0VTEAESFwoTQVVUT01BVElDX1JFU09VUkNFUxAC",
+            "OlzqQVkKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21v",
+            "ZGVsfSJ7Cg9QcmVkaWN0U2NoZW1hdGESIAoTaW5zdGFuY2Vfc2NoZW1hX3Vy",
+            "aRgBIAEoCUID4EEFEiIKFXBhcmFtZXRlcnNfc2NoZW1hX3VyaRgCIAEoCUID",
+            "4EEFEiIKFXByZWRpY3Rpb25fc2NoZW1hX3VyaRgDIAEoCUID4EEFIvsBChJN",
+            "b2RlbENvbnRhaW5lclNwZWMSGQoJaW1hZ2VfdXJpGAEgASgJQgbgQQLgQQUS",
+            "FAoHY29tbWFuZBgCIAMoCUID4EEFEhEKBGFyZ3MYAyADKAlCA+BBBRI0CgNl",
+            "bnYYBCADKAsyIi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbnZWYXJC",
+            "A+BBBRI0CgVwb3J0cxgFIAMoCzIgLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLlBvcnRCA+BBBRIaCg1wcmVkaWN0X3JvdXRlGAYgASgJQgPgQQUSGQoM",
+            "aGVhbHRoX3JvdXRlGAcgASgJQgPgQQUiHgoEUG9ydBIWCg5jb250YWluZXJf",
+            "cG9ydBgDIAEoBULOAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "QgpNb2RlbFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29v",
+            "Z2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0",
+            "Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DatasetReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DatasetReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model), global::Google.Cloud.AIPlatform.V1.Model.Parser, new[]{ "Name", "DisplayName", "Description", "PredictSchemata", "MetadataSchemaUri", "Metadata", "SupportedExportFormats", "TrainingPipeline", "ContainerSpec", "ArtifactUri", "SupportedDeploymentResourcesTypes", "SupportedInputStorageFormats", "SupportedOutputStorageFormats", "CreateTime", "UpdateTime", "DeployedModels", "Etag", "Labels", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.DeploymentResourcesType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat), global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Parser, new[]{ "Id", "ExportableContents" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Types.ExportableContent) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model), global::Google.Cloud.AIPlatform.V1.Model.Parser, new[]{ "Name", "DisplayName", "Description", "PredictSchemata", "MetadataSchemaUri", "Metadata", "SupportedExportFormats", "TrainingPipeline", "ContainerSpec", "ArtifactUri", "SupportedDeploymentResourcesTypes", "SupportedInputStorageFormats", "SupportedOutputStorageFormats", "CreateTime", "UpdateTime", "DeployedModels", "ExplanationSpec", "Etag", "Labels", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.DeploymentResourcesType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat), global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Parser, new[]{ "Id", "ExportableContents" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Types.ExportableContent) }, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictSchemata), global::Google.Cloud.AIPlatform.V1.PredictSchemata.Parser, new[]{ "InstanceSchemaUri", "ParametersSchemaUri", "PredictionSchemaUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelContainerSpec), global::Google.Cloud.AIPlatform.V1.ModelContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env", "Ports", "PredictRoute", "HealthRoute" }, null, null, null, null),
@@ -143,6 +146,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       deployedModels_ = other.deployedModels_.Clone();
+      explanationSpec_ = other.explanationSpec_ != null ? other.explanationSpec_.Clone() : null;
       etag_ = other.etag_;
       labels_ = other.labels_.Clone();
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
@@ -204,7 +208,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The schemata that describe formats of the Model's predictions and
     /// explanations as given and returned via
-    /// [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict] and [PredictionService.Explain][].
+    /// [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict] and [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.AIPlatform.V1.PredictSchemata PredictSchemata {
@@ -328,7 +332,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// configuration types are listed, the Model cannot be deployed to an
     /// [Endpoint][google.cloud.aiplatform.v1.Endpoint] and does not support
     /// online predictions ([PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict] or
-    /// [PredictionService.Explain][]). Such a Model can serve predictions by
+    /// [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain]). Such a Model can serve predictions by
     /// using a [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob], if it has at least one entry each in
     /// [supported_input_storage_formats][google.cloud.aiplatform.v1.Model.supported_input_storage_formats] and
     /// [supported_output_storage_formats][google.cloud.aiplatform.v1.Model.supported_output_storage_formats].
@@ -381,7 +385,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// used with a [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob]. However, if it has
     /// [supported_deployment_resources_types][google.cloud.aiplatform.v1.Model.supported_deployment_resources_types], it could serve online
     /// predictions by using [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict] or
-    /// [PredictionService.Explain][].
+    /// [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> SupportedInputStorageFormats {
@@ -423,7 +427,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// used with a [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob]. However, if it has
     /// [supported_deployment_resources_types][google.cloud.aiplatform.v1.Model.supported_deployment_resources_types], it could serve online
     /// predictions by using [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict] or
-    /// [PredictionService.Explain][].
+    /// [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> SupportedOutputStorageFormats {
@@ -470,6 +474,41 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.DeployedModelRef> DeployedModels {
       get { return deployedModels_; }
+    }
+
+    /// <summary>Field number for the "explanation_spec" field.</summary>
+    public const int ExplanationSpecFieldNumber = 23;
+    private global::Google.Cloud.AIPlatform.V1.ExplanationSpec explanationSpec_;
+    /// <summary>
+    /// The default explanation specification for this Model.
+    ///
+    /// The Model can be used for [requesting
+    /// explanation][PredictionService.Explain] after being
+    /// [deployed][google.cloud.aiplatform.v1.EndpointService.DeployModel] if it is populated.
+    /// The Model can be used for [batch
+    /// explanation][BatchPredictionJob.generate_explanation] if it is populated.
+    ///
+    /// All fields of the explanation_spec can be overridden by
+    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec] of
+    /// [DeployModelRequest.deployed_model][google.cloud.aiplatform.v1.DeployModelRequest.deployed_model], or
+    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec] of
+    /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob].
+    ///
+    /// If the default explanation specification is not set for this Model, this
+    /// Model can still be used for [requesting
+    /// explanation][PredictionService.Explain] by setting
+    /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec] of
+    /// [DeployModelRequest.deployed_model][google.cloud.aiplatform.v1.DeployModelRequest.deployed_model] and for [batch
+    /// explanation][BatchPredictionJob.generate_explanation] by setting
+    /// [explanation_spec][google.cloud.aiplatform.v1.BatchPredictionJob.explanation_spec] of
+    /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AIPlatform.V1.ExplanationSpec ExplanationSpec {
+      get { return explanationSpec_; }
+      set {
+        explanationSpec_ = value;
+      }
     }
 
     /// <summary>Field number for the "etag" field.</summary>
@@ -550,6 +589,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if(!deployedModels_.Equals(other.deployedModels_)) return false;
+      if (!object.Equals(ExplanationSpec, other.ExplanationSpec)) return false;
       if (Etag != other.Etag) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
@@ -575,6 +615,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       hash ^= deployedModels_.GetHashCode();
+      if (explanationSpec_ != null) hash ^= ExplanationSpec.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
@@ -644,6 +685,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       labels_.WriteTo(output, _map_labels_codec);
       supportedExportFormats_.WriteTo(output, _repeated_supportedExportFormats_codec);
+      if (explanationSpec_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(ExplanationSpec);
+      }
       if (encryptionSpec_ != null) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(EncryptionSpec);
@@ -711,6 +756,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       labels_.WriteTo(ref output, _map_labels_codec);
       supportedExportFormats_.WriteTo(ref output, _repeated_supportedExportFormats_codec);
+      if (explanationSpec_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(ExplanationSpec);
+      }
       if (encryptionSpec_ != null) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(EncryptionSpec);
@@ -766,6 +815,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       size += deployedModels_.CalculateSize(_repeated_deployedModels_codec);
+      if (explanationSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExplanationSpec);
+      }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
@@ -837,6 +889,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         UpdateTime.MergeFrom(other.UpdateTime);
       }
       deployedModels_.Add(other.deployedModels_);
+      if (other.explanationSpec_ != null) {
+        if (explanationSpec_ == null) {
+          ExplanationSpec = new global::Google.Cloud.AIPlatform.V1.ExplanationSpec();
+        }
+        ExplanationSpec.MergeFrom(other.ExplanationSpec);
+      }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -943,6 +1001,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 162: {
             supportedExportFormats_.AddEntriesFrom(input, _repeated_supportedExportFormats_codec);
+            break;
+          }
+          case 186: {
+            if (explanationSpec_ == null) {
+              ExplanationSpec = new global::Google.Cloud.AIPlatform.V1.ExplanationSpec();
+            }
+            input.ReadMessage(ExplanationSpec);
             break;
           }
           case 194: {
@@ -1052,6 +1117,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 162: {
             supportedExportFormats_.AddEntriesFrom(ref input, _repeated_supportedExportFormats_codec);
+            break;
+          }
+          case 186: {
+            if (explanationSpec_ == null) {
+              ExplanationSpec = new global::Google.Cloud.AIPlatform.V1.ExplanationSpec();
+            }
+            input.ReadMessage(ExplanationSpec);
             break;
           }
           case 194: {
@@ -1359,7 +1431,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// Contains the schemata used in Model's predictions and explanations via
-  /// [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict], [PredictionService.Explain][] and
+  /// [PredictionService.Predict][google.cloud.aiplatform.v1.PredictionService.Predict], [PredictionService.Explain][google.cloud.aiplatform.v1.PredictionService.Explain] and
   /// [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob].
   /// </summary>
   public sealed partial class PredictSchemata : pb::IMessage<PredictSchemata>
@@ -1408,7 +1480,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Immutable. Points to a YAML file stored on Google Cloud Storage describing the format
     /// of a single instance, which are used in [PredictRequest.instances][google.cloud.aiplatform.v1.PredictRequest.instances],
-    /// [ExplainRequest.instances][] and
+    /// [ExplainRequest.instances][google.cloud.aiplatform.v1.ExplainRequest.instances] and
     /// [BatchPredictionJob.input_config][google.cloud.aiplatform.v1.BatchPredictionJob.input_config].
     /// The schema is defined as an OpenAPI 3.0.2 [Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
@@ -1431,7 +1503,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Immutable. Points to a YAML file stored on Google Cloud Storage describing the
     /// parameters of prediction and explanation via
-    /// [PredictRequest.parameters][google.cloud.aiplatform.v1.PredictRequest.parameters], [ExplainRequest.parameters][] and
+    /// [PredictRequest.parameters][google.cloud.aiplatform.v1.PredictRequest.parameters], [ExplainRequest.parameters][google.cloud.aiplatform.v1.ExplainRequest.parameters] and
     /// [BatchPredictionJob.model_parameters][google.cloud.aiplatform.v1.BatchPredictionJob.model_parameters].
     /// The schema is defined as an OpenAPI 3.0.2 [Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
@@ -1455,7 +1527,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Immutable. Points to a YAML file stored on Google Cloud Storage describing the format
     /// of a single prediction produced by this Model, which are returned via
-    /// [PredictResponse.predictions][google.cloud.aiplatform.v1.PredictResponse.predictions], [ExplainResponse.explanations][], and
+    /// [PredictResponse.predictions][google.cloud.aiplatform.v1.PredictResponse.predictions], [ExplainResponse.explanations][google.cloud.aiplatform.v1.ExplainResponse.explanations], and
     /// [BatchPredictionJob.output_config][google.cloud.aiplatform.v1.BatchPredictionJob.output_config].
     /// The schema is defined as an OpenAPI 3.0.2 [Schema
     /// Object](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.2.md#schemaObject).
@@ -1700,7 +1772,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// predictions. This URI must identify an image in Artifact Registry or
     /// Container Registry. Learn more about the [container publishing
     /// requirements](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements#publishing),
-    /// including permissions requirements for the AI Platform Service Agent.
+    /// including permissions requirements for the Vertex AI Service Agent.
     ///
     /// The container image is ingested upon [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel], stored
     /// internally, and this original path is afterwards not used.
@@ -1864,8 +1936,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Port> ports_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Port>();
     /// <summary>
     /// Immutable. List of ports to expose from the container. Vertex AI sends any
-    /// prediction requests that it receives to the first port on this list. AI
-    /// Platform also sends
+    /// prediction requests that it receives to the first port on this list. Vertex
+    /// AI also sends
     /// [liveness and health
     /// checks](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements#liveness)
     /// to this port.

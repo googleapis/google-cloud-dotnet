@@ -2948,5 +2948,1246 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             await jobServiceClient.CancelBatchPredictionJobAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateModelDeploymentMonitoringJob</summary>
+        public void CreateModelDeploymentMonitoringJobRequestObject()
+        {
+            // Snippet: CreateModelDeploymentMonitoringJob(CreateModelDeploymentMonitoringJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            CreateModelDeploymentMonitoringJobRequest request = new CreateModelDeploymentMonitoringJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ModelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob(),
+            };
+            // Make the request
+            ModelDeploymentMonitoringJob response = jobServiceClient.CreateModelDeploymentMonitoringJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelDeploymentMonitoringJobAsync</summary>
+        public async Task CreateModelDeploymentMonitoringJobRequestObjectAsync()
+        {
+            // Snippet: CreateModelDeploymentMonitoringJobAsync(CreateModelDeploymentMonitoringJobRequest, CallSettings)
+            // Additional: CreateModelDeploymentMonitoringJobAsync(CreateModelDeploymentMonitoringJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateModelDeploymentMonitoringJobRequest request = new CreateModelDeploymentMonitoringJobRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ModelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob(),
+            };
+            // Make the request
+            ModelDeploymentMonitoringJob response = await jobServiceClient.CreateModelDeploymentMonitoringJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelDeploymentMonitoringJob</summary>
+        public void CreateModelDeploymentMonitoringJob()
+        {
+            // Snippet: CreateModelDeploymentMonitoringJob(string, ModelDeploymentMonitoringJob, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob();
+            // Make the request
+            ModelDeploymentMonitoringJob response = jobServiceClient.CreateModelDeploymentMonitoringJob(parent, modelDeploymentMonitoringJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelDeploymentMonitoringJobAsync</summary>
+        public async Task CreateModelDeploymentMonitoringJobAsync()
+        {
+            // Snippet: CreateModelDeploymentMonitoringJobAsync(string, ModelDeploymentMonitoringJob, CallSettings)
+            // Additional: CreateModelDeploymentMonitoringJobAsync(string, ModelDeploymentMonitoringJob, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob();
+            // Make the request
+            ModelDeploymentMonitoringJob response = await jobServiceClient.CreateModelDeploymentMonitoringJobAsync(parent, modelDeploymentMonitoringJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelDeploymentMonitoringJob</summary>
+        public void CreateModelDeploymentMonitoringJobResourceNames()
+        {
+            // Snippet: CreateModelDeploymentMonitoringJob(LocationName, ModelDeploymentMonitoringJob, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob();
+            // Make the request
+            ModelDeploymentMonitoringJob response = jobServiceClient.CreateModelDeploymentMonitoringJob(parent, modelDeploymentMonitoringJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateModelDeploymentMonitoringJobAsync</summary>
+        public async Task CreateModelDeploymentMonitoringJobResourceNamesAsync()
+        {
+            // Snippet: CreateModelDeploymentMonitoringJobAsync(LocationName, ModelDeploymentMonitoringJob, CallSettings)
+            // Additional: CreateModelDeploymentMonitoringJobAsync(LocationName, ModelDeploymentMonitoringJob, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob();
+            // Make the request
+            ModelDeploymentMonitoringJob response = await jobServiceClient.CreateModelDeploymentMonitoringJobAsync(parent, modelDeploymentMonitoringJob);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchModelDeploymentMonitoringStatsAnomalies</summary>
+        public void SearchModelDeploymentMonitoringStatsAnomaliesRequestObject()
+        {
+            // Snippet: SearchModelDeploymentMonitoringStatsAnomalies(SearchModelDeploymentMonitoringStatsAnomaliesRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            SearchModelDeploymentMonitoringStatsAnomaliesRequest request = new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+            {
+                ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+                DeployedModelId = "",
+                FeatureDisplayName = "",
+                Objectives =
+                {
+                    new SearchModelDeploymentMonitoringStatsAnomaliesRequest.Types.StatsAnomaliesObjective(),
+                },
+                StartTime = new Timestamp(),
+                EndTime = new Timestamp(),
+            };
+            // Make the request
+            PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomalies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelMonitoringStatsAnomalies item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchModelDeploymentMonitoringStatsAnomaliesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelMonitoringStatsAnomalies item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelMonitoringStatsAnomalies> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelMonitoringStatsAnomalies item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchModelDeploymentMonitoringStatsAnomaliesAsync</summary>
+        public async Task SearchModelDeploymentMonitoringStatsAnomaliesRequestObjectAsync()
+        {
+            // Snippet: SearchModelDeploymentMonitoringStatsAnomaliesAsync(SearchModelDeploymentMonitoringStatsAnomaliesRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchModelDeploymentMonitoringStatsAnomaliesRequest request = new SearchModelDeploymentMonitoringStatsAnomaliesRequest
+            {
+                ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+                DeployedModelId = "",
+                FeatureDisplayName = "",
+                Objectives =
+                {
+                    new SearchModelDeploymentMonitoringStatsAnomaliesRequest.Types.StatsAnomaliesObjective(),
+                },
+                StartTime = new Timestamp(),
+                EndTime = new Timestamp(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelMonitoringStatsAnomalies item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchModelDeploymentMonitoringStatsAnomaliesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelMonitoringStatsAnomalies item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelMonitoringStatsAnomalies> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelMonitoringStatsAnomalies item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchModelDeploymentMonitoringStatsAnomalies</summary>
+        public void SearchModelDeploymentMonitoringStatsAnomalies()
+        {
+            // Snippet: SearchModelDeploymentMonitoringStatsAnomalies(string, string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string modelDeploymentMonitoringJob = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            string deployedModelId = "";
+            // Make the request
+            PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomalies(modelDeploymentMonitoringJob, deployedModelId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelMonitoringStatsAnomalies item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchModelDeploymentMonitoringStatsAnomaliesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelMonitoringStatsAnomalies item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelMonitoringStatsAnomalies> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelMonitoringStatsAnomalies item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchModelDeploymentMonitoringStatsAnomaliesAsync</summary>
+        public async Task SearchModelDeploymentMonitoringStatsAnomaliesAsync()
+        {
+            // Snippet: SearchModelDeploymentMonitoringStatsAnomaliesAsync(string, string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string modelDeploymentMonitoringJob = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            string deployedModelId = "";
+            // Make the request
+            PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync(modelDeploymentMonitoringJob, deployedModelId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelMonitoringStatsAnomalies item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchModelDeploymentMonitoringStatsAnomaliesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelMonitoringStatsAnomalies item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelMonitoringStatsAnomalies> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelMonitoringStatsAnomalies item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchModelDeploymentMonitoringStatsAnomalies</summary>
+        public void SearchModelDeploymentMonitoringStatsAnomaliesResourceNames()
+        {
+            // Snippet: SearchModelDeploymentMonitoringStatsAnomalies(ModelDeploymentMonitoringJobName, string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            string deployedModelId = "";
+            // Make the request
+            PagedEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomalies(modelDeploymentMonitoringJob, deployedModelId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelMonitoringStatsAnomalies item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchModelDeploymentMonitoringStatsAnomaliesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelMonitoringStatsAnomalies item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelMonitoringStatsAnomalies> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelMonitoringStatsAnomalies item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchModelDeploymentMonitoringStatsAnomaliesAsync</summary>
+        public async Task SearchModelDeploymentMonitoringStatsAnomaliesResourceNamesAsync()
+        {
+            // Snippet: SearchModelDeploymentMonitoringStatsAnomaliesAsync(ModelDeploymentMonitoringJobName, string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName modelDeploymentMonitoringJob = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            string deployedModelId = "";
+            // Make the request
+            PagedAsyncEnumerable<SearchModelDeploymentMonitoringStatsAnomaliesResponse, ModelMonitoringStatsAnomalies> response = jobServiceClient.SearchModelDeploymentMonitoringStatsAnomaliesAsync(modelDeploymentMonitoringJob, deployedModelId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelMonitoringStatsAnomalies item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchModelDeploymentMonitoringStatsAnomaliesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelMonitoringStatsAnomalies item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelMonitoringStatsAnomalies> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelMonitoringStatsAnomalies item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelDeploymentMonitoringJob</summary>
+        public void GetModelDeploymentMonitoringJobRequestObject()
+        {
+            // Snippet: GetModelDeploymentMonitoringJob(GetModelDeploymentMonitoringJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            GetModelDeploymentMonitoringJobRequest request = new GetModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            ModelDeploymentMonitoringJob response = jobServiceClient.GetModelDeploymentMonitoringJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelDeploymentMonitoringJobAsync</summary>
+        public async Task GetModelDeploymentMonitoringJobRequestObjectAsync()
+        {
+            // Snippet: GetModelDeploymentMonitoringJobAsync(GetModelDeploymentMonitoringJobRequest, CallSettings)
+            // Additional: GetModelDeploymentMonitoringJobAsync(GetModelDeploymentMonitoringJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetModelDeploymentMonitoringJobRequest request = new GetModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            ModelDeploymentMonitoringJob response = await jobServiceClient.GetModelDeploymentMonitoringJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelDeploymentMonitoringJob</summary>
+        public void GetModelDeploymentMonitoringJob()
+        {
+            // Snippet: GetModelDeploymentMonitoringJob(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            ModelDeploymentMonitoringJob response = jobServiceClient.GetModelDeploymentMonitoringJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelDeploymentMonitoringJobAsync</summary>
+        public async Task GetModelDeploymentMonitoringJobAsync()
+        {
+            // Snippet: GetModelDeploymentMonitoringJobAsync(string, CallSettings)
+            // Additional: GetModelDeploymentMonitoringJobAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            ModelDeploymentMonitoringJob response = await jobServiceClient.GetModelDeploymentMonitoringJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelDeploymentMonitoringJob</summary>
+        public void GetModelDeploymentMonitoringJobResourceNames()
+        {
+            // Snippet: GetModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            ModelDeploymentMonitoringJob response = jobServiceClient.GetModelDeploymentMonitoringJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetModelDeploymentMonitoringJobAsync</summary>
+        public async Task GetModelDeploymentMonitoringJobResourceNamesAsync()
+        {
+            // Snippet: GetModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CallSettings)
+            // Additional: GetModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            ModelDeploymentMonitoringJob response = await jobServiceClient.GetModelDeploymentMonitoringJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelDeploymentMonitoringJobs</summary>
+        public void ListModelDeploymentMonitoringJobsRequestObject()
+        {
+            // Snippet: ListModelDeploymentMonitoringJobs(ListModelDeploymentMonitoringJobsRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ListModelDeploymentMonitoringJobsRequest request = new ListModelDeploymentMonitoringJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> response = jobServiceClient.ListModelDeploymentMonitoringJobs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelDeploymentMonitoringJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelDeploymentMonitoringJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelDeploymentMonitoringJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelDeploymentMonitoringJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelDeploymentMonitoringJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelDeploymentMonitoringJobsAsync</summary>
+        public async Task ListModelDeploymentMonitoringJobsRequestObjectAsync()
+        {
+            // Snippet: ListModelDeploymentMonitoringJobsAsync(ListModelDeploymentMonitoringJobsRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListModelDeploymentMonitoringJobsRequest request = new ListModelDeploymentMonitoringJobsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                ReadMask = new FieldMask(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> response = jobServiceClient.ListModelDeploymentMonitoringJobsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelDeploymentMonitoringJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelDeploymentMonitoringJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelDeploymentMonitoringJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelDeploymentMonitoringJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelDeploymentMonitoringJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelDeploymentMonitoringJobs</summary>
+        public void ListModelDeploymentMonitoringJobs()
+        {
+            // Snippet: ListModelDeploymentMonitoringJobs(string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> response = jobServiceClient.ListModelDeploymentMonitoringJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelDeploymentMonitoringJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelDeploymentMonitoringJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelDeploymentMonitoringJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelDeploymentMonitoringJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelDeploymentMonitoringJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelDeploymentMonitoringJobsAsync</summary>
+        public async Task ListModelDeploymentMonitoringJobsAsync()
+        {
+            // Snippet: ListModelDeploymentMonitoringJobsAsync(string, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> response = jobServiceClient.ListModelDeploymentMonitoringJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelDeploymentMonitoringJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelDeploymentMonitoringJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelDeploymentMonitoringJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelDeploymentMonitoringJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelDeploymentMonitoringJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelDeploymentMonitoringJobs</summary>
+        public void ListModelDeploymentMonitoringJobsResourceNames()
+        {
+            // Snippet: ListModelDeploymentMonitoringJobs(LocationName, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> response = jobServiceClient.ListModelDeploymentMonitoringJobs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ModelDeploymentMonitoringJob item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListModelDeploymentMonitoringJobsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelDeploymentMonitoringJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelDeploymentMonitoringJob> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelDeploymentMonitoringJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListModelDeploymentMonitoringJobsAsync</summary>
+        public async Task ListModelDeploymentMonitoringJobsResourceNamesAsync()
+        {
+            // Snippet: ListModelDeploymentMonitoringJobsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListModelDeploymentMonitoringJobsResponse, ModelDeploymentMonitoringJob> response = jobServiceClient.ListModelDeploymentMonitoringJobsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ModelDeploymentMonitoringJob item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListModelDeploymentMonitoringJobsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ModelDeploymentMonitoringJob item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ModelDeploymentMonitoringJob> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ModelDeploymentMonitoringJob item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateModelDeploymentMonitoringJob</summary>
+        public void UpdateModelDeploymentMonitoringJobRequestObject()
+        {
+            // Snippet: UpdateModelDeploymentMonitoringJob(UpdateModelDeploymentMonitoringJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateModelDeploymentMonitoringJobRequest request = new UpdateModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> response = jobServiceClient.UpdateModelDeploymentMonitoringJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ModelDeploymentMonitoringJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> retrievedResponse = jobServiceClient.PollOnceUpdateModelDeploymentMonitoringJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ModelDeploymentMonitoringJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateModelDeploymentMonitoringJobAsync</summary>
+        public async Task UpdateModelDeploymentMonitoringJobRequestObjectAsync()
+        {
+            // Snippet: UpdateModelDeploymentMonitoringJobAsync(UpdateModelDeploymentMonitoringJobRequest, CallSettings)
+            // Additional: UpdateModelDeploymentMonitoringJobAsync(UpdateModelDeploymentMonitoringJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateModelDeploymentMonitoringJobRequest request = new UpdateModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> response = await jobServiceClient.UpdateModelDeploymentMonitoringJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ModelDeploymentMonitoringJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceUpdateModelDeploymentMonitoringJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ModelDeploymentMonitoringJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateModelDeploymentMonitoringJob</summary>
+        public void UpdateModelDeploymentMonitoringJob()
+        {
+            // Snippet: UpdateModelDeploymentMonitoringJob(ModelDeploymentMonitoringJob, FieldMask, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> response = jobServiceClient.UpdateModelDeploymentMonitoringJob(modelDeploymentMonitoringJob, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ModelDeploymentMonitoringJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> retrievedResponse = jobServiceClient.PollOnceUpdateModelDeploymentMonitoringJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ModelDeploymentMonitoringJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateModelDeploymentMonitoringJobAsync</summary>
+        public async Task UpdateModelDeploymentMonitoringJobAsync()
+        {
+            // Snippet: UpdateModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJob, FieldMask, CallSettings)
+            // Additional: UpdateModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJob, FieldMask, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJob modelDeploymentMonitoringJob = new ModelDeploymentMonitoringJob();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> response = await jobServiceClient.UpdateModelDeploymentMonitoringJobAsync(modelDeploymentMonitoringJob, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ModelDeploymentMonitoringJob result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ModelDeploymentMonitoringJob, UpdateModelDeploymentMonitoringJobOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceUpdateModelDeploymentMonitoringJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ModelDeploymentMonitoringJob retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelDeploymentMonitoringJob</summary>
+        public void DeleteModelDeploymentMonitoringJobRequestObject()
+        {
+            // Snippet: DeleteModelDeploymentMonitoringJob(DeleteModelDeploymentMonitoringJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteModelDeploymentMonitoringJobRequest request = new DeleteModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = jobServiceClient.DeleteModelDeploymentMonitoringJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = jobServiceClient.PollOnceDeleteModelDeploymentMonitoringJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelDeploymentMonitoringJobAsync</summary>
+        public async Task DeleteModelDeploymentMonitoringJobRequestObjectAsync()
+        {
+            // Snippet: DeleteModelDeploymentMonitoringJobAsync(DeleteModelDeploymentMonitoringJobRequest, CallSettings)
+            // Additional: DeleteModelDeploymentMonitoringJobAsync(DeleteModelDeploymentMonitoringJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteModelDeploymentMonitoringJobRequest request = new DeleteModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await jobServiceClient.DeleteModelDeploymentMonitoringJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceDeleteModelDeploymentMonitoringJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelDeploymentMonitoringJob</summary>
+        public void DeleteModelDeploymentMonitoringJob()
+        {
+            // Snippet: DeleteModelDeploymentMonitoringJob(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = jobServiceClient.DeleteModelDeploymentMonitoringJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = jobServiceClient.PollOnceDeleteModelDeploymentMonitoringJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelDeploymentMonitoringJobAsync</summary>
+        public async Task DeleteModelDeploymentMonitoringJobAsync()
+        {
+            // Snippet: DeleteModelDeploymentMonitoringJobAsync(string, CallSettings)
+            // Additional: DeleteModelDeploymentMonitoringJobAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await jobServiceClient.DeleteModelDeploymentMonitoringJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceDeleteModelDeploymentMonitoringJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelDeploymentMonitoringJob</summary>
+        public void DeleteModelDeploymentMonitoringJobResourceNames()
+        {
+            // Snippet: DeleteModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = jobServiceClient.DeleteModelDeploymentMonitoringJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = jobServiceClient.PollOnceDeleteModelDeploymentMonitoringJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteModelDeploymentMonitoringJobAsync</summary>
+        public async Task DeleteModelDeploymentMonitoringJobResourceNamesAsync()
+        {
+            // Snippet: DeleteModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CallSettings)
+            // Additional: DeleteModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            Operation<Empty, DeleteOperationMetadata> response = await jobServiceClient.DeleteModelDeploymentMonitoringJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteOperationMetadata> retrievedResponse = await jobServiceClient.PollOnceDeleteModelDeploymentMonitoringJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseModelDeploymentMonitoringJob</summary>
+        public void PauseModelDeploymentMonitoringJobRequestObject()
+        {
+            // Snippet: PauseModelDeploymentMonitoringJob(PauseModelDeploymentMonitoringJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            PauseModelDeploymentMonitoringJobRequest request = new PauseModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            jobServiceClient.PauseModelDeploymentMonitoringJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseModelDeploymentMonitoringJobAsync</summary>
+        public async Task PauseModelDeploymentMonitoringJobRequestObjectAsync()
+        {
+            // Snippet: PauseModelDeploymentMonitoringJobAsync(PauseModelDeploymentMonitoringJobRequest, CallSettings)
+            // Additional: PauseModelDeploymentMonitoringJobAsync(PauseModelDeploymentMonitoringJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PauseModelDeploymentMonitoringJobRequest request = new PauseModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            await jobServiceClient.PauseModelDeploymentMonitoringJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseModelDeploymentMonitoringJob</summary>
+        public void PauseModelDeploymentMonitoringJob()
+        {
+            // Snippet: PauseModelDeploymentMonitoringJob(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            jobServiceClient.PauseModelDeploymentMonitoringJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseModelDeploymentMonitoringJobAsync</summary>
+        public async Task PauseModelDeploymentMonitoringJobAsync()
+        {
+            // Snippet: PauseModelDeploymentMonitoringJobAsync(string, CallSettings)
+            // Additional: PauseModelDeploymentMonitoringJobAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            await jobServiceClient.PauseModelDeploymentMonitoringJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseModelDeploymentMonitoringJob</summary>
+        public void PauseModelDeploymentMonitoringJobResourceNames()
+        {
+            // Snippet: PauseModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            jobServiceClient.PauseModelDeploymentMonitoringJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseModelDeploymentMonitoringJobAsync</summary>
+        public async Task PauseModelDeploymentMonitoringJobResourceNamesAsync()
+        {
+            // Snippet: PauseModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CallSettings)
+            // Additional: PauseModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            await jobServiceClient.PauseModelDeploymentMonitoringJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeModelDeploymentMonitoringJob</summary>
+        public void ResumeModelDeploymentMonitoringJobRequestObject()
+        {
+            // Snippet: ResumeModelDeploymentMonitoringJob(ResumeModelDeploymentMonitoringJobRequest, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ResumeModelDeploymentMonitoringJobRequest request = new ResumeModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            jobServiceClient.ResumeModelDeploymentMonitoringJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeModelDeploymentMonitoringJobAsync</summary>
+        public async Task ResumeModelDeploymentMonitoringJobRequestObjectAsync()
+        {
+            // Snippet: ResumeModelDeploymentMonitoringJobAsync(ResumeModelDeploymentMonitoringJobRequest, CallSettings)
+            // Additional: ResumeModelDeploymentMonitoringJobAsync(ResumeModelDeploymentMonitoringJobRequest, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ResumeModelDeploymentMonitoringJobRequest request = new ResumeModelDeploymentMonitoringJobRequest
+            {
+                ModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
+            };
+            // Make the request
+            await jobServiceClient.ResumeModelDeploymentMonitoringJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeModelDeploymentMonitoringJob</summary>
+        public void ResumeModelDeploymentMonitoringJob()
+        {
+            // Snippet: ResumeModelDeploymentMonitoringJob(string, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            jobServiceClient.ResumeModelDeploymentMonitoringJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeModelDeploymentMonitoringJobAsync</summary>
+        public async Task ResumeModelDeploymentMonitoringJobAsync()
+        {
+            // Snippet: ResumeModelDeploymentMonitoringJobAsync(string, CallSettings)
+            // Additional: ResumeModelDeploymentMonitoringJobAsync(string, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/modelDeploymentMonitoringJobs/[MODEL_DEPLOYMENT_MONITORING_JOB]";
+            // Make the request
+            await jobServiceClient.ResumeModelDeploymentMonitoringJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeModelDeploymentMonitoringJob</summary>
+        public void ResumeModelDeploymentMonitoringJobResourceNames()
+        {
+            // Snippet: ResumeModelDeploymentMonitoringJob(ModelDeploymentMonitoringJobName, CallSettings)
+            // Create client
+            JobServiceClient jobServiceClient = JobServiceClient.Create();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            jobServiceClient.ResumeModelDeploymentMonitoringJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeModelDeploymentMonitoringJobAsync</summary>
+        public async Task ResumeModelDeploymentMonitoringJobResourceNamesAsync()
+        {
+            // Snippet: ResumeModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CallSettings)
+            // Additional: ResumeModelDeploymentMonitoringJobAsync(ModelDeploymentMonitoringJobName, CancellationToken)
+            // Create client
+            JobServiceClient jobServiceClient = await JobServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ModelDeploymentMonitoringJobName name = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]");
+            // Make the request
+            await jobServiceClient.ResumeModelDeploymentMonitoringJobAsync(name);
+            // End snippet
+        }
     }
 }

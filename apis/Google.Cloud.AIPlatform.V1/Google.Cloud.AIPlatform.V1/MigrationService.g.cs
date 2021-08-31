@@ -1962,8 +1962,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
-      /// Config for migrating Dataset in datalabeling.googleapis.com to AI
-      /// Platform's Dataset.
+      /// Config for migrating Dataset in datalabeling.googleapis.com to Vertex
+      /// AI's Dataset.
       /// </summary>
       public sealed partial class MigrateDataLabelingDatasetConfig : pb::IMessage<MigrateDataLabelingDatasetConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

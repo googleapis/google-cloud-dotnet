@@ -261,4 +261,93 @@ namespace Google.Cloud.AIPlatform.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateModelDeploymentMonitoringJobRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchModelDeploymentMonitoringStatsAnomaliesRequest
+    {
+        /// <summary>
+        /// <see cref="ModelDeploymentMonitoringJobName"/>-typed view over the
+        /// <see cref="ModelDeploymentMonitoringJob"/> resource name property.
+        /// </summary>
+        public ModelDeploymentMonitoringJobName ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName
+        {
+            get => string.IsNullOrEmpty(ModelDeploymentMonitoringJob) ? null : ModelDeploymentMonitoringJobName.Parse(ModelDeploymentMonitoringJob, allowUnparsed: true);
+            set => ModelDeploymentMonitoringJob = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetModelDeploymentMonitoringJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelDeploymentMonitoringJobName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcav::ModelDeploymentMonitoringJobName ModelDeploymentMonitoringJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelDeploymentMonitoringJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListModelDeploymentMonitoringJobsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteModelDeploymentMonitoringJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelDeploymentMonitoringJobName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcav::ModelDeploymentMonitoringJobName ModelDeploymentMonitoringJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelDeploymentMonitoringJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PauseModelDeploymentMonitoringJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelDeploymentMonitoringJobName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcav::ModelDeploymentMonitoringJobName ModelDeploymentMonitoringJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelDeploymentMonitoringJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ResumeModelDeploymentMonitoringJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelDeploymentMonitoringJobName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcav::ModelDeploymentMonitoringJobName ModelDeploymentMonitoringJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelDeploymentMonitoringJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

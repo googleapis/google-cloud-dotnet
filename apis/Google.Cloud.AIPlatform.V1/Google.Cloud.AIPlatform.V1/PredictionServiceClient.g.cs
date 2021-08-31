@@ -14,6 +14,7 @@
 
 // Generated code. DO NOT EDIT!
 
+using ga = Google.Api;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
@@ -45,6 +46,8 @@ namespace Google.Cloud.AIPlatform.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             PredictSettings = existing.PredictSettings;
+            RawPredictSettings = existing.RawPredictSettings;
+            ExplainSettings = existing.ExplainSettings;
             OnCopy(existing);
         }
 
@@ -57,10 +60,34 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings PredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings PredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.RawPredict</c> and <c>PredictionServiceClient.RawPredictAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RawPredictSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>PredictionServiceClient.Explain</c> and <c>PredictionServiceClient.ExplainAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExplainSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="PredictionServiceSettings"/> object.</returns>
@@ -461,6 +488,565 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<PredictResponse> PredictAsync(EndpointName endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, st::CancellationToken cancellationToken) =>
             PredictAsync(endpoint, instances, parameters, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ga::HttpBody RawPredict(RawPredictRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ga::HttpBody> RawPredictAsync(RawPredictRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ga::HttpBody> RawPredictAsync(RawPredictRequest request, st::CancellationToken cancellationToken) =>
+            RawPredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// 
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
+        /// supports per request. When this limit it is exceeded for an AutoML model,
+        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
+        /// When this limit is exceeded for a custom-trained model, the behavior varies
+        /// depending on the model.
+        /// 
+        /// You can specify the schema for each instance in the
+        /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
+        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// method.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ga::HttpBody RawPredict(string endpoint, ga::HttpBody httpBody, gaxgrpc::CallSettings callSettings = null) =>
+            RawPredict(new RawPredictRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
+                HttpBody = httpBody,
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// 
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
+        /// supports per request. When this limit it is exceeded for an AutoML model,
+        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
+        /// When this limit is exceeded for a custom-trained model, the behavior varies
+        /// depending on the model.
+        /// 
+        /// You can specify the schema for each instance in the
+        /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
+        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// method.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ga::HttpBody> RawPredictAsync(string endpoint, ga::HttpBody httpBody, gaxgrpc::CallSettings callSettings = null) =>
+            RawPredictAsync(new RawPredictRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
+                HttpBody = httpBody,
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// 
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
+        /// supports per request. When this limit it is exceeded for an AutoML model,
+        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
+        /// When this limit is exceeded for a custom-trained model, the behavior varies
+        /// depending on the model.
+        /// 
+        /// You can specify the schema for each instance in the
+        /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
+        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// method.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ga::HttpBody> RawPredictAsync(string endpoint, ga::HttpBody httpBody, st::CancellationToken cancellationToken) =>
+            RawPredictAsync(endpoint, httpBody, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// 
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
+        /// supports per request. When this limit it is exceeded for an AutoML model,
+        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
+        /// When this limit is exceeded for a custom-trained model, the behavior varies
+        /// depending on the model.
+        /// 
+        /// You can specify the schema for each instance in the
+        /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
+        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// method.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ga::HttpBody RawPredict(EndpointName endpoint, ga::HttpBody httpBody, gaxgrpc::CallSettings callSettings = null) =>
+            RawPredict(new RawPredictRequest
+            {
+                EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                HttpBody = httpBody,
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// 
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
+        /// supports per request. When this limit it is exceeded for an AutoML model,
+        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
+        /// When this limit is exceeded for a custom-trained model, the behavior varies
+        /// depending on the model.
+        /// 
+        /// You can specify the schema for each instance in the
+        /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
+        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// method.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ga::HttpBody> RawPredictAsync(EndpointName endpoint, ga::HttpBody httpBody, gaxgrpc::CallSettings callSettings = null) =>
+            RawPredictAsync(new RawPredictRequest
+            {
+                EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                HttpBody = httpBody,
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the prediction.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="httpBody">
+        /// The prediction input. Supports HTTP headers and arbitrary data payload.
+        /// 
+        /// A [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] may have an upper limit on the number of instances it
+        /// supports per request. When this limit it is exceeded for an AutoML model,
+        /// the [RawPredict][google.cloud.aiplatform.v1.PredictionService.RawPredict] method returns an error.
+        /// When this limit is exceeded for a custom-trained model, the behavior varies
+        /// depending on the model.
+        /// 
+        /// You can specify the schema for each instance in the
+        /// [predict_schemata.instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri]
+        /// field when you create a [Model][google.cloud.aiplatform.v1.Model]. This schema applies when you deploy the
+        /// `Model` as a `DeployedModel` to an [Endpoint][google.cloud.aiplatform.v1.Endpoint] and use the `RawPredict`
+        /// method.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ga::HttpBody> RawPredictAsync(EndpointName endpoint, ga::HttpBody httpBody, st::CancellationToken cancellationToken) =>
+            RawPredictAsync(endpoint, httpBody, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExplainResponse Explain(ExplainRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExplainResponse> ExplainAsync(ExplainRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExplainResponse> ExplainAsync(ExplainRequest request, st::CancellationToken cancellationToken) =>
+            ExplainAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the explanation.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="instances">
+        /// Required. The instances that are the input to the explanation call.
+        /// A DeployedModel may have an upper limit on the number of instances it
+        /// supports per request, and when it is exceeded the explanation call errors
+        /// in case of AutoML Models, or, in case of customer created Models, the
+        /// behaviour is as documented by that Model.
+        /// The schema of any single instance may be specified via Endpoint's
+        /// DeployedModels' [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
+        /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
+        /// <param name="deployedModelId">
+        /// If specified, this ExplainRequest will be served by the chosen
+        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExplainResponse Explain(string endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, string deployedModelId, gaxgrpc::CallSettings callSettings = null) =>
+            Explain(new ExplainRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
+                Instances =
+                {
+                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                },
+                Parameters = parameters,
+                DeployedModelId = deployedModelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the explanation.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="instances">
+        /// Required. The instances that are the input to the explanation call.
+        /// A DeployedModel may have an upper limit on the number of instances it
+        /// supports per request, and when it is exceeded the explanation call errors
+        /// in case of AutoML Models, or, in case of customer created Models, the
+        /// behaviour is as documented by that Model.
+        /// The schema of any single instance may be specified via Endpoint's
+        /// DeployedModels' [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
+        /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
+        /// <param name="deployedModelId">
+        /// If specified, this ExplainRequest will be served by the chosen
+        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExplainResponse> ExplainAsync(string endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, string deployedModelId, gaxgrpc::CallSettings callSettings = null) =>
+            ExplainAsync(new ExplainRequest
+            {
+                Endpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(endpoint, nameof(endpoint)),
+                Instances =
+                {
+                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                },
+                Parameters = parameters,
+                DeployedModelId = deployedModelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the explanation.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="instances">
+        /// Required. The instances that are the input to the explanation call.
+        /// A DeployedModel may have an upper limit on the number of instances it
+        /// supports per request, and when it is exceeded the explanation call errors
+        /// in case of AutoML Models, or, in case of customer created Models, the
+        /// behaviour is as documented by that Model.
+        /// The schema of any single instance may be specified via Endpoint's
+        /// DeployedModels' [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
+        /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
+        /// <param name="deployedModelId">
+        /// If specified, this ExplainRequest will be served by the chosen
+        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExplainResponse> ExplainAsync(string endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, string deployedModelId, st::CancellationToken cancellationToken) =>
+            ExplainAsync(endpoint, instances, parameters, deployedModelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the explanation.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="instances">
+        /// Required. The instances that are the input to the explanation call.
+        /// A DeployedModel may have an upper limit on the number of instances it
+        /// supports per request, and when it is exceeded the explanation call errors
+        /// in case of AutoML Models, or, in case of customer created Models, the
+        /// behaviour is as documented by that Model.
+        /// The schema of any single instance may be specified via Endpoint's
+        /// DeployedModels' [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
+        /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
+        /// <param name="deployedModelId">
+        /// If specified, this ExplainRequest will be served by the chosen
+        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExplainResponse Explain(EndpointName endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, string deployedModelId, gaxgrpc::CallSettings callSettings = null) =>
+            Explain(new ExplainRequest
+            {
+                EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                Instances =
+                {
+                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                },
+                Parameters = parameters,
+                DeployedModelId = deployedModelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the explanation.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="instances">
+        /// Required. The instances that are the input to the explanation call.
+        /// A DeployedModel may have an upper limit on the number of instances it
+        /// supports per request, and when it is exceeded the explanation call errors
+        /// in case of AutoML Models, or, in case of customer created Models, the
+        /// behaviour is as documented by that Model.
+        /// The schema of any single instance may be specified via Endpoint's
+        /// DeployedModels' [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
+        /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
+        /// <param name="deployedModelId">
+        /// If specified, this ExplainRequest will be served by the chosen
+        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExplainResponse> ExplainAsync(EndpointName endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, string deployedModelId, gaxgrpc::CallSettings callSettings = null) =>
+            ExplainAsync(new ExplainRequest
+            {
+                EndpointAsEndpointName = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                Instances =
+                {
+                    gax::GaxPreconditions.CheckNotNull(instances, nameof(instances)),
+                },
+                Parameters = parameters,
+                DeployedModelId = deployedModelId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="endpoint">
+        /// Required. The name of the Endpoint requested to serve the explanation.
+        /// Format:
+        /// `projects/{project}/locations/{location}/endpoints/{endpoint}`
+        /// </param>
+        /// <param name="instances">
+        /// Required. The instances that are the input to the explanation call.
+        /// A DeployedModel may have an upper limit on the number of instances it
+        /// supports per request, and when it is exceeded the explanation call errors
+        /// in case of AutoML Models, or, in case of customer created Models, the
+        /// behaviour is as documented by that Model.
+        /// The schema of any single instance may be specified via Endpoint's
+        /// DeployedModels' [Model's][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [instance_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.instance_schema_uri].
+        /// </param>
+        /// <param name="parameters">
+        /// The parameters that govern the prediction. The schema of the parameters may
+        /// be specified via Endpoint's DeployedModels' [Model's ][google.cloud.aiplatform.v1.DeployedModel.model]
+        /// [PredictSchemata's][google.cloud.aiplatform.v1.Model.predict_schemata]
+        /// [parameters_schema_uri][google.cloud.aiplatform.v1.PredictSchemata.parameters_schema_uri].
+        /// </param>
+        /// <param name="deployedModelId">
+        /// If specified, this ExplainRequest will be served by the chosen
+        /// DeployedModel, overriding [Endpoint.traffic_split][google.cloud.aiplatform.v1.Endpoint.traffic_split].
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExplainResponse> ExplainAsync(EndpointName endpoint, scg::IEnumerable<wkt::Value> instances, wkt::Value parameters, string deployedModelId, st::CancellationToken cancellationToken) =>
+            ExplainAsync(endpoint, instances, parameters, deployedModelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>PredictionService client wrapper implementation, for convenient use.</summary>
@@ -470,6 +1056,10 @@ namespace Google.Cloud.AIPlatform.V1
     public sealed partial class PredictionServiceClientImpl : PredictionServiceClient
     {
         private readonly gaxgrpc::ApiCall<PredictRequest, PredictResponse> _callPredict;
+
+        private readonly gaxgrpc::ApiCall<RawPredictRequest, ga::HttpBody> _callRawPredict;
+
+        private readonly gaxgrpc::ApiCall<ExplainRequest, ExplainResponse> _callExplain;
 
         /// <summary>
         /// Constructs a client wrapper for the PredictionService service, with the specified gRPC client and settings.
@@ -484,6 +1074,12 @@ namespace Google.Cloud.AIPlatform.V1
             _callPredict = clientHelper.BuildApiCall<PredictRequest, PredictResponse>(grpcClient.PredictAsync, grpcClient.Predict, effectiveSettings.PredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callPredict);
             Modify_PredictApiCall(ref _callPredict);
+            _callRawPredict = clientHelper.BuildApiCall<RawPredictRequest, ga::HttpBody>(grpcClient.RawPredictAsync, grpcClient.RawPredict, effectiveSettings.RawPredictSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            Modify_ApiCall(ref _callRawPredict);
+            Modify_RawPredictApiCall(ref _callRawPredict);
+            _callExplain = clientHelper.BuildApiCall<ExplainRequest, ExplainResponse>(grpcClient.ExplainAsync, grpcClient.Explain, effectiveSettings.ExplainSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
+            Modify_ApiCall(ref _callExplain);
+            Modify_ExplainApiCall(ref _callExplain);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -491,12 +1087,20 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_PredictApiCall(ref gaxgrpc::ApiCall<PredictRequest, PredictResponse> call);
 
+        partial void Modify_RawPredictApiCall(ref gaxgrpc::ApiCall<RawPredictRequest, ga::HttpBody> call);
+
+        partial void Modify_ExplainApiCall(ref gaxgrpc::ApiCall<ExplainRequest, ExplainResponse> call);
+
         partial void OnConstruction(PredictionService.PredictionServiceClient grpcClient, PredictionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC PredictionService client</summary>
         public override PredictionService.PredictionServiceClient GrpcClient { get; }
 
         partial void Modify_PredictRequest(ref PredictRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RawPredictRequest(ref RawPredictRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExplainRequest(ref ExplainRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Perform an online prediction.
@@ -520,6 +1124,72 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_PredictRequest(ref request, ref callSettings);
             return _callPredict.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ga::HttpBody RawPredict(RawPredictRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawPredictRequest(ref request, ref callSettings);
+            return _callRawPredict.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Perform an online prediction with arbitrary http payload.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ga::HttpBody> RawPredictAsync(RawPredictRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RawPredictRequest(ref request, ref callSettings);
+            return _callRawPredict.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExplainResponse Explain(ExplainRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExplainRequest(ref request, ref callSettings);
+            return _callExplain.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Perform an online explanation.
+        /// 
+        /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+        /// the corresponding DeployModel must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+        /// is not specified, all DeployedModels must have
+        /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+        /// populated. Only deployed AutoML tabular Models have
+        /// explanation_spec.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExplainResponse> ExplainAsync(ExplainRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExplainRequest(ref request, ref callSettings);
+            return _callExplain.Async(request, callSettings);
         }
     }
 }
