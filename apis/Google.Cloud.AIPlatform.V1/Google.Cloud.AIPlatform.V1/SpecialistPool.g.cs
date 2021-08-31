@@ -52,11 +52,11 @@ namespace Google.Cloud.AIPlatform.V1 {
   #region Messages
   /// <summary>
   /// SpecialistPool represents customers' own workforce to work on their data
-  /// labeling jobs. It includes a group of specialist managers who are responsible
-  /// for managing the labelers in this pool as well as customers' data labeling
-  /// jobs associated with this pool.
-  /// Customers create specialist pool as well as start data labeling jobs on
-  /// Cloud, managers and labelers work with the jobs using CrowdCompute console.
+  /// labeling jobs. It includes a group of specialist managers and workers.
+  /// Managers are responsible for managing the workers in this pool as well as
+  /// customers' data labeling jobs associated with this pool. Customers create
+  /// specialist pool as well as start data labeling jobs on Cloud, managers and
+  /// workers handle the jobs using CrowdCompute console.
   /// </summary>
   public sealed partial class SpecialistPool : pb::IMessage<SpecialistPool>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -135,7 +135,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int SpecialistManagersCountFieldNumber = 3;
     private int specialistManagersCount_;
     /// <summary>
-    /// Output only. The number of Specialists in this SpecialistPool.
+    /// Output only. The number of managers in this SpecialistPool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SpecialistManagersCount {
@@ -151,7 +151,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> specialistManagerEmails_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// The email addresses of the specialists in the SpecialistPool.
+    /// The email addresses of the managers in the SpecialistPool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> SpecialistManagerEmails {

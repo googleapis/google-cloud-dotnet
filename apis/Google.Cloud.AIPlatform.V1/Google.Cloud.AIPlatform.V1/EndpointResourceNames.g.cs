@@ -260,6 +260,16 @@ namespace Google.Cloud.AIPlatform.V1
             get => string.IsNullOrEmpty(Name) ? null : gcav::EndpointName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="ModelDeploymentMonitoringJobName"/>-typed view over the
+        /// <see cref="ModelDeploymentMonitoringJob"/> resource name property.
+        /// </summary>
+        public ModelDeploymentMonitoringJobName ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName
+        {
+            get => string.IsNullOrEmpty(ModelDeploymentMonitoringJob) ? null : ModelDeploymentMonitoringJobName.Parse(ModelDeploymentMonitoringJob, allowUnparsed: true);
+            set => ModelDeploymentMonitoringJob = value?.ToString() ?? "";
+        }
     }
 
     public partial class DeployedModel

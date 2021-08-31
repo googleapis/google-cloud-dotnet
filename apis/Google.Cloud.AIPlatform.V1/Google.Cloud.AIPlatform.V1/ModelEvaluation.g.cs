@@ -27,25 +27,28 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tb2RlbF9ldmFsdWF0aW9u",
             "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
-            "cm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3By",
-            "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90byLJAgoPTW9kZWxFdmFsdWF0aW9uEhEKBG5hbWUYASABKAlCA+BB",
-            "AxIfChJtZXRyaWNzX3NjaGVtYV91cmkYAiABKAlCA+BBAxIsCgdtZXRyaWNz",
-            "GAMgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQMSNAoLY3JlYXRl",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "HQoQc2xpY2VfZGltZW5zaW9ucxgFIAMoCUID4EEDOn/qQXwKKWFpcGxhdGZv",
-            "cm0uZ29vZ2xlYXBpcy5jb20vTW9kZWxFdmFsdWF0aW9uEk9wcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxzL3ttb2RlbH0v",
-            "ZXZhbHVhdGlvbnMve2V2YWx1YXRpb259QtgBCh5jb20uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFCFE1vZGVsRXZhbHVhdGlvblByb3RvUAFaRGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0",
-            "Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
-            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
-            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "cm90bxosZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZXhwbGFuYXRpb24u",
+            "cHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
+            "bnMucHJvdG8ilwMKD01vZGVsRXZhbHVhdGlvbhIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSHwoSbWV0cmljc19zY2hlbWFfdXJpGAIgASgJQgPgQQMSLAoHbWV0cmlj",
+            "cxgDIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUID4EEDEjQKC2NyZWF0",
+            "ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "Eh0KEHNsaWNlX2RpbWVuc2lvbnMYBSADKAlCA+BBAxJMChFtb2RlbF9leHBs",
+            "YW5hdGlvbhgIIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1v",
+            "ZGVsRXhwbGFuYXRpb25CA+BBAzp/6kF8CilhaXBsYXRmb3JtLmdvb2dsZWFw",
+            "aXMuY29tL01vZGVsRXZhbHVhdGlvbhJPcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9kZWx9L2V2YWx1YXRpb25z",
+            "L3tldmFsdWF0aW9ufULYAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxQhRNb2RlbEV2YWx1YXRpb25Qcm90b1ABWkRnb29nbGUuZ29sYW5nLm9y",
+            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlw",
+            "bGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xl",
+            "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
+            "b3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluation), global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Parser, new[]{ "Name", "MetricsSchemaUri", "Metrics", "CreateTime", "SliceDimensions" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelEvaluation), global::Google.Cloud.AIPlatform.V1.ModelEvaluation.Parser, new[]{ "Name", "MetricsSchemaUri", "Metrics", "CreateTime", "SliceDimensions", "ModelExplanation" }, null, null, null, null)
           }));
     }
     #endregion
@@ -90,6 +93,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       metrics_ = other.metrics_ != null ? other.metrics_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       sliceDimensions_ = other.sliceDimensions_.Clone();
+      modelExplanation_ = other.modelExplanation_ != null ? other.modelExplanation_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -174,6 +178,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return sliceDimensions_; }
     }
 
+    /// <summary>Field number for the "model_explanation" field.</summary>
+    public const int ModelExplanationFieldNumber = 8;
+    private global::Google.Cloud.AIPlatform.V1.ModelExplanation modelExplanation_;
+    /// <summary>
+    /// Output only. Aggregated explanation metrics for the Model's prediction output over the
+    /// data this ModelEvaluation uses. This field is populated only if the Model
+    /// is evaluated with explanations, and only for AutoML tabular Models.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AIPlatform.V1.ModelExplanation ModelExplanation {
+      get { return modelExplanation_; }
+      set {
+        modelExplanation_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ModelEvaluation);
@@ -192,6 +212,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(Metrics, other.Metrics)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if(!sliceDimensions_.Equals(other.sliceDimensions_)) return false;
+      if (!object.Equals(ModelExplanation, other.ModelExplanation)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -203,6 +224,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (metrics_ != null) hash ^= Metrics.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       hash ^= sliceDimensions_.GetHashCode();
+      if (modelExplanation_ != null) hash ^= ModelExplanation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -236,6 +258,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(CreateTime);
       }
       sliceDimensions_.WriteTo(output, _repeated_sliceDimensions_codec);
+      if (modelExplanation_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ModelExplanation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -262,6 +288,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteMessage(CreateTime);
       }
       sliceDimensions_.WriteTo(ref output, _repeated_sliceDimensions_codec);
+      if (modelExplanation_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ModelExplanation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -284,6 +314,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
       }
       size += sliceDimensions_.CalculateSize(_repeated_sliceDimensions_codec);
+      if (modelExplanation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelExplanation);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -314,6 +347,12 @@ namespace Google.Cloud.AIPlatform.V1 {
         CreateTime.MergeFrom(other.CreateTime);
       }
       sliceDimensions_.Add(other.sliceDimensions_);
+      if (other.modelExplanation_ != null) {
+        if (modelExplanation_ == null) {
+          ModelExplanation = new global::Google.Cloud.AIPlatform.V1.ModelExplanation();
+        }
+        ModelExplanation.MergeFrom(other.ModelExplanation);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -354,6 +393,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             sliceDimensions_.AddEntriesFrom(input, _repeated_sliceDimensions_codec);
             break;
           }
+          case 66: {
+            if (modelExplanation_ == null) {
+              ModelExplanation = new global::Google.Cloud.AIPlatform.V1.ModelExplanation();
+            }
+            input.ReadMessage(ModelExplanation);
+            break;
+          }
         }
       }
     #endif
@@ -392,6 +438,13 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 42: {
             sliceDimensions_.AddEntriesFrom(ref input, _repeated_sliceDimensions_codec);
+            break;
+          }
+          case 66: {
+            if (modelExplanation_ == null) {
+              ModelExplanation = new global::Google.Cloud.AIPlatform.V1.ModelExplanation();
+            }
+            input.ReadMessage(ModelExplanation);
             break;
           }
         }

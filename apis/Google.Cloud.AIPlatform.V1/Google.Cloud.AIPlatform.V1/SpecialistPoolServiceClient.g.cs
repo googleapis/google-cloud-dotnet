@@ -70,10 +70,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CreateSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>SpecialistPoolServiceClient.CreateSpecialistPool</c> and
@@ -101,10 +101,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings GetSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -114,10 +114,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListSpecialistPoolsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings ListSpecialistPoolsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -127,10 +127,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings DeleteSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>SpecialistPoolServiceClient.DeleteSpecialistPool</c> and
@@ -158,10 +158,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings UpdateSpecialistPoolSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>SpecialistPoolServiceClient.UpdateSpecialistPool</c> and

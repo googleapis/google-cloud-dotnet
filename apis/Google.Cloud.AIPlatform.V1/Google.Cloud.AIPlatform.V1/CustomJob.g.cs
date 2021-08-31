@@ -34,7 +34,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Y2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNlcy5wcm90bxoe",
             "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
             "dWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLTBQoJQ3VzdG9tSm9iEhEK",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLhBgoJQ3VzdG9tSm9iEhEK",
             "BG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhJA",
             "Cghqb2Jfc3BlYxgEIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "LkN1c3RvbUpvYlNwZWNCA+BBAhI4CgVzdGF0ZRgFIAEoDjIkLmdvb2dsZS5j",
@@ -47,43 +47,47 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGMuU3RhdHVzQgPgQQMSQQoGbGFiZWxzGAsgAygLMjEuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuQ3VzdG9tSm9iLkxhYmVsc0VudHJ5EkMKD2VuY3J5",
             "cHRpb25fc3BlYxgMIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LkVuY3J5cHRpb25TcGVjGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAE6aepBZgojYWlwbGF0Zm9ybS5nb29nbGVhcGlz",
-            "LmNvbS9DdXN0b21Kb2ISP3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9jdXN0b21Kb2JzL3tjdXN0b21fam9ifSKxAgoNQ3VzdG9t",
-            "Sm9iU3BlYxJKChF3b3JrZXJfcG9vbF9zcGVjcxgBIAMoCzIqLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxLldvcmtlclBvb2xTcGVjQgPgQQISOgoKc2No",
-            "ZWR1bGluZxgDIAEoCzImLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNj",
-            "aGVkdWxpbmcSFwoPc2VydmljZV9hY2NvdW50GAQgASgJEjQKB25ldHdvcmsY",
-            "BSABKAlCI/pBIAoeY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEkkK",
-            "FWJhc2Vfb3V0cHV0X2RpcmVjdG9yeRgGIAEoCzIqLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLkdjc0Rlc3RpbmF0aW9uIscCCg5Xb3JrZXJQb29sU3Bl",
-            "YxJDCg5jb250YWluZXJfc3BlYxgGIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBs",
-            "YXRmb3JtLnYxLkNvbnRhaW5lclNwZWNIABJMChNweXRob25fcGFja2FnZV9z",
-            "cGVjGAcgASgLMi0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHl0aG9u",
-            "UGFja2FnZVNwZWNIABJFCgxtYWNoaW5lX3NwZWMYASABKAsyJy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5NYWNoaW5lU3BlY0IG4EEB4EEFEhoKDXJl",
-            "cGxpY2FfY291bnQYAiABKANCA+BBARI3CglkaXNrX3NwZWMYBSABKAsyJC5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5EaXNrU3BlY0IGCgR0YXNrIncK",
-            "DUNvbnRhaW5lclNwZWMSFgoJaW1hZ2VfdXJpGAEgASgJQgPgQQISDwoHY29t",
-            "bWFuZBgCIAMoCRIMCgRhcmdzGAMgAygJEi8KA2VudhgEIAMoCzIiLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVudlZhciKqAQoRUHl0aG9uUGFja2Fn",
-            "ZVNwZWMSHwoSZXhlY3V0b3JfaW1hZ2VfdXJpGAEgASgJQgPgQQISGQoMcGFj",
-            "a2FnZV91cmlzGAIgAygJQgPgQQISGgoNcHl0aG9uX21vZHVsZRgDIAEoCUID",
-            "4EECEgwKBGFyZ3MYBCADKAkSLwoDZW52GAUgAygLMiIuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuRW52VmFyIl8KClNjaGVkdWxpbmcSKgoHdGltZW91",
-            "dBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0",
-            "X2pvYl9vbl93b3JrZXJfcmVzdGFydBgDIAEoCELSAQoeY29tLmdvb2dsZS5j",
-            "bG91ZC5haXBsYXRmb3JtLnYxQg5DdXN0b21Kb2JQcm90b1ABWkRnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZv",
-            "cm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "LkVuY3J5cHRpb25TcGVjElYKD3dlYl9hY2Nlc3NfdXJpcxgQIAMoCzI4Lmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkN1c3RvbUpvYi5XZWJBY2Nlc3NV",
+            "cmlzRW50cnlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBGjQKEldlYkFjY2Vzc1VyaXNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmnqQWYKI2FpcGxhdGZvcm0uZ29v",
+            "Z2xlYXBpcy5jb20vQ3VzdG9tSm9iEj9wcm9qZWN0cy97cHJvamVjdH0vbG9j",
+            "YXRpb25zL3tsb2NhdGlvbn0vY3VzdG9tSm9icy97Y3VzdG9tX2pvYn0i0QIK",
+            "DUN1c3RvbUpvYlNwZWMSSgoRd29ya2VyX3Bvb2xfc3BlY3MYASADKAsyKi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Xb3JrZXJQb29sU3BlY0ID4EEC",
+            "EjoKCnNjaGVkdWxpbmcYAyABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5TY2hlZHVsaW5nEhcKD3NlcnZpY2VfYWNjb3VudBgEIAEoCRI0Cgdu",
+            "ZXR3b3JrGAUgASgJQiP6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0",
+            "d29yaxJJChViYXNlX291dHB1dF9kaXJlY3RvcnkYBiABKAsyKi5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5HY3NEZXN0aW5hdGlvbhIeChFlbmFibGVf",
+            "d2ViX2FjY2VzcxgKIAEoCEID4EEBIscCCg5Xb3JrZXJQb29sU3BlYxJDCg5j",
+            "b250YWluZXJfc3BlYxgGIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxLkNvbnRhaW5lclNwZWNIABJMChNweXRob25fcGFja2FnZV9zcGVjGAcg",
+            "ASgLMi0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHl0aG9uUGFja2Fn",
+            "ZVNwZWNIABJFCgxtYWNoaW5lX3NwZWMYASABKAsyJy5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MS5NYWNoaW5lU3BlY0IG4EEB4EEFEhoKDXJlcGxpY2Ff",
+            "Y291bnQYAiABKANCA+BBARI3CglkaXNrX3NwZWMYBSABKAsyJC5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5EaXNrU3BlY0IGCgR0YXNrIncKDUNvbnRh",
+            "aW5lclNwZWMSFgoJaW1hZ2VfdXJpGAEgASgJQgPgQQISDwoHY29tbWFuZBgC",
+            "IAMoCRIMCgRhcmdzGAMgAygJEi8KA2VudhgEIAMoCzIiLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLkVudlZhciKqAQoRUHl0aG9uUGFja2FnZVNwZWMS",
+            "HwoSZXhlY3V0b3JfaW1hZ2VfdXJpGAEgASgJQgPgQQISGQoMcGFja2FnZV91",
+            "cmlzGAIgAygJQgPgQQISGgoNcHl0aG9uX21vZHVsZRgDIAEoCUID4EECEgwK",
+            "BGFyZ3MYBCADKAkSLwoDZW52GAUgAygLMiIuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuRW52VmFyIl8KClNjaGVkdWxpbmcSKgoHdGltZW91dBgBIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIlCh1yZXN0YXJ0X2pvYl9v",
+            "bl93b3JrZXJfcmVzdGFydBgDIAEoCELSAQoeY29tLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxQg5DdXN0b21Kb2JQcm90b1ABWkRnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7",
+            "YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29v",
+            "Z2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJob), global::Google.Cloud.AIPlatform.V1.CustomJob.Parser, new[]{ "Name", "DisplayName", "JobSpec", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "BaseOutputDirectory" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJob), global::Google.Cloud.AIPlatform.V1.CustomJob.Parser, new[]{ "Name", "DisplayName", "JobSpec", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec", "WebAccessUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "BaseOutputDirectory", "EnableWebAccess" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec), global::Google.Cloud.AIPlatform.V1.WorkerPoolSpec.Parser, new[]{ "ContainerSpec", "PythonPackageSpec", "MachineSpec", "ReplicaCount", "DiskSpec" }, new[]{ "Task" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ContainerSpec), global::Google.Cloud.AIPlatform.V1.ContainerSpec.Parser, new[]{ "ImageUri", "Command", "Args", "Env" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PythonPackageSpec), global::Google.Cloud.AIPlatform.V1.PythonPackageSpec.Parser, new[]{ "ExecutorImageUri", "PackageUris", "PythonModule", "Args", "Env" }, null, null, null, null),
@@ -140,6 +144,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       error_ = other.error_ != null ? other.error_.Clone() : null;
       labels_ = other.labels_.Clone();
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      webAccessUris_ = other.webAccessUris_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -314,6 +319,29 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "web_access_uris" field.</summary>
+    public const int WebAccessUrisFieldNumber = 16;
+    private static readonly pbc::MapField<string, string>.Codec _map_webAccessUris_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 130);
+    private readonly pbc::MapField<string, string> webAccessUris_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Output only. URIs for accessing [interactive
+    /// shells](https://cloud.google.com/vertex-ai/docs/training/monitor-debug-interactive-shell)
+    /// (one URI for each training node). Only available if
+    /// [job_spec.enable_web_access][google.cloud.aiplatform.v1.CustomJobSpec.enable_web_access] is `true`.
+    ///
+    /// The keys are names of each node in the training job; for example,
+    /// `workerpool0-0` for the primary node, `workerpool1-0` for the first node in
+    /// the second worker pool, and `workerpool1-1` for the second node in the
+    /// second worker pool.
+    ///
+    /// The values are the URIs for each node's interactive shell.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> WebAccessUris {
+      get { return webAccessUris_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CustomJob);
@@ -338,6 +366,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(Error, other.Error)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (!WebAccessUris.Equals(other.WebAccessUris)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -355,6 +384,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (error_ != null) hash ^= Error.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      hash ^= WebAccessUris.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -412,6 +442,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(EncryptionSpec);
       }
+      webAccessUris_.WriteTo(output, _map_webAccessUris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -462,6 +493,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(98);
         output.WriteMessage(EncryptionSpec);
       }
+      webAccessUris_.WriteTo(ref output, _map_webAccessUris_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -502,6 +534,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (encryptionSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
       }
+      size += webAccessUris_.CalculateSize(_map_webAccessUris_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -565,6 +598,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
       }
+      webAccessUris_.Add(other.webAccessUris_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -642,6 +676,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
             }
             input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 130: {
+            webAccessUris_.AddEntriesFrom(input, _map_webAccessUris_codec);
             break;
           }
         }
@@ -723,6 +761,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 130: {
+            webAccessUris_.AddEntriesFrom(ref input, _map_webAccessUris_codec);
+            break;
+          }
         }
       }
     }
@@ -767,6 +809,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceAccount_ = other.serviceAccount_;
       network_ = other.network_;
       baseOutputDirectory_ = other.baseOutputDirectory_ != null ? other.baseOutputDirectory_.Clone() : null;
+      enableWebAccess_ = other.enableWebAccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -810,7 +853,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Specifies the service account for workload run-as account.
     /// Users submitting jobs must have act-as permission on this run-as account.
-    /// If unspecified, the [AI Platform Custom Code Service
+    /// If unspecified, the [Vertex AI Custom Code Service
     /// Agent](https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
     /// for the CustomJob's project is used.
     /// </summary>
@@ -879,6 +922,26 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "enable_web_access" field.</summary>
+    public const int EnableWebAccessFieldNumber = 10;
+    private bool enableWebAccess_;
+    /// <summary>
+    /// Optional. Whether you want Vertex AI to enable [interactive shell
+    /// access](https://cloud.google.com/vertex-ai/docs/training/monitor-debug-interactive-shell)
+    /// to training containers.
+    ///
+    /// If set to `true`, you can access interactive shells at the URIs given
+    /// by [CustomJob.web_access_uris][google.cloud.aiplatform.v1.CustomJob.web_access_uris] or [Trial.web_access_uris][google.cloud.aiplatform.v1.Trial.web_access_uris] (within
+    /// [HyperparameterTuningJob.trials][google.cloud.aiplatform.v1.HyperparameterTuningJob.trials]).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableWebAccess {
+      get { return enableWebAccess_; }
+      set {
+        enableWebAccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CustomJobSpec);
@@ -897,6 +960,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccount != other.ServiceAccount) return false;
       if (Network != other.Network) return false;
       if (!object.Equals(BaseOutputDirectory, other.BaseOutputDirectory)) return false;
+      if (EnableWebAccess != other.EnableWebAccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -908,6 +972,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
       if (baseOutputDirectory_ != null) hash ^= BaseOutputDirectory.GetHashCode();
+      if (EnableWebAccess != false) hash ^= EnableWebAccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -941,6 +1006,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(BaseOutputDirectory);
       }
+      if (EnableWebAccess != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(EnableWebAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -967,6 +1036,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(BaseOutputDirectory);
       }
+      if (EnableWebAccess != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(EnableWebAccess);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -988,6 +1061,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (baseOutputDirectory_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BaseOutputDirectory);
+      }
+      if (EnableWebAccess != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1018,6 +1094,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           BaseOutputDirectory = new global::Google.Cloud.AIPlatform.V1.GcsDestination();
         }
         BaseOutputDirectory.MergeFrom(other.BaseOutputDirectory);
+      }
+      if (other.EnableWebAccess != false) {
+        EnableWebAccess = other.EnableWebAccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1059,6 +1138,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(BaseOutputDirectory);
             break;
           }
+          case 80: {
+            EnableWebAccess = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1097,6 +1180,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               BaseOutputDirectory = new global::Google.Cloud.AIPlatform.V1.GcsDestination();
             }
             input.ReadMessage(BaseOutputDirectory);
+            break;
+          }
+          case 80: {
+            EnableWebAccess = input.ReadBool();
             break;
           }
         }
@@ -1608,6 +1695,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EnvVar> env_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EnvVar>();
     /// <summary>
     /// Environment variables to be passed to the container.
+    /// Maximum limit is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EnvVar> Env {
@@ -1892,6 +1980,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EnvVar> env_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EnvVar>();
     /// <summary>
     /// Environment variables to be passed to the python module.
+    /// Maximum limit is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.EnvVar> Env {

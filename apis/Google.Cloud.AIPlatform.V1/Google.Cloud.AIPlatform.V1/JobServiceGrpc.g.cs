@@ -90,6 +90,17 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListBatchPredictionJobsResponse> __Marshaller_google_cloud_aiplatform_v1_ListBatchPredictionJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListBatchPredictionJobsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteBatchPredictionJobRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteBatchPredictionJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteBatchPredictionJobRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CancelBatchPredictionJobRequest> __Marshaller_google_cloud_aiplatform_v1_CancelBatchPredictionJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CancelBatchPredictionJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest> __Marshaller_google_cloud_aiplatform_v1_CreateModelDeploymentMonitoringJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> __Marshaller_google_cloud_aiplatform_v1_ModelDeploymentMonitoringJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest> __Marshaller_google_cloud_aiplatform_v1_SearchModelDeploymentMonitoringStatsAnomaliesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse> __Marshaller_google_cloud_aiplatform_v1_SearchModelDeploymentMonitoringStatsAnomaliesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest> __Marshaller_google_cloud_aiplatform_v1_GetModelDeploymentMonitoringJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest> __Marshaller_google_cloud_aiplatform_v1_ListModelDeploymentMonitoringJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse> __Marshaller_google_cloud_aiplatform_v1_ListModelDeploymentMonitoringJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateModelDeploymentMonitoringJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteModelDeploymentMonitoringJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest> __Marshaller_google_cloud_aiplatform_v1_PauseModelDeploymentMonitoringJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest> __Marshaller_google_cloud_aiplatform_v1_ResumeModelDeploymentMonitoringJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateCustomJobRequest, global::Google.Cloud.AIPlatform.V1.CustomJob> __Method_CreateCustomJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateCustomJobRequest, global::Google.Cloud.AIPlatform.V1.CustomJob>(
         grpc::MethodType.Unary,
@@ -229,6 +240,62 @@ namespace Google.Cloud.AIPlatform.V1 {
         __ServiceName,
         "CancelBatchPredictionJob",
         __Marshaller_google_cloud_aiplatform_v1_CancelBatchPredictionJobRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> __Method_CreateModelDeploymentMonitoringJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateModelDeploymentMonitoringJob",
+        __Marshaller_google_cloud_aiplatform_v1_CreateModelDeploymentMonitoringJobRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ModelDeploymentMonitoringJob);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest, global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse> __Method_SearchModelDeploymentMonitoringStatsAnomalies = new grpc::Method<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest, global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchModelDeploymentMonitoringStatsAnomalies",
+        __Marshaller_google_cloud_aiplatform_v1_SearchModelDeploymentMonitoringStatsAnomaliesRequest,
+        __Marshaller_google_cloud_aiplatform_v1_SearchModelDeploymentMonitoringStatsAnomaliesResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> __Method_GetModelDeploymentMonitoringJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetModelDeploymentMonitoringJob",
+        __Marshaller_google_cloud_aiplatform_v1_GetModelDeploymentMonitoringJobRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ModelDeploymentMonitoringJob);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest, global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse> __Method_ListModelDeploymentMonitoringJobs = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest, global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListModelDeploymentMonitoringJobs",
+        __Marshaller_google_cloud_aiplatform_v1_ListModelDeploymentMonitoringJobsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ListModelDeploymentMonitoringJobsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest, global::Google.LongRunning.Operation> __Method_UpdateModelDeploymentMonitoringJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateModelDeploymentMonitoringJob",
+        __Marshaller_google_cloud_aiplatform_v1_UpdateModelDeploymentMonitoringJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest, global::Google.LongRunning.Operation> __Method_DeleteModelDeploymentMonitoringJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteModelDeploymentMonitoringJob",
+        __Marshaller_google_cloud_aiplatform_v1_DeleteModelDeploymentMonitoringJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PauseModelDeploymentMonitoringJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PauseModelDeploymentMonitoringJob",
+        __Marshaller_google_cloud_aiplatform_v1_PauseModelDeploymentMonitoringJobRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ResumeModelDeploymentMonitoringJob = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ResumeModelDeploymentMonitoringJob",
+        __Marshaller_google_cloud_aiplatform_v1_ResumeModelDeploymentMonitoringJobRequest,
         __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -487,6 +554,99 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelBatchPredictionJob(global::Google.Cloud.AIPlatform.V1.CancelBatchPredictionJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+      /// configured interval.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Searches Model Monitoring Statistics generated within a given time window.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse> SearchModelDeploymentMonitoringStatsAnomalies(global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists ModelDeploymentMonitoringJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse> ListModelDeploymentMonitoringJobs(global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+      /// makes a best effort to cancel the job. Will mark
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PauseModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+      /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+      /// resumed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ResumeModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1516,6 +1676,378 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelBatchPredictionJob, null, options, request);
       }
+      /// <summary>
+      /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+      /// configured interval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob CreateModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateModelDeploymentMonitoringJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+      /// configured interval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob CreateModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+      /// configured interval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateModelDeploymentMonitoringJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a ModelDeploymentMonitoringJob. It will run periodically on a
+      /// configured interval.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> CreateModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Searches Model Monitoring Statistics generated within a given time window.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse SearchModelDeploymentMonitoringStatsAnomalies(global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchModelDeploymentMonitoringStatsAnomalies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches Model Monitoring Statistics generated within a given time window.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse SearchModelDeploymentMonitoringStatsAnomalies(global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchModelDeploymentMonitoringStatsAnomalies, null, options, request);
+      }
+      /// <summary>
+      /// Searches Model Monitoring Statistics generated within a given time window.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse> SearchModelDeploymentMonitoringStatsAnomaliesAsync(global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchModelDeploymentMonitoringStatsAnomaliesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Searches Model Monitoring Statistics generated within a given time window.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse> SearchModelDeploymentMonitoringStatsAnomaliesAsync(global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchModelDeploymentMonitoringStatsAnomalies, null, options, request);
+      }
+      /// <summary>
+      /// Gets a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob GetModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetModelDeploymentMonitoringJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob GetModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Gets a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetModelDeploymentMonitoringJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob> GetModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Lists ModelDeploymentMonitoringJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse ListModelDeploymentMonitoringJobs(global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModelDeploymentMonitoringJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ModelDeploymentMonitoringJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse ListModelDeploymentMonitoringJobs(global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListModelDeploymentMonitoringJobs, null, options, request);
+      }
+      /// <summary>
+      /// Lists ModelDeploymentMonitoringJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse> ListModelDeploymentMonitoringJobsAsync(global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModelDeploymentMonitoringJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists ModelDeploymentMonitoringJobs in a Location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse> ListModelDeploymentMonitoringJobsAsync(global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListModelDeploymentMonitoringJobs, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UpdateModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateModelDeploymentMonitoringJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation UpdateModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Updates a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateModelDeploymentMonitoringJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeleteModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteModelDeploymentMonitoringJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.LongRunning.Operation DeleteModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteModelDeploymentMonitoringJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a ModelDeploymentMonitoringJob.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+      /// makes a best effort to cancel the job. Will mark
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty PauseModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PauseModelDeploymentMonitoringJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+      /// makes a best effort to cancel the job. Will mark
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty PauseModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PauseModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+      /// makes a best effort to cancel the job. Will mark
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PauseModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PauseModelDeploymentMonitoringJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses a ModelDeploymentMonitoringJob. If the job is running, the server
+      /// makes a best effort to cancel the job. Will mark
+      /// [ModelDeploymentMonitoringJob.state][google.cloud.aiplatform.v1.ModelDeploymentMonitoringJob.state] to 'PAUSED'.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PauseModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PauseModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+      /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+      /// resumed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ResumeModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumeModelDeploymentMonitoringJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+      /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+      /// resumed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty ResumeModelDeploymentMonitoringJob(global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ResumeModelDeploymentMonitoringJob, null, options, request);
+      }
+      /// <summary>
+      /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+      /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+      /// resumed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResumeModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumeModelDeploymentMonitoringJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes a paused ModelDeploymentMonitoringJob. It will start to run from
+      /// next scheduled time. A deleted ModelDeploymentMonitoringJob can't be
+      /// resumed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResumeModelDeploymentMonitoringJobAsync(global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ResumeModelDeploymentMonitoringJob, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override JobServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -1547,7 +2079,15 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_GetBatchPredictionJob, serviceImpl.GetBatchPredictionJob)
           .AddMethod(__Method_ListBatchPredictionJobs, serviceImpl.ListBatchPredictionJobs)
           .AddMethod(__Method_DeleteBatchPredictionJob, serviceImpl.DeleteBatchPredictionJob)
-          .AddMethod(__Method_CancelBatchPredictionJob, serviceImpl.CancelBatchPredictionJob).Build();
+          .AddMethod(__Method_CancelBatchPredictionJob, serviceImpl.CancelBatchPredictionJob)
+          .AddMethod(__Method_CreateModelDeploymentMonitoringJob, serviceImpl.CreateModelDeploymentMonitoringJob)
+          .AddMethod(__Method_SearchModelDeploymentMonitoringStatsAnomalies, serviceImpl.SearchModelDeploymentMonitoringStatsAnomalies)
+          .AddMethod(__Method_GetModelDeploymentMonitoringJob, serviceImpl.GetModelDeploymentMonitoringJob)
+          .AddMethod(__Method_ListModelDeploymentMonitoringJobs, serviceImpl.ListModelDeploymentMonitoringJobs)
+          .AddMethod(__Method_UpdateModelDeploymentMonitoringJob, serviceImpl.UpdateModelDeploymentMonitoringJob)
+          .AddMethod(__Method_DeleteModelDeploymentMonitoringJob, serviceImpl.DeleteModelDeploymentMonitoringJob)
+          .AddMethod(__Method_PauseModelDeploymentMonitoringJob, serviceImpl.PauseModelDeploymentMonitoringJob)
+          .AddMethod(__Method_ResumeModelDeploymentMonitoringJob, serviceImpl.ResumeModelDeploymentMonitoringJob).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1576,6 +2116,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_ListBatchPredictionJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListBatchPredictionJobsRequest, global::Google.Cloud.AIPlatform.V1.ListBatchPredictionJobsResponse>(serviceImpl.ListBatchPredictionJobs));
       serviceBinder.AddMethod(__Method_DeleteBatchPredictionJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteBatchPredictionJobRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBatchPredictionJob));
       serviceBinder.AddMethod(__Method_CancelBatchPredictionJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CancelBatchPredictionJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelBatchPredictionJob));
+      serviceBinder.AddMethod(__Method_CreateModelDeploymentMonitoringJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateModelDeploymentMonitoringJobRequest, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob>(serviceImpl.CreateModelDeploymentMonitoringJob));
+      serviceBinder.AddMethod(__Method_SearchModelDeploymentMonitoringStatsAnomalies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesRequest, global::Google.Cloud.AIPlatform.V1.SearchModelDeploymentMonitoringStatsAnomaliesResponse>(serviceImpl.SearchModelDeploymentMonitoringStatsAnomalies));
+      serviceBinder.AddMethod(__Method_GetModelDeploymentMonitoringJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetModelDeploymentMonitoringJobRequest, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob>(serviceImpl.GetModelDeploymentMonitoringJob));
+      serviceBinder.AddMethod(__Method_ListModelDeploymentMonitoringJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsRequest, global::Google.Cloud.AIPlatform.V1.ListModelDeploymentMonitoringJobsResponse>(serviceImpl.ListModelDeploymentMonitoringJobs));
+      serviceBinder.AddMethod(__Method_UpdateModelDeploymentMonitoringJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateModelDeploymentMonitoringJobRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateModelDeploymentMonitoringJob));
+      serviceBinder.AddMethod(__Method_DeleteModelDeploymentMonitoringJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteModelDeploymentMonitoringJobRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModelDeploymentMonitoringJob));
+      serviceBinder.AddMethod(__Method_PauseModelDeploymentMonitoringJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.PauseModelDeploymentMonitoringJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PauseModelDeploymentMonitoringJob));
+      serviceBinder.AddMethod(__Method_ResumeModelDeploymentMonitoringJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ResumeModelDeploymentMonitoringJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ResumeModelDeploymentMonitoringJob));
     }
 
   }

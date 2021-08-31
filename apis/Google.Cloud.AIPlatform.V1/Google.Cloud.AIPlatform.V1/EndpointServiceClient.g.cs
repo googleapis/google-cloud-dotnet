@@ -70,10 +70,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings CreateEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EndpointServiceClient.CreateEndpoint</c> and
@@ -100,10 +100,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings GetEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -112,10 +112,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings ListEndpointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings ListEndpointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -124,10 +124,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings UpdateEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -136,10 +136,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings DeleteEndpointSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EndpointServiceClient.DeleteEndpoint</c> and
@@ -166,10 +166,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeployModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings DeployModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EndpointServiceClient.DeployModel</c> and
@@ -196,10 +196,10 @@ namespace Google.Cloud.AIPlatform.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UndeployModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+        public gaxgrpc::CallSettings UndeployModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// Long Running Operation settings for calls to <c>EndpointServiceClient.UndeployModel</c> and
@@ -290,6 +290,7 @@ namespace Google.Cloud.AIPlatform.V1
 
     /// <summary>EndpointService client wrapper, for convenient use.</summary>
     /// <remarks>
+    /// A service for managing Vertex AI's Endpoints.
     /// Service for managing endpoints.
     /// </remarks>
     public abstract partial class EndpointServiceClient
@@ -1518,6 +1519,7 @@ namespace Google.Cloud.AIPlatform.V1
 
     /// <summary>EndpointService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
+    /// A service for managing Vertex AI's Endpoints.
     /// Service for managing endpoints.
     /// </remarks>
     public sealed partial class EndpointServiceClientImpl : EndpointServiceClient

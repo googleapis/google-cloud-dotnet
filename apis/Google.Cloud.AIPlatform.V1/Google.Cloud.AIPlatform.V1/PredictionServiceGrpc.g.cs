@@ -62,6 +62,10 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.PredictRequest> __Marshaller_google_cloud_aiplatform_v1_PredictRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.PredictRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.PredictResponse> __Marshaller_google_cloud_aiplatform_v1_PredictResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.PredictResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.RawPredictRequest> __Marshaller_google_cloud_aiplatform_v1_RawPredictRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.RawPredictRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Api.HttpBody> __Marshaller_google_api_HttpBody = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.HttpBody.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ExplainRequest> __Marshaller_google_cloud_aiplatform_v1_ExplainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ExplainRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ExplainResponse> __Marshaller_google_cloud_aiplatform_v1_ExplainResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ExplainResponse.Parser));
 
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.PredictRequest, global::Google.Cloud.AIPlatform.V1.PredictResponse> __Method_Predict = new grpc::Method<global::Google.Cloud.AIPlatform.V1.PredictRequest, global::Google.Cloud.AIPlatform.V1.PredictResponse>(
         grpc::MethodType.Unary,
@@ -69,6 +73,20 @@ namespace Google.Cloud.AIPlatform.V1 {
         "Predict",
         __Marshaller_google_cloud_aiplatform_v1_PredictRequest,
         __Marshaller_google_cloud_aiplatform_v1_PredictResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.RawPredictRequest, global::Google.Api.HttpBody> __Method_RawPredict = new grpc::Method<global::Google.Cloud.AIPlatform.V1.RawPredictRequest, global::Google.Api.HttpBody>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RawPredict",
+        __Marshaller_google_cloud_aiplatform_v1_RawPredictRequest,
+        __Marshaller_google_api_HttpBody);
+
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ExplainRequest, global::Google.Cloud.AIPlatform.V1.ExplainResponse> __Method_Explain = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ExplainRequest, global::Google.Cloud.AIPlatform.V1.ExplainResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Explain",
+        __Marshaller_google_cloud_aiplatform_v1_ExplainRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ExplainResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -87,6 +105,37 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.PredictResponse> Predict(global::Google.Cloud.AIPlatform.V1.PredictRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Perform an online prediction with arbitrary http payload.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Api.HttpBody> RawPredict(global::Google.Cloud.AIPlatform.V1.RawPredictRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Perform an online explanation.
+      ///
+      /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+      /// the corresponding DeployModel must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+      /// is not specified, all DeployedModels must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. Only deployed AutoML tabular Models have
+      /// explanation_spec.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ExplainResponse> Explain(global::Google.Cloud.AIPlatform.V1.ExplainRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -160,6 +209,130 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_Predict, null, options, request);
       }
+      /// <summary>
+      /// Perform an online prediction with arbitrary http payload.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Api.HttpBody RawPredict(global::Google.Cloud.AIPlatform.V1.RawPredictRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RawPredict(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Perform an online prediction with arbitrary http payload.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Api.HttpBody RawPredict(global::Google.Cloud.AIPlatform.V1.RawPredictRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RawPredict, null, options, request);
+      }
+      /// <summary>
+      /// Perform an online prediction with arbitrary http payload.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Api.HttpBody> RawPredictAsync(global::Google.Cloud.AIPlatform.V1.RawPredictRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RawPredictAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Perform an online prediction with arbitrary http payload.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Api.HttpBody> RawPredictAsync(global::Google.Cloud.AIPlatform.V1.RawPredictRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RawPredict, null, options, request);
+      }
+      /// <summary>
+      /// Perform an online explanation.
+      ///
+      /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+      /// the corresponding DeployModel must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+      /// is not specified, all DeployedModels must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. Only deployed AutoML tabular Models have
+      /// explanation_spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ExplainResponse Explain(global::Google.Cloud.AIPlatform.V1.ExplainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Explain(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Perform an online explanation.
+      ///
+      /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+      /// the corresponding DeployModel must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+      /// is not specified, all DeployedModels must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. Only deployed AutoML tabular Models have
+      /// explanation_spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.AIPlatform.V1.ExplainResponse Explain(global::Google.Cloud.AIPlatform.V1.ExplainRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Explain, null, options, request);
+      }
+      /// <summary>
+      /// Perform an online explanation.
+      ///
+      /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+      /// the corresponding DeployModel must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+      /// is not specified, all DeployedModels must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. Only deployed AutoML tabular Models have
+      /// explanation_spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ExplainResponse> ExplainAsync(global::Google.Cloud.AIPlatform.V1.ExplainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExplainAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Perform an online explanation.
+      ///
+      /// If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id] is specified,
+      /// the corresponding DeployModel must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. If [deployed_model_id][google.cloud.aiplatform.v1.ExplainRequest.deployed_model_id]
+      /// is not specified, all DeployedModels must have
+      /// [explanation_spec][google.cloud.aiplatform.v1.DeployedModel.explanation_spec]
+      /// populated. Only deployed AutoML tabular Models have
+      /// explanation_spec.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ExplainResponse> ExplainAsync(global::Google.Cloud.AIPlatform.V1.ExplainRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Explain, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override PredictionServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -172,7 +345,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public static grpc::ServerServiceDefinition BindService(PredictionServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Predict, serviceImpl.Predict).Build();
+          .AddMethod(__Method_Predict, serviceImpl.Predict)
+          .AddMethod(__Method_RawPredict, serviceImpl.RawPredict)
+          .AddMethod(__Method_Explain, serviceImpl.Explain).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -182,6 +357,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PredictionServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Predict, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.PredictRequest, global::Google.Cloud.AIPlatform.V1.PredictResponse>(serviceImpl.Predict));
+      serviceBinder.AddMethod(__Method_RawPredict, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.RawPredictRequest, global::Google.Api.HttpBody>(serviceImpl.RawPredict));
+      serviceBinder.AddMethod(__Method_Explain, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ExplainRequest, global::Google.Cloud.AIPlatform.V1.ExplainResponse>(serviceImpl.Explain));
     }
 
   }

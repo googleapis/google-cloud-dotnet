@@ -55,6 +55,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -90,6 +91,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -126,6 +128,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -160,6 +163,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -196,6 +200,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -230,6 +235,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.GetDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -267,6 +273,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -302,6 +309,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -339,6 +347,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDataset(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);
@@ -374,6 +383,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 },
                 Metadata = new wkt::Value(),
                 EncryptionSpec = new EncryptionSpec(),
+                Description = "description2cf9da67",
             };
             mockGrpcClient.Setup(x => x.UpdateDatasetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Dataset>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatasetServiceClient client = new DatasetServiceClientImpl(mockGrpcClient.Object, null);

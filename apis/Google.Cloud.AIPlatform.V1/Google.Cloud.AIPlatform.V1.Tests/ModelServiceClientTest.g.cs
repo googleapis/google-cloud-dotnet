@@ -77,6 +77,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -136,6 +137,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -197,6 +199,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -256,6 +259,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -317,6 +321,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -376,6 +381,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -438,6 +444,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -498,6 +505,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -560,6 +568,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -620,6 +629,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     new Model.Types.ExportFormat(),
                 },
+                ExplanationSpec = new ExplanationSpec(),
                 EncryptionSpec = new EncryptionSpec(),
                 ArtifactUri = "artifact_uri469c7020",
             };
@@ -651,6 +661,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "slice_dimensions7d96a205",
                 },
+                ModelExplanation = new ModelExplanation(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -678,6 +689,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "slice_dimensions7d96a205",
                 },
+                ModelExplanation = new ModelExplanation(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -707,6 +719,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "slice_dimensions7d96a205",
                 },
+                ModelExplanation = new ModelExplanation(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -734,6 +747,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "slice_dimensions7d96a205",
                 },
+                ModelExplanation = new ModelExplanation(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -763,6 +777,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "slice_dimensions7d96a205",
                 },
+                ModelExplanation = new ModelExplanation(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
@@ -790,6 +805,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "slice_dimensions7d96a205",
                 },
+                ModelExplanation = new ModelExplanation(),
             };
             mockGrpcClient.Setup(x => x.GetModelEvaluationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelEvaluation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ModelServiceClient client = new ModelServiceClientImpl(mockGrpcClient.Object, null);
