@@ -787,12 +787,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern <c>projects/{project}/locations/{location}/bireservation</c>.
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/biReservation</c>.
             /// </summary>
             ProjectLocation = 1,
         }
 
-        private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}/bireservation");
+        private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}/biReservation");
 
         /// <summary>Creates a <see cref="BiReservationName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -805,7 +805,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         /// <summary>
         /// Creates a <see cref="BiReservationName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/bireservation</c>.
+        /// <c>projects/{project}/locations/{location}/biReservation</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -815,25 +815,25 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="BiReservationName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/bireservation</c>.
+        /// <c>projects/{project}/locations/{location}/biReservation</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="BiReservationName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/bireservation</c>.
+        /// <c>projects/{project}/locations/{location}/biReservation</c>.
         /// </returns>
         public static string Format(string projectId, string locationId) => FormatProjectLocation(projectId, locationId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="BiReservationName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/bireservation</c>.
+        /// <c>projects/{project}/locations/{location}/biReservation</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="BiReservationName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/bireservation</c>.
+        /// <c>projects/{project}/locations/{location}/biReservation</c>.
         /// </returns>
         public static string FormatProjectLocation(string projectId, string locationId) =>
             s_projectLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
@@ -844,7 +844,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/bireservation</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/biReservation</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="biReservationName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -858,7 +858,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/bireservation</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/biReservation</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -878,7 +878,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/bireservation</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/biReservation</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="biReservationName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -896,7 +896,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/locations/{location}/bireservation</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/biReservation</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -941,7 +941,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         /// <summary>
         /// Constructs a new instance of a <see cref="BiReservationName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/bireservation</c>
+        /// <c>projects/{project}/locations/{location}/biReservation</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
@@ -1192,6 +1192,18 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     }
 
     public partial class SearchAssignmentsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchAllAssignmentsRequest
     {
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.

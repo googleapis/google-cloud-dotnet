@@ -3,7 +3,7 @@
 //     source: google/cloud/bigquery/reservation/v1/reservation.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -99,6 +99,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_DeleteAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_MoveAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_GetBiReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> __Marshaller_google_cloud_bigquery_reservation_v1_BiReservation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation.Parser));
@@ -215,6 +217,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         "SearchAssignments",
         __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsResponse);
+
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> __Method_SearchAllAssignments = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchAllAssignments",
+        __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsRequest,
+        __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsResponse);
 
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment> __Method_MoveAssignment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(
         grpc::MethodType.Unary,
@@ -427,6 +436,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///   `project2`) could all be created and mapped to the same or different
       ///   reservations.
       ///
+      /// "None" assignments represent an absence of the assignment. Projects
+      /// assigned to None use on-demand pricing. To create a "None" assignment, use
+      /// "none" as a reservation_id in the parent. Example parent:
+      /// `projects/myproject/locations/US/reservations/none`.
+      ///
       /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
       /// 'bigquery.admin' permissions on the project using the reservation
       /// and the project that owns this reservation.
@@ -499,7 +513,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       }
 
       /// <summary>
-      /// Looks up assignments for a specified resource for a particular region.
+      /// Deprecated: Looks up assignments for a specified resource for a particular region.
       /// If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
@@ -527,6 +541,36 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up assignments for a specified resource for a particular region.
+      /// If the request is about a project:
+      ///
+      /// 1. Assignments created on the project will be returned if they exist.
+      /// 2. Otherwise assignments created on the closest ancestor will be
+      ///    returned.
+      /// 3. Assignments for different JobTypes will all be returned.
+      ///
+      /// The same logic applies if the request is about a folder.
+      ///
+      /// If the request is about an organization, then assignments created on the
+      /// organization will be returned (organization doesn't have ancestors).
+      ///
+      /// Comparing to ListAssignments, there are some behavior
+      /// differences:
+      ///
+      /// 1. permission on the assignee will be verified in this API.
+      /// 2. Hierarchy lookup (project->folder->organization) happens in this API.
+      /// 3. Parent here is `projects/*/locations/*`, instead of
+      ///    `projects/*/locations/*reservations/*`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> SearchAllAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1245,6 +1289,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///   `project2`) could all be created and mapped to the same or different
       ///   reservations.
       ///
+      /// "None" assignments represent an absence of the assignment. Projects
+      /// assigned to None use on-demand pricing. To create a "None" assignment, use
+      /// "none" as a reservation_id in the parent. Example parent:
+      /// `projects/myproject/locations/US/reservations/none`.
+      ///
       /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
       /// 'bigquery.admin' permissions on the project using the reservation
       /// and the project that owns this reservation.
@@ -1286,6 +1335,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       ///   `project2`) could all be created and mapped to the same or different
       ///   reservations.
       ///
+      /// "None" assignments represent an absence of the assignment. Projects
+      /// assigned to None use on-demand pricing. To create a "None" assignment, use
+      /// "none" as a reservation_id in the parent. Example parent:
+      /// `projects/myproject/locations/US/reservations/none`.
+      ///
       /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
       /// 'bigquery.admin' permissions on the project using the reservation
       /// and the project that owns this reservation.
@@ -1324,6 +1378,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// * Assignments for all three entities (`organizationA`, `project1`, and
       ///   `project2`) could all be created and mapped to the same or different
       ///   reservations.
+      ///
+      /// "None" assignments represent an absence of the assignment. Projects
+      /// assigned to None use on-demand pricing. To create a "None" assignment, use
+      /// "none" as a reservation_id in the parent. Example parent:
+      /// `projects/myproject/locations/US/reservations/none`.
       ///
       /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
       /// 'bigquery.admin' permissions on the project using the reservation
@@ -1365,6 +1424,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// * Assignments for all three entities (`organizationA`, `project1`, and
       ///   `project2`) could all be created and mapped to the same or different
       ///   reservations.
+      ///
+      /// "None" assignments represent an absence of the assignment. Projects
+      /// assigned to None use on-demand pricing. To create a "None" assignment, use
+      /// "none" as a reservation_id in the parent. Example parent:
+      /// `projects/myproject/locations/US/reservations/none`.
       ///
       /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
       /// 'bigquery.admin' permissions on the project using the reservation
@@ -1605,7 +1669,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAssignment, null, options, request);
       }
       /// <summary>
-      /// Looks up assignments for a specified resource for a particular region.
+      /// Deprecated: Looks up assignments for a specified resource for a particular region.
       /// If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
@@ -1639,7 +1703,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return SearchAssignments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up assignments for a specified resource for a particular region.
+      /// Deprecated: Looks up assignments for a specified resource for a particular region.
       /// If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
@@ -1671,7 +1735,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAssignments, null, options, request);
       }
       /// <summary>
-      /// Looks up assignments for a specified resource for a particular region.
+      /// Deprecated: Looks up assignments for a specified resource for a particular region.
       /// If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
@@ -1705,7 +1769,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         return SearchAssignmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up assignments for a specified resource for a particular region.
+      /// Deprecated: Looks up assignments for a specified resource for a particular region.
       /// If the request is about a project:
       ///
       /// 1. Assignments created on the project will be returned if they exist.
@@ -1735,6 +1799,126 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAssignments, null, options, request);
+      }
+      /// <summary>
+      /// Looks up assignments for a specified resource for a particular region.
+      /// If the request is about a project:
+      ///
+      /// 1. Assignments created on the project will be returned if they exist.
+      /// 2. Otherwise assignments created on the closest ancestor will be
+      ///    returned.
+      /// 3. Assignments for different JobTypes will all be returned.
+      ///
+      /// The same logic applies if the request is about a folder.
+      ///
+      /// If the request is about an organization, then assignments created on the
+      /// organization will be returned (organization doesn't have ancestors).
+      ///
+      /// Comparing to ListAssignments, there are some behavior
+      /// differences:
+      ///
+      /// 1. permission on the assignee will be verified in this API.
+      /// 2. Hierarchy lookup (project->folder->organization) happens in this API.
+      /// 3. Parent here is `projects/*/locations/*`, instead of
+      ///    `projects/*/locations/*reservations/*`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse SearchAllAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchAllAssignments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up assignments for a specified resource for a particular region.
+      /// If the request is about a project:
+      ///
+      /// 1. Assignments created on the project will be returned if they exist.
+      /// 2. Otherwise assignments created on the closest ancestor will be
+      ///    returned.
+      /// 3. Assignments for different JobTypes will all be returned.
+      ///
+      /// The same logic applies if the request is about a folder.
+      ///
+      /// If the request is about an organization, then assignments created on the
+      /// organization will be returned (organization doesn't have ancestors).
+      ///
+      /// Comparing to ListAssignments, there are some behavior
+      /// differences:
+      ///
+      /// 1. permission on the assignee will be verified in this API.
+      /// 2. Hierarchy lookup (project->folder->organization) happens in this API.
+      /// 3. Parent here is `projects/*/locations/*`, instead of
+      ///    `projects/*/locations/*reservations/*`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse SearchAllAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchAllAssignments, null, options, request);
+      }
+      /// <summary>
+      /// Looks up assignments for a specified resource for a particular region.
+      /// If the request is about a project:
+      ///
+      /// 1. Assignments created on the project will be returned if they exist.
+      /// 2. Otherwise assignments created on the closest ancestor will be
+      ///    returned.
+      /// 3. Assignments for different JobTypes will all be returned.
+      ///
+      /// The same logic applies if the request is about a folder.
+      ///
+      /// If the request is about an organization, then assignments created on the
+      /// organization will be returned (organization doesn't have ancestors).
+      ///
+      /// Comparing to ListAssignments, there are some behavior
+      /// differences:
+      ///
+      /// 1. permission on the assignee will be verified in this API.
+      /// 2. Hierarchy lookup (project->folder->organization) happens in this API.
+      /// 3. Parent here is `projects/*/locations/*`, instead of
+      ///    `projects/*/locations/*reservations/*`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> SearchAllAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchAllAssignmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Looks up assignments for a specified resource for a particular region.
+      /// If the request is about a project:
+      ///
+      /// 1. Assignments created on the project will be returned if they exist.
+      /// 2. Otherwise assignments created on the closest ancestor will be
+      ///    returned.
+      /// 3. Assignments for different JobTypes will all be returned.
+      ///
+      /// The same logic applies if the request is about a folder.
+      ///
+      /// If the request is about an organization, then assignments created on the
+      /// organization will be returned (organization doesn't have ancestors).
+      ///
+      /// Comparing to ListAssignments, there are some behavior
+      /// differences:
+      ///
+      /// 1. permission on the assignee will be verified in this API.
+      /// 2. Hierarchy lookup (project->folder->organization) happens in this API.
+      /// 3. Parent here is `projects/*/locations/*`, instead of
+      ///    `projects/*/locations/*reservations/*`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> SearchAllAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchAllAssignments, null, options, request);
       }
       /// <summary>
       /// Moves an assignment under a new reservation.
@@ -1940,6 +2124,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
           .AddMethod(__Method_ListAssignments, serviceImpl.ListAssignments)
           .AddMethod(__Method_DeleteAssignment, serviceImpl.DeleteAssignment)
           .AddMethod(__Method_SearchAssignments, serviceImpl.SearchAssignments)
+          .AddMethod(__Method_SearchAllAssignments, serviceImpl.SearchAllAssignments)
           .AddMethod(__Method_MoveAssignment, serviceImpl.MoveAssignment)
           .AddMethod(__Method_GetBiReservation, serviceImpl.GetBiReservation)
           .AddMethod(__Method_UpdateBiReservation, serviceImpl.UpdateBiReservation).Build();
@@ -1967,6 +2152,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       serviceBinder.AddMethod(__Method_ListAssignments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse>(serviceImpl.ListAssignments));
       serviceBinder.AddMethod(__Method_DeleteAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAssignment));
       serviceBinder.AddMethod(__Method_SearchAssignments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse>(serviceImpl.SearchAssignments));
+      serviceBinder.AddMethod(__Method_SearchAllAssignments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse>(serviceImpl.SearchAllAssignments));
       serviceBinder.AddMethod(__Method_MoveAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(serviceImpl.MoveAssignment));
       serviceBinder.AddMethod(__Method_GetBiReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(serviceImpl.GetBiReservation));
       serviceBinder.AddMethod(__Method_UpdateBiReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(serviceImpl.UpdateBiReservation));
