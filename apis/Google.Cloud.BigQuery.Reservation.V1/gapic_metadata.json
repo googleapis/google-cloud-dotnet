@@ -94,6 +94,12 @@
                 "MoveAssignmentAsync"
               ]
             },
+            "SearchAllAssignments": {
+              "methods": [
+                "SearchAllAssignments",
+                "SearchAllAssignmentsAsync"
+              ]
+            },
             "SearchAssignments": {
               "methods": [
                 "SearchAssignments",

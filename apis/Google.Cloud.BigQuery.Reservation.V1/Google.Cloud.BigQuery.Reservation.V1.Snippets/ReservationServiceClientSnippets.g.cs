@@ -652,6 +652,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CapacityCommitment = new CapacityCommitment(),
                 EnforceSingleAdminProjectPerOrg = false,
+                CapacityCommitmentId = "",
             };
             // Make the request
             CapacityCommitment response = reservationServiceClient.CreateCapacityCommitment(request);
@@ -671,6 +672,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 CapacityCommitment = new CapacityCommitment(),
                 EnforceSingleAdminProjectPerOrg = false,
+                CapacityCommitmentId = "",
             };
             // Make the request
             CapacityCommitment response = await reservationServiceClient.CreateCapacityCommitmentAsync(request);
@@ -1108,6 +1110,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             DeleteCapacityCommitmentRequest request = new DeleteCapacityCommitmentRequest
             {
                 CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                Force = false,
             };
             // Make the request
             reservationServiceClient.DeleteCapacityCommitment(request);
@@ -1125,6 +1128,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             DeleteCapacityCommitmentRequest request = new DeleteCapacityCommitmentRequest
             {
                 CapacityCommitmentName = CapacityCommitmentName.FromProjectLocationCapacityCommitment("[PROJECT]", "[LOCATION]", "[CAPACITY_COMMITMENT]"),
+                Force = false,
             };
             // Make the request
             await reservationServiceClient.DeleteCapacityCommitmentAsync(request);
@@ -1446,6 +1450,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
                 Assignment = new Assignment(),
+                AssignmentId = "",
             };
             // Make the request
             Assignment response = reservationServiceClient.CreateAssignment(request);
@@ -1464,6 +1469,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             {
                 ParentAsReservationName = ReservationName.FromProjectLocationReservation("[PROJECT]", "[LOCATION]", "[RESERVATION]"),
                 Assignment = new Assignment(),
+                AssignmentId = "",
             };
             // Make the request
             Assignment response = await reservationServiceClient.CreateAssignmentAsync(request);
@@ -1904,7 +1910,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
                 Query = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAssignments(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Assignment item in response)
@@ -1953,7 +1961,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
                 Query = "",
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAssignmentsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Assignment item) =>
@@ -1999,7 +2009,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             string query = "";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAssignments(parent, query);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Assignment item in response)
@@ -2045,7 +2057,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             string query = "";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAssignmentsAsync(parent, query);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Assignment item) =>
@@ -2091,7 +2105,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string query = "";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAssignments(parent, query);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Assignment item in response)
@@ -2137,7 +2153,9 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             string query = "";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAssignmentsAsync(parent, query);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Assignment item) =>
@@ -2148,6 +2166,288 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
             await response.AsRawResponses().ForEachAsync((SearchAssignmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Assignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Assignment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Assignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAllAssignments</summary>
+        public void SearchAllAssignmentsRequestObject()
+        {
+            // Snippet: SearchAllAssignments(SearchAllAssignmentsRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            SearchAllAssignmentsRequest request = new SearchAllAssignmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = "",
+            };
+            // Make the request
+            PagedEnumerable<SearchAllAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAllAssignments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Assignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchAllAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Assignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Assignment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Assignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAllAssignmentsAsync</summary>
+        public async Task SearchAllAssignmentsRequestObjectAsync()
+        {
+            // Snippet: SearchAllAssignmentsAsync(SearchAllAssignmentsRequest, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchAllAssignmentsRequest request = new SearchAllAssignmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Query = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAllAssignmentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Assignment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchAllAssignmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Assignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Assignment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Assignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAllAssignments</summary>
+        public void SearchAllAssignments()
+        {
+            // Snippet: SearchAllAssignments(string, string, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string query = "";
+            // Make the request
+            PagedEnumerable<SearchAllAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAllAssignments(parent, query);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Assignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchAllAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Assignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Assignment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Assignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAllAssignmentsAsync</summary>
+        public async Task SearchAllAssignmentsAsync()
+        {
+            // Snippet: SearchAllAssignmentsAsync(string, string, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string query = "";
+            // Make the request
+            PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAllAssignmentsAsync(parent, query);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Assignment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchAllAssignmentsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Assignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Assignment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Assignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAllAssignments</summary>
+        public void SearchAllAssignmentsResourceNames()
+        {
+            // Snippet: SearchAllAssignments(LocationName, string, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            PagedEnumerable<SearchAllAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAllAssignments(parent, query);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Assignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchAllAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Assignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Assignment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Assignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchAllAssignmentsAsync</summary>
+        public async Task SearchAllAssignmentsResourceNamesAsync()
+        {
+            // Snippet: SearchAllAssignmentsAsync(LocationName, string, string, int?, CallSettings)
+            // Create client
+            ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string query = "";
+            // Make the request
+            PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> response = reservationServiceClient.SearchAllAssignmentsAsync(parent, query);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Assignment item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchAllAssignmentsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -2306,7 +2606,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             // Create client
             ReservationServiceClient reservationServiceClient = ReservationServiceClient.Create();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/bireservation";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/biReservation";
             // Make the request
             BiReservation response = reservationServiceClient.GetBiReservation(name);
             // End snippet
@@ -2320,7 +2620,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1.Snippets
             // Create client
             ReservationServiceClient reservationServiceClient = await ReservationServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/bireservation";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/biReservation";
             // Make the request
             BiReservation response = await reservationServiceClient.GetBiReservationAsync(name);
             // End snippet

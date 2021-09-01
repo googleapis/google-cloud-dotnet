@@ -63,6 +63,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             ListAssignmentsSettings = existing.ListAssignmentsSettings;
             DeleteAssignmentSettings = existing.DeleteAssignmentSettings;
             SearchAssignmentsSettings = existing.SearchAssignmentsSettings;
+            SearchAllAssignmentsSettings = existing.SearchAllAssignmentsSettings;
             MoveAssignmentSettings = existing.MoveAssignmentSettings;
             GetBiReservationSettings = existing.GetBiReservationSettings;
             UpdateBiReservationSettings = existing.UpdateBiReservationSettings;
@@ -79,10 +80,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -138,10 +139,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdateReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -151,10 +152,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateCapacityCommitmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateCapacityCommitmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -212,10 +213,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateCapacityCommitmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdateCapacityCommitmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -225,10 +226,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings SplitCapacityCommitmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings SplitCapacityCommitmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -238,10 +239,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings MergeCapacityCommitmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings MergeCapacityCommitmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -250,10 +251,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings CreateAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -303,15 +304,28 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReservationServiceClient.SearchAllAssignments</c> and
+        /// <c>ReservationServiceClient.SearchAllAssignmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchAllAssignmentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ReservationServiceClient.MoveAssignment</c> and <c>ReservationServiceClient.MoveAssignmentAsync</c>.
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings MoveAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings MoveAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -336,10 +350,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateBiReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+        public gaxgrpc::CallSettings UpdateBiReservationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(300000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ReservationServiceSettings"/> object.</returns>
@@ -2165,6 +2179,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
         /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
+        /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
         /// and the project that owns this reservation.
@@ -2202,6 +2221,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// * Assignments for all three entities (`organizationA`, `project1`, and
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
+        /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
         /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
@@ -2241,6 +2265,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
         /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
+        /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
         /// and the project that owns this reservation.
@@ -2278,6 +2307,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// * Assignments for all three entities (`organizationA`, `project1`, and
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
+        /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
         /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
@@ -2327,6 +2361,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
         /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
+        /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
         /// and the project that owns this reservation.
@@ -2375,6 +2414,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
         /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
+        /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
         /// and the project that owns this reservation.
@@ -2418,6 +2462,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// * Assignments for all three entities (`organizationA`, `project1`, and
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
+        /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
         /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
@@ -2467,6 +2516,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
         /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
+        /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
         /// and the project that owns this reservation.
@@ -2514,6 +2568,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// * Assignments for all three entities (`organizationA`, `project1`, and
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
+        /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
         /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
@@ -3030,7 +3089,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             DeleteAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Looks up assignments for a specified resource for a particular region.
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
         /// If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
@@ -3057,11 +3116,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(SearchAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up assignments for a specified resource for a particular region.
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
         /// If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
@@ -3088,11 +3148,12 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(SearchAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up assignments for a specified resource for a particular region.
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
         /// If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
@@ -3140,6 +3201,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchAssignments(new SearchAssignmentsRequest
             {
@@ -3150,7 +3212,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             }, callSettings);
 
         /// <summary>
-        /// Looks up assignments for a specified resource for a particular region.
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
         /// If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
@@ -3198,6 +3260,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchAssignmentsAsync(new SearchAssignmentsRequest
             {
@@ -3208,7 +3271,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             }, callSettings);
 
         /// <summary>
-        /// Looks up assignments for a specified resource for a particular region.
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
         /// If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
@@ -3256,8 +3319,68 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             SearchAssignments(new SearchAssignmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = query ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
+        /// 
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
+        /// 
+        /// **Note** "-" cannot be used for projects
+        /// nor locations.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the admin project(containing project and location),
+        /// e.g.:
+        /// `projects/myproject/locations/US`.
+        /// </param>
+        /// <param name="query">
+        /// Please specify resource name as assignee in the query.
+        /// 
+        /// Examples:
+        /// 
+        /// * `assignee=projects/myproject`
+        /// * `assignee=folders/123`
+        /// * `assignee=organizations/456`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAssignmentsAsync(new SearchAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = query ?? "",
@@ -3286,14 +3409,122 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
         /// 3. Parent here is `projects/*/locations/*`, instead of
         /// `projects/*/locations/*reservations/*`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(SearchAllAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
         /// 
-        /// **Note** "-" cannot be used for projects
-        /// nor locations.
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(SearchAllAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
+        /// 
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the admin project(containing project and location),
+        /// Required. The resource name with location (project name could be the wildcard '-'),
         /// e.g.:
-        /// `projects/myproject/locations/US`.
+        /// `projects/-/locations/US`.
+        /// </param>
+        /// <param name="query">
+        /// Please specify resource name as assignee in the query.
+        /// 
+        /// Examples:
+        /// 
+        /// * `assignee=projects/myproject`
+        /// * `assignee=folders/123`
+        /// * `assignee=organizations/456`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllAssignments(new SearchAllAssignmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = query ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
+        /// 
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name with location (project name could be the wildcard '-'),
+        /// e.g.:
+        /// `projects/-/locations/US`.
         /// </param>
         /// <param name="query">
         /// Please specify resource name as assignee in the query.
@@ -3314,8 +3545,118 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
-        public virtual gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
-            SearchAssignmentsAsync(new SearchAssignmentsRequest
+        public virtual gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(string parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllAssignmentsAsync(new SearchAllAssignmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Query = query ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
+        /// 
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name with location (project name could be the wildcard '-'),
+        /// e.g.:
+        /// `projects/-/locations/US`.
+        /// </param>
+        /// <param name="query">
+        /// Please specify resource name as assignee in the query.
+        /// 
+        /// Examples:
+        /// 
+        /// * `assignee=projects/myproject`
+        /// * `assignee=folders/123`
+        /// * `assignee=organizations/456`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllAssignments(new SearchAllAssignmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Query = query ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
+        /// 
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name with location (project name could be the wildcard '-'),
+        /// e.g.:
+        /// `projects/-/locations/US`.
+        /// </param>
+        /// <param name="query">
+        /// Please specify resource name as assignee in the query.
+        /// 
+        /// Examples:
+        /// 
+        /// * `assignee=projects/myproject`
+        /// * `assignee=folders/123`
+        /// * `assignee=organizations/456`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(gagr::LocationName parent, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchAllAssignmentsAsync(new SearchAllAssignmentsRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 Query = query ?? "",
@@ -3536,7 +3877,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the requested reservation, for example:
-        /// `projects/{project_id}/locations/{location_id}/bireservation`
+        /// `projects/{project_id}/locations/{location_id}/biReservation`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3551,7 +3892,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the requested reservation, for example:
-        /// `projects/{project_id}/locations/{location_id}/bireservation`
+        /// `projects/{project_id}/locations/{location_id}/biReservation`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3566,7 +3907,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the requested reservation, for example:
-        /// `projects/{project_id}/locations/{location_id}/bireservation`
+        /// `projects/{project_id}/locations/{location_id}/biReservation`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3578,7 +3919,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the requested reservation, for example:
-        /// `projects/{project_id}/locations/{location_id}/bireservation`
+        /// `projects/{project_id}/locations/{location_id}/biReservation`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -3593,7 +3934,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the requested reservation, for example:
-        /// `projects/{project_id}/locations/{location_id}/bireservation`
+        /// `projects/{project_id}/locations/{location_id}/biReservation`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3608,7 +3949,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// </summary>
         /// <param name="name">
         /// Required. Name of the requested reservation, for example:
-        /// `projects/{project_id}/locations/{location_id}/bireservation`
+        /// `projects/{project_id}/locations/{location_id}/biReservation`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3787,6 +4128,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         private readonly gaxgrpc::ApiCall<SearchAssignmentsRequest, SearchAssignmentsResponse> _callSearchAssignments;
 
+        private readonly gaxgrpc::ApiCall<SearchAllAssignmentsRequest, SearchAllAssignmentsResponse> _callSearchAllAssignments;
+
         private readonly gaxgrpc::ApiCall<MoveAssignmentRequest, Assignment> _callMoveAssignment;
 
         private readonly gaxgrpc::ApiCall<GetBiReservationRequest, BiReservation> _callGetBiReservation;
@@ -3848,9 +4191,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1
             _callDeleteAssignment = clientHelper.BuildApiCall<DeleteAssignmentRequest, wkt::Empty>(grpcClient.DeleteAssignmentAsync, grpcClient.DeleteAssignment, effectiveSettings.DeleteAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteAssignment);
             Modify_DeleteAssignmentApiCall(ref _callDeleteAssignment);
+#pragma warning disable CS0612
             _callSearchAssignments = clientHelper.BuildApiCall<SearchAssignmentsRequest, SearchAssignmentsResponse>(grpcClient.SearchAssignmentsAsync, grpcClient.SearchAssignments, effectiveSettings.SearchAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callSearchAssignments);
             Modify_SearchAssignmentsApiCall(ref _callSearchAssignments);
+            _callSearchAllAssignments = clientHelper.BuildApiCall<SearchAllAssignmentsRequest, SearchAllAssignmentsResponse>(grpcClient.SearchAllAssignmentsAsync, grpcClient.SearchAllAssignments, effectiveSettings.SearchAllAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchAllAssignments);
+            Modify_SearchAllAssignmentsApiCall(ref _callSearchAllAssignments);
             _callMoveAssignment = clientHelper.BuildApiCall<MoveAssignmentRequest, Assignment>(grpcClient.MoveAssignmentAsync, grpcClient.MoveAssignment, effectiveSettings.MoveAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMoveAssignment);
             Modify_MoveAssignmentApiCall(ref _callMoveAssignment);
@@ -3897,6 +4245,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
 
         partial void Modify_SearchAssignmentsApiCall(ref gaxgrpc::ApiCall<SearchAssignmentsRequest, SearchAssignmentsResponse> call);
 
+        partial void Modify_SearchAllAssignmentsApiCall(ref gaxgrpc::ApiCall<SearchAllAssignmentsRequest, SearchAllAssignmentsResponse> call);
+
         partial void Modify_MoveAssignmentApiCall(ref gaxgrpc::ApiCall<MoveAssignmentRequest, Assignment> call);
 
         partial void Modify_GetBiReservationApiCall(ref gaxgrpc::ApiCall<GetBiReservationRequest, BiReservation> call);
@@ -3939,6 +4289,8 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         partial void Modify_DeleteAssignmentRequest(ref DeleteAssignmentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchAssignmentsRequest(ref SearchAssignmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchAllAssignmentsRequest(ref SearchAllAssignmentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MoveAssignmentRequest(ref MoveAssignmentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4305,6 +4657,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
         /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
+        /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
         /// and the project that owns this reservation.
@@ -4345,6 +4702,11 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// * Assignments for all three entities (`organizationA`, `project1`, and
         /// `project2`) could all be created and mapped to the same or different
         /// reservations.
+        /// 
+        /// "None" assignments represent an absence of the assignment. Projects
+        /// assigned to None use on-demand pricing. To create a "None" assignment, use
+        /// "none" as a reservation_id in the parent. Example parent:
+        /// `projects/myproject/locations/US/reservations/none`.
         /// 
         /// Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have
         /// 'bigquery.admin' permissions on the project using the reservation
@@ -4479,7 +4841,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         }
 
         /// <summary>
-        /// Looks up assignments for a specified resource for a particular region.
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
         /// If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
@@ -4506,6 +4868,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignments(SearchAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchAssignmentsRequest(ref request, ref callSettings);
@@ -4513,7 +4876,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         }
 
         /// <summary>
-        /// Looks up assignments for a specified resource for a particular region.
+        /// Deprecated: Looks up assignments for a specified resource for a particular region.
         /// If the request is about a project:
         /// 
         /// 1. Assignments created on the project will be returned if they exist.
@@ -4540,10 +4903,73 @@ namespace Google.Cloud.BigQuery.Reservation.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<SearchAssignmentsResponse, Assignment> SearchAssignmentsAsync(SearchAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchAssignmentsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchAssignmentsRequest, SearchAssignmentsResponse, Assignment>(_callSearchAssignments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
+        /// 
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Assignment"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignments(SearchAllAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchAllAssignmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchAllAssignmentsRequest, SearchAllAssignmentsResponse, Assignment>(_callSearchAllAssignments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Looks up assignments for a specified resource for a particular region.
+        /// If the request is about a project:
+        /// 
+        /// 1. Assignments created on the project will be returned if they exist.
+        /// 2. Otherwise assignments created on the closest ancestor will be
+        /// returned.
+        /// 3. Assignments for different JobTypes will all be returned.
+        /// 
+        /// The same logic applies if the request is about a folder.
+        /// 
+        /// If the request is about an organization, then assignments created on the
+        /// organization will be returned (organization doesn't have ancestors).
+        /// 
+        /// Comparing to ListAssignments, there are some behavior
+        /// differences:
+        /// 
+        /// 1. permission on the assignee will be verified in this API.
+        /// 2. Hierarchy lookup (project-&amp;gt;folder-&amp;gt;organization) happens in this API.
+        /// 3. Parent here is `projects/*/locations/*`, instead of
+        /// `projects/*/locations/*reservations/*`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Assignment"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchAllAssignmentsResponse, Assignment> SearchAllAssignmentsAsync(SearchAllAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchAllAssignmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchAllAssignmentsRequest, SearchAllAssignmentsResponse, Assignment>(_callSearchAllAssignments, request, callSettings);
         }
 
         /// <summary>
@@ -4657,6 +5083,10 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     {
     }
 
+    public partial class SearchAllAssignmentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListReservationsResponse : gaxgrpc::IPageResponse<Reservation>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -4682,6 +5112,14 @@ namespace Google.Cloud.BigQuery.Reservation.V1
     }
 
     public partial class SearchAssignmentsResponse : gaxgrpc::IPageResponse<Assignment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Assignment> GetEnumerator() => Assignments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchAllAssignmentsResponse : gaxgrpc::IPageResponse<Assignment>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Assignment> GetEnumerator() => Assignments.GetEnumerator();
