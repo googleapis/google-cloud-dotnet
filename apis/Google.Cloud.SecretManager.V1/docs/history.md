@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.7.0, released 2021-09-01
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.6.0, released 2021-08-10
 
 - [Commit 9bd536a](https://github.com/googleapis/google-cloud-dotnet/commit/9bd536a): feat: In Secret Manager, users can now use filter to customize the output of ListSecrets/ListSecretVersions calls
