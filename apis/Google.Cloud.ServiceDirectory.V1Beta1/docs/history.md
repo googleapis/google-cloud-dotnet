@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.0.0-beta06, released 2021-09-01
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.0.0-beta05, released 2021-07-27
 
 - [Commit 14795e6](https://github.com/googleapis/google-cloud-dotnet/commit/14795e6): feat: Update Service Directory v1beta1 protos to include VPC Network field, and create/modify timestamp fields.
