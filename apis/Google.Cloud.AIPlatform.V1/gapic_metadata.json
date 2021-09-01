@@ -616,6 +616,105 @@
           }
         }
       }
+    },
+    "VizierService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VizierServiceClient",
+          "rpcs": {
+            "AddTrialMeasurement": {
+              "methods": [
+                "AddTrialMeasurement",
+                "AddTrialMeasurementAsync"
+              ]
+            },
+            "CheckTrialEarlyStoppingState": {
+              "methods": [
+                "CheckTrialEarlyStoppingState",
+                "CheckTrialEarlyStoppingStateAsync"
+              ]
+            },
+            "CompleteTrial": {
+              "methods": [
+                "CompleteTrial",
+                "CompleteTrialAsync"
+              ]
+            },
+            "CreateStudy": {
+              "methods": [
+                "CreateStudy",
+                "CreateStudyAsync"
+              ]
+            },
+            "CreateTrial": {
+              "methods": [
+                "CreateTrial",
+                "CreateTrialAsync"
+              ]
+            },
+            "DeleteStudy": {
+              "methods": [
+                "DeleteStudy",
+                "DeleteStudyAsync"
+              ]
+            },
+            "DeleteTrial": {
+              "methods": [
+                "DeleteTrial",
+                "DeleteTrialAsync"
+              ]
+            },
+            "GetStudy": {
+              "methods": [
+                "GetStudy",
+                "GetStudyAsync"
+              ]
+            },
+            "GetTrial": {
+              "methods": [
+                "GetTrial",
+                "GetTrialAsync"
+              ]
+            },
+            "ListOptimalTrials": {
+              "methods": [
+                "ListOptimalTrials",
+                "ListOptimalTrialsAsync"
+              ]
+            },
+            "ListStudies": {
+              "methods": [
+                "ListStudies",
+                "ListStudiesAsync"
+              ]
+            },
+            "ListTrials": {
+              "methods": [
+                "ListTrials",
+                "ListTrialsAsync"
+              ]
+            },
+            "LookupStudy": {
+              "methods": [
+                "LookupStudy",
+                "LookupStudyAsync"
+              ]
+            },
+            "StopTrial": {
+              "methods": [
+                "StopTrial",
+                "StopTrialAsync"
+              ]
+            },
+            "SuggestTrials": {
+              "methods": [
+                "SuggestTrials",
+                "SuggestTrialsAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
