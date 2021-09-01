@@ -2258,7 +2258,7 @@
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1Beta1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Certificate Authority",
       "productUrl": "https://cloud.google.com/certificate-authority-service/",
