@@ -2378,7 +2378,7 @@
       "protoPath": "google/cloud/servicedirectory/v1beta1",
       "productName": "Service Directory",
       "productUrl": "https://cloud.google.com/service-directory/",
-      "version": "1.0.0-beta05",
+      "version": "1.0.0-beta06",
       "type": "grpc",
       "description": "Recommended Google client library to access the Service Directory API version v1beta1.",
       "dependencies": {
