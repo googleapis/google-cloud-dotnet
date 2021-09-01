@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.6.0, released 2021-09-01
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.5.0, released 2021-04-29
 
 - [Commit 0599569](https://github.com/googleapis/google-cloud-dotnet/commit/0599569): feat: add bindings for folder/org type resources for protos in recommendations, insights and recommender_service to enable v1 api for folder/org
