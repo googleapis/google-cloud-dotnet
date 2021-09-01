@@ -2126,7 +2126,7 @@
     },
     {
       "id": "Google.Cloud.ResourceManager.V3",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Cloud Resource Manager",
       "productUrl": "https://cloud.google.com/resource-manager/docs",
