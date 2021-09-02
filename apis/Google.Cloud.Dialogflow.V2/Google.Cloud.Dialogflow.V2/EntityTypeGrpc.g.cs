@@ -225,6 +225,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -240,6 +248,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -254,6 +271,15 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -272,6 +298,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -286,6 +321,15 @@ namespace Google.Cloud.Dialogflow.V2 {
 
       /// <summary>
       /// Deletes entities in the specified entity type.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -595,6 +639,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -611,6 +663,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -624,6 +684,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -641,6 +709,14 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Updates/Creates multiple entity types in the specified agent.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: [BatchUpdateEntityTypesResponse][google.cloud.dialogflow.v2.BatchUpdateEntityTypesResponse]
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -654,6 +730,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes entity types in the specified agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -671,6 +756,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -684,6 +778,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes entity types in the specified agent.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -701,6 +804,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entity types in the specified agent.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -714,6 +826,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -731,6 +852,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -744,6 +874,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -761,6 +900,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Creates multiple new entities in the specified entity type.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -776,6 +924,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// Updates or creates multiple entities in the specified entity type. This
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -795,6 +952,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -810,6 +976,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// Updates or creates multiple entities in the specified entity type. This
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -829,6 +1004,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// method does not affect entities in the entity type that aren't explicitly
       /// specified in the request.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -842,6 +1026,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes entities in the specified entity type.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -859,6 +1052,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <summary>
       /// Deletes entities in the specified entity type.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/es/docs/training).
@@ -872,6 +1074,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes entities in the specified entity type.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
@@ -888,6 +1099,15 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       /// <summary>
       /// Deletes entities in the specified entity type.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/es/docs/how/long-running-operations).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train an agent prior to sending it queries. See the
       /// [training
