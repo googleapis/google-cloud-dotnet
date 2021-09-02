@@ -364,5 +364,48 @@ namespace Google.Analytics.Data.V1Beta.Snippets
             RunRealtimeReportResponse response = await betaAnalyticsDataClient.RunRealtimeReportAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for CheckCompatibility</summary>
+        public void CheckCompatibilityRequestObject()
+        {
+            // Snippet: CheckCompatibility(CheckCompatibilityRequest, CallSettings)
+            // Create client
+            BetaAnalyticsDataClient betaAnalyticsDataClient = BetaAnalyticsDataClient.Create();
+            // Initialize request argument(s)
+            CheckCompatibilityRequest request = new CheckCompatibilityRequest
+            {
+                Property = "",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                CompatibilityFilter = Compatibility.Unspecified,
+            };
+            // Make the request
+            CheckCompatibilityResponse response = betaAnalyticsDataClient.CheckCompatibility(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CheckCompatibilityAsync</summary>
+        public async Task CheckCompatibilityRequestObjectAsync()
+        {
+            // Snippet: CheckCompatibilityAsync(CheckCompatibilityRequest, CallSettings)
+            // Additional: CheckCompatibilityAsync(CheckCompatibilityRequest, CancellationToken)
+            // Create client
+            BetaAnalyticsDataClient betaAnalyticsDataClient = await BetaAnalyticsDataClient.CreateAsync();
+            // Initialize request argument(s)
+            CheckCompatibilityRequest request = new CheckCompatibilityRequest
+            {
+                Property = "",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                CompatibilityFilter = Compatibility.Unspecified,
+            };
+            // Make the request
+            CheckCompatibilityResponse response = await betaAnalyticsDataClient.CheckCompatibilityAsync(request);
+            // End snippet
+        }
     }
 }

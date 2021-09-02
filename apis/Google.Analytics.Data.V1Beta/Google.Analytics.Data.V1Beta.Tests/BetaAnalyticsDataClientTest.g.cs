@@ -567,5 +567,69 @@ namespace Google.Analytics.Data.V1Beta.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void CheckCompatibilityRequestObject()
+        {
+            moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient> mockGrpcClient = new moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            CheckCompatibilityRequest request = new CheckCompatibilityRequest
+            {
+                Property = "propertyc9b48d1a",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                CompatibilityFilter = Compatibility.Incompatible,
+            };
+            CheckCompatibilityResponse expectedResponse = new CheckCompatibilityResponse
+            {
+                DimensionCompatibilities =
+                {
+                    new DimensionCompatibility(),
+                },
+                MetricCompatibilities =
+                {
+                    new MetricCompatibility(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CheckCompatibility(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            CheckCompatibilityResponse response = client.CheckCompatibility(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CheckCompatibilityRequestObjectAsync()
+        {
+            moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient> mockGrpcClient = new moq::Mock<BetaAnalyticsData.BetaAnalyticsDataClient>(moq::MockBehavior.Strict);
+            CheckCompatibilityRequest request = new CheckCompatibilityRequest
+            {
+                Property = "propertyc9b48d1a",
+                Dimensions = { new Dimension(), },
+                Metrics = { new Metric(), },
+                DimensionFilter = new FilterExpression(),
+                MetricFilter = new FilterExpression(),
+                CompatibilityFilter = Compatibility.Incompatible,
+            };
+            CheckCompatibilityResponse expectedResponse = new CheckCompatibilityResponse
+            {
+                DimensionCompatibilities =
+                {
+                    new DimensionCompatibility(),
+                },
+                MetricCompatibilities =
+                {
+                    new MetricCompatibility(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.CheckCompatibilityAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CheckCompatibilityResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            BetaAnalyticsDataClient client = new BetaAnalyticsDataClientImpl(mockGrpcClient.Object, null);
+            CheckCompatibilityResponse responseCallSettings = await client.CheckCompatibilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CheckCompatibilityResponse responseCancellationToken = await client.CheckCompatibilityAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

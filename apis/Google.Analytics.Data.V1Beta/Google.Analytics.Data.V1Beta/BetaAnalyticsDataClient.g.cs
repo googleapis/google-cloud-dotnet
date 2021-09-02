@@ -49,6 +49,7 @@ namespace Google.Analytics.Data.V1Beta
             BatchRunPivotReportsSettings = existing.BatchRunPivotReportsSettings;
             GetMetadataSettings = existing.GetMetadataSettings;
             RunRealtimeReportSettings = existing.RunRealtimeReportSettings;
+            CheckCompatibilitySettings = existing.CheckCompatibilitySettings;
             OnCopy(existing);
         }
 
@@ -129,6 +130,22 @@ namespace Google.Analytics.Data.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings RunRealtimeReportSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BetaAnalyticsDataClient.CheckCompatibility</c> and <c>BetaAnalyticsDataClient.CheckCompatibilityAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CheckCompatibilitySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BetaAnalyticsDataSettings"/> object.</returns>
@@ -715,6 +732,60 @@ namespace Google.Analytics.Data.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RunRealtimeReportResponse> RunRealtimeReportAsync(RunRealtimeReportRequest request, st::CancellationToken cancellationToken) =>
             RunRealtimeReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// This compatibility method lists dimensions and metrics that can be added to
+        /// a report request and maintain compatibility. This method fails if the
+        /// request's dimensions and metrics are incompatible.
+        /// 
+        /// In Google Analytics, reports fail if they request incompatible dimensions
+        /// and/or metrics; in that case, you will need to remove dimensions and/or
+        /// metrics from the incompatible report until the report is compatible.
+        /// 
+        /// The Realtime and Core reports have different compatibility rules. This
+        /// method checks compatibility for Core reports.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CheckCompatibilityResponse CheckCompatibility(CheckCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This compatibility method lists dimensions and metrics that can be added to
+        /// a report request and maintain compatibility. This method fails if the
+        /// request's dimensions and metrics are incompatible.
+        /// 
+        /// In Google Analytics, reports fail if they request incompatible dimensions
+        /// and/or metrics; in that case, you will need to remove dimensions and/or
+        /// metrics from the incompatible report until the report is compatible.
+        /// 
+        /// The Realtime and Core reports have different compatibility rules. This
+        /// method checks compatibility for Core reports.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CheckCompatibilityResponse> CheckCompatibilityAsync(CheckCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// This compatibility method lists dimensions and metrics that can be added to
+        /// a report request and maintain compatibility. This method fails if the
+        /// request's dimensions and metrics are incompatible.
+        /// 
+        /// In Google Analytics, reports fail if they request incompatible dimensions
+        /// and/or metrics; in that case, you will need to remove dimensions and/or
+        /// metrics from the incompatible report until the report is compatible.
+        /// 
+        /// The Realtime and Core reports have different compatibility rules. This
+        /// method checks compatibility for Core reports.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CheckCompatibilityResponse> CheckCompatibilityAsync(CheckCompatibilityRequest request, st::CancellationToken cancellationToken) =>
+            CheckCompatibilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>BetaAnalyticsData client wrapper implementation, for convenient use.</summary>
@@ -734,6 +805,8 @@ namespace Google.Analytics.Data.V1Beta
         private readonly gaxgrpc::ApiCall<GetMetadataRequest, Metadata> _callGetMetadata;
 
         private readonly gaxgrpc::ApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse> _callRunRealtimeReport;
+
+        private readonly gaxgrpc::ApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse> _callCheckCompatibility;
 
         /// <summary>
         /// Constructs a client wrapper for the BetaAnalyticsData service, with the specified gRPC client and settings.
@@ -763,6 +836,9 @@ namespace Google.Analytics.Data.V1Beta
             _callRunRealtimeReport = clientHelper.BuildApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse>(grpcClient.RunRealtimeReportAsync, grpcClient.RunRealtimeReport, effectiveSettings.RunRealtimeReportSettings).WithGoogleRequestParam("property", request => request.Property);
             Modify_ApiCall(ref _callRunRealtimeReport);
             Modify_RunRealtimeReportApiCall(ref _callRunRealtimeReport);
+            _callCheckCompatibility = clientHelper.BuildApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse>(grpcClient.CheckCompatibilityAsync, grpcClient.CheckCompatibility, effectiveSettings.CheckCompatibilitySettings).WithGoogleRequestParam("property", request => request.Property);
+            Modify_ApiCall(ref _callCheckCompatibility);
+            Modify_CheckCompatibilityApiCall(ref _callCheckCompatibility);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -780,6 +856,8 @@ namespace Google.Analytics.Data.V1Beta
 
         partial void Modify_RunRealtimeReportApiCall(ref gaxgrpc::ApiCall<RunRealtimeReportRequest, RunRealtimeReportResponse> call);
 
+        partial void Modify_CheckCompatibilityApiCall(ref gaxgrpc::ApiCall<CheckCompatibilityRequest, CheckCompatibilityResponse> call);
+
         partial void OnConstruction(BetaAnalyticsData.BetaAnalyticsDataClient grpcClient, BetaAnalyticsDataSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BetaAnalyticsData client</summary>
@@ -796,6 +874,8 @@ namespace Google.Analytics.Data.V1Beta
         partial void Modify_GetMetadataRequest(ref GetMetadataRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RunRealtimeReportRequest(ref RunRealtimeReportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CheckCompatibilityRequest(ref CheckCompatibilityRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns a customized report of your Google Analytics event data. Reports
@@ -985,6 +1065,48 @@ namespace Google.Analytics.Data.V1Beta
         {
             Modify_RunRealtimeReportRequest(ref request, ref callSettings);
             return _callRunRealtimeReport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// This compatibility method lists dimensions and metrics that can be added to
+        /// a report request and maintain compatibility. This method fails if the
+        /// request's dimensions and metrics are incompatible.
+        /// 
+        /// In Google Analytics, reports fail if they request incompatible dimensions
+        /// and/or metrics; in that case, you will need to remove dimensions and/or
+        /// metrics from the incompatible report until the report is compatible.
+        /// 
+        /// The Realtime and Core reports have different compatibility rules. This
+        /// method checks compatibility for Core reports.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CheckCompatibilityResponse CheckCompatibility(CheckCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckCompatibilityRequest(ref request, ref callSettings);
+            return _callCheckCompatibility.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// This compatibility method lists dimensions and metrics that can be added to
+        /// a report request and maintain compatibility. This method fails if the
+        /// request's dimensions and metrics are incompatible.
+        /// 
+        /// In Google Analytics, reports fail if they request incompatible dimensions
+        /// and/or metrics; in that case, you will need to remove dimensions and/or
+        /// metrics from the incompatible report until the report is compatible.
+        /// 
+        /// The Realtime and Core reports have different compatibility rules. This
+        /// method checks compatibility for Core reports.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CheckCompatibilityResponse> CheckCompatibilityAsync(CheckCompatibilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CheckCompatibilityRequest(ref request, ref callSettings);
+            return _callCheckCompatibility.Async(request, callSettings);
         }
     }
 }

@@ -72,6 +72,8 @@ namespace Google.Analytics.Data.V1Beta {
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Beta.Metadata> __Marshaller_google_analytics_data_v1beta_Metadata = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Beta.Metadata.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest> __Marshaller_google_analytics_data_v1beta_RunRealtimeReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse> __Marshaller_google_analytics_data_v1beta_RunRealtimeReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest> __Marshaller_google_analytics_data_v1beta_CheckCompatibilityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse> __Marshaller_google_analytics_data_v1beta_CheckCompatibilityResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse.Parser));
 
     static readonly grpc::Method<global::Google.Analytics.Data.V1Beta.RunReportRequest, global::Google.Analytics.Data.V1Beta.RunReportResponse> __Method_RunReport = new grpc::Method<global::Google.Analytics.Data.V1Beta.RunReportRequest, global::Google.Analytics.Data.V1Beta.RunReportResponse>(
         grpc::MethodType.Unary,
@@ -114,6 +116,13 @@ namespace Google.Analytics.Data.V1Beta {
         "RunRealtimeReport",
         __Marshaller_google_analytics_data_v1beta_RunRealtimeReportRequest,
         __Marshaller_google_analytics_data_v1beta_RunRealtimeReportResponse);
+
+    static readonly grpc::Method<global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest, global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse> __Method_CheckCompatibility = new grpc::Method<global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest, global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CheckCompatibility",
+        __Marshaller_google_analytics_data_v1beta_CheckCompatibilityRequest,
+        __Marshaller_google_analytics_data_v1beta_CheckCompatibilityResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -210,6 +219,26 @@ namespace Google.Analytics.Data.V1Beta {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse> RunRealtimeReport(global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// This compatibility method lists dimensions and metrics that can be added to
+      /// a report request and maintain compatibility. This method fails if the
+      /// request's dimensions and metrics are incompatible.
+      ///
+      /// In Google Analytics, reports fail if they request incompatible dimensions
+      /// and/or metrics; in that case, you will need to remove dimensions and/or
+      /// metrics from the incompatible report until the report is compatible.
+      ///
+      /// The Realtime and Core reports have different compatibility rules. This
+      /// method checks compatibility for Core reports.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse> CheckCompatibility(global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -595,6 +624,86 @@ namespace Google.Analytics.Data.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunRealtimeReport, null, options, request);
       }
+      /// <summary>
+      /// This compatibility method lists dimensions and metrics that can be added to
+      /// a report request and maintain compatibility. This method fails if the
+      /// request's dimensions and metrics are incompatible.
+      ///
+      /// In Google Analytics, reports fail if they request incompatible dimensions
+      /// and/or metrics; in that case, you will need to remove dimensions and/or
+      /// metrics from the incompatible report until the report is compatible.
+      ///
+      /// The Realtime and Core reports have different compatibility rules. This
+      /// method checks compatibility for Core reports.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse CheckCompatibility(global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckCompatibility(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This compatibility method lists dimensions and metrics that can be added to
+      /// a report request and maintain compatibility. This method fails if the
+      /// request's dimensions and metrics are incompatible.
+      ///
+      /// In Google Analytics, reports fail if they request incompatible dimensions
+      /// and/or metrics; in that case, you will need to remove dimensions and/or
+      /// metrics from the incompatible report until the report is compatible.
+      ///
+      /// The Realtime and Core reports have different compatibility rules. This
+      /// method checks compatibility for Core reports.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse CheckCompatibility(global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CheckCompatibility, null, options, request);
+      }
+      /// <summary>
+      /// This compatibility method lists dimensions and metrics that can be added to
+      /// a report request and maintain compatibility. This method fails if the
+      /// request's dimensions and metrics are incompatible.
+      ///
+      /// In Google Analytics, reports fail if they request incompatible dimensions
+      /// and/or metrics; in that case, you will need to remove dimensions and/or
+      /// metrics from the incompatible report until the report is compatible.
+      ///
+      /// The Realtime and Core reports have different compatibility rules. This
+      /// method checks compatibility for Core reports.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse> CheckCompatibilityAsync(global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CheckCompatibilityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// This compatibility method lists dimensions and metrics that can be added to
+      /// a report request and maintain compatibility. This method fails if the
+      /// request's dimensions and metrics are incompatible.
+      ///
+      /// In Google Analytics, reports fail if they request incompatible dimensions
+      /// and/or metrics; in that case, you will need to remove dimensions and/or
+      /// metrics from the incompatible report until the report is compatible.
+      ///
+      /// The Realtime and Core reports have different compatibility rules. This
+      /// method checks compatibility for Core reports.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse> CheckCompatibilityAsync(global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CheckCompatibility, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override BetaAnalyticsDataClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -612,7 +721,8 @@ namespace Google.Analytics.Data.V1Beta {
           .AddMethod(__Method_BatchRunReports, serviceImpl.BatchRunReports)
           .AddMethod(__Method_BatchRunPivotReports, serviceImpl.BatchRunPivotReports)
           .AddMethod(__Method_GetMetadata, serviceImpl.GetMetadata)
-          .AddMethod(__Method_RunRealtimeReport, serviceImpl.RunRealtimeReport).Build();
+          .AddMethod(__Method_RunRealtimeReport, serviceImpl.RunRealtimeReport)
+          .AddMethod(__Method_CheckCompatibility, serviceImpl.CheckCompatibility).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -627,6 +737,7 @@ namespace Google.Analytics.Data.V1Beta {
       serviceBinder.AddMethod(__Method_BatchRunPivotReports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest, global::Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse>(serviceImpl.BatchRunPivotReports));
       serviceBinder.AddMethod(__Method_GetMetadata, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Beta.GetMetadataRequest, global::Google.Analytics.Data.V1Beta.Metadata>(serviceImpl.GetMetadata));
       serviceBinder.AddMethod(__Method_RunRealtimeReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Beta.RunRealtimeReportRequest, global::Google.Analytics.Data.V1Beta.RunRealtimeReportResponse>(serviceImpl.RunRealtimeReport));
+      serviceBinder.AddMethod(__Method_CheckCompatibility, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Beta.CheckCompatibilityRequest, global::Google.Analytics.Data.V1Beta.CheckCompatibilityResponse>(serviceImpl.CheckCompatibility));
     }
 
   }

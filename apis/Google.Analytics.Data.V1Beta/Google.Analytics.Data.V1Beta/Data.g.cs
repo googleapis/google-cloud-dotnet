@@ -136,29 +136,41 @@ namespace Google.Analytics.Data.V1Beta {
             "dW90YVN0YXR1cxJcCilwb3RlbnRpYWxseV90aHJlc2hvbGRlZF9yZXF1ZXN0",
             "c19wZXJfaG91chgFIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
             "dGEuUXVvdGFTdGF0dXMiMgoLUXVvdGFTdGF0dXMSEAoIY29uc3VtZWQYASAB",
-            "KAUSEQoJcmVtYWluaW5nGAIgASgFIoQBChFEaW1lbnNpb25NZXRhZGF0YRIQ",
+            "KAUSEQoJcmVtYWluaW5nGAIgASgFIpYBChFEaW1lbnNpb25NZXRhZGF0YRIQ",
             "CghhcGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0",
             "aW9uGAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25hbWVzGAQgAygJEhkKEWN1",
-            "c3RvbV9kZWZpbml0aW9uGAUgASgIIs0BCg5NZXRyaWNNZXRhZGF0YRIQCghh",
-            "cGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9u",
-            "GAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25hbWVzGAQgAygJEjYKBHR5cGUY",
-            "BSABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1R5",
-            "cGUSEgoKZXhwcmVzc2lvbhgGIAEoCRIZChFjdXN0b21fZGVmaW5pdGlvbhgH",
-            "IAEoCCpnChFNZXRyaWNBZ2dyZWdhdGlvbhIiCh5NRVRSSUNfQUdHUkVHQVRJ",
-            "T05fVU5TUEVDSUZJRUQQABIJCgVUT1RBTBABEgsKB01JTklNVU0QBRILCgdN",
-            "QVhJTVVNEAYSCQoFQ09VTlQQBCqBAgoKTWV0cmljVHlwZRIbChdNRVRSSUNf",
-            "VFlQRV9VTlNQRUNJRklFRBAAEhAKDFRZUEVfSU5URUdFUhABEg4KClRZUEVf",
-            "RkxPQVQQAhIQCgxUWVBFX1NFQ09ORFMQBBIVChFUWVBFX01JTExJU0VDT05E",
-            "UxAFEhAKDFRZUEVfTUlOVVRFUxAGEg4KClRZUEVfSE9VUlMQBxIRCg1UWVBF",
-            "X1NUQU5EQVJEEAgSEQoNVFlQRV9DVVJSRU5DWRAJEg0KCVRZUEVfRkVFVBAK",
-            "Eg4KClRZUEVfTUlMRVMQCxIPCgtUWVBFX01FVEVSUxAMEhMKD1RZUEVfS0lM",
-            "T01FVEVSUxANQnkKIGNvbS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
-            "QhFSZXBvcnRpbmdBcGlQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2FuYWx5dGljcy9kYXRhL3YxYmV0YTtkYXRhYgZw",
-            "cm90bzM="));
+            "c3RvbV9kZWZpbml0aW9uGAUgASgIEhAKCGNhdGVnb3J5GAcgASgJIt8BCg5N",
+            "ZXRyaWNNZXRhZGF0YRIQCghhcGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIg",
+            "ASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25h",
+            "bWVzGAQgAygJEjYKBHR5cGUYBSABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmRh",
+            "dGEudjFiZXRhLk1ldHJpY1R5cGUSEgoKZXhwcmVzc2lvbhgGIAEoCRIZChFj",
+            "dXN0b21fZGVmaW5pdGlvbhgHIAEoCBIQCghjYXRlZ29yeRgKIAEoCSLcAQoW",
+            "RGltZW5zaW9uQ29tcGF0aWJpbGl0eRJQChJkaW1lbnNpb25fbWV0YWRhdGEY",
+            "ASABKAsyLy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lv",
+            "bk1ldGFkYXRhSACIAQESRwoNY29tcGF0aWJpbGl0eRgCIAEoDjIrLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuQ29tcGF0aWJpbGl0eUgBiAEBQhUK",
+            "E19kaW1lbnNpb25fbWV0YWRhdGFCEAoOX2NvbXBhdGliaWxpdHki0AEKE01l",
+            "dHJpY0NvbXBhdGliaWxpdHkSSgoPbWV0cmljX21ldGFkYXRhGAEgASgLMiwu",
+            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNNZXRhZGF0YUgA",
+            "iAEBEkcKDWNvbXBhdGliaWxpdHkYAiABKA4yKy5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhLkNvbXBhdGliaWxpdHlIAYgBAUISChBfbWV0cmljX21l",
+            "dGFkYXRhQhAKDl9jb21wYXRpYmlsaXR5KmcKEU1ldHJpY0FnZ3JlZ2F0aW9u",
+            "EiIKHk1FVFJJQ19BR0dSRUdBVElPTl9VTlNQRUNJRklFRBAAEgkKBVRPVEFM",
+            "EAESCwoHTUlOSU1VTRAFEgsKB01BWElNVU0QBhIJCgVDT1VOVBAEKoECCgpN",
+            "ZXRyaWNUeXBlEhsKF01FVFJJQ19UWVBFX1VOU1BFQ0lGSUVEEAASEAoMVFlQ",
+            "RV9JTlRFR0VSEAESDgoKVFlQRV9GTE9BVBACEhAKDFRZUEVfU0VDT05EUxAE",
+            "EhUKEVRZUEVfTUlMTElTRUNPTkRTEAUSEAoMVFlQRV9NSU5VVEVTEAYSDgoK",
+            "VFlQRV9IT1VSUxAHEhEKDVRZUEVfU1RBTkRBUkQQCBIRCg1UWVBFX0NVUlJF",
+            "TkNZEAkSDQoJVFlQRV9GRUVUEAoSDgoKVFlQRV9NSUxFUxALEg8KC1RZUEVf",
+            "TUVURVJTEAwSEwoPVFlQRV9LSUxPTUVURVJTEA0qUAoNQ29tcGF0aWJpbGl0",
+            "eRIdChlDT01QQVRJQklMSVRZX1VOU1BFQ0lGSUVEEAASDgoKQ09NUEFUSUJM",
+            "RRABEhAKDElOQ09NUEFUSUJMRRACQnkKIGNvbS5nb29nbGUuYW5hbHl0aWNz",
+            "LmRhdGEudjFiZXRhQhFSZXBvcnRpbmdBcGlQcm90b1ABWkBnb29nbGUuZ29s",
+            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FuYWx5dGljcy9kYXRhL3Yx",
+            "YmV0YTtkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), typeof(global::Google.Analytics.Data.V1Beta.Compatibility), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DateRange), global::Google.Analytics.Data.V1Beta.DateRange.Parser, new[]{ "StartDate", "EndDate", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MinuteRange), global::Google.Analytics.Data.V1Beta.MinuteRange.Parser, new[]{ "StartMinutesAgo", "EndMinutesAgo", "Name" }, new[]{ "StartMinutesAgo", "EndMinutesAgo" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Dimension), global::Google.Analytics.Data.V1Beta.Dimension.Parser, new[]{ "Name", "DimensionExpression" }, null, null, null, null),
@@ -190,8 +202,10 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.NumericValue), global::Google.Analytics.Data.V1Beta.NumericValue.Parser, new[]{ "Int64Value", "DoubleValue" }, new[]{ "OneValue" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PropertyQuota), global::Google.Analytics.Data.V1Beta.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour", "PotentiallyThresholdedRequestsPerHour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.QuotaStatus), global::Google.Analytics.Data.V1Beta.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionMetadata), global::Google.Analytics.Data.V1Beta.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "CustomDefinition" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata), global::Google.Analytics.Data.V1Beta.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionMetadata), global::Google.Analytics.Data.V1Beta.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "CustomDefinition", "Category" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata), global::Google.Analytics.Data.V1Beta.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition", "Category" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionCompatibility), global::Google.Analytics.Data.V1Beta.DimensionCompatibility.Parser, new[]{ "DimensionMetadata", "Compatibility" }, new[]{ "DimensionMetadata", "Compatibility" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricCompatibility), global::Google.Analytics.Data.V1Beta.MetricCompatibility.Parser, new[]{ "MetricMetadata", "Compatibility" }, new[]{ "MetricMetadata", "Compatibility" }, null, null, null)
           }));
     }
     #endregion
@@ -280,6 +294,26 @@ namespace Google.Analytics.Data.V1Beta {
     /// A length in kilometers; a special floating point type.
     /// </summary>
     [pbr::OriginalName("TYPE_KILOMETERS")] TypeKilometers = 13,
+  }
+
+  /// <summary>
+  /// The compatibility types for a single dimension or metric.
+  /// </summary>
+  public enum Compatibility {
+    /// <summary>
+    /// Unspecified compatibility.
+    /// </summary>
+    [pbr::OriginalName("COMPATIBILITY_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The dimension or metric is compatible. This dimension or metric can be
+    /// successfully added to a report.
+    /// </summary>
+    [pbr::OriginalName("COMPATIBLE")] Compatible = 1,
+    /// <summary>
+    /// The dimension or metric is incompatible. This dimension or metric cannot be
+    /// successfully added to a report.
+    /// </summary>
+    [pbr::OriginalName("INCOMPATIBLE")] Incompatible = 2,
   }
 
   #endregion
@@ -9209,6 +9243,7 @@ namespace Google.Analytics.Data.V1Beta {
       description_ = other.description_;
       deprecatedApiNames_ = other.deprecatedApiNames_.Clone();
       customDefinition_ = other.customDefinition_;
+      category_ = other.category_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9291,6 +9326,21 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "category" field.</summary>
+    public const int CategoryFieldNumber = 7;
+    private string category_ = "";
+    /// <summary>
+    /// The display name of the category that this dimension belongs to. Similar
+    /// dimensions and metrics are categorized together.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Category {
+      get { return category_; }
+      set {
+        category_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DimensionMetadata);
@@ -9309,6 +9359,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (Description != other.Description) return false;
       if(!deprecatedApiNames_.Equals(other.deprecatedApiNames_)) return false;
       if (CustomDefinition != other.CustomDefinition) return false;
+      if (Category != other.Category) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9320,6 +9371,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= deprecatedApiNames_.GetHashCode();
       if (CustomDefinition != false) hash ^= CustomDefinition.GetHashCode();
+      if (Category.Length != 0) hash ^= Category.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9353,6 +9405,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(40);
         output.WriteBool(CustomDefinition);
       }
+      if (Category.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Category);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9379,6 +9435,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(40);
         output.WriteBool(CustomDefinition);
       }
+      if (Category.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Category);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9400,6 +9460,9 @@ namespace Google.Analytics.Data.V1Beta {
       size += deprecatedApiNames_.CalculateSize(_repeated_deprecatedApiNames_codec);
       if (CustomDefinition != false) {
         size += 1 + 1;
+      }
+      if (Category.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Category);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9424,6 +9487,9 @@ namespace Google.Analytics.Data.V1Beta {
       deprecatedApiNames_.Add(other.deprecatedApiNames_);
       if (other.CustomDefinition != false) {
         CustomDefinition = other.CustomDefinition;
+      }
+      if (other.Category.Length != 0) {
+        Category = other.Category;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9459,6 +9525,10 @@ namespace Google.Analytics.Data.V1Beta {
             CustomDefinition = input.ReadBool();
             break;
           }
+          case 58: {
+            Category = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -9491,6 +9561,10 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 40: {
             CustomDefinition = input.ReadBool();
+            break;
+          }
+          case 58: {
+            Category = input.ReadString();
             break;
           }
         }
@@ -9539,6 +9613,7 @@ namespace Google.Analytics.Data.V1Beta {
       type_ = other.type_;
       expression_ = other.expression_;
       customDefinition_ = other.customDefinition_;
+      category_ = other.category_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9651,6 +9726,21 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "category" field.</summary>
+    public const int CategoryFieldNumber = 10;
+    private string category_ = "";
+    /// <summary>
+    /// The display name of the category that this metrics belongs to. Similar
+    /// dimensions and metrics are categorized together.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Category {
+      get { return category_; }
+      set {
+        category_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MetricMetadata);
@@ -9671,6 +9761,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (Type != other.Type) return false;
       if (Expression != other.Expression) return false;
       if (CustomDefinition != other.CustomDefinition) return false;
+      if (Category != other.Category) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9684,6 +9775,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (Type != global::Google.Analytics.Data.V1Beta.MetricType.Unspecified) hash ^= Type.GetHashCode();
       if (Expression.Length != 0) hash ^= Expression.GetHashCode();
       if (CustomDefinition != false) hash ^= CustomDefinition.GetHashCode();
+      if (Category.Length != 0) hash ^= Category.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9725,6 +9817,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(56);
         output.WriteBool(CustomDefinition);
       }
+      if (Category.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Category);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9759,6 +9855,10 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(56);
         output.WriteBool(CustomDefinition);
       }
+      if (Category.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Category);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9786,6 +9886,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (CustomDefinition != false) {
         size += 1 + 1;
+      }
+      if (Category.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Category);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9816,6 +9919,9 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (other.CustomDefinition != false) {
         CustomDefinition = other.CustomDefinition;
+      }
+      if (other.Category.Length != 0) {
+        Category = other.Category;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9859,6 +9965,10 @@ namespace Google.Analytics.Data.V1Beta {
             CustomDefinition = input.ReadBool();
             break;
           }
+          case 82: {
+            Category = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -9899,6 +10009,494 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 56: {
             CustomDefinition = input.ReadBool();
+            break;
+          }
+          case 82: {
+            Category = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The compatibility for a single dimension.
+  /// </summary>
+  public sealed partial class DimensionCompatibility : pb::IMessage<DimensionCompatibility>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DimensionCompatibility> _parser = new pb::MessageParser<DimensionCompatibility>(() => new DimensionCompatibility());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DimensionCompatibility> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionCompatibility() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionCompatibility(DimensionCompatibility other) : this() {
+      _hasBits0 = other._hasBits0;
+      dimensionMetadata_ = other.dimensionMetadata_ != null ? other.dimensionMetadata_.Clone() : null;
+      compatibility_ = other.compatibility_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DimensionCompatibility Clone() {
+      return new DimensionCompatibility(this);
+    }
+
+    /// <summary>Field number for the "dimension_metadata" field.</summary>
+    public const int DimensionMetadataFieldNumber = 1;
+    private global::Google.Analytics.Data.V1Beta.DimensionMetadata dimensionMetadata_;
+    /// <summary>
+    /// The dimension metadata contains the API name for this compatibility
+    /// information. The dimension metadata also contains other helpful information
+    /// like the UI name and description.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Beta.DimensionMetadata DimensionMetadata {
+      get { return dimensionMetadata_; }
+      set {
+        dimensionMetadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "compatibility" field.</summary>
+    public const int CompatibilityFieldNumber = 2;
+    private global::Google.Analytics.Data.V1Beta.Compatibility compatibility_;
+    /// <summary>
+    /// The compatibility of this dimension. If the compatibility is COMPATIBLE,
+    /// this dimension can be successfully added to the report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Beta.Compatibility Compatibility {
+      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified; } }
+      set {
+        _hasBits0 |= 1;
+        compatibility_ = value;
+      }
+    }
+    /// <summary>Gets whether the "compatibility" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool HasCompatibility {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "compatibility" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearCompatibility() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DimensionCompatibility);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DimensionCompatibility other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DimensionMetadata, other.DimensionMetadata)) return false;
+      if (Compatibility != other.Compatibility) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (dimensionMetadata_ != null) hash ^= DimensionMetadata.GetHashCode();
+      if (HasCompatibility) hash ^= Compatibility.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (dimensionMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DimensionMetadata);
+      }
+      if (HasCompatibility) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Compatibility);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dimensionMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DimensionMetadata);
+      }
+      if (HasCompatibility) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Compatibility);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (dimensionMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DimensionMetadata);
+      }
+      if (HasCompatibility) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Compatibility);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DimensionCompatibility other) {
+      if (other == null) {
+        return;
+      }
+      if (other.dimensionMetadata_ != null) {
+        if (dimensionMetadata_ == null) {
+          DimensionMetadata = new global::Google.Analytics.Data.V1Beta.DimensionMetadata();
+        }
+        DimensionMetadata.MergeFrom(other.DimensionMetadata);
+      }
+      if (other.HasCompatibility) {
+        Compatibility = other.Compatibility;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (dimensionMetadata_ == null) {
+              DimensionMetadata = new global::Google.Analytics.Data.V1Beta.DimensionMetadata();
+            }
+            input.ReadMessage(DimensionMetadata);
+            break;
+          }
+          case 16: {
+            Compatibility = (global::Google.Analytics.Data.V1Beta.Compatibility) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (dimensionMetadata_ == null) {
+              DimensionMetadata = new global::Google.Analytics.Data.V1Beta.DimensionMetadata();
+            }
+            input.ReadMessage(DimensionMetadata);
+            break;
+          }
+          case 16: {
+            Compatibility = (global::Google.Analytics.Data.V1Beta.Compatibility) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The compatibility for a single metric.
+  /// </summary>
+  public sealed partial class MetricCompatibility : pb::IMessage<MetricCompatibility>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MetricCompatibility> _parser = new pb::MessageParser<MetricCompatibility>(() => new MetricCompatibility());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<MetricCompatibility> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Analytics.Data.V1Beta.DataReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricCompatibility() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricCompatibility(MetricCompatibility other) : this() {
+      _hasBits0 = other._hasBits0;
+      metricMetadata_ = other.metricMetadata_ != null ? other.metricMetadata_.Clone() : null;
+      compatibility_ = other.compatibility_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricCompatibility Clone() {
+      return new MetricCompatibility(this);
+    }
+
+    /// <summary>Field number for the "metric_metadata" field.</summary>
+    public const int MetricMetadataFieldNumber = 1;
+    private global::Google.Analytics.Data.V1Beta.MetricMetadata metricMetadata_;
+    /// <summary>
+    /// The metric metadata contains the API name for this compatibility
+    /// information. The metric metadata also contains other helpful information
+    /// like the UI name and description.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Beta.MetricMetadata MetricMetadata {
+      get { return metricMetadata_; }
+      set {
+        metricMetadata_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "compatibility" field.</summary>
+    public const int CompatibilityFieldNumber = 2;
+    private global::Google.Analytics.Data.V1Beta.Compatibility compatibility_;
+    /// <summary>
+    /// The compatibility of this metric. If the compatibility is COMPATIBLE,
+    /// this metric can be successfully added to the report.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Analytics.Data.V1Beta.Compatibility Compatibility {
+      get { if ((_hasBits0 & 1) != 0) { return compatibility_; } else { return global::Google.Analytics.Data.V1Beta.Compatibility.Unspecified; } }
+      set {
+        _hasBits0 |= 1;
+        compatibility_ = value;
+      }
+    }
+    /// <summary>Gets whether the "compatibility" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool HasCompatibility {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "compatibility" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearCompatibility() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as MetricCompatibility);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(MetricCompatibility other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(MetricMetadata, other.MetricMetadata)) return false;
+      if (Compatibility != other.Compatibility) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (metricMetadata_ != null) hash ^= MetricMetadata.GetHashCode();
+      if (HasCompatibility) hash ^= Compatibility.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (metricMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MetricMetadata);
+      }
+      if (HasCompatibility) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Compatibility);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (metricMetadata_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(MetricMetadata);
+      }
+      if (HasCompatibility) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Compatibility);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (metricMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MetricMetadata);
+      }
+      if (HasCompatibility) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Compatibility);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(MetricCompatibility other) {
+      if (other == null) {
+        return;
+      }
+      if (other.metricMetadata_ != null) {
+        if (metricMetadata_ == null) {
+          MetricMetadata = new global::Google.Analytics.Data.V1Beta.MetricMetadata();
+        }
+        MetricMetadata.MergeFrom(other.MetricMetadata);
+      }
+      if (other.HasCompatibility) {
+        Compatibility = other.Compatibility;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (metricMetadata_ == null) {
+              MetricMetadata = new global::Google.Analytics.Data.V1Beta.MetricMetadata();
+            }
+            input.ReadMessage(MetricMetadata);
+            break;
+          }
+          case 16: {
+            Compatibility = (global::Google.Analytics.Data.V1Beta.Compatibility) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (metricMetadata_ == null) {
+              MetricMetadata = new global::Google.Analytics.Data.V1Beta.MetricMetadata();
+            }
+            input.ReadMessage(MetricMetadata);
+            break;
+          }
+          case 16: {
+            Compatibility = (global::Google.Analytics.Data.V1Beta.Compatibility) input.ReadEnum();
             break;
           }
         }
