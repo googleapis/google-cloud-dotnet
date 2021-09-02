@@ -22,6 +22,12 @@
                 "BatchRunReportsAsync"
               ]
             },
+            "CheckCompatibility": {
+              "methods": [
+                "CheckCompatibility",
+                "CheckCompatibilityAsync"
+              ]
+            },
             "GetMetadata": {
               "methods": [
                 "GetMetadata",
