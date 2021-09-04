@@ -25,90 +25,138 @@ namespace Google.Cloud.OsConfig.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvb3Njb25maWcvdjEvaW52ZW50b3J5LnByb3RvEhhn",
-            "b29nbGUuY2xvdWQub3Njb25maWcudjEaH2dvb2dsZS9wcm90b2J1Zi90aW1l",
-            "c3RhbXAucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUucHJvdG8inxQKCUludmVu",
-            "dG9yeRI7Cgdvc19pbmZvGAEgASgLMiouZ29vZ2xlLmNsb3VkLm9zY29uZmln",
-            "LnYxLkludmVudG9yeS5Pc0luZm8SPQoFaXRlbXMYAiADKAsyLi5nb29nbGUu",
-            "Y2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5Lkl0ZW1zRW50cnkauAEKBk9z",
-            "SW5mbxIQCghob3N0bmFtZRgJIAEoCRIRCglsb25nX25hbWUYAiABKAkSEgoK",
-            "c2hvcnRfbmFtZRgDIAEoCRIPCgd2ZXJzaW9uGAQgASgJEhQKDGFyY2hpdGVj",
-            "dHVyZRgFIAEoCRIWCg5rZXJuZWxfdmVyc2lvbhgGIAEoCRIWCg5rZXJuZWxf",
-            "cmVsZWFzZRgHIAEoCRIeChZvc2NvbmZpZ19hZ2VudF92ZXJzaW9uGAggASgJ",
-            "GrcECgRJdGVtEgoKAmlkGAEgASgJEkgKC29yaWdpbl90eXBlGAIgASgOMjMu",
-            "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5JdGVtLk9yaWdp",
-            "blR5cGUSLwoLY3JlYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEi8KC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcBI7CgR0eXBlGAUgASgOMi0uZ29vZ2xlLmNsb3VkLm9z",
-            "Y29uZmlnLnYxLkludmVudG9yeS5JdGVtLlR5cGUSUAoRaW5zdGFsbGVkX3Bh",
-            "Y2thZ2UYBiABKAsyMy5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50",
-            "b3J5LlNvZnR3YXJlUGFja2FnZUgAElAKEWF2YWlsYWJsZV9wYWNrYWdlGAcg",
-            "ASgLMjMuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5Tb2Z0",
-            "d2FyZVBhY2thZ2VIACI/CgpPcmlnaW5UeXBlEhsKF09SSUdJTl9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASFAoQSU5WRU5UT1JZX1JFUE9SVBABIkoKBFR5cGUSFAoQ",
-            "VFlQRV9VTlNQRUNJRklFRBAAEhUKEUlOU1RBTExFRF9QQUNLQUdFEAESFQoR",
-            "QVZBSUxBQkxFX1BBQ0tBR0UQAkIJCgdkZXRhaWxzGvIFCg9Tb2Z0d2FyZVBh",
-            "Y2thZ2USSwoLeXVtX3BhY2thZ2UYASABKAsyNC5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjEuSW52ZW50b3J5LlZlcnNpb25lZFBhY2thZ2VIABJLCgthcHRf",
-            "cGFja2FnZRgCIAEoCzI0Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZl",
-            "bnRvcnkuVmVyc2lvbmVkUGFja2FnZUgAEk4KDnp5cHBlcl9wYWNrYWdlGAMg",
-            "ASgLMjQuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5WZXJz",
-            "aW9uZWRQYWNrYWdlSAASTgoOZ29vZ2V0X3BhY2thZ2UYBCABKAsyNC5nb29n",
-            "bGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5LlZlcnNpb25lZFBhY2th",
-            "Z2VIABJHCgx6eXBwZXJfcGF0Y2gYBSABKAsyLy5nb29nbGUuY2xvdWQub3Nj",
-            "b25maWcudjEuSW52ZW50b3J5Llp5cHBlclBhdGNoSAASTwoLd3VhX3BhY2th",
-            "Z2UYBiABKAsyOC5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5",
-            "LldpbmRvd3NVcGRhdGVQYWNrYWdlSAASXAoLcWZlX3BhY2thZ2UYByABKAsy",
-            "RS5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5LldpbmRvd3NR",
-            "dWlja0ZpeEVuZ2luZWVyaW5nUGFja2FnZUgAEksKC2Nvc19wYWNrYWdlGAgg",
-            "ASgLMjQuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5WZXJz",
-            "aW9uZWRQYWNrYWdlSAASVQoTd2luZG93c19hcHBsaWNhdGlvbhgJIAEoCzI2",
-            "Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuV2luZG93c0Fw",
-            "cGxpY2F0aW9uSABCCQoHZGV0YWlscxpPChBWZXJzaW9uZWRQYWNrYWdlEhQK",
-            "DHBhY2thZ2VfbmFtZRgEIAEoCRIUCgxhcmNoaXRlY3R1cmUYAiABKAkSDwoH",
-            "dmVyc2lvbhgDIAEoCRqDAwoUV2luZG93c1VwZGF0ZVBhY2thZ2USDQoFdGl0",
-            "bGUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSYgoKY2F0ZWdvcmllcxgD",
-            "IAMoCzJOLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuV2lu",
-            "ZG93c1VwZGF0ZVBhY2thZ2UuV2luZG93c1VwZGF0ZUNhdGVnb3J5EhYKDmti",
-            "X2FydGljbGVfaWRzGAQgAygJEhMKC3N1cHBvcnRfdXJsGAsgASgJEhYKDm1v",
-            "cmVfaW5mb191cmxzGAUgAygJEhEKCXVwZGF0ZV9pZBgGIAEoCRIXCg9yZXZp",
-            "c2lvbl9udW1iZXIYByABKAUSPwobbGFzdF9kZXBsb3ltZW50X2NoYW5nZV90",
-            "aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBoxChVXaW5k",
-            "b3dzVXBkYXRlQ2F0ZWdvcnkSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCRpW",
-            "CgtaeXBwZXJQYXRjaBISCgpwYXRjaF9uYW1lGAUgASgJEhAKCGNhdGVnb3J5",
-            "GAIgASgJEhAKCHNldmVyaXR5GAMgASgJEg8KB3N1bW1hcnkYBCABKAkajwEK",
-            "IVdpbmRvd3NRdWlja0ZpeEVuZ2luZWVyaW5nUGFja2FnZRIPCgdjYXB0aW9u",
-            "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhIKCmhvdF9maXhfaWQYAyAB",
-            "KAkSMAoMaW5zdGFsbF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBqSAQoSV2luZG93c0FwcGxpY2F0aW9uEhQKDGRpc3BsYXlfbmFt",
-            "ZRgBIAEoCRIXCg9kaXNwbGF5X3ZlcnNpb24YAiABKAkSEQoJcHVibGlzaGVy",
-            "GAMgASgJEicKDGluc3RhbGxfZGF0ZRgEIAEoCzIRLmdvb2dsZS50eXBlLkRh",
-            "dGUSEQoJaGVscF9saW5rGAUgASgJGlYKCkl0ZW1zRW50cnkSCwoDa2V5GAEg",
-            "ASgJEjcKBXZhbHVlGAIgASgLMiguZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYx",
-            "LkludmVudG9yeS5JdGVtOgI4AULDAQocY29tLmdvb2dsZS5jbG91ZC5vc2Nv",
-            "bmZpZy52MUILSW52ZW50b3JpZXNQAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9vc2NvbmZpZy92MTtvc2NvbmZpZ6oC",
-            "GEdvb2dsZS5DbG91ZC5Pc0NvbmZpZy5WMcoCGEdvb2dsZVxDbG91ZFxPc0Nv",
-            "bmZpZ1xWMeoCG0dvb2dsZTo6Q2xvdWQ6Ok9zQ29uZmlnOjpWMWIGcHJvdG8z"));
+            "b29nbGUuY2xvdWQub3Njb25maWcudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
+            "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2ds",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aFmdvb2dsZS90eXBlL2RhdGUu",
+            "cHJvdG8i2BUKCUludmVudG9yeRIRCgRuYW1lGAMgASgJQgPgQQMSOwoHb3Nf",
+            "aW5mbxgBIAEoCzIqLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRv",
+            "cnkuT3NJbmZvEj0KBWl0ZW1zGAIgAygLMi4uZ29vZ2xlLmNsb3VkLm9zY29u",
+            "ZmlnLnYxLkludmVudG9yeS5JdGVtc0VudHJ5EjQKC3VwZGF0ZV90aW1lGAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGrgBCgZPc0lu",
+            "Zm8SEAoIaG9zdG5hbWUYCSABKAkSEQoJbG9uZ19uYW1lGAIgASgJEhIKCnNo",
+            "b3J0X25hbWUYAyABKAkSDwoHdmVyc2lvbhgEIAEoCRIUCgxhcmNoaXRlY3R1",
+            "cmUYBSABKAkSFgoOa2VybmVsX3ZlcnNpb24YBiABKAkSFgoOa2VybmVsX3Jl",
+            "bGVhc2UYByABKAkSHgoWb3Njb25maWdfYWdlbnRfdmVyc2lvbhgIIAEoCRq3",
+            "BAoESXRlbRIKCgJpZBgBIAEoCRJICgtvcmlnaW5fdHlwZRgCIAEoDjIzLmdv",
+            "b2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuSXRlbS5PcmlnaW5U",
+            "eXBlEi8KC2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcBIvCgt1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASOwoEdHlwZRgFIAEoDjItLmdvb2dsZS5jbG91ZC5vc2Nv",
+            "bmZpZy52MS5JbnZlbnRvcnkuSXRlbS5UeXBlElAKEWluc3RhbGxlZF9wYWNr",
+            "YWdlGAYgASgLMjMuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9y",
+            "eS5Tb2Z0d2FyZVBhY2thZ2VIABJQChFhdmFpbGFibGVfcGFja2FnZRgHIAEo",
+            "CzIzLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuU29mdHdh",
+            "cmVQYWNrYWdlSAAiPwoKT3JpZ2luVHlwZRIbChdPUklHSU5fVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEhQKEElOVkVOVE9SWV9SRVBPUlQQASJKCgRUeXBlEhQKEFRZ",
+            "UEVfVU5TUEVDSUZJRUQQABIVChFJTlNUQUxMRURfUEFDS0FHRRABEhUKEUFW",
+            "QUlMQUJMRV9QQUNLQUdFEAJCCQoHZGV0YWlscxryBQoPU29mdHdhcmVQYWNr",
+            "YWdlEksKC3l1bV9wYWNrYWdlGAEgASgLMjQuZ29vZ2xlLmNsb3VkLm9zY29u",
+            "ZmlnLnYxLkludmVudG9yeS5WZXJzaW9uZWRQYWNrYWdlSAASSwoLYXB0X3Bh",
+            "Y2thZ2UYAiABKAsyNC5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50",
+            "b3J5LlZlcnNpb25lZFBhY2thZ2VIABJOCg56eXBwZXJfcGFja2FnZRgDIAEo",
+            "CzI0Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuVmVyc2lv",
+            "bmVkUGFja2FnZUgAEk4KDmdvb2dldF9wYWNrYWdlGAQgASgLMjQuZ29vZ2xl",
+            "LmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5WZXJzaW9uZWRQYWNrYWdl",
+            "SAASRwoMenlwcGVyX3BhdGNoGAUgASgLMi8uZ29vZ2xlLmNsb3VkLm9zY29u",
+            "ZmlnLnYxLkludmVudG9yeS5aeXBwZXJQYXRjaEgAEk8KC3d1YV9wYWNrYWdl",
+            "GAYgASgLMjguZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5X",
+            "aW5kb3dzVXBkYXRlUGFja2FnZUgAElwKC3FmZV9wYWNrYWdlGAcgASgLMkUu",
+            "Z29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5XaW5kb3dzUXVp",
+            "Y2tGaXhFbmdpbmVlcmluZ1BhY2thZ2VIABJLCgtjb3NfcGFja2FnZRgIIAEo",
+            "CzI0Lmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5JbnZlbnRvcnkuVmVyc2lv",
+            "bmVkUGFja2FnZUgAElUKE3dpbmRvd3NfYXBwbGljYXRpb24YCSABKAsyNi5n",
+            "b29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5LldpbmRvd3NBcHBs",
+            "aWNhdGlvbkgAQgkKB2RldGFpbHMaTwoQVmVyc2lvbmVkUGFja2FnZRIUCgxw",
+            "YWNrYWdlX25hbWUYBCABKAkSFAoMYXJjaGl0ZWN0dXJlGAIgASgJEg8KB3Zl",
+            "cnNpb24YAyABKAkaVgoLWnlwcGVyUGF0Y2gSEgoKcGF0Y2hfbmFtZRgFIAEo",
+            "CRIQCghjYXRlZ29yeRgCIAEoCRIQCghzZXZlcml0eRgDIAEoCRIPCgdzdW1t",
+            "YXJ5GAQgASgJGoMDChRXaW5kb3dzVXBkYXRlUGFja2FnZRINCgV0aXRsZRgB",
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRJiCgpjYXRlZ29yaWVzGAMgAygL",
+            "Mk4uZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeS5XaW5kb3dz",
+            "VXBkYXRlUGFja2FnZS5XaW5kb3dzVXBkYXRlQ2F0ZWdvcnkSFgoOa2JfYXJ0",
+            "aWNsZV9pZHMYBCADKAkSEwoLc3VwcG9ydF91cmwYCyABKAkSFgoObW9yZV9p",
+            "bmZvX3VybHMYBSADKAkSEQoJdXBkYXRlX2lkGAYgASgJEhcKD3JldmlzaW9u",
+            "X251bWJlchgHIAEoBRI/ChtsYXN0X2RlcGxveW1lbnRfY2hhbmdlX3RpbWUY",
+            "CiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGjEKFVdpbmRvd3NV",
+            "cGRhdGVDYXRlZ29yeRIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJGo8BCiFX",
+            "aW5kb3dzUXVpY2tGaXhFbmdpbmVlcmluZ1BhY2thZ2USDwoHY2FwdGlvbhgB",
+            "IAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRISCgpob3RfZml4X2lkGAMgASgJ",
+            "EjAKDGluc3RhbGxfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXAakgEKEldpbmRvd3NBcHBsaWNhdGlvbhIUCgxkaXNwbGF5X25hbWUY",
+            "ASABKAkSFwoPZGlzcGxheV92ZXJzaW9uGAIgASgJEhEKCXB1Ymxpc2hlchgD",
+            "IAEoCRInCgxpbnN0YWxsX2RhdGUYBCABKAsyES5nb29nbGUudHlwZS5EYXRl",
+            "EhEKCWhlbHBfbGluaxgFIAEoCRpWCgpJdGVtc0VudHJ5EgsKA2tleRgBIAEo",
+            "CRI3CgV2YWx1ZRgCIAEoCzIoLmdvb2dsZS5jbG91ZC5vc2NvbmZpZy52MS5J",
+            "bnZlbnRvcnkuSXRlbToCOAE6bupBawohb3Njb25maWcuZ29vZ2xlYXBpcy5j",
+            "b20vSW52ZW50b3J5EkZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vaW52ZW50b3J5IoUBChNH",
+            "ZXRJbnZlbnRvcnlSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohb3Nj",
+            "b25maWcuZ29vZ2xlYXBpcy5jb20vSW52ZW50b3J5EjUKBHZpZXcYAiABKA4y",
+            "Jy5nb29nbGUuY2xvdWQub3Njb25maWcudjEuSW52ZW50b3J5VmlldyK/AQoW",
+            "TGlzdEludmVudG9yaWVzUmVxdWVzdBI3CgZwYXJlbnQYASABKAlCJ+BBAvpB",
+            "IQofY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRI1CgR2aWV3GAIg",
+            "ASgOMicuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVudG9yeVZpZXcS",
+            "EQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCABKAkSDgoGZmls",
+            "dGVyGAUgASgJImwKF0xpc3RJbnZlbnRvcmllc1Jlc3BvbnNlEjgKC2ludmVu",
+            "dG9yaWVzGAEgAygLMiMuZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxLkludmVu",
+            "dG9yeRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkqRAoNSW52ZW50b3J5Vmll",
+            "dxIeChpJTlZFTlRPUllfVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAES",
+            "CAoERlVMTBACQsMBChxjb20uZ29vZ2xlLmNsb3VkLm9zY29uZmlnLnYxQgtJ",
+            "bnZlbnRvcmllc1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL29zY29uZmlnL3YxO29zY29uZmlnqgIYR29vZ2xlLkNs",
+            "b3VkLk9zQ29uZmlnLlYxygIYR29vZ2xlXENsb3VkXE9zQ29uZmlnXFYx6gIb",
+            "R29vZ2xlOjpDbG91ZDo6T3NDb25maWc6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory), global::Google.Cloud.OsConfig.V1.Inventory.Parser, new[]{ "OsInfo", "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.OsInfo), global::Google.Cloud.OsConfig.V1.Inventory.Types.OsInfo.Parser, new[]{ "Hostname", "LongName", "ShortName", "Version", "Architecture", "KernelVersion", "KernelRelease", "OsconfigAgentVersion" }, null, null, null, null),
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OsConfig.V1.InventoryView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory), global::Google.Cloud.OsConfig.V1.Inventory.Parser, new[]{ "Name", "OsInfo", "Items", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.OsInfo), global::Google.Cloud.OsConfig.V1.Inventory.Types.OsInfo.Parser, new[]{ "Hostname", "LongName", "ShortName", "Version", "Architecture", "KernelVersion", "KernelRelease", "OsconfigAgentVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.Item), global::Google.Cloud.OsConfig.V1.Inventory.Types.Item.Parser, new[]{ "Id", "OriginType", "CreateTime", "UpdateTime", "Type", "InstalledPackage", "AvailablePackage" }, new[]{ "Details" }, new[]{ typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.Item.Types.OriginType), typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.Item.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.SoftwarePackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.SoftwarePackage.Parser, new[]{ "YumPackage", "AptPackage", "ZypperPackage", "GoogetPackage", "ZypperPatch", "WuaPackage", "QfePackage", "CosPackage", "WindowsApplication" }, new[]{ "Details" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.VersionedPackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.VersionedPackage.Parser, new[]{ "PackageName", "Architecture", "Version" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Parser, new[]{ "Title", "Description", "Categories", "KbArticleIds", "SupportUrl", "MoreInfoUrls", "UpdateId", "RevisionNumber", "LastDeploymentChangeTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Types.WindowsUpdateCategory), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Types.WindowsUpdateCategory.Parser, new[]{ "Id", "Name" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.ZypperPatch), global::Google.Cloud.OsConfig.V1.Inventory.Types.ZypperPatch.Parser, new[]{ "PatchName", "Category", "Severity", "Summary" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Parser, new[]{ "Title", "Description", "Categories", "KbArticleIds", "SupportUrl", "MoreInfoUrls", "UpdateId", "RevisionNumber", "LastDeploymentChangeTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Types.WindowsUpdateCategory), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsUpdatePackage.Types.WindowsUpdateCategory.Parser, new[]{ "Id", "Name" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsQuickFixEngineeringPackage), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsQuickFixEngineeringPackage.Parser, new[]{ "Caption", "Description", "HotFixId", "InstallTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication), global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication.Parser, new[]{ "DisplayName", "DisplayVersion", "Publisher", "InstallDate", "HelpLink" }, null, null, null, null),
-            null, })
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.GetInventoryRequest), global::Google.Cloud.OsConfig.V1.GetInventoryRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ListInventoriesRequest), global::Google.Cloud.OsConfig.V1.ListInventoriesRequest.Parser, new[]{ "Parent", "View", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OsConfig.V1.ListInventoriesResponse), global::Google.Cloud.OsConfig.V1.ListInventoriesResponse.Parser, new[]{ "Inventories", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The view for inventory objects.
+  /// </summary>
+  public enum InventoryView {
+    /// <summary>
+    /// The default value.
+    /// The API defaults to the BASIC view.
+    /// </summary>
+    [pbr::OriginalName("INVENTORY_VIEW_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Returns the basic inventory information that includes `os_info`.
+    /// </summary>
+    [pbr::OriginalName("BASIC")] Basic = 1,
+    /// <summary>
+    /// Returns all fields.
+    /// </summary>
+    [pbr::OriginalName("FULL")] Full = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
-  /// The inventory details of a VM.
+  /// This API resource represents the available inventory data for a
+  /// Compute Engine virtual machine (VM) instance at a given point in time.
+  ///
+  /// You can use this API resource to determine the inventory data of your VM.
+  ///
+  /// For more information, see [Information provided by OS inventory
+  /// management](https://cloud.google.com/compute/docs/instances/os-inventory-management#data-collected).
   /// </summary>
   public sealed partial class Inventory : pb::IMessage<Inventory>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -139,14 +187,33 @@ namespace Google.Cloud.OsConfig.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Inventory(Inventory other) : this() {
+      name_ = other.name_;
       osInfo_ = other.osInfo_ != null ? other.osInfo_.Clone() : null;
       items_ = other.items_.Clone();
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Inventory Clone() {
       return new Inventory(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 3;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The `Inventory` API resource name.
+    ///
+    /// Format:
+    /// `projects/{project_number}/locations/{location}/instances/{instance_id}/inventory`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "os_info" field.</summary>
@@ -179,6 +246,20 @@ namespace Google.Cloud.OsConfig.V1 {
       get { return items_; }
     }
 
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. Timestamp of the last reported inventory for the VM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Inventory);
@@ -192,16 +273,20 @@ namespace Google.Cloud.OsConfig.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
       if (!object.Equals(OsInfo, other.OsInfo)) return false;
       if (!Items.Equals(other.Items)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (osInfo_ != null) hash ^= OsInfo.GetHashCode();
       hash ^= Items.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -223,6 +308,14 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteMessage(OsInfo);
       }
       items_.WriteTo(output, _map_items_codec);
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -237,6 +330,14 @@ namespace Google.Cloud.OsConfig.V1 {
         output.WriteMessage(OsInfo);
       }
       items_.WriteTo(ref output, _map_items_codec);
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,10 +347,16 @@ namespace Google.Cloud.OsConfig.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
       if (osInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OsInfo);
       }
       size += items_.CalculateSize(_map_items_codec);
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -261,6 +368,9 @@ namespace Google.Cloud.OsConfig.V1 {
       if (other == null) {
         return;
       }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
       if (other.osInfo_ != null) {
         if (osInfo_ == null) {
           OsInfo = new global::Google.Cloud.OsConfig.V1.Inventory.Types.OsInfo();
@@ -268,6 +378,12 @@ namespace Google.Cloud.OsConfig.V1 {
         OsInfo.MergeFrom(other.OsInfo);
       }
       items_.Add(other.items_);
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -293,6 +409,17 @@ namespace Google.Cloud.OsConfig.V1 {
             items_.AddEntriesFrom(input, _map_items_codec);
             break;
           }
+          case 26: {
+            Name = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
         }
       }
     #endif
@@ -316,6 +443,17 @@ namespace Google.Cloud.OsConfig.V1 {
           }
           case 18: {
             items_.AddEntriesFrom(ref input, _map_items_codec);
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
             break;
           }
         }
@@ -1508,7 +1646,7 @@ namespace Google.Cloud.OsConfig.V1 {
         /// <summary>Field number for the "windows_application" field.</summary>
         public const int WindowsApplicationFieldNumber = 9;
         /// <summary>
-        /// Details of a Windows Application
+        /// Details of Windows Application.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.OsConfig.V1.Inventory.Types.WindowsApplication WindowsApplication {
@@ -2240,6 +2378,301 @@ namespace Google.Cloud.OsConfig.V1 {
       }
 
       /// <summary>
+      /// Details related to a Zypper Patch.
+      /// </summary>
+      public sealed partial class ZypperPatch : pb::IMessage<ZypperPatch>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ZypperPatch> _parser = new pb::MessageParser<ZypperPatch>(() => new ZypperPatch());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<ZypperPatch> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.OsConfig.V1.Inventory.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ZypperPatch() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ZypperPatch(ZypperPatch other) : this() {
+          patchName_ = other.patchName_;
+          category_ = other.category_;
+          severity_ = other.severity_;
+          summary_ = other.summary_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public ZypperPatch Clone() {
+          return new ZypperPatch(this);
+        }
+
+        /// <summary>Field number for the "patch_name" field.</summary>
+        public const int PatchNameFieldNumber = 5;
+        private string patchName_ = "";
+        /// <summary>
+        /// The name of the patch.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string PatchName {
+          get { return patchName_; }
+          set {
+            patchName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "category" field.</summary>
+        public const int CategoryFieldNumber = 2;
+        private string category_ = "";
+        /// <summary>
+        /// The category of the patch.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Category {
+          get { return category_; }
+          set {
+            category_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "severity" field.</summary>
+        public const int SeverityFieldNumber = 3;
+        private string severity_ = "";
+        /// <summary>
+        /// The severity specified for this patch
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Severity {
+          get { return severity_; }
+          set {
+            severity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "summary" field.</summary>
+        public const int SummaryFieldNumber = 4;
+        private string summary_ = "";
+        /// <summary>
+        /// Any summary information provided about this patch.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Summary {
+          get { return summary_; }
+          set {
+            summary_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as ZypperPatch);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(ZypperPatch other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PatchName != other.PatchName) return false;
+          if (Category != other.Category) return false;
+          if (Severity != other.Severity) return false;
+          if (Summary != other.Summary) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PatchName.Length != 0) hash ^= PatchName.GetHashCode();
+          if (Category.Length != 0) hash ^= Category.GetHashCode();
+          if (Severity.Length != 0) hash ^= Severity.GetHashCode();
+          if (Summary.Length != 0) hash ^= Summary.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Category.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Category);
+          }
+          if (Severity.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Severity);
+          }
+          if (Summary.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Summary);
+          }
+          if (PatchName.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PatchName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Category.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Category);
+          }
+          if (Severity.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Severity);
+          }
+          if (Summary.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Summary);
+          }
+          if (PatchName.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PatchName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (PatchName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PatchName);
+          }
+          if (Category.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Category);
+          }
+          if (Severity.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Severity);
+          }
+          if (Summary.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Summary);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(ZypperPatch other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PatchName.Length != 0) {
+            PatchName = other.PatchName;
+          }
+          if (other.Category.Length != 0) {
+            Category = other.Category;
+          }
+          if (other.Severity.Length != 0) {
+            Severity = other.Severity;
+          }
+          if (other.Summary.Length != 0) {
+            Summary = other.Summary;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 18: {
+                Category = input.ReadString();
+                break;
+              }
+              case 26: {
+                Severity = input.ReadString();
+                break;
+              }
+              case 34: {
+                Summary = input.ReadString();
+                break;
+              }
+              case 42: {
+                PatchName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 18: {
+                Category = input.ReadString();
+                break;
+              }
+              case 26: {
+                Severity = input.ReadString();
+                break;
+              }
+              case 34: {
+                Summary = input.ReadString();
+                break;
+              }
+              case 42: {
+                PatchName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Details related to a Windows Update package.
       /// Field data and names are taken from Windows Update API IUpdate Interface:
       /// https://docs.microsoft.com/en-us/windows/win32/api/_wua/
@@ -2258,7 +2691,7 @@ namespace Google.Cloud.OsConfig.V1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.OsConfig.V1.Inventory.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Cloud.OsConfig.V1.Inventory.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2937,301 +3370,6 @@ namespace Google.Cloud.OsConfig.V1 {
       }
 
       /// <summary>
-      /// Details related to a Zypper Patch.
-      /// </summary>
-      public sealed partial class ZypperPatch : pb::IMessage<ZypperPatch>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<ZypperPatch> _parser = new pb::MessageParser<ZypperPatch>(() => new ZypperPatch());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<ZypperPatch> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.OsConfig.V1.Inventory.Descriptor.NestedTypes[5]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ZypperPatch() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ZypperPatch(ZypperPatch other) : this() {
-          patchName_ = other.patchName_;
-          category_ = other.category_;
-          severity_ = other.severity_;
-          summary_ = other.summary_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public ZypperPatch Clone() {
-          return new ZypperPatch(this);
-        }
-
-        /// <summary>Field number for the "patch_name" field.</summary>
-        public const int PatchNameFieldNumber = 5;
-        private string patchName_ = "";
-        /// <summary>
-        /// The name of the patch.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string PatchName {
-          get { return patchName_; }
-          set {
-            patchName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "category" field.</summary>
-        public const int CategoryFieldNumber = 2;
-        private string category_ = "";
-        /// <summary>
-        /// The category of the patch.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Category {
-          get { return category_; }
-          set {
-            category_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "severity" field.</summary>
-        public const int SeverityFieldNumber = 3;
-        private string severity_ = "";
-        /// <summary>
-        /// The severity specified for this patch
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Severity {
-          get { return severity_; }
-          set {
-            severity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "summary" field.</summary>
-        public const int SummaryFieldNumber = 4;
-        private string summary_ = "";
-        /// <summary>
-        /// Any summary information provided about this patch.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Summary {
-          get { return summary_; }
-          set {
-            summary_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as ZypperPatch);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(ZypperPatch other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (PatchName != other.PatchName) return false;
-          if (Category != other.Category) return false;
-          if (Severity != other.Severity) return false;
-          if (Summary != other.Summary) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (PatchName.Length != 0) hash ^= PatchName.GetHashCode();
-          if (Category.Length != 0) hash ^= Category.GetHashCode();
-          if (Severity.Length != 0) hash ^= Severity.GetHashCode();
-          if (Summary.Length != 0) hash ^= Summary.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          if (Category.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(Category);
-          }
-          if (Severity.Length != 0) {
-            output.WriteRawTag(26);
-            output.WriteString(Severity);
-          }
-          if (Summary.Length != 0) {
-            output.WriteRawTag(34);
-            output.WriteString(Summary);
-          }
-          if (PatchName.Length != 0) {
-            output.WriteRawTag(42);
-            output.WriteString(PatchName);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (Category.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(Category);
-          }
-          if (Severity.Length != 0) {
-            output.WriteRawTag(26);
-            output.WriteString(Severity);
-          }
-          if (Summary.Length != 0) {
-            output.WriteRawTag(34);
-            output.WriteString(Summary);
-          }
-          if (PatchName.Length != 0) {
-            output.WriteRawTag(42);
-            output.WriteString(PatchName);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (PatchName.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(PatchName);
-          }
-          if (Category.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Category);
-          }
-          if (Severity.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Severity);
-          }
-          if (Summary.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Summary);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(ZypperPatch other) {
-          if (other == null) {
-            return;
-          }
-          if (other.PatchName.Length != 0) {
-            PatchName = other.PatchName;
-          }
-          if (other.Category.Length != 0) {
-            Category = other.Category;
-          }
-          if (other.Severity.Length != 0) {
-            Severity = other.Severity;
-          }
-          if (other.Summary.Length != 0) {
-            Summary = other.Summary;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 18: {
-                Category = input.ReadString();
-                break;
-              }
-              case 26: {
-                Severity = input.ReadString();
-                break;
-              }
-              case 34: {
-                Summary = input.ReadString();
-                break;
-              }
-              case 42: {
-                PatchName = input.ReadString();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 18: {
-                Category = input.ReadString();
-                break;
-              }
-              case 26: {
-                Severity = input.ReadString();
-                break;
-              }
-              case 34: {
-                Summary = input.ReadString();
-                break;
-              }
-              case 42: {
-                PatchName = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
       /// Information related to a Quick Fix Engineering package.
       /// Fields are taken from Windows QuickFixEngineering Interface and match
       /// the source names:
@@ -3890,6 +4028,781 @@ namespace Google.Cloud.OsConfig.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// A request message for getting inventory data for the specified VM.
+  /// </summary>
+  public sealed partial class GetInventoryRequest : pb::IMessage<GetInventoryRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetInventoryRequest> _parser = new pb::MessageParser<GetInventoryRequest>(() => new GetInventoryRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GetInventoryRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OsConfig.V1.InventoryReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInventoryRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInventoryRequest(GetInventoryRequest other) : this() {
+      name_ = other.name_;
+      view_ = other.view_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GetInventoryRequest Clone() {
+      return new GetInventoryRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. API resource name for inventory resource.
+    ///
+    /// Format:
+    /// `projects/{project}/locations/{location}/instances/{instance}/inventory`
+    ///
+    /// For `{project}`, either `project-number` or `project-id` can be provided.
+    /// For `{instance}`, either Compute Engine  `instance-id` or `instance-name`
+    /// can be provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "view" field.</summary>
+    public const int ViewFieldNumber = 2;
+    private global::Google.Cloud.OsConfig.V1.InventoryView view_ = global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified;
+    /// <summary>
+    /// Inventory view indicating what information should be included in the
+    /// inventory resource. If unspecified, the default view is BASIC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1.InventoryView View {
+      get { return view_; }
+      set {
+        view_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GetInventoryRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GetInventoryRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (View != other.View) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) hash ^= View.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) View);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) View);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GetInventoryRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        View = other.View;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            View = (global::Google.Cloud.OsConfig.V1.InventoryView) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            View = (global::Google.Cloud.OsConfig.V1.InventoryView) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A request message for listing inventory data for all VMs in the specified
+  /// location.
+  /// </summary>
+  public sealed partial class ListInventoriesRequest : pb::IMessage<ListInventoriesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListInventoriesRequest> _parser = new pb::MessageParser<ListInventoriesRequest>(() => new ListInventoriesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListInventoriesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OsConfig.V1.InventoryReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListInventoriesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListInventoriesRequest(ListInventoriesRequest other) : this() {
+      parent_ = other.parent_;
+      view_ = other.view_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      filter_ = other.filter_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListInventoriesRequest Clone() {
+      return new ListInventoriesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource name.
+    ///
+    /// Format: `projects/{project}/locations/{location}/instances/-`
+    ///
+    /// For `{project}`, either `project-number` or `project-id` can be provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "view" field.</summary>
+    public const int ViewFieldNumber = 2;
+    private global::Google.Cloud.OsConfig.V1.InventoryView view_ = global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified;
+    /// <summary>
+    /// Inventory view indicating what information should be included in the
+    /// inventory resource. If unspecified, the default view is BASIC.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.OsConfig.V1.InventoryView View {
+      get { return view_; }
+      set {
+        view_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of results to return.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// A pagination token returned from a previous call to
+    /// `ListInventories` that indicates where this listing
+    /// should continue from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 5;
+    private string filter_ = "";
+    /// <summary>
+    /// If provided, this field specifies the criteria that must be met by a
+    /// `Inventory` API resource to be included in the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListInventoriesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListInventoriesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (View != other.View) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      if (Filter != other.Filter) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) hash ^= View.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) View);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) View);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListInventoriesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.View != global::Google.Cloud.OsConfig.V1.InventoryView.Unspecified) {
+        View = other.View;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            View = (global::Google.Cloud.OsConfig.V1.InventoryView) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            View = (global::Google.Cloud.OsConfig.V1.InventoryView) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            Filter = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A response message for listing inventory data for all VMs in a specified
+  /// location.
+  /// </summary>
+  public sealed partial class ListInventoriesResponse : pb::IMessage<ListInventoriesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListInventoriesResponse> _parser = new pb::MessageParser<ListInventoriesResponse>(() => new ListInventoriesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListInventoriesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.OsConfig.V1.InventoryReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListInventoriesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListInventoriesResponse(ListInventoriesResponse other) : this() {
+      inventories_ = other.inventories_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListInventoriesResponse Clone() {
+      return new ListInventoriesResponse(this);
+    }
+
+    /// <summary>Field number for the "inventories" field.</summary>
+    public const int InventoriesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.OsConfig.V1.Inventory> _repeated_inventories_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.OsConfig.V1.Inventory.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.OsConfig.V1.Inventory> inventories_ = new pbc::RepeatedField<global::Google.Cloud.OsConfig.V1.Inventory>();
+    /// <summary>
+    /// List of inventory objects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1.Inventory> Inventories {
+      get { return inventories_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// The pagination token to retrieve the next page of inventory objects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListInventoriesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListInventoriesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!inventories_.Equals(other.inventories_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= inventories_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      inventories_.WriteTo(output, _repeated_inventories_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      inventories_.WriteTo(ref output, _repeated_inventories_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += inventories_.CalculateSize(_repeated_inventories_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListInventoriesResponse other) {
+      if (other == null) {
+        return;
+      }
+      inventories_.Add(other.inventories_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            inventories_.AddEntriesFrom(input, _repeated_inventories_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            inventories_.AddEntriesFrom(ref input, _repeated_inventories_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

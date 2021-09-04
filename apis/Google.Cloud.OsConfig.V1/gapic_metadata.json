@@ -67,6 +67,39 @@
           }
         }
       }
+    },
+    "OsConfigZonalService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "OsConfigZonalServiceClient",
+          "rpcs": {
+            "GetInventory": {
+              "methods": [
+                "GetInventory",
+                "GetInventoryAsync"
+              ]
+            },
+            "GetVulnerabilityReport": {
+              "methods": [
+                "GetVulnerabilityReport",
+                "GetVulnerabilityReportAsync"
+              ]
+            },
+            "ListInventories": {
+              "methods": [
+                "ListInventories",
+                "ListInventoriesAsync"
+              ]
+            },
+            "ListVulnerabilityReports": {
+              "methods": [
+                "ListVulnerabilityReports",
+                "ListVulnerabilityReportsAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

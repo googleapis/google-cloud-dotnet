@@ -32,9 +32,16 @@ namespace Google.Cloud.OsConfig.V1
             /// A resource name with pattern <c>projects/{project}/zones/{zone}/instances/{instance}</c>.
             /// </summary>
             ProjectZoneInstance = 1,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/locations/{location}/instances/{instance}</c>.
+            /// </summary>
+            ProjectLocationInstance = 2,
         }
 
         private static gax::PathTemplate s_projectZoneInstance = new gax::PathTemplate("projects/{project}/zones/{zone}/instances/{instance}");
+
+        private static gax::PathTemplate s_projectLocationInstance = new gax::PathTemplate("projects/{project}/locations/{location}/instances/{instance}");
 
         /// <summary>Creates a <see cref="InstanceName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -55,6 +62,17 @@ namespace Google.Cloud.OsConfig.V1
         /// <returns>A new instance of <see cref="InstanceName"/> constructed from the provided ids.</returns>
         public static InstanceName FromProjectZoneInstance(string projectId, string zoneId, string instanceId) =>
             new InstanceName(ResourceNameType.ProjectZoneInstance, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), zoneId: gax::GaxPreconditions.CheckNotNullOrEmpty(zoneId, nameof(zoneId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)));
+
+        /// <summary>
+        /// Creates a <see cref="InstanceName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="InstanceName"/> constructed from the provided ids.</returns>
+        public static InstanceName FromProjectLocationInstance(string projectId, string locationId, string instanceId) =>
+            new InstanceName(ResourceNameType.ProjectLocationInstance, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="InstanceName"/> with pattern
@@ -84,11 +102,26 @@ namespace Google.Cloud.OsConfig.V1
         public static string FormatProjectZoneInstance(string projectId, string zoneId, string instanceId) =>
             s_projectZoneInstance.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(zoneId, nameof(zoneId)), gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="InstanceName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="InstanceName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}</c>.
+        /// </returns>
+        public static string FormatProjectLocationInstance(string projectId, string locationId, string instanceId) =>
+            s_projectLocationInstance.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="InstanceName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/zones/{zone}/instances/{instance}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/instances/{instance}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="instanceName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -103,6 +136,7 @@ namespace Google.Cloud.OsConfig.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/zones/{zone}/instances/{instance}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/instances/{instance}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -123,6 +157,7 @@ namespace Google.Cloud.OsConfig.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/zones/{zone}/instances/{instance}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/instances/{instance}</c></description></item>
         /// </list>
         /// </remarks>
         /// <param name="instanceName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -140,6 +175,7 @@ namespace Google.Cloud.OsConfig.V1
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item><description><c>projects/{project}/zones/{zone}/instances/{instance}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}/instances/{instance}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
@@ -162,6 +198,11 @@ namespace Google.Cloud.OsConfig.V1
                 result = FromProjectZoneInstance(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationInstance.TryParseName(instanceName, out resourceName))
+            {
+                result = FromProjectLocationInstance(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(instanceName, out gax::UnparsedResourceName unparsedResourceName))
@@ -174,11 +215,12 @@ namespace Google.Cloud.OsConfig.V1
             return false;
         }
 
-        private InstanceName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string instanceId = null, string projectId = null, string zoneId = null)
+        private InstanceName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string instanceId = null, string locationId = null, string projectId = null, string zoneId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             InstanceId = instanceId;
+            LocationId = locationId;
             ProjectId = projectId;
             ZoneId = zoneId;
         }
@@ -204,17 +246,22 @@ namespace Google.Cloud.OsConfig.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Instance</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Instance</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string InstanceId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>Zone</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Zone</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ZoneId { get; }
 
@@ -229,6 +276,7 @@ namespace Google.Cloud.OsConfig.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectZoneInstance: return s_projectZoneInstance.Expand(ProjectId, ZoneId, InstanceId);
+                case ResourceNameType.ProjectLocationInstance: return s_projectLocationInstance.Expand(ProjectId, LocationId, InstanceId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
