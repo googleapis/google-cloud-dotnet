@@ -503,6 +503,82 @@ namespace Google.Cloud.Channel.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void ImportCustomerRequestObject()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ImportCustomerRequest request = new ImportCustomerRequest
+            {
+                Parent = "parent7858e4d0",
+                Domain = "domaine8825fad",
+                CloudIdentityId = "cloud_identity_idcb2e1526",
+                AuthToken = "auth_token85f233bb",
+                OverwriteIfExists = false,
+                ChannelPartnerId = "channel_partner_ida548fd43",
+                CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+            };
+            Customer expectedResponse = new Customer
+            {
+                CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                OrgDisplayName = "org_display_nameb29ddfcb",
+                OrgPostalAddress = new gt::PostalAddress(),
+                PrimaryContactInfo = new ContactInfo(),
+                AlternateEmail = "alternate_email3cdfc6ce",
+                Domain = "domaine8825fad",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                CloudIdentityId = "cloud_identity_idcb2e1526",
+                LanguageCode = "language_code2f6c7160",
+                CloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerId = "channel_partner_ida548fd43",
+            };
+            mockGrpcClient.Setup(x => x.ImportCustomer(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            Customer response = client.ImportCustomer(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ImportCustomerRequestObjectAsync()
+        {
+            moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ImportCustomerRequest request = new ImportCustomerRequest
+            {
+                Parent = "parent7858e4d0",
+                Domain = "domaine8825fad",
+                CloudIdentityId = "cloud_identity_idcb2e1526",
+                AuthToken = "auth_token85f233bb",
+                OverwriteIfExists = false,
+                ChannelPartnerId = "channel_partner_ida548fd43",
+                CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+            };
+            Customer expectedResponse = new Customer
+            {
+                CustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+                OrgDisplayName = "org_display_nameb29ddfcb",
+                OrgPostalAddress = new gt::PostalAddress(),
+                PrimaryContactInfo = new ContactInfo(),
+                AlternateEmail = "alternate_email3cdfc6ce",
+                Domain = "domaine8825fad",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                CloudIdentityId = "cloud_identity_idcb2e1526",
+                LanguageCode = "language_code2f6c7160",
+                CloudIdentityInfo = new CloudIdentityInfo(),
+                ChannelPartnerId = "channel_partner_ida548fd43",
+            };
+            mockGrpcClient.Setup(x => x.ImportCustomerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Customer>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            CloudChannelServiceClient client = new CloudChannelServiceClientImpl(mockGrpcClient.Object, null);
+            Customer responseCallSettings = await client.ImportCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Customer responseCancellationToken = await client.ImportCustomerAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetEntitlementRequestObject()
         {
             moq::Mock<CloudChannelService.CloudChannelServiceClient> mockGrpcClient = new moq::Mock<CloudChannelService.CloudChannelServiceClient>(moq::MockBehavior.Strict);

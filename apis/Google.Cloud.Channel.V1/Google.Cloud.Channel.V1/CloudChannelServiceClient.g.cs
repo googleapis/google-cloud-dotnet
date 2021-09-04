@@ -52,6 +52,7 @@ namespace Google.Cloud.Channel.V1
             CreateCustomerSettings = existing.CreateCustomerSettings;
             UpdateCustomerSettings = existing.UpdateCustomerSettings;
             DeleteCustomerSettings = existing.DeleteCustomerSettings;
+            ImportCustomerSettings = existing.ImportCustomerSettings;
             ProvisionCloudIdentitySettings = existing.ProvisionCloudIdentitySettings;
             ProvisionCloudIdentityOperationsSettings = existing.ProvisionCloudIdentityOperationsSettings.Clone();
             ListEntitlementsSettings = existing.ListEntitlementsSettings;
@@ -186,6 +187,21 @@ namespace Google.Cloud.Channel.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteCustomerSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudChannelServiceClient.ImportCustomer</c> and <c>CloudChannelServiceClient.ImportCustomerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportCustomerSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1592,6 +1608,81 @@ namespace Google.Cloud.Channel.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteCustomerAsync(CustomerName name, st::CancellationToken cancellationToken) =>
             DeleteCustomerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+        /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+        /// linked Customer already exists and overwrite_if_exists is true, it will
+        /// update that Customer's data.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request is different
+        /// from the reseller account in the API request.
+        /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+        /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+        /// expired or invalid.
+        /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+        /// fields. Requires an overwrite.
+        /// 
+        /// Return value:
+        /// The [Customer][google.cloud.channel.v1.Customer].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Customer ImportCustomer(ImportCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+        /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+        /// linked Customer already exists and overwrite_if_exists is true, it will
+        /// update that Customer's data.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request is different
+        /// from the reseller account in the API request.
+        /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+        /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+        /// expired or invalid.
+        /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+        /// fields. Requires an overwrite.
+        /// 
+        /// Return value:
+        /// The [Customer][google.cloud.channel.v1.Customer].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> ImportCustomerAsync(ImportCustomerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+        /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+        /// linked Customer already exists and overwrite_if_exists is true, it will
+        /// update that Customer's data.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request is different
+        /// from the reseller account in the API request.
+        /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+        /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+        /// expired or invalid.
+        /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+        /// fields. Requires an overwrite.
+        /// 
+        /// Return value:
+        /// The [Customer][google.cloud.channel.v1.Customer].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Customer> ImportCustomerAsync(ImportCustomerRequest request, st::CancellationToken cancellationToken) =>
+            ImportCustomerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a Cloud Identity for the given customer using the customer's
@@ -3910,6 +4001,8 @@ namespace Google.Cloud.Channel.V1
 
         private readonly gaxgrpc::ApiCall<DeleteCustomerRequest, wkt::Empty> _callDeleteCustomer;
 
+        private readonly gaxgrpc::ApiCall<ImportCustomerRequest, Customer> _callImportCustomer;
+
         private readonly gaxgrpc::ApiCall<ProvisionCloudIdentityRequest, lro::Operation> _callProvisionCloudIdentity;
 
         private readonly gaxgrpc::ApiCall<ListEntitlementsRequest, ListEntitlementsResponse> _callListEntitlements;
@@ -4006,6 +4099,9 @@ namespace Google.Cloud.Channel.V1
             _callDeleteCustomer = clientHelper.BuildApiCall<DeleteCustomerRequest, wkt::Empty>(grpcClient.DeleteCustomerAsync, grpcClient.DeleteCustomer, effectiveSettings.DeleteCustomerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCustomer);
             Modify_DeleteCustomerApiCall(ref _callDeleteCustomer);
+            _callImportCustomer = clientHelper.BuildApiCall<ImportCustomerRequest, Customer>(grpcClient.ImportCustomerAsync, grpcClient.ImportCustomer, effectiveSettings.ImportCustomerSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportCustomer);
+            Modify_ImportCustomerApiCall(ref _callImportCustomer);
             _callProvisionCloudIdentity = clientHelper.BuildApiCall<ProvisionCloudIdentityRequest, lro::Operation>(grpcClient.ProvisionCloudIdentityAsync, grpcClient.ProvisionCloudIdentity, effectiveSettings.ProvisionCloudIdentitySettings).WithGoogleRequestParam("customer", request => request.Customer);
             Modify_ApiCall(ref _callProvisionCloudIdentity);
             Modify_ProvisionCloudIdentityApiCall(ref _callProvisionCloudIdentity);
@@ -4107,6 +4203,8 @@ namespace Google.Cloud.Channel.V1
 
         partial void Modify_DeleteCustomerApiCall(ref gaxgrpc::ApiCall<DeleteCustomerRequest, wkt::Empty> call);
 
+        partial void Modify_ImportCustomerApiCall(ref gaxgrpc::ApiCall<ImportCustomerRequest, Customer> call);
+
         partial void Modify_ProvisionCloudIdentityApiCall(ref gaxgrpc::ApiCall<ProvisionCloudIdentityRequest, lro::Operation> call);
 
         partial void Modify_ListEntitlementsApiCall(ref gaxgrpc::ApiCall<ListEntitlementsRequest, ListEntitlementsResponse> call);
@@ -4179,6 +4277,8 @@ namespace Google.Cloud.Channel.V1
         partial void Modify_UpdateCustomerRequest(ref UpdateCustomerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteCustomerRequest(ref DeleteCustomerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportCustomerRequest(ref ImportCustomerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ProvisionCloudIdentityRequest(ref ProvisionCloudIdentityRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4510,6 +4610,62 @@ namespace Google.Cloud.Channel.V1
         {
             Modify_DeleteCustomerRequest(ref request, ref callSettings);
             return _callDeleteCustomer.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+        /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+        /// linked Customer already exists and overwrite_if_exists is true, it will
+        /// update that Customer's data.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request is different
+        /// from the reseller account in the API request.
+        /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+        /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+        /// expired or invalid.
+        /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+        /// fields. Requires an overwrite.
+        /// 
+        /// Return value:
+        /// The [Customer][google.cloud.channel.v1.Customer].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Customer ImportCustomer(ImportCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportCustomerRequest(ref request, ref callSettings);
+            return _callImportCustomer.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+        /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+        /// linked Customer already exists and overwrite_if_exists is true, it will
+        /// update that Customer's data.
+        /// 
+        /// Possible error codes:
+        /// 
+        /// * PERMISSION_DENIED: The reseller account making the request is different
+        /// from the reseller account in the API request.
+        /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+        /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+        /// expired or invalid.
+        /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+        /// fields. Requires an overwrite.
+        /// 
+        /// Return value:
+        /// The [Customer][google.cloud.channel.v1.Customer].
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Customer> ImportCustomerAsync(ImportCustomerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportCustomerRequest(ref request, ref callSettings);
+            return _callImportCustomer.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>ProvisionCloudIdentity</c>.</summary>

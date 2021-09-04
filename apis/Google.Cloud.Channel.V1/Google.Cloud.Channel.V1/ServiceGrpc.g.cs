@@ -88,6 +88,7 @@ namespace Google.Cloud.Channel.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UpdateCustomerRequest> __Marshaller_google_cloud_channel_v1_UpdateCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UpdateCustomerRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.DeleteCustomerRequest> __Marshaller_google_cloud_channel_v1_DeleteCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.DeleteCustomerRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ImportCustomerRequest> __Marshaller_google_cloud_channel_v1_ImportCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ImportCustomerRequest.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest> __Marshaller_google_cloud_channel_v1_ProvisionCloudIdentityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest.Parser));
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListEntitlementsRequest> __Marshaller_google_cloud_channel_v1_ListEntitlementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListEntitlementsRequest.Parser));
@@ -174,6 +175,13 @@ namespace Google.Cloud.Channel.V1 {
         "DeleteCustomer",
         __Marshaller_google_cloud_channel_v1_DeleteCustomerRequest,
         __Marshaller_google_protobuf_Empty);
+
+    static readonly grpc::Method<global::Google.Cloud.Channel.V1.ImportCustomerRequest, global::Google.Cloud.Channel.V1.Customer> __Method_ImportCustomer = new grpc::Method<global::Google.Cloud.Channel.V1.ImportCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportCustomer",
+        __Marshaller_google_cloud_channel_v1_ImportCustomerRequest,
+        __Marshaller_google_cloud_channel_v1_Customer);
 
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest, global::Google.LongRunning.Operation> __Method_ProvisionCloudIdentity = new grpc::Method<global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
@@ -509,6 +517,33 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomer(global::Google.Cloud.Channel.V1.DeleteCustomerRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+      /// linked Customer already exists and overwrite_if_exists is true, it will
+      /// update that Customer's data.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+      /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+      /// expired or invalid.
+      /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+      /// fields. Requires an overwrite.
+      ///
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Customer> ImportCustomer(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1845,6 +1880,114 @@ namespace Google.Cloud.Channel.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerAsync(global::Google.Cloud.Channel.V1.DeleteCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomer, null, options, request);
+      }
+      /// <summary>
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+      /// linked Customer already exists and overwrite_if_exists is true, it will
+      /// update that Customer's data.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+      /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+      /// expired or invalid.
+      /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+      /// fields. Requires an overwrite.
+      ///
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.Customer ImportCustomer(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+      /// linked Customer already exists and overwrite_if_exists is true, it will
+      /// update that Customer's data.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+      /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+      /// expired or invalid.
+      /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+      /// fields. Requires an overwrite.
+      ///
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      public virtual global::Google.Cloud.Channel.V1.Customer ImportCustomer(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportCustomer, null, options, request);
+      }
+      /// <summary>
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+      /// linked Customer already exists and overwrite_if_exists is true, it will
+      /// update that Customer's data.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+      /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+      /// expired or invalid.
+      /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+      /// fields. Requires an overwrite.
+      ///
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> ImportCustomerAsync(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports a [Customer][google.cloud.channel.v1.Customer] from the Cloud Identity associated with the provided
+      /// Cloud Identity ID or domain before a TransferEntitlements call. If a
+      /// linked Customer already exists and overwrite_if_exists is true, it will
+      /// update that Customer's data.
+      ///
+      /// Possible error codes:
+      ///
+      /// * PERMISSION_DENIED: The reseller account making the request is different
+      /// from the reseller account in the API request.
+      /// * NOT_FOUND: Cloud Identity doesn't exist or was deleted.
+      /// * INVALID_ARGUMENT: Required parameters are missing, or the auth_token is
+      /// expired or invalid.
+      /// * ALREADY_EXISTS: A customer already exists and has conflicting critical
+      /// fields. Requires an overwrite.
+      ///
+      /// Return value:
+      /// The [Customer][google.cloud.channel.v1.Customer].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> ImportCustomerAsync(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportCustomer, null, options, request);
       }
       /// <summary>
       /// Creates a Cloud Identity for the given customer using the customer's
@@ -4984,6 +5127,7 @@ namespace Google.Cloud.Channel.V1 {
           .AddMethod(__Method_CreateCustomer, serviceImpl.CreateCustomer)
           .AddMethod(__Method_UpdateCustomer, serviceImpl.UpdateCustomer)
           .AddMethod(__Method_DeleteCustomer, serviceImpl.DeleteCustomer)
+          .AddMethod(__Method_ImportCustomer, serviceImpl.ImportCustomer)
           .AddMethod(__Method_ProvisionCloudIdentity, serviceImpl.ProvisionCloudIdentity)
           .AddMethod(__Method_ListEntitlements, serviceImpl.ListEntitlements)
           .AddMethod(__Method_ListTransferableSkus, serviceImpl.ListTransferableSkus)
@@ -5026,6 +5170,7 @@ namespace Google.Cloud.Channel.V1 {
       serviceBinder.AddMethod(__Method_CreateCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.CreateCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(serviceImpl.CreateCustomer));
       serviceBinder.AddMethod(__Method_UpdateCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.UpdateCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(serviceImpl.UpdateCustomer));
       serviceBinder.AddMethod(__Method_DeleteCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.DeleteCustomerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCustomer));
+      serviceBinder.AddMethod(__Method_ImportCustomer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ImportCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(serviceImpl.ImportCustomer));
       serviceBinder.AddMethod(__Method_ProvisionCloudIdentity, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest, global::Google.LongRunning.Operation>(serviceImpl.ProvisionCloudIdentity));
       serviceBinder.AddMethod(__Method_ListEntitlements, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListEntitlementsRequest, global::Google.Cloud.Channel.V1.ListEntitlementsResponse>(serviceImpl.ListEntitlements));
       serviceBinder.AddMethod(__Method_ListTransferableSkus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListTransferableSkusRequest, global::Google.Cloud.Channel.V1.ListTransferableSkusResponse>(serviceImpl.ListTransferableSkus));
