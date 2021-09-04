@@ -42,6 +42,18 @@ namespace Google.Cloud.Channel.V1
         }
     }
 
+    public partial class ImportCustomerRequest
+    {
+        /// <summary>
+        /// <see cref="CustomerName"/>-typed view over the <see cref="Customer"/> resource name property.
+        /// </summary>
+        public CustomerName CustomerAsCustomerName
+        {
+            get => string.IsNullOrEmpty(Customer) ? null : CustomerName.Parse(Customer, allowUnparsed: true);
+            set => Customer = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ProvisionCloudIdentityRequest
     {
         /// <summary>

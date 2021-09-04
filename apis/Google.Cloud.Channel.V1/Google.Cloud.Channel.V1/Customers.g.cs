@@ -179,7 +179,8 @@ namespace Google.Cloud.Channel.V1 {
     /// Secondary contact email. You need to provide an alternate email to create
     /// different domains if a primary contact email already exists. Users will
     /// receive a notification with credentials when you create an admin.google.com
-    /// account. Secondary emails are also recovery email addresses.
+    /// account. Secondary emails are also recovery email addresses. Alternate
+    /// emails are optional when you create Team customers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AlternateEmail {
@@ -775,7 +776,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int FirstNameFieldNumber = 1;
     private string firstName_ = "";
     /// <summary>
-    /// The customer account contact's first name.
+    /// The customer account contact's first name. Optional for Team customers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FirstName {
@@ -789,7 +790,7 @@ namespace Google.Cloud.Channel.V1 {
     public const int LastNameFieldNumber = 2;
     private string lastName_ = "";
     /// <summary>
-    /// The customer account contact's last name.
+    /// The customer account contact's last name. Optional for Team customers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LastName {
@@ -820,7 +821,7 @@ namespace Google.Cloud.Channel.V1 {
     /// <summary>
     /// The customer account's contact email. Required for entitlements that create
     /// admin.google.com accounts, and serves as the customer's username for those
-    /// accounts.
+    /// accounts. Use this email to invite Team customers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Email {

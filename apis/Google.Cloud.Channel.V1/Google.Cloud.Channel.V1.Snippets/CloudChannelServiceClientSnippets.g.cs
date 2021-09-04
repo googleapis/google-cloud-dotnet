@@ -395,6 +395,49 @@ namespace Google.Cloud.Channel.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ImportCustomer</summary>
+        public void ImportCustomerRequestObject()
+        {
+            // Snippet: ImportCustomer(ImportCustomerRequest, CallSettings)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = CloudChannelServiceClient.Create();
+            // Initialize request argument(s)
+            ImportCustomerRequest request = new ImportCustomerRequest
+            {
+                Parent = "",
+                Domain = "",
+                AuthToken = "",
+                OverwriteIfExists = false,
+                ChannelPartnerId = "",
+                CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+            };
+            // Make the request
+            Customer response = cloudChannelServiceClient.ImportCustomer(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportCustomerAsync</summary>
+        public async Task ImportCustomerRequestObjectAsync()
+        {
+            // Snippet: ImportCustomerAsync(ImportCustomerRequest, CallSettings)
+            // Additional: ImportCustomerAsync(ImportCustomerRequest, CancellationToken)
+            // Create client
+            CloudChannelServiceClient cloudChannelServiceClient = await CloudChannelServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportCustomerRequest request = new ImportCustomerRequest
+            {
+                Parent = "",
+                Domain = "",
+                AuthToken = "",
+                OverwriteIfExists = false,
+                ChannelPartnerId = "",
+                CustomerAsCustomerName = CustomerName.FromAccountCustomer("[ACCOUNT]", "[CUSTOMER]"),
+            };
+            // Make the request
+            Customer response = await cloudChannelServiceClient.ImportCustomerAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ProvisionCloudIdentity</summary>
         public void ProvisionCloudIdentityRequestObject()
         {
