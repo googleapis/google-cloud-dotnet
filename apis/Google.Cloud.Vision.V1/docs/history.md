@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-09-06
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.3.0, released 2021-04-29
 
 - [Commit c94c761](https://github.com/googleapis/google-cloud-dotnet/commit/c94c761): fix: sync vision v1 protos to get extra FaceAnnotation Landmark Types
