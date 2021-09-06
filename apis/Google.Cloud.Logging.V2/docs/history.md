@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.4.0, released 2021-09-06
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 3.3.0, released 2021-05-05
 
 - [Commit 3e216d0](https://github.com/googleapis/google-cloud-dotnet/commit/3e216d0): feat: add the Tailing API to get a live stream of the tail end of filtered logs
