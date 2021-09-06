@@ -355,8 +355,14 @@ generate_api() {
   
   if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -Ev "namespace ${1}[[:space:]{]*\$") ]]
   then
-    echo "API $1 has broken namespace declarations"
-    exit 1
+    # We know Google.LongRunning contains a proto in Google.Cloud.
+    if [[ $1 == "Google.LongRunning" ]]
+    then
+      echo "Ignoring broken namespaces in $1"
+    else
+      echo "API $1 has broken namespace declarations"
+      exit 1
+    fi
   fi
 
   if [[ $CHECK_COMPATIBILITY == "true" ]]
