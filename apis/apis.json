@@ -2957,7 +2957,7 @@
     },
     {
       "id": "Google.Cloud.WebSecurityScanner.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Web Security Scanner",
       "productUrl": "https://cloud.google.com/security-command-center/docs/concepts-web-security-scanner-overview",
