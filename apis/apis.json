@@ -2844,7 +2844,7 @@
     },
     {
       "id": "Google.Cloud.Video.Transcoder.V1Beta1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Transcoder",
       "productUrl": "https://cloud.google.com/transcoder/docs",
