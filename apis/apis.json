@@ -2883,7 +2883,7 @@
       "protoPath": "google/cloud/vision/v1",
       "productName": "Google Cloud Vision",
       "productUrl": "https://cloud.google.com/vision",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
@@ -2892,7 +2892,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.LongRunning": "2.2.0",
+        "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       }
     },
