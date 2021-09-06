@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.0.0-beta07, released 2021-09-06
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.0.0-beta06, released 2021-06-22
 
 - [Commit db0b36e](https://github.com/googleapis/google-cloud-dotnet/commit/db0b36e): docs: fix grammar in documentation.
