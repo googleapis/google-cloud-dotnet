@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.3.0, released 2021-09-06
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.2.0, released 2021-06-22
 
 - [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
