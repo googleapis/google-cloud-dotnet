@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.3.0, released 2021-09-06
+
+- [Commit 604c39b](https://github.com/googleapis/google-cloud-dotnet/commit/604c39b): Regenerated Google.LongRunning with extended_operations.proto ([issue 7117](https://github.com/googleapis/google-cloud-dotnet/issues/7117))
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.2.0, released 2021-05-19
 
 No API surface changes since 2.1.0, just dependency and comment updates.
