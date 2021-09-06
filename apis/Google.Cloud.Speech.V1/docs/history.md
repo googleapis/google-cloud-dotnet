@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-09-06
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.3.0, released 2021-08-10
 
 - [Commit 73a4ba0](https://github.com/googleapis/google-cloud-dotnet/commit/73a4ba0): feat: add total_billed_time response field
