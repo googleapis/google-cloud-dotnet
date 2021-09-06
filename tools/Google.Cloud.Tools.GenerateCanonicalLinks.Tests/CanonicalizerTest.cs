@@ -45,6 +45,8 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks.Tests
         [InlineData("Google.Cloud.Debugger.V2", "api/Google.Cloud.DevTools.Source.V1.AliasContext.html", "Google.Cloud.DevTools.Common/latest/Google.Cloud.DevTools.Source.V1.AliasContext")]
         [InlineData("Google.Cloud.Filestore.V1", "api/Google.Cloud.Common.html", "Google.Cloud.Common/latest/Google.Cloud.Common")]
         [InlineData("Google.Cloud.Filestore.V1", "api/Google.Cloud.Common.OperationMetadata.html", "Google.Cloud.Common/latest/Google.Cloud.Common.OperationMetadata")]
+        [InlineData("Google.LongRunning", "api/Google.Cloud.ExtendedOperationsExtensions.html", "Google.LongRunning/latest/Google.Cloud.ExtendedOperationsExtensions")]
+        [InlineData("Google.LongRunning", "api/Google.Cloud.html", "Google.LongRunning/latest/Google.Cloud")]
         public void GetUrl(string package, string page, string expectedSuffix)
         {
             var actualUrl = Canonicalizer.GetUrl(package, page);

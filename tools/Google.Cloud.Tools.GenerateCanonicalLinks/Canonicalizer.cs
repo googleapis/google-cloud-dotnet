@@ -135,6 +135,13 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             {
                 return overriddenPackage;
             }
+
+            // Exception which doesn't neatly fit elsewhere: Google.LongRunning contains some Google.Cloud files.
+            if (package == "Google.LongRunning" && page.StartsWith("Google.Cloud"))
+            {
+                return package;
+            }
+
             // If the page looks like it's genuinely in the package, that's probably fine.
             if (page.StartsWith(package))
             {
