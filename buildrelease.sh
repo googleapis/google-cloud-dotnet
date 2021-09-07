@@ -91,10 +91,6 @@ then
   done
 fi
 
-# Temporary hack to work around issue 7143 while releases are recreated
-# using COMMITTISH_OVERRIDE
-cp ../tools/Google.Cloud.Tools.GenerateCanonicalLinks/Canonicalizer.cs tools/Google.Cloud.Tools.GenerateCanonicalLinks
-
 # TODO: Make builddocs.sh cope with being run from any directory.
 (cd docs && ./builddocs.sh $projects)
 
