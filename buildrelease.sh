@@ -44,6 +44,7 @@ cd $(dirname $0)
 
 rm -rf releasebuild
 git clone ${clone_path_prefix}googleapis/google-cloud-dotnet.git releasebuild -c core.autocrlf=input --recursive
+
 cd releasebuild
 
 # Make sure the package is deterministic. We don't do this for local builds,
@@ -89,6 +90,10 @@ then
     dotnet pack --no-build --no-restore -o $PWD/nuget -c Release apis/$project/$project
   done
 fi
+
+# Temporary hack to work around issue 7143 while releases are recreated
+# using COMMITTISH_OVERRIDE
+cp ../tools/Google.Cloud.Tools.GenerateCanonicalLinks/Canonicalizer.cs tools/Google.Cloud.Tools.GenerateCanonicalLinks
 
 # TODO: Make builddocs.sh cope with being run from any directory.
 (cd docs && ./builddocs.sh $projects)
