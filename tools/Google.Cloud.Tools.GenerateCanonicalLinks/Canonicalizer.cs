@@ -137,9 +137,10 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             }
 
             // Exception which doesn't neatly fit elsewhere: Google.LongRunning contains some Google.Cloud files.
-            if (package == "Google.LongRunning" && page.StartsWith("Google.Cloud"))
+            // If we ever have anything else in just "Google.Cloud" (as opposed to Google.Cloud.Common etc) this could get awkward.
+            if (page == "Google.Cloud" || page == "Google.Cloud.ExtendedOperationsExtensions" || page == "Google.Cloud.OperationResponseMapping")
             {
-                return package;
+                return "Google.LongRunning";
             }
 
             // If the page looks like it's genuinely in the package, that's probably fine.
