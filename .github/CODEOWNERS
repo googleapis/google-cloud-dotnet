@@ -12,6 +12,6 @@
 /apis/Google.Cloud.Bigtable*/       @googleapis/api-bigtable @googleapis/yoshi-dotnet
 /apis/Google.Cloud.Datastore*/      @googleapis/firestore-dpe @googleapis/yoshi-dotnet
 /apis/Google.Cloud.Firestore*/      @googleapis/firestore-dpe @googleapis/yoshi-dotnet
-/apis/Google.Cloud.Storage*/        @googleapis/storage-dpe @googleapis/yoshi-dotnet
+/apis/Google.Cloud.Storage*/        @googleapis/cloud-storage-dpe @googleapis/yoshi-dotnet
 /apis/Google.Cloud.BigQuery*/.      @googleapis/api-bigquery @googleapis/yoshi-dotnet
 /apis/Google.Cloud.PubSub*/.        @googleapis/api-pubsub @googleapis/yoshi-dotnet
