@@ -173,6 +173,9 @@
     "apis/Google.LongRunning/Google.LongRunning/**",
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
+  "ignoreDeps": [
+    "Grpc.Core"
+  ],
   "packageRules": [
     {
       "matchPaths": [
