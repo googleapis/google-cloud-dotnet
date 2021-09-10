@@ -19,8 +19,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CollectionDefinition(nameof(ReadTableFixture))]
     public class ReadTableFixture : CommonDataTableFixture, ICollectionFixture<ReadTableFixture>
     {
-        public ReadTableFixture() : base("ReadTable", createIndexes: true)
+        public ReadTableFixture() : base("ReadTable")
         {
         }
+
+        protected override bool ShouldCreateIndexes() => true;
     }
 }

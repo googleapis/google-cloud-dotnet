@@ -216,7 +216,7 @@ namespace Google.Cloud.Spanner.Data
         public SpannerBatchCommand CreateBatchDmlCommand() => new SpannerBatchCommand(this);
 
         internal Task<IEnumerable<ByteString>> GetPartitionTokensAsync(
-            ExecuteSqlRequest request,
+            ReadOrQueryRequest request,
             long? partitionSizeBytes,
             long? maxPartitions,
             CancellationToken cancellationToken,
@@ -231,25 +231,13 @@ namespace Google.Cloud.Spanner.Data
             // that they need to handle this condition by explicitly setting DisposeBehavior to some value.
             Shared = true;
 
-            var partitionRequest = new PartitionQueryRequest
-            {
-                Sql = request.Sql,
-                Params = request.Params,
-                ParamTypes = { request.ParamTypes },
-                PartitionOptions = partitionSizeBytes.HasValue || maxPartitions.HasValue ? new PartitionOptions() : null,
-            };
-            if (partitionSizeBytes.HasValue)
-            {
-                partitionRequest.PartitionOptions.PartitionSizeBytes = partitionSizeBytes.Value;
-            }
-            if (maxPartitions.HasValue)
-            {
-                partitionRequest.PartitionOptions.MaxPartitions = maxPartitions.Value;
-            }
+            var partitionRequest = request.ToPartitionReadOrQueryRequest(partitionSizeBytes, maxPartitions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
                 {
-                    var callSettings = SpannerConnection.CreateCallSettings(settings => settings.PartitionQuerySettings, timeoutSeconds, cancellationToken);
-                    var response = await _session.PartitionQueryAsync(partitionRequest, callSettings).ConfigureAwait(false);
+                    var callSettings = SpannerConnection.CreateCallSettings(
+                        partitionRequest.GetCallSettings,
+                        timeoutSeconds, cancellationToken);
+                    var response = await partitionRequest.PartitionReadOrQueryAsync(_session, callSettings).ConfigureAwait(false);
                     return response.Partitions.Select(x => x.PartitionToken);
                 },
                 "SpannerTransaction.GetPartitionTokensAsync", SpannerConnection.Logger);
@@ -275,8 +263,8 @@ namespace Google.Cloud.Spanner.Data
             }, "SpannerTransaction.ExecuteMutations", SpannerConnection.Logger);
         }
 
-        Task<ReliableStreamReader> ISpannerTransaction.ExecuteQueryAsync(
-            ExecuteSqlRequest request,
+        Task<ReliableStreamReader> ISpannerTransaction.ExecuteReadOrQueryAsync(
+            ReadOrQueryRequest request,
             CancellationToken cancellationToken,
             int timeoutSeconds) // Ignored
         {
@@ -284,8 +272,10 @@ namespace Google.Cloud.Spanner.Data
             CheckCompatibleMode(TransactionMode.ReadOnly);
             _hasExecutedStatements = true;
             // We're not making any Spanner requests here, so we don't need profiling or error translation.
-            var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, cancellationToken);
-            return Task.FromResult(_session.ExecuteSqlStreamReader(request, callSettings));
+            var callSettings = SpannerConnection.CreateCallSettings(
+                request.GetCallSettings,
+                cancellationToken);
+            return Task.FromResult(request.ExecuteReadOrQueryStreamReader(_session, callSettings));
         }
 
         Task<long> ISpannerTransaction.ExecuteDmlAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds)

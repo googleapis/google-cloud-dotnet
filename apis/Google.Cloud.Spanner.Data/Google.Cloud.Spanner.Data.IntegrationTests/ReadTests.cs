@@ -146,51 +146,51 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Assert.True(double.IsNegativeInfinity(result));
         }
 
-        [Fact]
-        public async Task PointRead()
+        [CombinatorialData]
+        [Theory]
+        public async Task PointRead(bool query)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-                    Assert.Equal("k1", reader.GetString(0));
-                    Assert.Equal("v1", reader.GetString(1));
+            using var connection = _fixture.GetConnection();
+            using var cmd = query
+                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'")
+                : connection.CreateReadCommand(
+                    _fixture.TableName, ReadOptions.FromColumns("Key", "StringValue"), KeySet.FromKeys(new Key("k1")));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal("k1", reader.GetString(0));
+            Assert.Equal("v1", reader.GetString(1));
 
-                    Assert.False(await reader.ReadAsync());
-                }
-            }
+            Assert.False(await reader.ReadAsync());
         }
 
-        [Fact]
-        public async Task ReadAllowsNewApis()
+        [CombinatorialData]
+        [Theory]
+        public async Task QueryAllowsNewApis(bool query)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'");
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.True(await reader.ReadAsync());
-                    Assert.Equal("k1", reader.GetFieldValue<string>("Key"));
-                    Assert.Equal("v1", reader.GetFieldValue<string>("StringValue"));
+            using var connection = _fixture.GetConnection();
+            using var cmd = query
+                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k1'")
+                : connection.CreateReadCommand(
+                    _fixture.TableName, ReadOptions.FromColumns("Key", "StringValue"), KeySet.FromKeys(new Key("k1")));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal("k1", reader.GetFieldValue<string>("Key"));
+            Assert.Equal("v1", reader.GetFieldValue<string>("StringValue"));
 
-                    Assert.False(await reader.ReadAsync());
-                }
-            }
+            Assert.False(await reader.ReadAsync());
         }
 
-        [Fact]
-        public async Task PointReadEmpty()
+        [CombinatorialData]
+        [Theory]
+        public async Task PointReadEmpty(bool query)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k99'");
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.False(await reader.ReadAsync());
-                }
-            }
+            using var connection = _fixture.GetConnection();
+            using var cmd = query
+                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key = 'k99'")
+                : connection.CreateReadCommand(
+                    _fixture.TableName, ReadOptions.FromColumns("Key", "StringValue"), KeySet.FromKeys(new Key("k99")));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.False(await reader.ReadAsync());
         }
 
         [Fact]
@@ -215,33 +215,32 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact]
-        public async Task ReadEmpty()
+        [CombinatorialData]
+        [Theory]
+        public async Task ReadEmpty(bool query)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                // All our keys start with "k" so there shouldn't be anything starting with "l"
-                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key >= 'l'");
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.False(await reader.ReadAsync());
-                }
-            }
+            using var connection = _fixture.GetConnection();
+            // All our keys start with "k" so there shouldn't be anything starting with "l"
+            using var cmd = query
+                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName} WHERE Key >= 'l'")
+                : connection.CreateReadCommand(
+                    _fixture.TableName, ReadOptions.FromColumns("Key", "StringValue"), KeySet.FromRanges(KeyRange.ClosedOpen(new Key("l"), new Key())));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.False(await reader.ReadAsync());
         }
 
-        [Fact]
-        public async Task GetFieldValue_NoReadCall()
+        [CombinatorialData]
+        [Theory]
+        public async Task GetFieldValue_NoReadCall(bool query)
         {
-            using (var connection = _fixture.GetConnection())
-            {
-                var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}");
-                using (var reader = await cmd.ExecuteReaderAsync())
-                {
-                    Assert.Throws<InvalidOperationException>(() => reader.GetFieldValue<string>("Key"));
-                    // Validate GetJsonValue at the same time...
-                    Assert.Throws<InvalidOperationException>(() => reader.GetJsonValue(0));
-                }
-            }
+            using var connection = _fixture.GetConnection();
+            using var cmd = query
+                ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}")
+                : connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns("Key"), KeySet.All);
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.Throws<InvalidOperationException>(() => reader.GetFieldValue<string>("Key"));
+            // Validate GetJsonValue at the same time...
+            Assert.Throws<InvalidOperationException>(() => reader.GetJsonValue(0));
         }
 
         [Fact]
@@ -577,6 +576,121 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.False(await reader.ReadAsync());
                 }
             }
+        }
+
+        [Fact]
+        public async Task ReadAll()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key", "StringValue"), KeySet.All);
+            using var reader = await cmd.ExecuteReaderAsync();
+            var count = 0;
+            while (await reader.ReadAsync())
+            {
+                count++;
+            }
+            Assert.Equal(_fixture.RowCount, count);
+        }
+
+        [Fact]
+        public async Task ReadMultipleKeys()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key"), KeySet.FromKeys(new Key("k1"), new Key("k2")));
+            using var reader = await cmd.ExecuteReaderAsync();
+            var count = 0;
+            while (await reader.ReadAsync())
+            {
+                count++;
+                Assert.Equal($"k{count}", reader[0]);
+            }
+            Assert.Equal(2, count);
+        }
+
+        [Fact]
+        public async Task ReadKeyRange_Closed_Closed()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key"),
+                KeySet.FromRanges(KeyRange.ClosedClosed(new Key("k10"), new Key("k11"))));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal($"k10", reader[0]);
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal($"k11", reader[0]);
+            Assert.False(await reader.ReadAsync());
+        }
+
+        [Fact]
+        public async Task ReadKeyRange_Closed_Open()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key"),
+                KeySet.FromRanges(KeyRange.ClosedOpen(new Key("k10"), new Key("k11"))));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal($"k10", reader[0]);
+            Assert.False(await reader.ReadAsync());
+        }
+
+        [Fact]
+        public async Task ReadKeyRange_Open_Closed()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key"),
+                KeySet.FromRanges(KeyRange.OpenClosed(new Key("k10"), new Key("k11"))));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal($"k11", reader[0]);
+            Assert.False(await reader.ReadAsync());
+        }
+
+        [Fact]
+        public async Task ReadKeyRange_Open_Open()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key"),
+                KeySet.FromRanges(KeyRange.OpenOpen(new Key("k10"), new Key("k11"))));
+            using var reader = await cmd.ExecuteReaderAsync();
+            Assert.False(await reader.ReadAsync());
+        }
+
+        [Fact]
+        public async Task ReadWithIndex()
+        {
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key").WithIndexName("TestTableByValueDesc"), KeySet.FromKeys(new Key("v1"), new Key("v2")));
+            using var reader = await cmd.ExecuteReaderAsync();
+            // The read operation will order the results using the index that is set on the command, and this index has
+            // descending order.
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal($"k2", reader[0]);
+            Assert.True(await reader.ReadAsync());
+            Assert.Equal($"k1", reader[0]);
+            Assert.False(await reader.ReadAsync());
+        }
+
+        [Fact]
+        public async Task ReadWithLimit()
+        {
+            int limit = _fixture.RowCount - 1;
+            using var connection = _fixture.GetConnection();
+            using var cmd = connection.CreateReadCommand(
+                _fixture.TableName, ReadOptions.FromColumns("Key", "StringValue").WithLimit(limit), KeySet.All);
+            using var reader = await cmd.ExecuteReaderAsync();
+            var count = 0;
+            while (await reader.ReadAsync())
+            {
+                count++;
+            }
+            Assert.Equal(limit, count);
         }
     }
 }

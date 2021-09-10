@@ -60,12 +60,12 @@ namespace Google.Cloud.Spanner.Data
         public string CommandText { get; }
 
         /// <summary>
-        /// Gets the type of Spanner command (Select, Update, Delete, InsertOrUpdate, Insert, Ddl, Dml).
+        /// Gets the type of Spanner command (Select, Read, Update, Delete, InsertOrUpdate, Insert, Ddl, Dml).
         /// </summary>
         public SpannerCommandType SpannerCommandType { get; }
 
         /// <summary>
-        /// Returns the target Spanner database table if the command is Update, Delete, InsertOrUpdate,
+        /// Returns the target Spanner database table if the command is Read, Update, Delete, InsertOrUpdate,
         /// or Insert, or null otherwise.
         /// </summary>
         public string TargetTable { get; }
@@ -76,14 +76,20 @@ namespace Google.Cloud.Spanner.Data
         public IReadOnlyList<string> ExtraStatements { get; }
 
         /// <summary>
+        /// The read options for this command if the command is Read, or null otherwise.
+        /// </summary>
+        public ReadOptions ReadOptions { get; }
+
+        /// <summary>
         /// Constructs an instance without performing any validation. (Callers must validate.)
         /// </summary>
-        private SpannerCommandTextBuilder(string commandText, SpannerCommandType type, string targetTable, string[] extraStatements)
+        private SpannerCommandTextBuilder(string commandText, SpannerCommandType type, string targetTable, string[] extraStatements, ReadOptions readOptions = null)
         {
             CommandText = commandText;
             SpannerCommandType = type;
             TargetTable = targetTable;
             ExtraStatements = extraStatements?.ToList().AsReadOnly();
+            ReadOptions = readOptions;
         }
 
         internal bool IsCreateDatabaseCommand => CommandText?.StartsWith(CreateDatabaseCommand, StringComparison.OrdinalIgnoreCase) ?? false;
@@ -130,6 +136,17 @@ namespace Google.Cloud.Spanner.Data
 
         private static SpannerCommandTextBuilder CreateBuilderForTableDml(string command, SpannerCommandType type, string table) =>
             new SpannerCommandTextBuilder($"{command} {table}", type, ValidateTableName(table, nameof(table)), null);
+
+        /// <summary>
+        /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>
+        /// for reading rows.
+        /// </summary>
+        /// <param name="table">The name of the Spanner database table from which rows will be read.
+        /// Must not be null.</param>
+        /// <param name="readOptions">The read options to use for the command. Must not be null.</param>
+        /// <returns>A <see cref="SpannerCommandTextBuilder"/> representing a <see cref="F:SpannerCommandType.Read"/> Spanner command.</returns>
+        internal static SpannerCommandTextBuilder CreateReadTextBuilder(string table, ReadOptions readOptions) =>
+            new SpannerCommandTextBuilder(commandText: "", SpannerCommandType.Read, ValidateTableName(table, nameof(table)), null, GaxPreconditions.CheckNotNull(readOptions, nameof(readOptions)));
 
         /// <summary>
         /// Creates a <see cref="SpannerCommandTextBuilder"/> instance that generates <see cref="SpannerCommand.CommandText"/>

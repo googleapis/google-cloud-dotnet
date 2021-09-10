@@ -62,17 +62,20 @@ namespace Google.Cloud.Spanner.Data
             internal SpannerTransaction Transaction { get; }
             internal CommandPartition Partition { get; }
             internal SpannerParameterCollection Parameters { get; }
+            internal KeySet KeySet { get; }
             internal QueryOptions QueryOptions { get; }
             internal Priority Priority { get; }
             internal string Tag { get; }
 
             public ExecutableCommand(SpannerCommand command)
             {
+                GaxPreconditions.CheckState(!(command.KeySet != null && command.Parameters.Count > 0), "Command may not contain both a KeySet and Parameters");
                 Connection = command.SpannerConnection;
                 CommandTextBuilder = command.SpannerCommandTextBuilder;
                 CommandTimeout = command.CommandTimeout;
                 Partition = command.Partition;
                 Parameters = command.Parameters;
+                KeySet = command.KeySet;
                 Transaction = command._transaction;
                 QueryOptions = command.QueryOptions;
                 Priority = command.Priority;
@@ -84,9 +87,9 @@ namespace Google.Cloud.Spanner.Data
             {
                 // Duplication of later checks, but this means we can report the right method name.
                 ValidateConnectionAndCommandTextBuilder();
-                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select)
+                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select && CommandTextBuilder.SpannerCommandType != SpannerCommandType.Read)
                 {
-                    throw new InvalidOperationException("ExecuteScalar functionality is only available for queries.");
+                    throw new InvalidOperationException("ExecuteScalar functionality is only available for queries and reads.");
                 }
 
                 using (var reader = await ExecuteReaderAsync(CommandBehavior.SingleRow, null, cancellationToken).ConfigureAwait(false))
@@ -105,9 +108,9 @@ namespace Google.Cloud.Spanner.Data
                 ValidateConnectionAndCommandTextBuilder();
                 ValidateCommandBehavior(behavior);
 
-                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select)
+                if (CommandTextBuilder.SpannerCommandType != SpannerCommandType.Select && CommandTextBuilder.SpannerCommandType != SpannerCommandType.Read)
                 {
-                    throw new InvalidOperationException("ExecuteReader functionality is only available for queries.");
+                    throw new InvalidOperationException("ExecuteReader functionality is only available for queries and reads.");
                 }
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
@@ -124,24 +127,33 @@ namespace Google.Cloud.Spanner.Data
                 }
                 effectiveTransaction = effectiveTransaction ?? new EphemeralTransaction(Connection, null, Priority);
 
-                ExecuteSqlRequest request = GetExecuteSqlRequest();
+                var resultSet = await ExecuteReadOrQueryRequestAsync(singleUseReadSettings, effectiveTransaction, cancellationToken)
+                        .ConfigureAwait(false);
 
-                if (singleUseReadSettings != null)
-                {
-                    request.Transaction = new TransactionSelector { SingleUse = singleUseReadSettings.ToTransactionOptions() };
-                }
-
-                Connection.Logger.SensitiveInfo(() => $"SpannerCommand.ExecuteReader.Query={request.Sql}");
-
-                // Execute the command. Note that the command timeout here is only used for ambient transactions where we need to set a commit timeout.
-                var resultSet = await effectiveTransaction.ExecuteQueryAsync(request, cancellationToken, CommandTimeout)
-                    .ConfigureAwait(false);
                 var conversionOptions = SpannerConversionOptions.ForConnection(Connection);
                 var enableGetSchemaTable = Connection.Builder.EnableGetSchemaTable;
                 // When the data reader is closed, we may need to dispose of the connection.
                 IDisposable resourceToClose = (behavior & CommandBehavior.CloseConnection) == CommandBehavior.CloseConnection ? Connection : null;
 
                 return new SpannerDataReader(Connection.Logger, resultSet, Transaction?.ReadTimestamp, resourceToClose, conversionOptions, enableGetSchemaTable, CommandTimeout);
+            }
+
+            private Task<ReliableStreamReader> ExecuteReadOrQueryRequestAsync(TimestampBound singleUseReadSettings, ISpannerTransaction effectiveTransaction, CancellationToken cancellationToken)
+            {
+                var request = GetReadOrQueryRequest();
+
+                if (singleUseReadSettings != null)
+                {
+                    request.Transaction = new TransactionSelector { SingleUse = singleUseReadSettings.ToTransactionOptions() };
+                }
+
+                if (request.IsQuery)
+                {
+                    Connection.Logger.SensitiveInfo(() => $"SpannerCommand.ExecuteReader.Query={request.ExecuteSqlRequest.Sql}");
+                }
+
+                // Execute the command. Note that the command timeout here is only used for ambient transactions where we need to set a commit timeout.
+                return effectiveTransaction.ExecuteReadOrQueryAsync(request, cancellationToken, CommandTimeout);
             }
 
             internal async Task<IReadOnlyList<CommandPartition>> GetReaderPartitionsAsync(long? partitionSizeBytes, long? maxPartitions, CancellationToken cancellationToken)
@@ -152,12 +164,14 @@ namespace Google.Cloud.Spanner.Data
                     "GetReaderPartitions can only be executed within an explicitly created read-only transaction.");
 
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-
-                ExecuteSqlRequest executeSqlRequest = GetExecuteSqlRequest();
-                var tokens = await Transaction.GetPartitionTokensAsync(executeSqlRequest, partitionSizeBytes, maxPartitions, cancellationToken, CommandTimeout).ConfigureAwait(false);
+                var readOrQueryRequest = GetReadOrQueryRequest();
+                var tokens = await Transaction.GetPartitionTokensAsync(
+                        readOrQueryRequest, partitionSizeBytes, maxPartitions, cancellationToken, CommandTimeout)
+                    .ConfigureAwait(false);
                 return tokens.Select(
-                    x => {
-                        var request = executeSqlRequest.Clone();
+                    x =>
+                    {
+                        var request = readOrQueryRequest.CloneRequest();
                         request.PartitionToken = x;
                         return new CommandPartition(request);
                     }).ToList();
@@ -339,7 +353,7 @@ namespace Google.Cloud.Spanner.Data
                     var w = new Mutation.Types.Delete
                     {
                         Table = CommandTextBuilder.TargetTable,
-                        KeySet = new KeySet { Keys = { listValue } }
+                        KeySet = new V1.KeySet { Keys = { listValue } }
                     };
                     return new List<Mutation> { new Mutation { Delete = w } };
                 }
@@ -382,11 +396,6 @@ namespace Google.Cloud.Spanner.Data
 
             private ExecuteSqlRequest GetExecuteSqlRequest()
             {
-                if (Partition != null)
-                {
-                    return Partition.ExecuteSqlRequest;
-                }
-
                 var request = new ExecuteSqlRequest
                 {
                     Sql = CommandTextBuilder.ToString(),
@@ -399,6 +408,42 @@ namespace Google.Cloud.Spanner.Data
                 Parameters.FillSpannerCommandParams(out var parameters, request.ParamTypes, options);
                 request.Params = parameters;
 
+                return request;
+            }
+
+            private ReadRequest GetReadRequest()
+            {
+                GaxPreconditions.CheckState(CommandTextBuilder.ReadOptions != null, "Cannot create a ReadRequest without ReadOptions");
+                return new ReadRequest
+                {
+                    Table = CommandTextBuilder.TargetTable,
+                    Index = CommandTextBuilder.ReadOptions.IndexName ?? "",
+                    Limit = CommandTextBuilder.ReadOptions.Limit ?? 0L,
+                    KeySet = KeySet.Protobuf,
+                    Columns = { CommandTextBuilder.ReadOptions.Columns },
+                    RequestOptions = BuildRequestOptions()
+                };
+            }
+
+            private ReadOrQueryRequest GetReadOrQueryRequest()
+            {
+                if (Partition != null)
+                {
+                    return Partition.Request;
+                }
+
+                ReadOrQueryRequest request;
+                switch (CommandTextBuilder.SpannerCommandType)
+                {
+                    case SpannerCommandType.Select:
+                        request = ReadOrQueryRequest.FromQueryRequest(GetExecuteSqlRequest());
+                        break;
+                    case SpannerCommandType.Read:
+                        request = ReadOrQueryRequest.FromReadRequest(GetReadRequest());
+                        break;
+                    default:
+                        throw new InvalidOperationException($"Implementation error: Invalid command type ${CommandTextBuilder.SpannerCommandType} for read or query. This should not happen.");
+                }
                 return request;
             }
 

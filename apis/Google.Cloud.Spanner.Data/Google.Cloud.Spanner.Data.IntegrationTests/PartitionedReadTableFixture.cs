@@ -15,6 +15,7 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Google.Cloud.Spanner.Data.IntegrationTests
@@ -23,6 +24,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     public class PartitionedReadTableFixture : SpannerTableFixture, ICollectionFixture<PartitionedReadTableFixture>
     {
         private const long NumPartitionReadRows = 10000;
+
+        public IReadOnlyList<string> ColumnNames => new List<string> { "OrderID", "OrderDate", "Product" }.AsReadOnly();
 
         public PartitionedReadTableFixture() : base("PartitionedRead")
         {

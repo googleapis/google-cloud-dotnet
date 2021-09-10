@@ -29,14 +29,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public PartitionedReadTests(PartitionedReadTableFixture fixture) =>
             _fixture = fixture;
 
-        [Fact]
-        public async Task DistributedReadAsync()
+        [CombinatorialData]
+        [Theory]
+        public async Task DistributedReadAsync(bool query)
         {
             int numRows;
             using (var connection = _fixture.GetConnection())
-            using (var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_fixture.TableName}"))
             {
-                numRows = await cmd.ExecuteScalarAsync<int>();
+                using (var cmd = connection.CreateSelectCommand($"SELECT COUNT(*) FROM {_fixture.TableName}"))
+                {
+                    numRows = await cmd.ExecuteScalarAsync<int>();
+                }
             }
 
             using (var connection = new SpannerConnection(_fixture.ConnectionString))
@@ -44,7 +47,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 await connection.OpenAsync();
 
                 using (var transaction = await connection.BeginReadOnlyTransactionAsync())
-                using (var cmd = connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}"))
+                using (var cmd = query
+                    ? connection.CreateSelectCommand($"SELECT * FROM {_fixture.TableName}")
+                    : connection.CreateReadCommand(_fixture.TableName, ReadOptions.FromColumns(_fixture.ColumnNames), KeySet.All))
                 {
                     transaction.DisposeBehavior = DisposeBehavior.CloseResources;
                     cmd.Transaction = transaction;

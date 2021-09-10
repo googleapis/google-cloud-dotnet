@@ -271,31 +271,71 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Executes a PartitionRead RPC asynchronously.
+        /// </summary>
+        /// <param name="request">The partitioning request. Must not be null. The request will be modified with session details
+        /// from this object.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
+        public Task<PartitionResponse> PartitionReadAsync(PartitionReadRequest request, CallSettings callSettings) =>
+            PartitionReadOrQueryAsync(PartitionReadOrQueryRequest.FromRequest(request), callSettings);
+
+        /// <summary>
         /// Executes a PartitionQuery RPC asynchronously.
         /// </summary>
         /// <param name="request">The partitioning request. Must not be null. The request will be modified with session details
         /// from this object.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
-        public Task<PartitionResponse> PartitionQueryAsync(PartitionQueryRequest request, CallSettings callSettings)
+        public Task<PartitionResponse> PartitionQueryAsync(PartitionQueryRequest request, CallSettings callSettings) =>
+            PartitionReadOrQueryAsync(PartitionReadOrQueryRequest.FromRequest(request), callSettings);
+
+        /// <summary>
+        /// Executes a PartitionRead RPC asynchronously.
+        /// </summary>
+        /// <param name="request">The partitioning request. Must not be null. The request will be modified with session details
+        /// from this object.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the asynchronous operation. When the task completes, the result is the response from the RPC.</returns>
+        internal Task<PartitionResponse> PartitionReadOrQueryAsync(PartitionReadOrQueryRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            GaxPreconditions.CheckState(TransactionId != null, "Cannot call PartitionQueryAsync with no associated transaction");
+            GaxPreconditions.CheckState(TransactionId != null, "Cannot call PartitionReadOrQueryAsync with no associated transaction");
             request.SessionAsSessionName = SessionName;
             request.Transaction = new TransactionSelector { Id = TransactionId };
 
-            return RecordSuccessAndExpiredSessions(Client.PartitionQueryAsync(request, callSettings));
+            return RecordSuccessAndExpiredSessions(request.PartitionAsync(Client, callSettings));
         }
 
         /// <summary>
-        /// Creates a <see cref="ReliableStreamReader"/> for the given request
+        /// Creates a <see cref="ReliableStreamReader"/> for the given request.
+        /// </summary>
+        /// <param name="request">The read request. Must not be null. The request will be modified with session and transaction details
+        /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A <see cref="ReliableStreamReader"/> for the streaming SQL request.</returns>
+        public ReliableStreamReader ReadStreamReader(ReadRequest request, CallSettings callSettings) =>
+            ExecuteReadOrQueryStreamReader(ReadOrQueryRequest.FromRequest(request), callSettings);
+
+        /// <summary>
+        /// Creates a <see cref="ReliableStreamReader"/> for the given request.
         /// </summary>
         /// <param name="request">The query request. Must not be null. The request will be modified with session and transaction details
         /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A <see cref="ReliableStreamReader"/> for the streaming SQL request.</returns>
-        public ReliableStreamReader ExecuteSqlStreamReader(ExecuteSqlRequest request, CallSettings callSettings)
+        public ReliableStreamReader ExecuteSqlStreamReader(ExecuteSqlRequest request, CallSettings callSettings) =>
+            ExecuteReadOrQueryStreamReader(ReadOrQueryRequest.FromRequest(request), callSettings);
+
+        /// <summary>
+        /// Creates a <see cref="ReliableStreamReader"/> for the given request
+        /// </summary>
+        /// <param name="request">The read request. Must not be null. The request will be modified with session and transaction details
+        /// from this object. If this object's <see cref="TransactionId"/> is null, the request's transaction is not modified.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A <see cref="ReliableStreamReader"/> for the streaming read request.</returns>
+        internal ReliableStreamReader ExecuteReadOrQueryStreamReader(ReadOrQueryRequest request, CallSettings callSettings)
         {
             CheckNotDisposed();
             GaxPreconditions.CheckNotNull(request, nameof(request));
@@ -306,7 +346,7 @@ namespace Google.Cloud.Spanner.V1
             request.SessionAsSessionName = SessionName;
             SpannerClientImpl.ApplyResourcePrefixHeaderFromSession(ref callSettings, request.Session);
 
-            SqlResultStream stream = new SqlResultStream(Client, request, _session, callSettings);
+            ResultStream stream = new ResultStream(Client, request, _session, callSettings);
             return new ReliableStreamReader(stream, Client.Settings.Logger);
         }
 
