@@ -27,9 +27,9 @@ using static Google.Api.Gax.Grpc.RetrySettings;
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    /// Implements buffering, retry and resume for the results of executing streaming SQL calls.
+    /// Implements buffering, retry and resume for the results of executing streaming SQL and read calls.
     /// </summary>
-    internal sealed class SqlResultStream : IAsyncStreamReader<PartialResultSet>
+    internal sealed class ResultStream : IAsyncStreamReader<PartialResultSet>
     {
         /// <summary>
         /// The default maximum buffer size. Currently this isn't user-tweakable; we don't expect to see more than this many
@@ -49,7 +49,7 @@ namespace Google.Cloud.Spanner.V1
 
         private readonly LinkedList<PartialResultSet> _buffer;
         private readonly SpannerClient _client;
-        private readonly ExecuteSqlRequest _request;
+        private readonly ReadOrQueryRequest _request;
         private readonly Session _session;
         private readonly CallSettings _callSettings;
         private readonly RetrySettings _retrySettings;
@@ -66,17 +66,17 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Constructor for normal usage, with default buffer size, backoff settings and jitter.
         /// </summary>
-        internal SqlResultStream(SpannerClient client, ExecuteSqlRequest request, Session session, CallSettings callSettings)
+        internal ResultStream(SpannerClient client, ReadOrQueryRequest request, Session session, CallSettings callSettings)
             : this(client, request, session, callSettings, DefaultMaxBufferSize, s_defaultRetrySettings)
         {
         }
 
         /// <summary>
-        /// Constructor with complete control, for testing purposes.
+        /// Constructor with complete control that does not perform any validation.
         /// </summary>
-        internal SqlResultStream(
+        internal ResultStream(
             SpannerClient client,
-            ExecuteSqlRequest request,
+            ReadOrQueryRequest request,
             Session session,
             CallSettings callSettings,
             int maxBufferSize,
@@ -135,7 +135,7 @@ namespace Google.Cloud.Spanner.V1
                     {
                         // Note: no cancellation token here; if we've been given a short cancellation token,
                         // it ought to apply to just the MoveNext call, not the original request.
-                        _grpcCall = _client.ExecuteStreamingSql(_request, _callSettings).GrpcCall;
+                        _grpcCall = _request.ExecuteStreaming(_client, _callSettings);
                     }
                     bool hasNext = await _grpcCall.ResponseStream
                         .MoveNext(cancellationToken)

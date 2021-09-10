@@ -19,9 +19,12 @@ using Google.Cloud.Spanner.Common.V1;
 using Google.Cloud.Spanner.V1;
 using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Cloud.Spanner.V1.Tests;
+using Google.Protobuf.Collections;
+using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Moq;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
@@ -789,6 +792,199 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock.Verify(client => client.CommitAsync(
                 It.Is<CommitRequest>(request => request.Mutations.Count == 3),
                 It.IsAny<CallSettings>()), Times.Once());
+        }
+
+        [Fact]
+        public void CanCreateReadCommand()
+        {
+            var connection = new SpannerConnection("Data Source=projects/p/instances/i/databases/d");
+            var command = connection.CreateReadCommand(
+                "Foo", ReadOptions.FromColumns("Col1", "Col2"), KeySet.FromParameters(new SpannerParameterCollection
+                {
+                    {"key1", SpannerDbType.String, "test"},
+                    {"key2", SpannerDbType.Int64, 10}
+                }));
+            Assert.Equal("Foo", command.SpannerCommandTextBuilder.TargetTable);
+            Assert.Equal(new List<string> { "Col1", "Col2" }, command.SpannerCommandTextBuilder.ReadOptions?.Columns);
+        }
+
+        [Fact]
+        public async Task CanExecuteReadCommand()
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateReadCommand(
+                "Foo", ReadOptions.FromColumns(new List<string> { "Col1", "Col2" }), KeySet.FromParameters(new SpannerParameterCollection
+                {
+                    {"string", SpannerDbType.String, "test"},
+                    {"bytes", SpannerDbType.Bytes, new byte[] {1, 2, 3}},
+                    {"int64", SpannerDbType.Int64, "10"},
+                    {"float64", SpannerDbType.Float64, 3.14},
+                    {"numeric", SpannerDbType.Numeric, SpannerNumeric.Parse("6.626")},
+                    {"date", SpannerDbType.Date, new DateTime(2021, 9, 8, 0, 0, 0, DateTimeKind.Utc)},
+                    {"timestamp", SpannerDbType.Timestamp, new DateTime(2021, 9, 8, 15, 22, 59, DateTimeKind.Utc)},
+                    {"bool", SpannerDbType.Bool, true},
+                }));
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.Table == "Foo"),
+                It.IsAny<CallSettings>()));
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.Columns.Equals(new RepeatedField<string> { "Col1", "Col2" })),
+                It.IsAny<CallSettings>()));
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys = {  new ListValue{ Values =
+                {
+                    new Value { StringValue = "test"},
+                    new Value { StringValue = Convert.ToBase64String(new byte[] {1, 2, 3})},
+                    new Value { StringValue = "10" },
+                    new Value { NumberValue = 3.14 },
+                    new Value { StringValue = "6.626" },
+                    new Value { StringValue = "2021-09-08" },
+                    new Value { StringValue = "2021-09-08T15:22:59Z" },
+                    new Value { BoolValue = true },
+                } } } })),
+                It.IsAny<CallSettings>()));
+        }
+
+        [Fact]
+        public async Task CanExecuteReadAllCommand()
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2"), KeySet.All);
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { All = true })),
+                It.IsAny<CallSettings>()));
+        }
+
+        [Fact]
+        public async Task CanExecuteReadCommandWithKeyRange()
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateReadCommand(
+                "Foo", ReadOptions.FromColumns("Col1", "Col2"),
+                KeySet.FromRanges(KeyRange.ClosedOpen(new Key("test_begin"), new Key("test_end"))));
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Ranges = { new [] { new V1.KeyRange
+                {
+                    StartClosed = new ListValue { Values = { new Value { StringValue = "test_begin" } } },
+                    EndOpen = new ListValue { Values = { new Value { StringValue = "test_end" } } }
+                } } } } )),
+                It.IsAny<CallSettings>()));
+        }
+
+        [Fact]
+        public async Task CanExecuteReadCommandWithKeyCollection()
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateReadCommand(
+                "Foo", ReadOptions.FromColumns("Col1", "Col2"),
+                KeySet.FromKeys(new Key("key1"), new Key("key2"), new Key("key3")));
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.KeySet.Equals(new V1.KeySet { Keys =
+                {
+                    new ListValue { Values = { new Value { StringValue = "key1" } } },
+                    new ListValue { Values = { new Value { StringValue = "key2" } } },
+                    new ListValue { Values = { new Value { StringValue = "key3" } } },
+                } } )),
+                It.IsAny<CallSettings>()));
+        }
+
+        [Fact]
+        public async Task CanExecuteReadCommandWithIndex()
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithIndexName("IdxBar"), KeySet.All);
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.Index == "IdxBar"),
+                It.IsAny<CallSettings>()));
+        }
+
+        [Fact]
+        public async Task CanExecuteReadCommandWithLimit()
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
+            using var reader = await command.ExecuteReaderAsync();
+            Assert.True(reader.HasRows);
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => request.Limit == 10),
+                It.IsAny<CallSettings>()));
+        }
+
+        [Fact]
+        public async Task CanExecuteReadPartitionedReadCommand()
+        {
+            var spannerClientMock = SpannerClientHelpers
+                .CreateMockClient(Logger.DefaultLogger);
+            spannerClientMock
+                .SetupBatchCreateSessionsAsync()
+                .SetupBeginTransactionAsync()
+                .SetupPartitionAsync()
+                .SetupStreamingRead();
+
+            var connection = BuildSpannerConnection(spannerClientMock);
+            var transaction = await connection.BeginReadOnlyTransactionAsync();
+            var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
+            command.Transaction = transaction;
+            var partitions = await command.GetReaderPartitionsAsync(0, 10);
+            foreach (var partition in partitions)
+            {
+                // Normally we would send this information to another client to read, but we are just simulating it here
+                // by serializing and deserializing the information locally.
+                var tx = connection.BeginReadOnlyTransaction(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
+                var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
+                var reader = await cmd.ExecuteReaderAsync();
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Verify(client => client.StreamingRead(
+                It.Is<ReadRequest>(request => !request.PartitionToken.IsEmpty && object.Equals(request.Transaction.Id.ToBase64(), transaction.TransactionId.Id)),
+                It.IsAny<CallSettings>()), Times.Exactly(10));
         }
 
         internal static SpannerConnection BuildSpannerConnection(Mock<SpannerClient> spannerClientMock)

@@ -21,6 +21,7 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Google.Rpc;
+using Google.Rpc.Context;
 using Grpc.Core;
 using Moq;
 using Moq.Language;
@@ -94,6 +95,19 @@ namespace Google.Cloud.Spanner.V1.Tests
                     new Transaction
                     {
                         Id = ByteString.CopyFromUtf8(Guid.NewGuid().ToString())
+                    }));
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupPartitionAsync(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.PartitionReadAsync(It.IsNotNull<PartitionReadRequest>(), It.IsAny<CallSettings>()))
+                .Returns<PartitionReadRequest, CallSettings>((request, _) => Task.FromResult(
+                    new PartitionResponse
+                    {
+                        Partitions = { Enumerable.Range(0, (int) request.PartitionOptions.MaxPartitions)
+                            .Select(token => new Partition { PartitionToken = ByteString.CopyFromUtf8(token.ToString())}) }
                     }));
             return spannerClientMock;
         }
@@ -214,6 +228,33 @@ namespace Google.Cloud.Spanner.V1.Tests
                     var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
                         Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
                     return new ExecuteStreamingSqlStreamImpl(call);
+                });
+            return spannerClientMock;
+        }
+
+        internal static Mock<SpannerClient> SetupStreamingRead(this Mock<SpannerClient> spannerClientMock)
+        {
+            spannerClientMock
+                .Setup(client => client.StreamingRead(
+                    It.IsAny<ReadRequest>(),
+                    It.IsAny<CallSettings>()))
+                .Returns<ReadRequest, CallSettings>((request, _) =>
+                {
+                    IEnumerable<PartialResultSet> results = new string[] {"token1", "token2", "token3"}
+                        .Select((resumeToken, index) => new PartialResultSet
+                        {
+                            ResumeToken = ByteString.CopyFromUtf8(resumeToken),
+                            Values = { Value.ForNumber(index) }
+                        })
+                        .ToList();
+                    IEnumerable<PartialResultSet> callResults = request.ResumeToken.IsEmpty
+                        ? results
+                        : results.SkipWhile(r => r.ResumeToken != request.ResumeToken).Skip(1);
+                    var asyncResults = new AsyncStreamAdapter<PartialResultSet>(callResults.ToAsyncEnumerable().GetAsyncEnumerator(default));
+
+                    var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
+                        Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
+                    return new StreamingReadStreamImpl(call);
                 });
             return spannerClientMock;
         }

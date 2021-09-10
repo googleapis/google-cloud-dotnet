@@ -26,12 +26,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         public int RowCount { get; } = 15;
 
-        private bool _createIndexes;
-
-        public CommonDataTableFixture(string tableName, bool createIndexes) : base(tableName)
+        public CommonDataTableFixture(string tableName) : base(tableName)
         {
-            _createIndexes = createIndexes;
         }
+
+        protected virtual bool ShouldCreateIndexes() => false;
 
         protected override void CreateTable()
         {
@@ -40,7 +39,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                                             StringValue        STRING(MAX),
                                           ) PRIMARY KEY (Key)");
 
-            if (_createIndexes)
+            if (ShouldCreateIndexes())
             {
                 ExecuteDdl($"CREATE INDEX TestTableByValue ON {TableName}(StringValue)");
                 ExecuteDdl($"CREATE INDEX TestTableByValueDesc ON {TableName}(StringValue DESC)");

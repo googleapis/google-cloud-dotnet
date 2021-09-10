@@ -19,7 +19,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     [CollectionDefinition(nameof(DataAdapterTableFixture))]
     public class DataAdapterTableFixture : CommonDataTableFixture, ICollectionFixture<DataAdapterTableFixture>
     {
-        public DataAdapterTableFixture() : base("DataAdapterTable", createIndexes: false)
+        public DataAdapterTableFixture() : base("DataAdapterTable")
         {
         }
     }

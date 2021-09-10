@@ -22,7 +22,7 @@ using Moq;
 using System;
 using System.Threading.Tasks;
 using Xunit;
-using static Google.Cloud.Spanner.V1.SqlResultStream;
+using static Google.Cloud.Spanner.V1.ResultStream;
 using static Google.Cloud.Spanner.V1.Tests.SqlResultStreamTests;
 
 namespace Google.Cloud.Spanner.V1.Tests

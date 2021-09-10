@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
 using System;
@@ -24,21 +25,21 @@ namespace Google.Cloud.Spanner.Data
     /// </summary>
     public sealed class CommandPartition : IEquatable<CommandPartition>
     {
-        internal CommandPartition(ExecuteSqlRequest executeSqlRequest)
+        internal CommandPartition(ReadOrQueryRequest request)
         {
-            ExecuteSqlRequest = executeSqlRequest;
+            Request = GaxPreconditions.CheckNotNull(request, nameof(request));
         }
 
         /// <summary>
         /// The Id for the set of data to be included when the <see cref="SpannerCommand"/> executes.
         /// </summary>
-        public string PartitionId => ExecuteSqlRequest?.PartitionToken?.ToBase64();
+        public string PartitionId => Request.PartitionToken?.ToBase64();
 
-        internal ExecuteSqlRequest ExecuteSqlRequest { get; }
+        internal ReadOrQueryRequest Request { get; }
 
         internal CommandPartition Clone()
         {
-            return new CommandPartition(ExecuteSqlRequest.Clone());
+            return new CommandPartition(Request.CloneRequest());
         }
 
         /// <summary>
@@ -50,19 +51,27 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         /// <returns>The base64 representation of this partition.</returns>
         public string ToBase64String()
-        {
-            return ExecuteSqlRequest.ToByteString().ToBase64();
-        }
+            => Request?.ToByteString().ToBase64();
 
         /// <summary>
         /// Creates a new <see cref="CommandPartition"/> based on the text returned by a previous
         /// call to <see cref="ToBase64String"/>.
         /// </summary>
-        /// <param name="base64String">The base64 representation of the command partition.</param>
+        /// <param name="base64String">The base64 representation of the command partition. Must not be null.</param>
         /// <returns>The <see cref="CommandPartition"/> representation of the partition.</returns>
         public static CommandPartition FromBase64String(string base64String)
         {
-            return new CommandPartition(ExecuteSqlRequest.Parser.ParseFrom(ByteString.FromBase64(base64String)));
+            GaxPreconditions.CheckNotNull(base64String, nameof(base64String));
+            try
+            {
+                var request = ExecuteSqlRequest.Parser.ParseFrom(ByteString.FromBase64(base64String));
+                return new CommandPartition(ReadOrQueryRequest.FromQueryRequest(request));
+            }
+            catch (Exception)
+            {
+                // ignore and try to parse as a ReadRequest.
+                return new CommandPartition(ReadOrQueryRequest.FromReadRequest(ReadRequest.Parser.ParseFrom(ByteString.FromBase64(base64String))));
+            }
         }
 
         /// <inheritdoc />
@@ -72,7 +81,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 return false;
             }
-            return ReferenceEquals(this, other) || Equals(ExecuteSqlRequest, other.ExecuteSqlRequest);
+            return ReferenceEquals(this, other) || Equals(Request, other.Request);
         }
 
         /// <inheritdoc />
@@ -86,11 +95,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 return true;
             }
-            var commandPartition = obj as CommandPartition;
-            return commandPartition != null && Equals(commandPartition);
+            return obj is CommandPartition commandPartition && Equals(commandPartition);
         }
 
         /// <inheritdoc />
-        public override int GetHashCode() => ExecuteSqlRequest?.GetHashCode() ?? 0;
+        public override int GetHashCode() => Request?.GetHashCode() ?? 0;
     }
 }

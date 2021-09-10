@@ -44,46 +44,54 @@ namespace Google.Cloud.Spanner.V1.Tests
             retryFilter: ignored => false,
             RetrySettings.NoJitter);
 
-        [Fact]
-        public async Task SimpleSuccess()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task SimpleSuccess(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3");
 
             var client = new FakeSpannerClient(results);
-            var stream = CreateStream(client);
+            var stream = CreateResultStream(type, client);
 
             await AssertResultsAsync(stream, results);
             Assert.Equal(1, client.Calls);
         }
 
-        [Fact]
-        public async Task ResumeAfterFailure()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task ResumeAfterFailure(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3");
 
             var filter = CreateExceptionFilter("token2", RetriableStatusCode);
             var client = new FakeSpannerClient(results, filter);
-            var stream = CreateStream(client);
+            var stream = CreateResultStream(type, client);
 
             await AssertResultsAsync(stream, results);
             Assert.Equal(2, client.Calls);
         }
 
-        [Fact]
-        public async Task ResumeWithBuffering()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task ResumeWithBuffering(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "", "", "token3");
 
             var filter = CreateExceptionFilter("token3", RetriableStatusCode);
             var client = new FakeSpannerClient(results, filter);
-            var stream = CreateStream(client);
+            var stream = CreateResultStream(type, client);
 
             await AssertResultsAsync(stream, results);
             Assert.Equal(2, client.Calls);
         }
 
-        [Fact]
-        public async Task MultipleErrors_WithSuccessBetween()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task MultipleErrors_WithSuccessBetween(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3", "token4");
 
@@ -92,18 +100,20 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             // Note: if we do this a lot, we might want a way of specifying multiple filters easily.
             var client = new FakeSpannerClient(results, prs => filter2(filter1(prs)));
-            var stream = CreateStream(client);
+            var stream = CreateResultStream(type, client);
 
             await AssertResultsAsync(stream, results);
             Assert.Equal(3, client.Calls);
         }
 
-        [Fact]
-        public async Task MultipleErrors_ForSameResumeToken()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task MultipleErrors_ForSameResumeToken(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3", "token4");
             var client = new FakeSpannerClient(results, CreateExceptionFilter("token2", RetriableStatusCode, 2));
-            var stream = CreateStream(client);
+            var stream = CreateResultStream(type, client);
 
             // We expect calls of:
             // - Start: no token, MoveNext(yes), MoveNext(throw)
@@ -113,54 +123,64 @@ namespace Google.Cloud.Spanner.V1.Tests
             Assert.Equal(3, client.Calls);
         }
 
-        [Fact]
-        public async Task BufferOverflow_NoErrors()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task BufferOverflow_NoErrors(System.Type type)
         {
             // No resume tokens, so we buffer for a while, then we're forced to return the results anyway.
             var results = CreateResultSets("", "", "", "");
             var client = new FakeSpannerClient(results);
-            var stream = CreateStream(client, maxBufferSize: 3);
+            var stream = CreateResultStream(type, client, maxBufferSize: 3);
             await AssertResultsAsync(stream, results);
             Assert.Equal(1, client.Calls);
         }
 
-        [Fact]
-        public async Task BufferOverflow_ErrorBeforeFlushing()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task BufferOverflow_ErrorBeforeFlushing(System.Type type)
         {
             // No resume tokens, so we buffer for a while, then we're forced to return the results anyway.
             // We encounter a server error before we get the resume token, so we have to abandon the stream.
             var results = CreateResultSets("", "", "", "", "token1", "token2");
             var client = new FakeSpannerClient(results, CreateExceptionFilter("token1", RetriableStatusCode));
-            var stream = CreateStream(client, maxBufferSize: 3);
+            var stream = CreateResultStream(type, client, maxBufferSize: 3);
             await AssertResultsThenExceptionAsync(stream, results, 4);
             Assert.Equal(1, client.Calls);
         }
 
-        [Fact]
-        public async Task BufferOverflow_ErrorAfterFlushing()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task BufferOverflow_ErrorAfterFlushing(System.Type type)
         {
             // No resume tokens, so we buffer for a while... but then we flush when we see the first resume token,
             // at which point it's okay for the server to fail, as we can resume safely.
             var results = CreateResultSets("", "", "", "", "token1", "token2");
             var client = new FakeSpannerClient(results, CreateExceptionFilter("token2", RetriableStatusCode));
-            var stream = CreateStream(client, maxBufferSize: 3);
+            var stream = CreateResultStream(type, client, maxBufferSize: 3);
             await AssertResultsAsync(stream, results);
             Assert.Equal(2, client.Calls);
         }
 
-        [Fact]
-        public async Task NonRetriableException()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task NonRetriableException(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3", "token4");
             var client = new FakeSpannerClient(results, CreateExceptionFilter("token2", NonRetriableStatusCode));
-            var stream = CreateStream(client);
+            var stream = CreateResultStream(type, client);
 
             await AssertResultsThenExceptionAsync(stream, results, 1);
             Assert.Equal(1, client.Calls);
         }
 
-        [Fact]
-        public async Task RetryableError_ExceedsTimeout()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task RetryableError_ExceedsTimeout(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3");
 
@@ -179,14 +199,16 @@ namespace Google.Cloud.Spanner.V1.Tests
                 retryFilter: ignored => false,
                 RetrySettings.NoJitter);
 
-            var stream = CreateStream(client, maxBufferSize: 10, callSettings, retrySettings);
+            var stream = CreateResultStream(type, client, maxBufferSize: 10, callSettings, retrySettings);
 
             await AssertResultsThenExceptionAsync(stream, results, 1);
             Assert.Equal(1, client.Calls);
         }
 
-        [Fact]
-        public async Task MultipleRetryableErrors_ForDifferentResumeTokens_ResetsTimeout()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task MultipleRetryableErrors_ForDifferentResumeTokens_ResetsTimeout(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3");
 
@@ -210,14 +232,16 @@ namespace Google.Cloud.Spanner.V1.Tests
                 retryFilter: ignored => false,
                 RetrySettings.NoJitter);
 
-            var stream = CreateStream(client, maxBufferSize: 10, callSettings, retrySettings);
+            var stream = CreateResultStream(type, client, maxBufferSize: 10, callSettings, retrySettings);
 
             await AssertResultsAsync(stream, results);
             Assert.Equal(3, client.Calls);
         }
 
-        [Fact]
-        public async Task MultipleRetryableErrors_ForSameResumeToken_CausesTimeout()
+        [InlineData(typeof(ReadRequest))]
+        [InlineData(typeof(ExecuteSqlRequest))]
+        [Theory]
+        public async Task MultipleRetryableErrors_ForSameResumeToken_CausesTimeout(System.Type type)
         {
             var results = CreateResultSets("token1", "token2", "token3");
 
@@ -239,7 +263,7 @@ namespace Google.Cloud.Spanner.V1.Tests
                 retryFilter: ignored => false,
                 RetrySettings.NoJitter);
 
-            var stream = CreateStream(client, maxBufferSize: 10, callSettings, retrySettings);
+            var stream = CreateResultStream(type, client, maxBufferSize: 10, callSettings, retrySettings);
 
             await AssertResultsThenExceptionAsync(stream, results, 2);
             // 2 calls == 1 initial call + 1 retry of token3.
@@ -247,7 +271,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             Assert.Equal(2, client.Calls);
         }
 
-        private async Task AssertResultsAsync(SqlResultStream stream, IEnumerable<PartialResultSet> expectedResults)
+        private async Task AssertResultsAsync(ResultStream stream, IEnumerable<PartialResultSet> expectedResults)
         {
             var ret = new List<PartialResultSet>();
             while (await stream.MoveNext(default))
@@ -257,7 +281,7 @@ namespace Google.Cloud.Spanner.V1.Tests
             Assert.Equal(expectedResults.ToList(), ret);
         }
 
-        private async Task AssertResultsThenExceptionAsync(SqlResultStream stream, List<PartialResultSet> allResults, int expectedSuccesses)
+        private async Task AssertResultsThenExceptionAsync(ResultStream stream, List<PartialResultSet> allResults, int expectedSuccesses)
         {
             for (int i = 0; i < expectedSuccesses; i++)
             {
@@ -284,8 +308,15 @@ namespace Google.Cloud.Spanner.V1.Tests
             };
         }
 
-        private static SqlResultStream CreateStream(SpannerClient client, int maxBufferSize = 10, CallSettings callSettings = null, RetrySettings retrySettings = null) =>
-            new SqlResultStream(client, new ExecuteSqlRequest(), new Session(), callSettings ?? s_simpleCallSettings, maxBufferSize, retrySettings ?? s_retrySettings);
+        private static ResultStream CreateResultStream(
+            System.Type type,
+            SpannerClient client,
+            int maxBufferSize = 10,
+            CallSettings callSettings = null,
+            RetrySettings retrySettings = null)
+            => new ResultStream(client,
+                ReadOrQueryRequest.FromRequest(type == typeof(ExecuteSqlRequest) ? new ExecuteSqlRequest() : new ReadRequest() as IReadOrQueryRequest),
+                new Session(), callSettings ?? s_simpleCallSettings, maxBufferSize, retrySettings ?? s_retrySettings);
 
         private static List<PartialResultSet> CreateResultSets(params string[] resumeTokens) =>
             resumeTokens
@@ -316,19 +347,28 @@ namespace Google.Cloud.Spanner.V1.Tests
 
             public override ExecuteStreamingSqlStream ExecuteStreamingSql(ExecuteSqlRequest request, CallSettings callSettings = null)
             {
-                FileLogger.Log($"Called with token {request.ResumeToken.ToStringUtf8()}");
+                return new ExecuteStreamingSqlStreamImpl(CreateStreamingCall(request.ResumeToken));
+            }
+
+            public override StreamingReadStream StreamingRead(ReadRequest request, CallSettings callSettings = null)
+            {
+                return new StreamingReadStreamImpl(CreateStreamingCall(request.ResumeToken));
+            }
+
+            private AsyncServerStreamingCall<PartialResultSet> CreateStreamingCall(ByteString resumeToken)
+            {
+                FileLogger.Log($"Called with token {resumeToken.ToStringUtf8()}");
                 Calls++;
-                IEnumerable<PartialResultSet> callResults = request.ResumeToken.IsEmpty
+                IEnumerable<PartialResultSet> callResults = resumeToken.IsEmpty
                     ? _results
                     // If a resume token is presented, that means we need to skip all responses up to *and including* that one - so skip while we haven't seen it, then skip an extra one.
-                    : _results.SkipWhile(r => r.ResumeToken != request.ResumeToken).Skip(1);
+                    : _results.SkipWhile(r => r.ResumeToken != resumeToken).Skip(1);
                 callResults = callResults.Select(_filter);
                 var asyncResults = new AsyncStreamAdapter<PartialResultSet>(callResults.ToAsyncEnumerable().GetAsyncEnumerator(default));
 
-                var call = new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
+                return new AsyncServerStreamingCall<PartialResultSet>(asyncResults,
                     // These arguments are all for aspects of gRPC streaming we don't care about.
                     Task.FromResult(new Metadata()), () => new Status(), () => new Metadata(), () => { });
-                return new ExecuteStreamingSqlStreamImpl(call);
             }
         }
 

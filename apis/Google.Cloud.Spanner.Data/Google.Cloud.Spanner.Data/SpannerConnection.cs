@@ -20,6 +20,7 @@ using Google.Cloud.Spanner.V1.Internal.Logging;
 using Google.Protobuf;
 using Grpc.Core;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
@@ -422,6 +423,22 @@ namespace Google.Cloud.Spanner.Data
                 OnStateChange(new StateChangeEventArgs(oldState, _state));
             }
         }
+
+        /// <summary>
+        /// Creates a new <see cref="SpannerCommand" /> to read rows from a Spanner database table. The rows will be
+        /// returned in the order of the primary key.
+        /// This method is thread safe.
+        /// </summary>
+        /// <param name="databaseTable">The name of the table from which to read rows. Must not be null.</param>
+        /// <param name="readOptions">The read options to use for the command. Must not be null.</param>
+        /// <param name="keySet">The set of primary keys to read. Must not be null.</param>
+        /// <returns>A configured <see cref="SpannerCommand" /></returns>
+        public SpannerCommand CreateReadCommand(
+            string databaseTable,
+            ReadOptions readOptions,
+            KeySet keySet) => new SpannerCommand(
+            SpannerCommandTextBuilder.CreateReadTextBuilder(databaseTable, readOptions),
+            this, GaxPreconditions.CheckNotNull(keySet, nameof(keySet)));
 
         /// <summary>
         /// Creates a new <see cref="SpannerCommand" /> to delete rows from a Spanner database table.

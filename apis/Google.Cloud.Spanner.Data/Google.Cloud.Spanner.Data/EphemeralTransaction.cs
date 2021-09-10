@@ -135,15 +135,17 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        public Task<ReliableStreamReader> ExecuteQueryAsync(ExecuteSqlRequest request, CancellationToken cancellationToken, int timeoutSeconds /* ignored */)
+        public Task<ReliableStreamReader> ExecuteReadOrQueryAsync(ReadOrQueryRequest request, CancellationToken cancellationToken, int timeoutSeconds /* ignored */)
         {
-            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteQuery", _connection.Logger);
+            return ExecuteHelper.WithErrorTranslationAndProfiling(Impl, "EphemeralTransaction.ExecuteReadOrQuery", _connection.Logger);
 
             async Task<ReliableStreamReader> Impl()
             {
                 PooledSession session = await _connection.AcquireSessionAsync(_transactionOptions, cancellationToken).ConfigureAwait(false);
-                var callSettings = _connection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, cancellationToken);
-                var reader = session.ExecuteSqlStreamReader(request, callSettings);
+                var callSettings = _connection.CreateCallSettings(
+                    request.GetCallSettings,
+                    cancellationToken);
+                var reader = request.ExecuteReadOrQueryStreamReader(session, callSettings);
                 reader.StreamClosed += delegate { session.ReleaseToPool(forceDelete: false); };
                 return reader;
             }

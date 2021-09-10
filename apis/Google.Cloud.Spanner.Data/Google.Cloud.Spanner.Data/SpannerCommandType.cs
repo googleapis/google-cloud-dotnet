@@ -53,6 +53,11 @@ namespace Google.Cloud.Spanner.Data
         /// A general DML statement, which may use queries to update some
         /// values based on others.
         /// </summary>
-        Dml
+        Dml,
+
+        /// <summary>
+        /// Reads rows from a table
+        /// </summary>
+        Read,
     }
 }

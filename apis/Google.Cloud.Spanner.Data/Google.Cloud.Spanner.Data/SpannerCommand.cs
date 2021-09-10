@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Spanner.V1;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -103,6 +104,32 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
+        /// Initializes a new instance of <see cref="SpannerCommand"/> for a read operation.
+        /// </summary>
+        /// <remarks>
+        /// The initial command timeout is taken from the options associated with <paramref name="connection"/>.
+        /// </remarks>
+        /// <param name="commandTextBuilder">The <see cref="SpannerCommandTextBuilder"/>
+        /// that configures the text of this command. Must be a read command and not be null.</param>
+        /// <param name="connection">The <see cref="SpannerConnection"/> that is
+        /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
+        /// <param name="keySet">The <see cref="KeySet"/> that is used to select rows. Must not be null.</param>
+        /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
+        /// created through <see cref="SpannerConnection.BeginTransactionAsync" />. May be null.</param>
+        internal SpannerCommand(
+            SpannerCommandTextBuilder commandTextBuilder,
+            SpannerConnection connection,
+            KeySet keySet,
+            SpannerTransaction transaction = null)
+            : this(connection, transaction, null, null)
+        {
+            GaxPreconditions.CheckArgument(commandTextBuilder.SpannerCommandType == SpannerCommandType.Read,
+                nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read commands");
+            SpannerCommandTextBuilder = GaxPreconditions.CheckNotNull(commandTextBuilder, nameof(commandTextBuilder));
+            KeySet = GaxPreconditions.CheckNotNull(keySet, nameof(keySet));
+        }
+
+        /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>.
         /// </summary>
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
@@ -123,7 +150,11 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
             GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
             GaxPreconditions.CheckNotNull(commandPartition, nameof(commandPartition));
-            SpannerCommandTextBuilder = SpannerCommandTextBuilder.FromCommandText(commandPartition.ExecuteSqlRequest.Sql);
+            SpannerCommandTextBuilder = commandPartition.Request.IsQuery
+                ? SpannerCommandTextBuilder.FromCommandText(commandPartition.Request.ExecuteSqlRequest.Sql)
+                : SpannerCommandTextBuilder.CreateReadTextBuilder(
+                commandPartition.Request.ReadRequest.Table,
+                ReadOptions.FromColumns(commandPartition.Request.ReadRequest.Columns));
         }
 
         /// <summary>
@@ -198,6 +229,11 @@ namespace Google.Cloud.Spanner.Data
         /// The parameters of the SQL statement or command.
         /// </summary>
         public new SpannerParameterCollection Parameters { get; } = new SpannerParameterCollection();
+
+        /// <summary>
+        /// The keys of the rows that should be read from the target table if the command is Read, or null otherwise.
+        /// </summary>
+        public KeySet KeySet { get; }
 
         /// <summary>
         /// The connection to the data source.
@@ -340,7 +376,7 @@ namespace Google.Cloud.Spanner.Data
         protected override void Dispose(bool disposing) { }
 
         /// <summary>
-        /// Creates a set of <see cref="CommandPartition"/> objects that are used to execute a query
+        /// Creates a set of <see cref="CommandPartition"/> objects that are used to execute a query or read
         /// operation in parallel.  Each of the returned command partitions are used
         /// by <see cref="SpannerConnection.CreateCommandWithPartition"/> to create a new <see cref="SpannerCommand"/>
         /// that returns a subset of data.
