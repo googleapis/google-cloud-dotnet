@@ -159,7 +159,6 @@ namespace Google.Cloud.Vision.V1.Snippets
 
             Assert.InRange(result.Count, 1, 10);
             var descriptions = result.Select(r => r.Description).ToList();
-            Assert.Contains("Royal Botanic Gardens", descriptions);
             Assert.Contains("Sydney Opera House", descriptions);
         }
 
