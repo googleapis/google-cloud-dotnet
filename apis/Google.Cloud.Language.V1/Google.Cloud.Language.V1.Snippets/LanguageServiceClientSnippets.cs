@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ClientTesting;
+using Google.Rpc;
+using Grpc.Core;
 using System;
 using Xunit;
 using static Google.Cloud.Language.V1.AnnotateTextRequest.Types;
@@ -125,6 +128,32 @@ namespace Google.Cloud.Language.V1.Snippets
                 Console.WriteLine($"  Sentiment score: {entity.Sentiment.Score}; magnitude: {entity.Sentiment.Magnitude}");
             }
             // End sample
+        }
+
+        [Fact]
+        public void ErrorDetails()
+        {
+            LanguageServiceClient client = LanguageServiceClient.Create();
+
+            var document = new Document
+            {
+                Content = "Hello, world!",
+                Type = Document.Types.Type.PlainText,
+                Language = "zz"
+            };
+
+            var ex = Assert.Throws<RpcException>(() => client.AnalyzeSentiment(document));
+            Assert.Equal(StatusCode.InvalidArgument, ex.StatusCode);
+            Assert.Matches("document.language is not valid", ex.Status.Detail);
+
+            // An example of getting the bad request details. GetBadRequest will return null
+            // if there are no suitable details.
+            var badRequest = ex.GetBadRequest();
+            Console.WriteLine(badRequest?.FieldViolations);
+
+            // And likewise for ErrorInfo
+            var errorInfo = ex.GetErrorInfo();
+            Console.WriteLine(errorInfo?.Domain);
         }
     }
 }
