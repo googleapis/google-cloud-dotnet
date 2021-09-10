@@ -39,7 +39,8 @@ the request and want to put work into it.
 ## Storage: Better handling of compressed objects when compression is disabled
 
 - Issue: [#1784](https://github.com/googleapis/google-cloud-dotnet/issues/1784)
-- Status: Both proposed options need server changes in some form or other.
+- Issue: [#7154](https://github.com/googleapis/google-cloud-dotnet/issues/7154)
+- Status: All possible options need server changes in some form or other.
 
 ## Diagnostics: Log exceptions thrown in TimedBuffer
 
