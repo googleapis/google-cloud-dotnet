@@ -3,14 +3,14 @@
     "method": "ListOSPolicyAssignments",
     "client": "OsConfigZonalServiceClient",
     "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+      "parent": "projects/${PROJECT_ID}/locations/us-east1-a"
     }
   },
   {
     "method": "ListInstanceOSPoliciesCompliances",
     "client": "OsConfigZonalServiceClient",
     "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+      "parent": "projects/${PROJECT_ID}/locations/us-east1-a"
     }
   }
 ]
