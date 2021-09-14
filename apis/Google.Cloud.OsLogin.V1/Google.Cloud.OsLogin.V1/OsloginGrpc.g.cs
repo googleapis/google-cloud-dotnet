@@ -34,6 +34,7 @@ namespace Google.Cloud.OsLogin.V1 {
   {
     static readonly string __ServiceName = "google.cloud.oslogin.v1.OsLoginService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -48,11 +49,13 @@ namespace Google.Cloud.OsLogin.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -64,17 +67,28 @@ namespace Google.Cloud.OsLogin.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest> __Marshaller_google_cloud_oslogin_v1_DeletePosixAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1_DeleteSshPublicKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest> __Marshaller_google_cloud_oslogin_v1_GetLoginProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.LoginProfile> __Marshaller_google_cloud_oslogin_v1_LoginProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.LoginProfile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1_GetSshPublicKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.Common.SshPublicKey> __Marshaller_google_cloud_oslogin_common_SshPublicKey = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.Common.SshPublicKey.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1_ImportSshPublicKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse> __Marshaller_google_cloud_oslogin_v1_ImportSshPublicKeyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest> __Marshaller_google_cloud_oslogin_v1_UpdateSshPublicKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePosixAccount = new grpc::Method<global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -82,6 +96,7 @@ namespace Google.Cloud.OsLogin.V1 {
         __Marshaller_google_cloud_oslogin_v1_DeletePosixAccountRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -89,6 +104,7 @@ namespace Google.Cloud.OsLogin.V1 {
         __Marshaller_google_cloud_oslogin_v1_DeleteSshPublicKeyRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest, global::Google.Cloud.OsLogin.V1.LoginProfile> __Method_GetLoginProfile = new grpc::Method<global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest, global::Google.Cloud.OsLogin.V1.LoginProfile>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -96,6 +112,7 @@ namespace Google.Cloud.OsLogin.V1 {
         __Marshaller_google_cloud_oslogin_v1_GetLoginProfileRequest,
         __Marshaller_google_cloud_oslogin_v1_LoginProfile);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey> __Method_GetSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -103,6 +120,7 @@ namespace Google.Cloud.OsLogin.V1 {
         __Marshaller_google_cloud_oslogin_v1_GetSshPublicKeyRequest,
         __Marshaller_google_cloud_oslogin_common_SshPublicKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse> __Method_ImportSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest, global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -110,6 +128,7 @@ namespace Google.Cloud.OsLogin.V1 {
         __Marshaller_google_cloud_oslogin_v1_ImportSshPublicKeyRequest,
         __Marshaller_google_cloud_oslogin_v1_ImportSshPublicKeyResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey> __Method_UpdateSshPublicKey = new grpc::Method<global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest, global::Google.Cloud.OsLogin.Common.SshPublicKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +152,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePosixAccount(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -144,6 +164,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSshPublicKey(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -156,6 +177,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsLogin.V1.LoginProfile> GetLoginProfile(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -167,6 +189,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsLogin.Common.SshPublicKey> GetSshPublicKey(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -180,6 +203,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse> ImportSshPublicKey(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -192,6 +216,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsLogin.Common.SshPublicKey> UpdateSshPublicKey(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -204,20 +229,24 @@ namespace Google.Cloud.OsLogin.V1 {
     {
       /// <summary>Creates a new client for OsLoginService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public OsLoginServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for OsLoginService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public OsLoginServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected OsLoginServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected OsLoginServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -230,6 +259,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePosixAccount(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePosixAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -240,6 +270,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePosixAccount(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePosixAccount, null, options, request);
@@ -252,6 +283,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePosixAccountAsync(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePosixAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -262,6 +294,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePosixAccountAsync(global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePosixAccount, null, options, request);
@@ -274,6 +307,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSshPublicKey(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -284,6 +318,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSshPublicKey(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSshPublicKey, null, options, request);
@@ -296,6 +331,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -306,6 +342,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.DeleteSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSshPublicKey, null, options, request);
@@ -319,6 +356,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.V1.LoginProfile GetLoginProfile(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetLoginProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -330,6 +368,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.V1.LoginProfile GetLoginProfile(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetLoginProfile, null, options, request);
@@ -343,6 +382,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.LoginProfile> GetLoginProfileAsync(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetLoginProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -354,6 +394,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.LoginProfile> GetLoginProfileAsync(global::Google.Cloud.OsLogin.V1.GetLoginProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetLoginProfile, null, options, request);
@@ -366,6 +407,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey GetSshPublicKey(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -376,6 +418,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey GetSshPublicKey(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSshPublicKey, null, options, request);
@@ -388,6 +431,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> GetSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -398,6 +442,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> GetSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.GetSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSshPublicKey, null, options, request);
@@ -412,6 +457,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse ImportSshPublicKey(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -424,6 +470,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse ImportSshPublicKey(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportSshPublicKey, null, options, request);
@@ -438,6 +485,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -450,6 +498,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyResponse> ImportSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.ImportSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportSshPublicKey, null, options, request);
@@ -463,6 +512,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey UpdateSshPublicKey(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSshPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -474,6 +524,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsLogin.Common.SshPublicKey UpdateSshPublicKey(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSshPublicKey, null, options, request);
@@ -487,6 +538,7 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> UpdateSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSshPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -498,11 +550,13 @@ namespace Google.Cloud.OsLogin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsLogin.Common.SshPublicKey> UpdateSshPublicKeyAsync(global::Google.Cloud.OsLogin.V1.UpdateSshPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSshPublicKey, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OsLoginServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new OsLoginServiceClient(configuration);
@@ -511,6 +565,7 @@ namespace Google.Cloud.OsLogin.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(OsLoginServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -526,6 +581,7 @@ namespace Google.Cloud.OsLogin.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, OsLoginServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DeletePosixAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsLogin.V1.DeletePosixAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeletePosixAccount));

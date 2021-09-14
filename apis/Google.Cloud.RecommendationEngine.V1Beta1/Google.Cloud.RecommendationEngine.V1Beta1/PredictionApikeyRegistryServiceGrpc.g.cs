@@ -34,6 +34,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.recommendationengine.v1beta1.PredictionApiKeyRegistry";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -48,11 +49,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -64,13 +67,20 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_CreatePredictionApiKeyRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration> __Marshaller_google_cloud_recommendationengine_v1beta1_PredictionApiKeyRegistration = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ListPredictionApiKeyRegistrationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse> __Marshaller_google_cloud_recommendationengine_v1beta1_ListPredictionApiKeyRegistrationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_DeletePredictionApiKeyRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration> __Method_CreatePredictionApiKeyRegistration = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -78,6 +88,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
         __Marshaller_google_cloud_recommendationengine_v1beta1_CreatePredictionApiKeyRegistrationRequest,
         __Marshaller_google_cloud_recommendationengine_v1beta1_PredictionApiKeyRegistration);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse> __Method_ListPredictionApiKeyRegistrations = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -85,6 +96,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
         __Marshaller_google_cloud_recommendationengine_v1beta1_ListPredictionApiKeyRegistrationsRequest,
         __Marshaller_google_cloud_recommendationengine_v1beta1_ListPredictionApiKeyRegistrationsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePredictionApiKeyRegistration = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +120,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration> CreatePredictionApiKeyRegistration(global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -119,6 +132,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse> ListPredictionApiKeyRegistrations(global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -130,6 +144,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePredictionApiKeyRegistration(global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -142,20 +157,24 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     {
       /// <summary>Creates a new client for PredictionApiKeyRegistry</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public PredictionApiKeyRegistryClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for PredictionApiKeyRegistry that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public PredictionApiKeyRegistryClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected PredictionApiKeyRegistryClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected PredictionApiKeyRegistryClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -168,6 +187,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration CreatePredictionApiKeyRegistration(global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePredictionApiKeyRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -178,6 +198,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration CreatePredictionApiKeyRegistration(global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePredictionApiKeyRegistration, null, options, request);
@@ -190,6 +211,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration> CreatePredictionApiKeyRegistrationAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePredictionApiKeyRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -200,6 +222,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration> CreatePredictionApiKeyRegistrationAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePredictionApiKeyRegistration, null, options, request);
@@ -212,6 +235,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse ListPredictionApiKeyRegistrations(global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPredictionApiKeyRegistrations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -222,6 +246,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse ListPredictionApiKeyRegistrations(global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListPredictionApiKeyRegistrations, null, options, request);
@@ -234,6 +259,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse> ListPredictionApiKeyRegistrationsAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPredictionApiKeyRegistrationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -244,6 +270,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsResponse> ListPredictionApiKeyRegistrationsAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.ListPredictionApiKeyRegistrationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPredictionApiKeyRegistrations, null, options, request);
@@ -256,6 +283,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePredictionApiKeyRegistration(global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePredictionApiKeyRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -266,6 +294,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePredictionApiKeyRegistration(global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePredictionApiKeyRegistration, null, options, request);
@@ -278,6 +307,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePredictionApiKeyRegistrationAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePredictionApiKeyRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -288,11 +318,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePredictionApiKeyRegistrationAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.DeletePredictionApiKeyRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePredictionApiKeyRegistration, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override PredictionApiKeyRegistryClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new PredictionApiKeyRegistryClient(configuration);
@@ -301,6 +333,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(PredictionApiKeyRegistryBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -313,6 +346,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PredictionApiKeyRegistryBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreatePredictionApiKeyRegistration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecommendationEngine.V1Beta1.CreatePredictionApiKeyRegistrationRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.PredictionApiKeyRegistration>(serviceImpl.CreatePredictionApiKeyRegistration));

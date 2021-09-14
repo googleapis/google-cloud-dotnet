@@ -30,6 +30,7 @@ namespace Google.Analytics.Data.V1Alpha {
   {
     static readonly string __ServiceName = "google.analytics.data.v1alpha.AlphaAnalyticsData";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Analytics.Data.V1Alpha {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,19 +63,32 @@ namespace Google.Analytics.Data.V1Alpha {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunReportRequest> __Marshaller_google_analytics_data_v1alpha_RunReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunReportResponse> __Marshaller_google_analytics_data_v1alpha_RunReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunReportResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest> __Marshaller_google_analytics_data_v1alpha_RunPivotReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse> __Marshaller_google_analytics_data_v1alpha_RunPivotReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunReportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest> __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.GetMetadataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.Metadata> __Marshaller_google_analytics_data_v1alpha_Metadata = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.Metadata.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> __Marshaller_google_analytics_data_v1alpha_RunRealtimeReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse> __Method_RunReport = new grpc::Method<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -80,6 +96,7 @@ namespace Google.Analytics.Data.V1Alpha {
         __Marshaller_google_analytics_data_v1alpha_RunReportRequest,
         __Marshaller_google_analytics_data_v1alpha_RunReportResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest, global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse> __Method_RunPivotReport = new grpc::Method<global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest, global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -87,6 +104,7 @@ namespace Google.Analytics.Data.V1Alpha {
         __Marshaller_google_analytics_data_v1alpha_RunPivotReportRequest,
         __Marshaller_google_analytics_data_v1alpha_RunPivotReportResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> __Method_BatchRunReports = new grpc::Method<global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +112,7 @@ namespace Google.Analytics.Data.V1Alpha {
         __Marshaller_google_analytics_data_v1alpha_BatchRunReportsRequest,
         __Marshaller_google_analytics_data_v1alpha_BatchRunReportsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> __Method_BatchRunPivotReports = new grpc::Method<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest, global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +120,7 @@ namespace Google.Analytics.Data.V1Alpha {
         __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsRequest,
         __Marshaller_google_analytics_data_v1alpha_BatchRunPivotReportsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata> __Method_GetMetadata = new grpc::Method<global::Google.Analytics.Data.V1Alpha.GetMetadataRequest, global::Google.Analytics.Data.V1Alpha.Metadata>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +128,7 @@ namespace Google.Analytics.Data.V1Alpha {
         __Marshaller_google_analytics_data_v1alpha_GetMetadataRequest,
         __Marshaller_google_analytics_data_v1alpha_Metadata);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> __Method_RunRealtimeReport = new grpc::Method<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest, global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +158,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.RunReportResponse> RunReport(global::Google.Analytics.Data.V1Alpha.RunReportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -152,6 +174,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse> RunPivotReport(global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -164,6 +187,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> BatchRunReports(global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -176,6 +200,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> BatchRunPivotReports(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -196,6 +221,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.Metadata> GetMetadata(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -209,6 +235,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> RunRealtimeReport(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -221,20 +248,24 @@ namespace Google.Analytics.Data.V1Alpha {
     {
       /// <summary>Creates a new client for AlphaAnalyticsData</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AlphaAnalyticsDataClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AlphaAnalyticsData that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AlphaAnalyticsDataClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AlphaAnalyticsDataClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AlphaAnalyticsDataClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -253,6 +284,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.RunReportResponse RunReport(global::Google.Analytics.Data.V1Alpha.RunReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -269,6 +301,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.RunReportResponse RunReport(global::Google.Analytics.Data.V1Alpha.RunReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunReport, null, options, request);
@@ -287,6 +320,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunReportResponse> RunReportAsync(global::Google.Analytics.Data.V1Alpha.RunReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -303,6 +337,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunReportResponse> RunReportAsync(global::Google.Analytics.Data.V1Alpha.RunReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunReport, null, options, request);
@@ -319,6 +354,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse RunPivotReport(global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunPivotReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -333,6 +369,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse RunPivotReport(global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunPivotReport, null, options, request);
@@ -349,6 +386,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse> RunPivotReportAsync(global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunPivotReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -363,6 +401,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunPivotReportResponse> RunPivotReportAsync(global::Google.Analytics.Data.V1Alpha.RunPivotReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunPivotReport, null, options, request);
@@ -376,6 +415,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse BatchRunReports(global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchRunReports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -387,6 +427,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse BatchRunReports(global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchRunReports, null, options, request);
@@ -400,6 +441,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> BatchRunReportsAsync(global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchRunReportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -411,6 +453,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.BatchRunReportsResponse> BatchRunReportsAsync(global::Google.Analytics.Data.V1Alpha.BatchRunReportsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchRunReports, null, options, request);
@@ -424,6 +467,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse BatchRunPivotReports(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchRunPivotReports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -435,6 +479,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse BatchRunPivotReports(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchRunPivotReports, null, options, request);
@@ -448,6 +493,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> BatchRunPivotReportsAsync(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchRunPivotReportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -459,6 +505,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsResponse> BatchRunPivotReportsAsync(global::Google.Analytics.Data.V1Alpha.BatchRunPivotReportsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchRunPivotReports, null, options, request);
@@ -480,6 +527,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.Metadata GetMetadata(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMetadata(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -499,6 +547,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.Metadata GetMetadata(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMetadata, null, options, request);
@@ -520,6 +569,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.Metadata> GetMetadataAsync(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMetadataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -539,6 +589,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.Metadata> GetMetadataAsync(global::Google.Analytics.Data.V1Alpha.GetMetadataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMetadata, null, options, request);
@@ -553,6 +604,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse RunRealtimeReport(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunRealtimeReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -565,6 +617,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse RunRealtimeReport(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunRealtimeReport, null, options, request);
@@ -579,6 +632,7 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> RunRealtimeReportAsync(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunRealtimeReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -591,11 +645,13 @@ namespace Google.Analytics.Data.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Data.V1Alpha.RunRealtimeReportResponse> RunRealtimeReportAsync(global::Google.Analytics.Data.V1Alpha.RunRealtimeReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunRealtimeReport, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AlphaAnalyticsDataClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AlphaAnalyticsDataClient(configuration);
@@ -604,6 +660,7 @@ namespace Google.Analytics.Data.V1Alpha {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AlphaAnalyticsDataBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -619,6 +676,7 @@ namespace Google.Analytics.Data.V1Alpha {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AlphaAnalyticsDataBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_RunReport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Data.V1Alpha.RunReportRequest, global::Google.Analytics.Data.V1Alpha.RunReportResponse>(serviceImpl.RunReport));

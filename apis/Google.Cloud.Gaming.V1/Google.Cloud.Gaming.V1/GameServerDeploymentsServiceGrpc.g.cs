@@ -31,6 +31,7 @@ namespace Google.Cloud.Gaming.V1 {
   {
     static readonly string __ServiceName = "google.cloud.gaming.v1.GameServerDeploymentsService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Gaming.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,22 +64,38 @@ namespace Google.Cloud.Gaming.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest> __Marshaller_google_cloud_gaming_v1_ListGameServerDeploymentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse> __Marshaller_google_cloud_gaming_v1_ListGameServerDeploymentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1_GetGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.GameServerDeployment> __Marshaller_google_cloud_gaming_v1_GameServerDeployment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.GameServerDeployment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1_CreateGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1_DeleteGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest> __Marshaller_google_cloud_gaming_v1_UpdateGameServerDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1_GetGameServerDeploymentRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout> __Marshaller_google_cloud_gaming_v1_GameServerDeploymentRollout = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1_UpdateGameServerDeploymentRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest> __Marshaller_google_cloud_gaming_v1_PreviewGameServerDeploymentRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse> __Marshaller_google_cloud_gaming_v1_PreviewGameServerDeploymentRolloutResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest> __Marshaller_google_cloud_gaming_v1_FetchDeploymentStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse> __Marshaller_google_cloud_gaming_v1_FetchDeploymentStateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest, global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse> __Method_ListGameServerDeployments = new grpc::Method<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest, global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -84,6 +103,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_ListGameServerDeploymentsRequest,
         __Marshaller_google_cloud_gaming_v1_ListGameServerDeploymentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest, global::Google.Cloud.Gaming.V1.GameServerDeployment> __Method_GetGameServerDeployment = new grpc::Method<global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest, global::Google.Cloud.Gaming.V1.GameServerDeployment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +111,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_GetGameServerDeploymentRequest,
         __Marshaller_google_cloud_gaming_v1_GameServerDeployment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest, global::Google.LongRunning.Operation> __Method_CreateGameServerDeployment = new grpc::Method<global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +119,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_CreateGameServerDeploymentRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest, global::Google.LongRunning.Operation> __Method_DeleteGameServerDeployment = new grpc::Method<global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -105,6 +127,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_DeleteGameServerDeploymentRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest, global::Google.LongRunning.Operation> __Method_UpdateGameServerDeployment = new grpc::Method<global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -112,6 +135,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_UpdateGameServerDeploymentRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest, global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout> __Method_GetGameServerDeploymentRollout = new grpc::Method<global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest, global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -119,6 +143,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_GetGameServerDeploymentRolloutRequest,
         __Marshaller_google_cloud_gaming_v1_GameServerDeploymentRollout);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest, global::Google.LongRunning.Operation> __Method_UpdateGameServerDeploymentRollout = new grpc::Method<global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -126,6 +151,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_UpdateGameServerDeploymentRolloutRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest, global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse> __Method_PreviewGameServerDeploymentRollout = new grpc::Method<global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest, global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +159,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_PreviewGameServerDeploymentRolloutRequest,
         __Marshaller_google_cloud_gaming_v1_PreviewGameServerDeploymentRolloutResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest, global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse> __Method_FetchDeploymentState = new grpc::Method<global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest, global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +183,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse> ListGameServerDeployments(global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -167,6 +195,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.GameServerDeployment> GetGameServerDeployment(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -178,6 +207,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateGameServerDeployment(global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -189,6 +219,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteGameServerDeployment(global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -200,6 +231,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGameServerDeployment(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -211,6 +243,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout> GetGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -227,6 +260,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -239,6 +273,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse> PreviewGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -252,6 +287,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse> FetchDeploymentState(global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -264,20 +300,24 @@ namespace Google.Cloud.Gaming.V1 {
     {
       /// <summary>Creates a new client for GameServerDeploymentsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GameServerDeploymentsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for GameServerDeploymentsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GameServerDeploymentsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GameServerDeploymentsServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GameServerDeploymentsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -290,6 +330,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse ListGameServerDeployments(global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGameServerDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -300,6 +341,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse ListGameServerDeployments(global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGameServerDeployments, null, options, request);
@@ -312,6 +354,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse> ListGameServerDeploymentsAsync(global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGameServerDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -322,6 +365,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse> ListGameServerDeploymentsAsync(global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGameServerDeployments, null, options, request);
@@ -334,6 +378,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.GameServerDeployment GetGameServerDeployment(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -344,6 +389,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.GameServerDeployment GetGameServerDeployment(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGameServerDeployment, null, options, request);
@@ -356,6 +402,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.GameServerDeployment> GetGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -366,6 +413,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.GameServerDeployment> GetGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGameServerDeployment, null, options, request);
@@ -378,6 +426,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateGameServerDeployment(global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -388,6 +437,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateGameServerDeployment(global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGameServerDeployment, null, options, request);
@@ -400,6 +450,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -410,6 +461,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.CreateGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGameServerDeployment, null, options, request);
@@ -422,6 +474,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteGameServerDeployment(global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -432,6 +485,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteGameServerDeployment(global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteGameServerDeployment, null, options, request);
@@ -444,6 +498,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -454,6 +509,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.DeleteGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGameServerDeployment, null, options, request);
@@ -466,6 +522,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateGameServerDeployment(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGameServerDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -476,6 +533,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateGameServerDeployment(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGameServerDeployment, null, options, request);
@@ -488,6 +546,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGameServerDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -498,6 +557,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGameServerDeploymentAsync(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGameServerDeployment, null, options, request);
@@ -510,6 +570,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout GetGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGameServerDeploymentRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -520,6 +581,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout GetGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGameServerDeploymentRollout, null, options, request);
@@ -532,6 +594,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout> GetGameServerDeploymentRolloutAsync(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGameServerDeploymentRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -542,6 +605,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.GameServerDeploymentRollout> GetGameServerDeploymentRolloutAsync(global::Google.Cloud.Gaming.V1.GetGameServerDeploymentRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGameServerDeploymentRollout, null, options, request);
@@ -559,6 +623,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGameServerDeploymentRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -574,6 +639,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGameServerDeploymentRollout, null, options, request);
@@ -591,6 +657,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGameServerDeploymentRolloutAsync(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGameServerDeploymentRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -606,6 +673,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGameServerDeploymentRolloutAsync(global::Google.Cloud.Gaming.V1.UpdateGameServerDeploymentRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGameServerDeploymentRollout, null, options, request);
@@ -619,6 +687,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse PreviewGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PreviewGameServerDeploymentRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -630,6 +699,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse PreviewGameServerDeploymentRollout(global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PreviewGameServerDeploymentRollout, null, options, request);
@@ -643,6 +713,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse> PreviewGameServerDeploymentRolloutAsync(global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PreviewGameServerDeploymentRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -654,6 +725,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutResponse> PreviewGameServerDeploymentRolloutAsync(global::Google.Cloud.Gaming.V1.PreviewGameServerDeploymentRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PreviewGameServerDeploymentRollout, null, options, request);
@@ -668,6 +740,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse FetchDeploymentState(global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchDeploymentState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -680,6 +753,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse FetchDeploymentState(global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_FetchDeploymentState, null, options, request);
@@ -694,6 +768,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse> FetchDeploymentStateAsync(global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchDeploymentStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -706,11 +781,13 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.FetchDeploymentStateResponse> FetchDeploymentStateAsync(global::Google.Cloud.Gaming.V1.FetchDeploymentStateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchDeploymentState, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GameServerDeploymentsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new GameServerDeploymentsServiceClient(configuration);
@@ -719,6 +796,7 @@ namespace Google.Cloud.Gaming.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(GameServerDeploymentsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -737,6 +815,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GameServerDeploymentsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListGameServerDeployments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsRequest, global::Google.Cloud.Gaming.V1.ListGameServerDeploymentsResponse>(serviceImpl.ListGameServerDeployments));

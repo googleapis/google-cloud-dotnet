@@ -89,6 +89,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
   {
     static readonly string __ServiceName = "google.datastore.admin.v1.DatastoreAdmin";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -103,11 +104,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -119,16 +122,26 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest> __Marshaller_google_datastore_admin_v1_ExportEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest> __Marshaller_google_datastore_admin_v1_ImportEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest> __Marshaller_google_datastore_admin_v1_CreateIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest> __Marshaller_google_datastore_admin_v1_DeleteIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest> __Marshaller_google_datastore_admin_v1_GetIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.Index> __Marshaller_google_datastore_admin_v1_Index = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.Index.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest> __Marshaller_google_datastore_admin_v1_ListIndexesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse> __Marshaller_google_datastore_admin_v1_ListIndexesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest, global::Google.LongRunning.Operation> __Method_ExportEntities = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -136,6 +149,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         __Marshaller_google_datastore_admin_v1_ExportEntitiesRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest, global::Google.LongRunning.Operation> __Method_ImportEntities = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -143,6 +157,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         __Marshaller_google_datastore_admin_v1_ImportEntitiesRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,6 +165,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         __Marshaller_google_datastore_admin_v1_CreateIndexRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest, global::Google.LongRunning.Operation> __Method_DeleteIndex = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -157,6 +173,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         __Marshaller_google_datastore_admin_v1_DeleteIndexRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest, global::Google.Cloud.Datastore.Admin.V1.Index> __Method_GetIndex = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest, global::Google.Cloud.Datastore.Admin.V1.Index>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -164,6 +181,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         __Marshaller_google_datastore_admin_v1_GetIndexRequest,
         __Marshaller_google_datastore_admin_v1_Index);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest, global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse> __Method_ListIndexes = new grpc::Method<global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest, global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -194,6 +212,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportEntities(global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -209,6 +228,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportEntities(global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -233,6 +253,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateIndex(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -253,6 +274,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteIndex(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -264,6 +286,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.Admin.V1.Index> GetIndex(global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -277,6 +300,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse> ListIndexes(global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -289,20 +313,24 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     {
       /// <summary>Creates a new client for DatastoreAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DatastoreAdminClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DatastoreAdmin that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DatastoreAdminClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DatastoreAdminClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DatastoreAdminClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -322,6 +350,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportEntities(global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -339,6 +368,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportEntities(global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExportEntities, null, options, request);
@@ -358,6 +388,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEntitiesAsync(global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -375,6 +406,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEntitiesAsync(global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportEntities, null, options, request);
@@ -391,6 +423,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportEntities(global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -405,6 +438,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportEntities(global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportEntities, null, options, request);
@@ -421,6 +455,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntitiesAsync(global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -435,6 +470,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntitiesAsync(global::Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportEntities, null, options, request);
@@ -460,6 +496,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateIndex(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -483,6 +520,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateIndex(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateIndex, null, options, request);
@@ -508,6 +546,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIndexAsync(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -531,6 +570,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIndexAsync(global::Google.Cloud.Datastore.Admin.V1.CreateIndexRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateIndex, null, options, request);
@@ -552,6 +592,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteIndex(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -571,6 +612,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteIndex(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteIndex, null, options, request);
@@ -592,6 +634,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIndexAsync(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -611,6 +654,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIndexAsync(global::Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteIndex, null, options, request);
@@ -623,6 +667,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.Admin.V1.Index GetIndex(global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -633,6 +678,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.Admin.V1.Index GetIndex(global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIndex, null, options, request);
@@ -645,6 +691,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.Admin.V1.Index> GetIndexAsync(global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -655,6 +702,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.Admin.V1.Index> GetIndexAsync(global::Google.Cloud.Datastore.Admin.V1.GetIndexRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIndex, null, options, request);
@@ -669,6 +717,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse ListIndexes(global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIndexes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -681,6 +730,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse ListIndexes(global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListIndexes, null, options, request);
@@ -695,6 +745,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse> ListIndexesAsync(global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIndexesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -707,11 +758,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.Admin.V1.ListIndexesResponse> ListIndexesAsync(global::Google.Cloud.Datastore.Admin.V1.ListIndexesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListIndexes, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatastoreAdminClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DatastoreAdminClient(configuration);
@@ -720,6 +773,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DatastoreAdminBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -735,6 +789,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DatastoreAdminBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ExportEntities, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportEntities));

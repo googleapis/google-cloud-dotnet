@@ -31,6 +31,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
   {
     static readonly string __ServiceName = "google.cloud.billing.budgets.v1.BudgetService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,15 +64,24 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_CreateBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.Budget> __Marshaller_google_cloud_billing_budgets_v1_Budget = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.Budget.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_UpdateBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_GetBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest> __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse> __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest> __Marshaller_google_cloud_billing_budgets_v1_DeleteBudgetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget> __Method_CreateBudget = new grpc::Method<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -77,6 +89,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         __Marshaller_google_cloud_billing_budgets_v1_CreateBudgetRequest,
         __Marshaller_google_cloud_billing_budgets_v1_Budget);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget> __Method_UpdateBudget = new grpc::Method<global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -84,6 +97,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         __Marshaller_google_cloud_billing_budgets_v1_UpdateBudgetRequest,
         __Marshaller_google_cloud_billing_budgets_v1_Budget);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget> __Method_GetBudget = new grpc::Method<global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +105,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         __Marshaller_google_cloud_billing_budgets_v1_GetBudgetRequest,
         __Marshaller_google_cloud_billing_budgets_v1_Budget);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest, global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse> __Method_ListBudgets = new grpc::Method<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest, global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +113,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
         __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsRequest,
         __Marshaller_google_cloud_billing_budgets_v1_ListBudgetsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBudget = new grpc::Method<global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -123,6 +139,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.Budgets.V1.Budget> CreateBudget(global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -138,6 +155,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.Budgets.V1.Budget> UpdateBudget(global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -154,6 +172,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.Budgets.V1.Budget> GetBudget(global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -170,6 +189,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse> ListBudgets(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -181,6 +201,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBudget(global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -193,20 +214,24 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     {
       /// <summary>Creates a new client for BudgetService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public BudgetServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for BudgetService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public BudgetServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected BudgetServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected BudgetServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -221,6 +246,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.Budget CreateBudget(global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBudget(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -233,6 +259,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.Budget CreateBudget(global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBudget, null, options, request);
@@ -247,6 +274,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.Budget> CreateBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBudgetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -259,6 +287,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.Budget> CreateBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBudget, null, options, request);
@@ -275,6 +304,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.Budget UpdateBudget(global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBudget(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -289,6 +319,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.Budget UpdateBudget(global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateBudget, null, options, request);
@@ -305,6 +336,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.Budget> UpdateBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBudgetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -319,6 +351,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.Budget> UpdateBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.UpdateBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBudget, null, options, request);
@@ -336,6 +369,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.Budget GetBudget(global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBudget(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -351,6 +385,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.Budget GetBudget(global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBudget, null, options, request);
@@ -368,6 +403,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.Budget> GetBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBudgetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -383,6 +419,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.Budget> GetBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.GetBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBudget, null, options, request);
@@ -400,6 +437,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse ListBudgets(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBudgets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -415,6 +453,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse ListBudgets(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListBudgets, null, options, request);
@@ -432,6 +471,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse> ListBudgetsAsync(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBudgetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -447,6 +487,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.Budgets.V1.ListBudgetsResponse> ListBudgetsAsync(global::Google.Cloud.Billing.Budgets.V1.ListBudgetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBudgets, null, options, request);
@@ -459,6 +500,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBudget(global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteBudget(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -469,6 +511,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBudget(global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteBudget, null, options, request);
@@ -481,6 +524,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteBudgetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -491,11 +535,13 @@ namespace Google.Cloud.Billing.Budgets.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBudgetAsync(global::Google.Cloud.Billing.Budgets.V1.DeleteBudgetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBudget, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BudgetServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new BudgetServiceClient(configuration);
@@ -504,6 +550,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(BudgetServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -518,6 +565,7 @@ namespace Google.Cloud.Billing.Budgets.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, BudgetServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateBudget, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Billing.Budgets.V1.CreateBudgetRequest, global::Google.Cloud.Billing.Budgets.V1.Budget>(serviceImpl.CreateBudget));

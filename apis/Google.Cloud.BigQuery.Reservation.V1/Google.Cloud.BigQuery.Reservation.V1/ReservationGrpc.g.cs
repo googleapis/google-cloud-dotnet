@@ -44,6 +44,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
   {
     static readonly string __ServiceName = "google.cloud.bigquery.reservation.v1.ReservationService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -58,11 +59,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -74,38 +77,70 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_CreateReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> __Marshaller_google_cloud_bigquery_reservation_v1_Reservation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.Reservation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_GetReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_DeleteReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_UpdateReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_CreateCapacityCommitmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> __Marshaller_google_cloud_bigquery_reservation_v1_CapacityCommitment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_ListCapacityCommitmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_ListCapacityCommitmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_GetCapacityCommitmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_DeleteCapacityCommitmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_UpdateCapacityCommitmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_SplitCapacityCommitmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse> __Marshaller_google_cloud_bigquery_reservation_v1_SplitCapacityCommitmentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_MergeCapacityCommitmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_CreateAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> __Marshaller_google_cloud_bigquery_reservation_v1_Assignment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.Assignment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_ListAssignmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_ListAssignmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_DeleteAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest> __Marshaller_google_cloud_bigquery_reservation_v1_MoveAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_GetBiReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> __Marshaller_google_cloud_bigquery_reservation_v1_BiReservation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest> __Marshaller_google_cloud_bigquery_reservation_v1_UpdateBiReservationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation> __Method_CreateReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +148,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_CreateReservationRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_Reservation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse> __Method_ListReservations = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +156,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_ListReservationsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation> __Method_GetReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -127,6 +164,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_GetReservationRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_Reservation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,6 +172,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_DeleteReservationRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation> __Method_UpdateReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +180,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_UpdateReservationRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_Reservation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> __Method_CreateCapacityCommitment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -148,6 +188,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_CreateCapacityCommitmentRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_CapacityCommitment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse> __Method_ListCapacityCommitments = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -155,6 +196,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_ListCapacityCommitmentsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_ListCapacityCommitmentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> __Method_GetCapacityCommitment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -162,6 +204,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_GetCapacityCommitmentRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_CapacityCommitment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCapacityCommitment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,6 +212,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_DeleteCapacityCommitmentRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> __Method_UpdateCapacityCommitment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -176,6 +220,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_UpdateCapacityCommitmentRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_CapacityCommitment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse> __Method_SplitCapacityCommitment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -183,6 +228,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_SplitCapacityCommitmentRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_SplitCapacityCommitmentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> __Method_MergeCapacityCommitments = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -190,6 +236,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_MergeCapacityCommitmentsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_CapacityCommitment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment> __Method_CreateAssignment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -197,6 +244,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_CreateAssignmentRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_Assignment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse> __Method_ListAssignments = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -204,6 +252,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_ListAssignmentsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_ListAssignmentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAssignment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -211,6 +260,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_DeleteAssignmentRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> __Method_SearchAssignments = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -218,6 +268,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_SearchAssignmentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> __Method_SearchAllAssignments = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest, global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -225,6 +276,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_SearchAllAssignmentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment> __Method_MoveAssignment = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest, global::Google.Cloud.BigQuery.Reservation.V1.Assignment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -232,6 +284,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_MoveAssignmentRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_Assignment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> __Method_GetBiReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -239,6 +292,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
         __Marshaller_google_cloud_bigquery_reservation_v1_GetBiReservationRequest,
         __Marshaller_google_cloud_bigquery_reservation_v1_BiReservation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> __Method_UpdateBiReservation = new grpc::Method<global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.BiReservation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -262,6 +316,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> CreateReservation(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -273,6 +328,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse> ListReservations(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -284,6 +340,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> GetReservation(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -297,6 +354,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReservation(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -308,6 +366,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> UpdateReservation(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -319,6 +378,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> CreateCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -330,6 +390,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse> ListCapacityCommitments(global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -341,6 +402,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> GetCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -354,6 +416,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -371,6 +434,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> UpdateCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -389,6 +453,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse> SplitCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -406,6 +471,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> MergeCapacityCommitments(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -451,6 +517,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> CreateAssignment(global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -482,6 +549,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse> ListAssignments(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -507,6 +575,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAssignment(global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -540,6 +609,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -570,6 +640,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> SearchAllAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -585,6 +656,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> MoveAssignment(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -596,6 +668,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> GetBiReservation(global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -614,6 +687,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> UpdateBiReservation(global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -626,20 +700,24 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     {
       /// <summary>Creates a new client for ReservationService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ReservationServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ReservationService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ReservationServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ReservationServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ReservationServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -652,6 +730,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Reservation CreateReservation(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateReservation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -662,6 +741,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Reservation CreateReservation(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateReservation, null, options, request);
@@ -674,6 +754,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> CreateReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateReservationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -684,6 +765,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> CreateReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateReservation, null, options, request);
@@ -696,6 +778,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse ListReservations(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListReservations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -706,6 +789,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse ListReservations(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListReservations, null, options, request);
@@ -718,6 +802,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse> ListReservationsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListReservationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -728,6 +813,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsResponse> ListReservationsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListReservationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListReservations, null, options, request);
@@ -740,6 +826,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Reservation GetReservation(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetReservation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -750,6 +837,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Reservation GetReservation(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetReservation, null, options, request);
@@ -762,6 +850,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> GetReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetReservationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -772,6 +861,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> GetReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetReservation, null, options, request);
@@ -786,6 +876,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReservation(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteReservation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -798,6 +889,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReservation(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteReservation, null, options, request);
@@ -812,6 +904,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteReservationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -824,6 +917,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteReservation, null, options, request);
@@ -836,6 +930,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Reservation UpdateReservation(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateReservation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -846,6 +941,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Reservation UpdateReservation(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateReservation, null, options, request);
@@ -858,6 +954,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> UpdateReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateReservationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -868,6 +965,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Reservation> UpdateReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateReservation, null, options, request);
@@ -880,6 +978,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment CreateCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCapacityCommitment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -890,6 +989,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment CreateCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCapacityCommitment, null, options, request);
@@ -902,6 +1002,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> CreateCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCapacityCommitmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -912,6 +1013,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> CreateCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCapacityCommitment, null, options, request);
@@ -924,6 +1026,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse ListCapacityCommitments(global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCapacityCommitments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -934,6 +1037,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse ListCapacityCommitments(global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCapacityCommitments, null, options, request);
@@ -946,6 +1050,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse> ListCapacityCommitmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCapacityCommitmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -956,6 +1061,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsResponse> ListCapacityCommitmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListCapacityCommitmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCapacityCommitments, null, options, request);
@@ -968,6 +1074,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment GetCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCapacityCommitment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -978,6 +1085,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment GetCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCapacityCommitment, null, options, request);
@@ -990,6 +1098,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> GetCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCapacityCommitmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1000,6 +1109,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> GetCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCapacityCommitment, null, options, request);
@@ -1014,6 +1124,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCapacityCommitment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1026,6 +1137,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCapacityCommitment, null, options, request);
@@ -1040,6 +1152,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCapacityCommitmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1052,6 +1165,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCapacityCommitment, null, options, request);
@@ -1070,6 +1184,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment UpdateCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCapacityCommitment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1086,6 +1201,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment UpdateCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCapacityCommitment, null, options, request);
@@ -1104,6 +1220,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> UpdateCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCapacityCommitmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1120,6 +1237,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> UpdateCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCapacityCommitment, null, options, request);
@@ -1139,6 +1257,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse SplitCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SplitCapacityCommitment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1156,6 +1275,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse SplitCapacityCommitment(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SplitCapacityCommitment, null, options, request);
@@ -1175,6 +1295,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse> SplitCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SplitCapacityCommitmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1192,6 +1313,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentResponse> SplitCapacityCommitmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.SplitCapacityCommitmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SplitCapacityCommitment, null, options, request);
@@ -1210,6 +1332,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment MergeCapacityCommitments(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MergeCapacityCommitments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1226,6 +1349,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment MergeCapacityCommitments(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_MergeCapacityCommitments, null, options, request);
@@ -1244,6 +1368,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> MergeCapacityCommitmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MergeCapacityCommitmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1260,6 +1385,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.CapacityCommitment> MergeCapacityCommitmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.MergeCapacityCommitmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MergeCapacityCommitments, null, options, request);
@@ -1306,6 +1432,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Assignment CreateAssignment(global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1350,6 +1477,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Assignment CreateAssignment(global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAssignment, null, options, request);
@@ -1396,6 +1524,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> CreateAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1440,6 +1569,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> CreateAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.CreateAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAssignment, null, options, request);
@@ -1472,6 +1602,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse ListAssignments(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAssignments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1502,6 +1633,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse ListAssignments(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAssignments, null, options, request);
@@ -1534,6 +1666,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse> ListAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAssignmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1564,6 +1697,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsResponse> ListAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.ListAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAssignments, null, options, request);
@@ -1590,6 +1724,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAssignment(global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1614,6 +1749,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAssignment(global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAssignment, null, options, request);
@@ -1640,6 +1776,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1664,6 +1801,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.DeleteAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAssignment, null, options, request);
@@ -1698,6 +1836,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse SearchAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAssignments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1730,6 +1869,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse SearchAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAssignments, null, options, request);
@@ -1764,6 +1904,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAssignmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1796,6 +1937,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsResponse> SearchAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAssignments, null, options, request);
@@ -1827,6 +1969,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse SearchAllAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAllAssignments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1856,6 +1999,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse SearchAllAssignments(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAllAssignments, null, options, request);
@@ -1887,6 +2031,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> SearchAllAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAllAssignmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1916,6 +2061,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsResponse> SearchAllAssignmentsAsync(global::Google.Cloud.BigQuery.Reservation.V1.SearchAllAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAllAssignments, null, options, request);
@@ -1932,6 +2078,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Assignment MoveAssignment(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MoveAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1946,6 +2093,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.Assignment MoveAssignment(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_MoveAssignment, null, options, request);
@@ -1962,6 +2110,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> MoveAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MoveAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1976,6 +2125,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.Assignment> MoveAssignmentAsync(global::Google.Cloud.BigQuery.Reservation.V1.MoveAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MoveAssignment, null, options, request);
@@ -1988,6 +2138,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.BiReservation GetBiReservation(global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBiReservation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1998,6 +2149,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.BiReservation GetBiReservation(global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBiReservation, null, options, request);
@@ -2010,6 +2162,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> GetBiReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBiReservationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2020,6 +2173,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> GetBiReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.GetBiReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBiReservation, null, options, request);
@@ -2039,6 +2193,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.BiReservation UpdateBiReservation(global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBiReservation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2056,6 +2211,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.Reservation.V1.BiReservation UpdateBiReservation(global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateBiReservation, null, options, request);
@@ -2075,6 +2231,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> UpdateBiReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBiReservationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2092,11 +2249,13 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Reservation.V1.BiReservation> UpdateBiReservationAsync(global::Google.Cloud.BigQuery.Reservation.V1.UpdateBiReservationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBiReservation, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ReservationServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ReservationServiceClient(configuration);
@@ -2105,6 +2264,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ReservationServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2134,6 +2294,7 @@ namespace Google.Cloud.BigQuery.Reservation.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ReservationServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateReservation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Reservation.V1.CreateReservationRequest, global::Google.Cloud.BigQuery.Reservation.V1.Reservation>(serviceImpl.CreateReservation));

@@ -33,6 +33,7 @@ namespace Google.Cloud.Spanner.V1 {
   {
     static readonly string __ServiceName = "google.spanner.v1.Spanner";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -47,11 +48,13 @@ namespace Google.Cloud.Spanner.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -63,30 +66,54 @@ namespace Google.Cloud.Spanner.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CreateSessionRequest> __Marshaller_google_spanner_v1_CreateSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.CreateSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Session> __Marshaller_google_spanner_v1_Session = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.Session.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest> __Marshaller_google_spanner_v1_BatchCreateSessionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> __Marshaller_google_spanner_v1_BatchCreateSessionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.GetSessionRequest> __Marshaller_google_spanner_v1_GetSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.GetSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsRequest> __Marshaller_google_spanner_v1_ListSessionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ListSessionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ListSessionsResponse> __Marshaller_google_spanner_v1_ListSessionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ListSessionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.DeleteSessionRequest> __Marshaller_google_spanner_v1_DeleteSessionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.DeleteSessionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest> __Marshaller_google_spanner_v1_ExecuteSqlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ResultSet> __Marshaller_google_spanner_v1_ResultSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ResultSet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartialResultSet> __Marshaller_google_spanner_v1_PartialResultSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartialResultSet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest> __Marshaller_google_spanner_v1_ExecuteBatchDmlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> __Marshaller_google_spanner_v1_ExecuteBatchDmlResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.ReadRequest> __Marshaller_google_spanner_v1_ReadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.ReadRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BeginTransactionRequest> __Marshaller_google_spanner_v1_BeginTransactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BeginTransactionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.Transaction> __Marshaller_google_spanner_v1_Transaction = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.Transaction.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CommitRequest> __Marshaller_google_spanner_v1_CommitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.CommitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CommitResponse> __Marshaller_google_spanner_v1_CommitResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.CommitResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.RollbackRequest> __Marshaller_google_spanner_v1_RollbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.RollbackRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionQueryRequest> __Marshaller_google_spanner_v1_PartitionQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionResponse> __Marshaller_google_spanner_v1_PartitionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.PartitionReadRequest> __Marshaller_google_spanner_v1_PartitionReadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.PartitionReadRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session> __Method_CreateSession = new grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +121,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_CreateSessionRequest,
         __Marshaller_google_spanner_v1_Session);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest, global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> __Method_BatchCreateSessions = new grpc::Method<global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest, global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +129,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_BatchCreateSessionsRequest,
         __Marshaller_google_spanner_v1_BatchCreateSessionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.GetSessionRequest, global::Google.Cloud.Spanner.V1.Session> __Method_GetSession = new grpc::Method<global::Google.Cloud.Spanner.V1.GetSessionRequest, global::Google.Cloud.Spanner.V1.Session>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +137,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_GetSessionRequest,
         __Marshaller_google_spanner_v1_Session);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ListSessionsRequest, global::Google.Cloud.Spanner.V1.ListSessionsResponse> __Method_ListSessions = new grpc::Method<global::Google.Cloud.Spanner.V1.ListSessionsRequest, global::Google.Cloud.Spanner.V1.ListSessionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +145,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_ListSessionsRequest,
         __Marshaller_google_spanner_v1_ListSessionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSession = new grpc::Method<global::Google.Cloud.Spanner.V1.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -122,6 +153,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_DeleteSessionRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest, global::Google.Cloud.Spanner.V1.ResultSet> __Method_ExecuteSql = new grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest, global::Google.Cloud.Spanner.V1.ResultSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -129,6 +161,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_ExecuteSqlRequest,
         __Marshaller_google_spanner_v1_ResultSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest, global::Google.Cloud.Spanner.V1.PartialResultSet> __Method_ExecuteStreamingSql = new grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteSqlRequest, global::Google.Cloud.Spanner.V1.PartialResultSet>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -136,6 +169,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_ExecuteSqlRequest,
         __Marshaller_google_spanner_v1_PartialResultSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> __Method_ExecuteBatchDml = new grpc::Method<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest, global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -143,6 +177,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_ExecuteBatchDmlRequest,
         __Marshaller_google_spanner_v1_ExecuteBatchDmlResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ReadRequest, global::Google.Cloud.Spanner.V1.ResultSet> __Method_Read = new grpc::Method<global::Google.Cloud.Spanner.V1.ReadRequest, global::Google.Cloud.Spanner.V1.ResultSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,6 +185,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_ReadRequest,
         __Marshaller_google_spanner_v1_ResultSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.ReadRequest, global::Google.Cloud.Spanner.V1.PartialResultSet> __Method_StreamingRead = new grpc::Method<global::Google.Cloud.Spanner.V1.ReadRequest, global::Google.Cloud.Spanner.V1.PartialResultSet>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -157,6 +193,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_ReadRequest,
         __Marshaller_google_spanner_v1_PartialResultSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.BeginTransactionRequest, global::Google.Cloud.Spanner.V1.Transaction> __Method_BeginTransaction = new grpc::Method<global::Google.Cloud.Spanner.V1.BeginTransactionRequest, global::Google.Cloud.Spanner.V1.Transaction>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -164,6 +201,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_BeginTransactionRequest,
         __Marshaller_google_spanner_v1_Transaction);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.CommitRequest, global::Google.Cloud.Spanner.V1.CommitResponse> __Method_Commit = new grpc::Method<global::Google.Cloud.Spanner.V1.CommitRequest, global::Google.Cloud.Spanner.V1.CommitResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -171,6 +209,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_CommitRequest,
         __Marshaller_google_spanner_v1_CommitResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Rollback = new grpc::Method<global::Google.Cloud.Spanner.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -178,6 +217,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_RollbackRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.PartitionQueryRequest, global::Google.Cloud.Spanner.V1.PartitionResponse> __Method_PartitionQuery = new grpc::Method<global::Google.Cloud.Spanner.V1.PartitionQueryRequest, global::Google.Cloud.Spanner.V1.PartitionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -185,6 +225,7 @@ namespace Google.Cloud.Spanner.V1 {
         __Marshaller_google_spanner_v1_PartitionQueryRequest,
         __Marshaller_google_spanner_v1_PartitionResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.PartitionReadRequest, global::Google.Cloud.Spanner.V1.PartitionResponse> __Method_PartitionRead = new grpc::Method<global::Google.Cloud.Spanner.V1.PartitionReadRequest, global::Google.Cloud.Spanner.V1.PartitionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -226,6 +267,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.Session> CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -240,6 +282,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> BatchCreateSessions(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -253,6 +296,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.Session> GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -264,6 +308,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -277,6 +322,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -298,6 +344,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -314,6 +361,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Spanner.V1.PartialResultSet> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -335,6 +383,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> ExecuteBatchDml(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -358,6 +407,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ResultSet> Read(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -374,6 +424,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Spanner.V1.PartialResultSet> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -388,6 +439,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.Transaction> BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -412,6 +464,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.CommitResponse> Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -430,6 +483,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -451,6 +505,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionQuery(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -474,6 +529,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionRead(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -486,20 +542,24 @@ namespace Google.Cloud.Spanner.V1 {
     {
       /// <summary>Creates a new client for Spanner</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SpannerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Spanner that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SpannerClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SpannerClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SpannerClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -530,6 +590,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.Session CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -558,6 +619,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.Session CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSession, null, options, request);
@@ -588,6 +650,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> CreateSessionAsync(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -616,6 +679,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> CreateSessionAsync(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSession, null, options, request);
@@ -631,6 +695,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse BatchCreateSessions(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchCreateSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -644,6 +709,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse BatchCreateSessions(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateSessions, null, options, request);
@@ -659,6 +725,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> BatchCreateSessionsAsync(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchCreateSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -672,6 +739,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.BatchCreateSessionsResponse> BatchCreateSessionsAsync(global::Google.Cloud.Spanner.V1.BatchCreateSessionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateSessions, null, options, request);
@@ -686,6 +754,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.Session GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -698,6 +767,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.Session GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSession, null, options, request);
@@ -712,6 +782,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> GetSessionAsync(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -724,6 +795,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> GetSessionAsync(global::Google.Cloud.Spanner.V1.GetSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSession, null, options, request);
@@ -736,6 +808,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ListSessionsResponse ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -746,6 +819,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ListSessionsResponse ListSessions(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSessions, null, options, request);
@@ -758,6 +832,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -768,6 +843,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ListSessionsResponse> ListSessionsAsync(global::Google.Cloud.Spanner.V1.ListSessionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSessions, null, options, request);
@@ -782,6 +858,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -794,6 +871,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSession, null, options, request);
@@ -808,6 +886,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -820,6 +899,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSession, null, options, request);
@@ -842,6 +922,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ResultSet ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteSql(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -862,6 +943,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ResultSet ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteSql, null, options, request);
@@ -884,6 +966,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSqlAsync(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteSqlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -904,6 +987,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSqlAsync(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteSql, null, options, request);
@@ -920,6 +1004,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteStreamingSql(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -934,6 +1019,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ExecuteStreamingSql, null, options, request);
@@ -956,6 +1042,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse ExecuteBatchDml(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteBatchDml(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -976,6 +1063,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse ExecuteBatchDml(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteBatchDml, null, options, request);
@@ -998,6 +1086,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteBatchDmlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1018,6 +1107,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlResponse> ExecuteBatchDmlAsync(global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteBatchDml, null, options, request);
@@ -1042,6 +1132,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ResultSet Read(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Read(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1064,6 +1155,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.ResultSet Read(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Read, null, options, request);
@@ -1088,6 +1180,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ReadAsync(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1110,6 +1203,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ReadAsync(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Read, null, options, request);
@@ -1126,6 +1220,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamingRead(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1140,6 +1235,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamingRead, null, options, request);
@@ -1155,6 +1251,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.Transaction BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1168,6 +1265,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.Transaction BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BeginTransaction, null, options, request);
@@ -1183,6 +1281,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Transaction> BeginTransactionAsync(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1196,6 +1295,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Transaction> BeginTransactionAsync(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BeginTransaction, null, options, request);
@@ -1221,6 +1321,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.CommitResponse Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Commit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1244,6 +1345,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.CommitResponse Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Commit, null, options, request);
@@ -1269,6 +1371,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.CommitResponse> CommitAsync(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1292,6 +1395,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.CommitResponse> CommitAsync(global::Google.Cloud.Spanner.V1.CommitRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Commit, null, options, request);
@@ -1311,6 +1415,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Rollback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1328,6 +1433,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Rollback, null, options, request);
@@ -1347,6 +1453,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1364,6 +1471,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Spanner.V1.RollbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Rollback, null, options, request);
@@ -1386,6 +1494,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionQuery(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1406,6 +1515,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionQuery(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PartitionQuery, null, options, request);
@@ -1428,6 +1538,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionQueryAsync(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1448,6 +1559,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionQueryAsync(global::Google.Cloud.Spanner.V1.PartitionQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PartitionQuery, null, options, request);
@@ -1472,6 +1584,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionRead(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionRead(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1494,6 +1607,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Spanner.V1.PartitionResponse PartitionRead(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PartitionRead, null, options, request);
@@ -1518,6 +1632,7 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionReadAsync(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionReadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1540,11 +1655,13 @@ namespace Google.Cloud.Spanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.V1.PartitionResponse> PartitionReadAsync(global::Google.Cloud.Spanner.V1.PartitionReadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PartitionRead, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SpannerClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SpannerClient(configuration);
@@ -1553,6 +1670,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SpannerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1577,6 +1695,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SpannerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session>(serviceImpl.CreateSession));

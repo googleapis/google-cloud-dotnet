@@ -30,6 +30,7 @@ namespace Google.Cloud.Retail.V2 {
   {
     static readonly string __ServiceName = "google.cloud.retail.v2.CatalogService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Retail.V2 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,15 +63,24 @@ namespace Google.Cloud.Retail.V2 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ListCatalogsRequest> __Marshaller_google_cloud_retail_v2_ListCatalogsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ListCatalogsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Marshaller_google_cloud_retail_v2_ListCatalogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.ListCatalogsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.UpdateCatalogRequest> __Marshaller_google_cloud_retail_v2_UpdateCatalogRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.UpdateCatalogRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.Catalog> __Marshaller_google_cloud_retail_v2_Catalog = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.Catalog.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest> __Marshaller_google_cloud_retail_v2_SetDefaultBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.SetDefaultBranchRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest> __Marshaller_google_cloud_retail_v2_GetDefaultBranchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetDefaultBranchRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> __Marshaller_google_cloud_retail_v2_GetDefaultBranchResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse> __Method_ListCatalogs = new grpc::Method<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +88,7 @@ namespace Google.Cloud.Retail.V2 {
         __Marshaller_google_cloud_retail_v2_ListCatalogsRequest,
         __Marshaller_google_cloud_retail_v2_ListCatalogsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.UpdateCatalogRequest, global::Google.Cloud.Retail.V2.Catalog> __Method_UpdateCatalog = new grpc::Method<global::Google.Cloud.Retail.V2.UpdateCatalogRequest, global::Google.Cloud.Retail.V2.Catalog>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +96,7 @@ namespace Google.Cloud.Retail.V2 {
         __Marshaller_google_cloud_retail_v2_UpdateCatalogRequest,
         __Marshaller_google_cloud_retail_v2_Catalog);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SetDefaultBranch = new grpc::Method<global::Google.Cloud.Retail.V2.SetDefaultBranchRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +104,7 @@ namespace Google.Cloud.Retail.V2 {
         __Marshaller_google_cloud_retail_v2_SetDefaultBranchRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> __Method_GetDefaultBranch = new grpc::Method<global::Google.Cloud.Retail.V2.GetDefaultBranchRequest, global::Google.Cloud.Retail.V2.GetDefaultBranchResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +129,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.ListCatalogsResponse> ListCatalogs(global::Google.Cloud.Retail.V2.ListCatalogsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -125,6 +141,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.Catalog> UpdateCatalog(global::Google.Cloud.Retail.V2.UpdateCatalogRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -172,6 +189,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> SetDefaultBranch(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -189,6 +207,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> GetDefaultBranch(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -201,20 +220,24 @@ namespace Google.Cloud.Retail.V2 {
     {
       /// <summary>Creates a new client for CatalogService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CatalogServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CatalogService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CatalogServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CatalogServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CatalogServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -228,6 +251,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Retail.V2.ListCatalogsResponse ListCatalogs(global::Google.Cloud.Retail.V2.ListCatalogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCatalogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -239,6 +263,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Retail.V2.ListCatalogsResponse ListCatalogs(global::Google.Cloud.Retail.V2.ListCatalogsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCatalogs, null, options, request);
@@ -252,6 +277,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.ListCatalogsResponse> ListCatalogsAsync(global::Google.Cloud.Retail.V2.ListCatalogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCatalogsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -263,6 +289,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.ListCatalogsResponse> ListCatalogsAsync(global::Google.Cloud.Retail.V2.ListCatalogsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCatalogs, null, options, request);
@@ -275,6 +302,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Retail.V2.Catalog UpdateCatalog(global::Google.Cloud.Retail.V2.UpdateCatalogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCatalog(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -285,6 +313,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Retail.V2.Catalog UpdateCatalog(global::Google.Cloud.Retail.V2.UpdateCatalogRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCatalog, null, options, request);
@@ -297,6 +326,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.Catalog> UpdateCatalogAsync(global::Google.Cloud.Retail.V2.UpdateCatalogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCatalogAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -307,6 +337,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.Catalog> UpdateCatalogAsync(global::Google.Cloud.Retail.V2.UpdateCatalogRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCatalog, null, options, request);
@@ -355,6 +386,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty SetDefaultBranch(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetDefaultBranch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -401,6 +433,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty SetDefaultBranch(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetDefaultBranch, null, options, request);
@@ -449,6 +482,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SetDefaultBranchAsync(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetDefaultBranchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -495,6 +529,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SetDefaultBranchAsync(global::Google.Cloud.Retail.V2.SetDefaultBranchRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetDefaultBranch, null, options, request);
@@ -513,6 +548,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Retail.V2.GetDefaultBranchResponse GetDefaultBranch(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDefaultBranch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -529,6 +565,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Retail.V2.GetDefaultBranchResponse GetDefaultBranch(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDefaultBranch, null, options, request);
@@ -547,6 +584,7 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> GetDefaultBranchAsync(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDefaultBranchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -563,11 +601,13 @@ namespace Google.Cloud.Retail.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Retail.V2.GetDefaultBranchResponse> GetDefaultBranchAsync(global::Google.Cloud.Retail.V2.GetDefaultBranchRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDefaultBranch, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CatalogServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CatalogServiceClient(configuration);
@@ -576,6 +616,7 @@ namespace Google.Cloud.Retail.V2 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CatalogServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -589,6 +630,7 @@ namespace Google.Cloud.Retail.V2 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CatalogServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListCatalogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Retail.V2.ListCatalogsRequest, global::Google.Cloud.Retail.V2.ListCatalogsResponse>(serviceImpl.ListCatalogs));

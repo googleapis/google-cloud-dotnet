@@ -30,6 +30,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,16 +63,26 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest> __Marshaller_google_cloud_assuredworkloads_v1beta1_CreateWorkloadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest> __Marshaller_google_cloud_assuredworkloads_v1beta1_UpdateWorkloadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> __Marshaller_google_cloud_assuredworkloads_v1beta1_Workload = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest> __Marshaller_google_cloud_assuredworkloads_v1beta1_DeleteWorkloadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest> __Marshaller_google_cloud_assuredworkloads_v1beta1_GetWorkloadRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest> __Marshaller_google_cloud_assuredworkloads_v1beta1_ListWorkloadsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse> __Marshaller_google_cloud_assuredworkloads_v1beta1_ListWorkloadsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest, global::Google.LongRunning.Operation> __Method_CreateWorkload = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -77,6 +90,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         __Marshaller_google_cloud_assuredworkloads_v1beta1_CreateWorkloadRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> __Method_UpdateWorkload = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -84,6 +98,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         __Marshaller_google_cloud_assuredworkloads_v1beta1_UpdateWorkloadRequest,
         __Marshaller_google_cloud_assuredworkloads_v1beta1_Workload);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteWorkload = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +106,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         __Marshaller_google_cloud_assuredworkloads_v1beta1_DeleteWorkloadRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> __Method_GetWorkload = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +114,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         __Marshaller_google_cloud_assuredworkloads_v1beta1_GetWorkloadRequest,
         __Marshaller_google_cloud_assuredworkloads_v1beta1_Workload);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse> __Method_ListWorkloads = new grpc::Method<global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest, global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +138,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -135,6 +153,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> UpdateWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -148,6 +167,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -159,6 +179,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> GetWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -170,6 +191,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse> ListWorkloads(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -182,20 +204,24 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     {
       /// <summary>Creates a new client for AssuredWorkloadsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AssuredWorkloadsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AssuredWorkloadsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AssuredWorkloadsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AssuredWorkloadsServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AssuredWorkloadsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -208,6 +234,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkload(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -218,6 +245,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateWorkload, null, options, request);
@@ -230,6 +258,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkloadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -240,6 +269,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateWorkload, null, options, request);
@@ -255,6 +285,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload UpdateWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkload(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -268,6 +299,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload UpdateWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateWorkload, null, options, request);
@@ -283,6 +315,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> UpdateWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkloadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -296,6 +329,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> UpdateWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWorkload, null, options, request);
@@ -310,6 +344,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkload(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -322,6 +357,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteWorkload, null, options, request);
@@ -336,6 +372,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkloadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -348,6 +385,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteWorkload, null, options, request);
@@ -360,6 +398,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload GetWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkload(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -370,6 +409,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload GetWorkload(global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetWorkload, null, options, request);
@@ -382,6 +422,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> GetWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkloadAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -392,6 +433,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload> GetWorkloadAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetWorkload, null, options, request);
@@ -404,6 +446,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse ListWorkloads(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkloads(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -414,6 +457,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse ListWorkloads(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListWorkloads, null, options, request);
@@ -426,6 +470,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse> ListWorkloadsAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkloadsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -436,11 +481,13 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse> ListWorkloadsAsync(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkloads, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AssuredWorkloadsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AssuredWorkloadsServiceClient(configuration);
@@ -449,6 +496,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AssuredWorkloadsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -463,6 +511,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AssuredWorkloadsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateWorkload, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWorkload));

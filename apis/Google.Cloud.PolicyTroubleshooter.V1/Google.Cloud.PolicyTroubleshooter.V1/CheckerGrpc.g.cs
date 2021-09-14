@@ -33,6 +33,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
   {
     static readonly string __ServiceName = "google.cloud.policytroubleshooter.v1.IamChecker";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -47,11 +48,13 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -63,9 +66,12 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest> __Marshaller_google_cloud_policytroubleshooter_v1_TroubleshootIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse> __Marshaller_google_cloud_policytroubleshooter_v1_TroubleshootIamPolicyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest, global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse> __Method_TroubleshootIamPolicy = new grpc::Method<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest, global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +96,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse> TroubleshootIamPolicy(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -102,20 +109,24 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     {
       /// <summary>Creates a new client for IamChecker</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IamCheckerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IamChecker that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IamCheckerClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IamCheckerClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IamCheckerClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -129,6 +140,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse TroubleshootIamPolicy(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TroubleshootIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -140,6 +152,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse TroubleshootIamPolicy(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TroubleshootIamPolicy, null, options, request);
@@ -153,6 +166,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse> TroubleshootIamPolicyAsync(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TroubleshootIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -164,11 +178,13 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse> TroubleshootIamPolicyAsync(global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TroubleshootIamPolicy, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IamCheckerClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new IamCheckerClient(configuration);
@@ -177,6 +193,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(IamCheckerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -187,6 +204,7 @@ namespace Google.Cloud.PolicyTroubleshooter.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, IamCheckerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_TroubleshootIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyRequest, global::Google.Cloud.PolicyTroubleshooter.V1.TroubleshootIamPolicyResponse>(serviceImpl.TroubleshootIamPolicy));

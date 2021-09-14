@@ -30,6 +30,7 @@ namespace Google.Cloud.PubSub.V1 {
   {
     static readonly string __ServiceName = "google.pubsub.v1.SchemaService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.PubSub.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,18 +63,30 @@ namespace Google.Cloud.PubSub.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.CreateSchemaRequest> __Marshaller_google_pubsub_v1_CreateSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.CreateSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.Schema> __Marshaller_google_pubsub_v1_Schema = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.Schema.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.GetSchemaRequest> __Marshaller_google_pubsub_v1_GetSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.GetSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSchemasRequest> __Marshaller_google_pubsub_v1_ListSchemasRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSchemasRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ListSchemasResponse> __Marshaller_google_pubsub_v1_ListSchemasResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ListSchemasResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.DeleteSchemaRequest> __Marshaller_google_pubsub_v1_DeleteSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.DeleteSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateSchemaRequest> __Marshaller_google_pubsub_v1_ValidateSchemaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateSchemaRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateSchemaResponse> __Marshaller_google_pubsub_v1_ValidateSchemaResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateSchemaResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateMessageRequest> __Marshaller_google_pubsub_v1_ValidateMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateMessageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.PubSub.V1.ValidateMessageResponse> __Marshaller_google_pubsub_v1_ValidateMessageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.PubSub.V1.ValidateMessageResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.CreateSchemaRequest, global::Google.Cloud.PubSub.V1.Schema> __Method_CreateSchema = new grpc::Method<global::Google.Cloud.PubSub.V1.CreateSchemaRequest, global::Google.Cloud.PubSub.V1.Schema>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -79,6 +94,7 @@ namespace Google.Cloud.PubSub.V1 {
         __Marshaller_google_pubsub_v1_CreateSchemaRequest,
         __Marshaller_google_pubsub_v1_Schema);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.GetSchemaRequest, global::Google.Cloud.PubSub.V1.Schema> __Method_GetSchema = new grpc::Method<global::Google.Cloud.PubSub.V1.GetSchemaRequest, global::Google.Cloud.PubSub.V1.Schema>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -86,6 +102,7 @@ namespace Google.Cloud.PubSub.V1 {
         __Marshaller_google_pubsub_v1_GetSchemaRequest,
         __Marshaller_google_pubsub_v1_Schema);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ListSchemasRequest, global::Google.Cloud.PubSub.V1.ListSchemasResponse> __Method_ListSchemas = new grpc::Method<global::Google.Cloud.PubSub.V1.ListSchemasRequest, global::Google.Cloud.PubSub.V1.ListSchemasResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -93,6 +110,7 @@ namespace Google.Cloud.PubSub.V1 {
         __Marshaller_google_pubsub_v1_ListSchemasRequest,
         __Marshaller_google_pubsub_v1_ListSchemasResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.DeleteSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSchema = new grpc::Method<global::Google.Cloud.PubSub.V1.DeleteSchemaRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +118,7 @@ namespace Google.Cloud.PubSub.V1 {
         __Marshaller_google_pubsub_v1_DeleteSchemaRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ValidateSchemaRequest, global::Google.Cloud.PubSub.V1.ValidateSchemaResponse> __Method_ValidateSchema = new grpc::Method<global::Google.Cloud.PubSub.V1.ValidateSchemaRequest, global::Google.Cloud.PubSub.V1.ValidateSchemaResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +126,7 @@ namespace Google.Cloud.PubSub.V1 {
         __Marshaller_google_pubsub_v1_ValidateSchemaRequest,
         __Marshaller_google_pubsub_v1_ValidateSchemaResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.PubSub.V1.ValidateMessageRequest, global::Google.Cloud.PubSub.V1.ValidateMessageResponse> __Method_ValidateMessage = new grpc::Method<global::Google.Cloud.PubSub.V1.ValidateMessageRequest, global::Google.Cloud.PubSub.V1.ValidateMessageResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -130,6 +150,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Schema> CreateSchema(global::Google.Cloud.PubSub.V1.CreateSchemaRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -141,6 +162,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Schema> GetSchema(global::Google.Cloud.PubSub.V1.GetSchemaRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -152,6 +174,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ListSchemasResponse> ListSchemas(global::Google.Cloud.PubSub.V1.ListSchemasRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -163,6 +186,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSchema(global::Google.Cloud.PubSub.V1.DeleteSchemaRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -174,6 +198,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ValidateSchemaResponse> ValidateSchema(global::Google.Cloud.PubSub.V1.ValidateSchemaRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -185,6 +210,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.ValidateMessageResponse> ValidateMessage(global::Google.Cloud.PubSub.V1.ValidateMessageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -197,20 +223,24 @@ namespace Google.Cloud.PubSub.V1 {
     {
       /// <summary>Creates a new client for SchemaService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SchemaServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SchemaService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SchemaServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SchemaServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SchemaServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -223,6 +253,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.Schema CreateSchema(global::Google.Cloud.PubSub.V1.CreateSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -233,6 +264,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.Schema CreateSchema(global::Google.Cloud.PubSub.V1.CreateSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSchema, null, options, request);
@@ -245,6 +277,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Schema> CreateSchemaAsync(global::Google.Cloud.PubSub.V1.CreateSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -255,6 +288,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Schema> CreateSchemaAsync(global::Google.Cloud.PubSub.V1.CreateSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSchema, null, options, request);
@@ -267,6 +301,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.Schema GetSchema(global::Google.Cloud.PubSub.V1.GetSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -277,6 +312,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.Schema GetSchema(global::Google.Cloud.PubSub.V1.GetSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSchema, null, options, request);
@@ -289,6 +325,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Schema> GetSchemaAsync(global::Google.Cloud.PubSub.V1.GetSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -299,6 +336,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Schema> GetSchemaAsync(global::Google.Cloud.PubSub.V1.GetSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSchema, null, options, request);
@@ -311,6 +349,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.ListSchemasResponse ListSchemas(global::Google.Cloud.PubSub.V1.ListSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSchemas(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -321,6 +360,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.ListSchemasResponse ListSchemas(global::Google.Cloud.PubSub.V1.ListSchemasRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSchemas, null, options, request);
@@ -333,6 +373,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListSchemasResponse> ListSchemasAsync(global::Google.Cloud.PubSub.V1.ListSchemasRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSchemasAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -343,6 +384,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ListSchemasResponse> ListSchemasAsync(global::Google.Cloud.PubSub.V1.ListSchemasRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSchemas, null, options, request);
@@ -355,6 +397,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSchema(global::Google.Cloud.PubSub.V1.DeleteSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -365,6 +408,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSchema(global::Google.Cloud.PubSub.V1.DeleteSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSchema, null, options, request);
@@ -377,6 +421,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSchemaAsync(global::Google.Cloud.PubSub.V1.DeleteSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -387,6 +432,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSchemaAsync(global::Google.Cloud.PubSub.V1.DeleteSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSchema, null, options, request);
@@ -399,6 +445,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.ValidateSchemaResponse ValidateSchema(global::Google.Cloud.PubSub.V1.ValidateSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateSchema(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -409,6 +456,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.ValidateSchemaResponse ValidateSchema(global::Google.Cloud.PubSub.V1.ValidateSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ValidateSchema, null, options, request);
@@ -421,6 +469,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ValidateSchemaResponse> ValidateSchemaAsync(global::Google.Cloud.PubSub.V1.ValidateSchemaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateSchemaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -431,6 +480,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ValidateSchemaResponse> ValidateSchemaAsync(global::Google.Cloud.PubSub.V1.ValidateSchemaRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateSchema, null, options, request);
@@ -443,6 +493,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.ValidateMessageResponse ValidateMessage(global::Google.Cloud.PubSub.V1.ValidateMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateMessage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -453,6 +504,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.PubSub.V1.ValidateMessageResponse ValidateMessage(global::Google.Cloud.PubSub.V1.ValidateMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ValidateMessage, null, options, request);
@@ -465,6 +517,7 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ValidateMessageResponse> ValidateMessageAsync(global::Google.Cloud.PubSub.V1.ValidateMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateMessageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -475,11 +528,13 @@ namespace Google.Cloud.PubSub.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.PubSub.V1.ValidateMessageResponse> ValidateMessageAsync(global::Google.Cloud.PubSub.V1.ValidateMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateMessage, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SchemaServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SchemaServiceClient(configuration);
@@ -488,6 +543,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SchemaServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -503,6 +559,7 @@ namespace Google.Cloud.PubSub.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SchemaServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateSchema, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.PubSub.V1.CreateSchemaRequest, global::Google.Cloud.PubSub.V1.Schema>(serviceImpl.CreateSchema));

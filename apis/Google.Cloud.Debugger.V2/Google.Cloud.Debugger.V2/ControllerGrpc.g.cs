@@ -50,6 +50,7 @@ namespace Google.Cloud.Debugger.V2 {
   {
     static readonly string __ServiceName = "google.devtools.clouddebugger.v2.Controller2";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -64,11 +65,13 @@ namespace Google.Cloud.Debugger.V2 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -80,13 +83,20 @@ namespace Google.Cloud.Debugger.V2 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest> __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest> __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest> __Marshaller_google_devtools_clouddebugger_v2_UpdateActiveBreakpointRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> __Marshaller_google_devtools_clouddebugger_v2_UpdateActiveBreakpointResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest, global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> __Method_RegisterDebuggee = new grpc::Method<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest, global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +104,7 @@ namespace Google.Cloud.Debugger.V2 {
         __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeRequest,
         __Marshaller_google_devtools_clouddebugger_v2_RegisterDebuggeeResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> __Method_ListActiveBreakpoints = new grpc::Method<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest, global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +112,7 @@ namespace Google.Cloud.Debugger.V2 {
         __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsRequest,
         __Marshaller_google_devtools_clouddebugger_v2_ListActiveBreakpointsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest, global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> __Method_UpdateActiveBreakpoint = new grpc::Method<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest, global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +145,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> RegisterDebuggee(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -156,6 +169,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> ListActiveBreakpoints(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -174,6 +188,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> UpdateActiveBreakpoint(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -186,20 +201,24 @@ namespace Google.Cloud.Debugger.V2 {
     {
       /// <summary>Creates a new client for Controller2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public Controller2Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Controller2 that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public Controller2Client(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected Controller2Client() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected Controller2Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -221,6 +240,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse RegisterDebuggee(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterDebuggee(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -240,6 +260,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse RegisterDebuggee(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RegisterDebuggee, null, options, request);
@@ -261,6 +282,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> RegisterDebuggeeAsync(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterDebuggeeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -280,6 +302,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse> RegisterDebuggeeAsync(global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RegisterDebuggee, null, options, request);
@@ -304,6 +327,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse ListActiveBreakpoints(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListActiveBreakpoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -326,6 +350,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse ListActiveBreakpoints(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListActiveBreakpoints, null, options, request);
@@ -350,6 +375,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> ListActiveBreakpointsAsync(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListActiveBreakpointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -372,6 +398,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.ListActiveBreakpointsResponse> ListActiveBreakpointsAsync(global::Google.Cloud.Debugger.V2.ListActiveBreakpointsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListActiveBreakpoints, null, options, request);
@@ -391,6 +418,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse UpdateActiveBreakpoint(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateActiveBreakpoint(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -408,6 +436,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse UpdateActiveBreakpoint(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateActiveBreakpoint, null, options, request);
@@ -427,6 +456,7 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateActiveBreakpointAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -444,11 +474,13 @@ namespace Google.Cloud.Debugger.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointResponse> UpdateActiveBreakpointAsync(global::Google.Cloud.Debugger.V2.UpdateActiveBreakpointRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateActiveBreakpoint, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override Controller2Client NewInstance(ClientBaseConfiguration configuration)
       {
         return new Controller2Client(configuration);
@@ -457,6 +489,7 @@ namespace Google.Cloud.Debugger.V2 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(Controller2Base serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -469,6 +502,7 @@ namespace Google.Cloud.Debugger.V2 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, Controller2Base serviceImpl)
     {
       serviceBinder.AddMethod(__Method_RegisterDebuggee, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Debugger.V2.RegisterDebuggeeRequest, global::Google.Cloud.Debugger.V2.RegisterDebuggeeResponse>(serviceImpl.RegisterDebuggee));

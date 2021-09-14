@@ -41,6 +41,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
   {
     static readonly string __ServiceName = "google.cloud.resourcesettings.v1.ResourceSettingsService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -55,11 +56,13 @@ namespace Google.Cloud.ResourceSettings.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -71,12 +74,18 @@ namespace Google.Cloud.ResourceSettings.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest> __Marshaller_google_cloud_resourcesettings_v1_ListSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse> __Marshaller_google_cloud_resourcesettings_v1_ListSettingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceSettings.V1.GetSettingRequest> __Marshaller_google_cloud_resourcesettings_v1_GetSettingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceSettings.V1.GetSettingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceSettings.V1.Setting> __Marshaller_google_cloud_resourcesettings_v1_Setting = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceSettings.V1.Setting.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest> __Marshaller_google_cloud_resourcesettings_v1_UpdateSettingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest, global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse> __Method_ListSettings = new grpc::Method<global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest, global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -84,6 +93,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
         __Marshaller_google_cloud_resourcesettings_v1_ListSettingsRequest,
         __Marshaller_google_cloud_resourcesettings_v1_ListSettingsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ResourceSettings.V1.GetSettingRequest, global::Google.Cloud.ResourceSettings.V1.Setting> __Method_GetSetting = new grpc::Method<global::Google.Cloud.ResourceSettings.V1.GetSettingRequest, global::Google.Cloud.ResourceSettings.V1.Setting>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +101,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
         __Marshaller_google_cloud_resourcesettings_v1_GetSettingRequest,
         __Marshaller_google_cloud_resourcesettings_v1_Setting);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest, global::Google.Cloud.ResourceSettings.V1.Setting> __Method_UpdateSetting = new grpc::Method<global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest, global::Google.Cloud.ResourceSettings.V1.Setting>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +125,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse> ListSettings(global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -128,6 +140,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ResourceSettings.V1.Setting> GetSetting(global::Google.Cloud.ResourceSettings.V1.GetSettingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -154,6 +167,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ResourceSettings.V1.Setting> UpdateSetting(global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -166,20 +180,24 @@ namespace Google.Cloud.ResourceSettings.V1 {
     {
       /// <summary>Creates a new client for ResourceSettingsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ResourceSettingsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ResourceSettingsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ResourceSettingsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ResourceSettingsServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ResourceSettingsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -192,6 +210,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse ListSettings(global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -202,6 +221,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse ListSettings(global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSettings, null, options, request);
@@ -214,6 +234,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse> ListSettingsAsync(global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -224,6 +245,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse> ListSettingsAsync(global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSettings, null, options, request);
@@ -239,6 +261,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ResourceSettings.V1.Setting GetSetting(global::Google.Cloud.ResourceSettings.V1.GetSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSetting(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -252,6 +275,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ResourceSettings.V1.Setting GetSetting(global::Google.Cloud.ResourceSettings.V1.GetSettingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSetting, null, options, request);
@@ -267,6 +291,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceSettings.V1.Setting> GetSettingAsync(global::Google.Cloud.ResourceSettings.V1.GetSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSettingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -280,6 +305,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceSettings.V1.Setting> GetSettingAsync(global::Google.Cloud.ResourceSettings.V1.GetSettingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSetting, null, options, request);
@@ -307,6 +333,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ResourceSettings.V1.Setting UpdateSetting(global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSetting(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -332,6 +359,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ResourceSettings.V1.Setting UpdateSetting(global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSetting, null, options, request);
@@ -359,6 +387,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceSettings.V1.Setting> UpdateSettingAsync(global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSettingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -384,11 +413,13 @@ namespace Google.Cloud.ResourceSettings.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ResourceSettings.V1.Setting> UpdateSettingAsync(global::Google.Cloud.ResourceSettings.V1.UpdateSettingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSetting, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ResourceSettingsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ResourceSettingsServiceClient(configuration);
@@ -397,6 +428,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ResourceSettingsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -409,6 +441,7 @@ namespace Google.Cloud.ResourceSettings.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ResourceSettingsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ResourceSettings.V1.ListSettingsRequest, global::Google.Cloud.ResourceSettings.V1.ListSettingsResponse>(serviceImpl.ListSettings));

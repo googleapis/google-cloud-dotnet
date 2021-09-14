@@ -30,6 +30,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.cx.v3.Experiments";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,17 +63,28 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListExperimentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListExperimentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetExperimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> __Marshaller_google_cloud_dialogflow_cx_v3_Experiment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.Experiment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CreateExperimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateExperimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteExperimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_StartExperimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_StopExperimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse> __Method_ListExperiments = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -78,6 +92,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_ListExperimentsRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_ListExperimentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment> __Method_GetExperiment = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -85,6 +100,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_GetExperimentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_Experiment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment> __Method_CreateExperiment = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +108,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_CreateExperimentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_Experiment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment> __Method_UpdateExperiment = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +116,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_UpdateExperimentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_Experiment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteExperiment = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +124,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_DeleteExperimentRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment> __Method_StartExperiment = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +132,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_StartExperimentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_Experiment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment> __Method_StopExperiment = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest, global::Google.Cloud.Dialogflow.Cx.V3.Experiment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -136,6 +156,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse> ListExperiments(global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -147,6 +168,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> GetExperiment(global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -158,6 +180,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> CreateExperiment(global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -169,6 +192,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> UpdateExperiment(global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -180,6 +204,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExperiment(global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -192,6 +217,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> StartExperiment(global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -204,6 +230,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> StopExperiment(global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -216,20 +243,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     {
       /// <summary>Creates a new client for Experiments</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ExperimentsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Experiments that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ExperimentsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ExperimentsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ExperimentsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -242,6 +273,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse ListExperiments(global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExperiments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -252,6 +284,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse ListExperiments(global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListExperiments, null, options, request);
@@ -264,6 +297,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse> ListExperimentsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExperimentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -274,6 +308,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse> ListExperimentsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListExperiments, null, options, request);
@@ -286,6 +321,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment GetExperiment(global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -296,6 +332,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment GetExperiment(global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetExperiment, null, options, request);
@@ -308,6 +345,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> GetExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -318,6 +356,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> GetExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetExperiment, null, options, request);
@@ -330,6 +369,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment CreateExperiment(global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -340,6 +380,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment CreateExperiment(global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateExperiment, null, options, request);
@@ -352,6 +393,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> CreateExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -362,6 +404,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> CreateExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.CreateExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateExperiment, null, options, request);
@@ -374,6 +417,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment UpdateExperiment(global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -384,6 +428,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment UpdateExperiment(global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateExperiment, null, options, request);
@@ -396,6 +441,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> UpdateExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -406,6 +452,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> UpdateExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateExperiment, null, options, request);
@@ -418,6 +465,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExperiment(global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -428,6 +476,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteExperiment(global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteExperiment, null, options, request);
@@ -440,6 +489,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -450,6 +500,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.DeleteExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteExperiment, null, options, request);
@@ -463,6 +514,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment StartExperiment(global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -474,6 +526,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment StartExperiment(global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StartExperiment, null, options, request);
@@ -487,6 +540,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> StartExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -498,6 +552,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> StartExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.StartExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StartExperiment, null, options, request);
@@ -511,6 +566,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment StopExperiment(global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopExperiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -522,6 +578,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.Experiment StopExperiment(global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StopExperiment, null, options, request);
@@ -535,6 +592,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> StopExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopExperimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -546,11 +604,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.Experiment> StopExperimentAsync(global::Google.Cloud.Dialogflow.Cx.V3.StopExperimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StopExperiment, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ExperimentsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ExperimentsClient(configuration);
@@ -559,6 +619,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ExperimentsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -575,6 +636,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ExperimentsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListExperiments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListExperimentsResponse>(serviceImpl.ListExperiments));

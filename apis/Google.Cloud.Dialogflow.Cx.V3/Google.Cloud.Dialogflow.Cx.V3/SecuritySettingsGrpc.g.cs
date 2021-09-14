@@ -30,6 +30,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.cx.v3.SecuritySettingsService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,15 +63,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CreateSecuritySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> __Marshaller_google_cloud_dialogflow_cx_v3_SecuritySettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetSecuritySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateSecuritySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListSecuritySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListSecuritySettingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteSecuritySettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> __Method_CreateSecuritySettings = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +88,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_CreateSecuritySettingsRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_SecuritySettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> __Method_GetSecuritySettings = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +96,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_GetSecuritySettingsRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_SecuritySettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> __Method_UpdateSecuritySettings = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +104,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_UpdateSecuritySettingsRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_SecuritySettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse> __Method_ListSecuritySettings = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +112,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_ListSecuritySettingsRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_ListSecuritySettingsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSecuritySettings = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +136,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> CreateSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -132,6 +149,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> GetSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -143,6 +161,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> UpdateSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -154,6 +173,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse> ListSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -165,6 +185,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -177,20 +198,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     {
       /// <summary>Creates a new client for SecuritySettingsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SecuritySettingsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SecuritySettingsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SecuritySettingsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SecuritySettingsServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SecuritySettingsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -203,6 +228,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings CreateSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -213,6 +239,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings CreateSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSecuritySettings, null, options, request);
@@ -225,6 +252,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> CreateSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -235,6 +263,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> CreateSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSecuritySettings, null, options, request);
@@ -248,6 +277,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings GetSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -259,6 +289,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings GetSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSecuritySettings, null, options, request);
@@ -272,6 +303,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> GetSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -283,6 +315,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> GetSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSecuritySettings, null, options, request);
@@ -295,6 +328,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings UpdateSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -305,6 +339,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings UpdateSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSecuritySettings, null, options, request);
@@ -317,6 +352,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> UpdateSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -327,6 +363,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings> UpdateSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSecuritySettings, null, options, request);
@@ -339,6 +376,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse ListSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -349,6 +387,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse ListSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSecuritySettings, null, options, request);
@@ -361,6 +400,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse> ListSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -371,6 +411,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsResponse> ListSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSecuritySettings, null, options, request);
@@ -383,6 +424,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSecuritySettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -393,6 +435,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSecuritySettings(global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSecuritySettings, null, options, request);
@@ -405,6 +448,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSecuritySettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -415,11 +459,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecuritySettingsAsync(global::Google.Cloud.Dialogflow.Cx.V3.DeleteSecuritySettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSecuritySettings, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecuritySettingsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SecuritySettingsServiceClient(configuration);
@@ -428,6 +474,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SecuritySettingsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -442,6 +489,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SecuritySettingsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateSecuritySettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.CreateSecuritySettingsRequest, global::Google.Cloud.Dialogflow.Cx.V3.SecuritySettings>(serviceImpl.CreateSecuritySettings));

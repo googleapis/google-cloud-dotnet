@@ -33,6 +33,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   {
     static readonly string __ServiceName = "google.cloud.bigquery.datatransfer.v1.DataTransferService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -47,11 +48,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -63,32 +66,58 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_GetDataSourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> __Marshaller_google_cloud_bigquery_datatransfer_v1_DataSource = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_CreateTransferConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_UpdateTransferConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_DeleteTransferConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_GetTransferConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_ScheduleTransferRunsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_ScheduleTransferRunsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_StartManualTransferRunsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_StartManualTransferRunsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_GetTransferRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferRun = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_DeleteTransferRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferRunsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferRunsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferLogsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferLogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_CheckValidCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_CheckValidCredsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> __Method_GetDataSource = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -96,6 +125,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_GetDataSourceRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_DataSource);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse> __Method_ListDataSources = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -103,6 +133,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourcesRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListDataSourcesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> __Method_CreateTransferConfig = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -110,6 +141,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_CreateTransferConfigRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> __Method_UpdateTransferConfig = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -117,6 +149,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_UpdateTransferConfigRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTransferConfig = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -124,6 +157,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_DeleteTransferConfigRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> __Method_GetTransferConfig = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -131,6 +165,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_GetTransferConfigRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse> __Method_ListTransferConfigs = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -138,6 +173,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferConfigsRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferConfigsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse> __Method_ScheduleTransferRuns = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -145,6 +181,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ScheduleTransferRunsRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ScheduleTransferRunsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse> __Method_StartManualTransferRuns = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -152,6 +189,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_StartManualTransferRunsRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_StartManualTransferRunsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> __Method_GetTransferRun = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -159,6 +197,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_GetTransferRunRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_TransferRun);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTransferRun = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -166,6 +205,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_DeleteTransferRunRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse> __Method_ListTransferRuns = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -173,6 +213,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferRunsRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferRunsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> __Method_ListTransferLogs = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -180,6 +221,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferLogsRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_ListTransferLogsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> __Method_CheckValidCreds = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -204,6 +246,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> GetDataSource(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -216,6 +259,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse> ListDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -227,6 +271,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> CreateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -239,6 +284,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> UpdateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -251,6 +297,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -262,6 +309,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> GetTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -274,6 +322,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse> ListTransferConfigs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -289,6 +338,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse> ScheduleTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -303,6 +353,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse> StartManualTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -314,6 +365,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> GetTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -325,6 +377,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -336,6 +389,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse> ListTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -347,6 +401,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> ListTransferLogs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -363,6 +418,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCreds(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -375,20 +431,24 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     {
       /// <summary>Creates a new client for DataTransferService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DataTransferServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DataTransferService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DataTransferServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DataTransferServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DataTransferServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -402,6 +462,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource GetDataSource(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataSource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -413,6 +474,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource GetDataSource(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataSource, null, options, request);
@@ -426,6 +488,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> GetDataSourceAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataSourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -437,6 +500,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> GetDataSourceAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSource, null, options, request);
@@ -450,6 +514,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse ListDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDataSources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -461,6 +526,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse ListDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDataSources, null, options, request);
@@ -474,6 +540,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse> ListDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDataSourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -485,6 +552,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesResponse> ListDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListDataSourcesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDataSources, null, options, request);
@@ -497,6 +565,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig CreateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -507,6 +576,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig CreateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTransferConfig, null, options, request);
@@ -519,6 +589,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> CreateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -529,6 +600,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> CreateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CreateTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTransferConfig, null, options, request);
@@ -542,6 +614,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig UpdateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -553,6 +626,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig UpdateTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTransferConfig, null, options, request);
@@ -566,6 +640,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> UpdateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -577,6 +652,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> UpdateTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.UpdateTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateTransferConfig, null, options, request);
@@ -590,6 +666,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -601,6 +678,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTransferConfig, null, options, request);
@@ -614,6 +692,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -625,6 +704,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTransferConfig, null, options, request);
@@ -637,6 +717,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig GetTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -647,6 +728,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig GetTransferConfig(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTransferConfig, null, options, request);
@@ -659,6 +741,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> GetTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -669,6 +752,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferConfig> GetTransferConfigAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTransferConfig, null, options, request);
@@ -682,6 +766,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse ListTransferConfigs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -693,6 +778,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse ListTransferConfigs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferConfigs, null, options, request);
@@ -706,6 +792,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse> ListTransferConfigsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -717,6 +804,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsResponse> ListTransferConfigsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferConfigs, null, options, request);
@@ -733,6 +821,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse ScheduleTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ScheduleTransferRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -747,6 +836,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse ScheduleTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ScheduleTransferRuns, null, options, request);
@@ -763,6 +853,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ScheduleTransferRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -777,6 +868,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsResponse> ScheduleTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleTransferRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ScheduleTransferRuns, null, options, request);
@@ -792,6 +884,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse StartManualTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartManualTransferRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -805,6 +898,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse StartManualTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StartManualTransferRuns, null, options, request);
@@ -820,6 +914,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse> StartManualTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartManualTransferRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -833,6 +928,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsResponse> StartManualTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.StartManualTransferRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StartManualTransferRuns, null, options, request);
@@ -845,6 +941,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun GetTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -855,6 +952,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun GetTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTransferRun, null, options, request);
@@ -867,6 +965,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> GetTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -877,6 +976,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.TransferRun> GetTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.GetTransferRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTransferRun, null, options, request);
@@ -889,6 +989,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -899,6 +1000,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTransferRun(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTransferRun, null, options, request);
@@ -911,6 +1013,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTransferRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -921,6 +1024,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransferRunAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.DeleteTransferRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTransferRun, null, options, request);
@@ -933,6 +1037,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse ListTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -943,6 +1048,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse ListTransferRuns(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferRuns, null, options, request);
@@ -955,6 +1061,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse> ListTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -965,6 +1072,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse> ListTransferRunsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferRuns, null, options, request);
@@ -977,6 +1085,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse ListTransferLogs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferLogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -987,6 +1096,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse ListTransferLogs(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferLogs, null, options, request);
@@ -999,6 +1109,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> ListTransferLogsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferLogsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1009,6 +1120,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse> ListTransferLogsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferLogs, null, options, request);
@@ -1026,6 +1138,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse CheckValidCreds(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckValidCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1041,6 +1154,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse CheckValidCreds(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckValidCreds, null, options, request);
@@ -1058,6 +1172,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCredsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckValidCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1073,11 +1188,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCredsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckValidCreds, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataTransferServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DataTransferServiceClient(configuration);
@@ -1086,6 +1203,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DataTransferServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1109,6 +1227,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DataTransferServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetDataSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource>(serviceImpl.GetDataSource));

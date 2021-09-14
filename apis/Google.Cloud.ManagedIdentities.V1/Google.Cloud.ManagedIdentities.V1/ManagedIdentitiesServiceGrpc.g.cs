@@ -62,6 +62,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
   {
     static readonly string __ServiceName = "google.cloud.managedidentities.v1.ManagedIdentitiesService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -76,11 +77,13 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -92,21 +95,36 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest> __Marshaller_google_cloud_managedidentities_v1_CreateMicrosoftAdDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest> __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse> __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest> __Marshaller_google_cloud_managedidentities_v1_ListDomainsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse> __Marshaller_google_cloud_managedidentities_v1_ListDomainsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest> __Marshaller_google_cloud_managedidentities_v1_GetDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.Domain> __Marshaller_google_cloud_managedidentities_v1_Domain = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.Domain.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest> __Marshaller_google_cloud_managedidentities_v1_UpdateDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest> __Marshaller_google_cloud_managedidentities_v1_DeleteDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest> __Marshaller_google_cloud_managedidentities_v1_AttachTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest> __Marshaller_google_cloud_managedidentities_v1_ReconfigureTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest> __Marshaller_google_cloud_managedidentities_v1_DetachTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest> __Marshaller_google_cloud_managedidentities_v1_ValidateTrustRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest, global::Google.LongRunning.Operation> __Method_CreateMicrosoftAdDomain = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +132,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_CreateMicrosoftAdDomainRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest, global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse> __Method_ResetAdminPassword = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest, global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +140,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordRequest,
         __Marshaller_google_cloud_managedidentities_v1_ResetAdminPasswordResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest, global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse> __Method_ListDomains = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest, global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +148,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_ListDomainsRequest,
         __Marshaller_google_cloud_managedidentities_v1_ListDomainsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest, global::Google.Cloud.ManagedIdentities.V1.Domain> __Method_GetDomain = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest, global::Google.Cloud.ManagedIdentities.V1.Domain>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +156,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_GetDomainRequest,
         __Marshaller_google_cloud_managedidentities_v1_Domain);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest, global::Google.LongRunning.Operation> __Method_UpdateDomain = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +164,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_UpdateDomainRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest, global::Google.LongRunning.Operation> __Method_DeleteDomain = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +172,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_DeleteDomainRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest, global::Google.LongRunning.Operation> __Method_AttachTrust = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +180,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_AttachTrustRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest, global::Google.LongRunning.Operation> __Method_ReconfigureTrust = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +188,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_ReconfigureTrustRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest, global::Google.LongRunning.Operation> __Method_DetachTrust = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -170,6 +196,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
         __Marshaller_google_cloud_managedidentities_v1_DetachTrustRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest, global::Google.LongRunning.Operation> __Method_ValidateTrust = new grpc::Method<global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -193,6 +220,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateMicrosoftAdDomain(global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -204,6 +232,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse> ResetAdminPassword(global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -215,6 +244,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse> ListDomains(global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -226,6 +256,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ManagedIdentities.V1.Domain> GetDomain(global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -237,6 +268,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDomain(global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -248,6 +280,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDomain(global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -259,6 +292,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AttachTrust(global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -270,6 +304,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReconfigureTrust(global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -281,6 +316,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DetachTrust(global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -293,6 +329,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ValidateTrust(global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -305,20 +342,24 @@ namespace Google.Cloud.ManagedIdentities.V1 {
     {
       /// <summary>Creates a new client for ManagedIdentitiesService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ManagedIdentitiesServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ManagedIdentitiesService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ManagedIdentitiesServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ManagedIdentitiesServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ManagedIdentitiesServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -331,6 +372,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateMicrosoftAdDomain(global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMicrosoftAdDomain(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -341,6 +383,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateMicrosoftAdDomain(global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMicrosoftAdDomain, null, options, request);
@@ -353,6 +396,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMicrosoftAdDomainAsync(global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMicrosoftAdDomainAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -363,6 +407,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMicrosoftAdDomainAsync(global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateMicrosoftAdDomain, null, options, request);
@@ -375,6 +420,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse ResetAdminPassword(global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetAdminPassword(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -385,6 +431,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse ResetAdminPassword(global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResetAdminPassword, null, options, request);
@@ -397,6 +444,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse> ResetAdminPasswordAsync(global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetAdminPasswordAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -407,6 +455,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordResponse> ResetAdminPasswordAsync(global::Google.Cloud.ManagedIdentities.V1.ResetAdminPasswordRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetAdminPassword, null, options, request);
@@ -419,6 +468,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse ListDomains(global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDomains(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -429,6 +479,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse ListDomains(global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDomains, null, options, request);
@@ -441,6 +492,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse> ListDomainsAsync(global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDomainsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -451,6 +503,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedIdentities.V1.ListDomainsResponse> ListDomainsAsync(global::Google.Cloud.ManagedIdentities.V1.ListDomainsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDomains, null, options, request);
@@ -463,6 +516,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ManagedIdentities.V1.Domain GetDomain(global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDomain(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -473,6 +527,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ManagedIdentities.V1.Domain GetDomain(global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDomain, null, options, request);
@@ -485,6 +540,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedIdentities.V1.Domain> GetDomainAsync(global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDomainAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -495,6 +551,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ManagedIdentities.V1.Domain> GetDomainAsync(global::Google.Cloud.ManagedIdentities.V1.GetDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDomain, null, options, request);
@@ -507,6 +564,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDomain(global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDomain(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -517,6 +575,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDomain(global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDomain, null, options, request);
@@ -529,6 +588,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDomainAsync(global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDomainAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -539,6 +599,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDomainAsync(global::Google.Cloud.ManagedIdentities.V1.UpdateDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDomain, null, options, request);
@@ -551,6 +612,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDomain(global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDomain(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -561,6 +623,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDomain(global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDomain, null, options, request);
@@ -573,6 +636,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDomainAsync(global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDomainAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -583,6 +647,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDomainAsync(global::Google.Cloud.ManagedIdentities.V1.DeleteDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDomain, null, options, request);
@@ -595,6 +660,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation AttachTrust(global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AttachTrust(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -605,6 +671,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation AttachTrust(global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AttachTrust, null, options, request);
@@ -617,6 +684,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AttachTrustAsync(global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AttachTrustAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -627,6 +695,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AttachTrustAsync(global::Google.Cloud.ManagedIdentities.V1.AttachTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AttachTrust, null, options, request);
@@ -639,6 +708,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReconfigureTrust(global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReconfigureTrust(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -649,6 +719,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReconfigureTrust(global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReconfigureTrust, null, options, request);
@@ -661,6 +732,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReconfigureTrustAsync(global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReconfigureTrustAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -671,6 +743,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReconfigureTrustAsync(global::Google.Cloud.ManagedIdentities.V1.ReconfigureTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReconfigureTrust, null, options, request);
@@ -683,6 +756,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DetachTrust(global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DetachTrust(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -693,6 +767,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DetachTrust(global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DetachTrust, null, options, request);
@@ -705,6 +780,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DetachTrustAsync(global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DetachTrustAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -715,6 +791,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DetachTrustAsync(global::Google.Cloud.ManagedIdentities.V1.DetachTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DetachTrust, null, options, request);
@@ -728,6 +805,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ValidateTrust(global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateTrust(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -739,6 +817,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ValidateTrust(global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ValidateTrust, null, options, request);
@@ -752,6 +831,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ValidateTrustAsync(global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateTrustAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -763,11 +843,13 @@ namespace Google.Cloud.ManagedIdentities.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ValidateTrustAsync(global::Google.Cloud.ManagedIdentities.V1.ValidateTrustRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateTrust, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ManagedIdentitiesServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ManagedIdentitiesServiceClient(configuration);
@@ -776,6 +858,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ManagedIdentitiesServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -795,6 +878,7 @@ namespace Google.Cloud.ManagedIdentities.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ManagedIdentitiesServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateMicrosoftAdDomain, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ManagedIdentities.V1.CreateMicrosoftAdDomainRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMicrosoftAdDomain));

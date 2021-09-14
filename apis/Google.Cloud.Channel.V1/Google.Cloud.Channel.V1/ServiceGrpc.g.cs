@@ -48,6 +48,7 @@ namespace Google.Cloud.Channel.V1 {
   {
     static readonly string __ServiceName = "google.cloud.channel.v1.CloudChannelService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,11 +63,13 @@ namespace Google.Cloud.Channel.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -78,62 +81,118 @@ namespace Google.Cloud.Channel.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListCustomersRequest> __Marshaller_google_cloud_channel_v1_ListCustomersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListCustomersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListCustomersResponse> __Marshaller_google_cloud_channel_v1_ListCustomersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListCustomersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.GetCustomerRequest> __Marshaller_google_cloud_channel_v1_GetCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.GetCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.Customer> __Marshaller_google_cloud_channel_v1_Customer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.Customer.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest> __Marshaller_google_cloud_channel_v1_CheckCloudIdentityAccountsExistRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse> __Marshaller_google_cloud_channel_v1_CheckCloudIdentityAccountsExistResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CreateCustomerRequest> __Marshaller_google_cloud_channel_v1_CreateCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CreateCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UpdateCustomerRequest> __Marshaller_google_cloud_channel_v1_UpdateCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UpdateCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.DeleteCustomerRequest> __Marshaller_google_cloud_channel_v1_DeleteCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.DeleteCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ImportCustomerRequest> __Marshaller_google_cloud_channel_v1_ImportCustomerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ImportCustomerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest> __Marshaller_google_cloud_channel_v1_ProvisionCloudIdentityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListEntitlementsRequest> __Marshaller_google_cloud_channel_v1_ListEntitlementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListEntitlementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListEntitlementsResponse> __Marshaller_google_cloud_channel_v1_ListEntitlementsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListEntitlementsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListTransferableSkusRequest> __Marshaller_google_cloud_channel_v1_ListTransferableSkusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListTransferableSkusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListTransferableSkusResponse> __Marshaller_google_cloud_channel_v1_ListTransferableSkusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListTransferableSkusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListTransferableOffersRequest> __Marshaller_google_cloud_channel_v1_ListTransferableOffersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListTransferableOffersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListTransferableOffersResponse> __Marshaller_google_cloud_channel_v1_ListTransferableOffersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListTransferableOffersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.GetEntitlementRequest> __Marshaller_google_cloud_channel_v1_GetEntitlementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.GetEntitlementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.Entitlement> __Marshaller_google_cloud_channel_v1_Entitlement = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.Entitlement.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CreateEntitlementRequest> __Marshaller_google_cloud_channel_v1_CreateEntitlementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CreateEntitlementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ChangeParametersRequest> __Marshaller_google_cloud_channel_v1_ChangeParametersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ChangeParametersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest> __Marshaller_google_cloud_channel_v1_ChangeRenewalSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ChangeOfferRequest> __Marshaller_google_cloud_channel_v1_ChangeOfferRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ChangeOfferRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.StartPaidServiceRequest> __Marshaller_google_cloud_channel_v1_StartPaidServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.StartPaidServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.SuspendEntitlementRequest> __Marshaller_google_cloud_channel_v1_SuspendEntitlementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.SuspendEntitlementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CancelEntitlementRequest> __Marshaller_google_cloud_channel_v1_CancelEntitlementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CancelEntitlementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ActivateEntitlementRequest> __Marshaller_google_cloud_channel_v1_ActivateEntitlementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ActivateEntitlementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.TransferEntitlementsRequest> __Marshaller_google_cloud_channel_v1_TransferEntitlementsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.TransferEntitlementsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest> __Marshaller_google_cloud_channel_v1_TransferEntitlementsToGoogleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest> __Marshaller_google_cloud_channel_v1_ListChannelPartnerLinksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse> __Marshaller_google_cloud_channel_v1_ListChannelPartnerLinksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest> __Marshaller_google_cloud_channel_v1_GetChannelPartnerLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ChannelPartnerLink> __Marshaller_google_cloud_channel_v1_ChannelPartnerLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ChannelPartnerLink.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest> __Marshaller_google_cloud_channel_v1_CreateChannelPartnerLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest> __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.LookupOfferRequest> __Marshaller_google_cloud_channel_v1_LookupOfferRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.LookupOfferRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.Offer> __Marshaller_google_cloud_channel_v1_Offer = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.Offer.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListProductsRequest> __Marshaller_google_cloud_channel_v1_ListProductsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListProductsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListProductsResponse> __Marshaller_google_cloud_channel_v1_ListProductsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListProductsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkusRequest> __Marshaller_google_cloud_channel_v1_ListSkusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSkusResponse> __Marshaller_google_cloud_channel_v1_ListSkusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSkusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListOffersRequest> __Marshaller_google_cloud_channel_v1_ListOffersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListOffersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListOffersResponse> __Marshaller_google_cloud_channel_v1_ListOffersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListOffersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest> __Marshaller_google_cloud_channel_v1_ListPurchasableSkusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse> __Marshaller_google_cloud_channel_v1_ListPurchasableSkusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest> __Marshaller_google_cloud_channel_v1_ListPurchasableOffersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> __Marshaller_google_cloud_channel_v1_ListPurchasableOffersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest> __Marshaller_google_cloud_channel_v1_RegisterSubscriberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.RegisterSubscriberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> __Marshaller_google_cloud_channel_v1_RegisterSubscriberResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest> __Marshaller_google_cloud_channel_v1_UnregisterSubscriberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> __Marshaller_google_cloud_channel_v1_UnregisterSubscriberResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSubscribersRequest> __Marshaller_google_cloud_channel_v1_ListSubscribersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSubscribersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Channel.V1.ListSubscribersResponse> __Marshaller_google_cloud_channel_v1_ListSubscribersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Channel.V1.ListSubscribersResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListCustomersRequest, global::Google.Cloud.Channel.V1.ListCustomersResponse> __Method_ListCustomers = new grpc::Method<global::Google.Cloud.Channel.V1.ListCustomersRequest, global::Google.Cloud.Channel.V1.ListCustomersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +200,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListCustomersRequest,
         __Marshaller_google_cloud_channel_v1_ListCustomersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.GetCustomerRequest, global::Google.Cloud.Channel.V1.Customer> __Method_GetCustomer = new grpc::Method<global::Google.Cloud.Channel.V1.GetCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -148,6 +208,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_GetCustomerRequest,
         __Marshaller_google_cloud_channel_v1_Customer);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest, global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse> __Method_CheckCloudIdentityAccountsExist = new grpc::Method<global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest, global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -155,6 +216,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_CheckCloudIdentityAccountsExistRequest,
         __Marshaller_google_cloud_channel_v1_CheckCloudIdentityAccountsExistResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.CreateCustomerRequest, global::Google.Cloud.Channel.V1.Customer> __Method_CreateCustomer = new grpc::Method<global::Google.Cloud.Channel.V1.CreateCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -162,6 +224,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_CreateCustomerRequest,
         __Marshaller_google_cloud_channel_v1_Customer);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.UpdateCustomerRequest, global::Google.Cloud.Channel.V1.Customer> __Method_UpdateCustomer = new grpc::Method<global::Google.Cloud.Channel.V1.UpdateCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,6 +232,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_UpdateCustomerRequest,
         __Marshaller_google_cloud_channel_v1_Customer);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.DeleteCustomerRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCustomer = new grpc::Method<global::Google.Cloud.Channel.V1.DeleteCustomerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -176,6 +240,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_DeleteCustomerRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ImportCustomerRequest, global::Google.Cloud.Channel.V1.Customer> __Method_ImportCustomer = new grpc::Method<global::Google.Cloud.Channel.V1.ImportCustomerRequest, global::Google.Cloud.Channel.V1.Customer>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -183,6 +248,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ImportCustomerRequest,
         __Marshaller_google_cloud_channel_v1_Customer);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest, global::Google.LongRunning.Operation> __Method_ProvisionCloudIdentity = new grpc::Method<global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -190,6 +256,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ProvisionCloudIdentityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListEntitlementsRequest, global::Google.Cloud.Channel.V1.ListEntitlementsResponse> __Method_ListEntitlements = new grpc::Method<global::Google.Cloud.Channel.V1.ListEntitlementsRequest, global::Google.Cloud.Channel.V1.ListEntitlementsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -197,6 +264,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListEntitlementsRequest,
         __Marshaller_google_cloud_channel_v1_ListEntitlementsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListTransferableSkusRequest, global::Google.Cloud.Channel.V1.ListTransferableSkusResponse> __Method_ListTransferableSkus = new grpc::Method<global::Google.Cloud.Channel.V1.ListTransferableSkusRequest, global::Google.Cloud.Channel.V1.ListTransferableSkusResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -204,6 +272,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListTransferableSkusRequest,
         __Marshaller_google_cloud_channel_v1_ListTransferableSkusResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListTransferableOffersRequest, global::Google.Cloud.Channel.V1.ListTransferableOffersResponse> __Method_ListTransferableOffers = new grpc::Method<global::Google.Cloud.Channel.V1.ListTransferableOffersRequest, global::Google.Cloud.Channel.V1.ListTransferableOffersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -211,6 +280,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListTransferableOffersRequest,
         __Marshaller_google_cloud_channel_v1_ListTransferableOffersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.GetEntitlementRequest, global::Google.Cloud.Channel.V1.Entitlement> __Method_GetEntitlement = new grpc::Method<global::Google.Cloud.Channel.V1.GetEntitlementRequest, global::Google.Cloud.Channel.V1.Entitlement>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -218,6 +288,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_GetEntitlementRequest,
         __Marshaller_google_cloud_channel_v1_Entitlement);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.CreateEntitlementRequest, global::Google.LongRunning.Operation> __Method_CreateEntitlement = new grpc::Method<global::Google.Cloud.Channel.V1.CreateEntitlementRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -225,6 +296,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_CreateEntitlementRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ChangeParametersRequest, global::Google.LongRunning.Operation> __Method_ChangeParameters = new grpc::Method<global::Google.Cloud.Channel.V1.ChangeParametersRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -232,6 +304,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ChangeParametersRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest, global::Google.LongRunning.Operation> __Method_ChangeRenewalSettings = new grpc::Method<global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -239,6 +312,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ChangeRenewalSettingsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ChangeOfferRequest, global::Google.LongRunning.Operation> __Method_ChangeOffer = new grpc::Method<global::Google.Cloud.Channel.V1.ChangeOfferRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -246,6 +320,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ChangeOfferRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.StartPaidServiceRequest, global::Google.LongRunning.Operation> __Method_StartPaidService = new grpc::Method<global::Google.Cloud.Channel.V1.StartPaidServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -253,6 +328,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_StartPaidServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.SuspendEntitlementRequest, global::Google.LongRunning.Operation> __Method_SuspendEntitlement = new grpc::Method<global::Google.Cloud.Channel.V1.SuspendEntitlementRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -260,6 +336,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_SuspendEntitlementRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.CancelEntitlementRequest, global::Google.LongRunning.Operation> __Method_CancelEntitlement = new grpc::Method<global::Google.Cloud.Channel.V1.CancelEntitlementRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -267,6 +344,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_CancelEntitlementRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ActivateEntitlementRequest, global::Google.LongRunning.Operation> __Method_ActivateEntitlement = new grpc::Method<global::Google.Cloud.Channel.V1.ActivateEntitlementRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -274,6 +352,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ActivateEntitlementRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.TransferEntitlementsRequest, global::Google.LongRunning.Operation> __Method_TransferEntitlements = new grpc::Method<global::Google.Cloud.Channel.V1.TransferEntitlementsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -281,6 +360,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_TransferEntitlementsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest, global::Google.LongRunning.Operation> __Method_TransferEntitlementsToGoogle = new grpc::Method<global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -288,6 +368,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_TransferEntitlementsToGoogleRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest, global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse> __Method_ListChannelPartnerLinks = new grpc::Method<global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest, global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -295,6 +376,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListChannelPartnerLinksRequest,
         __Marshaller_google_cloud_channel_v1_ListChannelPartnerLinksResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink> __Method_GetChannelPartnerLink = new grpc::Method<global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -302,6 +384,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_GetChannelPartnerLinkRequest,
         __Marshaller_google_cloud_channel_v1_ChannelPartnerLink);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink> __Method_CreateChannelPartnerLink = new grpc::Method<global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -309,6 +392,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_CreateChannelPartnerLinkRequest,
         __Marshaller_google_cloud_channel_v1_ChannelPartnerLink);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink> __Method_UpdateChannelPartnerLink = new grpc::Method<global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest, global::Google.Cloud.Channel.V1.ChannelPartnerLink>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -316,6 +400,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_UpdateChannelPartnerLinkRequest,
         __Marshaller_google_cloud_channel_v1_ChannelPartnerLink);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer> __Method_LookupOffer = new grpc::Method<global::Google.Cloud.Channel.V1.LookupOfferRequest, global::Google.Cloud.Channel.V1.Offer>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -323,6 +408,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_LookupOfferRequest,
         __Marshaller_google_cloud_channel_v1_Offer);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse> __Method_ListProducts = new grpc::Method<global::Google.Cloud.Channel.V1.ListProductsRequest, global::Google.Cloud.Channel.V1.ListProductsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -330,6 +416,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListProductsRequest,
         __Marshaller_google_cloud_channel_v1_ListProductsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListSkusRequest, global::Google.Cloud.Channel.V1.ListSkusResponse> __Method_ListSkus = new grpc::Method<global::Google.Cloud.Channel.V1.ListSkusRequest, global::Google.Cloud.Channel.V1.ListSkusResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -337,6 +424,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListSkusRequest,
         __Marshaller_google_cloud_channel_v1_ListSkusResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListOffersRequest, global::Google.Cloud.Channel.V1.ListOffersResponse> __Method_ListOffers = new grpc::Method<global::Google.Cloud.Channel.V1.ListOffersRequest, global::Google.Cloud.Channel.V1.ListOffersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -344,6 +432,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListOffersRequest,
         __Marshaller_google_cloud_channel_v1_ListOffersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest, global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse> __Method_ListPurchasableSkus = new grpc::Method<global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest, global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -351,6 +440,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListPurchasableSkusRequest,
         __Marshaller_google_cloud_channel_v1_ListPurchasableSkusResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest, global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> __Method_ListPurchasableOffers = new grpc::Method<global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest, global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -358,6 +448,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_ListPurchasableOffersRequest,
         __Marshaller_google_cloud_channel_v1_ListPurchasableOffersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> __Method_RegisterSubscriber = new grpc::Method<global::Google.Cloud.Channel.V1.RegisterSubscriberRequest, global::Google.Cloud.Channel.V1.RegisterSubscriberResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -365,6 +456,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_RegisterSubscriberRequest,
         __Marshaller_google_cloud_channel_v1_RegisterSubscriberResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> __Method_UnregisterSubscriber = new grpc::Method<global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest, global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -372,6 +464,7 @@ namespace Google.Cloud.Channel.V1 {
         __Marshaller_google_cloud_channel_v1_UnregisterSubscriberRequest,
         __Marshaller_google_cloud_channel_v1_UnregisterSubscriberResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Channel.V1.ListSubscribersRequest, global::Google.Cloud.Channel.V1.ListSubscribersResponse> __Method_ListSubscribers = new grpc::Method<global::Google.Cloud.Channel.V1.ListSubscribersRequest, global::Google.Cloud.Channel.V1.ListSubscribersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -404,6 +497,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListCustomersResponse> ListCustomers(global::Google.Cloud.Channel.V1.ListCustomersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -426,6 +520,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Customer> GetCustomer(global::Google.Cloud.Channel.V1.GetCustomerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -452,6 +547,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse> CheckCloudIdentityAccountsExist(global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -475,6 +571,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Customer> CreateCustomer(global::Google.Cloud.Channel.V1.CreateCustomerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -497,6 +594,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Customer> UpdateCustomer(global::Google.Cloud.Channel.V1.UpdateCustomerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -516,6 +614,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomer(global::Google.Cloud.Channel.V1.DeleteCustomerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -543,6 +642,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Customer> ImportCustomer(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -574,6 +674,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ProvisionCloudIdentity(global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -593,6 +694,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListEntitlementsResponse> ListEntitlements(global::Google.Cloud.Channel.V1.ListEntitlementsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -621,6 +723,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListTransferableSkusResponse> ListTransferableSkus(global::Google.Cloud.Channel.V1.ListTransferableSkusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -649,6 +752,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListTransferableOffersResponse> ListTransferableOffers(global::Google.Cloud.Channel.V1.ListTransferableOffersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -669,6 +773,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Entitlement> GetEntitlement(global::Google.Cloud.Channel.V1.GetEntitlementRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -715,6 +820,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateEntitlement(global::Google.Cloud.Channel.V1.CreateEntitlementRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -748,6 +854,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ChangeParameters(global::Google.Cloud.Channel.V1.ChangeParametersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -781,6 +888,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ChangeRenewalSettings(global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -812,6 +920,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ChangeOffer(global::Google.Cloud.Channel.V1.ChangeOfferRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -846,6 +955,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartPaidService(global::Google.Cloud.Channel.V1.StartPaidServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -877,6 +987,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SuspendEntitlement(global::Google.Cloud.Channel.V1.SuspendEntitlementRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -913,6 +1024,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CancelEntitlement(global::Google.Cloud.Channel.V1.CancelEntitlementRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -950,6 +1062,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ActivateEntitlement(global::Google.Cloud.Channel.V1.ActivateEntitlementRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -989,6 +1102,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TransferEntitlements(global::Google.Cloud.Channel.V1.TransferEntitlementsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1028,6 +1142,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TransferEntitlementsToGoogle(global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1049,6 +1164,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse> ListChannelPartnerLinks(global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1072,6 +1188,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerLink> GetChannelPartnerLink(global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1104,6 +1221,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerLink> CreateChannelPartnerLink(global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1135,6 +1253,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ChannelPartnerLink> UpdateChannelPartnerLink(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1155,6 +1274,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.Offer> LookupOffer(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1170,6 +1290,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListProductsResponse> ListProducts(global::Google.Cloud.Channel.V1.ListProductsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1185,6 +1306,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSkusResponse> ListSkus(global::Google.Cloud.Channel.V1.ListSkusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1200,6 +1322,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListOffersResponse> ListOffers(global::Google.Cloud.Channel.V1.ListOffersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1219,6 +1342,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse> ListPurchasableSkus(global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1238,6 +1362,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> ListPurchasableOffers(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1265,6 +1390,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> RegisterSubscriber(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1296,6 +1422,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> UnregisterSubscriber(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1323,6 +1450,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Channel.V1.ListSubscribersResponse> ListSubscribers(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1335,20 +1463,24 @@ namespace Google.Cloud.Channel.V1 {
     {
       /// <summary>Creates a new client for CloudChannelService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudChannelServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudChannelService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudChannelServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudChannelServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudChannelServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -1370,6 +1502,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListCustomersResponse ListCustomers(global::Google.Cloud.Channel.V1.ListCustomersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCustomers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1389,6 +1522,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListCustomersResponse ListCustomers(global::Google.Cloud.Channel.V1.ListCustomersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCustomers, null, options, request);
@@ -1410,6 +1544,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListCustomersResponse> ListCustomersAsync(global::Google.Cloud.Channel.V1.ListCustomersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCustomersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1429,6 +1564,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListCustomersResponse> ListCustomersAsync(global::Google.Cloud.Channel.V1.ListCustomersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomers, null, options, request);
@@ -1452,6 +1588,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer GetCustomer(global::Google.Cloud.Channel.V1.GetCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1473,6 +1610,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer GetCustomer(global::Google.Cloud.Channel.V1.GetCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomer, null, options, request);
@@ -1496,6 +1634,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> GetCustomerAsync(global::Google.Cloud.Channel.V1.GetCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1517,6 +1656,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> GetCustomerAsync(global::Google.Cloud.Channel.V1.GetCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomer, null, options, request);
@@ -1544,6 +1684,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse CheckCloudIdentityAccountsExist(global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckCloudIdentityAccountsExist(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1569,6 +1710,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse CheckCloudIdentityAccountsExist(global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckCloudIdentityAccountsExist, null, options, request);
@@ -1596,6 +1738,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse> CheckCloudIdentityAccountsExistAsync(global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckCloudIdentityAccountsExistAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1621,6 +1764,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistResponse> CheckCloudIdentityAccountsExistAsync(global::Google.Cloud.Channel.V1.CheckCloudIdentityAccountsExistRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckCloudIdentityAccountsExist, null, options, request);
@@ -1645,6 +1789,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer CreateCustomer(global::Google.Cloud.Channel.V1.CreateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1667,6 +1812,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer CreateCustomer(global::Google.Cloud.Channel.V1.CreateCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCustomer, null, options, request);
@@ -1691,6 +1837,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> CreateCustomerAsync(global::Google.Cloud.Channel.V1.CreateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1713,6 +1860,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> CreateCustomerAsync(global::Google.Cloud.Channel.V1.CreateCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCustomer, null, options, request);
@@ -1736,6 +1884,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer UpdateCustomer(global::Google.Cloud.Channel.V1.UpdateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1757,6 +1906,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer UpdateCustomer(global::Google.Cloud.Channel.V1.UpdateCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomer, null, options, request);
@@ -1780,6 +1930,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> UpdateCustomerAsync(global::Google.Cloud.Channel.V1.UpdateCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1801,6 +1952,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> UpdateCustomerAsync(global::Google.Cloud.Channel.V1.UpdateCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomer, null, options, request);
@@ -1821,6 +1973,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomer(global::Google.Cloud.Channel.V1.DeleteCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1839,6 +1992,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomer(global::Google.Cloud.Channel.V1.DeleteCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomer, null, options, request);
@@ -1859,6 +2013,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerAsync(global::Google.Cloud.Channel.V1.DeleteCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1877,6 +2032,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomerAsync(global::Google.Cloud.Channel.V1.DeleteCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomer, null, options, request);
@@ -1905,6 +2061,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer ImportCustomer(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportCustomer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1931,6 +2088,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Customer ImportCustomer(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportCustomer, null, options, request);
@@ -1959,6 +2117,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> ImportCustomerAsync(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportCustomerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1985,6 +2144,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Customer> ImportCustomerAsync(global::Google.Cloud.Channel.V1.ImportCustomerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportCustomer, null, options, request);
@@ -2017,6 +2177,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ProvisionCloudIdentity(global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ProvisionCloudIdentity(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2047,6 +2208,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ProvisionCloudIdentity(global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ProvisionCloudIdentity, null, options, request);
@@ -2079,6 +2241,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ProvisionCloudIdentityAsync(global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ProvisionCloudIdentityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2109,6 +2272,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ProvisionCloudIdentityAsync(global::Google.Cloud.Channel.V1.ProvisionCloudIdentityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ProvisionCloudIdentity, null, options, request);
@@ -2129,6 +2293,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListEntitlementsResponse ListEntitlements(global::Google.Cloud.Channel.V1.ListEntitlementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEntitlements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2147,6 +2312,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListEntitlementsResponse ListEntitlements(global::Google.Cloud.Channel.V1.ListEntitlementsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListEntitlements, null, options, request);
@@ -2167,6 +2333,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListEntitlementsResponse> ListEntitlementsAsync(global::Google.Cloud.Channel.V1.ListEntitlementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEntitlementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2185,6 +2352,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListEntitlementsResponse> ListEntitlementsAsync(global::Google.Cloud.Channel.V1.ListEntitlementsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntitlements, null, options, request);
@@ -2214,6 +2382,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListTransferableSkusResponse ListTransferableSkus(global::Google.Cloud.Channel.V1.ListTransferableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferableSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2241,6 +2410,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListTransferableSkusResponse ListTransferableSkus(global::Google.Cloud.Channel.V1.ListTransferableSkusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferableSkus, null, options, request);
@@ -2270,6 +2440,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListTransferableSkusResponse> ListTransferableSkusAsync(global::Google.Cloud.Channel.V1.ListTransferableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferableSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2297,6 +2468,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListTransferableSkusResponse> ListTransferableSkusAsync(global::Google.Cloud.Channel.V1.ListTransferableSkusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferableSkus, null, options, request);
@@ -2326,6 +2498,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListTransferableOffersResponse ListTransferableOffers(global::Google.Cloud.Channel.V1.ListTransferableOffersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferableOffers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2353,6 +2526,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListTransferableOffersResponse ListTransferableOffers(global::Google.Cloud.Channel.V1.ListTransferableOffersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferableOffers, null, options, request);
@@ -2382,6 +2556,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListTransferableOffersResponse> ListTransferableOffersAsync(global::Google.Cloud.Channel.V1.ListTransferableOffersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferableOffersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2409,6 +2584,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListTransferableOffersResponse> ListTransferableOffersAsync(global::Google.Cloud.Channel.V1.ListTransferableOffersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferableOffers, null, options, request);
@@ -2430,6 +2606,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Entitlement GetEntitlement(global::Google.Cloud.Channel.V1.GetEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2449,6 +2626,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Entitlement GetEntitlement(global::Google.Cloud.Channel.V1.GetEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntitlement, null, options, request);
@@ -2470,6 +2648,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Entitlement> GetEntitlementAsync(global::Google.Cloud.Channel.V1.GetEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2489,6 +2668,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Entitlement> GetEntitlementAsync(global::Google.Cloud.Channel.V1.GetEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetEntitlement, null, options, request);
@@ -2536,6 +2716,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateEntitlement(global::Google.Cloud.Channel.V1.CreateEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2581,6 +2762,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateEntitlement(global::Google.Cloud.Channel.V1.CreateEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEntitlement, null, options, request);
@@ -2628,6 +2810,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateEntitlementAsync(global::Google.Cloud.Channel.V1.CreateEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2673,6 +2856,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateEntitlementAsync(global::Google.Cloud.Channel.V1.CreateEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEntitlement, null, options, request);
@@ -2707,6 +2891,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ChangeParameters(global::Google.Cloud.Channel.V1.ChangeParametersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ChangeParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2739,6 +2924,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ChangeParameters(global::Google.Cloud.Channel.V1.ChangeParametersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ChangeParameters, null, options, request);
@@ -2773,6 +2959,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ChangeParametersAsync(global::Google.Cloud.Channel.V1.ChangeParametersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ChangeParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2805,6 +2992,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ChangeParametersAsync(global::Google.Cloud.Channel.V1.ChangeParametersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ChangeParameters, null, options, request);
@@ -2839,6 +3027,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ChangeRenewalSettings(global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ChangeRenewalSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2871,6 +3060,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ChangeRenewalSettings(global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ChangeRenewalSettings, null, options, request);
@@ -2905,6 +3095,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ChangeRenewalSettingsAsync(global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ChangeRenewalSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2937,6 +3128,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ChangeRenewalSettingsAsync(global::Google.Cloud.Channel.V1.ChangeRenewalSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ChangeRenewalSettings, null, options, request);
@@ -2969,6 +3161,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ChangeOffer(global::Google.Cloud.Channel.V1.ChangeOfferRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ChangeOffer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2999,6 +3192,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ChangeOffer(global::Google.Cloud.Channel.V1.ChangeOfferRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ChangeOffer, null, options, request);
@@ -3031,6 +3225,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ChangeOfferAsync(global::Google.Cloud.Channel.V1.ChangeOfferRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ChangeOfferAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3061,6 +3256,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ChangeOfferAsync(global::Google.Cloud.Channel.V1.ChangeOfferRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ChangeOffer, null, options, request);
@@ -3096,6 +3292,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartPaidService(global::Google.Cloud.Channel.V1.StartPaidServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartPaidService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3129,6 +3326,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartPaidService(global::Google.Cloud.Channel.V1.StartPaidServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StartPaidService, null, options, request);
@@ -3164,6 +3362,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartPaidServiceAsync(global::Google.Cloud.Channel.V1.StartPaidServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartPaidServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3197,6 +3396,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartPaidServiceAsync(global::Google.Cloud.Channel.V1.StartPaidServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StartPaidService, null, options, request);
@@ -3229,6 +3429,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SuspendEntitlement(global::Google.Cloud.Channel.V1.SuspendEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SuspendEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3259,6 +3460,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SuspendEntitlement(global::Google.Cloud.Channel.V1.SuspendEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SuspendEntitlement, null, options, request);
@@ -3291,6 +3493,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SuspendEntitlementAsync(global::Google.Cloud.Channel.V1.SuspendEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SuspendEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3321,6 +3524,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SuspendEntitlementAsync(global::Google.Cloud.Channel.V1.SuspendEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SuspendEntitlement, null, options, request);
@@ -3358,6 +3562,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CancelEntitlement(global::Google.Cloud.Channel.V1.CancelEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3393,6 +3598,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CancelEntitlement(global::Google.Cloud.Channel.V1.CancelEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CancelEntitlement, null, options, request);
@@ -3430,6 +3636,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelEntitlementAsync(global::Google.Cloud.Channel.V1.CancelEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3465,6 +3672,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelEntitlementAsync(global::Google.Cloud.Channel.V1.CancelEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelEntitlement, null, options, request);
@@ -3503,6 +3711,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ActivateEntitlement(global::Google.Cloud.Channel.V1.ActivateEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ActivateEntitlement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3539,6 +3748,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ActivateEntitlement(global::Google.Cloud.Channel.V1.ActivateEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ActivateEntitlement, null, options, request);
@@ -3577,6 +3787,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ActivateEntitlementAsync(global::Google.Cloud.Channel.V1.ActivateEntitlementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ActivateEntitlementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3613,6 +3824,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ActivateEntitlementAsync(global::Google.Cloud.Channel.V1.ActivateEntitlementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ActivateEntitlement, null, options, request);
@@ -3653,6 +3865,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation TransferEntitlements(global::Google.Cloud.Channel.V1.TransferEntitlementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TransferEntitlements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3691,6 +3904,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation TransferEntitlements(global::Google.Cloud.Channel.V1.TransferEntitlementsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TransferEntitlements, null, options, request);
@@ -3731,6 +3945,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TransferEntitlementsAsync(global::Google.Cloud.Channel.V1.TransferEntitlementsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TransferEntitlementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3769,6 +3984,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TransferEntitlementsAsync(global::Google.Cloud.Channel.V1.TransferEntitlementsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TransferEntitlements, null, options, request);
@@ -3809,6 +4025,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation TransferEntitlementsToGoogle(global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TransferEntitlementsToGoogle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3847,6 +4064,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation TransferEntitlementsToGoogle(global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TransferEntitlementsToGoogle, null, options, request);
@@ -3887,6 +4105,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TransferEntitlementsToGoogleAsync(global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TransferEntitlementsToGoogleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3925,6 +4144,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TransferEntitlementsToGoogleAsync(global::Google.Cloud.Channel.V1.TransferEntitlementsToGoogleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TransferEntitlementsToGoogle, null, options, request);
@@ -3947,6 +4167,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse ListChannelPartnerLinks(global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListChannelPartnerLinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3967,6 +4188,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse ListChannelPartnerLinks(global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListChannelPartnerLinks, null, options, request);
@@ -3989,6 +4211,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse> ListChannelPartnerLinksAsync(global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListChannelPartnerLinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4009,6 +4232,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListChannelPartnerLinksResponse> ListChannelPartnerLinksAsync(global::Google.Cloud.Channel.V1.ListChannelPartnerLinksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListChannelPartnerLinks, null, options, request);
@@ -4033,6 +4257,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ChannelPartnerLink GetChannelPartnerLink(global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetChannelPartnerLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4055,6 +4280,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ChannelPartnerLink GetChannelPartnerLink(global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetChannelPartnerLink, null, options, request);
@@ -4079,6 +4305,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerLink> GetChannelPartnerLinkAsync(global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetChannelPartnerLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4101,6 +4328,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerLink> GetChannelPartnerLinkAsync(global::Google.Cloud.Channel.V1.GetChannelPartnerLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetChannelPartnerLink, null, options, request);
@@ -4134,6 +4362,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ChannelPartnerLink CreateChannelPartnerLink(global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateChannelPartnerLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4165,6 +4394,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ChannelPartnerLink CreateChannelPartnerLink(global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateChannelPartnerLink, null, options, request);
@@ -4198,6 +4428,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerLink> CreateChannelPartnerLinkAsync(global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateChannelPartnerLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4229,6 +4460,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerLink> CreateChannelPartnerLinkAsync(global::Google.Cloud.Channel.V1.CreateChannelPartnerLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateChannelPartnerLink, null, options, request);
@@ -4261,6 +4493,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ChannelPartnerLink UpdateChannelPartnerLink(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateChannelPartnerLink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4291,6 +4524,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ChannelPartnerLink UpdateChannelPartnerLink(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateChannelPartnerLink, null, options, request);
@@ -4323,6 +4557,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerLink> UpdateChannelPartnerLinkAsync(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateChannelPartnerLinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4353,6 +4588,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ChannelPartnerLink> UpdateChannelPartnerLinkAsync(global::Google.Cloud.Channel.V1.UpdateChannelPartnerLinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateChannelPartnerLink, null, options, request);
@@ -4374,6 +4610,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Offer LookupOffer(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LookupOffer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4393,6 +4630,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.Offer LookupOffer(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LookupOffer, null, options, request);
@@ -4414,6 +4652,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Offer> LookupOfferAsync(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LookupOfferAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4433,6 +4672,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.Offer> LookupOfferAsync(global::Google.Cloud.Channel.V1.LookupOfferRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LookupOffer, null, options, request);
@@ -4449,6 +4689,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListProductsResponse ListProducts(global::Google.Cloud.Channel.V1.ListProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProducts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4463,6 +4704,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListProductsResponse ListProducts(global::Google.Cloud.Channel.V1.ListProductsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListProducts, null, options, request);
@@ -4479,6 +4721,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListProductsResponse> ListProductsAsync(global::Google.Cloud.Channel.V1.ListProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProductsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4493,6 +4736,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListProductsResponse> ListProductsAsync(global::Google.Cloud.Channel.V1.ListProductsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListProducts, null, options, request);
@@ -4509,6 +4753,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListSkusResponse ListSkus(global::Google.Cloud.Channel.V1.ListSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4523,6 +4768,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListSkusResponse ListSkus(global::Google.Cloud.Channel.V1.ListSkusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSkus, null, options, request);
@@ -4539,6 +4785,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkusResponse> ListSkusAsync(global::Google.Cloud.Channel.V1.ListSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4553,6 +4800,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSkusResponse> ListSkusAsync(global::Google.Cloud.Channel.V1.ListSkusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSkus, null, options, request);
@@ -4569,6 +4817,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListOffersResponse ListOffers(global::Google.Cloud.Channel.V1.ListOffersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOffers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4583,6 +4832,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListOffersResponse ListOffers(global::Google.Cloud.Channel.V1.ListOffersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListOffers, null, options, request);
@@ -4599,6 +4849,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListOffersResponse> ListOffersAsync(global::Google.Cloud.Channel.V1.ListOffersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOffersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4613,6 +4864,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListOffersResponse> ListOffersAsync(global::Google.Cloud.Channel.V1.ListOffersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOffers, null, options, request);
@@ -4633,6 +4885,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse ListPurchasableSkus(global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPurchasableSkus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4651,6 +4904,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse ListPurchasableSkus(global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListPurchasableSkus, null, options, request);
@@ -4671,6 +4925,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse> ListPurchasableSkusAsync(global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPurchasableSkusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4689,6 +4944,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListPurchasableSkusResponse> ListPurchasableSkusAsync(global::Google.Cloud.Channel.V1.ListPurchasableSkusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPurchasableSkus, null, options, request);
@@ -4709,6 +4965,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse ListPurchasableOffers(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPurchasableOffers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4727,6 +4984,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse ListPurchasableOffers(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListPurchasableOffers, null, options, request);
@@ -4747,6 +5005,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> ListPurchasableOffersAsync(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPurchasableOffersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4765,6 +5024,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListPurchasableOffersResponse> ListPurchasableOffersAsync(global::Google.Cloud.Channel.V1.ListPurchasableOffersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPurchasableOffers, null, options, request);
@@ -4793,6 +5053,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.RegisterSubscriberResponse RegisterSubscriber(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterSubscriber(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4819,6 +5080,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.RegisterSubscriberResponse RegisterSubscriber(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RegisterSubscriber, null, options, request);
@@ -4847,6 +5109,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> RegisterSubscriberAsync(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterSubscriberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4873,6 +5136,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.RegisterSubscriberResponse> RegisterSubscriberAsync(global::Google.Cloud.Channel.V1.RegisterSubscriberRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RegisterSubscriber, null, options, request);
@@ -4905,6 +5169,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse UnregisterSubscriber(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UnregisterSubscriber(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4935,6 +5200,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse UnregisterSubscriber(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UnregisterSubscriber, null, options, request);
@@ -4967,6 +5233,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> UnregisterSubscriberAsync(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UnregisterSubscriberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -4997,6 +5264,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.UnregisterSubscriberResponse> UnregisterSubscriberAsync(global::Google.Cloud.Channel.V1.UnregisterSubscriberRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UnregisterSubscriber, null, options, request);
@@ -5025,6 +5293,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListSubscribersResponse ListSubscribers(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSubscribers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -5051,6 +5320,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Channel.V1.ListSubscribersResponse ListSubscribers(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSubscribers, null, options, request);
@@ -5079,6 +5349,7 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSubscribersResponse> ListSubscribersAsync(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSubscribersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -5105,11 +5376,13 @@ namespace Google.Cloud.Channel.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Channel.V1.ListSubscribersResponse> ListSubscribersAsync(global::Google.Cloud.Channel.V1.ListSubscribersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSubscribers, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudChannelServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CloudChannelServiceClient(configuration);
@@ -5118,6 +5391,7 @@ namespace Google.Cloud.Channel.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CloudChannelServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -5162,6 +5436,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CloudChannelServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListCustomers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Channel.V1.ListCustomersRequest, global::Google.Cloud.Channel.V1.ListCustomersResponse>(serviceImpl.ListCustomers));

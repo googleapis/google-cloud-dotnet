@@ -30,6 +30,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
   {
     static readonly string __ServiceName = "google.api.servicemanagement.v1.ServiceManager";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.ServiceManagement.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,30 +63,54 @@ namespace Google.Cloud.ServiceManagement.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.ListServicesRequest> __Marshaller_google_api_servicemanagement_v1_ListServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.ListServicesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.ListServicesResponse> __Marshaller_google_api_servicemanagement_v1_ListServicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.ListServicesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.GetServiceRequest> __Marshaller_google_api_servicemanagement_v1_GetServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.GetServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.ManagedService> __Marshaller_google_api_servicemanagement_v1_ManagedService = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.ManagedService.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest> __Marshaller_google_api_servicemanagement_v1_CreateServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest> __Marshaller_google_api_servicemanagement_v1_DeleteServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest> __Marshaller_google_api_servicemanagement_v1_UndeleteServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest> __Marshaller_google_api_servicemanagement_v1_ListServiceConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse> __Marshaller_google_api_servicemanagement_v1_ListServiceConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest> __Marshaller_google_api_servicemanagement_v1_GetServiceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Api.Service> __Marshaller_google_api_Service = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.Service.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest> __Marshaller_google_api_servicemanagement_v1_CreateServiceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest> __Marshaller_google_api_servicemanagement_v1_SubmitConfigSourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest> __Marshaller_google_api_servicemanagement_v1_ListServiceRolloutsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse> __Marshaller_google_api_servicemanagement_v1_ListServiceRolloutsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest> __Marshaller_google_api_servicemanagement_v1_GetServiceRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.Rollout> __Marshaller_google_api_servicemanagement_v1_Rollout = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.Rollout.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest> __Marshaller_google_api_servicemanagement_v1_CreateServiceRolloutRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest> __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse> __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest> __Marshaller_google_api_servicemanagement_v1_EnableServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest> __Marshaller_google_api_servicemanagement_v1_DisableServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServicesRequest, global::Google.Cloud.ServiceManagement.V1.ListServicesResponse> __Method_ListServices = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServicesRequest, global::Google.Cloud.ServiceManagement.V1.ListServicesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +118,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_ListServicesRequest,
         __Marshaller_google_api_servicemanagement_v1_ListServicesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.GetServiceRequest, global::Google.Cloud.ServiceManagement.V1.ManagedService> __Method_GetService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.GetServiceRequest, global::Google.Cloud.ServiceManagement.V1.ManagedService>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +126,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_GetServiceRequest,
         __Marshaller_google_api_servicemanagement_v1_ManagedService);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest, global::Google.LongRunning.Operation> __Method_CreateService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -105,6 +134,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_CreateServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest, global::Google.LongRunning.Operation> __Method_DeleteService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -112,6 +142,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_DeleteServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest, global::Google.LongRunning.Operation> __Method_UndeleteService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -119,6 +150,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_UndeleteServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest, global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse> __Method_ListServiceConfigs = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest, global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -126,6 +158,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_ListServiceConfigsRequest,
         __Marshaller_google_api_servicemanagement_v1_ListServiceConfigsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest, global::Google.Api.Service> __Method_GetServiceConfig = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest, global::Google.Api.Service>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +166,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_GetServiceConfigRequest,
         __Marshaller_google_api_Service);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest, global::Google.Api.Service> __Method_CreateServiceConfig = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest, global::Google.Api.Service>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -140,6 +174,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_CreateServiceConfigRequest,
         __Marshaller_google_api_Service);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest, global::Google.LongRunning.Operation> __Method_SubmitConfigSource = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -147,6 +182,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_SubmitConfigSourceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest, global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse> __Method_ListServiceRollouts = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest, global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -154,6 +190,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_ListServiceRolloutsRequest,
         __Marshaller_google_api_servicemanagement_v1_ListServiceRolloutsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest, global::Google.Cloud.ServiceManagement.V1.Rollout> __Method_GetServiceRollout = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest, global::Google.Cloud.ServiceManagement.V1.Rollout>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -161,6 +198,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_GetServiceRolloutRequest,
         __Marshaller_google_api_servicemanagement_v1_Rollout);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest, global::Google.LongRunning.Operation> __Method_CreateServiceRollout = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -168,6 +206,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_CreateServiceRolloutRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest, global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse> __Method_GenerateConfigReport = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest, global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -175,6 +214,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportRequest,
         __Marshaller_google_api_servicemanagement_v1_GenerateConfigReportResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest, global::Google.LongRunning.Operation> __Method_EnableService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -182,6 +222,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
         __Marshaller_google_api_servicemanagement_v1_EnableServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest, global::Google.LongRunning.Operation> __Method_DisableService = new grpc::Method<global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -213,6 +254,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ServiceManagement.V1.ListServicesResponse> ListServices(global::Google.Cloud.ServiceManagement.V1.ListServicesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -225,6 +267,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ServiceManagement.V1.ManagedService> GetService(global::Google.Cloud.ServiceManagement.V1.GetServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -239,6 +282,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateService(global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -255,6 +299,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteService(global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -271,6 +316,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UndeleteService(global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -283,6 +329,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse> ListServiceConfigs(global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -294,6 +341,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.Service> GetServiceConfig(global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -312,6 +360,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.Service> CreateServiceConfig(global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -335,6 +384,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SubmitConfigSource(global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -347,6 +397,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse> ListServiceRollouts(global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -358,6 +409,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ServiceManagement.V1.Rollout> GetServiceRollout(global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -382,6 +434,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateServiceRollout(global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -403,6 +456,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse> GenerateConfigReport(global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -419,6 +473,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EnableService(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -434,6 +489,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisableService(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -446,20 +502,24 @@ namespace Google.Cloud.ServiceManagement.V1 {
     {
       /// <summary>Creates a new client for ServiceManager</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ServiceManagerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ServiceManager that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ServiceManagerClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ServiceManagerClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ServiceManagerClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -480,6 +540,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ListServicesResponse ListServices(global::Google.Cloud.ServiceManagement.V1.ListServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -498,6 +559,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ListServicesResponse ListServices(global::Google.Cloud.ServiceManagement.V1.ListServicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListServices, null, options, request);
@@ -518,6 +580,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ListServicesResponse> ListServicesAsync(global::Google.Cloud.ServiceManagement.V1.ListServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -536,6 +599,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ListServicesResponse> ListServicesAsync(global::Google.Cloud.ServiceManagement.V1.ListServicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListServices, null, options, request);
@@ -549,6 +613,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ManagedService GetService(global::Google.Cloud.ServiceManagement.V1.GetServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -560,6 +625,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ManagedService GetService(global::Google.Cloud.ServiceManagement.V1.GetServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetService, null, options, request);
@@ -573,6 +639,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ManagedService> GetServiceAsync(global::Google.Cloud.ServiceManagement.V1.GetServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -584,6 +651,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ManagedService> GetServiceAsync(global::Google.Cloud.ServiceManagement.V1.GetServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetService, null, options, request);
@@ -599,6 +667,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateService(global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -612,6 +681,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateService(global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateService, null, options, request);
@@ -627,6 +697,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateServiceAsync(global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -640,6 +711,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateServiceAsync(global::Google.Cloud.ServiceManagement.V1.CreateServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateService, null, options, request);
@@ -657,6 +729,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteService(global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -672,6 +745,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteService(global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteService, null, options, request);
@@ -689,6 +763,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteServiceAsync(global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -704,6 +779,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteServiceAsync(global::Google.Cloud.ServiceManagement.V1.DeleteServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteService, null, options, request);
@@ -721,6 +797,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UndeleteService(global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeleteService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -736,6 +813,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UndeleteService(global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UndeleteService, null, options, request);
@@ -753,6 +831,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeleteServiceAsync(global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeleteServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -768,6 +847,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeleteServiceAsync(global::Google.Cloud.ServiceManagement.V1.UndeleteServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeleteService, null, options, request);
@@ -781,6 +861,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse ListServiceConfigs(global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -792,6 +873,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse ListServiceConfigs(global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListServiceConfigs, null, options, request);
@@ -805,6 +887,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse> ListServiceConfigsAsync(global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -816,6 +899,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsResponse> ListServiceConfigsAsync(global::Google.Cloud.ServiceManagement.V1.ListServiceConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListServiceConfigs, null, options, request);
@@ -828,6 +912,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.Service GetServiceConfig(global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -838,6 +923,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.Service GetServiceConfig(global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetServiceConfig, null, options, request);
@@ -850,6 +936,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.Service> GetServiceConfigAsync(global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -860,6 +947,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.Service> GetServiceConfigAsync(global::Google.Cloud.ServiceManagement.V1.GetServiceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetServiceConfig, null, options, request);
@@ -879,6 +967,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.Service CreateServiceConfig(global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -896,6 +985,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.Service CreateServiceConfig(global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateServiceConfig, null, options, request);
@@ -915,6 +1005,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.Service> CreateServiceConfigAsync(global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -932,6 +1023,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.Service> CreateServiceConfigAsync(global::Google.Cloud.ServiceManagement.V1.CreateServiceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateServiceConfig, null, options, request);
@@ -956,6 +1048,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SubmitConfigSource(global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SubmitConfigSource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -978,6 +1071,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SubmitConfigSource(global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SubmitConfigSource, null, options, request);
@@ -1002,6 +1096,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SubmitConfigSourceAsync(global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SubmitConfigSourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1024,6 +1119,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SubmitConfigSourceAsync(global::Google.Cloud.ServiceManagement.V1.SubmitConfigSourceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SubmitConfigSource, null, options, request);
@@ -1037,6 +1133,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse ListServiceRollouts(global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceRollouts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1048,6 +1145,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse ListServiceRollouts(global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListServiceRollouts, null, options, request);
@@ -1061,6 +1159,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse> ListServiceRolloutsAsync(global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceRolloutsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1072,6 +1171,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsResponse> ListServiceRolloutsAsync(global::Google.Cloud.ServiceManagement.V1.ListServiceRolloutsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListServiceRollouts, null, options, request);
@@ -1084,6 +1184,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.Rollout GetServiceRollout(global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1094,6 +1195,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.Rollout GetServiceRollout(global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetServiceRollout, null, options, request);
@@ -1106,6 +1208,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.Rollout> GetServiceRolloutAsync(global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1116,6 +1219,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.Rollout> GetServiceRolloutAsync(global::Google.Cloud.ServiceManagement.V1.GetServiceRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetServiceRollout, null, options, request);
@@ -1141,6 +1245,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateServiceRollout(global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceRollout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1164,6 +1269,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateServiceRollout(global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateServiceRollout, null, options, request);
@@ -1189,6 +1295,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateServiceRolloutAsync(global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceRolloutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1212,6 +1319,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateServiceRolloutAsync(global::Google.Cloud.ServiceManagement.V1.CreateServiceRolloutRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateServiceRollout, null, options, request);
@@ -1234,6 +1342,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse GenerateConfigReport(global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateConfigReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1254,6 +1363,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse GenerateConfigReport(global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateConfigReport, null, options, request);
@@ -1276,6 +1386,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse> GenerateConfigReportAsync(global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateConfigReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1296,6 +1407,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportResponse> GenerateConfigReportAsync(global::Google.Cloud.ServiceManagement.V1.GenerateConfigReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateConfigReport, null, options, request);
@@ -1313,6 +1425,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation EnableService(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1328,6 +1441,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation EnableService(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_EnableService, null, options, request);
@@ -1345,6 +1459,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableServiceAsync(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1360,6 +1475,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableServiceAsync(global::Google.Cloud.ServiceManagement.V1.EnableServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_EnableService, null, options, request);
@@ -1376,6 +1492,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DisableService(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1390,6 +1507,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DisableService(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DisableService, null, options, request);
@@ -1406,6 +1524,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableServiceAsync(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1420,11 +1539,13 @@ namespace Google.Cloud.ServiceManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableServiceAsync(global::Google.Cloud.ServiceManagement.V1.DisableServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DisableService, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ServiceManagerClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ServiceManagerClient(configuration);
@@ -1433,6 +1554,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ServiceManagerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1457,6 +1579,7 @@ namespace Google.Cloud.ServiceManagement.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ServiceManagerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListServices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ServiceManagement.V1.ListServicesRequest, global::Google.Cloud.ServiceManagement.V1.ListServicesResponse>(serviceImpl.ListServices));

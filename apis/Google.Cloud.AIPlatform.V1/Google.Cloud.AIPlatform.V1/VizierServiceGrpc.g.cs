@@ -34,6 +34,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   {
     static readonly string __ServiceName = "google.cloud.aiplatform.v1.VizierService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -48,11 +49,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -64,29 +67,52 @@ namespace Google.Cloud.AIPlatform.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateStudyRequest> __Marshaller_google_cloud_aiplatform_v1_CreateStudyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateStudyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.Study> __Marshaller_google_cloud_aiplatform_v1_Study = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.Study.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetStudyRequest> __Marshaller_google_cloud_aiplatform_v1_GetStudyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetStudyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListStudiesRequest> __Marshaller_google_cloud_aiplatform_v1_ListStudiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListStudiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListStudiesResponse> __Marshaller_google_cloud_aiplatform_v1_ListStudiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListStudiesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteStudyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.LookupStudyRequest> __Marshaller_google_cloud_aiplatform_v1_LookupStudyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.LookupStudyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest> __Marshaller_google_cloud_aiplatform_v1_SuggestTrialsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CreateTrialRequest> __Marshaller_google_cloud_aiplatform_v1_CreateTrialRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CreateTrialRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.Trial> __Marshaller_google_cloud_aiplatform_v1_Trial = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.Trial.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.GetTrialRequest> __Marshaller_google_cloud_aiplatform_v1_GetTrialRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.GetTrialRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListTrialsRequest> __Marshaller_google_cloud_aiplatform_v1_ListTrialsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListTrialsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListTrialsResponse> __Marshaller_google_cloud_aiplatform_v1_ListTrialsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListTrialsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest> __Marshaller_google_cloud_aiplatform_v1_AddTrialMeasurementRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest> __Marshaller_google_cloud_aiplatform_v1_CompleteTrialRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest> __Marshaller_google_cloud_aiplatform_v1_DeleteTrialRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest> __Marshaller_google_cloud_aiplatform_v1_CheckTrialEarlyStoppingStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.StopTrialRequest> __Marshaller_google_cloud_aiplatform_v1_StopTrialRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.StopTrialRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest> __Marshaller_google_cloud_aiplatform_v1_ListOptimalTrialsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse> __Marshaller_google_cloud_aiplatform_v1_ListOptimalTrialsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateStudyRequest, global::Google.Cloud.AIPlatform.V1.Study> __Method_CreateStudy = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateStudyRequest, global::Google.Cloud.AIPlatform.V1.Study>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +120,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_CreateStudyRequest,
         __Marshaller_google_cloud_aiplatform_v1_Study);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.GetStudyRequest, global::Google.Cloud.AIPlatform.V1.Study> __Method_GetStudy = new grpc::Method<global::Google.Cloud.AIPlatform.V1.GetStudyRequest, global::Google.Cloud.AIPlatform.V1.Study>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_GetStudyRequest,
         __Marshaller_google_cloud_aiplatform_v1_Study);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListStudiesRequest, global::Google.Cloud.AIPlatform.V1.ListStudiesResponse> __Method_ListStudies = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListStudiesRequest, global::Google.Cloud.AIPlatform.V1.ListStudiesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +136,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_ListStudiesRequest,
         __Marshaller_google_cloud_aiplatform_v1_ListStudiesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteStudy = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +144,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_DeleteStudyRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.LookupStudyRequest, global::Google.Cloud.AIPlatform.V1.Study> __Method_LookupStudy = new grpc::Method<global::Google.Cloud.AIPlatform.V1.LookupStudyRequest, global::Google.Cloud.AIPlatform.V1.Study>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -122,6 +152,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_LookupStudyRequest,
         __Marshaller_google_cloud_aiplatform_v1_Study);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest, global::Google.LongRunning.Operation> __Method_SuggestTrials = new grpc::Method<global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -129,6 +160,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_SuggestTrialsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial> __Method_CreateTrial = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -136,6 +168,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_CreateTrialRequest,
         __Marshaller_google_cloud_aiplatform_v1_Trial);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.GetTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial> __Method_GetTrial = new grpc::Method<global::Google.Cloud.AIPlatform.V1.GetTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -143,6 +176,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_GetTrialRequest,
         __Marshaller_google_cloud_aiplatform_v1_Trial);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListTrialsRequest, global::Google.Cloud.AIPlatform.V1.ListTrialsResponse> __Method_ListTrials = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListTrialsRequest, global::Google.Cloud.AIPlatform.V1.ListTrialsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,6 +184,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_ListTrialsRequest,
         __Marshaller_google_cloud_aiplatform_v1_ListTrialsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest, global::Google.Cloud.AIPlatform.V1.Trial> __Method_AddTrialMeasurement = new grpc::Method<global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest, global::Google.Cloud.AIPlatform.V1.Trial>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -157,6 +192,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_AddTrialMeasurementRequest,
         __Marshaller_google_cloud_aiplatform_v1_Trial);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial> __Method_CompleteTrial = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -164,6 +200,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_CompleteTrialRequest,
         __Marshaller_google_cloud_aiplatform_v1_Trial);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTrial = new grpc::Method<global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -171,6 +208,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_DeleteTrialRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest, global::Google.LongRunning.Operation> __Method_CheckTrialEarlyStoppingState = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -178,6 +216,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_CheckTrialEarlyStoppingStateRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.StopTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial> __Method_StopTrial = new grpc::Method<global::Google.Cloud.AIPlatform.V1.StopTrialRequest, global::Google.Cloud.AIPlatform.V1.Trial>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -185,6 +224,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         __Marshaller_google_cloud_aiplatform_v1_StopTrialRequest,
         __Marshaller_google_cloud_aiplatform_v1_Trial);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest, global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse> __Method_ListOptimalTrials = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest, global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -209,6 +249,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Study> CreateStudy(global::Google.Cloud.AIPlatform.V1.CreateStudyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -220,6 +261,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Study> GetStudy(global::Google.Cloud.AIPlatform.V1.GetStudyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -231,6 +273,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListStudiesResponse> ListStudies(global::Google.Cloud.AIPlatform.V1.ListStudiesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -242,6 +285,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStudy(global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -254,6 +298,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Study> LookupStudy(global::Google.Cloud.AIPlatform.V1.LookupStudyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -269,6 +314,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SuggestTrials(global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -280,6 +326,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Trial> CreateTrial(global::Google.Cloud.AIPlatform.V1.CreateTrialRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -291,6 +338,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Trial> GetTrial(global::Google.Cloud.AIPlatform.V1.GetTrialRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -302,6 +350,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListTrialsResponse> ListTrials(global::Google.Cloud.AIPlatform.V1.ListTrialsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -314,6 +363,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Trial> AddTrialMeasurement(global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -325,6 +375,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Trial> CompleteTrial(global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -336,6 +387,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTrial(global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -350,6 +402,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CheckTrialEarlyStoppingState(global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -361,6 +414,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.Trial> StopTrial(global::Google.Cloud.AIPlatform.V1.StopTrialRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -375,6 +429,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse> ListOptimalTrials(global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -387,20 +442,24 @@ namespace Google.Cloud.AIPlatform.V1 {
     {
       /// <summary>Creates a new client for VizierService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public VizierServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for VizierService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public VizierServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected VizierServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected VizierServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -414,6 +473,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Study CreateStudy(global::Google.Cloud.AIPlatform.V1.CreateStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateStudy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -425,6 +485,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Study CreateStudy(global::Google.Cloud.AIPlatform.V1.CreateStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateStudy, null, options, request);
@@ -438,6 +499,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Study> CreateStudyAsync(global::Google.Cloud.AIPlatform.V1.CreateStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateStudyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -449,6 +511,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Study> CreateStudyAsync(global::Google.Cloud.AIPlatform.V1.CreateStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateStudy, null, options, request);
@@ -461,6 +524,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Study GetStudy(global::Google.Cloud.AIPlatform.V1.GetStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetStudy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -471,6 +535,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Study GetStudy(global::Google.Cloud.AIPlatform.V1.GetStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetStudy, null, options, request);
@@ -483,6 +548,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Study> GetStudyAsync(global::Google.Cloud.AIPlatform.V1.GetStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetStudyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -493,6 +559,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Study> GetStudyAsync(global::Google.Cloud.AIPlatform.V1.GetStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetStudy, null, options, request);
@@ -505,6 +572,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.ListStudiesResponse ListStudies(global::Google.Cloud.AIPlatform.V1.ListStudiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListStudies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -515,6 +583,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.ListStudiesResponse ListStudies(global::Google.Cloud.AIPlatform.V1.ListStudiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListStudies, null, options, request);
@@ -527,6 +596,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListStudiesResponse> ListStudiesAsync(global::Google.Cloud.AIPlatform.V1.ListStudiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListStudiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -537,6 +607,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListStudiesResponse> ListStudiesAsync(global::Google.Cloud.AIPlatform.V1.ListStudiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListStudies, null, options, request);
@@ -549,6 +620,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteStudy(global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteStudy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -559,6 +631,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteStudy(global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteStudy, null, options, request);
@@ -571,6 +644,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStudyAsync(global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteStudyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -581,6 +655,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStudyAsync(global::Google.Cloud.AIPlatform.V1.DeleteStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStudy, null, options, request);
@@ -594,6 +669,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Study LookupStudy(global::Google.Cloud.AIPlatform.V1.LookupStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LookupStudy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -605,6 +681,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Study LookupStudy(global::Google.Cloud.AIPlatform.V1.LookupStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LookupStudy, null, options, request);
@@ -618,6 +695,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Study> LookupStudyAsync(global::Google.Cloud.AIPlatform.V1.LookupStudyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LookupStudyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -629,6 +707,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Study> LookupStudyAsync(global::Google.Cloud.AIPlatform.V1.LookupStudyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LookupStudy, null, options, request);
@@ -645,6 +724,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SuggestTrials(global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SuggestTrials(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -659,6 +739,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SuggestTrials(global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SuggestTrials, null, options, request);
@@ -675,6 +756,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SuggestTrialsAsync(global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SuggestTrialsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -689,6 +771,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SuggestTrialsAsync(global::Google.Cloud.AIPlatform.V1.SuggestTrialsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SuggestTrials, null, options, request);
@@ -701,6 +784,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial CreateTrial(global::Google.Cloud.AIPlatform.V1.CreateTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTrial(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -711,6 +795,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial CreateTrial(global::Google.Cloud.AIPlatform.V1.CreateTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTrial, null, options, request);
@@ -723,6 +808,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> CreateTrialAsync(global::Google.Cloud.AIPlatform.V1.CreateTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTrialAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -733,6 +819,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> CreateTrialAsync(global::Google.Cloud.AIPlatform.V1.CreateTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTrial, null, options, request);
@@ -745,6 +832,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial GetTrial(global::Google.Cloud.AIPlatform.V1.GetTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTrial(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -755,6 +843,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial GetTrial(global::Google.Cloud.AIPlatform.V1.GetTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTrial, null, options, request);
@@ -767,6 +856,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> GetTrialAsync(global::Google.Cloud.AIPlatform.V1.GetTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTrialAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -777,6 +867,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> GetTrialAsync(global::Google.Cloud.AIPlatform.V1.GetTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTrial, null, options, request);
@@ -789,6 +880,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.ListTrialsResponse ListTrials(global::Google.Cloud.AIPlatform.V1.ListTrialsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTrials(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -799,6 +891,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.ListTrialsResponse ListTrials(global::Google.Cloud.AIPlatform.V1.ListTrialsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTrials, null, options, request);
@@ -811,6 +904,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListTrialsResponse> ListTrialsAsync(global::Google.Cloud.AIPlatform.V1.ListTrialsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTrialsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -821,6 +915,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListTrialsResponse> ListTrialsAsync(global::Google.Cloud.AIPlatform.V1.ListTrialsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTrials, null, options, request);
@@ -834,6 +929,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial AddTrialMeasurement(global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddTrialMeasurement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -845,6 +941,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial AddTrialMeasurement(global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AddTrialMeasurement, null, options, request);
@@ -858,6 +955,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> AddTrialMeasurementAsync(global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddTrialMeasurementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -869,6 +967,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> AddTrialMeasurementAsync(global::Google.Cloud.AIPlatform.V1.AddTrialMeasurementRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddTrialMeasurement, null, options, request);
@@ -881,6 +980,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial CompleteTrial(global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CompleteTrial(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -891,6 +991,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial CompleteTrial(global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CompleteTrial, null, options, request);
@@ -903,6 +1004,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> CompleteTrialAsync(global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CompleteTrialAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -913,6 +1015,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> CompleteTrialAsync(global::Google.Cloud.AIPlatform.V1.CompleteTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CompleteTrial, null, options, request);
@@ -925,6 +1028,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTrial(global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTrial(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -935,6 +1039,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTrial(global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTrial, null, options, request);
@@ -947,6 +1052,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTrialAsync(global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTrialAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -957,6 +1063,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTrialAsync(global::Google.Cloud.AIPlatform.V1.DeleteTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTrial, null, options, request);
@@ -972,6 +1079,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CheckTrialEarlyStoppingState(global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckTrialEarlyStoppingState(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -985,6 +1093,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CheckTrialEarlyStoppingState(global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckTrialEarlyStoppingState, null, options, request);
@@ -1000,6 +1109,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CheckTrialEarlyStoppingStateAsync(global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckTrialEarlyStoppingStateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1013,6 +1123,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CheckTrialEarlyStoppingStateAsync(global::Google.Cloud.AIPlatform.V1.CheckTrialEarlyStoppingStateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckTrialEarlyStoppingState, null, options, request);
@@ -1025,6 +1136,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial StopTrial(global::Google.Cloud.AIPlatform.V1.StopTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopTrial(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1035,6 +1147,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.Trial StopTrial(global::Google.Cloud.AIPlatform.V1.StopTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StopTrial, null, options, request);
@@ -1047,6 +1160,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> StopTrialAsync(global::Google.Cloud.AIPlatform.V1.StopTrialRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopTrialAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1057,6 +1171,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.Trial> StopTrialAsync(global::Google.Cloud.AIPlatform.V1.StopTrialRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StopTrial, null, options, request);
@@ -1072,6 +1187,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse ListOptimalTrials(global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOptimalTrials(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1085,6 +1201,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse ListOptimalTrials(global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListOptimalTrials, null, options, request);
@@ -1100,6 +1217,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse> ListOptimalTrialsAsync(global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOptimalTrialsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1113,11 +1231,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsResponse> ListOptimalTrialsAsync(global::Google.Cloud.AIPlatform.V1.ListOptimalTrialsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOptimalTrials, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VizierServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new VizierServiceClient(configuration);
@@ -1126,6 +1246,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(VizierServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1150,6 +1271,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, VizierServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateStudy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.CreateStudyRequest, global::Google.Cloud.AIPlatform.V1.Study>(serviceImpl.CreateStudy));

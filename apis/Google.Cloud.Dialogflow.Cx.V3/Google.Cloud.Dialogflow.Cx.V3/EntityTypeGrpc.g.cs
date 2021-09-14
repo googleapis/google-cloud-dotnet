@@ -30,6 +30,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.cx.v3.EntityTypes";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,15 +63,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest> __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse> __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest> __Marshaller_google_cloud_dialogflow_cx_v3_GetEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> __Marshaller_google_cloud_dialogflow_cx_v3_EntityType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.EntityType.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CreateEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest> __Marshaller_google_cloud_dialogflow_cx_v3_UpdateEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DeleteEntityTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse> __Method_ListEntityTypes = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +88,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_ListEntityTypesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType> __Method_GetEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +96,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_GetEntityTypeRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_EntityType);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType> __Method_CreateEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +104,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_CreateEntityTypeRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_EntityType);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType> __Method_UpdateEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest, global::Google.Cloud.Dialogflow.Cx.V3.EntityType>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +112,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_UpdateEntityTypeRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_EntityType);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteEntityType = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +136,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse> ListEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -131,6 +148,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> GetEntityType(global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -146,6 +164,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> CreateEntityType(global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -161,6 +180,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> UpdateEntityType(global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -176,6 +196,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntityType(global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -188,20 +209,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     {
       /// <summary>Creates a new client for EntityTypes</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public EntityTypesClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for EntityTypes that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public EntityTypesClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected EntityTypesClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected EntityTypesClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -214,6 +239,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse ListEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEntityTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -224,6 +250,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse ListEntityTypes(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListEntityTypes, null, options, request);
@@ -236,6 +263,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse> ListEntityTypesAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEntityTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -246,6 +274,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse> ListEntityTypesAsync(global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntityTypes, null, options, request);
@@ -258,6 +287,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.EntityType GetEntityType(global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -268,6 +298,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.EntityType GetEntityType(global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetEntityType, null, options, request);
@@ -280,6 +311,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> GetEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -290,6 +322,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> GetEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.GetEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetEntityType, null, options, request);
@@ -306,6 +339,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.EntityType CreateEntityType(global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -320,6 +354,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.EntityType CreateEntityType(global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEntityType, null, options, request);
@@ -336,6 +371,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> CreateEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -350,6 +386,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> CreateEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.CreateEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEntityType, null, options, request);
@@ -366,6 +403,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.EntityType UpdateEntityType(global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -380,6 +418,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.EntityType UpdateEntityType(global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEntityType, null, options, request);
@@ -396,6 +435,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> UpdateEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -410,6 +450,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.EntityType> UpdateEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.UpdateEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEntityType, null, options, request);
@@ -426,6 +467,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEntityType(global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteEntityType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -440,6 +482,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEntityType(global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEntityType, null, options, request);
@@ -456,6 +499,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteEntityTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -470,11 +514,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntityTypeAsync(global::Google.Cloud.Dialogflow.Cx.V3.DeleteEntityTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEntityType, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EntityTypesClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new EntityTypesClient(configuration);
@@ -483,6 +529,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(EntityTypesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -497,6 +544,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, EntityTypesBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListEntityTypes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListEntityTypesResponse>(serviceImpl.ListEntityTypes));

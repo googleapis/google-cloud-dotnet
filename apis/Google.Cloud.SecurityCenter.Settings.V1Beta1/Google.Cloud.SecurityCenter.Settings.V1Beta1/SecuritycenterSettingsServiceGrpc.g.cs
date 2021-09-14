@@ -35,6 +35,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.securitycenter.settings.v1beta1.SecurityCenterSettingsService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -49,11 +50,13 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -65,28 +68,50 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_GetServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ServiceAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_GetSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> __Marshaller_google_cloud_securitycenter_settings_v1beta1_Settings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_UpdateSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ResetSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchGetSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse> __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchGetSettingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_CalculateEffectiveSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchCalculateEffectiveSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse> __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchCalculateEffectiveSettingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_GetComponentSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ComponentSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_UpdateComponentSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ResetComponentSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_CalculateEffectiveComponentSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ListDetectorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ListDetectorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ListComponentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse> __Marshaller_google_cloud_securitycenter_settings_v1beta1_ListComponentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount> __Method_GetServiceAccount = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +119,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_GetServiceAccountRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ServiceAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> __Method_GetSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +127,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_GetSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_Settings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> __Method_UpdateSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +135,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_UpdateSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_Settings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ResetSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +143,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ResetSettingsRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse> __Method_BatchGetSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -122,6 +151,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchGetSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchGetSettingsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> __Method_CalculateEffectiveSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -129,6 +159,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_CalculateEffectiveSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_Settings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse> __Method_BatchCalculateEffectiveSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -136,6 +167,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchCalculateEffectiveSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_BatchCalculateEffectiveSettingsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> __Method_GetComponentSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -143,6 +175,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_GetComponentSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ComponentSettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> __Method_UpdateComponentSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,6 +183,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_UpdateComponentSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ComponentSettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ResetComponentSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -157,6 +191,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ResetComponentSettingsRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> __Method_CalculateEffectiveComponentSettings = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -164,6 +199,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_CalculateEffectiveComponentSettingsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ComponentSettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse> __Method_ListDetectors = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -171,6 +207,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ListDetectorsRequest,
         __Marshaller_google_cloud_securitycenter_settings_v1beta1_ListDetectorsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse> __Method_ListComponents = new grpc::Method<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -203,6 +240,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount> GetServiceAccount(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -214,6 +252,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> GetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -225,6 +264,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> UpdateSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -245,6 +285,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ResetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -256,6 +297,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse> BatchGetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -277,6 +319,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> CalculateEffectiveSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -288,6 +331,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse> BatchCalculateEffectiveSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -299,6 +343,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> GetComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -310,6 +355,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> UpdateComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -325,6 +371,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ResetComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -336,6 +383,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> CalculateEffectiveComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -347,6 +395,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse> ListDetectors(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -358,6 +407,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse> ListComponents(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -370,20 +420,24 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     {
       /// <summary>Creates a new client for SecurityCenterSettingsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SecurityCenterSettingsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SecurityCenterSettingsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SecurityCenterSettingsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SecurityCenterSettingsServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SecurityCenterSettingsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -405,6 +459,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount GetServiceAccount(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -424,6 +479,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount GetServiceAccount(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetServiceAccount, null, options, request);
@@ -445,6 +501,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount> GetServiceAccountAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -464,6 +521,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount> GetServiceAccountAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetServiceAccount, null, options, request);
@@ -476,6 +534,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings GetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -486,6 +545,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings GetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSettings, null, options, request);
@@ -498,6 +558,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> GetSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -508,6 +569,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> GetSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSettings, null, options, request);
@@ -520,6 +582,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings UpdateSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -530,6 +593,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings UpdateSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSettings, null, options, request);
@@ -542,6 +606,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> UpdateSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -552,6 +617,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> UpdateSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSettings, null, options, request);
@@ -573,6 +639,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -592,6 +659,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResetSettings, null, options, request);
@@ -613,6 +681,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResetSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -632,6 +701,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResetSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetSettings, null, options, request);
@@ -644,6 +714,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse BatchGetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -654,6 +725,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse BatchGetSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchGetSettings, null, options, request);
@@ -666,6 +738,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse> BatchGetSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -676,6 +749,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsResponse> BatchGetSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchGetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchGetSettings, null, options, request);
@@ -698,6 +772,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings CalculateEffectiveSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateEffectiveSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -718,6 +793,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings CalculateEffectiveSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CalculateEffectiveSettings, null, options, request);
@@ -740,6 +816,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> CalculateEffectiveSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateEffectiveSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -760,6 +837,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.Settings> CalculateEffectiveSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CalculateEffectiveSettings, null, options, request);
@@ -772,6 +850,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse BatchCalculateEffectiveSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchCalculateEffectiveSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -782,6 +861,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse BatchCalculateEffectiveSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCalculateEffectiveSettings, null, options, request);
@@ -794,6 +874,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse> BatchCalculateEffectiveSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchCalculateEffectiveSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -804,6 +885,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsResponse> BatchCalculateEffectiveSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.BatchCalculateEffectiveSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCalculateEffectiveSettings, null, options, request);
@@ -816,6 +898,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings GetComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetComponentSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -826,6 +909,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings GetComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetComponentSettings, null, options, request);
@@ -838,6 +922,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> GetComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetComponentSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -848,6 +933,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> GetComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetComponentSettings, null, options, request);
@@ -860,6 +946,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings UpdateComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateComponentSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -870,6 +957,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings UpdateComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateComponentSettings, null, options, request);
@@ -882,6 +970,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> UpdateComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateComponentSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -892,6 +981,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> UpdateComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.UpdateComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateComponentSettings, null, options, request);
@@ -908,6 +998,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResetComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetComponentSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -922,6 +1013,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResetComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResetComponentSettings, null, options, request);
@@ -938,6 +1030,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResetComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetComponentSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -952,6 +1045,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResetComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ResetComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetComponentSettings, null, options, request);
@@ -964,6 +1058,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings CalculateEffectiveComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateEffectiveComponentSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -974,6 +1069,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings CalculateEffectiveComponentSettings(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CalculateEffectiveComponentSettings, null, options, request);
@@ -986,6 +1082,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> CalculateEffectiveComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateEffectiveComponentSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -996,6 +1093,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ComponentSettings> CalculateEffectiveComponentSettingsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.CalculateEffectiveComponentSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CalculateEffectiveComponentSettings, null, options, request);
@@ -1008,6 +1106,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse ListDetectors(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDetectors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1018,6 +1117,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse ListDetectors(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDetectors, null, options, request);
@@ -1030,6 +1130,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse> ListDetectorsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDetectorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1040,6 +1141,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsResponse> ListDetectorsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListDetectorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDetectors, null, options, request);
@@ -1052,6 +1154,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse ListComponents(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListComponents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1062,6 +1165,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse ListComponents(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListComponents, null, options, request);
@@ -1074,6 +1178,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse> ListComponentsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListComponentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1084,11 +1189,13 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsResponse> ListComponentsAsync(global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ListComponentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListComponents, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecurityCenterSettingsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SecurityCenterSettingsServiceClient(configuration);
@@ -1097,6 +1204,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SecurityCenterSettingsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1119,6 +1227,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SecurityCenterSettingsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetServiceAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.Settings.V1Beta1.GetServiceAccountRequest, global::Google.Cloud.SecurityCenter.Settings.V1Beta1.ServiceAccount>(serviceImpl.GetServiceAccount));

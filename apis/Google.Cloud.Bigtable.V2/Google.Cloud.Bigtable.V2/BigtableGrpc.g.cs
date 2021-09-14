@@ -30,6 +30,7 @@ namespace Google.Cloud.Bigtable.V2 {
   {
     static readonly string __ServiceName = "google.bigtable.v2.Bigtable";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Bigtable.V2 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,19 +63,32 @@ namespace Google.Cloud.Bigtable.V2 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadRowsRequest> __Marshaller_google_bigtable_v2_ReadRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadRowsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> __Marshaller_google_bigtable_v2_ReadRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadRowsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest> __Marshaller_google_bigtable_v2_SampleRowKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> __Marshaller_google_bigtable_v2_SampleRowKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowRequest> __Marshaller_google_bigtable_v2_MutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowResponse> __Marshaller_google_bigtable_v2_MutateRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowsRequest> __Marshaller_google_bigtable_v2_MutateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> __Marshaller_google_bigtable_v2_MutateRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.MutateRowsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest> __Marshaller_google_bigtable_v2_CheckAndMutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> __Marshaller_google_bigtable_v2_CheckAndMutateRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest> __Marshaller_google_bigtable_v2_ReadModifyWriteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> __Marshaller_google_bigtable_v2_ReadModifyWriteRowResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse> __Method_ReadRows = new grpc::Method<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -80,6 +96,7 @@ namespace Google.Cloud.Bigtable.V2 {
         __Marshaller_google_bigtable_v2_ReadRowsRequest,
         __Marshaller_google_bigtable_v2_ReadRowsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest, global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> __Method_SampleRowKeys = new grpc::Method<global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest, global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -87,6 +104,7 @@ namespace Google.Cloud.Bigtable.V2 {
         __Marshaller_google_bigtable_v2_SampleRowKeysRequest,
         __Marshaller_google_bigtable_v2_SampleRowKeysResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.MutateRowRequest, global::Google.Cloud.Bigtable.V2.MutateRowResponse> __Method_MutateRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.MutateRowRequest, global::Google.Cloud.Bigtable.V2.MutateRowResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +112,7 @@ namespace Google.Cloud.Bigtable.V2 {
         __Marshaller_google_bigtable_v2_MutateRowRequest,
         __Marshaller_google_bigtable_v2_MutateRowResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.MutateRowsRequest, global::Google.Cloud.Bigtable.V2.MutateRowsResponse> __Method_MutateRows = new grpc::Method<global::Google.Cloud.Bigtable.V2.MutateRowsRequest, global::Google.Cloud.Bigtable.V2.MutateRowsResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -101,6 +120,7 @@ namespace Google.Cloud.Bigtable.V2 {
         __Marshaller_google_bigtable_v2_MutateRowsRequest,
         __Marshaller_google_bigtable_v2_MutateRowsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> __Method_CheckAndMutateRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest, global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +128,7 @@ namespace Google.Cloud.Bigtable.V2 {
         __Marshaller_google_bigtable_v2_CheckAndMutateRowRequest,
         __Marshaller_google_bigtable_v2_CheckAndMutateRowResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> __Method_ReadModifyWriteRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -136,6 +157,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task ReadRows(global::Google.Cloud.Bigtable.V2.ReadRowsRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -151,6 +173,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task SampleRowKeys(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -163,6 +186,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.MutateRowResponse> MutateRow(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -177,6 +201,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task MutateRows(global::Google.Cloud.Bigtable.V2.MutateRowsRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -188,6 +213,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -203,6 +229,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -215,20 +242,24 @@ namespace Google.Cloud.Bigtable.V2 {
     {
       /// <summary>Creates a new client for Bigtable</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public BigtableClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Bigtable that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public BigtableClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected BigtableClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected BigtableClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -245,6 +276,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> ReadRows(global::Google.Cloud.Bigtable.V2.ReadRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -259,6 +291,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.ReadRowsResponse> ReadRows(global::Google.Cloud.Bigtable.V2.ReadRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ReadRows, null, options, request);
@@ -274,6 +307,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> SampleRowKeys(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SampleRowKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -287,6 +321,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.SampleRowKeysResponse> SampleRowKeys(global::Google.Cloud.Bigtable.V2.SampleRowKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_SampleRowKeys, null, options, request);
@@ -300,6 +335,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.V2.MutateRowResponse MutateRow(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -311,6 +347,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.V2.MutateRowResponse MutateRow(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_MutateRow, null, options, request);
@@ -324,6 +361,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.MutateRowResponse> MutateRowAsync(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -335,6 +373,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.MutateRowResponse> MutateRowAsync(global::Google.Cloud.Bigtable.V2.MutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MutateRow, null, options, request);
@@ -349,6 +388,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> MutateRows(global::Google.Cloud.Bigtable.V2.MutateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -361,6 +401,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Bigtable.V2.MutateRowsResponse> MutateRows(global::Google.Cloud.Bigtable.V2.MutateRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_MutateRows, null, options, request);
@@ -373,6 +414,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAndMutateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -383,6 +425,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckAndMutateRow, null, options, request);
@@ -395,6 +438,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> CheckAndMutateRowAsync(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAndMutateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -405,6 +449,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.CheckAndMutateRowResponse> CheckAndMutateRowAsync(global::Google.Cloud.Bigtable.V2.CheckAndMutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckAndMutateRow, null, options, request);
@@ -421,6 +466,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadModifyWriteRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -435,6 +481,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReadModifyWriteRow, null, options, request);
@@ -451,6 +498,7 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadModifyWriteRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -465,11 +513,13 @@ namespace Google.Cloud.Bigtable.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReadModifyWriteRow, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BigtableClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new BigtableClient(configuration);
@@ -478,6 +528,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(BigtableBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -493,6 +544,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, BigtableBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ReadRows, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ReadRowsResponse>(serviceImpl.ReadRows));

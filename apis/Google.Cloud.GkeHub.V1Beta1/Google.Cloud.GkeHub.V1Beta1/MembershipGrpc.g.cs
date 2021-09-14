@@ -37,6 +37,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.gkehub.v1beta1.GkeHubMembershipService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -51,11 +52,13 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -67,21 +70,36 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest> __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_GetMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.Membership> __Marshaller_google_cloud_gkehub_v1beta1_Membership = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.Membership.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_CreateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_DeleteMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest> __Marshaller_google_cloud_gkehub_v1beta1_UpdateMembershipRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest> __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse> __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest> __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse> __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest> __Marshaller_google_cloud_gkehub_v1beta1_GenerateExclusivityManifestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse> __Marshaller_google_cloud_gkehub_v1beta1_GenerateExclusivityManifestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> __Method_ListMemberships = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -89,6 +107,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsRequest,
         __Marshaller_google_cloud_gkehub_v1beta1_ListMembershipsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest, global::Google.Cloud.GkeHub.V1Beta1.Membership> __Method_GetMembership = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest, global::Google.Cloud.GkeHub.V1Beta1.Membership>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -96,6 +115,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         __Marshaller_google_cloud_gkehub_v1beta1_GetMembershipRequest,
         __Marshaller_google_cloud_gkehub_v1beta1_Membership);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest, global::Google.LongRunning.Operation> __Method_CreateMembership = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -103,6 +123,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         __Marshaller_google_cloud_gkehub_v1beta1_CreateMembershipRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest, global::Google.LongRunning.Operation> __Method_DeleteMembership = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -110,6 +131,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         __Marshaller_google_cloud_gkehub_v1beta1_DeleteMembershipRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest, global::Google.LongRunning.Operation> __Method_UpdateMembership = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -117,6 +139,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         __Marshaller_google_cloud_gkehub_v1beta1_UpdateMembershipRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest, global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse> __Method_GenerateConnectManifest = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest, global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -124,6 +147,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestRequest,
         __Marshaller_google_cloud_gkehub_v1beta1_GenerateConnectManifestResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest, global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse> __Method_ValidateExclusivity = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest, global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -131,6 +155,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
         __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityRequest,
         __Marshaller_google_cloud_gkehub_v1beta1_ValidateExclusivityResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest, global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse> __Method_GenerateExclusivityManifest = new grpc::Method<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest, global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -154,6 +179,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> ListMemberships(global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -165,6 +191,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1Beta1.Membership> GetMembership(global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -180,6 +207,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateMembership(global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -195,6 +223,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteMembership(global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -206,6 +235,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateMembership(global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -220,6 +250,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse> GenerateConnectManifest(global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -232,6 +263,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse> ValidateExclusivity(global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -254,6 +286,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse> GenerateExclusivityManifest(global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -266,20 +299,24 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     {
       /// <summary>Creates a new client for GkeHubMembershipService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GkeHubMembershipServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for GkeHubMembershipService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GkeHubMembershipServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GkeHubMembershipServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GkeHubMembershipServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -292,6 +329,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse ListMemberships(global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMemberships(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -302,6 +340,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse ListMemberships(global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMemberships, null, options, request);
@@ -314,6 +353,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> ListMembershipsAsync(global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMembershipsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -324,6 +364,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse> ListMembershipsAsync(global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMemberships, null, options, request);
@@ -336,6 +377,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.Membership GetMembership(global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -346,6 +388,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.Membership GetMembership(global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMembership, null, options, request);
@@ -358,6 +401,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.Membership> GetMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -368,6 +412,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.Membership> GetMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.GetMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMembership, null, options, request);
@@ -384,6 +429,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateMembership(global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -398,6 +444,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateMembership(global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMembership, null, options, request);
@@ -414,6 +461,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -428,6 +476,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.CreateMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateMembership, null, options, request);
@@ -444,6 +493,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteMembership(global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -458,6 +508,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteMembership(global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteMembership, null, options, request);
@@ -474,6 +525,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -488,6 +540,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.DeleteMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMembership, null, options, request);
@@ -500,6 +553,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateMembership(global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMembership(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -510,6 +564,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateMembership(global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateMembership, null, options, request);
@@ -522,6 +577,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMembershipAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -532,6 +588,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMembershipAsync(global::Google.Cloud.GkeHub.V1Beta1.UpdateMembershipRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateMembership, null, options, request);
@@ -547,6 +604,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse GenerateConnectManifest(global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateConnectManifest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -560,6 +618,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse GenerateConnectManifest(global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateConnectManifest, null, options, request);
@@ -575,6 +634,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse> GenerateConnectManifestAsync(global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateConnectManifestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -588,6 +648,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestResponse> GenerateConnectManifestAsync(global::Google.Cloud.GkeHub.V1Beta1.GenerateConnectManifestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateConnectManifest, null, options, request);
@@ -601,6 +662,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse ValidateExclusivity(global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateExclusivity(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -612,6 +674,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse ValidateExclusivity(global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ValidateExclusivity, null, options, request);
@@ -625,6 +688,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse> ValidateExclusivityAsync(global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ValidateExclusivityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -636,6 +700,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityResponse> ValidateExclusivityAsync(global::Google.Cloud.GkeHub.V1Beta1.ValidateExclusivityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ValidateExclusivity, null, options, request);
@@ -659,6 +724,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse GenerateExclusivityManifest(global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateExclusivityManifest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -680,6 +746,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse GenerateExclusivityManifest(global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateExclusivityManifest, null, options, request);
@@ -703,6 +770,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse> GenerateExclusivityManifestAsync(global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateExclusivityManifestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -724,11 +792,13 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestResponse> GenerateExclusivityManifestAsync(global::Google.Cloud.GkeHub.V1Beta1.GenerateExclusivityManifestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateExclusivityManifest, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GkeHubMembershipServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new GkeHubMembershipServiceClient(configuration);
@@ -737,6 +807,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(GkeHubMembershipServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -754,6 +825,7 @@ namespace Google.Cloud.GkeHub.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GkeHubMembershipServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsRequest, global::Google.Cloud.GkeHub.V1Beta1.ListMembershipsResponse>(serviceImpl.ListMemberships));

@@ -32,6 +32,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   {
     static readonly string __ServiceName = "google.cloud.dialogflow.cx.v3.Sessions";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -46,11 +47,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,15 +65,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> __Marshaller_google_cloud_dialogflow_cx_v3_FulfillIntentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> __Method_DetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -78,6 +90,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_DetectIntentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> __Method_StreamingDetectIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -85,6 +98,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_StreamingDetectIntentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse> __Method_MatchIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +106,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentRequest,
         __Marshaller_google_cloud_dialogflow_cx_v3_MatchIntentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> __Method_FulfillIntent = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -122,6 +137,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> DetectIntent(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -140,6 +156,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamingDetectIntent(grpc::IAsyncStreamReader<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -152,6 +169,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse> MatchIntent(global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -165,6 +183,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> FulfillIntent(global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -177,20 +196,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     {
       /// <summary>Creates a new client for Sessions</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SessionsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Sessions that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SessionsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SessionsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SessionsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -210,6 +233,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse DetectIntent(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DetectIntent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -227,6 +251,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse DetectIntent(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DetectIntent, null, options, request);
@@ -246,6 +271,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> DetectIntentAsync(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DetectIntentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -263,6 +289,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse> DetectIntentAsync(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DetectIntent, null, options, request);
@@ -280,6 +307,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> StreamingDetectIntent(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamingDetectIntent(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -295,6 +323,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.StreamingDetectIntentResponse> StreamingDetectIntent(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingDetectIntent, null, options);
@@ -308,6 +337,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse MatchIntent(global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MatchIntent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -319,6 +349,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse MatchIntent(global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_MatchIntent, null, options, request);
@@ -332,6 +363,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse> MatchIntentAsync(global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MatchIntentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -343,6 +375,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentResponse> MatchIntentAsync(global::Google.Cloud.Dialogflow.Cx.V3.MatchIntentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MatchIntent, null, options, request);
@@ -357,6 +390,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse FulfillIntent(global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FulfillIntent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -369,6 +403,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse FulfillIntent(global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_FulfillIntent, null, options, request);
@@ -383,6 +418,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> FulfillIntentAsync(global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FulfillIntentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -395,11 +431,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentResponse> FulfillIntentAsync(global::Google.Cloud.Dialogflow.Cx.V3.FulfillIntentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FulfillIntent, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SessionsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SessionsClient(configuration);
@@ -408,6 +446,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SessionsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -421,6 +460,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SessionsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DetectIntent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest, global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse>(serviceImpl.DetectIntent));

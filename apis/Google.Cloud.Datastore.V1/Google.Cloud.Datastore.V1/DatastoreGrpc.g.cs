@@ -35,6 +35,7 @@ namespace Google.Cloud.Datastore.V1 {
   {
     static readonly string __ServiceName = "google.datastore.v1.Datastore";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -49,11 +50,13 @@ namespace Google.Cloud.Datastore.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -65,21 +68,36 @@ namespace Google.Cloud.Datastore.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.LookupRequest> __Marshaller_google_datastore_v1_LookupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.LookupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.LookupResponse> __Marshaller_google_datastore_v1_LookupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.LookupResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunQueryRequest> __Marshaller_google_datastore_v1_RunQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RunQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RunQueryResponse> __Marshaller_google_datastore_v1_RunQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RunQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionRequest> __Marshaller_google_datastore_v1_BeginTransactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.BeginTransactionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> __Marshaller_google_datastore_v1_BeginTransactionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.BeginTransactionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.CommitRequest> __Marshaller_google_datastore_v1_CommitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.CommitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.CommitResponse> __Marshaller_google_datastore_v1_CommitResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.CommitResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RollbackRequest> __Marshaller_google_datastore_v1_RollbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RollbackRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.RollbackResponse> __Marshaller_google_datastore_v1_RollbackResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.RollbackResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsRequest> __Marshaller_google_datastore_v1_AllocateIdsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.AllocateIdsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> __Marshaller_google_datastore_v1_AllocateIdsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.AllocateIdsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsRequest> __Marshaller_google_datastore_v1_ReserveIdsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.ReserveIdsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> __Marshaller_google_datastore_v1_ReserveIdsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastore.V1.ReserveIdsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse> __Method_Lookup = new grpc::Method<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -87,6 +105,7 @@ namespace Google.Cloud.Datastore.V1 {
         __Marshaller_google_datastore_v1_LookupRequest,
         __Marshaller_google_datastore_v1_LookupResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.RunQueryRequest, global::Google.Cloud.Datastore.V1.RunQueryResponse> __Method_RunQuery = new grpc::Method<global::Google.Cloud.Datastore.V1.RunQueryRequest, global::Google.Cloud.Datastore.V1.RunQueryResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +113,7 @@ namespace Google.Cloud.Datastore.V1 {
         __Marshaller_google_datastore_v1_RunQueryRequest,
         __Marshaller_google_datastore_v1_RunQueryResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.BeginTransactionRequest, global::Google.Cloud.Datastore.V1.BeginTransactionResponse> __Method_BeginTransaction = new grpc::Method<global::Google.Cloud.Datastore.V1.BeginTransactionRequest, global::Google.Cloud.Datastore.V1.BeginTransactionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +121,7 @@ namespace Google.Cloud.Datastore.V1 {
         __Marshaller_google_datastore_v1_BeginTransactionRequest,
         __Marshaller_google_datastore_v1_BeginTransactionResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.CommitRequest, global::Google.Cloud.Datastore.V1.CommitResponse> __Method_Commit = new grpc::Method<global::Google.Cloud.Datastore.V1.CommitRequest, global::Google.Cloud.Datastore.V1.CommitResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +129,7 @@ namespace Google.Cloud.Datastore.V1 {
         __Marshaller_google_datastore_v1_CommitRequest,
         __Marshaller_google_datastore_v1_CommitResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.RollbackRequest, global::Google.Cloud.Datastore.V1.RollbackResponse> __Method_Rollback = new grpc::Method<global::Google.Cloud.Datastore.V1.RollbackRequest, global::Google.Cloud.Datastore.V1.RollbackResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +137,7 @@ namespace Google.Cloud.Datastore.V1 {
         __Marshaller_google_datastore_v1_RollbackRequest,
         __Marshaller_google_datastore_v1_RollbackResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.AllocateIdsRequest, global::Google.Cloud.Datastore.V1.AllocateIdsResponse> __Method_AllocateIds = new grpc::Method<global::Google.Cloud.Datastore.V1.AllocateIdsRequest, global::Google.Cloud.Datastore.V1.AllocateIdsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -122,6 +145,7 @@ namespace Google.Cloud.Datastore.V1 {
         __Marshaller_google_datastore_v1_AllocateIdsRequest,
         __Marshaller_google_datastore_v1_AllocateIdsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastore.V1.ReserveIdsRequest, global::Google.Cloud.Datastore.V1.ReserveIdsResponse> __Method_ReserveIds = new grpc::Method<global::Google.Cloud.Datastore.V1.ReserveIdsRequest, global::Google.Cloud.Datastore.V1.ReserveIdsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -145,6 +169,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.LookupResponse> Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -156,6 +181,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -167,6 +193,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -179,6 +206,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.CommitResponse> Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -190,6 +218,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.RollbackResponse> Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -202,6 +231,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -214,6 +244,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -226,20 +257,24 @@ namespace Google.Cloud.Datastore.V1 {
     {
       /// <summary>Creates a new client for Datastore</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DatastoreClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Datastore that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DatastoreClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DatastoreClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DatastoreClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -252,6 +287,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.LookupResponse Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Lookup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -262,6 +298,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.LookupResponse Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Lookup, null, options, request);
@@ -274,6 +311,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.LookupResponse> LookupAsync(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LookupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -284,6 +322,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.LookupResponse> LookupAsync(global::Google.Cloud.Datastore.V1.LookupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Lookup, null, options, request);
@@ -296,6 +335,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.RunQueryResponse RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -306,6 +346,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.RunQueryResponse RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunQuery, null, options, request);
@@ -318,6 +359,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQueryAsync(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -328,6 +370,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQueryAsync(global::Google.Cloud.Datastore.V1.RunQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunQuery, null, options, request);
@@ -340,6 +383,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -350,6 +394,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BeginTransaction, null, options, request);
@@ -362,6 +407,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -372,6 +418,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BeginTransaction, null, options, request);
@@ -385,6 +432,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.CommitResponse Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Commit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -396,6 +444,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.CommitResponse Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Commit, null, options, request);
@@ -409,6 +458,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -420,6 +470,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Datastore.V1.CommitRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Commit, null, options, request);
@@ -432,6 +483,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.RollbackResponse Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Rollback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -442,6 +494,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.RollbackResponse Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Rollback, null, options, request);
@@ -454,6 +507,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RollbackResponse> RollbackAsync(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -464,6 +518,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RollbackResponse> RollbackAsync(global::Google.Cloud.Datastore.V1.RollbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Rollback, null, options, request);
@@ -477,6 +532,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.AllocateIdsResponse AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AllocateIds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -488,6 +544,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.AllocateIdsResponse AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AllocateIds, null, options, request);
@@ -501,6 +558,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIdsAsync(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AllocateIdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -512,6 +570,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIdsAsync(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AllocateIds, null, options, request);
@@ -525,6 +584,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.ReserveIdsResponse ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReserveIds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -536,6 +596,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastore.V1.ReserveIdsResponse ReserveIds(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReserveIds, null, options, request);
@@ -549,6 +610,7 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIdsAsync(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReserveIdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -560,11 +622,13 @@ namespace Google.Cloud.Datastore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastore.V1.ReserveIdsResponse> ReserveIdsAsync(global::Google.Cloud.Datastore.V1.ReserveIdsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReserveIds, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatastoreClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DatastoreClient(configuration);
@@ -573,6 +637,7 @@ namespace Google.Cloud.Datastore.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DatastoreBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -589,6 +654,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DatastoreBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Lookup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastore.V1.LookupRequest, global::Google.Cloud.Datastore.V1.LookupResponse>(serviceImpl.Lookup));

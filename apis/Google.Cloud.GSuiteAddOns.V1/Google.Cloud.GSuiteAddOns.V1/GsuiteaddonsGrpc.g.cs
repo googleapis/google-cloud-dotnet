@@ -57,6 +57,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   {
     static readonly string __ServiceName = "google.cloud.gsuiteaddons.v1.GSuiteAddOns";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -71,11 +72,13 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -87,21 +90,36 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetAuthorizationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.Authorization> __Marshaller_google_cloud_gsuiteaddons_v1_Authorization = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.Authorization.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_CreateDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.Deployment> __Marshaller_google_cloud_gsuiteaddons_v1_Deployment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.Deployment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_ReplaceDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest> __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse> __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_DeleteDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_InstallDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest> __Marshaller_google_cloud_gsuiteaddons_v1_UninstallDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest> __Marshaller_google_cloud_gsuiteaddons_v1_GetInstallStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> __Marshaller_google_cloud_gsuiteaddons_v1_InstallStatus = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.GSuiteAddOns.V1.InstallStatus.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest, global::Google.Cloud.GSuiteAddOns.V1.Authorization> __Method_GetAuthorization = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest, global::Google.Cloud.GSuiteAddOns.V1.Authorization>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -109,6 +127,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_GetAuthorizationRequest,
         __Marshaller_google_cloud_gsuiteaddons_v1_Authorization);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest, global::Google.Cloud.GSuiteAddOns.V1.Deployment> __Method_CreateDeployment = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest, global::Google.Cloud.GSuiteAddOns.V1.Deployment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -116,6 +135,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_CreateDeploymentRequest,
         __Marshaller_google_cloud_gsuiteaddons_v1_Deployment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest, global::Google.Cloud.GSuiteAddOns.V1.Deployment> __Method_ReplaceDeployment = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest, global::Google.Cloud.GSuiteAddOns.V1.Deployment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -123,6 +143,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_ReplaceDeploymentRequest,
         __Marshaller_google_cloud_gsuiteaddons_v1_Deployment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest, global::Google.Cloud.GSuiteAddOns.V1.Deployment> __Method_GetDeployment = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest, global::Google.Cloud.GSuiteAddOns.V1.Deployment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -130,6 +151,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_GetDeploymentRequest,
         __Marshaller_google_cloud_gsuiteaddons_v1_Deployment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest, global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse> __Method_ListDeployments = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest, global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +159,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsRequest,
         __Marshaller_google_cloud_gsuiteaddons_v1_ListDeploymentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDeployment = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -144,6 +167,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_DeleteDeploymentRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_InstallDeployment = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -151,6 +175,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_InstallDeploymentRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_UninstallDeployment = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -158,6 +183,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
         __Marshaller_google_cloud_gsuiteaddons_v1_UninstallDeploymentRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest, global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> __Method_GetInstallStatus = new grpc::Method<global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest, global::Google.Cloud.GSuiteAddOns.V1.InstallStatus>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -181,6 +207,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.Authorization> GetAuthorization(global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -192,6 +219,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.Deployment> CreateDeployment(global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -203,6 +231,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.Deployment> ReplaceDeployment(global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -214,6 +243,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.Deployment> GetDeployment(global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -225,6 +255,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse> ListDeployments(global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -236,6 +267,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeployment(global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -249,6 +281,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> InstallDeployment(global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -262,6 +295,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> UninstallDeployment(global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -273,6 +307,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> GetInstallStatus(global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -285,20 +320,24 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     {
       /// <summary>Creates a new client for GSuiteAddOns</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GSuiteAddOnsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for GSuiteAddOns that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public GSuiteAddOnsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GSuiteAddOnsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected GSuiteAddOnsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -311,6 +350,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Authorization GetAuthorization(global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAuthorization(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -321,6 +361,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Authorization GetAuthorization(global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAuthorization, null, options, request);
@@ -333,6 +374,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Authorization> GetAuthorizationAsync(global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAuthorizationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -343,6 +385,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Authorization> GetAuthorizationAsync(global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAuthorization, null, options, request);
@@ -355,6 +398,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Deployment CreateDeployment(global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -365,6 +409,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Deployment CreateDeployment(global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDeployment, null, options, request);
@@ -377,6 +422,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Deployment> CreateDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -387,6 +433,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Deployment> CreateDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.CreateDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDeployment, null, options, request);
@@ -399,6 +446,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Deployment ReplaceDeployment(global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReplaceDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -409,6 +457,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Deployment ReplaceDeployment(global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReplaceDeployment, null, options, request);
@@ -421,6 +470,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Deployment> ReplaceDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReplaceDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -431,6 +481,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Deployment> ReplaceDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.ReplaceDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReplaceDeployment, null, options, request);
@@ -443,6 +494,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Deployment GetDeployment(global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -453,6 +505,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.Deployment GetDeployment(global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDeployment, null, options, request);
@@ -465,6 +518,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Deployment> GetDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -475,6 +529,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.Deployment> GetDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.GetDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDeployment, null, options, request);
@@ -487,6 +542,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse ListDeployments(global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeployments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -497,6 +553,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse ListDeployments(global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeployments, null, options, request);
@@ -509,6 +566,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse> ListDeploymentsAsync(global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeploymentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -519,6 +577,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsResponse> ListDeploymentsAsync(global::Google.Cloud.GSuiteAddOns.V1.ListDeploymentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeployments, null, options, request);
@@ -531,6 +590,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeployment(global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -541,6 +601,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeployment(global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDeployment, null, options, request);
@@ -553,6 +614,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -563,6 +625,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.DeleteDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDeployment, null, options, request);
@@ -577,6 +640,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty InstallDeployment(global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InstallDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -589,6 +653,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty InstallDeployment(global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_InstallDeployment, null, options, request);
@@ -603,6 +668,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> InstallDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InstallDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -615,6 +681,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> InstallDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.InstallDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_InstallDeployment, null, options, request);
@@ -629,6 +696,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty UninstallDeployment(global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UninstallDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -641,6 +709,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty UninstallDeployment(global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UninstallDeployment, null, options, request);
@@ -655,6 +724,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UninstallDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UninstallDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -667,6 +737,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> UninstallDeploymentAsync(global::Google.Cloud.GSuiteAddOns.V1.UninstallDeploymentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UninstallDeployment, null, options, request);
@@ -679,6 +750,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.InstallStatus GetInstallStatus(global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstallStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -689,6 +761,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.GSuiteAddOns.V1.InstallStatus GetInstallStatus(global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstallStatus, null, options, request);
@@ -701,6 +774,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> GetInstallStatusAsync(global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstallStatusAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -711,11 +785,13 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.GSuiteAddOns.V1.InstallStatus> GetInstallStatusAsync(global::Google.Cloud.GSuiteAddOns.V1.GetInstallStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstallStatus, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override GSuiteAddOnsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new GSuiteAddOnsClient(configuration);
@@ -724,6 +800,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(GSuiteAddOnsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -742,6 +819,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GSuiteAddOnsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetAuthorization, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.GSuiteAddOns.V1.GetAuthorizationRequest, global::Google.Cloud.GSuiteAddOns.V1.Authorization>(serviceImpl.GetAuthorization));

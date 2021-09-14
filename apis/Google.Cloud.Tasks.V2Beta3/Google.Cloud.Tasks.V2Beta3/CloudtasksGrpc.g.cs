@@ -31,6 +31,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
   {
     static readonly string __ServiceName = "google.cloud.tasks.v2beta3.CloudTasks";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,30 +64,54 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest> __Marshaller_google_cloud_tasks_v2beta3_ListQueuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse> __Marshaller_google_cloud_tasks_v2beta3_ListQueuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest> __Marshaller_google_cloud_tasks_v2beta3_GetQueueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.Queue> __Marshaller_google_cloud_tasks_v2beta3_Queue = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.Queue.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest> __Marshaller_google_cloud_tasks_v2beta3_CreateQueueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest> __Marshaller_google_cloud_tasks_v2beta3_UpdateQueueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest> __Marshaller_google_cloud_tasks_v2beta3_DeleteQueueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest> __Marshaller_google_cloud_tasks_v2beta3_PurgeQueueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest> __Marshaller_google_cloud_tasks_v2beta3_PauseQueueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest> __Marshaller_google_cloud_tasks_v2beta3_ResumeQueueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest> __Marshaller_google_cloud_tasks_v2beta3_ListTasksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse> __Marshaller_google_cloud_tasks_v2beta3_ListTasksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_GetTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.Task> __Marshaller_google_cloud_tasks_v2beta3_Task = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.Task.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_CreateTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_DeleteTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest> __Marshaller_google_cloud_tasks_v2beta3_RunTaskRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse> __Method_ListQueues = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +119,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_ListQueuesRequest,
         __Marshaller_google_cloud_tasks_v2beta3_ListQueuesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue> __Method_GetQueue = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +127,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_GetQueueRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Queue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue> __Method_CreateQueue = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +135,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_CreateQueueRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Queue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue> __Method_UpdateQueue = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +143,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_UpdateQueueRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Queue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteQueue = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +151,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_DeleteQueueRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue> __Method_PurgeQueue = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -127,6 +159,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_PurgeQueueRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Queue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue> __Method_PauseQueue = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,6 +167,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_PauseQueueRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Queue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue> __Method_ResumeQueue = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest, global::Google.Cloud.Tasks.V2Beta3.Queue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +175,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_ResumeQueueRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Queue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -148,6 +183,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -155,6 +191,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -162,6 +199,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest, global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse> __Method_ListTasks = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest, global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,6 +207,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_ListTasksRequest,
         __Marshaller_google_cloud_tasks_v2beta3_ListTasksResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task> __Method_GetTask = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -176,6 +215,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_GetTaskRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Task);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task> __Method_CreateTask = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -183,6 +223,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_CreateTaskRequest,
         __Marshaller_google_cloud_tasks_v2beta3_Task);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTask = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -190,6 +231,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
         __Marshaller_google_cloud_tasks_v2beta3_DeleteTaskRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task> __Method_RunTask = new grpc::Method<global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest, global::Google.Cloud.Tasks.V2Beta3.Task>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -215,6 +257,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse> ListQueues(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -226,6 +269,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Queue> GetQueue(global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -248,6 +292,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Queue> CreateQueue(global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -273,6 +318,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Queue> UpdateQueue(global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -296,6 +342,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueue(global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -312,6 +359,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Queue> PurgeQueue(global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -329,6 +377,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Queue> PauseQueue(global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -352,6 +401,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Queue> ResumeQueue(global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -371,6 +421,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -392,6 +443,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -409,6 +461,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -428,6 +481,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse> ListTasks(global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -439,6 +493,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Task> GetTask(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -454,6 +509,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Task> CreateTask(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -469,6 +525,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTask(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -503,6 +560,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tasks.V2Beta3.Task> RunTask(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -515,20 +573,24 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     {
       /// <summary>Creates a new client for CloudTasks</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudTasksClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudTasks that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudTasksClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudTasksClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudTasksClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -543,6 +605,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse ListQueues(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListQueues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -555,6 +618,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse ListQueues(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListQueues, null, options, request);
@@ -569,6 +633,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse> ListQueuesAsync(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListQueuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -581,6 +646,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse> ListQueuesAsync(global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListQueues, null, options, request);
@@ -593,6 +659,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue GetQueue(global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -603,6 +670,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue GetQueue(global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetQueue, null, options, request);
@@ -615,6 +683,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> GetQueueAsync(global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -625,6 +694,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> GetQueueAsync(global::Google.Cloud.Tasks.V2Beta3.GetQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetQueue, null, options, request);
@@ -648,6 +718,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue CreateQueue(global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -669,6 +740,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue CreateQueue(global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateQueue, null, options, request);
@@ -692,6 +764,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> CreateQueueAsync(global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -713,6 +786,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> CreateQueueAsync(global::Google.Cloud.Tasks.V2Beta3.CreateQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateQueue, null, options, request);
@@ -739,6 +813,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue UpdateQueue(global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -763,6 +838,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue UpdateQueue(global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateQueue, null, options, request);
@@ -789,6 +865,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> UpdateQueueAsync(global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -813,6 +890,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> UpdateQueueAsync(global::Google.Cloud.Tasks.V2Beta3.UpdateQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateQueue, null, options, request);
@@ -837,6 +915,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQueue(global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -859,6 +938,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteQueue(global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteQueue, null, options, request);
@@ -883,6 +963,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueueAsync(global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -905,6 +986,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteQueueAsync(global::Google.Cloud.Tasks.V2Beta3.DeleteQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteQueue, null, options, request);
@@ -922,6 +1004,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue PurgeQueue(global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PurgeQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -937,6 +1020,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue PurgeQueue(global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PurgeQueue, null, options, request);
@@ -954,6 +1038,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> PurgeQueueAsync(global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PurgeQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -969,6 +1054,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> PurgeQueueAsync(global::Google.Cloud.Tasks.V2Beta3.PurgeQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PurgeQueue, null, options, request);
@@ -987,6 +1073,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue PauseQueue(global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1003,6 +1090,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue PauseQueue(global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PauseQueue, null, options, request);
@@ -1021,6 +1109,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> PauseQueueAsync(global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1037,6 +1126,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> PauseQueueAsync(global::Google.Cloud.Tasks.V2Beta3.PauseQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PauseQueue, null, options, request);
@@ -1061,6 +1151,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue ResumeQueue(global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeQueue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1083,6 +1174,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Queue ResumeQueue(global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResumeQueue, null, options, request);
@@ -1107,6 +1199,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> ResumeQueueAsync(global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeQueueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1129,6 +1222,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Queue> ResumeQueueAsync(global::Google.Cloud.Tasks.V2Beta3.ResumeQueueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResumeQueue, null, options, request);
@@ -1149,6 +1243,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1167,6 +1262,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1187,6 +1283,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1205,6 +1302,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1227,6 +1325,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1247,6 +1346,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1269,6 +1369,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1289,6 +1390,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1307,6 +1409,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1323,6 +1426,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1341,6 +1445,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1357,6 +1462,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1377,6 +1483,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse ListTasks(global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTasks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1395,6 +1502,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse ListTasks(global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTasks, null, options, request);
@@ -1415,6 +1523,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse> ListTasksAsync(global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTasksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1433,6 +1542,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.ListTasksResponse> ListTasksAsync(global::Google.Cloud.Tasks.V2Beta3.ListTasksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTasks, null, options, request);
@@ -1445,6 +1555,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Task GetTask(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1455,6 +1566,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Task GetTask(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTask, null, options, request);
@@ -1467,6 +1579,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Task> GetTaskAsync(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1477,6 +1590,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Task> GetTaskAsync(global::Google.Cloud.Tasks.V2Beta3.GetTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTask, null, options, request);
@@ -1493,6 +1607,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Task CreateTask(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1507,6 +1622,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Task CreateTask(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTask, null, options, request);
@@ -1523,6 +1639,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Task> CreateTaskAsync(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1537,6 +1654,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Task> CreateTaskAsync(global::Google.Cloud.Tasks.V2Beta3.CreateTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTask, null, options, request);
@@ -1553,6 +1671,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTask(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1567,6 +1686,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTask(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTask, null, options, request);
@@ -1583,6 +1703,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTaskAsync(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1597,6 +1718,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTaskAsync(global::Google.Cloud.Tasks.V2Beta3.DeleteTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTask, null, options, request);
@@ -1632,6 +1754,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Task RunTask(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunTask(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1665,6 +1788,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tasks.V2Beta3.Task RunTask(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunTask, null, options, request);
@@ -1700,6 +1824,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Task> RunTaskAsync(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunTaskAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1733,11 +1858,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tasks.V2Beta3.Task> RunTaskAsync(global::Google.Cloud.Tasks.V2Beta3.RunTaskRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunTask, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudTasksClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CloudTasksClient(configuration);
@@ -1746,6 +1873,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CloudTasksBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1771,6 +1899,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CloudTasksBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListQueues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tasks.V2Beta3.ListQueuesRequest, global::Google.Cloud.Tasks.V2Beta3.ListQueuesResponse>(serviceImpl.ListQueues));

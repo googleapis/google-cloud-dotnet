@@ -31,6 +31,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.recaptchaenterprise.v1beta1.RecaptchaEnterpriseServiceV1Beta1";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,19 +64,32 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_CreateAssessmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Assessment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_CreateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Key = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_ListKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_ListKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_GetKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_UpdateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1beta1_DeleteKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> __Method_CreateAssessment = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -81,6 +97,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_CreateAssessmentRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Assessment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> __Method_AnnotateAssessment = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -88,6 +105,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_AnnotateAssessmentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> __Method_CreateKey = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -95,6 +113,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_CreateKeyRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Key);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse> __Method_ListKeys = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -102,6 +121,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_ListKeysRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_ListKeysResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> __Method_GetKey = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -109,6 +129,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_GetKeyRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Key);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> __Method_UpdateKey = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -116,6 +137,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_UpdateKeyRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1beta1_Key);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteKey = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -139,6 +161,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> CreateAssessment(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -151,6 +174,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> AnnotateAssessment(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -162,6 +186,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> CreateKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -173,6 +198,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse> ListKeys(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -184,6 +210,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> GetKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -195,6 +222,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> UpdateKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -206,6 +234,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -218,20 +247,24 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     {
       /// <summary>Creates a new client for RecaptchaEnterpriseServiceV1Beta1</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public RecaptchaEnterpriseServiceV1Beta1Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for RecaptchaEnterpriseServiceV1Beta1 that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public RecaptchaEnterpriseServiceV1Beta1Client(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected RecaptchaEnterpriseServiceV1Beta1Client() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected RecaptchaEnterpriseServiceV1Beta1Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -244,6 +277,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment CreateAssessment(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAssessment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -254,6 +288,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment CreateAssessment(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAssessment, null, options, request);
@@ -266,6 +301,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> CreateAssessmentAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAssessmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -276,6 +312,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment> CreateAssessmentAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAssessment, null, options, request);
@@ -289,6 +326,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse AnnotateAssessment(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateAssessment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -300,6 +338,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse AnnotateAssessment(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnnotateAssessment, null, options, request);
@@ -313,6 +352,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> AnnotateAssessmentAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateAssessmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -324,6 +364,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentResponse> AnnotateAssessmentAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.AnnotateAssessmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnnotateAssessment, null, options, request);
@@ -336,6 +377,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key CreateKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -346,6 +388,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key CreateKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateKey, null, options, request);
@@ -358,6 +401,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> CreateKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -368,6 +412,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> CreateKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateKey, null, options, request);
@@ -380,6 +425,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse ListKeys(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -390,6 +436,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse ListKeys(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListKeys, null, options, request);
@@ -402,6 +449,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse> ListKeysAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -412,6 +460,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysResponse> ListKeysAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.ListKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListKeys, null, options, request);
@@ -424,6 +473,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key GetKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -434,6 +484,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key GetKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetKey, null, options, request);
@@ -446,6 +497,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> GetKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -456,6 +508,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> GetKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.GetKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetKey, null, options, request);
@@ -468,6 +521,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key UpdateKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -478,6 +532,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key UpdateKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateKey, null, options, request);
@@ -490,6 +545,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> UpdateKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -500,6 +556,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Key> UpdateKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.UpdateKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateKey, null, options, request);
@@ -512,6 +569,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -522,6 +580,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteKey(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteKey, null, options, request);
@@ -534,6 +593,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -544,11 +604,13 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1Beta1.DeleteKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteKey, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RecaptchaEnterpriseServiceV1Beta1Client NewInstance(ClientBaseConfiguration configuration)
       {
         return new RecaptchaEnterpriseServiceV1Beta1Client(configuration);
@@ -557,6 +619,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(RecaptchaEnterpriseServiceV1Beta1Base serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -573,6 +636,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, RecaptchaEnterpriseServiceV1Beta1Base serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateAssessment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1Beta1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1Beta1.Assessment>(serviceImpl.CreateAssessment));

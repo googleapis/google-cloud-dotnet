@@ -30,6 +30,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
   {
     static readonly string __ServiceName = "google.cloud.contactcenterinsights.v1.ContactCenterInsights";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,50 +63,94 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Marshaller_google_cloud_contactcenterinsights_v1_Conversation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Conversation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListConversationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListConversationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateAnalysisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetAnalysisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Analysis> __Marshaller_google_cloud_contactcenterinsights_v1_Analysis = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Analysis.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteAnalysisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ExportInsightsDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.IssueModel> __Marshaller_google_cloud_contactcenterinsights_v1_IssueModel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.IssueModel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListIssueModelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListIssueModelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeployIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UndeployIssueModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Issue> __Marshaller_google_cloud_contactcenterinsights_v1_Issue = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Issue.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListIssuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListIssuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateIssueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CalculateIssueModelStatsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_CalculateIssueModelStatsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreatePhraseMatcherRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> __Marshaller_google_cloud_contactcenterinsights_v1_PhraseMatcher = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetPhraseMatcherRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListPhraseMatchersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListPhraseMatchersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeletePhraseMatcherRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CalculateStatsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_CalculateStatsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Settings> __Marshaller_google_cloud_contactcenterinsights_v1_Settings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Settings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Method_CreateConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -111,6 +158,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_CreateConversationRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Conversation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Method_UpdateConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -118,6 +166,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_UpdateConversationRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Conversation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Method_GetConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -125,6 +174,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_GetConversationRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Conversation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse> __Method_ListConversations = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -132,6 +182,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_ListConversationsRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_ListConversationsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -139,6 +190,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_DeleteConversationRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest, global::Google.LongRunning.Operation> __Method_CreateAnalysis = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -146,6 +198,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_CreateAnalysisRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest, global::Google.Cloud.ContactCenterInsights.V1.Analysis> __Method_GetAnalysis = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest, global::Google.Cloud.ContactCenterInsights.V1.Analysis>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -153,6 +206,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_GetAnalysisRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Analysis);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse> __Method_ListAnalyses = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -160,6 +214,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysesRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_ListAnalysesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAnalysis = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -167,6 +222,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_DeleteAnalysisRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest, global::Google.LongRunning.Operation> __Method_ExportInsightsData = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -174,6 +230,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_ExportInsightsDataRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest, global::Google.LongRunning.Operation> __Method_CreateIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -181,6 +238,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_CreateIssueModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest, global::Google.Cloud.ContactCenterInsights.V1.IssueModel> __Method_UpdateIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest, global::Google.Cloud.ContactCenterInsights.V1.IssueModel>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -188,6 +246,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_UpdateIssueModelRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_IssueModel);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest, global::Google.Cloud.ContactCenterInsights.V1.IssueModel> __Method_GetIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest, global::Google.Cloud.ContactCenterInsights.V1.IssueModel>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -195,6 +254,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_GetIssueModelRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_IssueModel);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse> __Method_ListIssueModels = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -202,6 +262,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_ListIssueModelsRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_ListIssueModelsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest, global::Google.LongRunning.Operation> __Method_DeleteIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -209,6 +270,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_DeleteIssueModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest, global::Google.LongRunning.Operation> __Method_DeployIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -216,6 +278,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_DeployIssueModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest, global::Google.LongRunning.Operation> __Method_UndeployIssueModel = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -223,6 +286,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_UndeployIssueModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue> __Method_GetIssue = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -230,6 +294,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_GetIssueRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Issue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse> __Method_ListIssues = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest, global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -237,6 +302,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_ListIssuesRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_ListIssuesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue> __Method_UpdateIssue = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest, global::Google.Cloud.ContactCenterInsights.V1.Issue>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -244,6 +310,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_UpdateIssueRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Issue);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest, global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse> __Method_CalculateIssueModelStats = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest, global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -251,6 +318,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_CalculateIssueModelStatsRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_CalculateIssueModelStatsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest, global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> __Method_CreatePhraseMatcher = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest, global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -258,6 +326,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_CreatePhraseMatcherRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_PhraseMatcher);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest, global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> __Method_GetPhraseMatcher = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest, global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -265,6 +334,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_GetPhraseMatcherRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_PhraseMatcher);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest, global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse> __Method_ListPhraseMatchers = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest, global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -272,6 +342,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_ListPhraseMatchersRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_ListPhraseMatchersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePhraseMatcher = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -279,6 +350,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_DeletePhraseMatcherRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest, global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse> __Method_CalculateStats = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest, global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -286,6 +358,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_CalculateStatsRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_CalculateStatsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings> __Method_GetSettings = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -293,6 +366,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         __Marshaller_google_cloud_contactcenterinsights_v1_GetSettingsRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Settings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings> __Method_UpdateSettings = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -316,6 +390,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Conversation> CreateConversation(global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -327,6 +402,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Conversation> UpdateConversation(global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -338,6 +414,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Conversation> GetConversation(global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -349,6 +426,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse> ListConversations(global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -360,6 +438,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversation(global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -372,6 +451,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAnalysis(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -383,6 +463,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Analysis> GetAnalysis(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -394,6 +475,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse> ListAnalyses(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -405,6 +487,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnalysis(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -416,6 +499,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportInsightsData(global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -427,6 +511,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateIssueModel(global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -438,6 +523,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.IssueModel> UpdateIssueModel(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -449,6 +535,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.IssueModel> GetIssueModel(global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -460,6 +547,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse> ListIssueModels(global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -471,6 +559,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteIssueModel(global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -483,6 +572,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeployIssueModel(global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -495,6 +585,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UndeployIssueModel(global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -506,6 +597,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Issue> GetIssue(global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -517,6 +609,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse> ListIssues(global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -528,6 +621,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Issue> UpdateIssue(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -539,6 +633,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse> CalculateIssueModelStats(global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -550,6 +645,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> CreatePhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -561,6 +657,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> GetPhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -572,6 +669,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse> ListPhraseMatchers(global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -583,6 +681,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -594,6 +693,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse> CalculateStats(global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -605,6 +705,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Settings> GetSettings(global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -616,6 +717,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Settings> UpdateSettings(global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -628,20 +730,24 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     {
       /// <summary>Creates a new client for ContactCenterInsights</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ContactCenterInsightsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ContactCenterInsights that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ContactCenterInsightsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ContactCenterInsightsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ContactCenterInsightsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -654,6 +760,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Conversation CreateConversation(global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -664,6 +771,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Conversation CreateConversation(global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateConversation, null, options, request);
@@ -676,6 +784,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Conversation> CreateConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -686,6 +795,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Conversation> CreateConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConversation, null, options, request);
@@ -698,6 +808,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Conversation UpdateConversation(global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -708,6 +819,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Conversation UpdateConversation(global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateConversation, null, options, request);
@@ -720,6 +832,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Conversation> UpdateConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -730,6 +843,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Conversation> UpdateConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateConversation, null, options, request);
@@ -742,6 +856,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Conversation GetConversation(global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -752,6 +867,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Conversation GetConversation(global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetConversation, null, options, request);
@@ -764,6 +880,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Conversation> GetConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -774,6 +891,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Conversation> GetConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.GetConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConversation, null, options, request);
@@ -786,6 +904,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse ListConversations(global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConversations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -796,6 +915,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse ListConversations(global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListConversations, null, options, request);
@@ -808,6 +928,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse> ListConversationsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConversationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -818,6 +939,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListConversationsResponse> ListConversationsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListConversationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConversations, null, options, request);
@@ -830,6 +952,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversation(global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConversation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -840,6 +963,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteConversation(global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteConversation, null, options, request);
@@ -852,6 +976,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConversationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -862,6 +987,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteConversationAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteConversationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConversation, null, options, request);
@@ -875,6 +1001,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAnalysis(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAnalysis(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -886,6 +1013,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateAnalysis(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAnalysis, null, options, request);
@@ -899,6 +1027,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAnalysisAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAnalysisAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -910,6 +1039,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAnalysisAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateAnalysisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAnalysis, null, options, request);
@@ -922,6 +1052,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Analysis GetAnalysis(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnalysis(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -932,6 +1063,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Analysis GetAnalysis(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAnalysis, null, options, request);
@@ -944,6 +1076,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Analysis> GetAnalysisAsync(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnalysisAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -954,6 +1087,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Analysis> GetAnalysisAsync(global::Google.Cloud.ContactCenterInsights.V1.GetAnalysisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAnalysis, null, options, request);
@@ -966,6 +1100,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse ListAnalyses(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAnalyses(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -976,6 +1111,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse ListAnalyses(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAnalyses, null, options, request);
@@ -988,6 +1124,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse> ListAnalysesAsync(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAnalysesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -998,6 +1135,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesResponse> ListAnalysesAsync(global::Google.Cloud.ContactCenterInsights.V1.ListAnalysesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAnalyses, null, options, request);
@@ -1010,6 +1148,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnalysis(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAnalysis(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1020,6 +1159,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnalysis(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAnalysis, null, options, request);
@@ -1032,6 +1172,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnalysisAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAnalysisAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1042,6 +1183,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnalysisAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteAnalysisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAnalysis, null, options, request);
@@ -1054,6 +1196,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportInsightsData(global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportInsightsData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1064,6 +1207,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportInsightsData(global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExportInsightsData, null, options, request);
@@ -1076,6 +1220,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportInsightsDataAsync(global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportInsightsDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1086,6 +1231,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportInsightsDataAsync(global::Google.Cloud.ContactCenterInsights.V1.ExportInsightsDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportInsightsData, null, options, request);
@@ -1098,6 +1244,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateIssueModel(global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1108,6 +1255,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateIssueModel(global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateIssueModel, null, options, request);
@@ -1120,6 +1268,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1130,6 +1279,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateIssueModel, null, options, request);
@@ -1142,6 +1292,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.IssueModel UpdateIssueModel(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1152,6 +1303,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.IssueModel UpdateIssueModel(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateIssueModel, null, options, request);
@@ -1164,6 +1316,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.IssueModel> UpdateIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1174,6 +1327,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.IssueModel> UpdateIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIssueModel, null, options, request);
@@ -1186,6 +1340,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.IssueModel GetIssueModel(global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1196,6 +1351,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.IssueModel GetIssueModel(global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIssueModel, null, options, request);
@@ -1208,6 +1364,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.IssueModel> GetIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1218,6 +1375,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.IssueModel> GetIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.GetIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIssueModel, null, options, request);
@@ -1230,6 +1388,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse ListIssueModels(global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIssueModels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1240,6 +1399,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse ListIssueModels(global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListIssueModels, null, options, request);
@@ -1252,6 +1412,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse> ListIssueModelsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIssueModelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1262,6 +1423,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsResponse> ListIssueModelsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListIssueModelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListIssueModels, null, options, request);
@@ -1274,6 +1436,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteIssueModel(global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1284,6 +1447,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteIssueModel(global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteIssueModel, null, options, request);
@@ -1296,6 +1460,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1306,6 +1471,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteIssueModel, null, options, request);
@@ -1319,6 +1485,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeployIssueModel(global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeployIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1330,6 +1497,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeployIssueModel(global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeployIssueModel, null, options, request);
@@ -1343,6 +1511,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeployIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeployIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1354,6 +1523,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeployIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.DeployIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeployIssueModel, null, options, request);
@@ -1367,6 +1537,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UndeployIssueModel(global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeployIssueModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1378,6 +1549,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UndeployIssueModel(global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UndeployIssueModel, null, options, request);
@@ -1391,6 +1563,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeployIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeployIssueModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1402,6 +1575,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeployIssueModelAsync(global::Google.Cloud.ContactCenterInsights.V1.UndeployIssueModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeployIssueModel, null, options, request);
@@ -1414,6 +1588,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Issue GetIssue(global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1424,6 +1599,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Issue GetIssue(global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIssue, null, options, request);
@@ -1436,6 +1612,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Issue> GetIssueAsync(global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1446,6 +1623,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Issue> GetIssueAsync(global::Google.Cloud.ContactCenterInsights.V1.GetIssueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIssue, null, options, request);
@@ -1458,6 +1636,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse ListIssues(global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIssues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1468,6 +1647,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse ListIssues(global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListIssues, null, options, request);
@@ -1480,6 +1660,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse> ListIssuesAsync(global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIssuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1490,6 +1671,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListIssuesResponse> ListIssuesAsync(global::Google.Cloud.ContactCenterInsights.V1.ListIssuesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListIssues, null, options, request);
@@ -1502,6 +1684,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Issue UpdateIssue(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIssue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1512,6 +1695,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Issue UpdateIssue(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateIssue, null, options, request);
@@ -1524,6 +1708,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Issue> UpdateIssueAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIssueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1534,6 +1719,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Issue> UpdateIssueAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateIssueRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIssue, null, options, request);
@@ -1546,6 +1732,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse CalculateIssueModelStats(global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateIssueModelStats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1556,6 +1743,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse CalculateIssueModelStats(global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CalculateIssueModelStats, null, options, request);
@@ -1568,6 +1756,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse> CalculateIssueModelStatsAsync(global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateIssueModelStatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1578,6 +1767,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsResponse> CalculateIssueModelStatsAsync(global::Google.Cloud.ContactCenterInsights.V1.CalculateIssueModelStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CalculateIssueModelStats, null, options, request);
@@ -1590,6 +1780,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher CreatePhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePhraseMatcher(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1600,6 +1791,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher CreatePhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePhraseMatcher, null, options, request);
@@ -1612,6 +1804,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> CreatePhraseMatcherAsync(global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePhraseMatcherAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1622,6 +1815,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> CreatePhraseMatcherAsync(global::Google.Cloud.ContactCenterInsights.V1.CreatePhraseMatcherRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePhraseMatcher, null, options, request);
@@ -1634,6 +1828,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher GetPhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPhraseMatcher(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1644,6 +1839,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher GetPhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetPhraseMatcher, null, options, request);
@@ -1656,6 +1852,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> GetPhraseMatcherAsync(global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPhraseMatcherAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1666,6 +1863,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher> GetPhraseMatcherAsync(global::Google.Cloud.ContactCenterInsights.V1.GetPhraseMatcherRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPhraseMatcher, null, options, request);
@@ -1678,6 +1876,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse ListPhraseMatchers(global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPhraseMatchers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1688,6 +1887,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse ListPhraseMatchers(global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListPhraseMatchers, null, options, request);
@@ -1700,6 +1900,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse> ListPhraseMatchersAsync(global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPhraseMatchersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1710,6 +1911,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersResponse> ListPhraseMatchersAsync(global::Google.Cloud.ContactCenterInsights.V1.ListPhraseMatchersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPhraseMatchers, null, options, request);
@@ -1722,6 +1924,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePhraseMatcher(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1732,6 +1935,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePhraseMatcher(global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePhraseMatcher, null, options, request);
@@ -1744,6 +1948,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePhraseMatcherAsync(global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePhraseMatcherAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1754,6 +1959,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePhraseMatcherAsync(global::Google.Cloud.ContactCenterInsights.V1.DeletePhraseMatcherRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePhraseMatcher, null, options, request);
@@ -1766,6 +1972,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse CalculateStats(global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateStats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1776,6 +1983,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse CalculateStats(global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CalculateStats, null, options, request);
@@ -1788,6 +1996,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse> CalculateStatsAsync(global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CalculateStatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1798,6 +2007,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse> CalculateStatsAsync(global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CalculateStats, null, options, request);
@@ -1810,6 +2020,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Settings GetSettings(global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1820,6 +2031,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Settings GetSettings(global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSettings, null, options, request);
@@ -1832,6 +2044,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Settings> GetSettingsAsync(global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1842,6 +2055,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Settings> GetSettingsAsync(global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSettings, null, options, request);
@@ -1854,6 +2068,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Settings UpdateSettings(global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1864,6 +2079,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ContactCenterInsights.V1.Settings UpdateSettings(global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSettings, null, options, request);
@@ -1876,6 +2092,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Settings> UpdateSettingsAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1886,11 +2103,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.Settings> UpdateSettingsAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSettings, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ContactCenterInsightsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ContactCenterInsightsClient(configuration);
@@ -1899,6 +2118,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ContactCenterInsightsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1936,6 +2156,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ContactCenterInsightsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(serviceImpl.CreateConversation));

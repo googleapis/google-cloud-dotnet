@@ -37,6 +37,7 @@ namespace Google.Cloud.Firestore.V1 {
   {
     static readonly string __ServiceName = "google.firestore.v1.Firestore";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -51,11 +52,13 @@ namespace Google.Cloud.Firestore.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -67,34 +70,62 @@ namespace Google.Cloud.Firestore.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.GetDocumentRequest> __Marshaller_google_firestore_v1_GetDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.GetDocumentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.Document> __Marshaller_google_firestore_v1_Document = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.Document.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsRequest> __Marshaller_google_firestore_v1_ListDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ListDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> __Marshaller_google_firestore_v1_ListDocumentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ListDocumentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest> __Marshaller_google_firestore_v1_UpdateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.UpdateDocumentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest> __Marshaller_google_firestore_v1_DeleteDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.DeleteDocumentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest> __Marshaller_google_firestore_v1_BatchGetDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> __Marshaller_google_firestore_v1_BatchGetDocumentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BeginTransactionRequest> __Marshaller_google_firestore_v1_BeginTransactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.BeginTransactionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BeginTransactionResponse> __Marshaller_google_firestore_v1_BeginTransactionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.BeginTransactionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CommitRequest> __Marshaller_google_firestore_v1_CommitRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.CommitRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CommitResponse> __Marshaller_google_firestore_v1_CommitResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.CommitResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RollbackRequest> __Marshaller_google_firestore_v1_RollbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.RollbackRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunQueryRequest> __Marshaller_google_firestore_v1_RunQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.RunQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.RunQueryResponse> __Marshaller_google_firestore_v1_RunQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.RunQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.PartitionQueryRequest> __Marshaller_google_firestore_v1_PartitionQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.PartitionQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.PartitionQueryResponse> __Marshaller_google_firestore_v1_PartitionQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.PartitionQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.WriteRequest> __Marshaller_google_firestore_v1_WriteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.WriteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.WriteResponse> __Marshaller_google_firestore_v1_WriteResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.WriteResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListenRequest> __Marshaller_google_firestore_v1_ListenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ListenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListenResponse> __Marshaller_google_firestore_v1_ListenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ListenResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest> __Marshaller_google_firestore_v1_ListCollectionIdsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> __Marshaller_google_firestore_v1_ListCollectionIdsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchWriteRequest> __Marshaller_google_firestore_v1_BatchWriteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.BatchWriteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.BatchWriteResponse> __Marshaller_google_firestore_v1_BatchWriteResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.BatchWriteResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.V1.CreateDocumentRequest> __Marshaller_google_firestore_v1_CreateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.V1.CreateDocumentRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_GetDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -102,6 +133,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_GetDocumentRequest,
         __Marshaller_google_firestore_v1_Document);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.ListDocumentsRequest, global::Google.Cloud.Firestore.V1.ListDocumentsResponse> __Method_ListDocuments = new grpc::Method<global::Google.Cloud.Firestore.V1.ListDocumentsRequest, global::Google.Cloud.Firestore.V1.ListDocumentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -109,6 +141,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_ListDocumentsRequest,
         __Marshaller_google_firestore_v1_ListDocumentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_UpdateDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.UpdateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -116,6 +149,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_UpdateDocumentRequest,
         __Marshaller_google_firestore_v1_Document);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.DeleteDocumentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -123,6 +157,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_DeleteDocumentRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest, global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> __Method_BatchGetDocuments = new grpc::Method<global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest, global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -130,6 +165,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_BatchGetDocumentsRequest,
         __Marshaller_google_firestore_v1_BatchGetDocumentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.BeginTransactionRequest, global::Google.Cloud.Firestore.V1.BeginTransactionResponse> __Method_BeginTransaction = new grpc::Method<global::Google.Cloud.Firestore.V1.BeginTransactionRequest, global::Google.Cloud.Firestore.V1.BeginTransactionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +173,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_BeginTransactionRequest,
         __Marshaller_google_firestore_v1_BeginTransactionResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.CommitRequest, global::Google.Cloud.Firestore.V1.CommitResponse> __Method_Commit = new grpc::Method<global::Google.Cloud.Firestore.V1.CommitRequest, global::Google.Cloud.Firestore.V1.CommitResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -144,6 +181,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_CommitRequest,
         __Marshaller_google_firestore_v1_CommitResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_Rollback = new grpc::Method<global::Google.Cloud.Firestore.V1.RollbackRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -151,6 +189,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_RollbackRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.RunQueryRequest, global::Google.Cloud.Firestore.V1.RunQueryResponse> __Method_RunQuery = new grpc::Method<global::Google.Cloud.Firestore.V1.RunQueryRequest, global::Google.Cloud.Firestore.V1.RunQueryResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -158,6 +197,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_RunQueryRequest,
         __Marshaller_google_firestore_v1_RunQueryResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.PartitionQueryRequest, global::Google.Cloud.Firestore.V1.PartitionQueryResponse> __Method_PartitionQuery = new grpc::Method<global::Google.Cloud.Firestore.V1.PartitionQueryRequest, global::Google.Cloud.Firestore.V1.PartitionQueryResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -165,6 +205,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_PartitionQueryRequest,
         __Marshaller_google_firestore_v1_PartitionQueryResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse> __Method_Write = new grpc::Method<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -172,6 +213,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_WriteRequest,
         __Marshaller_google_firestore_v1_WriteResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse> __Method_Listen = new grpc::Method<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -179,6 +221,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_ListenRequest,
         __Marshaller_google_firestore_v1_ListenResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest, global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> __Method_ListCollectionIds = new grpc::Method<global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest, global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -186,6 +229,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_ListCollectionIdsRequest,
         __Marshaller_google_firestore_v1_ListCollectionIdsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.BatchWriteRequest, global::Google.Cloud.Firestore.V1.BatchWriteResponse> __Method_BatchWrite = new grpc::Method<global::Google.Cloud.Firestore.V1.BatchWriteRequest, global::Google.Cloud.Firestore.V1.BatchWriteResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -193,6 +237,7 @@ namespace Google.Cloud.Firestore.V1 {
         __Marshaller_google_firestore_v1_BatchWriteRequest,
         __Marshaller_google_firestore_v1_BatchWriteResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document> __Method_CreateDocument = new grpc::Method<global::Google.Cloud.Firestore.V1.CreateDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -216,6 +261,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.Document> GetDocument(global::Google.Cloud.Firestore.V1.GetDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -227,6 +273,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> ListDocuments(global::Google.Cloud.Firestore.V1.ListDocumentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -238,6 +285,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.Document> UpdateDocument(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -249,6 +297,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDocument(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -264,6 +313,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task BatchGetDocuments(global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -275,6 +325,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.BeginTransactionResponse> BeginTransaction(global::Google.Cloud.Firestore.V1.BeginTransactionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -286,6 +337,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.CommitResponse> Commit(global::Google.Cloud.Firestore.V1.CommitRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -297,6 +349,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Rollback(global::Google.Cloud.Firestore.V1.RollbackRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -309,6 +362,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task RunQuery(global::Google.Cloud.Firestore.V1.RunQueryRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Firestore.V1.RunQueryResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -322,6 +376,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.PartitionQueryResponse> PartitionQuery(global::Google.Cloud.Firestore.V1.PartitionQueryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -334,6 +389,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task Write(grpc::IAsyncStreamReader<global::Google.Cloud.Firestore.V1.WriteRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Firestore.V1.WriteResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -346,6 +402,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task Listen(grpc::IAsyncStreamReader<global::Google.Cloud.Firestore.V1.ListenRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Firestore.V1.ListenResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -357,6 +414,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> ListCollectionIds(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -376,6 +434,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.BatchWriteResponse> BatchWrite(global::Google.Cloud.Firestore.V1.BatchWriteRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -387,6 +446,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.V1.Document> CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -399,20 +459,24 @@ namespace Google.Cloud.Firestore.V1 {
     {
       /// <summary>Creates a new client for Firestore</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public FirestoreClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Firestore that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public FirestoreClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected FirestoreClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected FirestoreClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -425,6 +489,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.Document GetDocument(global::Google.Cloud.Firestore.V1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -435,6 +500,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.Document GetDocument(global::Google.Cloud.Firestore.V1.GetDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDocument, null, options, request);
@@ -447,6 +513,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> GetDocumentAsync(global::Google.Cloud.Firestore.V1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -457,6 +524,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> GetDocumentAsync(global::Google.Cloud.Firestore.V1.GetDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDocument, null, options, request);
@@ -469,6 +537,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.ListDocumentsResponse ListDocuments(global::Google.Cloud.Firestore.V1.ListDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -479,6 +548,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.ListDocumentsResponse ListDocuments(global::Google.Cloud.Firestore.V1.ListDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDocuments, null, options, request);
@@ -491,6 +561,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> ListDocumentsAsync(global::Google.Cloud.Firestore.V1.ListDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -501,6 +572,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.ListDocumentsResponse> ListDocumentsAsync(global::Google.Cloud.Firestore.V1.ListDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDocuments, null, options, request);
@@ -513,6 +585,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.Document UpdateDocument(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -523,6 +596,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.Document UpdateDocument(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDocument, null, options, request);
@@ -535,6 +609,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> UpdateDocumentAsync(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -545,6 +620,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> UpdateDocumentAsync(global::Google.Cloud.Firestore.V1.UpdateDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDocument, null, options, request);
@@ -557,6 +633,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDocument(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -567,6 +644,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDocument(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDocument, null, options, request);
@@ -579,6 +657,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDocumentAsync(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -589,6 +668,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDocumentAsync(global::Google.Cloud.Firestore.V1.DeleteDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDocument, null, options, request);
@@ -604,6 +684,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> BatchGetDocuments(global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -617,6 +698,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1.BatchGetDocumentsResponse> BatchGetDocuments(global::Google.Cloud.Firestore.V1.BatchGetDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_BatchGetDocuments, null, options, request);
@@ -629,6 +711,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Firestore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -639,6 +722,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Firestore.V1.BeginTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BeginTransaction, null, options, request);
@@ -651,6 +735,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Firestore.V1.BeginTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BeginTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -661,6 +746,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Firestore.V1.BeginTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BeginTransaction, null, options, request);
@@ -673,6 +759,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.CommitResponse Commit(global::Google.Cloud.Firestore.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Commit(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -683,6 +770,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.CommitResponse Commit(global::Google.Cloud.Firestore.V1.CommitRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Commit, null, options, request);
@@ -695,6 +783,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Firestore.V1.CommitRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -705,6 +794,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Firestore.V1.CommitRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Commit, null, options, request);
@@ -717,6 +807,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Firestore.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Rollback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -727,6 +818,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Firestore.V1.RollbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Rollback, null, options, request);
@@ -739,6 +831,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Firestore.V1.RollbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RollbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -749,6 +842,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Firestore.V1.RollbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Rollback, null, options, request);
@@ -761,6 +855,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1.RunQueryResponse> RunQuery(global::Google.Cloud.Firestore.V1.RunQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -771,6 +866,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Firestore.V1.RunQueryResponse> RunQuery(global::Google.Cloud.Firestore.V1.RunQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_RunQuery, null, options, request);
@@ -785,6 +881,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.PartitionQueryResponse PartitionQuery(global::Google.Cloud.Firestore.V1.PartitionQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -797,6 +894,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.PartitionQueryResponse PartitionQuery(global::Google.Cloud.Firestore.V1.PartitionQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PartitionQuery, null, options, request);
@@ -811,6 +909,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.PartitionQueryResponse> PartitionQueryAsync(global::Google.Cloud.Firestore.V1.PartitionQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PartitionQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -823,6 +922,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.PartitionQueryResponse> PartitionQueryAsync(global::Google.Cloud.Firestore.V1.PartitionQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PartitionQuery, null, options, request);
@@ -834,6 +934,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse> Write(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Write(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -843,6 +944,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1.WriteRequest, global::Google.Cloud.Firestore.V1.WriteResponse> Write(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_Write, null, options);
@@ -854,6 +956,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse> Listen(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Listen(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -863,6 +966,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Firestore.V1.ListenRequest, global::Google.Cloud.Firestore.V1.ListenResponse> Listen(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_Listen, null, options);
@@ -875,6 +979,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse ListCollectionIds(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCollectionIds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -885,6 +990,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse ListCollectionIds(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCollectionIds, null, options, request);
@@ -897,6 +1003,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> ListCollectionIdsAsync(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCollectionIdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -907,6 +1014,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.ListCollectionIdsResponse> ListCollectionIdsAsync(global::Google.Cloud.Firestore.V1.ListCollectionIdsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCollectionIds, null, options, request);
@@ -927,6 +1035,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.BatchWriteResponse BatchWrite(global::Google.Cloud.Firestore.V1.BatchWriteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchWrite(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -945,6 +1054,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.BatchWriteResponse BatchWrite(global::Google.Cloud.Firestore.V1.BatchWriteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchWrite, null, options, request);
@@ -965,6 +1075,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.BatchWriteResponse> BatchWriteAsync(global::Google.Cloud.Firestore.V1.BatchWriteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchWriteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -983,6 +1094,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.BatchWriteResponse> BatchWriteAsync(global::Google.Cloud.Firestore.V1.BatchWriteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchWrite, null, options, request);
@@ -995,6 +1107,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.Document CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1005,6 +1118,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Firestore.V1.Document CreateDocument(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDocument, null, options, request);
@@ -1017,6 +1131,7 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1027,11 +1142,13 @@ namespace Google.Cloud.Firestore.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.V1.Document> CreateDocumentAsync(global::Google.Cloud.Firestore.V1.CreateDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDocument, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FirestoreClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new FirestoreClient(configuration);
@@ -1040,6 +1157,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(FirestoreBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1064,6 +1182,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, FirestoreBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.V1.GetDocumentRequest, global::Google.Cloud.Firestore.V1.Document>(serviceImpl.GetDocument));

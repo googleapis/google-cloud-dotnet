@@ -31,6 +31,7 @@ namespace Google.Cloud.Dataproc.V1 {
   {
     static readonly string __ServiceName = "google.cloud.dataproc.v1.WorkflowTemplateService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Dataproc.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,18 +64,30 @@ namespace Google.Cloud.Dataproc.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_CreateWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> __Marshaller_google_cloud_dataproc_v1_WorkflowTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.WorkflowTemplate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_GetWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_InstantiateWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_InstantiateInlineWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_UpdateWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest> __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse> __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest> __Marshaller_google_cloud_dataproc_v1_DeleteWorkflowTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate> __Method_CreateWorkflowTemplate = new grpc::Method<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -80,6 +95,7 @@ namespace Google.Cloud.Dataproc.V1 {
         __Marshaller_google_cloud_dataproc_v1_CreateWorkflowTemplateRequest,
         __Marshaller_google_cloud_dataproc_v1_WorkflowTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate> __Method_GetWorkflowTemplate = new grpc::Method<global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -87,6 +103,7 @@ namespace Google.Cloud.Dataproc.V1 {
         __Marshaller_google_cloud_dataproc_v1_GetWorkflowTemplateRequest,
         __Marshaller_google_cloud_dataproc_v1_WorkflowTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest, global::Google.LongRunning.Operation> __Method_InstantiateWorkflowTemplate = new grpc::Method<global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +111,7 @@ namespace Google.Cloud.Dataproc.V1 {
         __Marshaller_google_cloud_dataproc_v1_InstantiateWorkflowTemplateRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest, global::Google.LongRunning.Operation> __Method_InstantiateInlineWorkflowTemplate = new grpc::Method<global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +119,7 @@ namespace Google.Cloud.Dataproc.V1 {
         __Marshaller_google_cloud_dataproc_v1_InstantiateInlineWorkflowTemplateRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate> __Method_UpdateWorkflowTemplate = new grpc::Method<global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +127,7 @@ namespace Google.Cloud.Dataproc.V1 {
         __Marshaller_google_cloud_dataproc_v1_UpdateWorkflowTemplateRequest,
         __Marshaller_google_cloud_dataproc_v1_WorkflowTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest, global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse> __Method_ListWorkflowTemplates = new grpc::Method<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest, global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +135,7 @@ namespace Google.Cloud.Dataproc.V1 {
         __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesRequest,
         __Marshaller_google_cloud_dataproc_v1_ListWorkflowTemplatesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteWorkflowTemplate = new grpc::Method<global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -138,6 +159,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> CreateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -152,6 +174,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> GetWorkflowTemplate(global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -182,6 +205,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> InstantiateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -217,6 +241,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> InstantiateInlineWorkflowTemplate(global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -229,6 +254,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> UpdateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -240,6 +266,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse> ListWorkflowTemplates(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -251,6 +278,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkflowTemplate(global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -263,20 +291,24 @@ namespace Google.Cloud.Dataproc.V1 {
     {
       /// <summary>Creates a new client for WorkflowTemplateService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public WorkflowTemplateServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for WorkflowTemplateService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public WorkflowTemplateServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected WorkflowTemplateServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected WorkflowTemplateServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -289,6 +321,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.WorkflowTemplate CreateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkflowTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -299,6 +332,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.WorkflowTemplate CreateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateWorkflowTemplate, null, options, request);
@@ -311,6 +345,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> CreateWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkflowTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -321,6 +356,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> CreateWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateWorkflowTemplate, null, options, request);
@@ -336,6 +372,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.WorkflowTemplate GetWorkflowTemplate(global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkflowTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -349,6 +386,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.WorkflowTemplate GetWorkflowTemplate(global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetWorkflowTemplate, null, options, request);
@@ -364,6 +402,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> GetWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkflowTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -377,6 +416,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> GetWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.GetWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetWorkflowTemplate, null, options, request);
@@ -408,6 +448,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation InstantiateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InstantiateWorkflowTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -437,6 +478,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation InstantiateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_InstantiateWorkflowTemplate, null, options, request);
@@ -468,6 +510,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InstantiateWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InstantiateWorkflowTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -497,6 +540,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InstantiateWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.InstantiateWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_InstantiateWorkflowTemplate, null, options, request);
@@ -533,6 +577,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation InstantiateInlineWorkflowTemplate(global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InstantiateInlineWorkflowTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -567,6 +612,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation InstantiateInlineWorkflowTemplate(global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_InstantiateInlineWorkflowTemplate, null, options, request);
@@ -603,6 +649,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InstantiateInlineWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InstantiateInlineWorkflowTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -637,6 +684,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InstantiateInlineWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.InstantiateInlineWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_InstantiateInlineWorkflowTemplate, null, options, request);
@@ -650,6 +698,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.WorkflowTemplate UpdateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkflowTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -661,6 +710,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.WorkflowTemplate UpdateWorkflowTemplate(global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateWorkflowTemplate, null, options, request);
@@ -674,6 +724,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> UpdateWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkflowTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -685,6 +736,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> UpdateWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.UpdateWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWorkflowTemplate, null, options, request);
@@ -697,6 +749,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse ListWorkflowTemplates(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkflowTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -707,6 +760,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse ListWorkflowTemplates(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListWorkflowTemplates, null, options, request);
@@ -719,6 +773,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse> ListWorkflowTemplatesAsync(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkflowTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -729,6 +784,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesResponse> ListWorkflowTemplatesAsync(global::Google.Cloud.Dataproc.V1.ListWorkflowTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkflowTemplates, null, options, request);
@@ -741,6 +797,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteWorkflowTemplate(global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkflowTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -751,6 +808,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteWorkflowTemplate(global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteWorkflowTemplate, null, options, request);
@@ -763,6 +821,7 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkflowTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -773,11 +832,13 @@ namespace Google.Cloud.Dataproc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteWorkflowTemplateAsync(global::Google.Cloud.Dataproc.V1.DeleteWorkflowTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteWorkflowTemplate, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override WorkflowTemplateServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new WorkflowTemplateServiceClient(configuration);
@@ -786,6 +847,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(WorkflowTemplateServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -802,6 +864,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, WorkflowTemplateServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateWorkflowTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataproc.V1.CreateWorkflowTemplateRequest, global::Google.Cloud.Dataproc.V1.WorkflowTemplate>(serviceImpl.CreateWorkflowTemplate));

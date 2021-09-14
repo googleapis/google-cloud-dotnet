@@ -30,6 +30,7 @@ namespace Google.Cloud.ApiGateway.V1 {
   {
     static readonly string __ServiceName = "google.cloud.apigateway.v1.ApiGatewayService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.ApiGateway.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,29 +63,52 @@ namespace Google.Cloud.ApiGateway.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest> __Marshaller_google_cloud_apigateway_v1_ListGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> __Marshaller_google_cloud_apigateway_v1_ListGatewaysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetGatewayRequest> __Marshaller_google_cloud_apigateway_v1_GetGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.GetGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.Gateway> __Marshaller_google_cloud_apigateway_v1_Gateway = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.Gateway.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest> __Marshaller_google_cloud_apigateway_v1_CreateGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest> __Marshaller_google_cloud_apigateway_v1_UpdateGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest> __Marshaller_google_cloud_apigateway_v1_DeleteGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApisRequest> __Marshaller_google_cloud_apigateway_v1_ListApisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApisRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApisResponse> __Marshaller_google_cloud_apigateway_v1_ListApisResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApisResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetApiRequest> __Marshaller_google_cloud_apigateway_v1_GetApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.GetApiRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.Api> __Marshaller_google_cloud_apigateway_v1_Api = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.Api.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateApiRequest> __Marshaller_google_cloud_apigateway_v1_CreateApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.CreateApiRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateApiRequest> __Marshaller_google_cloud_apigateway_v1_UpdateApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.UpdateApiRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteApiRequest> __Marshaller_google_cloud_apigateway_v1_DeleteApiRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.DeleteApiRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest> __Marshaller_google_cloud_apigateway_v1_ListApiConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse> __Marshaller_google_cloud_apigateway_v1_ListApiConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_GetApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.ApiConfig> __Marshaller_google_cloud_apigateway_v1_ApiConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.ApiConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_CreateApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_UpdateApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest> __Marshaller_google_cloud_apigateway_v1_DeleteApiConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest, global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> __Method_ListGateways = new grpc::Method<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest, global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +116,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_ListGatewaysRequest,
         __Marshaller_google_cloud_apigateway_v1_ListGatewaysResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.GetGatewayRequest, global::Google.Cloud.ApiGateway.V1.Gateway> __Method_GetGateway = new grpc::Method<global::Google.Cloud.ApiGateway.V1.GetGatewayRequest, global::Google.Cloud.ApiGateway.V1.Gateway>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +124,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_GetGatewayRequest,
         __Marshaller_google_cloud_apigateway_v1_Gateway);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest, global::Google.LongRunning.Operation> __Method_CreateGateway = new grpc::Method<global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -104,6 +132,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_CreateGatewayRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest, global::Google.LongRunning.Operation> __Method_UpdateGateway = new grpc::Method<global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -111,6 +140,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_UpdateGatewayRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest, global::Google.LongRunning.Operation> __Method_DeleteGateway = new grpc::Method<global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -118,6 +148,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_DeleteGatewayRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.ListApisRequest, global::Google.Cloud.ApiGateway.V1.ListApisResponse> __Method_ListApis = new grpc::Method<global::Google.Cloud.ApiGateway.V1.ListApisRequest, global::Google.Cloud.ApiGateway.V1.ListApisResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -125,6 +156,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_ListApisRequest,
         __Marshaller_google_cloud_apigateway_v1_ListApisResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.GetApiRequest, global::Google.Cloud.ApiGateway.V1.Api> __Method_GetApi = new grpc::Method<global::Google.Cloud.ApiGateway.V1.GetApiRequest, global::Google.Cloud.ApiGateway.V1.Api>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -132,6 +164,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_GetApiRequest,
         __Marshaller_google_cloud_apigateway_v1_Api);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.CreateApiRequest, global::Google.LongRunning.Operation> __Method_CreateApi = new grpc::Method<global::Google.Cloud.ApiGateway.V1.CreateApiRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -139,6 +172,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_CreateApiRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.UpdateApiRequest, global::Google.LongRunning.Operation> __Method_UpdateApi = new grpc::Method<global::Google.Cloud.ApiGateway.V1.UpdateApiRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -146,6 +180,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_UpdateApiRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.DeleteApiRequest, global::Google.LongRunning.Operation> __Method_DeleteApi = new grpc::Method<global::Google.Cloud.ApiGateway.V1.DeleteApiRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -153,6 +188,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_DeleteApiRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest, global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse> __Method_ListApiConfigs = new grpc::Method<global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest, global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -160,6 +196,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_ListApiConfigsRequest,
         __Marshaller_google_cloud_apigateway_v1_ListApiConfigsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest, global::Google.Cloud.ApiGateway.V1.ApiConfig> __Method_GetApiConfig = new grpc::Method<global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest, global::Google.Cloud.ApiGateway.V1.ApiConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -167,6 +204,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_GetApiConfigRequest,
         __Marshaller_google_cloud_apigateway_v1_ApiConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest, global::Google.LongRunning.Operation> __Method_CreateApiConfig = new grpc::Method<global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -174,6 +212,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_CreateApiConfigRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest, global::Google.LongRunning.Operation> __Method_UpdateApiConfig = new grpc::Method<global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -181,6 +220,7 @@ namespace Google.Cloud.ApiGateway.V1 {
         __Marshaller_google_cloud_apigateway_v1_UpdateApiConfigRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest, global::Google.LongRunning.Operation> __Method_DeleteApiConfig = new grpc::Method<global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -204,6 +244,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> ListGateways(global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -215,6 +256,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiGateway.V1.Gateway> GetGateway(global::Google.Cloud.ApiGateway.V1.GetGatewayRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -226,6 +268,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateGateway(global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -237,6 +280,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateGateway(global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -248,6 +292,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteGateway(global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -259,6 +304,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiGateway.V1.ListApisResponse> ListApis(global::Google.Cloud.ApiGateway.V1.ListApisRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -270,6 +316,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiGateway.V1.Api> GetApi(global::Google.Cloud.ApiGateway.V1.GetApiRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -281,6 +328,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateApi(global::Google.Cloud.ApiGateway.V1.CreateApiRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -292,6 +340,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateApi(global::Google.Cloud.ApiGateway.V1.UpdateApiRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -303,6 +352,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteApi(global::Google.Cloud.ApiGateway.V1.DeleteApiRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -314,6 +364,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse> ListApiConfigs(global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -325,6 +376,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiGateway.V1.ApiConfig> GetApiConfig(global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -336,6 +388,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateApiConfig(global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -347,6 +400,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateApiConfig(global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -358,6 +412,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteApiConfig(global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -370,20 +425,24 @@ namespace Google.Cloud.ApiGateway.V1 {
     {
       /// <summary>Creates a new client for ApiGatewayService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ApiGatewayServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ApiGatewayService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ApiGatewayServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ApiGatewayServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ApiGatewayServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -396,6 +455,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse ListGateways(global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGateways(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -406,6 +466,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse ListGateways(global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGateways, null, options, request);
@@ -418,6 +479,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> ListGatewaysAsync(global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListGatewaysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -428,6 +490,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse> ListGatewaysAsync(global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGateways, null, options, request);
@@ -440,6 +503,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.Gateway GetGateway(global::Google.Cloud.ApiGateway.V1.GetGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -450,6 +514,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.Gateway GetGateway(global::Google.Cloud.ApiGateway.V1.GetGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGateway, null, options, request);
@@ -462,6 +527,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.Gateway> GetGatewayAsync(global::Google.Cloud.ApiGateway.V1.GetGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -472,6 +538,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.Gateway> GetGatewayAsync(global::Google.Cloud.ApiGateway.V1.GetGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGateway, null, options, request);
@@ -484,6 +551,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateGateway(global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -494,6 +562,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateGateway(global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGateway, null, options, request);
@@ -506,6 +575,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGatewayAsync(global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -516,6 +586,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateGatewayAsync(global::Google.Cloud.ApiGateway.V1.CreateGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGateway, null, options, request);
@@ -528,6 +599,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateGateway(global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -538,6 +610,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateGateway(global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGateway, null, options, request);
@@ -550,6 +623,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGatewayAsync(global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -560,6 +634,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateGatewayAsync(global::Google.Cloud.ApiGateway.V1.UpdateGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGateway, null, options, request);
@@ -572,6 +647,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteGateway(global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -582,6 +658,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteGateway(global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteGateway, null, options, request);
@@ -594,6 +671,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteGatewayAsync(global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -604,6 +682,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteGatewayAsync(global::Google.Cloud.ApiGateway.V1.DeleteGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGateway, null, options, request);
@@ -616,6 +695,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ListApisResponse ListApis(global::Google.Cloud.ApiGateway.V1.ListApisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListApis(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -626,6 +706,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ListApisResponse ListApis(global::Google.Cloud.ApiGateway.V1.ListApisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListApis, null, options, request);
@@ -638,6 +719,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ListApisResponse> ListApisAsync(global::Google.Cloud.ApiGateway.V1.ListApisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListApisAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -648,6 +730,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ListApisResponse> ListApisAsync(global::Google.Cloud.ApiGateway.V1.ListApisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListApis, null, options, request);
@@ -660,6 +743,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.Api GetApi(global::Google.Cloud.ApiGateway.V1.GetApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -670,6 +754,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.Api GetApi(global::Google.Cloud.ApiGateway.V1.GetApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetApi, null, options, request);
@@ -682,6 +767,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.Api> GetApiAsync(global::Google.Cloud.ApiGateway.V1.GetApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -692,6 +778,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.Api> GetApiAsync(global::Google.Cloud.ApiGateway.V1.GetApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetApi, null, options, request);
@@ -704,6 +791,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateApi(global::Google.Cloud.ApiGateway.V1.CreateApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -714,6 +802,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateApi(global::Google.Cloud.ApiGateway.V1.CreateApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApi, null, options, request);
@@ -726,6 +815,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateApiAsync(global::Google.Cloud.ApiGateway.V1.CreateApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -736,6 +826,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateApiAsync(global::Google.Cloud.ApiGateway.V1.CreateApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApi, null, options, request);
@@ -748,6 +839,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateApi(global::Google.Cloud.ApiGateway.V1.UpdateApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -758,6 +850,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateApi(global::Google.Cloud.ApiGateway.V1.UpdateApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApi, null, options, request);
@@ -770,6 +863,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApiAsync(global::Google.Cloud.ApiGateway.V1.UpdateApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -780,6 +874,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApiAsync(global::Google.Cloud.ApiGateway.V1.UpdateApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApi, null, options, request);
@@ -792,6 +887,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteApi(global::Google.Cloud.ApiGateway.V1.DeleteApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteApi(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -802,6 +898,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteApi(global::Google.Cloud.ApiGateway.V1.DeleteApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApi, null, options, request);
@@ -814,6 +911,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteApiAsync(global::Google.Cloud.ApiGateway.V1.DeleteApiRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteApiAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -824,6 +922,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteApiAsync(global::Google.Cloud.ApiGateway.V1.DeleteApiRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApi, null, options, request);
@@ -836,6 +935,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse ListApiConfigs(global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListApiConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -846,6 +946,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse ListApiConfigs(global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListApiConfigs, null, options, request);
@@ -858,6 +959,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse> ListApiConfigsAsync(global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListApiConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -868,6 +970,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ListApiConfigsResponse> ListApiConfigsAsync(global::Google.Cloud.ApiGateway.V1.ListApiConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListApiConfigs, null, options, request);
@@ -880,6 +983,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ApiConfig GetApiConfig(global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetApiConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -890,6 +994,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.ApiGateway.V1.ApiConfig GetApiConfig(global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetApiConfig, null, options, request);
@@ -902,6 +1007,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ApiConfig> GetApiConfigAsync(global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetApiConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -912,6 +1018,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiGateway.V1.ApiConfig> GetApiConfigAsync(global::Google.Cloud.ApiGateway.V1.GetApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetApiConfig, null, options, request);
@@ -924,6 +1031,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateApiConfig(global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateApiConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -934,6 +1042,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateApiConfig(global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApiConfig, null, options, request);
@@ -946,6 +1055,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateApiConfigAsync(global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateApiConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -956,6 +1066,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateApiConfigAsync(global::Google.Cloud.ApiGateway.V1.CreateApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApiConfig, null, options, request);
@@ -968,6 +1079,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateApiConfig(global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateApiConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -978,6 +1090,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateApiConfig(global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApiConfig, null, options, request);
@@ -990,6 +1103,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApiConfigAsync(global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateApiConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1000,6 +1114,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApiConfigAsync(global::Google.Cloud.ApiGateway.V1.UpdateApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApiConfig, null, options, request);
@@ -1012,6 +1127,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteApiConfig(global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteApiConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1022,6 +1138,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteApiConfig(global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteApiConfig, null, options, request);
@@ -1034,6 +1151,7 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteApiConfigAsync(global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteApiConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1044,11 +1162,13 @@ namespace Google.Cloud.ApiGateway.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteApiConfigAsync(global::Google.Cloud.ApiGateway.V1.DeleteApiConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteApiConfig, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ApiGatewayServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ApiGatewayServiceClient(configuration);
@@ -1057,6 +1177,7 @@ namespace Google.Cloud.ApiGateway.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ApiGatewayServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1081,6 +1202,7 @@ namespace Google.Cloud.ApiGateway.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ApiGatewayServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListGateways, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiGateway.V1.ListGatewaysRequest, global::Google.Cloud.ApiGateway.V1.ListGatewaysResponse>(serviceImpl.ListGateways));

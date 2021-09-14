@@ -36,6 +36,7 @@ namespace Google.Cloud.SecretManager.V1 {
   {
     static readonly string __ServiceName = "google.cloud.secretmanager.v1.SecretManagerService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -50,11 +51,13 @@ namespace Google.Cloud.SecretManager.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -66,30 +69,54 @@ namespace Google.Cloud.SecretManager.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.ListSecretsRequest> __Marshaller_google_cloud_secretmanager_v1_ListSecretsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.ListSecretsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.ListSecretsResponse> __Marshaller_google_cloud_secretmanager_v1_ListSecretsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.ListSecretsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.CreateSecretRequest> __Marshaller_google_cloud_secretmanager_v1_CreateSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.CreateSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.Secret> __Marshaller_google_cloud_secretmanager_v1_Secret = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.Secret.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest> __Marshaller_google_cloud_secretmanager_v1_AddSecretVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.SecretVersion> __Marshaller_google_cloud_secretmanager_v1_SecretVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.SecretVersion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.GetSecretRequest> __Marshaller_google_cloud_secretmanager_v1_GetSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.GetSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.UpdateSecretRequest> __Marshaller_google_cloud_secretmanager_v1_UpdateSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.UpdateSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.DeleteSecretRequest> __Marshaller_google_cloud_secretmanager_v1_DeleteSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.DeleteSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest> __Marshaller_google_cloud_secretmanager_v1_ListSecretVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse> __Marshaller_google_cloud_secretmanager_v1_ListSecretVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest> __Marshaller_google_cloud_secretmanager_v1_GetSecretVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest> __Marshaller_google_cloud_secretmanager_v1_AccessSecretVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse> __Marshaller_google_cloud_secretmanager_v1_AccessSecretVersionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest> __Marshaller_google_cloud_secretmanager_v1_DisableSecretVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest> __Marshaller_google_cloud_secretmanager_v1_EnableSecretVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest> __Marshaller_google_cloud_secretmanager_v1_DestroySecretVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.ListSecretsRequest, global::Google.Cloud.SecretManager.V1.ListSecretsResponse> __Method_ListSecrets = new grpc::Method<global::Google.Cloud.SecretManager.V1.ListSecretsRequest, global::Google.Cloud.SecretManager.V1.ListSecretsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +124,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_ListSecretsRequest,
         __Marshaller_google_cloud_secretmanager_v1_ListSecretsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.CreateSecretRequest, global::Google.Cloud.SecretManager.V1.Secret> __Method_CreateSecret = new grpc::Method<global::Google.Cloud.SecretManager.V1.CreateSecretRequest, global::Google.Cloud.SecretManager.V1.Secret>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -104,6 +132,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_CreateSecretRequest,
         __Marshaller_google_cloud_secretmanager_v1_Secret);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion> __Method_AddSecretVersion = new grpc::Method<global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -111,6 +140,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_AddSecretVersionRequest,
         __Marshaller_google_cloud_secretmanager_v1_SecretVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.GetSecretRequest, global::Google.Cloud.SecretManager.V1.Secret> __Method_GetSecret = new grpc::Method<global::Google.Cloud.SecretManager.V1.GetSecretRequest, global::Google.Cloud.SecretManager.V1.Secret>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -118,6 +148,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_GetSecretRequest,
         __Marshaller_google_cloud_secretmanager_v1_Secret);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.UpdateSecretRequest, global::Google.Cloud.SecretManager.V1.Secret> __Method_UpdateSecret = new grpc::Method<global::Google.Cloud.SecretManager.V1.UpdateSecretRequest, global::Google.Cloud.SecretManager.V1.Secret>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -125,6 +156,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_UpdateSecretRequest,
         __Marshaller_google_cloud_secretmanager_v1_Secret);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.DeleteSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSecret = new grpc::Method<global::Google.Cloud.SecretManager.V1.DeleteSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -132,6 +164,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_DeleteSecretRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest, global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse> __Method_ListSecretVersions = new grpc::Method<global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest, global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -139,6 +172,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_ListSecretVersionsRequest,
         __Marshaller_google_cloud_secretmanager_v1_ListSecretVersionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion> __Method_GetSecretVersion = new grpc::Method<global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -146,6 +180,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_GetSecretVersionRequest,
         __Marshaller_google_cloud_secretmanager_v1_SecretVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest, global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse> __Method_AccessSecretVersion = new grpc::Method<global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest, global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -153,6 +188,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_AccessSecretVersionRequest,
         __Marshaller_google_cloud_secretmanager_v1_AccessSecretVersionResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion> __Method_DisableSecretVersion = new grpc::Method<global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -160,6 +196,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_DisableSecretVersionRequest,
         __Marshaller_google_cloud_secretmanager_v1_SecretVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion> __Method_EnableSecretVersion = new grpc::Method<global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -167,6 +204,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_EnableSecretVersionRequest,
         __Marshaller_google_cloud_secretmanager_v1_SecretVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion> __Method_DestroySecretVersion = new grpc::Method<global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest, global::Google.Cloud.SecretManager.V1.SecretVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -174,6 +212,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_cloud_secretmanager_v1_DestroySecretVersionRequest,
         __Marshaller_google_cloud_secretmanager_v1_SecretVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -181,6 +220,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -188,6 +228,7 @@ namespace Google.Cloud.SecretManager.V1 {
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -211,6 +252,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.ListSecretsResponse> ListSecrets(global::Google.Cloud.SecretManager.V1.ListSecretsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -222,6 +264,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.Secret> CreateSecret(global::Google.Cloud.SecretManager.V1.CreateSecretRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -234,6 +277,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.SecretVersion> AddSecretVersion(global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -245,6 +289,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.Secret> GetSecret(global::Google.Cloud.SecretManager.V1.GetSecretRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -256,6 +301,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.Secret> UpdateSecret(global::Google.Cloud.SecretManager.V1.UpdateSecretRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -267,6 +313,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecret(global::Google.Cloud.SecretManager.V1.DeleteSecretRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -279,6 +326,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse> ListSecretVersions(global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -293,6 +341,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.SecretVersion> GetSecretVersion(global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -307,6 +356,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse> AccessSecretVersion(global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -321,6 +371,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.SecretVersion> DisableSecretVersion(global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -335,6 +386,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.SecretVersion> EnableSecretVersion(global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -350,6 +402,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecretManager.V1.SecretVersion> DestroySecretVersion(global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -365,6 +418,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -377,6 +431,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -394,6 +449,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -406,20 +462,24 @@ namespace Google.Cloud.SecretManager.V1 {
     {
       /// <summary>Creates a new client for SecretManagerService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SecretManagerServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SecretManagerService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SecretManagerServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SecretManagerServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SecretManagerServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -432,6 +492,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.ListSecretsResponse ListSecrets(global::Google.Cloud.SecretManager.V1.ListSecretsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSecrets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -442,6 +503,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.ListSecretsResponse ListSecrets(global::Google.Cloud.SecretManager.V1.ListSecretsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSecrets, null, options, request);
@@ -454,6 +516,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.ListSecretsResponse> ListSecretsAsync(global::Google.Cloud.SecretManager.V1.ListSecretsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSecretsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -464,6 +527,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.ListSecretsResponse> ListSecretsAsync(global::Google.Cloud.SecretManager.V1.ListSecretsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSecrets, null, options, request);
@@ -476,6 +540,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.Secret CreateSecret(global::Google.Cloud.SecretManager.V1.CreateSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -486,6 +551,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.Secret CreateSecret(global::Google.Cloud.SecretManager.V1.CreateSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSecret, null, options, request);
@@ -498,6 +564,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.Secret> CreateSecretAsync(global::Google.Cloud.SecretManager.V1.CreateSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -508,6 +575,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.Secret> CreateSecretAsync(global::Google.Cloud.SecretManager.V1.CreateSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSecret, null, options, request);
@@ -521,6 +589,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion AddSecretVersion(global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -532,6 +601,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion AddSecretVersion(global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AddSecretVersion, null, options, request);
@@ -545,6 +615,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> AddSecretVersionAsync(global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -556,6 +627,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> AddSecretVersionAsync(global::Google.Cloud.SecretManager.V1.AddSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddSecretVersion, null, options, request);
@@ -568,6 +640,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.Secret GetSecret(global::Google.Cloud.SecretManager.V1.GetSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -578,6 +651,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.Secret GetSecret(global::Google.Cloud.SecretManager.V1.GetSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSecret, null, options, request);
@@ -590,6 +664,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.Secret> GetSecretAsync(global::Google.Cloud.SecretManager.V1.GetSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -600,6 +675,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.Secret> GetSecretAsync(global::Google.Cloud.SecretManager.V1.GetSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSecret, null, options, request);
@@ -612,6 +688,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.Secret UpdateSecret(global::Google.Cloud.SecretManager.V1.UpdateSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -622,6 +699,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.Secret UpdateSecret(global::Google.Cloud.SecretManager.V1.UpdateSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSecret, null, options, request);
@@ -634,6 +712,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.Secret> UpdateSecretAsync(global::Google.Cloud.SecretManager.V1.UpdateSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -644,6 +723,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.Secret> UpdateSecretAsync(global::Google.Cloud.SecretManager.V1.UpdateSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSecret, null, options, request);
@@ -656,6 +736,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSecret(global::Google.Cloud.SecretManager.V1.DeleteSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -666,6 +747,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSecret(global::Google.Cloud.SecretManager.V1.DeleteSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSecret, null, options, request);
@@ -678,6 +760,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecretAsync(global::Google.Cloud.SecretManager.V1.DeleteSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -688,6 +771,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSecretAsync(global::Google.Cloud.SecretManager.V1.DeleteSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSecret, null, options, request);
@@ -701,6 +785,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse ListSecretVersions(global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSecretVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -712,6 +797,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse ListSecretVersions(global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSecretVersions, null, options, request);
@@ -725,6 +811,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse> ListSecretVersionsAsync(global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSecretVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -736,6 +823,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.ListSecretVersionsResponse> ListSecretVersionsAsync(global::Google.Cloud.SecretManager.V1.ListSecretVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSecretVersions, null, options, request);
@@ -751,6 +839,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion GetSecretVersion(global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -764,6 +853,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion GetSecretVersion(global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSecretVersion, null, options, request);
@@ -779,6 +869,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> GetSecretVersionAsync(global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -792,6 +883,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> GetSecretVersionAsync(global::Google.Cloud.SecretManager.V1.GetSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSecretVersion, null, options, request);
@@ -807,6 +899,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse AccessSecretVersion(global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AccessSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -820,6 +913,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse AccessSecretVersion(global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AccessSecretVersion, null, options, request);
@@ -835,6 +929,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse> AccessSecretVersionAsync(global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AccessSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -848,6 +943,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.AccessSecretVersionResponse> AccessSecretVersionAsync(global::Google.Cloud.SecretManager.V1.AccessSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AccessSecretVersion, null, options, request);
@@ -863,6 +959,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion DisableSecretVersion(global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -876,6 +973,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion DisableSecretVersion(global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DisableSecretVersion, null, options, request);
@@ -891,6 +989,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> DisableSecretVersionAsync(global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -904,6 +1003,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> DisableSecretVersionAsync(global::Google.Cloud.SecretManager.V1.DisableSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DisableSecretVersion, null, options, request);
@@ -919,6 +1019,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion EnableSecretVersion(global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableSecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -932,6 +1033,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion EnableSecretVersion(global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_EnableSecretVersion, null, options, request);
@@ -947,6 +1049,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> EnableSecretVersionAsync(global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableSecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -960,6 +1063,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> EnableSecretVersionAsync(global::Google.Cloud.SecretManager.V1.EnableSecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_EnableSecretVersion, null, options, request);
@@ -976,6 +1080,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion DestroySecretVersion(global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DestroySecretVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -990,6 +1095,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.SecretManager.V1.SecretVersion DestroySecretVersion(global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DestroySecretVersion, null, options, request);
@@ -1006,6 +1112,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> DestroySecretVersionAsync(global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DestroySecretVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1020,6 +1127,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecretManager.V1.SecretVersion> DestroySecretVersionAsync(global::Google.Cloud.SecretManager.V1.DestroySecretVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DestroySecretVersion, null, options, request);
@@ -1036,6 +1144,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1050,6 +1159,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1066,6 +1176,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1080,6 +1191,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1093,6 +1205,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1104,6 +1217,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1117,6 +1231,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1128,6 +1243,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1146,6 +1262,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1162,6 +1279,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1180,6 +1298,7 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1196,11 +1315,13 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SecretManagerServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SecretManagerServiceClient(configuration);
@@ -1209,6 +1330,7 @@ namespace Google.Cloud.SecretManager.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SecretManagerServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1233,6 +1355,7 @@ namespace Google.Cloud.SecretManager.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SecretManagerServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListSecrets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecretManager.V1.ListSecretsRequest, global::Google.Cloud.SecretManager.V1.ListSecretsResponse>(serviceImpl.ListSecrets));

@@ -32,6 +32,7 @@ namespace Google.Cloud.Tpu.V1 {
   {
     static readonly string __ServiceName = "google.cloud.tpu.v1.Tpu";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -46,11 +47,13 @@ namespace Google.Cloud.Tpu.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,25 +65,44 @@ namespace Google.Cloud.Tpu.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.ListNodesRequest> __Marshaller_google_cloud_tpu_v1_ListNodesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.ListNodesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.ListNodesResponse> __Marshaller_google_cloud_tpu_v1_ListNodesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.ListNodesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.GetNodeRequest> __Marshaller_google_cloud_tpu_v1_GetNodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.GetNodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.Node> __Marshaller_google_cloud_tpu_v1_Node = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.Node.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.CreateNodeRequest> __Marshaller_google_cloud_tpu_v1_CreateNodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.CreateNodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.DeleteNodeRequest> __Marshaller_google_cloud_tpu_v1_DeleteNodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.DeleteNodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.ReimageNodeRequest> __Marshaller_google_cloud_tpu_v1_ReimageNodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.ReimageNodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.StopNodeRequest> __Marshaller_google_cloud_tpu_v1_StopNodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.StopNodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.StartNodeRequest> __Marshaller_google_cloud_tpu_v1_StartNodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.StartNodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest> __Marshaller_google_cloud_tpu_v1_ListTensorFlowVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse> __Marshaller_google_cloud_tpu_v1_ListTensorFlowVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest> __Marshaller_google_cloud_tpu_v1_GetTensorFlowVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.TensorFlowVersion> __Marshaller_google_cloud_tpu_v1_TensorFlowVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.TensorFlowVersion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest> __Marshaller_google_cloud_tpu_v1_ListAcceleratorTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse> __Marshaller_google_cloud_tpu_v1_ListAcceleratorTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest> __Marshaller_google_cloud_tpu_v1_GetAcceleratorTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Tpu.V1.AcceleratorType> __Marshaller_google_cloud_tpu_v1_AcceleratorType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Tpu.V1.AcceleratorType.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.ListNodesRequest, global::Google.Cloud.Tpu.V1.ListNodesResponse> __Method_ListNodes = new grpc::Method<global::Google.Cloud.Tpu.V1.ListNodesRequest, global::Google.Cloud.Tpu.V1.ListNodesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -88,6 +110,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_ListNodesRequest,
         __Marshaller_google_cloud_tpu_v1_ListNodesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.GetNodeRequest, global::Google.Cloud.Tpu.V1.Node> __Method_GetNode = new grpc::Method<global::Google.Cloud.Tpu.V1.GetNodeRequest, global::Google.Cloud.Tpu.V1.Node>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -95,6 +118,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_GetNodeRequest,
         __Marshaller_google_cloud_tpu_v1_Node);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.CreateNodeRequest, global::Google.LongRunning.Operation> __Method_CreateNode = new grpc::Method<global::Google.Cloud.Tpu.V1.CreateNodeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -102,6 +126,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_CreateNodeRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.DeleteNodeRequest, global::Google.LongRunning.Operation> __Method_DeleteNode = new grpc::Method<global::Google.Cloud.Tpu.V1.DeleteNodeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -109,6 +134,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_DeleteNodeRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.ReimageNodeRequest, global::Google.LongRunning.Operation> __Method_ReimageNode = new grpc::Method<global::Google.Cloud.Tpu.V1.ReimageNodeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -116,6 +142,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_ReimageNodeRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.StopNodeRequest, global::Google.LongRunning.Operation> __Method_StopNode = new grpc::Method<global::Google.Cloud.Tpu.V1.StopNodeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -123,6 +150,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_StopNodeRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.StartNodeRequest, global::Google.LongRunning.Operation> __Method_StartNode = new grpc::Method<global::Google.Cloud.Tpu.V1.StartNodeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -130,6 +158,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_StartNodeRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest, global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse> __Method_ListTensorFlowVersions = new grpc::Method<global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest, global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +166,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_ListTensorFlowVersionsRequest,
         __Marshaller_google_cloud_tpu_v1_ListTensorFlowVersionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest, global::Google.Cloud.Tpu.V1.TensorFlowVersion> __Method_GetTensorFlowVersion = new grpc::Method<global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest, global::Google.Cloud.Tpu.V1.TensorFlowVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -144,6 +174,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_GetTensorFlowVersionRequest,
         __Marshaller_google_cloud_tpu_v1_TensorFlowVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest, global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse> __Method_ListAcceleratorTypes = new grpc::Method<global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest, global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -151,6 +182,7 @@ namespace Google.Cloud.Tpu.V1 {
         __Marshaller_google_cloud_tpu_v1_ListAcceleratorTypesRequest,
         __Marshaller_google_cloud_tpu_v1_ListAcceleratorTypesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest, global::Google.Cloud.Tpu.V1.AcceleratorType> __Method_GetAcceleratorType = new grpc::Method<global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest, global::Google.Cloud.Tpu.V1.AcceleratorType>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -174,6 +206,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tpu.V1.ListNodesResponse> ListNodes(global::Google.Cloud.Tpu.V1.ListNodesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -185,6 +218,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tpu.V1.Node> GetNode(global::Google.Cloud.Tpu.V1.GetNodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -196,6 +230,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateNode(global::Google.Cloud.Tpu.V1.CreateNodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -207,6 +242,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteNode(global::Google.Cloud.Tpu.V1.DeleteNodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -218,6 +254,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReimageNode(global::Google.Cloud.Tpu.V1.ReimageNodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -229,6 +266,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StopNode(global::Google.Cloud.Tpu.V1.StopNodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -240,6 +278,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartNode(global::Google.Cloud.Tpu.V1.StartNodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -251,6 +290,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse> ListTensorFlowVersions(global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -262,6 +302,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tpu.V1.TensorFlowVersion> GetTensorFlowVersion(global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -273,6 +314,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse> ListAcceleratorTypes(global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -284,6 +326,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Tpu.V1.AcceleratorType> GetAcceleratorType(global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -296,20 +339,24 @@ namespace Google.Cloud.Tpu.V1 {
     {
       /// <summary>Creates a new client for Tpu</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TpuClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Tpu that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TpuClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TpuClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TpuClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -322,6 +369,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.ListNodesResponse ListNodes(global::Google.Cloud.Tpu.V1.ListNodesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNodes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -332,6 +380,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.ListNodesResponse ListNodes(global::Google.Cloud.Tpu.V1.ListNodesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListNodes, null, options, request);
@@ -344,6 +393,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.ListNodesResponse> ListNodesAsync(global::Google.Cloud.Tpu.V1.ListNodesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNodesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -354,6 +404,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.ListNodesResponse> ListNodesAsync(global::Google.Cloud.Tpu.V1.ListNodesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListNodes, null, options, request);
@@ -366,6 +417,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.Node GetNode(global::Google.Cloud.Tpu.V1.GetNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -376,6 +428,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.Node GetNode(global::Google.Cloud.Tpu.V1.GetNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetNode, null, options, request);
@@ -388,6 +441,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.Node> GetNodeAsync(global::Google.Cloud.Tpu.V1.GetNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -398,6 +452,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.Node> GetNodeAsync(global::Google.Cloud.Tpu.V1.GetNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNode, null, options, request);
@@ -410,6 +465,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateNode(global::Google.Cloud.Tpu.V1.CreateNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -420,6 +476,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateNode(global::Google.Cloud.Tpu.V1.CreateNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateNode, null, options, request);
@@ -432,6 +489,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateNodeAsync(global::Google.Cloud.Tpu.V1.CreateNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -442,6 +500,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateNodeAsync(global::Google.Cloud.Tpu.V1.CreateNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateNode, null, options, request);
@@ -454,6 +513,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteNode(global::Google.Cloud.Tpu.V1.DeleteNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -464,6 +524,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteNode(global::Google.Cloud.Tpu.V1.DeleteNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteNode, null, options, request);
@@ -476,6 +537,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNodeAsync(global::Google.Cloud.Tpu.V1.DeleteNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -486,6 +548,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteNodeAsync(global::Google.Cloud.Tpu.V1.DeleteNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNode, null, options, request);
@@ -498,6 +561,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReimageNode(global::Google.Cloud.Tpu.V1.ReimageNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReimageNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -508,6 +572,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReimageNode(global::Google.Cloud.Tpu.V1.ReimageNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReimageNode, null, options, request);
@@ -520,6 +585,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReimageNodeAsync(global::Google.Cloud.Tpu.V1.ReimageNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReimageNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -530,6 +596,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReimageNodeAsync(global::Google.Cloud.Tpu.V1.ReimageNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReimageNode, null, options, request);
@@ -542,6 +609,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StopNode(global::Google.Cloud.Tpu.V1.StopNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -552,6 +620,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StopNode(global::Google.Cloud.Tpu.V1.StopNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StopNode, null, options, request);
@@ -564,6 +633,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopNodeAsync(global::Google.Cloud.Tpu.V1.StopNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -574,6 +644,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopNodeAsync(global::Google.Cloud.Tpu.V1.StopNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StopNode, null, options, request);
@@ -586,6 +657,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartNode(global::Google.Cloud.Tpu.V1.StartNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartNode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -596,6 +668,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartNode(global::Google.Cloud.Tpu.V1.StartNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StartNode, null, options, request);
@@ -608,6 +681,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartNodeAsync(global::Google.Cloud.Tpu.V1.StartNodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartNodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -618,6 +692,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartNodeAsync(global::Google.Cloud.Tpu.V1.StartNodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StartNode, null, options, request);
@@ -630,6 +705,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse ListTensorFlowVersions(global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTensorFlowVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -640,6 +716,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse ListTensorFlowVersions(global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTensorFlowVersions, null, options, request);
@@ -652,6 +729,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse> ListTensorFlowVersionsAsync(global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTensorFlowVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -662,6 +740,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsResponse> ListTensorFlowVersionsAsync(global::Google.Cloud.Tpu.V1.ListTensorFlowVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTensorFlowVersions, null, options, request);
@@ -674,6 +753,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.TensorFlowVersion GetTensorFlowVersion(global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTensorFlowVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -684,6 +764,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.TensorFlowVersion GetTensorFlowVersion(global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTensorFlowVersion, null, options, request);
@@ -696,6 +777,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.TensorFlowVersion> GetTensorFlowVersionAsync(global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTensorFlowVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -706,6 +788,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.TensorFlowVersion> GetTensorFlowVersionAsync(global::Google.Cloud.Tpu.V1.GetTensorFlowVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTensorFlowVersion, null, options, request);
@@ -718,6 +801,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse ListAcceleratorTypes(global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAcceleratorTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -728,6 +812,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse ListAcceleratorTypes(global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAcceleratorTypes, null, options, request);
@@ -740,6 +825,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse> ListAcceleratorTypesAsync(global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAcceleratorTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -750,6 +836,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.ListAcceleratorTypesResponse> ListAcceleratorTypesAsync(global::Google.Cloud.Tpu.V1.ListAcceleratorTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAcceleratorTypes, null, options, request);
@@ -762,6 +849,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.AcceleratorType GetAcceleratorType(global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAcceleratorType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -772,6 +860,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Tpu.V1.AcceleratorType GetAcceleratorType(global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAcceleratorType, null, options, request);
@@ -784,6 +873,7 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.AcceleratorType> GetAcceleratorTypeAsync(global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAcceleratorTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -794,11 +884,13 @@ namespace Google.Cloud.Tpu.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Tpu.V1.AcceleratorType> GetAcceleratorTypeAsync(global::Google.Cloud.Tpu.V1.GetAcceleratorTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAcceleratorType, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TpuClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new TpuClient(configuration);
@@ -807,6 +899,7 @@ namespace Google.Cloud.Tpu.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(TpuBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -827,6 +920,7 @@ namespace Google.Cloud.Tpu.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TpuBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListNodes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Tpu.V1.ListNodesRequest, global::Google.Cloud.Tpu.V1.ListNodesResponse>(serviceImpl.ListNodes));
