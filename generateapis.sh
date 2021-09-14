@@ -134,7 +134,6 @@ generate_microgenerator() {
   fi
   
   mkdir -p $PRODUCTION_PACKAGE_DIR
-  mkdir -p $GRPC_GENERATION_DIR
   
   # Message and service generation. This doesn't need the common resources,
   # and we don't want to pass in the common resources proto because we don't
@@ -142,23 +141,13 @@ generate_microgenerator() {
   $PROTOC \
     --csharp_out=$PRODUCTION_PACKAGE_DIR \
     --csharp_opt=base_namespace=$1,file_extension=.g.cs \
-    --grpc_out=$GRPC_GENERATION_DIR \
+    --grpc_out=$PRODUCTION_PACKAGE_DIR \
+    --grpc_opt=file_suffix=Grpc.g.cs \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $(find $API_SRC_DIR -name '*.proto') \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
-
-  # Change extension of gRPC-generated files
-  if compgen -G "$GRPC_GENERATION_DIR/*.cs" > /dev/null
-  then
-    for grpc_output in $GRPC_GENERATION_DIR/*.cs
-    do
-      mv $grpc_output $(echo $grpc_output | sed -E 's/.cs$/.g.cs/g')
-    done
-    mv $GRPC_GENERATION_DIR/* $PRODUCTION_PACKAGE_DIR
-  fi
-  rm -rf $GRPC_GENERATION_DIR    
   
   # Allow protos to be changed after proto/gRPC generation but before the
   # GAPIC microgenerator. This is pretty extreme, but is used for service renaming.
@@ -218,30 +207,19 @@ generate_microgenerator_regapic() {
   delete_generated apis/$1/$1.Snippets
 
   mkdir -p $PRODUCTION_PACKAGE_DIR
-  mkdir -p $GRPC_GENERATION_DIR
   
   # Message and service generation.
   $PROTOC \
     --csharp_out=$PRODUCTION_PACKAGE_DIR \
     --csharp_opt=base_namespace=$1,file_extension=.g.cs \
-    --grpc_out=$GRPC_GENERATION_DIR \
+    --grpc_out=$PRODUCTION_PACKAGE_DIR \
+    --grpc_opt=file_suffix=Grpc.g.cs \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     -I $GOOGLEAPIS_DISCOVERY \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $(find $API_SRC_DIR -name '*.proto') \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
-
-  # Change extension of gRPC-generated files
-  if compgen -G "$GRPC_GENERATION_DIR/*.cs" > /dev/null
-  then
-    for grpc_output in $GRPC_GENERATION_DIR/*.cs
-    do
-      mv $grpc_output $(echo $grpc_output | sed -E 's/.cs$/.g.cs/g')
-    done
-    mv $GRPC_GENERATION_DIR/* $PRODUCTION_PACKAGE_DIR
-  fi
-  rm -rf $GRPC_GENERATION_DIR    
 
   # Client generation.
   $PROTOC \
@@ -284,27 +262,17 @@ generate_protogrpc() {
   # Delete previously-generated files
   delete_generated apis/$1/$1
 
-  # Note: not renaming the gRPC-generated files as carefully here. The only API
-  # that uses this type (right now) is IAM. We'll notice any changes easily.
-
   API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   $PROTOC \
     --csharp_out=apis/$1/$1 \
-    --grpc_out=apis/$1/$1 \
     --csharp_opt=file_extension=.g.cs \
+    --grpc_out=apis/$1/$1 \
+    --grpc_opt=file_suffix=Grpc.g.cs \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
     $API_SRC_DIR/*.proto \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
-
-  if compgen -G "apis/$1/$1/*Grpc.cs" > /dev/null
-  then
-    for grpc_output in apis/$1/$1/*Grpc.cs
-    do
-      mv $grpc_output $(echo $grpc_output | sed -E 's/.cs$/.g.cs/g')
-    done
-  fi
 }
 
 generate_api() {
