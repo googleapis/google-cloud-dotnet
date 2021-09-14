@@ -10,7 +10,7 @@ declare -r DOCFX_VERSION=2.57.2
 declare -r DOTCOVER_VERSION=2019.3.4
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.15.8
-declare -r GRPC_VERSION=2.36.4
+declare -r GRPC_VERSION=2.39.1
 
 # Tools that only run under Windows (at the moment)
 declare -r DOCFX=$TOOL_PACKAGES/docfx.$DOCFX_VERSION/docfx.exe
