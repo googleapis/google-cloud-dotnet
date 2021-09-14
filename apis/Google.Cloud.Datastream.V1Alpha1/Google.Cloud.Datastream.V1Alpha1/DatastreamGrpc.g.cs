@@ -30,6 +30,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
   {
     static readonly string __ServiceName = "google.cloud.datastream.v1alpha1.Datastream";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,39 +63,72 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest> __Marshaller_google_cloud_datastream_v1alpha1_ListConnectionProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse> __Marshaller_google_cloud_datastream_v1alpha1_ListConnectionProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest> __Marshaller_google_cloud_datastream_v1alpha1_GetConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile> __Marshaller_google_cloud_datastream_v1alpha1_ConnectionProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest> __Marshaller_google_cloud_datastream_v1alpha1_CreateConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest> __Marshaller_google_cloud_datastream_v1alpha1_UpdateConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest> __Marshaller_google_cloud_datastream_v1alpha1_DeleteConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest> __Marshaller_google_cloud_datastream_v1alpha1_DiscoverConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse> __Marshaller_google_cloud_datastream_v1alpha1_DiscoverConnectionProfileResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest> __Marshaller_google_cloud_datastream_v1alpha1_ListStreamsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse> __Marshaller_google_cloud_datastream_v1alpha1_ListStreamsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest> __Marshaller_google_cloud_datastream_v1alpha1_GetStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.Stream> __Marshaller_google_cloud_datastream_v1alpha1_Stream = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.Stream.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest> __Marshaller_google_cloud_datastream_v1alpha1_CreateStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest> __Marshaller_google_cloud_datastream_v1alpha1_UpdateStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest> __Marshaller_google_cloud_datastream_v1alpha1_DeleteStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest> __Marshaller_google_cloud_datastream_v1alpha1_FetchErrorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest> __Marshaller_google_cloud_datastream_v1alpha1_FetchStaticIpsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse> __Marshaller_google_cloud_datastream_v1alpha1_FetchStaticIpsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest> __Marshaller_google_cloud_datastream_v1alpha1_CreatePrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest> __Marshaller_google_cloud_datastream_v1alpha1_GetPrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection> __Marshaller_google_cloud_datastream_v1alpha1_PrivateConnection = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest> __Marshaller_google_cloud_datastream_v1alpha1_ListPrivateConnectionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse> __Marshaller_google_cloud_datastream_v1alpha1_ListPrivateConnectionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest> __Marshaller_google_cloud_datastream_v1alpha1_DeletePrivateConnectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest> __Marshaller_google_cloud_datastream_v1alpha1_CreateRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest> __Marshaller_google_cloud_datastream_v1alpha1_GetRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.Route> __Marshaller_google_cloud_datastream_v1alpha1_Route = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.Route.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest> __Marshaller_google_cloud_datastream_v1alpha1_ListRoutesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse> __Marshaller_google_cloud_datastream_v1alpha1_ListRoutesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest> __Marshaller_google_cloud_datastream_v1alpha1_DeleteRouteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest, global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse> __Method_ListConnectionProfiles = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest, global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +136,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_ListConnectionProfilesRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_ListConnectionProfilesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest, global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile> __Method_GetConnectionProfile = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest, global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +144,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_GetConnectionProfileRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_ConnectionProfile);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest, global::Google.LongRunning.Operation> __Method_CreateConnectionProfile = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +152,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_CreateConnectionProfileRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest, global::Google.LongRunning.Operation> __Method_UpdateConnectionProfile = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +160,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_UpdateConnectionProfileRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest, global::Google.LongRunning.Operation> __Method_DeleteConnectionProfile = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +168,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_DeleteConnectionProfileRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest, global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse> __Method_DiscoverConnectionProfile = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest, global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +176,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_DiscoverConnectionProfileRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_DiscoverConnectionProfileResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest, global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse> __Method_ListStreams = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest, global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +184,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_ListStreamsRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_ListStreamsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest, global::Google.Cloud.Datastream.V1Alpha1.Stream> __Method_GetStream = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest, global::Google.Cloud.Datastream.V1Alpha1.Stream>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +192,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_GetStreamRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_Stream);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest, global::Google.LongRunning.Operation> __Method_CreateStream = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +200,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_CreateStreamRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest, global::Google.LongRunning.Operation> __Method_UpdateStream = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +208,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_UpdateStreamRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest, global::Google.LongRunning.Operation> __Method_DeleteStream = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -170,6 +216,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_DeleteStreamRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest, global::Google.LongRunning.Operation> __Method_FetchErrors = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -177,6 +224,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_FetchErrorsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest, global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse> __Method_FetchStaticIps = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest, global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -184,6 +232,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_FetchStaticIpsRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_FetchStaticIpsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation> __Method_CreatePrivateConnection = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -191,6 +240,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_CreatePrivateConnectionRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest, global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection> __Method_GetPrivateConnection = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest, global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -198,6 +248,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_GetPrivateConnectionRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_PrivateConnection);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest, global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse> __Method_ListPrivateConnections = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest, global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -205,6 +256,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_ListPrivateConnectionsRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_ListPrivateConnectionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation> __Method_DeletePrivateConnection = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -212,6 +264,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_DeletePrivateConnectionRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest, global::Google.LongRunning.Operation> __Method_CreateRoute = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -219,6 +272,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_CreateRouteRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest, global::Google.Cloud.Datastream.V1Alpha1.Route> __Method_GetRoute = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest, global::Google.Cloud.Datastream.V1Alpha1.Route>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -226,6 +280,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_GetRouteRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_Route);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest, global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse> __Method_ListRoutes = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest, global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -233,6 +288,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         __Marshaller_google_cloud_datastream_v1alpha1_ListRoutesRequest,
         __Marshaller_google_cloud_datastream_v1alpha1_ListRoutesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest, global::Google.LongRunning.Operation> __Method_DeleteRoute = new grpc::Method<global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -257,6 +313,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse> ListConnectionProfiles(global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -268,6 +325,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile> GetConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -279,6 +337,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -290,6 +349,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -301,6 +361,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -315,6 +376,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse> DiscoverConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -326,6 +388,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse> ListStreams(global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -337,6 +400,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.Stream> GetStream(global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -348,6 +412,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateStream(global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -359,6 +424,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateStream(global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -370,6 +436,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteStream(global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -381,6 +448,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> FetchErrors(global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -394,6 +462,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse> FetchStaticIps(global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -405,6 +474,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreatePrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -416,6 +486,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection> GetPrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -428,6 +499,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse> ListPrivateConnections(global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -439,6 +511,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeletePrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -451,6 +524,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRoute(global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -462,6 +536,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.Route> GetRoute(global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -474,6 +549,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse> ListRoutes(global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -485,6 +561,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRoute(global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -497,20 +574,24 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     {
       /// <summary>Creates a new client for Datastream</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DatastreamClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Datastream that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DatastreamClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DatastreamClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DatastreamClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -524,6 +605,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse ListConnectionProfiles(global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConnectionProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -535,6 +617,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse ListConnectionProfiles(global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListConnectionProfiles, null, options, request);
@@ -548,6 +631,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse> ListConnectionProfilesAsync(global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConnectionProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -559,6 +643,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse> ListConnectionProfilesAsync(global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConnectionProfiles, null, options, request);
@@ -571,6 +656,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile GetConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -581,6 +667,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile GetConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetConnectionProfile, null, options, request);
@@ -593,6 +680,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile> GetConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -603,6 +691,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ConnectionProfile> GetConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.GetConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConnectionProfile, null, options, request);
@@ -615,6 +704,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -625,6 +715,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateConnectionProfile, null, options, request);
@@ -637,6 +728,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -647,6 +739,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.CreateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConnectionProfile, null, options, request);
@@ -659,6 +752,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -669,6 +763,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateConnectionProfile, null, options, request);
@@ -681,6 +776,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -691,6 +787,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.UpdateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateConnectionProfile, null, options, request);
@@ -703,6 +800,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -713,6 +811,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteConnectionProfile, null, options, request);
@@ -725,6 +824,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -735,6 +835,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.DeleteConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConnectionProfile, null, options, request);
@@ -750,6 +851,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse DiscoverConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DiscoverConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -763,6 +865,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse DiscoverConnectionProfile(global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DiscoverConnectionProfile, null, options, request);
@@ -778,6 +881,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse> DiscoverConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DiscoverConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -791,6 +895,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileResponse> DiscoverConnectionProfileAsync(global::Google.Cloud.Datastream.V1Alpha1.DiscoverConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DiscoverConnectionProfile, null, options, request);
@@ -803,6 +908,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse ListStreams(global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListStreams(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -813,6 +919,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse ListStreams(global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListStreams, null, options, request);
@@ -825,6 +932,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse> ListStreamsAsync(global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListStreamsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -835,6 +943,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListStreamsResponse> ListStreamsAsync(global::Google.Cloud.Datastream.V1Alpha1.ListStreamsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListStreams, null, options, request);
@@ -847,6 +956,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.Stream GetStream(global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -857,6 +967,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.Stream GetStream(global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetStream, null, options, request);
@@ -869,6 +980,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.Stream> GetStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -879,6 +991,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.Stream> GetStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.GetStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetStream, null, options, request);
@@ -891,6 +1004,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateStream(global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -901,6 +1015,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateStream(global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateStream, null, options, request);
@@ -913,6 +1028,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -923,6 +1039,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.CreateStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateStream, null, options, request);
@@ -935,6 +1052,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateStream(global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -945,6 +1063,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateStream(global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateStream, null, options, request);
@@ -957,6 +1076,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -967,6 +1087,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.UpdateStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateStream, null, options, request);
@@ -979,6 +1100,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteStream(global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -989,6 +1111,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteStream(global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteStream, null, options, request);
@@ -1001,6 +1124,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1011,6 +1135,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteStreamAsync(global::Google.Cloud.Datastream.V1Alpha1.DeleteStreamRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStream, null, options, request);
@@ -1023,6 +1148,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation FetchErrors(global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchErrors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1033,6 +1159,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation FetchErrors(global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_FetchErrors, null, options, request);
@@ -1045,6 +1172,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> FetchErrorsAsync(global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchErrorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1055,6 +1183,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> FetchErrorsAsync(global::Google.Cloud.Datastream.V1Alpha1.FetchErrorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchErrors, null, options, request);
@@ -1069,6 +1198,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse FetchStaticIps(global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchStaticIps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1081,6 +1211,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse FetchStaticIps(global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_FetchStaticIps, null, options, request);
@@ -1095,6 +1226,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse> FetchStaticIpsAsync(global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchStaticIpsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1107,6 +1239,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsResponse> FetchStaticIpsAsync(global::Google.Cloud.Datastream.V1Alpha1.FetchStaticIpsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchStaticIps, null, options, request);
@@ -1119,6 +1252,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreatePrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1129,6 +1263,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreatePrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePrivateConnection, null, options, request);
@@ -1141,6 +1276,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePrivateConnectionAsync(global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1151,6 +1287,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreatePrivateConnectionAsync(global::Google.Cloud.Datastream.V1Alpha1.CreatePrivateConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePrivateConnection, null, options, request);
@@ -1163,6 +1300,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection GetPrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1173,6 +1311,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection GetPrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetPrivateConnection, null, options, request);
@@ -1185,6 +1324,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection> GetPrivateConnectionAsync(global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1195,6 +1335,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection> GetPrivateConnectionAsync(global::Google.Cloud.Datastream.V1Alpha1.GetPrivateConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPrivateConnection, null, options, request);
@@ -1208,6 +1349,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse ListPrivateConnections(global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPrivateConnections(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1219,6 +1361,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse ListPrivateConnections(global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListPrivateConnections, null, options, request);
@@ -1232,6 +1375,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse> ListPrivateConnectionsAsync(global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPrivateConnectionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1243,6 +1387,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsResponse> ListPrivateConnectionsAsync(global::Google.Cloud.Datastream.V1Alpha1.ListPrivateConnectionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPrivateConnections, null, options, request);
@@ -1255,6 +1400,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeletePrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePrivateConnection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1265,6 +1411,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeletePrivateConnection(global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePrivateConnection, null, options, request);
@@ -1277,6 +1424,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePrivateConnectionAsync(global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePrivateConnectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1287,6 +1435,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeletePrivateConnectionAsync(global::Google.Cloud.Datastream.V1Alpha1.DeletePrivateConnectionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePrivateConnection, null, options, request);
@@ -1300,6 +1449,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateRoute(global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1311,6 +1461,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateRoute(global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateRoute, null, options, request);
@@ -1324,6 +1475,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRouteAsync(global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1335,6 +1487,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRouteAsync(global::Google.Cloud.Datastream.V1Alpha1.CreateRouteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRoute, null, options, request);
@@ -1347,6 +1500,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.Route GetRoute(global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1357,6 +1511,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.Route GetRoute(global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRoute, null, options, request);
@@ -1369,6 +1524,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.Route> GetRouteAsync(global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1379,6 +1535,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.Route> GetRouteAsync(global::Google.Cloud.Datastream.V1Alpha1.GetRouteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRoute, null, options, request);
@@ -1392,6 +1549,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse ListRoutes(global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRoutes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1403,6 +1561,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse ListRoutes(global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListRoutes, null, options, request);
@@ -1416,6 +1575,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse> ListRoutesAsync(global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRoutesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1427,6 +1587,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Datastream.V1Alpha1.ListRoutesResponse> ListRoutesAsync(global::Google.Cloud.Datastream.V1Alpha1.ListRoutesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListRoutes, null, options, request);
@@ -1439,6 +1600,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteRoute(global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1449,6 +1611,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteRoute(global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteRoute, null, options, request);
@@ -1461,6 +1624,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRouteAsync(global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1471,11 +1635,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRouteAsync(global::Google.Cloud.Datastream.V1Alpha1.DeleteRouteRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRoute, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatastreamClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DatastreamClient(configuration);
@@ -1484,6 +1650,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DatastreamBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1514,6 +1681,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DatastreamBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListConnectionProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesRequest, global::Google.Cloud.Datastream.V1Alpha1.ListConnectionProfilesResponse>(serviceImpl.ListConnectionProfiles));

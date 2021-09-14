@@ -30,6 +30,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.recommendationengine.v1beta1.CatalogService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,17 +63,28 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_CreateCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> __Marshaller_google_cloud_recommendationengine_v1beta1_CatalogItem = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_GetCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse> __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_UpdateCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_DeleteCatalogItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest> __Marshaller_google_cloud_recommendationengine_v1beta1_ImportCatalogItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> __Method_CreateCatalogItem = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -78,6 +92,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
         __Marshaller_google_cloud_recommendationengine_v1beta1_CreateCatalogItemRequest,
         __Marshaller_google_cloud_recommendationengine_v1beta1_CatalogItem);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> __Method_GetCatalogItem = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -85,6 +100,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
         __Marshaller_google_cloud_recommendationengine_v1beta1_GetCatalogItemRequest,
         __Marshaller_google_cloud_recommendationengine_v1beta1_CatalogItem);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse> __Method_ListCatalogItems = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +108,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
         __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsRequest,
         __Marshaller_google_cloud_recommendationengine_v1beta1_ListCatalogItemsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> __Method_UpdateCatalogItem = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +116,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
         __Marshaller_google_cloud_recommendationengine_v1beta1_UpdateCatalogItemRequest,
         __Marshaller_google_cloud_recommendationengine_v1beta1_CatalogItem);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCatalogItem = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +124,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
         __Marshaller_google_cloud_recommendationengine_v1beta1_DeleteCatalogItemRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest, global::Google.LongRunning.Operation> __Method_ImportCatalogItems = new grpc::Method<global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -129,6 +148,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> CreateCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -140,6 +160,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> GetCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -151,6 +172,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse> ListCatalogItems(global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -163,6 +185,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> UpdateCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -174,6 +197,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -190,6 +214,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportCatalogItems(global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -202,20 +227,24 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     {
       /// <summary>Creates a new client for CatalogService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CatalogServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CatalogService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CatalogServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CatalogServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CatalogServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -228,6 +257,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem CreateCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCatalogItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -238,6 +268,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem CreateCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCatalogItem, null, options, request);
@@ -250,6 +281,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> CreateCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCatalogItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -260,6 +292,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> CreateCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCatalogItem, null, options, request);
@@ -272,6 +305,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem GetCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCatalogItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -282,6 +316,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem GetCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCatalogItem, null, options, request);
@@ -294,6 +329,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> GetCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCatalogItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -304,6 +340,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> GetCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.GetCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCatalogItem, null, options, request);
@@ -316,6 +353,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse ListCatalogItems(global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCatalogItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -326,6 +364,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse ListCatalogItems(global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCatalogItems, null, options, request);
@@ -338,6 +377,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse> ListCatalogItemsAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCatalogItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -348,6 +388,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsResponse> ListCatalogItemsAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.ListCatalogItemsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCatalogItems, null, options, request);
@@ -361,6 +402,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem UpdateCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCatalogItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -372,6 +414,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem UpdateCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCatalogItem, null, options, request);
@@ -385,6 +428,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> UpdateCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCatalogItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -396,6 +440,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> UpdateCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.UpdateCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCatalogItem, null, options, request);
@@ -408,6 +453,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCatalogItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -418,6 +464,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCatalogItem(global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCatalogItem, null, options, request);
@@ -430,6 +477,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCatalogItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -440,6 +488,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCatalogItemAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.DeleteCatalogItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCatalogItem, null, options, request);
@@ -457,6 +506,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportCatalogItems(global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportCatalogItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -472,6 +522,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportCatalogItems(global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportCatalogItems, null, options, request);
@@ -489,6 +540,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportCatalogItemsAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportCatalogItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -504,11 +556,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportCatalogItemsAsync(global::Google.Cloud.RecommendationEngine.V1Beta1.ImportCatalogItemsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportCatalogItems, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CatalogServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CatalogServiceClient(configuration);
@@ -517,6 +571,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CatalogServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -532,6 +587,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CatalogServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateCatalogItem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecommendationEngine.V1Beta1.CreateCatalogItemRequest, global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem>(serviceImpl.CreateCatalogItem));

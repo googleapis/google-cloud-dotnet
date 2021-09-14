@@ -37,6 +37,7 @@ namespace Google.Cloud.CloudBuild.V1 {
   {
     static readonly string __ServiceName = "google.devtools.cloudbuild.v1.CloudBuild";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -51,11 +52,13 @@ namespace Google.Cloud.CloudBuild.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -67,34 +70,62 @@ namespace Google.Cloud.CloudBuild.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CreateBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_CreateBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CreateBuildRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_GetBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.GetBuildRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.Build> __Marshaller_google_devtools_cloudbuild_v1_Build = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.Build.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListBuildsRequest> __Marshaller_google_devtools_cloudbuild_v1_ListBuildsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListBuildsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListBuildsResponse> __Marshaller_google_devtools_cloudbuild_v1_ListBuildsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListBuildsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CancelBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_CancelBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CancelBuildRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.RetryBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_RetryBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.RetryBuildRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest> __Marshaller_google_devtools_cloudbuild_v1_ApproveBuildRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_CreateBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Marshaller_google_devtools_cloudbuild_v1_BuildTrigger = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.BuildTrigger.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_GetBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest> __Marshaller_google_devtools_cloudbuild_v1_ListBuildTriggersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse> __Marshaller_google_devtools_cloudbuild_v1_ListBuildTriggersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_DeleteBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_UpdateBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest> __Marshaller_google_devtools_cloudbuild_v1_RunBuildTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest> __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_CreateWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_GetWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.WorkerPool> __Marshaller_google_devtools_cloudbuild_v1_WorkerPool = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.WorkerPool.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_DeleteWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest> __Marshaller_google_devtools_cloudbuild_v1_UpdateWorkerPoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest> __Marshaller_google_devtools_cloudbuild_v1_ListWorkerPoolsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> __Marshaller_google_devtools_cloudbuild_v1_ListWorkerPoolsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildRequest, global::Google.LongRunning.Operation> __Method_CreateBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -102,6 +133,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_CreateBuildRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.GetBuildRequest, global::Google.Cloud.CloudBuild.V1.Build> __Method_GetBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.GetBuildRequest, global::Google.Cloud.CloudBuild.V1.Build>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -109,6 +141,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_GetBuildRequest,
         __Marshaller_google_devtools_cloudbuild_v1_Build);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ListBuildsRequest, global::Google.Cloud.CloudBuild.V1.ListBuildsResponse> __Method_ListBuilds = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ListBuildsRequest, global::Google.Cloud.CloudBuild.V1.ListBuildsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -116,6 +149,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_ListBuildsRequest,
         __Marshaller_google_devtools_cloudbuild_v1_ListBuildsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CancelBuildRequest, global::Google.Cloud.CloudBuild.V1.Build> __Method_CancelBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CancelBuildRequest, global::Google.Cloud.CloudBuild.V1.Build>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -123,6 +157,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_CancelBuildRequest,
         __Marshaller_google_devtools_cloudbuild_v1_Build);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.RetryBuildRequest, global::Google.LongRunning.Operation> __Method_RetryBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.RetryBuildRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -130,6 +165,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_RetryBuildRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation> __Method_ApproveBuild = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +173,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_ApproveBuildRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Method_CreateBuildTrigger = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -144,6 +181,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_CreateBuildTriggerRequest,
         __Marshaller_google_devtools_cloudbuild_v1_BuildTrigger);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Method_GetBuildTrigger = new grpc::Method<global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -151,6 +189,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_GetBuildTriggerRequest,
         __Marshaller_google_devtools_cloudbuild_v1_BuildTrigger);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest, global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse> __Method_ListBuildTriggers = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest, global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -158,6 +197,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_ListBuildTriggersRequest,
         __Marshaller_google_devtools_cloudbuild_v1_ListBuildTriggersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBuildTrigger = new grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -165,6 +205,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_DeleteBuildTriggerRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger> __Method_UpdateBuildTrigger = new grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest, global::Google.Cloud.CloudBuild.V1.BuildTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -172,6 +213,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_UpdateBuildTriggerRequest,
         __Marshaller_google_devtools_cloudbuild_v1_BuildTrigger);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest, global::Google.LongRunning.Operation> __Method_RunBuildTrigger = new grpc::Method<global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -179,6 +221,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_RunBuildTriggerRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> __Method_ReceiveTriggerWebhook = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest, global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -186,6 +229,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookRequest,
         __Marshaller_google_devtools_cloudbuild_v1_ReceiveTriggerWebhookResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.LongRunning.Operation> __Method_CreateWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -193,6 +237,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_CreateWorkerPoolRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool> __Method_GetWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest, global::Google.Cloud.CloudBuild.V1.WorkerPool>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -200,6 +245,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_GetWorkerPoolRequest,
         __Marshaller_google_devtools_cloudbuild_v1_WorkerPool);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.LongRunning.Operation> __Method_DeleteWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -207,6 +253,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_DeleteWorkerPoolRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.LongRunning.Operation> __Method_UpdateWorkerPool = new grpc::Method<global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -214,6 +261,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         __Marshaller_google_devtools_cloudbuild_v1_UpdateWorkerPoolRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> __Method_ListWorkerPools = new grpc::Method<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest, global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -241,6 +289,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBuild(global::Google.Cloud.CloudBuild.V1.CreateBuildRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -255,6 +304,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.Build> GetBuild(global::Google.Cloud.CloudBuild.V1.GetBuildRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -269,6 +319,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.ListBuildsResponse> ListBuilds(global::Google.Cloud.CloudBuild.V1.ListBuildsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -280,6 +331,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.Build> CancelBuild(global::Google.Cloud.CloudBuild.V1.CancelBuildRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -317,6 +369,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RetryBuild(global::Google.Cloud.CloudBuild.V1.RetryBuildRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -333,6 +386,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -346,6 +400,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.BuildTrigger> CreateBuildTrigger(global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -359,6 +414,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.BuildTrigger> GetBuildTrigger(global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -372,6 +428,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse> ListBuildTriggers(global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -385,6 +442,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBuildTrigger(global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -398,6 +456,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.BuildTrigger> UpdateBuildTrigger(global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -409,6 +468,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunBuildTrigger(global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -421,6 +481,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> ReceiveTriggerWebhook(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -432,6 +493,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -443,6 +505,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.WorkerPool> GetWorkerPool(global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -454,6 +517,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -465,6 +529,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -476,6 +541,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> ListWorkerPools(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -488,20 +554,24 @@ namespace Google.Cloud.CloudBuild.V1 {
     {
       /// <summary>Creates a new client for CloudBuild</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudBuildClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudBuild that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudBuildClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudBuildClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudBuildClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -518,6 +588,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateBuild(global::Google.Cloud.CloudBuild.V1.CreateBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBuild(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -532,6 +603,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateBuild(global::Google.Cloud.CloudBuild.V1.CreateBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBuild, null, options, request);
@@ -548,6 +620,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBuildAsync(global::Google.Cloud.CloudBuild.V1.CreateBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBuildAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -562,6 +635,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBuildAsync(global::Google.Cloud.CloudBuild.V1.CreateBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBuild, null, options, request);
@@ -577,6 +651,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.Build GetBuild(global::Google.Cloud.CloudBuild.V1.GetBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBuild(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -590,6 +665,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.Build GetBuild(global::Google.Cloud.CloudBuild.V1.GetBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBuild, null, options, request);
@@ -605,6 +681,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.Build> GetBuildAsync(global::Google.Cloud.CloudBuild.V1.GetBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBuildAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -618,6 +695,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.Build> GetBuildAsync(global::Google.Cloud.CloudBuild.V1.GetBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBuild, null, options, request);
@@ -633,6 +711,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ListBuildsResponse ListBuilds(global::Google.Cloud.CloudBuild.V1.ListBuildsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBuilds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -646,6 +725,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ListBuildsResponse ListBuilds(global::Google.Cloud.CloudBuild.V1.ListBuildsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListBuilds, null, options, request);
@@ -661,6 +741,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ListBuildsResponse> ListBuildsAsync(global::Google.Cloud.CloudBuild.V1.ListBuildsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBuildsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -674,6 +755,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ListBuildsResponse> ListBuildsAsync(global::Google.Cloud.CloudBuild.V1.ListBuildsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBuilds, null, options, request);
@@ -686,6 +768,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.Build CancelBuild(global::Google.Cloud.CloudBuild.V1.CancelBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelBuild(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -696,6 +779,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.Build CancelBuild(global::Google.Cloud.CloudBuild.V1.CancelBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CancelBuild, null, options, request);
@@ -708,6 +792,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.Build> CancelBuildAsync(global::Google.Cloud.CloudBuild.V1.CancelBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelBuildAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -718,6 +803,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.Build> CancelBuildAsync(global::Google.Cloud.CloudBuild.V1.CancelBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelBuild, null, options, request);
@@ -756,6 +842,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RetryBuild(global::Google.Cloud.CloudBuild.V1.RetryBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RetryBuild(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -792,6 +879,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RetryBuild(global::Google.Cloud.CloudBuild.V1.RetryBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RetryBuild, null, options, request);
@@ -830,6 +918,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RetryBuildAsync(global::Google.Cloud.CloudBuild.V1.RetryBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RetryBuildAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -866,6 +955,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RetryBuildAsync(global::Google.Cloud.CloudBuild.V1.RetryBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RetryBuild, null, options, request);
@@ -883,6 +973,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ApproveBuild(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -898,6 +989,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ApproveBuild(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ApproveBuild, null, options, request);
@@ -915,6 +1007,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApproveBuildAsync(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ApproveBuildAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -930,6 +1023,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ApproveBuildAsync(global::Google.Cloud.CloudBuild.V1.ApproveBuildRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ApproveBuild, null, options, request);
@@ -944,6 +1038,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.BuildTrigger CreateBuildTrigger(global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBuildTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -956,6 +1051,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.BuildTrigger CreateBuildTrigger(global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBuildTrigger, null, options, request);
@@ -970,6 +1066,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.BuildTrigger> CreateBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBuildTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -982,6 +1079,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.BuildTrigger> CreateBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.CreateBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBuildTrigger, null, options, request);
@@ -996,6 +1094,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.BuildTrigger GetBuildTrigger(global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBuildTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1008,6 +1107,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.BuildTrigger GetBuildTrigger(global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBuildTrigger, null, options, request);
@@ -1022,6 +1122,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.BuildTrigger> GetBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBuildTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1034,6 +1135,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.BuildTrigger> GetBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.GetBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBuildTrigger, null, options, request);
@@ -1048,6 +1150,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse ListBuildTriggers(global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBuildTriggers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1060,6 +1163,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse ListBuildTriggers(global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListBuildTriggers, null, options, request);
@@ -1074,6 +1178,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse> ListBuildTriggersAsync(global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBuildTriggersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1086,6 +1191,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ListBuildTriggersResponse> ListBuildTriggersAsync(global::Google.Cloud.CloudBuild.V1.ListBuildTriggersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBuildTriggers, null, options, request);
@@ -1100,6 +1206,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBuildTrigger(global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteBuildTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1112,6 +1219,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBuildTrigger(global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteBuildTrigger, null, options, request);
@@ -1126,6 +1234,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteBuildTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1138,6 +1247,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.DeleteBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBuildTrigger, null, options, request);
@@ -1152,6 +1262,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.BuildTrigger UpdateBuildTrigger(global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBuildTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1164,6 +1275,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.BuildTrigger UpdateBuildTrigger(global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateBuildTrigger, null, options, request);
@@ -1178,6 +1290,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.BuildTrigger> UpdateBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBuildTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1190,6 +1303,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.BuildTrigger> UpdateBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.UpdateBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBuildTrigger, null, options, request);
@@ -1202,6 +1316,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RunBuildTrigger(global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunBuildTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1212,6 +1327,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RunBuildTrigger(global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunBuildTrigger, null, options, request);
@@ -1224,6 +1340,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunBuildTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1234,6 +1351,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunBuildTriggerAsync(global::Google.Cloud.CloudBuild.V1.RunBuildTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunBuildTrigger, null, options, request);
@@ -1247,6 +1365,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse ReceiveTriggerWebhook(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReceiveTriggerWebhook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1258,6 +1377,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse ReceiveTriggerWebhook(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReceiveTriggerWebhook, null, options, request);
@@ -1271,6 +1391,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> ReceiveTriggerWebhookAsync(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReceiveTriggerWebhookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1282,6 +1403,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookResponse> ReceiveTriggerWebhookAsync(global::Google.Cloud.CloudBuild.V1.ReceiveTriggerWebhookRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReceiveTriggerWebhook, null, options, request);
@@ -1294,6 +1416,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1304,6 +1427,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateWorkerPool(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateWorkerPool, null, options, request);
@@ -1316,6 +1440,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1326,6 +1451,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.CreateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateWorkerPool, null, options, request);
@@ -1338,6 +1464,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.WorkerPool GetWorkerPool(global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1348,6 +1475,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.WorkerPool GetWorkerPool(global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetWorkerPool, null, options, request);
@@ -1360,6 +1488,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.WorkerPool> GetWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1370,6 +1499,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.WorkerPool> GetWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.GetWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetWorkerPool, null, options, request);
@@ -1382,6 +1512,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1392,6 +1523,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteWorkerPool(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteWorkerPool, null, options, request);
@@ -1404,6 +1536,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1414,6 +1547,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.DeleteWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteWorkerPool, null, options, request);
@@ -1426,6 +1560,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkerPool(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1436,6 +1571,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateWorkerPool(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateWorkerPool, null, options, request);
@@ -1448,6 +1584,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateWorkerPoolAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1458,6 +1595,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateWorkerPoolAsync(global::Google.Cloud.CloudBuild.V1.UpdateWorkerPoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWorkerPool, null, options, request);
@@ -1470,6 +1608,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse ListWorkerPools(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkerPools(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1480,6 +1619,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse ListWorkerPools(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListWorkerPools, null, options, request);
@@ -1492,6 +1632,7 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> ListWorkerPoolsAsync(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkerPoolsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1502,11 +1643,13 @@ namespace Google.Cloud.CloudBuild.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsResponse> ListWorkerPoolsAsync(global::Google.Cloud.CloudBuild.V1.ListWorkerPoolsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkerPools, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudBuildClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CloudBuildClient(configuration);
@@ -1515,6 +1658,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CloudBuildBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1542,6 +1686,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CloudBuildBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateBuild, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudBuild.V1.CreateBuildRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBuild));

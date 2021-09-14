@@ -33,6 +33,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
   {
     static readonly string __ServiceName = "google.cloud.osconfig.v1alpha.OsConfigZonalService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -47,11 +48,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -63,29 +66,52 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest> __Marshaller_google_cloud_osconfig_v1alpha_CreateOSPolicyAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest> __Marshaller_google_cloud_osconfig_v1alpha_UpdateOSPolicyAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest> __Marshaller_google_cloud_osconfig_v1alpha_GetOSPolicyAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment> __Marshaller_google_cloud_osconfig_v1alpha_OSPolicyAssignment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest> __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse> __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest> __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse> __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest> __Marshaller_google_cloud_osconfig_v1alpha_DeleteOSPolicyAssignmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest> __Marshaller_google_cloud_osconfig_v1alpha_GetInstanceOSPoliciesComplianceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> __Marshaller_google_cloud_osconfig_v1alpha_InstanceOSPoliciesCompliance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest> __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest> __Marshaller_google_cloud_osconfig_v1alpha_GetInventoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.Inventory> __Marshaller_google_cloud_osconfig_v1alpha_Inventory = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.Inventory.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest> __Marshaller_google_cloud_osconfig_v1alpha_ListInventoriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse> __Marshaller_google_cloud_osconfig_v1alpha_ListInventoriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest> __Marshaller_google_cloud_osconfig_v1alpha_GetVulnerabilityReportRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport> __Marshaller_google_cloud_osconfig_v1alpha_VulnerabilityReport = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest> __Marshaller_google_cloud_osconfig_v1alpha_ListVulnerabilityReportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse> __Marshaller_google_cloud_osconfig_v1alpha_ListVulnerabilityReportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest, global::Google.LongRunning.Operation> __Method_CreateOSPolicyAssignment = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -93,6 +119,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_CreateOSPolicyAssignmentRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest, global::Google.LongRunning.Operation> __Method_UpdateOSPolicyAssignment = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +127,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_UpdateOSPolicyAssignmentRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest, global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment> __Method_GetOSPolicyAssignment = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest, global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +135,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_GetOSPolicyAssignmentRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_OSPolicyAssignment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse> __Method_ListOSPolicyAssignments = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +143,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentsRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse> __Method_ListOSPolicyAssignmentRevisions = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +151,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentRevisionsRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_ListOSPolicyAssignmentRevisionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest, global::Google.LongRunning.Operation> __Method_DeleteOSPolicyAssignment = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +159,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_DeleteOSPolicyAssignmentRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest, global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> __Method_GetInstanceOSPoliciesCompliance = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest, global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +167,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_GetInstanceOSPoliciesComplianceRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_InstanceOSPoliciesCompliance);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest, global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> __Method_ListInstanceOSPoliciesCompliances = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest, global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +175,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_ListInstanceOSPoliciesCompliancesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest, global::Google.Cloud.OsConfig.V1Alpha.Inventory> __Method_GetInventory = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest, global::Google.Cloud.OsConfig.V1Alpha.Inventory>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +183,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_GetInventoryRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_Inventory);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest, global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse> __Method_ListInventories = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest, global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +191,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_ListInventoriesRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_ListInventoriesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest, global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport> __Method_GetVulnerabilityReport = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest, global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +199,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         __Marshaller_google_cloud_osconfig_v1alpha_GetVulnerabilityReportRequest,
         __Marshaller_google_cloud_osconfig_v1alpha_VulnerabilityReport);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse> __Method_ListVulnerabilityReports = new grpc::Method<global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest, global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -194,6 +231,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -213,6 +251,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -228,6 +267,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment> GetOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -241,6 +281,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse> ListOSPolicyAssignments(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -252,6 +293,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse> ListOSPolicyAssignmentRevisions(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -274,6 +316,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -286,6 +329,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> GetInstanceOSPoliciesCompliance(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -298,6 +342,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> ListInstanceOSPoliciesCompliances(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -310,6 +355,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.Inventory> GetInventory(global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -321,6 +367,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse> ListInventories(global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -333,6 +380,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport> GetVulnerabilityReport(global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -344,6 +392,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse> ListVulnerabilityReports(global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -356,20 +405,24 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     {
       /// <summary>Creates a new client for OsConfigZonalService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public OsConfigZonalServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for OsConfigZonalService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public OsConfigZonalServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected OsConfigZonalServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected OsConfigZonalServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -390,6 +443,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateOSPolicyAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -408,6 +462,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateOSPolicyAssignment, null, options, request);
@@ -428,6 +483,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateOSPolicyAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -446,6 +502,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateOSPolicyAssignment, null, options, request);
@@ -466,6 +523,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateOSPolicyAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -484,6 +542,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateOSPolicyAssignment, null, options, request);
@@ -504,6 +563,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateOSPolicyAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -522,6 +582,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.UpdateOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateOSPolicyAssignment, null, options, request);
@@ -538,6 +599,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment GetOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetOSPolicyAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -552,6 +614,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment GetOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetOSPolicyAssignment, null, options, request);
@@ -568,6 +631,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment> GetOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetOSPolicyAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -582,6 +646,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyAssignment> GetOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.GetOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetOSPolicyAssignment, null, options, request);
@@ -596,6 +661,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse ListOSPolicyAssignments(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOSPolicyAssignments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -608,6 +674,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse ListOSPolicyAssignments(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListOSPolicyAssignments, null, options, request);
@@ -622,6 +689,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse> ListOSPolicyAssignmentsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOSPolicyAssignmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -634,6 +702,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsResponse> ListOSPolicyAssignmentsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOSPolicyAssignments, null, options, request);
@@ -646,6 +715,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse ListOSPolicyAssignmentRevisions(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOSPolicyAssignmentRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -656,6 +726,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse ListOSPolicyAssignmentRevisions(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListOSPolicyAssignmentRevisions, null, options, request);
@@ -668,6 +739,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse> ListOSPolicyAssignmentRevisionsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListOSPolicyAssignmentRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -678,6 +750,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsResponse> ListOSPolicyAssignmentRevisionsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListOSPolicyAssignmentRevisionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOSPolicyAssignmentRevisions, null, options, request);
@@ -701,6 +774,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteOSPolicyAssignment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -722,6 +796,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteOSPolicyAssignment(global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteOSPolicyAssignment, null, options, request);
@@ -745,6 +820,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteOSPolicyAssignmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -766,6 +842,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteOSPolicyAssignmentAsync(global::Google.Cloud.OsConfig.V1Alpha.DeleteOSPolicyAssignmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteOSPolicyAssignment, null, options, request);
@@ -779,6 +856,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstanceOSPoliciesCompliance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -790,6 +868,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance GetInstanceOSPoliciesCompliance(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstanceOSPoliciesCompliance, null, options, request);
@@ -803,6 +882,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstanceOSPoliciesComplianceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -814,6 +894,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> GetInstanceOSPoliciesComplianceAsync(global::Google.Cloud.OsConfig.V1Alpha.GetInstanceOSPoliciesComplianceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstanceOSPoliciesCompliance, null, options, request);
@@ -827,6 +908,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse ListInstanceOSPoliciesCompliances(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstanceOSPoliciesCompliances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -838,6 +920,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse ListInstanceOSPoliciesCompliances(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstanceOSPoliciesCompliances, null, options, request);
@@ -851,6 +934,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> ListInstanceOSPoliciesCompliancesAsync(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstanceOSPoliciesCompliancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -862,6 +946,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesResponse> ListInstanceOSPoliciesCompliancesAsync(global::Google.Cloud.OsConfig.V1Alpha.ListInstanceOSPoliciesCompliancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstanceOSPoliciesCompliances, null, options, request);
@@ -875,6 +960,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.Inventory GetInventory(global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInventory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -886,6 +972,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.Inventory GetInventory(global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInventory, null, options, request);
@@ -899,6 +986,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.Inventory> GetInventoryAsync(global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInventoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -910,6 +998,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.Inventory> GetInventoryAsync(global::Google.Cloud.OsConfig.V1Alpha.GetInventoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInventory, null, options, request);
@@ -922,6 +1011,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse ListInventories(global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInventories(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -932,6 +1022,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse ListInventories(global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInventories, null, options, request);
@@ -944,6 +1035,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse> ListInventoriesAsync(global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInventoriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -954,6 +1046,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesResponse> ListInventoriesAsync(global::Google.Cloud.OsConfig.V1Alpha.ListInventoriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInventories, null, options, request);
@@ -967,6 +1060,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport GetVulnerabilityReport(global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetVulnerabilityReport(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -978,6 +1072,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport GetVulnerabilityReport(global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetVulnerabilityReport, null, options, request);
@@ -991,6 +1086,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport> GetVulnerabilityReportAsync(global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetVulnerabilityReportAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1002,6 +1098,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.VulnerabilityReport> GetVulnerabilityReportAsync(global::Google.Cloud.OsConfig.V1Alpha.GetVulnerabilityReportRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetVulnerabilityReport, null, options, request);
@@ -1014,6 +1111,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse ListVulnerabilityReports(global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListVulnerabilityReports(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1024,6 +1122,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse ListVulnerabilityReports(global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListVulnerabilityReports, null, options, request);
@@ -1036,6 +1135,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse> ListVulnerabilityReportsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListVulnerabilityReportsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1046,11 +1146,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsResponse> ListVulnerabilityReportsAsync(global::Google.Cloud.OsConfig.V1Alpha.ListVulnerabilityReportsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListVulnerabilityReports, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OsConfigZonalServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new OsConfigZonalServiceClient(configuration);
@@ -1059,6 +1161,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(OsConfigZonalServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1080,6 +1183,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, OsConfigZonalServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateOSPolicyAssignment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1Alpha.CreateOSPolicyAssignmentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateOSPolicyAssignment));

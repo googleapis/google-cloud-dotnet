@@ -31,6 +31,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.security.privateca.v1beta1.CertificateAuthorityService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,37 +64,68 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest> __Marshaller_google_cloud_security_privateca_v1beta1_CreateCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> __Marshaller_google_cloud_security_privateca_v1beta1_Certificate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest> __Marshaller_google_cloud_security_privateca_v1beta1_GetCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest> __Marshaller_google_cloud_security_privateca_v1beta1_RevokeCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest> __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ActivateCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_CreateCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_DisableCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_EnableCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest> __Marshaller_google_cloud_security_privateca_v1beta1_FetchCertificateAuthorityCsrRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse> __Marshaller_google_cloud_security_privateca_v1beta1_FetchCertificateAuthorityCsrResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_GetCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority> __Marshaller_google_cloud_security_privateca_v1beta1_CertificateAuthority = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateAuthoritiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateAuthoritiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_RestoreCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ScheduleDeleteCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest> __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateAuthorityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest> __Marshaller_google_cloud_security_privateca_v1beta1_GetCertificateRevocationListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList> __Marshaller_google_cloud_security_privateca_v1beta1_CertificateRevocationList = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateRevocationListsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse> __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateRevocationListsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest> __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateRevocationListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest> __Marshaller_google_cloud_security_privateca_v1beta1_GetReusableConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig> __Marshaller_google_cloud_security_privateca_v1beta1_ReusableConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest> __Marshaller_google_cloud_security_privateca_v1beta1_ListReusableConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse> __Marshaller_google_cloud_security_privateca_v1beta1_ListReusableConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> __Method_CreateCertificate = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +133,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_CreateCertificateRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_Certificate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> __Method_GetCertificate = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +141,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_GetCertificateRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_Certificate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse> __Method_ListCertificates = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +149,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificatesRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificatesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> __Method_RevokeCertificate = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +157,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_RevokeCertificateRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_Certificate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> __Method_UpdateCertificate = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -127,6 +165,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_Certificate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest, global::Google.LongRunning.Operation> __Method_ActivateCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,6 +173,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_ActivateCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest, global::Google.LongRunning.Operation> __Method_CreateCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +181,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_CreateCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest, global::Google.LongRunning.Operation> __Method_DisableCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -148,6 +189,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_DisableCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest, global::Google.LongRunning.Operation> __Method_EnableCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -155,6 +197,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_EnableCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse> __Method_FetchCertificateAuthorityCsr = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -162,6 +205,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_FetchCertificateAuthorityCsrRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_FetchCertificateAuthorityCsrResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority> __Method_GetCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,6 +213,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_GetCertificateAuthorityRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_CertificateAuthority);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse> __Method_ListCertificateAuthorities = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -176,6 +221,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateAuthoritiesRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateAuthoritiesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest, global::Google.LongRunning.Operation> __Method_RestoreCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -183,6 +229,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_RestoreCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest, global::Google.LongRunning.Operation> __Method_ScheduleDeleteCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -190,6 +237,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_ScheduleDeleteCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest, global::Google.LongRunning.Operation> __Method_UpdateCertificateAuthority = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -197,6 +245,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateAuthorityRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList> __Method_GetCertificateRevocationList = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -204,6 +253,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_GetCertificateRevocationListRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_CertificateRevocationList);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse> __Method_ListCertificateRevocationLists = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -211,6 +261,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateRevocationListsRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_ListCertificateRevocationListsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest, global::Google.LongRunning.Operation> __Method_UpdateCertificateRevocationList = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -218,6 +269,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_UpdateCertificateRevocationListRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig> __Method_GetReusableConfig = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -225,6 +277,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
         __Marshaller_google_cloud_security_privateca_v1beta1_GetReusableConfigRequest,
         __Marshaller_google_cloud_security_privateca_v1beta1_ReusableConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse> __Method_ListReusableConfigs = new grpc::Method<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -249,6 +302,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> CreateCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -260,6 +314,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> GetCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -271,6 +326,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse> ListCertificates(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -282,6 +338,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> RevokeCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -294,6 +351,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> UpdateCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -310,6 +368,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ActivateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -321,6 +380,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -332,6 +392,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DisableCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -343,6 +404,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> EnableCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -360,6 +422,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse> FetchCertificateAuthorityCsr(global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -371,6 +434,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority> GetCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -382,6 +446,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse> ListCertificateAuthorities(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -393,6 +458,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -404,6 +470,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ScheduleDeleteCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -415,6 +482,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -426,6 +494,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList> GetCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -437,6 +506,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse> ListCertificateRevocationLists(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -448,6 +518,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -459,6 +530,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig> GetReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -470,6 +542,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse> ListReusableConfigs(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -482,20 +555,24 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
     {
       /// <summary>Creates a new client for CertificateAuthorityService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CertificateAuthorityServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CertificateAuthorityService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CertificateAuthorityServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CertificateAuthorityServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CertificateAuthorityServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -509,6 +586,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate CreateCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -520,6 +598,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate CreateCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCertificate, null, options, request);
@@ -533,6 +612,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> CreateCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -544,6 +624,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> CreateCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCertificate, null, options, request);
@@ -556,6 +637,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate GetCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -566,6 +648,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate GetCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCertificate, null, options, request);
@@ -578,6 +661,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> GetCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -588,6 +672,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> GetCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCertificate, null, options, request);
@@ -600,6 +685,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse ListCertificates(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCertificates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -610,6 +696,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse ListCertificates(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCertificates, null, options, request);
@@ -622,6 +709,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse> ListCertificatesAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCertificatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -632,6 +720,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesResponse> ListCertificatesAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCertificates, null, options, request);
@@ -644,6 +733,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate RevokeCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RevokeCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -654,6 +744,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate RevokeCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RevokeCertificate, null, options, request);
@@ -666,6 +757,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> RevokeCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RevokeCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -676,6 +768,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> RevokeCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.RevokeCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RevokeCertificate, null, options, request);
@@ -689,6 +782,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate UpdateCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -700,6 +794,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate UpdateCertificate(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCertificate, null, options, request);
@@ -713,6 +808,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> UpdateCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -724,6 +820,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate> UpdateCertificateAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCertificate, null, options, request);
@@ -741,6 +838,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ActivateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ActivateCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -756,6 +854,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ActivateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ActivateCertificateAuthority, null, options, request);
@@ -773,6 +872,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ActivateCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ActivateCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -788,6 +888,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ActivateCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ActivateCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ActivateCertificateAuthority, null, options, request);
@@ -800,6 +901,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -810,6 +912,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCertificateAuthority, null, options, request);
@@ -822,6 +925,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -832,6 +936,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCertificateAuthority, null, options, request);
@@ -844,6 +949,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DisableCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -854,6 +960,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DisableCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DisableCertificateAuthority, null, options, request);
@@ -866,6 +973,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -876,6 +984,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DisableCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.DisableCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DisableCertificateAuthority, null, options, request);
@@ -888,6 +997,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation EnableCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -898,6 +1008,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation EnableCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_EnableCertificateAuthority, null, options, request);
@@ -910,6 +1021,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -920,6 +1032,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> EnableCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.EnableCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_EnableCertificateAuthority, null, options, request);
@@ -938,6 +1051,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse FetchCertificateAuthorityCsr(global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchCertificateAuthorityCsr(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -954,6 +1068,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse FetchCertificateAuthorityCsr(global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_FetchCertificateAuthorityCsr, null, options, request);
@@ -972,6 +1087,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse> FetchCertificateAuthorityCsrAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FetchCertificateAuthorityCsrAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -988,6 +1104,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrResponse> FetchCertificateAuthorityCsrAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.FetchCertificateAuthorityCsrRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FetchCertificateAuthorityCsr, null, options, request);
@@ -1000,6 +1117,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority GetCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1010,6 +1128,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority GetCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCertificateAuthority, null, options, request);
@@ -1022,6 +1141,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority> GetCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1032,6 +1152,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateAuthority> GetCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCertificateAuthority, null, options, request);
@@ -1044,6 +1165,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse ListCertificateAuthorities(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCertificateAuthorities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1054,6 +1176,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse ListCertificateAuthorities(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCertificateAuthorities, null, options, request);
@@ -1066,6 +1189,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse> ListCertificateAuthoritiesAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCertificateAuthoritiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1076,6 +1200,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesResponse> ListCertificateAuthoritiesAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateAuthoritiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCertificateAuthorities, null, options, request);
@@ -1088,6 +1213,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RestoreCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1098,6 +1224,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RestoreCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RestoreCertificateAuthority, null, options, request);
@@ -1110,6 +1237,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1120,6 +1248,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.RestoreCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreCertificateAuthority, null, options, request);
@@ -1132,6 +1261,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ScheduleDeleteCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ScheduleDeleteCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1142,6 +1272,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ScheduleDeleteCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ScheduleDeleteCertificateAuthority, null, options, request);
@@ -1154,6 +1285,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ScheduleDeleteCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ScheduleDeleteCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1164,6 +1296,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ScheduleDeleteCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ScheduleDeleteCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ScheduleDeleteCertificateAuthority, null, options, request);
@@ -1176,6 +1309,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCertificateAuthority(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1186,6 +1320,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateCertificateAuthority(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCertificateAuthority, null, options, request);
@@ -1198,6 +1333,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCertificateAuthorityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1208,6 +1344,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCertificateAuthorityAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateAuthorityRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCertificateAuthority, null, options, request);
@@ -1220,6 +1357,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList GetCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCertificateRevocationList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1230,6 +1368,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList GetCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCertificateRevocationList, null, options, request);
@@ -1242,6 +1381,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList> GetCertificateRevocationListAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCertificateRevocationListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1252,6 +1392,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.CertificateRevocationList> GetCertificateRevocationListAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetCertificateRevocationListRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCertificateRevocationList, null, options, request);
@@ -1264,6 +1405,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse ListCertificateRevocationLists(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCertificateRevocationLists(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1274,6 +1416,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse ListCertificateRevocationLists(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCertificateRevocationLists, null, options, request);
@@ -1286,6 +1429,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse> ListCertificateRevocationListsAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCertificateRevocationListsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1296,6 +1440,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsResponse> ListCertificateRevocationListsAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListCertificateRevocationListsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCertificateRevocationLists, null, options, request);
@@ -1308,6 +1453,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCertificateRevocationList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1318,6 +1464,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateCertificateRevocationList(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCertificateRevocationList, null, options, request);
@@ -1330,6 +1477,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCertificateRevocationListAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCertificateRevocationListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1340,6 +1488,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateCertificateRevocationListAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.UpdateCertificateRevocationListRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCertificateRevocationList, null, options, request);
@@ -1352,6 +1501,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig GetReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetReusableConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1362,6 +1512,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig GetReusableConfig(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetReusableConfig, null, options, request);
@@ -1374,6 +1525,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig> GetReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetReusableConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1384,6 +1536,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ReusableConfig> GetReusableConfigAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.GetReusableConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetReusableConfig, null, options, request);
@@ -1396,6 +1549,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse ListReusableConfigs(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListReusableConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1406,6 +1560,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse ListReusableConfigs(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListReusableConfigs, null, options, request);
@@ -1418,6 +1573,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse> ListReusableConfigsAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListReusableConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1428,11 +1584,13 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsResponse> ListReusableConfigsAsync(global::Google.Cloud.Security.PrivateCA.V1Beta1.ListReusableConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListReusableConfigs, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CertificateAuthorityServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CertificateAuthorityServiceClient(configuration);
@@ -1441,6 +1599,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CertificateAuthorityServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1470,6 +1629,7 @@ namespace Google.Cloud.Security.PrivateCA.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CertificateAuthorityServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateCertificate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Security.PrivateCA.V1Beta1.CreateCertificateRequest, global::Google.Cloud.Security.PrivateCA.V1Beta1.Certificate>(serviceImpl.CreateCertificate));

@@ -30,6 +30,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
   {
     static readonly string __ServiceName = "google.cloud.essentialcontacts.v1.EssentialContactsService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.EssentialContacts.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,18 +63,30 @@ namespace Google.Cloud.EssentialContacts.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.CreateContactRequest> __Marshaller_google_cloud_essentialcontacts_v1_CreateContactRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.CreateContactRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.Contact> __Marshaller_google_cloud_essentialcontacts_v1_Contact = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.Contact.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest> __Marshaller_google_cloud_essentialcontacts_v1_UpdateContactRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.ListContactsRequest> __Marshaller_google_cloud_essentialcontacts_v1_ListContactsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.ListContactsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.ListContactsResponse> __Marshaller_google_cloud_essentialcontacts_v1_ListContactsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.ListContactsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.GetContactRequest> __Marshaller_google_cloud_essentialcontacts_v1_GetContactRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.GetContactRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest> __Marshaller_google_cloud_essentialcontacts_v1_DeleteContactRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest> __Marshaller_google_cloud_essentialcontacts_v1_ComputeContactsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse> __Marshaller_google_cloud_essentialcontacts_v1_ComputeContactsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest> __Marshaller_google_cloud_essentialcontacts_v1_SendTestMessageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EssentialContacts.V1.CreateContactRequest, global::Google.Cloud.EssentialContacts.V1.Contact> __Method_CreateContact = new grpc::Method<global::Google.Cloud.EssentialContacts.V1.CreateContactRequest, global::Google.Cloud.EssentialContacts.V1.Contact>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -79,6 +94,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
         __Marshaller_google_cloud_essentialcontacts_v1_CreateContactRequest,
         __Marshaller_google_cloud_essentialcontacts_v1_Contact);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest, global::Google.Cloud.EssentialContacts.V1.Contact> __Method_UpdateContact = new grpc::Method<global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest, global::Google.Cloud.EssentialContacts.V1.Contact>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -86,6 +102,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
         __Marshaller_google_cloud_essentialcontacts_v1_UpdateContactRequest,
         __Marshaller_google_cloud_essentialcontacts_v1_Contact);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EssentialContacts.V1.ListContactsRequest, global::Google.Cloud.EssentialContacts.V1.ListContactsResponse> __Method_ListContacts = new grpc::Method<global::Google.Cloud.EssentialContacts.V1.ListContactsRequest, global::Google.Cloud.EssentialContacts.V1.ListContactsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -93,6 +110,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
         __Marshaller_google_cloud_essentialcontacts_v1_ListContactsRequest,
         __Marshaller_google_cloud_essentialcontacts_v1_ListContactsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EssentialContacts.V1.GetContactRequest, global::Google.Cloud.EssentialContacts.V1.Contact> __Method_GetContact = new grpc::Method<global::Google.Cloud.EssentialContacts.V1.GetContactRequest, global::Google.Cloud.EssentialContacts.V1.Contact>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +118,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
         __Marshaller_google_cloud_essentialcontacts_v1_GetContactRequest,
         __Marshaller_google_cloud_essentialcontacts_v1_Contact);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteContact = new grpc::Method<global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +126,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
         __Marshaller_google_cloud_essentialcontacts_v1_DeleteContactRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest, global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse> __Method_ComputeContacts = new grpc::Method<global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest, global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +134,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
         __Marshaller_google_cloud_essentialcontacts_v1_ComputeContactsRequest,
         __Marshaller_google_cloud_essentialcontacts_v1_ComputeContactsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SendTestMessage = new grpc::Method<global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +158,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EssentialContacts.V1.Contact> CreateContact(global::Google.Cloud.EssentialContacts.V1.CreateContactRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -149,6 +171,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EssentialContacts.V1.Contact> UpdateContact(global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -160,6 +183,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EssentialContacts.V1.ListContactsResponse> ListContacts(global::Google.Cloud.EssentialContacts.V1.ListContactsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -171,6 +195,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EssentialContacts.V1.Contact> GetContact(global::Google.Cloud.EssentialContacts.V1.GetContactRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -182,6 +207,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteContact(global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -195,6 +221,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse> ComputeContacts(global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -207,6 +234,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> SendTestMessage(global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -219,20 +247,24 @@ namespace Google.Cloud.EssentialContacts.V1 {
     {
       /// <summary>Creates a new client for EssentialContactsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public EssentialContactsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for EssentialContactsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public EssentialContactsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected EssentialContactsServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected EssentialContactsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -245,6 +277,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.Contact CreateContact(global::Google.Cloud.EssentialContacts.V1.CreateContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateContact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -255,6 +288,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.Contact CreateContact(global::Google.Cloud.EssentialContacts.V1.CreateContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateContact, null, options, request);
@@ -267,6 +301,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.Contact> CreateContactAsync(global::Google.Cloud.EssentialContacts.V1.CreateContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateContactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -277,6 +312,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.Contact> CreateContactAsync(global::Google.Cloud.EssentialContacts.V1.CreateContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateContact, null, options, request);
@@ -290,6 +326,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.Contact UpdateContact(global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateContact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -301,6 +338,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.Contact UpdateContact(global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateContact, null, options, request);
@@ -314,6 +352,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.Contact> UpdateContactAsync(global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateContactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -325,6 +364,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.Contact> UpdateContactAsync(global::Google.Cloud.EssentialContacts.V1.UpdateContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateContact, null, options, request);
@@ -337,6 +377,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.ListContactsResponse ListContacts(global::Google.Cloud.EssentialContacts.V1.ListContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListContacts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -347,6 +388,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.ListContactsResponse ListContacts(global::Google.Cloud.EssentialContacts.V1.ListContactsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListContacts, null, options, request);
@@ -359,6 +401,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.ListContactsResponse> ListContactsAsync(global::Google.Cloud.EssentialContacts.V1.ListContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListContactsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -369,6 +412,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.ListContactsResponse> ListContactsAsync(global::Google.Cloud.EssentialContacts.V1.ListContactsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListContacts, null, options, request);
@@ -381,6 +425,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.Contact GetContact(global::Google.Cloud.EssentialContacts.V1.GetContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetContact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -391,6 +436,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.Contact GetContact(global::Google.Cloud.EssentialContacts.V1.GetContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetContact, null, options, request);
@@ -403,6 +449,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.Contact> GetContactAsync(global::Google.Cloud.EssentialContacts.V1.GetContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetContactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -413,6 +460,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.Contact> GetContactAsync(global::Google.Cloud.EssentialContacts.V1.GetContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetContact, null, options, request);
@@ -425,6 +473,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteContact(global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteContact(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -435,6 +484,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteContact(global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteContact, null, options, request);
@@ -447,6 +497,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteContactAsync(global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteContactAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -457,6 +508,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteContactAsync(global::Google.Cloud.EssentialContacts.V1.DeleteContactRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteContact, null, options, request);
@@ -471,6 +523,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse ComputeContacts(global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ComputeContacts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -483,6 +536,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse ComputeContacts(global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ComputeContacts, null, options, request);
@@ -497,6 +551,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse> ComputeContactsAsync(global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ComputeContactsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -509,6 +564,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.EssentialContacts.V1.ComputeContactsResponse> ComputeContactsAsync(global::Google.Cloud.EssentialContacts.V1.ComputeContactsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ComputeContacts, null, options, request);
@@ -522,6 +578,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty SendTestMessage(global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendTestMessage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -533,6 +590,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty SendTestMessage(global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SendTestMessage, null, options, request);
@@ -546,6 +604,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SendTestMessageAsync(global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendTestMessageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -557,11 +616,13 @@ namespace Google.Cloud.EssentialContacts.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SendTestMessageAsync(global::Google.Cloud.EssentialContacts.V1.SendTestMessageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SendTestMessage, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EssentialContactsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new EssentialContactsServiceClient(configuration);
@@ -570,6 +631,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(EssentialContactsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -586,6 +648,7 @@ namespace Google.Cloud.EssentialContacts.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, EssentialContactsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateContact, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.EssentialContacts.V1.CreateContactRequest, global::Google.Cloud.EssentialContacts.V1.Contact>(serviceImpl.CreateContact));

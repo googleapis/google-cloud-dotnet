@@ -30,6 +30,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4beta1.CompanyService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,15 +63,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_CreateCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.Company> __Marshaller_google_cloud_talent_v4beta1_Company = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.Company.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_GetCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_UpdateCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest> __Marshaller_google_cloud_talent_v4beta1_DeleteCompanyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> __Marshaller_google_cloud_talent_v4beta1_ListCompaniesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company> __Method_CreateCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +88,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         __Marshaller_google_cloud_talent_v4beta1_CreateCompanyRequest,
         __Marshaller_google_cloud_talent_v4beta1_Company);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company> __Method_GetCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +96,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         __Marshaller_google_cloud_talent_v4beta1_GetCompanyRequest,
         __Marshaller_google_cloud_talent_v4beta1_Company);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company> __Method_UpdateCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +104,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         __Marshaller_google_cloud_talent_v4beta1_UpdateCompanyRequest,
         __Marshaller_google_cloud_talent_v4beta1_Company);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCompany = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +112,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
         __Marshaller_google_cloud_talent_v4beta1_DeleteCompanyRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest, global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> __Method_ListCompanies = new grpc::Method<global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest, global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +136,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4Beta1.Company> CreateCompany(global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -131,6 +148,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4Beta1.Company> GetCompany(global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -142,6 +160,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4Beta1.Company> UpdateCompany(global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -154,6 +173,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCompany(global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -165,6 +185,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> ListCompanies(global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -177,20 +198,24 @@ namespace Google.Cloud.Talent.V4Beta1 {
     {
       /// <summary>Creates a new client for CompanyService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CompanyServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CompanyService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CompanyServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CompanyServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CompanyServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -203,6 +228,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.Company CreateCompany(global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -213,6 +239,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.Company CreateCompany(global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCompany, null, options, request);
@@ -225,6 +252,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.Company> CreateCompanyAsync(global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -235,6 +263,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.Company> CreateCompanyAsync(global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCompany, null, options, request);
@@ -247,6 +276,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.Company GetCompany(global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -257,6 +287,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.Company GetCompany(global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCompany, null, options, request);
@@ -269,6 +300,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.Company> GetCompanyAsync(global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -279,6 +311,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.Company> GetCompanyAsync(global::Google.Cloud.Talent.V4Beta1.GetCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCompany, null, options, request);
@@ -291,6 +324,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.Company UpdateCompany(global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -301,6 +335,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.Company UpdateCompany(global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCompany, null, options, request);
@@ -313,6 +348,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.Company> UpdateCompanyAsync(global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -323,6 +359,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.Company> UpdateCompanyAsync(global::Google.Cloud.Talent.V4Beta1.UpdateCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCompany, null, options, request);
@@ -336,6 +373,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCompany(global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCompany(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -347,6 +385,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCompany(global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCompany, null, options, request);
@@ -360,6 +399,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCompanyAsync(global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCompanyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -371,6 +411,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCompanyAsync(global::Google.Cloud.Talent.V4Beta1.DeleteCompanyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCompany, null, options, request);
@@ -383,6 +424,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse ListCompanies(global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCompanies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -393,6 +435,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse ListCompanies(global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCompanies, null, options, request);
@@ -405,6 +448,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> ListCompaniesAsync(global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCompaniesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -415,11 +459,13 @@ namespace Google.Cloud.Talent.V4Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4Beta1.ListCompaniesResponse> ListCompaniesAsync(global::Google.Cloud.Talent.V4Beta1.ListCompaniesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCompanies, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CompanyServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CompanyServiceClient(configuration);
@@ -428,6 +474,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CompanyServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -442,6 +489,7 @@ namespace Google.Cloud.Talent.V4Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CompanyServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateCompany, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4Beta1.CreateCompanyRequest, global::Google.Cloud.Talent.V4Beta1.Company>(serviceImpl.CreateCompany));

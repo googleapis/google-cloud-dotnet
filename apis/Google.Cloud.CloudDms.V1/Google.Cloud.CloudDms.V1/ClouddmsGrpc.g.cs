@@ -30,6 +30,7 @@ namespace Google.Cloud.CloudDms.V1 {
   {
     static readonly string __ServiceName = "google.cloud.clouddms.v1.DataMigrationService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.CloudDms.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,30 +63,54 @@ namespace Google.Cloud.CloudDms.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest> __Marshaller_google_cloud_clouddms_v1_ListMigrationJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse> __Marshaller_google_cloud_clouddms_v1_ListMigrationJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_GetMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.MigrationJob> __Marshaller_google_cloud_clouddms_v1_MigrationJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.MigrationJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_CreateMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_UpdateMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_DeleteMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_StartMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_StopMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_ResumeMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_PromoteMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_VerifyMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest> __Marshaller_google_cloud_clouddms_v1_RestartMigrationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest> __Marshaller_google_cloud_clouddms_v1_GenerateSshScriptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.SshScript> __Marshaller_google_cloud_clouddms_v1_SshScript = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.SshScript.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest> __Marshaller_google_cloud_clouddms_v1_ListConnectionProfilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse> __Marshaller_google_cloud_clouddms_v1_ListConnectionProfilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest> __Marshaller_google_cloud_clouddms_v1_GetConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.ConnectionProfile> __Marshaller_google_cloud_clouddms_v1_ConnectionProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.ConnectionProfile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest> __Marshaller_google_cloud_clouddms_v1_CreateConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest> __Marshaller_google_cloud_clouddms_v1_UpdateConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest> __Marshaller_google_cloud_clouddms_v1_DeleteConnectionProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest, global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse> __Method_ListMigrationJobs = new grpc::Method<global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest, global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +118,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_ListMigrationJobsRequest,
         __Marshaller_google_cloud_clouddms_v1_ListMigrationJobsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest, global::Google.Cloud.CloudDms.V1.MigrationJob> __Method_GetMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest, global::Google.Cloud.CloudDms.V1.MigrationJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +126,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_GetMigrationJobRequest,
         __Marshaller_google_cloud_clouddms_v1_MigrationJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest, global::Google.LongRunning.Operation> __Method_CreateMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -105,6 +134,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_CreateMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest, global::Google.LongRunning.Operation> __Method_UpdateMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -112,6 +142,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_UpdateMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest, global::Google.LongRunning.Operation> __Method_DeleteMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -119,6 +150,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_DeleteMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest, global::Google.LongRunning.Operation> __Method_StartMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -126,6 +158,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_StartMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest, global::Google.LongRunning.Operation> __Method_StopMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +166,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_StopMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest, global::Google.LongRunning.Operation> __Method_ResumeMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -140,6 +174,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_ResumeMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest, global::Google.LongRunning.Operation> __Method_PromoteMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -147,6 +182,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_PromoteMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest, global::Google.LongRunning.Operation> __Method_VerifyMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -154,6 +190,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_VerifyMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest, global::Google.LongRunning.Operation> __Method_RestartMigrationJob = new grpc::Method<global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -161,6 +198,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_RestartMigrationJobRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest, global::Google.Cloud.CloudDms.V1.SshScript> __Method_GenerateSshScript = new grpc::Method<global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest, global::Google.Cloud.CloudDms.V1.SshScript>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -168,6 +206,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_GenerateSshScriptRequest,
         __Marshaller_google_cloud_clouddms_v1_SshScript);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse> __Method_ListConnectionProfiles = new grpc::Method<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest, global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -175,6 +214,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_ListConnectionProfilesRequest,
         __Marshaller_google_cloud_clouddms_v1_ListConnectionProfilesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest, global::Google.Cloud.CloudDms.V1.ConnectionProfile> __Method_GetConnectionProfile = new grpc::Method<global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest, global::Google.Cloud.CloudDms.V1.ConnectionProfile>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -182,6 +222,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_GetConnectionProfileRequest,
         __Marshaller_google_cloud_clouddms_v1_ConnectionProfile);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest, global::Google.LongRunning.Operation> __Method_CreateConnectionProfile = new grpc::Method<global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -189,6 +230,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_CreateConnectionProfileRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest, global::Google.LongRunning.Operation> __Method_UpdateConnectionProfile = new grpc::Method<global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -196,6 +238,7 @@ namespace Google.Cloud.CloudDms.V1 {
         __Marshaller_google_cloud_clouddms_v1_UpdateConnectionProfileRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest, global::Google.LongRunning.Operation> __Method_DeleteConnectionProfile = new grpc::Method<global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -219,6 +262,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse> ListMigrationJobs(global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -230,6 +274,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.MigrationJob> GetMigrationJob(global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -241,6 +286,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateMigrationJob(global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -252,6 +298,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateMigrationJob(global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -263,6 +310,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteMigrationJob(global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -274,6 +322,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartMigrationJob(global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -285,6 +334,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StopMigrationJob(global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -297,6 +347,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ResumeMigrationJob(global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -309,6 +360,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PromoteMigrationJob(global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -321,6 +373,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> VerifyMigrationJob(global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -334,6 +387,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestartMigrationJob(global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -346,6 +400,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.SshScript> GenerateSshScript(global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -357,6 +412,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse> ListConnectionProfiles(global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -368,6 +424,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.CloudDms.V1.ConnectionProfile> GetConnectionProfile(global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -379,6 +436,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateConnectionProfile(global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -390,6 +448,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateConnectionProfile(global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -403,6 +462,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteConnectionProfile(global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -415,20 +475,24 @@ namespace Google.Cloud.CloudDms.V1 {
     {
       /// <summary>Creates a new client for DataMigrationService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DataMigrationServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DataMigrationService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DataMigrationServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DataMigrationServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DataMigrationServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -441,6 +505,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse ListMigrationJobs(global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMigrationJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -451,6 +516,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse ListMigrationJobs(global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMigrationJobs, null, options, request);
@@ -463,6 +529,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse> ListMigrationJobsAsync(global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMigrationJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -473,6 +540,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse> ListMigrationJobsAsync(global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMigrationJobs, null, options, request);
@@ -485,6 +553,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.MigrationJob GetMigrationJob(global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -495,6 +564,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.MigrationJob GetMigrationJob(global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMigrationJob, null, options, request);
@@ -507,6 +577,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.MigrationJob> GetMigrationJobAsync(global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -517,6 +588,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.MigrationJob> GetMigrationJobAsync(global::Google.Cloud.CloudDms.V1.GetMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMigrationJob, null, options, request);
@@ -529,6 +601,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateMigrationJob(global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -539,6 +612,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateMigrationJob(global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMigrationJob, null, options, request);
@@ -551,6 +625,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMigrationJobAsync(global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -561,6 +636,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateMigrationJobAsync(global::Google.Cloud.CloudDms.V1.CreateMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateMigrationJob, null, options, request);
@@ -573,6 +649,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateMigrationJob(global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -583,6 +660,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateMigrationJob(global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateMigrationJob, null, options, request);
@@ -595,6 +673,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMigrationJobAsync(global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -605,6 +684,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateMigrationJobAsync(global::Google.Cloud.CloudDms.V1.UpdateMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateMigrationJob, null, options, request);
@@ -617,6 +697,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteMigrationJob(global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -627,6 +708,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteMigrationJob(global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteMigrationJob, null, options, request);
@@ -639,6 +721,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMigrationJobAsync(global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -649,6 +732,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteMigrationJobAsync(global::Google.Cloud.CloudDms.V1.DeleteMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMigrationJob, null, options, request);
@@ -661,6 +745,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartMigrationJob(global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -671,6 +756,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartMigrationJob(global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StartMigrationJob, null, options, request);
@@ -683,6 +769,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartMigrationJobAsync(global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -693,6 +780,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartMigrationJobAsync(global::Google.Cloud.CloudDms.V1.StartMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StartMigrationJob, null, options, request);
@@ -705,6 +793,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StopMigrationJob(global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -715,6 +804,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StopMigrationJob(global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StopMigrationJob, null, options, request);
@@ -727,6 +817,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopMigrationJobAsync(global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -737,6 +828,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopMigrationJobAsync(global::Google.Cloud.CloudDms.V1.StopMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StopMigrationJob, null, options, request);
@@ -750,6 +842,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ResumeMigrationJob(global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -761,6 +854,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ResumeMigrationJob(global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResumeMigrationJob, null, options, request);
@@ -774,6 +868,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ResumeMigrationJobAsync(global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -785,6 +880,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ResumeMigrationJobAsync(global::Google.Cloud.CloudDms.V1.ResumeMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResumeMigrationJob, null, options, request);
@@ -798,6 +894,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation PromoteMigrationJob(global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PromoteMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -809,6 +906,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation PromoteMigrationJob(global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PromoteMigrationJob, null, options, request);
@@ -822,6 +920,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PromoteMigrationJobAsync(global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PromoteMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -833,6 +932,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PromoteMigrationJobAsync(global::Google.Cloud.CloudDms.V1.PromoteMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PromoteMigrationJob, null, options, request);
@@ -846,6 +946,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation VerifyMigrationJob(global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return VerifyMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -857,6 +958,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation VerifyMigrationJob(global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_VerifyMigrationJob, null, options, request);
@@ -870,6 +972,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> VerifyMigrationJobAsync(global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return VerifyMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -881,6 +984,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> VerifyMigrationJobAsync(global::Google.Cloud.CloudDms.V1.VerifyMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_VerifyMigrationJob, null, options, request);
@@ -895,6 +999,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RestartMigrationJob(global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestartMigrationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -907,6 +1012,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RestartMigrationJob(global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RestartMigrationJob, null, options, request);
@@ -921,6 +1027,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestartMigrationJobAsync(global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestartMigrationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -933,6 +1040,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestartMigrationJobAsync(global::Google.Cloud.CloudDms.V1.RestartMigrationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestartMigrationJob, null, options, request);
@@ -946,6 +1054,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.SshScript GenerateSshScript(global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateSshScript(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -957,6 +1066,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.SshScript GenerateSshScript(global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateSshScript, null, options, request);
@@ -970,6 +1080,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.SshScript> GenerateSshScriptAsync(global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateSshScriptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -981,6 +1092,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.SshScript> GenerateSshScriptAsync(global::Google.Cloud.CloudDms.V1.GenerateSshScriptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateSshScript, null, options, request);
@@ -993,6 +1105,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse ListConnectionProfiles(global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConnectionProfiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1003,6 +1116,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse ListConnectionProfiles(global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListConnectionProfiles, null, options, request);
@@ -1015,6 +1129,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse> ListConnectionProfilesAsync(global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConnectionProfilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1025,6 +1140,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ListConnectionProfilesResponse> ListConnectionProfilesAsync(global::Google.Cloud.CloudDms.V1.ListConnectionProfilesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConnectionProfiles, null, options, request);
@@ -1037,6 +1153,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.ConnectionProfile GetConnectionProfile(global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1047,6 +1164,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.CloudDms.V1.ConnectionProfile GetConnectionProfile(global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetConnectionProfile, null, options, request);
@@ -1059,6 +1177,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ConnectionProfile> GetConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1069,6 +1188,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.CloudDms.V1.ConnectionProfile> GetConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.GetConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConnectionProfile, null, options, request);
@@ -1081,6 +1201,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateConnectionProfile(global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1091,6 +1212,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateConnectionProfile(global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateConnectionProfile, null, options, request);
@@ -1103,6 +1225,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1113,6 +1236,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.CreateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConnectionProfile, null, options, request);
@@ -1125,6 +1249,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateConnectionProfile(global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1135,6 +1260,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateConnectionProfile(global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateConnectionProfile, null, options, request);
@@ -1147,6 +1273,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1157,6 +1284,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.UpdateConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateConnectionProfile, null, options, request);
@@ -1171,6 +1299,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteConnectionProfile(global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConnectionProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1183,6 +1312,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteConnectionProfile(global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteConnectionProfile, null, options, request);
@@ -1197,6 +1327,7 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConnectionProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1209,11 +1340,13 @@ namespace Google.Cloud.CloudDms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConnectionProfileAsync(global::Google.Cloud.CloudDms.V1.DeleteConnectionProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConnectionProfile, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataMigrationServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DataMigrationServiceClient(configuration);
@@ -1222,6 +1355,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DataMigrationServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1248,6 +1382,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DataMigrationServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListMigrationJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.CloudDms.V1.ListMigrationJobsRequest, global::Google.Cloud.CloudDms.V1.ListMigrationJobsResponse>(serviceImpl.ListMigrationJobs));

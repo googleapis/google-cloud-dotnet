@@ -30,6 +30,7 @@ namespace Google.Cloud.Iot.V1 {
   {
     static readonly string __ServiceName = "google.cloud.iot.v1.DeviceManager";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Iot.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,39 +63,72 @@ namespace Google.Cloud.Iot.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest> __Marshaller_google_cloud_iot_v1_CreateDeviceRegistryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.DeviceRegistry> __Marshaller_google_cloud_iot_v1_DeviceRegistry = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.DeviceRegistry.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest> __Marshaller_google_cloud_iot_v1_GetDeviceRegistryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest> __Marshaller_google_cloud_iot_v1_UpdateDeviceRegistryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest> __Marshaller_google_cloud_iot_v1_DeleteDeviceRegistryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest> __Marshaller_google_cloud_iot_v1_ListDeviceRegistriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse> __Marshaller_google_cloud_iot_v1_ListDeviceRegistriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.CreateDeviceRequest> __Marshaller_google_cloud_iot_v1_CreateDeviceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.CreateDeviceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.Device> __Marshaller_google_cloud_iot_v1_Device = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.Device.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.GetDeviceRequest> __Marshaller_google_cloud_iot_v1_GetDeviceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.GetDeviceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.UpdateDeviceRequest> __Marshaller_google_cloud_iot_v1_UpdateDeviceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.UpdateDeviceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.DeleteDeviceRequest> __Marshaller_google_cloud_iot_v1_DeleteDeviceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.DeleteDeviceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDevicesRequest> __Marshaller_google_cloud_iot_v1_ListDevicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDevicesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDevicesResponse> __Marshaller_google_cloud_iot_v1_ListDevicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDevicesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest> __Marshaller_google_cloud_iot_v1_ModifyCloudToDeviceConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.DeviceConfig> __Marshaller_google_cloud_iot_v1_DeviceConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.DeviceConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest> __Marshaller_google_cloud_iot_v1_ListDeviceConfigVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse> __Marshaller_google_cloud_iot_v1_ListDeviceConfigVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDeviceStatesRequest> __Marshaller_google_cloud_iot_v1_ListDeviceStatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDeviceStatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.ListDeviceStatesResponse> __Marshaller_google_cloud_iot_v1_ListDeviceStatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.ListDeviceStatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest> __Marshaller_google_cloud_iot_v1_SendCommandToDeviceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse> __Marshaller_google_cloud_iot_v1_SendCommandToDeviceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest> __Marshaller_google_cloud_iot_v1_BindDeviceToGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse> __Marshaller_google_cloud_iot_v1_BindDeviceToGatewayResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest> __Marshaller_google_cloud_iot_v1_UnbindDeviceFromGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse> __Marshaller_google_cloud_iot_v1_UnbindDeviceFromGatewayResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest, global::Google.Cloud.Iot.V1.DeviceRegistry> __Method_CreateDeviceRegistry = new grpc::Method<global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest, global::Google.Cloud.Iot.V1.DeviceRegistry>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +136,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_CreateDeviceRegistryRequest,
         __Marshaller_google_cloud_iot_v1_DeviceRegistry);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest, global::Google.Cloud.Iot.V1.DeviceRegistry> __Method_GetDeviceRegistry = new grpc::Method<global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest, global::Google.Cloud.Iot.V1.DeviceRegistry>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +144,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_GetDeviceRegistryRequest,
         __Marshaller_google_cloud_iot_v1_DeviceRegistry);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest, global::Google.Cloud.Iot.V1.DeviceRegistry> __Method_UpdateDeviceRegistry = new grpc::Method<global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest, global::Google.Cloud.Iot.V1.DeviceRegistry>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +152,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_UpdateDeviceRegistryRequest,
         __Marshaller_google_cloud_iot_v1_DeviceRegistry);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDeviceRegistry = new grpc::Method<global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +160,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_DeleteDeviceRegistryRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest, global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse> __Method_ListDeviceRegistries = new grpc::Method<global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest, global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +168,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_ListDeviceRegistriesRequest,
         __Marshaller_google_cloud_iot_v1_ListDeviceRegistriesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.CreateDeviceRequest, global::Google.Cloud.Iot.V1.Device> __Method_CreateDevice = new grpc::Method<global::Google.Cloud.Iot.V1.CreateDeviceRequest, global::Google.Cloud.Iot.V1.Device>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +176,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_CreateDeviceRequest,
         __Marshaller_google_cloud_iot_v1_Device);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.GetDeviceRequest, global::Google.Cloud.Iot.V1.Device> __Method_GetDevice = new grpc::Method<global::Google.Cloud.Iot.V1.GetDeviceRequest, global::Google.Cloud.Iot.V1.Device>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +184,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_GetDeviceRequest,
         __Marshaller_google_cloud_iot_v1_Device);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.UpdateDeviceRequest, global::Google.Cloud.Iot.V1.Device> __Method_UpdateDevice = new grpc::Method<global::Google.Cloud.Iot.V1.UpdateDeviceRequest, global::Google.Cloud.Iot.V1.Device>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +192,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_UpdateDeviceRequest,
         __Marshaller_google_cloud_iot_v1_Device);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.DeleteDeviceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDevice = new grpc::Method<global::Google.Cloud.Iot.V1.DeleteDeviceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +200,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_DeleteDeviceRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.ListDevicesRequest, global::Google.Cloud.Iot.V1.ListDevicesResponse> __Method_ListDevices = new grpc::Method<global::Google.Cloud.Iot.V1.ListDevicesRequest, global::Google.Cloud.Iot.V1.ListDevicesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +208,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_ListDevicesRequest,
         __Marshaller_google_cloud_iot_v1_ListDevicesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest, global::Google.Cloud.Iot.V1.DeviceConfig> __Method_ModifyCloudToDeviceConfig = new grpc::Method<global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest, global::Google.Cloud.Iot.V1.DeviceConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -170,6 +216,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_ModifyCloudToDeviceConfigRequest,
         __Marshaller_google_cloud_iot_v1_DeviceConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest, global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse> __Method_ListDeviceConfigVersions = new grpc::Method<global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest, global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -177,6 +224,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_ListDeviceConfigVersionsRequest,
         __Marshaller_google_cloud_iot_v1_ListDeviceConfigVersionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.ListDeviceStatesRequest, global::Google.Cloud.Iot.V1.ListDeviceStatesResponse> __Method_ListDeviceStates = new grpc::Method<global::Google.Cloud.Iot.V1.ListDeviceStatesRequest, global::Google.Cloud.Iot.V1.ListDeviceStatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -184,6 +232,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_ListDeviceStatesRequest,
         __Marshaller_google_cloud_iot_v1_ListDeviceStatesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -191,6 +240,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -198,6 +248,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -205,6 +256,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest, global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse> __Method_SendCommandToDevice = new grpc::Method<global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest, global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -212,6 +264,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_SendCommandToDeviceRequest,
         __Marshaller_google_cloud_iot_v1_SendCommandToDeviceResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest, global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse> __Method_BindDeviceToGateway = new grpc::Method<global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest, global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -219,6 +272,7 @@ namespace Google.Cloud.Iot.V1 {
         __Marshaller_google_cloud_iot_v1_BindDeviceToGatewayRequest,
         __Marshaller_google_cloud_iot_v1_BindDeviceToGatewayResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest, global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse> __Method_UnbindDeviceFromGateway = new grpc::Method<global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest, global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -242,6 +296,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.DeviceRegistry> CreateDeviceRegistry(global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -253,6 +308,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.DeviceRegistry> GetDeviceRegistry(global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -264,6 +320,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.DeviceRegistry> UpdateDeviceRegistry(global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -275,6 +332,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeviceRegistry(global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -286,6 +344,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse> ListDeviceRegistries(global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -297,6 +356,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.Device> CreateDevice(global::Google.Cloud.Iot.V1.CreateDeviceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -308,6 +368,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.Device> GetDevice(global::Google.Cloud.Iot.V1.GetDeviceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -319,6 +380,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.Device> UpdateDevice(global::Google.Cloud.Iot.V1.UpdateDeviceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -330,6 +392,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDevice(global::Google.Cloud.Iot.V1.DeleteDeviceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -341,6 +404,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.ListDevicesResponse> ListDevices(global::Google.Cloud.Iot.V1.ListDevicesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -354,6 +418,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.DeviceConfig> ModifyCloudToDeviceConfig(global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -366,6 +431,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse> ListDeviceConfigVersions(global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -378,6 +444,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.ListDeviceStatesResponse> ListDeviceStates(global::Google.Cloud.Iot.V1.ListDeviceStatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -390,6 +457,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -403,6 +471,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -416,6 +485,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -439,6 +509,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse> SendCommandToDevice(global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -450,6 +521,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse> BindDeviceToGateway(global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -461,6 +533,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse> UnbindDeviceFromGateway(global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -473,20 +546,24 @@ namespace Google.Cloud.Iot.V1 {
     {
       /// <summary>Creates a new client for DeviceManager</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DeviceManagerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DeviceManager that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DeviceManagerClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DeviceManagerClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DeviceManagerClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -499,6 +576,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceRegistry CreateDeviceRegistry(global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeviceRegistry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -509,6 +587,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceRegistry CreateDeviceRegistry(global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDeviceRegistry, null, options, request);
@@ -521,6 +600,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceRegistry> CreateDeviceRegistryAsync(global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeviceRegistryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -531,6 +611,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceRegistry> CreateDeviceRegistryAsync(global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDeviceRegistry, null, options, request);
@@ -543,6 +624,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceRegistry GetDeviceRegistry(global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeviceRegistry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -553,6 +635,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceRegistry GetDeviceRegistry(global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDeviceRegistry, null, options, request);
@@ -565,6 +648,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceRegistry> GetDeviceRegistryAsync(global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeviceRegistryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -575,6 +659,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceRegistry> GetDeviceRegistryAsync(global::Google.Cloud.Iot.V1.GetDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDeviceRegistry, null, options, request);
@@ -587,6 +672,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceRegistry UpdateDeviceRegistry(global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDeviceRegistry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -597,6 +683,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceRegistry UpdateDeviceRegistry(global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDeviceRegistry, null, options, request);
@@ -609,6 +696,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceRegistry> UpdateDeviceRegistryAsync(global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDeviceRegistryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -619,6 +707,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceRegistry> UpdateDeviceRegistryAsync(global::Google.Cloud.Iot.V1.UpdateDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDeviceRegistry, null, options, request);
@@ -631,6 +720,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeviceRegistry(global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeviceRegistry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -641,6 +731,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeviceRegistry(global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDeviceRegistry, null, options, request);
@@ -653,6 +744,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeviceRegistryAsync(global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeviceRegistryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -663,6 +755,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeviceRegistryAsync(global::Google.Cloud.Iot.V1.DeleteDeviceRegistryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDeviceRegistry, null, options, request);
@@ -675,6 +768,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse ListDeviceRegistries(global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeviceRegistries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -685,6 +779,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse ListDeviceRegistries(global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeviceRegistries, null, options, request);
@@ -697,6 +792,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse> ListDeviceRegistriesAsync(global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeviceRegistriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -707,6 +803,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDeviceRegistriesResponse> ListDeviceRegistriesAsync(global::Google.Cloud.Iot.V1.ListDeviceRegistriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeviceRegistries, null, options, request);
@@ -719,6 +816,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.Device CreateDevice(global::Google.Cloud.Iot.V1.CreateDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDevice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -729,6 +827,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.Device CreateDevice(global::Google.Cloud.Iot.V1.CreateDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDevice, null, options, request);
@@ -741,6 +840,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.Device> CreateDeviceAsync(global::Google.Cloud.Iot.V1.CreateDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeviceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -751,6 +851,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.Device> CreateDeviceAsync(global::Google.Cloud.Iot.V1.CreateDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDevice, null, options, request);
@@ -763,6 +864,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.Device GetDevice(global::Google.Cloud.Iot.V1.GetDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDevice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -773,6 +875,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.Device GetDevice(global::Google.Cloud.Iot.V1.GetDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDevice, null, options, request);
@@ -785,6 +888,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.Device> GetDeviceAsync(global::Google.Cloud.Iot.V1.GetDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeviceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -795,6 +899,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.Device> GetDeviceAsync(global::Google.Cloud.Iot.V1.GetDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDevice, null, options, request);
@@ -807,6 +912,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.Device UpdateDevice(global::Google.Cloud.Iot.V1.UpdateDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDevice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -817,6 +923,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.Device UpdateDevice(global::Google.Cloud.Iot.V1.UpdateDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDevice, null, options, request);
@@ -829,6 +936,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.Device> UpdateDeviceAsync(global::Google.Cloud.Iot.V1.UpdateDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDeviceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -839,6 +947,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.Device> UpdateDeviceAsync(global::Google.Cloud.Iot.V1.UpdateDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDevice, null, options, request);
@@ -851,6 +960,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDevice(global::Google.Cloud.Iot.V1.DeleteDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDevice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -861,6 +971,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDevice(global::Google.Cloud.Iot.V1.DeleteDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDevice, null, options, request);
@@ -873,6 +984,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeviceAsync(global::Google.Cloud.Iot.V1.DeleteDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeviceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -883,6 +995,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeviceAsync(global::Google.Cloud.Iot.V1.DeleteDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDevice, null, options, request);
@@ -895,6 +1008,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDevicesResponse ListDevices(global::Google.Cloud.Iot.V1.ListDevicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDevices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -905,6 +1019,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDevicesResponse ListDevices(global::Google.Cloud.Iot.V1.ListDevicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDevices, null, options, request);
@@ -917,6 +1032,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDevicesResponse> ListDevicesAsync(global::Google.Cloud.Iot.V1.ListDevicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDevicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -927,6 +1043,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDevicesResponse> ListDevicesAsync(global::Google.Cloud.Iot.V1.ListDevicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDevices, null, options, request);
@@ -941,6 +1058,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceConfig ModifyCloudToDeviceConfig(global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ModifyCloudToDeviceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -953,6 +1071,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.DeviceConfig ModifyCloudToDeviceConfig(global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ModifyCloudToDeviceConfig, null, options, request);
@@ -967,6 +1086,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceConfig> ModifyCloudToDeviceConfigAsync(global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ModifyCloudToDeviceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -979,6 +1099,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.DeviceConfig> ModifyCloudToDeviceConfigAsync(global::Google.Cloud.Iot.V1.ModifyCloudToDeviceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ModifyCloudToDeviceConfig, null, options, request);
@@ -992,6 +1113,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse ListDeviceConfigVersions(global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeviceConfigVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1003,6 +1125,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse ListDeviceConfigVersions(global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeviceConfigVersions, null, options, request);
@@ -1016,6 +1139,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse> ListDeviceConfigVersionsAsync(global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeviceConfigVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1027,6 +1151,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsResponse> ListDeviceConfigVersionsAsync(global::Google.Cloud.Iot.V1.ListDeviceConfigVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeviceConfigVersions, null, options, request);
@@ -1040,6 +1165,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDeviceStatesResponse ListDeviceStates(global::Google.Cloud.Iot.V1.ListDeviceStatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeviceStates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1051,6 +1177,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.ListDeviceStatesResponse ListDeviceStates(global::Google.Cloud.Iot.V1.ListDeviceStatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeviceStates, null, options, request);
@@ -1064,6 +1191,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDeviceStatesResponse> ListDeviceStatesAsync(global::Google.Cloud.Iot.V1.ListDeviceStatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeviceStatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1075,6 +1203,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.ListDeviceStatesResponse> ListDeviceStatesAsync(global::Google.Cloud.Iot.V1.ListDeviceStatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeviceStates, null, options, request);
@@ -1088,6 +1217,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1099,6 +1229,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1112,6 +1243,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1123,6 +1255,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1137,6 +1270,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1149,6 +1283,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1163,6 +1298,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1175,6 +1311,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1189,6 +1326,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1201,6 +1339,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1215,6 +1354,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1227,6 +1367,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1251,6 +1392,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse SendCommandToDevice(global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendCommandToDevice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1273,6 +1415,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse SendCommandToDevice(global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SendCommandToDevice, null, options, request);
@@ -1297,6 +1440,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse> SendCommandToDeviceAsync(global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendCommandToDeviceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1319,6 +1463,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.SendCommandToDeviceResponse> SendCommandToDeviceAsync(global::Google.Cloud.Iot.V1.SendCommandToDeviceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SendCommandToDevice, null, options, request);
@@ -1331,6 +1476,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse BindDeviceToGateway(global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BindDeviceToGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1341,6 +1487,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse BindDeviceToGateway(global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BindDeviceToGateway, null, options, request);
@@ -1353,6 +1500,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse> BindDeviceToGatewayAsync(global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BindDeviceToGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1363,6 +1511,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.BindDeviceToGatewayResponse> BindDeviceToGatewayAsync(global::Google.Cloud.Iot.V1.BindDeviceToGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BindDeviceToGateway, null, options, request);
@@ -1375,6 +1524,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse UnbindDeviceFromGateway(global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UnbindDeviceFromGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1385,6 +1535,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse UnbindDeviceFromGateway(global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UnbindDeviceFromGateway, null, options, request);
@@ -1397,6 +1548,7 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse> UnbindDeviceFromGatewayAsync(global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UnbindDeviceFromGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1407,11 +1559,13 @@ namespace Google.Cloud.Iot.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayResponse> UnbindDeviceFromGatewayAsync(global::Google.Cloud.Iot.V1.UnbindDeviceFromGatewayRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UnbindDeviceFromGateway, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DeviceManagerClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DeviceManagerClient(configuration);
@@ -1420,6 +1574,7 @@ namespace Google.Cloud.Iot.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DeviceManagerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1448,6 +1603,7 @@ namespace Google.Cloud.Iot.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DeviceManagerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateDeviceRegistry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iot.V1.CreateDeviceRegistryRequest, global::Google.Cloud.Iot.V1.DeviceRegistry>(serviceImpl.CreateDeviceRegistry));

@@ -30,6 +30,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.speech.v1p1beta1.Speech";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,13 +63,20 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest> __Marshaller_google_cloud_speech_v1p1beta1_RecognizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse> __Marshaller_google_cloud_speech_v1p1beta1_RecognizeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest> __Marshaller_google_cloud_speech_v1p1beta1_LongRunningRecognizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest> __Marshaller_google_cloud_speech_v1p1beta1_StreamingRecognizeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse> __Marshaller_google_cloud_speech_v1p1beta1_StreamingRecognizeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest, global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse> __Method_Recognize = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest, global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -74,6 +84,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_RecognizeRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_RecognizeResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest, global::Google.LongRunning.Operation> __Method_LongRunningRecognize = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -81,6 +92,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_LongRunningRecognizeRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse> __Method_StreamingRecognize = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -105,6 +117,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse> Recognize(global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -121,6 +134,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> LongRunningRecognize(global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -134,6 +148,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamingRecognize(grpc::IAsyncStreamReader<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -146,20 +161,24 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     {
       /// <summary>Creates a new client for Speech</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SpeechClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Speech that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SpeechClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SpeechClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SpeechClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -173,6 +192,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse Recognize(global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Recognize(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -184,6 +204,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse Recognize(global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Recognize, null, options, request);
@@ -197,6 +218,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse> RecognizeAsync(global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RecognizeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -208,6 +230,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse> RecognizeAsync(global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Recognize, null, options, request);
@@ -225,6 +248,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LongRunningRecognize(global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LongRunningRecognize(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -240,6 +264,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LongRunningRecognize(global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LongRunningRecognize, null, options, request);
@@ -257,6 +282,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LongRunningRecognizeAsync(global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LongRunningRecognizeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -272,6 +298,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LongRunningRecognizeAsync(global::Google.Cloud.Speech.V1P1Beta1.LongRunningRecognizeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LongRunningRecognize, null, options, request);
@@ -284,6 +311,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse> StreamingRecognize(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamingRecognize(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -294,11 +322,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1P1Beta1.StreamingRecognizeResponse> StreamingRecognize(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingRecognize, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SpeechClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SpeechClient(configuration);
@@ -307,6 +337,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SpeechBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -319,6 +350,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SpeechBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Recognize, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Speech.V1P1Beta1.RecognizeRequest, global::Google.Cloud.Speech.V1P1Beta1.RecognizeResponse>(serviceImpl.Recognize));

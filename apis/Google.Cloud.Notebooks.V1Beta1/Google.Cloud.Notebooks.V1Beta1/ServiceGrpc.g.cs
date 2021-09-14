@@ -30,6 +30,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.notebooks.v1beta1.NotebookService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,32 +63,58 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest> __Marshaller_google_cloud_notebooks_v1beta1_ListInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse> __Marshaller_google_cloud_notebooks_v1beta1_ListInstancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_GetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.Instance> __Marshaller_google_cloud_notebooks_v1beta1_Instance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.Instance.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_CreateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_RegisterInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest> __Marshaller_google_cloud_notebooks_v1beta1_SetInstanceAcceleratorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest> __Marshaller_google_cloud_notebooks_v1beta1_SetInstanceMachineTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest> __Marshaller_google_cloud_notebooks_v1beta1_SetInstanceLabelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_StartInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_StopInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_ResetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest> __Marshaller_google_cloud_notebooks_v1beta1_ReportInstanceInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest> __Marshaller_google_cloud_notebooks_v1beta1_IsInstanceUpgradeableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse> __Marshaller_google_cloud_notebooks_v1beta1_IsInstanceUpgradeableResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest> __Marshaller_google_cloud_notebooks_v1beta1_UpgradeInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest> __Marshaller_google_cloud_notebooks_v1beta1_UpgradeInstanceInternalRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest> __Marshaller_google_cloud_notebooks_v1beta1_ListEnvironmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse> __Marshaller_google_cloud_notebooks_v1beta1_ListEnvironmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest> __Marshaller_google_cloud_notebooks_v1beta1_GetEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.Environment> __Marshaller_google_cloud_notebooks_v1beta1_Environment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.Environment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest> __Marshaller_google_cloud_notebooks_v1beta1_CreateEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest> __Marshaller_google_cloud_notebooks_v1beta1_DeleteEnvironmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest, global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest, global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -93,6 +122,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_ListInstancesRequest,
         __Marshaller_google_cloud_notebooks_v1beta1_ListInstancesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest, global::Google.Cloud.Notebooks.V1Beta1.Instance> __Method_GetInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest, global::Google.Cloud.Notebooks.V1Beta1.Instance>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +130,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_GetInstanceRequest,
         __Marshaller_google_cloud_notebooks_v1beta1_Instance);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +138,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_CreateInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest, global::Google.LongRunning.Operation> __Method_RegisterInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +146,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_RegisterInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest, global::Google.LongRunning.Operation> __Method_SetInstanceAccelerator = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +154,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_SetInstanceAcceleratorRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest, global::Google.LongRunning.Operation> __Method_SetInstanceMachineType = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +162,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_SetInstanceMachineTypeRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest, global::Google.LongRunning.Operation> __Method_SetInstanceLabels = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +170,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_SetInstanceLabelsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest, global::Google.LongRunning.Operation> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +178,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_DeleteInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest, global::Google.LongRunning.Operation> __Method_StartInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +186,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_StartInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest, global::Google.LongRunning.Operation> __Method_StopInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +194,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_StopInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest, global::Google.LongRunning.Operation> __Method_ResetInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +202,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_ResetInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest, global::Google.LongRunning.Operation> __Method_ReportInstanceInfo = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -170,6 +210,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_ReportInstanceInfoRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest, global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse> __Method_IsInstanceUpgradeable = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest, global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -177,6 +218,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_IsInstanceUpgradeableRequest,
         __Marshaller_google_cloud_notebooks_v1beta1_IsInstanceUpgradeableResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest, global::Google.LongRunning.Operation> __Method_UpgradeInstance = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -184,6 +226,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_UpgradeInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest, global::Google.LongRunning.Operation> __Method_UpgradeInstanceInternal = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -191,6 +234,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_UpgradeInstanceInternalRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest, global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse> __Method_ListEnvironments = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest, global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -198,6 +242,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_ListEnvironmentsRequest,
         __Marshaller_google_cloud_notebooks_v1beta1_ListEnvironmentsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest, global::Google.Cloud.Notebooks.V1Beta1.Environment> __Method_GetEnvironment = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest, global::Google.Cloud.Notebooks.V1Beta1.Environment>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -205,6 +250,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_GetEnvironmentRequest,
         __Marshaller_google_cloud_notebooks_v1beta1_Environment);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest, global::Google.LongRunning.Operation> __Method_CreateEnvironment = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -212,6 +258,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         __Marshaller_google_cloud_notebooks_v1beta1_CreateEnvironmentRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest, global::Google.LongRunning.Operation> __Method_DeleteEnvironment = new grpc::Method<global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -235,6 +282,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse> ListInstances(global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -246,6 +294,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1Beta1.Instance> GetInstance(global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -257,6 +306,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateInstance(global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -271,6 +321,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RegisterInstance(global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -282,6 +333,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SetInstanceAccelerator(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -293,6 +345,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SetInstanceMachineType(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -304,6 +357,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SetInstanceLabels(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -315,6 +369,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteInstance(global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -326,6 +381,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartInstance(global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -337,6 +393,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StopInstance(global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -348,6 +405,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ResetInstance(global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -362,6 +420,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReportInstanceInfo(global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -373,6 +432,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse> IsInstanceUpgradeable(global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -384,6 +444,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpgradeInstance(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -396,6 +457,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpgradeInstanceInternal(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -407,6 +469,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse> ListEnvironments(global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -418,6 +481,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Notebooks.V1Beta1.Environment> GetEnvironment(global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -429,6 +493,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateEnvironment(global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -440,6 +505,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteEnvironment(global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -452,20 +518,24 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     {
       /// <summary>Creates a new client for NotebookService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public NotebookServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for NotebookService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public NotebookServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected NotebookServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected NotebookServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -478,6 +548,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse ListInstances(global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -488,6 +559,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse ListInstances(global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstances, null, options, request);
@@ -500,6 +572,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -510,6 +583,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstances, null, options, request);
@@ -522,6 +596,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.Instance GetInstance(global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -532,6 +607,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.Instance GetInstance(global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstance, null, options, request);
@@ -544,6 +620,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.Instance> GetInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -554,6 +631,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.Instance> GetInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.GetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstance, null, options, request);
@@ -566,6 +644,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -576,6 +655,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInstance, null, options, request);
@@ -588,6 +668,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -598,6 +679,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.CreateInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInstance, null, options, request);
@@ -613,6 +695,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RegisterInstance(global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -626,6 +709,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RegisterInstance(global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RegisterInstance, null, options, request);
@@ -641,6 +725,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RegisterInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -654,6 +739,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RegisterInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.RegisterInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RegisterInstance, null, options, request);
@@ -666,6 +752,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SetInstanceAccelerator(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetInstanceAccelerator(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -676,6 +763,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SetInstanceAccelerator(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetInstanceAccelerator, null, options, request);
@@ -688,6 +776,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetInstanceAcceleratorAsync(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetInstanceAcceleratorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -698,6 +787,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetInstanceAcceleratorAsync(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceAcceleratorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetInstanceAccelerator, null, options, request);
@@ -710,6 +800,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SetInstanceMachineType(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetInstanceMachineType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -720,6 +811,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SetInstanceMachineType(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetInstanceMachineType, null, options, request);
@@ -732,6 +824,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetInstanceMachineTypeAsync(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetInstanceMachineTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -742,6 +835,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetInstanceMachineTypeAsync(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceMachineTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetInstanceMachineType, null, options, request);
@@ -754,6 +848,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SetInstanceLabels(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetInstanceLabels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -764,6 +859,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SetInstanceLabels(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetInstanceLabels, null, options, request);
@@ -776,6 +872,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetInstanceLabelsAsync(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetInstanceLabelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -786,6 +883,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetInstanceLabelsAsync(global::Google.Cloud.Notebooks.V1Beta1.SetInstanceLabelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetInstanceLabels, null, options, request);
@@ -798,6 +896,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteInstance(global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -808,6 +907,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteInstance(global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInstance, null, options, request);
@@ -820,6 +920,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -830,6 +931,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.DeleteInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
@@ -842,6 +944,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartInstance(global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -852,6 +955,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StartInstance(global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StartInstance, null, options, request);
@@ -864,6 +968,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -874,6 +979,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.StartInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StartInstance, null, options, request);
@@ -886,6 +992,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StopInstance(global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -896,6 +1003,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation StopInstance(global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StopInstance, null, options, request);
@@ -908,6 +1016,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -918,6 +1027,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StopInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.StopInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StopInstance, null, options, request);
@@ -930,6 +1040,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ResetInstance(global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -940,6 +1051,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ResetInstance(global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResetInstance, null, options, request);
@@ -952,6 +1064,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ResetInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -962,6 +1075,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ResetInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.ResetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetInstance, null, options, request);
@@ -977,6 +1091,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReportInstanceInfo(global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReportInstanceInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -990,6 +1105,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReportInstanceInfo(global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReportInstanceInfo, null, options, request);
@@ -1005,6 +1121,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReportInstanceInfoAsync(global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReportInstanceInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1018,6 +1135,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReportInstanceInfoAsync(global::Google.Cloud.Notebooks.V1Beta1.ReportInstanceInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReportInstanceInfo, null, options, request);
@@ -1030,6 +1148,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse IsInstanceUpgradeable(global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return IsInstanceUpgradeable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1040,6 +1159,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse IsInstanceUpgradeable(global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_IsInstanceUpgradeable, null, options, request);
@@ -1052,6 +1172,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse> IsInstanceUpgradeableAsync(global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return IsInstanceUpgradeableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1062,6 +1183,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableResponse> IsInstanceUpgradeableAsync(global::Google.Cloud.Notebooks.V1Beta1.IsInstanceUpgradeableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_IsInstanceUpgradeable, null, options, request);
@@ -1074,6 +1196,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpgradeInstance(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpgradeInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1084,6 +1207,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpgradeInstance(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpgradeInstance, null, options, request);
@@ -1096,6 +1220,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpgradeInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1106,6 +1231,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeInstanceAsync(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpgradeInstance, null, options, request);
@@ -1119,6 +1245,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpgradeInstanceInternal(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpgradeInstanceInternal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1130,6 +1257,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpgradeInstanceInternal(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpgradeInstanceInternal, null, options, request);
@@ -1143,6 +1271,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeInstanceInternalAsync(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpgradeInstanceInternalAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1154,6 +1283,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpgradeInstanceInternalAsync(global::Google.Cloud.Notebooks.V1Beta1.UpgradeInstanceInternalRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpgradeInstanceInternal, null, options, request);
@@ -1166,6 +1296,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse ListEnvironments(global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEnvironments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1176,6 +1307,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse ListEnvironments(global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListEnvironments, null, options, request);
@@ -1188,6 +1320,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse> ListEnvironmentsAsync(global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEnvironmentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1198,6 +1331,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsResponse> ListEnvironmentsAsync(global::Google.Cloud.Notebooks.V1Beta1.ListEnvironmentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEnvironments, null, options, request);
@@ -1210,6 +1344,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.Environment GetEnvironment(global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1220,6 +1355,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Notebooks.V1Beta1.Environment GetEnvironment(global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetEnvironment, null, options, request);
@@ -1232,6 +1368,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.Environment> GetEnvironmentAsync(global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1242,6 +1379,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Notebooks.V1Beta1.Environment> GetEnvironmentAsync(global::Google.Cloud.Notebooks.V1Beta1.GetEnvironmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetEnvironment, null, options, request);
@@ -1254,6 +1392,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateEnvironment(global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1264,6 +1403,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateEnvironment(global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEnvironment, null, options, request);
@@ -1276,6 +1416,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateEnvironmentAsync(global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1286,6 +1427,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateEnvironmentAsync(global::Google.Cloud.Notebooks.V1Beta1.CreateEnvironmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEnvironment, null, options, request);
@@ -1298,6 +1440,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteEnvironment(global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteEnvironment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1308,6 +1451,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteEnvironment(global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEnvironment, null, options, request);
@@ -1320,6 +1464,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteEnvironmentAsync(global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteEnvironmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1330,11 +1475,13 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteEnvironmentAsync(global::Google.Cloud.Notebooks.V1Beta1.DeleteEnvironmentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEnvironment, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NotebookServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new NotebookServiceClient(configuration);
@@ -1343,6 +1490,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(NotebookServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1371,6 +1519,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, NotebookServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Notebooks.V1Beta1.ListInstancesRequest, global::Google.Cloud.Notebooks.V1Beta1.ListInstancesResponse>(serviceImpl.ListInstances));

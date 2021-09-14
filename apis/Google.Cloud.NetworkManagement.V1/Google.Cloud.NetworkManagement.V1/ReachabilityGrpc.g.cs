@@ -37,6 +37,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
   {
     static readonly string __ServiceName = "google.cloud.networkmanagement.v1.ReachabilityService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -51,11 +52,13 @@ namespace Google.Cloud.NetworkManagement.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -67,16 +70,26 @@ namespace Google.Cloud.NetworkManagement.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest> __Marshaller_google_cloud_networkmanagement_v1_ListConnectivityTestsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse> __Marshaller_google_cloud_networkmanagement_v1_ListConnectivityTestsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest> __Marshaller_google_cloud_networkmanagement_v1_GetConnectivityTestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.ConnectivityTest> __Marshaller_google_cloud_networkmanagement_v1_ConnectivityTest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.ConnectivityTest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest> __Marshaller_google_cloud_networkmanagement_v1_CreateConnectivityTestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest> __Marshaller_google_cloud_networkmanagement_v1_UpdateConnectivityTestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest> __Marshaller_google_cloud_networkmanagement_v1_RerunConnectivityTestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest> __Marshaller_google_cloud_networkmanagement_v1_DeleteConnectivityTestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest, global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse> __Method_ListConnectivityTests = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest, global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -84,6 +97,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
         __Marshaller_google_cloud_networkmanagement_v1_ListConnectivityTestsRequest,
         __Marshaller_google_cloud_networkmanagement_v1_ListConnectivityTestsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest, global::Google.Cloud.NetworkManagement.V1.ConnectivityTest> __Method_GetConnectivityTest = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest, global::Google.Cloud.NetworkManagement.V1.ConnectivityTest>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +105,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
         __Marshaller_google_cloud_networkmanagement_v1_GetConnectivityTestRequest,
         __Marshaller_google_cloud_networkmanagement_v1_ConnectivityTest);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest, global::Google.LongRunning.Operation> __Method_CreateConnectivityTest = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +113,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
         __Marshaller_google_cloud_networkmanagement_v1_CreateConnectivityTestRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest, global::Google.LongRunning.Operation> __Method_UpdateConnectivityTest = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -105,6 +121,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
         __Marshaller_google_cloud_networkmanagement_v1_UpdateConnectivityTestRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest, global::Google.LongRunning.Operation> __Method_RerunConnectivityTest = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -112,6 +129,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
         __Marshaller_google_cloud_networkmanagement_v1_RerunConnectivityTestRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest, global::Google.LongRunning.Operation> __Method_DeleteConnectivityTest = new grpc::Method<global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +153,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse> ListConnectivityTests(global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -146,6 +165,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkManagement.V1.ConnectivityTest> GetConnectivityTest(global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -169,6 +189,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateConnectivityTest(global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -193,6 +214,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateConnectivityTest(global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -215,6 +237,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RerunConnectivityTest(global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -226,6 +249,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteConnectivityTest(global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -238,20 +262,24 @@ namespace Google.Cloud.NetworkManagement.V1 {
     {
       /// <summary>Creates a new client for ReachabilityService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ReachabilityServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ReachabilityService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ReachabilityServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ReachabilityServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ReachabilityServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -264,6 +292,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse ListConnectivityTests(global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConnectivityTests(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -274,6 +303,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse ListConnectivityTests(global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListConnectivityTests, null, options, request);
@@ -286,6 +316,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse> ListConnectivityTestsAsync(global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListConnectivityTestsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -296,6 +327,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse> ListConnectivityTestsAsync(global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListConnectivityTests, null, options, request);
@@ -308,6 +340,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.NetworkManagement.V1.ConnectivityTest GetConnectivityTest(global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectivityTest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -318,6 +351,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.NetworkManagement.V1.ConnectivityTest GetConnectivityTest(global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetConnectivityTest, null, options, request);
@@ -330,6 +364,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ConnectivityTest> GetConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetConnectivityTestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -340,6 +375,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkManagement.V1.ConnectivityTest> GetConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetConnectivityTest, null, options, request);
@@ -364,6 +400,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateConnectivityTest(global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConnectivityTest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -386,6 +423,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateConnectivityTest(global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateConnectivityTest, null, options, request);
@@ -410,6 +448,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateConnectivityTestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -432,6 +471,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateConnectivityTest, null, options, request);
@@ -457,6 +497,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateConnectivityTest(global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConnectivityTest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -480,6 +521,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateConnectivityTest(global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateConnectivityTest, null, options, request);
@@ -505,6 +547,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateConnectivityTestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -528,6 +571,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateConnectivityTest, null, options, request);
@@ -551,6 +595,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RerunConnectivityTest(global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RerunConnectivityTest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -572,6 +617,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RerunConnectivityTest(global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RerunConnectivityTest, null, options, request);
@@ -595,6 +641,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RerunConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RerunConnectivityTestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -616,6 +663,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RerunConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RerunConnectivityTest, null, options, request);
@@ -628,6 +676,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteConnectivityTest(global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConnectivityTest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -638,6 +687,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteConnectivityTest(global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteConnectivityTest, null, options, request);
@@ -650,6 +700,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteConnectivityTestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -660,11 +711,13 @@ namespace Google.Cloud.NetworkManagement.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteConnectivityTestAsync(global::Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteConnectivityTest, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ReachabilityServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ReachabilityServiceClient(configuration);
@@ -673,6 +726,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ReachabilityServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -688,6 +742,7 @@ namespace Google.Cloud.NetworkManagement.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ReachabilityServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListConnectivityTests, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest, global::Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse>(serviceImpl.ListConnectivityTests));

@@ -35,6 +35,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   {
     static readonly string __ServiceName = "google.cloud.video.transcoder.v1.TranscoderService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -49,11 +50,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -65,20 +68,34 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest> __Marshaller_google_cloud_video_transcoder_v1_CreateJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.Job> __Marshaller_google_cloud_video_transcoder_v1_Job = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.Job.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest> __Marshaller_google_cloud_video_transcoder_v1_ListJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse> __Marshaller_google_cloud_video_transcoder_v1_ListJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.GetJobRequest> __Marshaller_google_cloud_video_transcoder_v1_GetJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.GetJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest> __Marshaller_google_cloud_video_transcoder_v1_DeleteJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1_CreateJobTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.JobTemplate> __Marshaller_google_cloud_video_transcoder_v1_JobTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.JobTemplate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest> __Marshaller_google_cloud_video_transcoder_v1_ListJobTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse> __Marshaller_google_cloud_video_transcoder_v1_ListJobTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1_GetJobTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest> __Marshaller_google_cloud_video_transcoder_v1_DeleteJobTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest, global::Google.Cloud.Video.Transcoder.V1.Job> __Method_CreateJob = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest, global::Google.Cloud.Video.Transcoder.V1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -86,6 +103,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         __Marshaller_google_cloud_video_transcoder_v1_CreateJobRequest,
         __Marshaller_google_cloud_video_transcoder_v1_Job);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest, global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse> __Method_ListJobs = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest, global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -93,6 +111,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         __Marshaller_google_cloud_video_transcoder_v1_ListJobsRequest,
         __Marshaller_google_cloud_video_transcoder_v1_ListJobsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.GetJobRequest, global::Google.Cloud.Video.Transcoder.V1.Job> __Method_GetJob = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.GetJobRequest, global::Google.Cloud.Video.Transcoder.V1.Job>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +119,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         __Marshaller_google_cloud_video_transcoder_v1_GetJobRequest,
         __Marshaller_google_cloud_video_transcoder_v1_Job);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteJob = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +127,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         __Marshaller_google_cloud_video_transcoder_v1_DeleteJobRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest, global::Google.Cloud.Video.Transcoder.V1.JobTemplate> __Method_CreateJobTemplate = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest, global::Google.Cloud.Video.Transcoder.V1.JobTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +135,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         __Marshaller_google_cloud_video_transcoder_v1_CreateJobTemplateRequest,
         __Marshaller_google_cloud_video_transcoder_v1_JobTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest, global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse> __Method_ListJobTemplates = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest, global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +143,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         __Marshaller_google_cloud_video_transcoder_v1_ListJobTemplatesRequest,
         __Marshaller_google_cloud_video_transcoder_v1_ListJobTemplatesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest, global::Google.Cloud.Video.Transcoder.V1.JobTemplate> __Method_GetJobTemplate = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest, global::Google.Cloud.Video.Transcoder.V1.JobTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +151,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         __Marshaller_google_cloud_video_transcoder_v1_GetJobTemplateRequest,
         __Marshaller_google_cloud_video_transcoder_v1_JobTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteJobTemplate = new grpc::Method<global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -151,6 +175,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Transcoder.V1.Job> CreateJob(global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -162,6 +187,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse> ListJobs(global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -173,6 +199,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Transcoder.V1.Job> GetJob(global::Google.Cloud.Video.Transcoder.V1.GetJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -184,6 +211,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJob(global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -195,6 +223,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Transcoder.V1.JobTemplate> CreateJobTemplate(global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -206,6 +235,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse> ListJobTemplates(global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -217,6 +247,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Video.Transcoder.V1.JobTemplate> GetJobTemplate(global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -228,6 +259,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTemplate(global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -240,20 +272,24 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     {
       /// <summary>Creates a new client for TranscoderService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TranscoderServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for TranscoderService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TranscoderServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TranscoderServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TranscoderServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -266,6 +302,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.Job CreateJob(global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -276,6 +313,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.Job CreateJob(global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateJob, null, options, request);
@@ -288,6 +326,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.Job> CreateJobAsync(global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -298,6 +337,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.Job> CreateJobAsync(global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateJob, null, options, request);
@@ -310,6 +350,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse ListJobs(global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -320,6 +361,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse ListJobs(global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListJobs, null, options, request);
@@ -332,6 +374,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse> ListJobsAsync(global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -342,6 +385,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse> ListJobsAsync(global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListJobs, null, options, request);
@@ -354,6 +398,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.Job GetJob(global::Google.Cloud.Video.Transcoder.V1.GetJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -364,6 +409,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.Job GetJob(global::Google.Cloud.Video.Transcoder.V1.GetJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetJob, null, options, request);
@@ -376,6 +422,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.Job> GetJobAsync(global::Google.Cloud.Video.Transcoder.V1.GetJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -386,6 +433,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.Job> GetJobAsync(global::Google.Cloud.Video.Transcoder.V1.GetJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetJob, null, options, request);
@@ -398,6 +446,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJob(global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -408,6 +457,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJob(global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteJob, null, options, request);
@@ -420,6 +470,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobAsync(global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -430,6 +481,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobAsync(global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteJob, null, options, request);
@@ -442,6 +494,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.JobTemplate CreateJobTemplate(global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJobTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -452,6 +505,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.JobTemplate CreateJobTemplate(global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateJobTemplate, null, options, request);
@@ -464,6 +518,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.JobTemplate> CreateJobTemplateAsync(global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJobTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -474,6 +529,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.JobTemplate> CreateJobTemplateAsync(global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateJobTemplate, null, options, request);
@@ -486,6 +542,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse ListJobTemplates(global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -496,6 +553,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse ListJobTemplates(global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListJobTemplates, null, options, request);
@@ -508,6 +566,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse> ListJobTemplatesAsync(global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -518,6 +577,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse> ListJobTemplatesAsync(global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListJobTemplates, null, options, request);
@@ -530,6 +590,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.JobTemplate GetJobTemplate(global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -540,6 +601,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Video.Transcoder.V1.JobTemplate GetJobTemplate(global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetJobTemplate, null, options, request);
@@ -552,6 +614,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.JobTemplate> GetJobTemplateAsync(global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -562,6 +625,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Video.Transcoder.V1.JobTemplate> GetJobTemplateAsync(global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetJobTemplate, null, options, request);
@@ -574,6 +638,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJobTemplate(global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -584,6 +649,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJobTemplate(global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteJobTemplate, null, options, request);
@@ -596,6 +662,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTemplateAsync(global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -606,11 +673,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTemplateAsync(global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteJobTemplate, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TranscoderServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new TranscoderServiceClient(configuration);
@@ -619,6 +688,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(TranscoderServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -636,6 +706,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TranscoderServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest, global::Google.Cloud.Video.Transcoder.V1.Job>(serviceImpl.CreateJob));

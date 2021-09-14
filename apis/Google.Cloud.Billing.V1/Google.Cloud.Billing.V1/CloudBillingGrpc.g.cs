@@ -31,6 +31,7 @@ namespace Google.Cloud.Billing.V1 {
   {
     static readonly string __ServiceName = "google.cloud.billing.v1.CloudBilling";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Billing.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,23 +64,40 @@ namespace Google.Cloud.Billing.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.GetBillingAccountRequest> __Marshaller_google_cloud_billing_v1_GetBillingAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.GetBillingAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.BillingAccount> __Marshaller_google_cloud_billing_v1_BillingAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.BillingAccount.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListBillingAccountsRequest> __Marshaller_google_cloud_billing_v1_ListBillingAccountsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListBillingAccountsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListBillingAccountsResponse> __Marshaller_google_cloud_billing_v1_ListBillingAccountsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListBillingAccountsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest> __Marshaller_google_cloud_billing_v1_UpdateBillingAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.CreateBillingAccountRequest> __Marshaller_google_cloud_billing_v1_CreateBillingAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.CreateBillingAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse> __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_GetProjectBillingInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.ProjectBillingInfo> __Marshaller_google_cloud_billing_v1_ProjectBillingInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.ProjectBillingInfo.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest> __Marshaller_google_cloud_billing_v1_UpdateProjectBillingInfoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.GetBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount> __Method_GetBillingAccount = new grpc::Method<global::Google.Cloud.Billing.V1.GetBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -85,6 +105,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_cloud_billing_v1_GetBillingAccountRequest,
         __Marshaller_google_cloud_billing_v1_BillingAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.ListBillingAccountsRequest, global::Google.Cloud.Billing.V1.ListBillingAccountsResponse> __Method_ListBillingAccounts = new grpc::Method<global::Google.Cloud.Billing.V1.ListBillingAccountsRequest, global::Google.Cloud.Billing.V1.ListBillingAccountsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +113,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_cloud_billing_v1_ListBillingAccountsRequest,
         __Marshaller_google_cloud_billing_v1_ListBillingAccountsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount> __Method_UpdateBillingAccount = new grpc::Method<global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +121,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_cloud_billing_v1_UpdateBillingAccountRequest,
         __Marshaller_google_cloud_billing_v1_BillingAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.CreateBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount> __Method_CreateBillingAccount = new grpc::Method<global::Google.Cloud.Billing.V1.CreateBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +129,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_cloud_billing_v1_CreateBillingAccountRequest,
         __Marshaller_google_cloud_billing_v1_BillingAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest, global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse> __Method_ListProjectBillingInfo = new grpc::Method<global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest, global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +137,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoRequest,
         __Marshaller_google_cloud_billing_v1_ListProjectBillingInfoResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest, global::Google.Cloud.Billing.V1.ProjectBillingInfo> __Method_GetProjectBillingInfo = new grpc::Method<global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest, global::Google.Cloud.Billing.V1.ProjectBillingInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +145,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_cloud_billing_v1_GetProjectBillingInfoRequest,
         __Marshaller_google_cloud_billing_v1_ProjectBillingInfo);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest, global::Google.Cloud.Billing.V1.ProjectBillingInfo> __Method_UpdateProjectBillingInfo = new grpc::Method<global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest, global::Google.Cloud.Billing.V1.ProjectBillingInfo>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -127,6 +153,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_cloud_billing_v1_UpdateProjectBillingInfoRequest,
         __Marshaller_google_cloud_billing_v1_ProjectBillingInfo);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,6 +161,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +169,7 @@ namespace Google.Cloud.Billing.V1 {
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -166,6 +195,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.BillingAccount> GetBillingAccount(global::Google.Cloud.Billing.V1.GetBillingAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -179,6 +209,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.ListBillingAccountsResponse> ListBillingAccounts(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -195,6 +226,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.BillingAccount> UpdateBillingAccount(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -215,6 +247,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.BillingAccount> CreateBillingAccount(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -229,6 +262,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse> ListProjectBillingInfo(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -243,6 +277,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.ProjectBillingInfo> GetProjectBillingInfo(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -284,6 +319,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Billing.V1.ProjectBillingInfo> UpdateProjectBillingInfo(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -298,6 +334,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -313,6 +350,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -326,6 +364,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -338,20 +377,24 @@ namespace Google.Cloud.Billing.V1 {
     {
       /// <summary>Creates a new client for CloudBilling</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudBillingClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for CloudBilling that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public CloudBillingClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudBillingClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected CloudBillingClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -366,6 +409,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.BillingAccount GetBillingAccount(global::Google.Cloud.Billing.V1.GetBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBillingAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -378,6 +422,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.BillingAccount GetBillingAccount(global::Google.Cloud.Billing.V1.GetBillingAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBillingAccount, null, options, request);
@@ -392,6 +437,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> GetBillingAccountAsync(global::Google.Cloud.Billing.V1.GetBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBillingAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -404,6 +450,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> GetBillingAccountAsync(global::Google.Cloud.Billing.V1.GetBillingAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBillingAccount, null, options, request);
@@ -418,6 +465,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ListBillingAccountsResponse ListBillingAccounts(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBillingAccounts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -430,6 +478,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ListBillingAccountsResponse ListBillingAccounts(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListBillingAccounts, null, options, request);
@@ -444,6 +493,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ListBillingAccountsResponse> ListBillingAccountsAsync(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBillingAccountsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -456,6 +506,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ListBillingAccountsResponse> ListBillingAccountsAsync(global::Google.Cloud.Billing.V1.ListBillingAccountsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBillingAccounts, null, options, request);
@@ -473,6 +524,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.BillingAccount UpdateBillingAccount(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBillingAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -488,6 +540,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.BillingAccount UpdateBillingAccount(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateBillingAccount, null, options, request);
@@ -505,6 +558,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> UpdateBillingAccountAsync(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBillingAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -520,6 +574,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> UpdateBillingAccountAsync(global::Google.Cloud.Billing.V1.UpdateBillingAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBillingAccount, null, options, request);
@@ -541,6 +596,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.BillingAccount CreateBillingAccount(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBillingAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -560,6 +616,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.BillingAccount CreateBillingAccount(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBillingAccount, null, options, request);
@@ -581,6 +638,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> CreateBillingAccountAsync(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBillingAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -600,6 +658,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.BillingAccount> CreateBillingAccountAsync(global::Google.Cloud.Billing.V1.CreateBillingAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBillingAccount, null, options, request);
@@ -615,6 +674,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse ListProjectBillingInfo(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProjectBillingInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -628,6 +688,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse ListProjectBillingInfo(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListProjectBillingInfo, null, options, request);
@@ -643,6 +704,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse> ListProjectBillingInfoAsync(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProjectBillingInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -656,6 +718,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ListProjectBillingInfoResponse> ListProjectBillingInfoAsync(global::Google.Cloud.Billing.V1.ListProjectBillingInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListProjectBillingInfo, null, options, request);
@@ -671,6 +734,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ProjectBillingInfo GetProjectBillingInfo(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetProjectBillingInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -684,6 +748,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ProjectBillingInfo GetProjectBillingInfo(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetProjectBillingInfo, null, options, request);
@@ -699,6 +764,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ProjectBillingInfo> GetProjectBillingInfoAsync(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetProjectBillingInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -712,6 +778,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ProjectBillingInfo> GetProjectBillingInfoAsync(global::Google.Cloud.Billing.V1.GetProjectBillingInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetProjectBillingInfo, null, options, request);
@@ -754,6 +821,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ProjectBillingInfo UpdateProjectBillingInfo(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProjectBillingInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -794,6 +862,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Billing.V1.ProjectBillingInfo UpdateProjectBillingInfo(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateProjectBillingInfo, null, options, request);
@@ -836,6 +905,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ProjectBillingInfo> UpdateProjectBillingInfoAsync(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProjectBillingInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -876,6 +946,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Billing.V1.ProjectBillingInfo> UpdateProjectBillingInfoAsync(global::Google.Cloud.Billing.V1.UpdateProjectBillingInfoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateProjectBillingInfo, null, options, request);
@@ -891,6 +962,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -904,6 +976,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -919,6 +992,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -932,6 +1006,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -948,6 +1023,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -962,6 +1038,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -978,6 +1055,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -992,6 +1070,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1006,6 +1085,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1018,6 +1098,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1032,6 +1113,7 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1044,11 +1126,13 @@ namespace Google.Cloud.Billing.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudBillingClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new CloudBillingClient(configuration);
@@ -1057,6 +1141,7 @@ namespace Google.Cloud.Billing.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(CloudBillingBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1076,6 +1161,7 @@ namespace Google.Cloud.Billing.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CloudBillingBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetBillingAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Billing.V1.GetBillingAccountRequest, global::Google.Cloud.Billing.V1.BillingAccount>(serviceImpl.GetBillingAccount));

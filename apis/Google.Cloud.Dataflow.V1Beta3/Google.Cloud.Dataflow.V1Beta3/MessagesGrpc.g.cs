@@ -31,6 +31,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   {
     static readonly string __ServiceName = "google.dataflow.v1beta3.MessagesV1Beta3";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,9 +64,12 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest> __Marshaller_google_dataflow_v1beta3_ListJobMessagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse> __Marshaller_google_dataflow_v1beta3_ListJobMessagesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest, global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse> __Method_ListJobMessages = new grpc::Method<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest, global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -93,6 +99,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse> ListJobMessages(global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -105,20 +112,24 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     {
       /// <summary>Creates a new client for MessagesV1Beta3</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public MessagesV1Beta3Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for MessagesV1Beta3 that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public MessagesV1Beta3Client(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected MessagesV1Beta3Client() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected MessagesV1Beta3Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -137,6 +148,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse ListJobMessages(global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobMessages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -153,6 +165,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse ListJobMessages(global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListJobMessages, null, options, request);
@@ -171,6 +184,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse> ListJobMessagesAsync(global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobMessagesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -187,11 +201,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse> ListJobMessagesAsync(global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListJobMessages, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override MessagesV1Beta3Client NewInstance(ClientBaseConfiguration configuration)
       {
         return new MessagesV1Beta3Client(configuration);
@@ -200,6 +216,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(MessagesV1Beta3Base serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -210,6 +227,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MessagesV1Beta3Base serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListJobMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesRequest, global::Google.Cloud.Dataflow.V1Beta3.ListJobMessagesResponse>(serviceImpl.ListJobMessages));

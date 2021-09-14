@@ -32,6 +32,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.webrisk.v1beta1.WebRiskServiceV1Beta1";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -46,11 +47,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,13 +65,20 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest> __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest> __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest> __Marshaller_google_cloud_webrisk_v1beta1_SearchHashesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> __Marshaller_google_cloud_webrisk_v1beta1_SearchHashesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> __Method_ComputeThreatListDiff = new grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +86,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffRequest,
         __Marshaller_google_cloud_webrisk_v1beta1_ComputeThreatListDiffResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> __Method_SearchUris = new grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +94,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisRequest,
         __Marshaller_google_cloud_webrisk_v1beta1_SearchUrisResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> __Method_SearchHashes = new grpc::Method<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest, global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +118,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> ComputeThreatListDiff(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -117,6 +130,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> SearchUris(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -132,6 +146,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> SearchHashes(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -144,20 +159,24 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     {
       /// <summary>Creates a new client for WebRiskServiceV1Beta1</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public WebRiskServiceV1Beta1Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for WebRiskServiceV1Beta1 that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public WebRiskServiceV1Beta1Client(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected WebRiskServiceV1Beta1Client() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected WebRiskServiceV1Beta1Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -170,6 +189,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse ComputeThreatListDiff(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ComputeThreatListDiff(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -180,6 +200,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse ComputeThreatListDiff(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ComputeThreatListDiff, null, options, request);
@@ -192,6 +213,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> ComputeThreatListDiffAsync(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ComputeThreatListDiffAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -202,6 +224,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse> ComputeThreatListDiffAsync(global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ComputeThreatListDiff, null, options, request);
@@ -214,6 +237,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse SearchUris(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchUris(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -224,6 +248,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse SearchUris(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchUris, null, options, request);
@@ -236,6 +261,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> SearchUrisAsync(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchUrisAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -246,6 +272,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse> SearchUrisAsync(global::Google.Cloud.WebRisk.V1Beta1.SearchUrisRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchUris, null, options, request);
@@ -262,6 +289,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse SearchHashes(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchHashes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -276,6 +304,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse SearchHashes(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchHashes, null, options, request);
@@ -292,6 +321,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> SearchHashesAsync(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchHashesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -306,11 +336,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse> SearchHashesAsync(global::Google.Cloud.WebRisk.V1Beta1.SearchHashesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchHashes, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override WebRiskServiceV1Beta1Client NewInstance(ClientBaseConfiguration configuration)
       {
         return new WebRiskServiceV1Beta1Client(configuration);
@@ -319,6 +351,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(WebRiskServiceV1Beta1Base serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -331,6 +364,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, WebRiskServiceV1Beta1Base serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ComputeThreatListDiff, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest, global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse>(serviceImpl.ComputeThreatListDiff));

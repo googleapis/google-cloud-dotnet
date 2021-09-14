@@ -31,6 +31,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
   {
     static readonly string __ServiceName = "google.cloud.workflows.executions.v1beta.Executions";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,13 +64,20 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest> __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_CreateExecutionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> __Marshaller_google_cloud_workflows_executions_v1beta_Execution = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.Execution.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_GetExecutionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest> __Marshaller_google_cloud_workflows_executions_v1beta_CancelExecutionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> __Method_ListExecutions = new grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -75,6 +85,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
         __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsRequest,
         __Marshaller_google_cloud_workflows_executions_v1beta_ListExecutionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest, global::Google.Cloud.Workflows.Executions.V1Beta.Execution> __Method_CreateExecution = new grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest, global::Google.Cloud.Workflows.Executions.V1Beta.Execution>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -82,6 +93,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
         __Marshaller_google_cloud_workflows_executions_v1beta_CreateExecutionRequest,
         __Marshaller_google_cloud_workflows_executions_v1beta_Execution);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest, global::Google.Cloud.Workflows.Executions.V1Beta.Execution> __Method_GetExecution = new grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest, global::Google.Cloud.Workflows.Executions.V1Beta.Execution>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -89,6 +101,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
         __Marshaller_google_cloud_workflows_executions_v1beta_GetExecutionRequest,
         __Marshaller_google_cloud_workflows_executions_v1beta_Execution);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest, global::Google.Cloud.Workflows.Executions.V1Beta.Execution> __Method_CancelExecution = new grpc::Method<global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest, global::Google.Cloud.Workflows.Executions.V1Beta.Execution>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +128,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> ListExecutions(global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -126,6 +140,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> CreateExecution(global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -137,6 +152,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> GetExecution(global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -148,6 +164,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> CancelExecution(global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -160,20 +177,24 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
     {
       /// <summary>Creates a new client for Executions</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ExecutionsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Executions that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ExecutionsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ExecutionsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ExecutionsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -189,6 +210,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse ListExecutions(global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExecutions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -202,6 +224,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse ListExecutions(global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListExecutions, null, options, request);
@@ -217,6 +240,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> ListExecutionsAsync(global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExecutionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -230,6 +254,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse> ListExecutionsAsync(global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListExecutions, null, options, request);
@@ -242,6 +267,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.Execution CreateExecution(global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateExecution(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -252,6 +278,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.Execution CreateExecution(global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateExecution, null, options, request);
@@ -264,6 +291,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> CreateExecutionAsync(global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateExecutionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -274,6 +302,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> CreateExecutionAsync(global::Google.Cloud.Workflows.Executions.V1Beta.CreateExecutionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateExecution, null, options, request);
@@ -286,6 +315,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.Execution GetExecution(global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExecution(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -296,6 +326,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.Execution GetExecution(global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetExecution, null, options, request);
@@ -308,6 +339,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> GetExecutionAsync(global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExecutionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -318,6 +350,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> GetExecutionAsync(global::Google.Cloud.Workflows.Executions.V1Beta.GetExecutionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetExecution, null, options, request);
@@ -330,6 +363,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.Execution CancelExecution(global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelExecution(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -340,6 +374,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Workflows.Executions.V1Beta.Execution CancelExecution(global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CancelExecution, null, options, request);
@@ -352,6 +387,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> CancelExecutionAsync(global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelExecutionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -362,11 +398,13 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.Executions.V1Beta.Execution> CancelExecutionAsync(global::Google.Cloud.Workflows.Executions.V1Beta.CancelExecutionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelExecution, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ExecutionsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ExecutionsClient(configuration);
@@ -375,6 +413,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ExecutionsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -388,6 +427,7 @@ namespace Google.Cloud.Workflows.Executions.V1Beta {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ExecutionsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListExecutions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsRequest, global::Google.Cloud.Workflows.Executions.V1Beta.ListExecutionsResponse>(serviceImpl.ListExecutions));

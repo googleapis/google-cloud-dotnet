@@ -30,6 +30,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.domains.v1beta1.Domains";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Domains.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,26 +63,46 @@ namespace Google.Cloud.Domains.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest> __Marshaller_google_cloud_domains_v1beta1_SearchDomainsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> __Marshaller_google_cloud_domains_v1beta1_SearchDomainsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest> __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse> __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest> __Marshaller_google_cloud_domains_v1beta1_RegisterDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_GetRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.Registration> __Marshaller_google_cloud_domains_v1beta1_Registration = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.Registration.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_UpdateRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureManagementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureDnsSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest> __Marshaller_google_cloud_domains_v1beta1_ConfigureContactSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_ExportRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest> __Marshaller_google_cloud_domains_v1beta1_DeleteRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest> __Marshaller_google_cloud_domains_v1beta1_RetrieveAuthorizationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> __Marshaller_google_cloud_domains_v1beta1_AuthorizationCode = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.AuthorizationCode.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest> __Marshaller_google_cloud_domains_v1beta1_ResetAuthorizationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> __Method_SearchDomains = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -87,6 +110,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_SearchDomainsRequest,
         __Marshaller_google_cloud_domains_v1beta1_SearchDomainsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest, global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse> __Method_RetrieveRegisterParameters = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest, global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +118,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersRequest,
         __Marshaller_google_cloud_domains_v1beta1_RetrieveRegisterParametersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest, global::Google.LongRunning.Operation> __Method_RegisterDomain = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +126,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_RegisterDomainRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> __Method_ListRegistrations = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +134,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsRequest,
         __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest, global::Google.Cloud.Domains.V1Beta1.Registration> __Method_GetRegistration = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest, global::Google.Cloud.Domains.V1Beta1.Registration>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +142,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_GetRegistrationRequest,
         __Marshaller_google_cloud_domains_v1beta1_Registration);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest, global::Google.LongRunning.Operation> __Method_UpdateRegistration = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -122,6 +150,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_UpdateRegistrationRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest, global::Google.LongRunning.Operation> __Method_ConfigureManagementSettings = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -129,6 +158,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_ConfigureManagementSettingsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest, global::Google.LongRunning.Operation> __Method_ConfigureDnsSettings = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -136,6 +166,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_ConfigureDnsSettingsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest, global::Google.LongRunning.Operation> __Method_ConfigureContactSettings = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -143,6 +174,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_ConfigureContactSettingsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest, global::Google.LongRunning.Operation> __Method_ExportRegistration = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,6 +182,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_ExportRegistrationRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest, global::Google.LongRunning.Operation> __Method_DeleteRegistration = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -157,6 +190,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_DeleteRegistrationRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest, global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> __Method_RetrieveAuthorizationCode = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest, global::Google.Cloud.Domains.V1Beta1.AuthorizationCode>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -164,6 +198,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __Marshaller_google_cloud_domains_v1beta1_RetrieveAuthorizationCodeRequest,
         __Marshaller_google_cloud_domains_v1beta1_AuthorizationCode);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest, global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> __Method_ResetAuthorizationCode = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest, global::Google.Cloud.Domains.V1Beta1.AuthorizationCode>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -191,6 +226,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> SearchDomains(global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -203,6 +239,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse> RetrieveRegisterParameters(global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -226,6 +263,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RegisterDomain(global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -237,6 +275,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> ListRegistrations(global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -248,6 +287,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Domains.V1Beta1.Registration> GetRegistration(global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -264,6 +304,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRegistration(global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -275,6 +316,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ConfigureManagementSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -286,6 +328,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ConfigureDnsSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -298,6 +341,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ConfigureContactSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -322,6 +366,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportRegistration(global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -338,6 +383,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRegistration(global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -353,6 +399,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> RetrieveAuthorizationCode(global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -367,6 +414,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> ResetAuthorizationCode(global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -379,20 +427,24 @@ namespace Google.Cloud.Domains.V1Beta1 {
     {
       /// <summary>Creates a new client for Domains</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DomainsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Domains that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DomainsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DomainsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DomainsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -409,6 +461,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse SearchDomains(global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchDomains(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -423,6 +476,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse SearchDomains(global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchDomains, null, options, request);
@@ -439,6 +493,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> SearchDomainsAsync(global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchDomainsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -453,6 +508,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse> SearchDomainsAsync(global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchDomains, null, options, request);
@@ -466,6 +522,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse RetrieveRegisterParameters(global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RetrieveRegisterParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -477,6 +534,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse RetrieveRegisterParameters(global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RetrieveRegisterParameters, null, options, request);
@@ -490,6 +548,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse> RetrieveRegisterParametersAsync(global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RetrieveRegisterParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -501,6 +560,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse> RetrieveRegisterParametersAsync(global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RetrieveRegisterParameters, null, options, request);
@@ -525,6 +585,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RegisterDomain(global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterDomain(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -547,6 +608,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RegisterDomain(global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RegisterDomain, null, options, request);
@@ -571,6 +633,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RegisterDomainAsync(global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterDomainAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -593,6 +656,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RegisterDomainAsync(global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RegisterDomain, null, options, request);
@@ -605,6 +669,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse ListRegistrations(global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRegistrations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -615,6 +680,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse ListRegistrations(global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListRegistrations, null, options, request);
@@ -627,6 +693,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> ListRegistrationsAsync(global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRegistrationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -637,6 +704,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> ListRegistrationsAsync(global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListRegistrations, null, options, request);
@@ -649,6 +717,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.Registration GetRegistration(global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -659,6 +728,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.Registration GetRegistration(global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRegistration, null, options, request);
@@ -671,6 +741,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.Registration> GetRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -681,6 +752,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.Registration> GetRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRegistration, null, options, request);
@@ -698,6 +770,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateRegistration(global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -713,6 +786,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateRegistration(global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateRegistration, null, options, request);
@@ -730,6 +804,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -745,6 +820,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateRegistration, null, options, request);
@@ -757,6 +833,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ConfigureManagementSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConfigureManagementSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -767,6 +844,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ConfigureManagementSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ConfigureManagementSettings, null, options, request);
@@ -779,6 +857,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureManagementSettingsAsync(global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConfigureManagementSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -789,6 +868,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureManagementSettingsAsync(global::Google.Cloud.Domains.V1Beta1.ConfigureManagementSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ConfigureManagementSettings, null, options, request);
@@ -801,6 +881,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ConfigureDnsSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConfigureDnsSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -811,6 +892,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ConfigureDnsSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ConfigureDnsSettings, null, options, request);
@@ -823,6 +905,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureDnsSettingsAsync(global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConfigureDnsSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -833,6 +916,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureDnsSettingsAsync(global::Google.Cloud.Domains.V1Beta1.ConfigureDnsSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ConfigureDnsSettings, null, options, request);
@@ -846,6 +930,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ConfigureContactSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConfigureContactSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -857,6 +942,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ConfigureContactSettings(global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ConfigureContactSettings, null, options, request);
@@ -870,6 +956,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureContactSettingsAsync(global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ConfigureContactSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -881,6 +968,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureContactSettingsAsync(global::Google.Cloud.Domains.V1Beta1.ConfigureContactSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ConfigureContactSettings, null, options, request);
@@ -906,6 +994,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportRegistration(global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -929,6 +1018,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportRegistration(global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExportRegistration, null, options, request);
@@ -954,6 +1044,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -977,6 +1068,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.ExportRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportRegistration, null, options, request);
@@ -994,6 +1086,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteRegistration(global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1009,6 +1102,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteRegistration(global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteRegistration, null, options, request);
@@ -1026,6 +1120,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1041,6 +1136,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRegistrationAsync(global::Google.Cloud.Domains.V1Beta1.DeleteRegistrationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRegistration, null, options, request);
@@ -1057,6 +1153,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.AuthorizationCode RetrieveAuthorizationCode(global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RetrieveAuthorizationCode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1071,6 +1168,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.AuthorizationCode RetrieveAuthorizationCode(global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RetrieveAuthorizationCode, null, options, request);
@@ -1087,6 +1185,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> RetrieveAuthorizationCodeAsync(global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RetrieveAuthorizationCodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1101,6 +1200,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> RetrieveAuthorizationCodeAsync(global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RetrieveAuthorizationCode, null, options, request);
@@ -1116,6 +1216,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.AuthorizationCode ResetAuthorizationCode(global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetAuthorizationCode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1129,6 +1230,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Domains.V1Beta1.AuthorizationCode ResetAuthorizationCode(global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResetAuthorizationCode, null, options, request);
@@ -1144,6 +1246,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> ResetAuthorizationCodeAsync(global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetAuthorizationCodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1157,11 +1260,13 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.AuthorizationCode> ResetAuthorizationCodeAsync(global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetAuthorizationCode, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DomainsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DomainsClient(configuration);
@@ -1170,6 +1275,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DomainsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1192,6 +1298,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DomainsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_SearchDomains, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse>(serviceImpl.SearchDomains));

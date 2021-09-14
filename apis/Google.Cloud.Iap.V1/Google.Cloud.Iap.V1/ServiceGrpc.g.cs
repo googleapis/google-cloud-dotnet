@@ -30,6 +30,7 @@ namespace Google.Cloud.Iap.V1 {
   {
     static readonly string __ServiceName = "google.cloud.iap.v1.IdentityAwareProxyAdminService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Iap.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,15 +63,24 @@ namespace Google.Cloud.Iap.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.GetIapSettingsRequest> __Marshaller_google_cloud_iap_v1_GetIapSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.GetIapSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.IapSettings> __Marshaller_google_cloud_iap_v1_IapSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.IapSettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest> __Marshaller_google_cloud_iap_v1_UpdateIapSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +88,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +96,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +104,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.GetIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings> __Method_GetIapSettings = new grpc::Method<global::Google.Cloud.Iap.V1.GetIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +112,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_GetIapSettingsRequest,
         __Marshaller_google_cloud_iap_v1_IapSettings);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings> __Method_UpdateIapSettings = new grpc::Method<global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -123,6 +139,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -137,6 +154,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -151,6 +169,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -162,6 +181,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.IapSettings> GetIapSettings(global::Google.Cloud.Iap.V1.GetIapSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -174,6 +194,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.IapSettings> UpdateIapSettings(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -186,20 +207,24 @@ namespace Google.Cloud.Iap.V1 {
     {
       /// <summary>Creates a new client for IdentityAwareProxyAdminService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IdentityAwareProxyAdminServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IdentityAwareProxyAdminService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IdentityAwareProxyAdminServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IdentityAwareProxyAdminServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IdentityAwareProxyAdminServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -215,6 +240,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -228,6 +254,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -243,6 +270,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -256,6 +284,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -271,6 +300,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -284,6 +314,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -299,6 +330,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -312,6 +344,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -327,6 +360,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -340,6 +374,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -355,6 +390,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -368,6 +404,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -380,6 +417,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IapSettings GetIapSettings(global::Google.Cloud.Iap.V1.GetIapSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIapSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -390,6 +428,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IapSettings GetIapSettings(global::Google.Cloud.Iap.V1.GetIapSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIapSettings, null, options, request);
@@ -402,6 +441,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IapSettings> GetIapSettingsAsync(global::Google.Cloud.Iap.V1.GetIapSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIapSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -412,6 +452,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IapSettings> GetIapSettingsAsync(global::Google.Cloud.Iap.V1.GetIapSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIapSettings, null, options, request);
@@ -425,6 +466,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IapSettings UpdateIapSettings(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIapSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -436,6 +478,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IapSettings UpdateIapSettings(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateIapSettings, null, options, request);
@@ -449,6 +492,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IapSettings> UpdateIapSettingsAsync(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIapSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -460,11 +504,13 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IapSettings> UpdateIapSettingsAsync(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIapSettings, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IdentityAwareProxyAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new IdentityAwareProxyAdminServiceClient(configuration);
@@ -473,6 +519,7 @@ namespace Google.Cloud.Iap.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(IdentityAwareProxyAdminServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -487,6 +534,7 @@ namespace Google.Cloud.Iap.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, IdentityAwareProxyAdminServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
@@ -506,6 +554,7 @@ namespace Google.Cloud.Iap.V1 {
   {
     static readonly string __ServiceName = "google.cloud.iap.v1.IdentityAwareProxyOAuthService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -520,11 +569,13 @@ namespace Google.Cloud.Iap.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -536,20 +587,34 @@ namespace Google.Cloud.Iap.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListBrandsRequest> __Marshaller_google_cloud_iap_v1_ListBrandsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListBrandsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListBrandsResponse> __Marshaller_google_cloud_iap_v1_ListBrandsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListBrandsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.CreateBrandRequest> __Marshaller_google_cloud_iap_v1_CreateBrandRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.CreateBrandRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.Brand> __Marshaller_google_cloud_iap_v1_Brand = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.Brand.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.GetBrandRequest> __Marshaller_google_cloud_iap_v1_GetBrandRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.GetBrandRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest> __Marshaller_google_cloud_iap_v1_CreateIdentityAwareProxyClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> __Marshaller_google_cloud_iap_v1_IdentityAwareProxyClient = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.IdentityAwareProxyClient.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest> __Marshaller_google_cloud_iap_v1_ListIdentityAwareProxyClientsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse> __Marshaller_google_cloud_iap_v1_ListIdentityAwareProxyClientsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest> __Marshaller_google_cloud_iap_v1_GetIdentityAwareProxyClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest> __Marshaller_google_cloud_iap_v1_ResetIdentityAwareProxyClientSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest> __Marshaller_google_cloud_iap_v1_DeleteIdentityAwareProxyClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.ListBrandsRequest, global::Google.Cloud.Iap.V1.ListBrandsResponse> __Method_ListBrands = new grpc::Method<global::Google.Cloud.Iap.V1.ListBrandsRequest, global::Google.Cloud.Iap.V1.ListBrandsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -557,6 +622,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_ListBrandsRequest,
         __Marshaller_google_cloud_iap_v1_ListBrandsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.CreateBrandRequest, global::Google.Cloud.Iap.V1.Brand> __Method_CreateBrand = new grpc::Method<global::Google.Cloud.Iap.V1.CreateBrandRequest, global::Google.Cloud.Iap.V1.Brand>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -564,6 +630,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_CreateBrandRequest,
         __Marshaller_google_cloud_iap_v1_Brand);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.GetBrandRequest, global::Google.Cloud.Iap.V1.Brand> __Method_GetBrand = new grpc::Method<global::Google.Cloud.Iap.V1.GetBrandRequest, global::Google.Cloud.Iap.V1.Brand>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -571,6 +638,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_GetBrandRequest,
         __Marshaller_google_cloud_iap_v1_Brand);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest, global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> __Method_CreateIdentityAwareProxyClient = new grpc::Method<global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest, global::Google.Cloud.Iap.V1.IdentityAwareProxyClient>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -578,6 +646,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_CreateIdentityAwareProxyClientRequest,
         __Marshaller_google_cloud_iap_v1_IdentityAwareProxyClient);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest, global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse> __Method_ListIdentityAwareProxyClients = new grpc::Method<global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest, global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -585,6 +654,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_ListIdentityAwareProxyClientsRequest,
         __Marshaller_google_cloud_iap_v1_ListIdentityAwareProxyClientsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest, global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> __Method_GetIdentityAwareProxyClient = new grpc::Method<global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest, global::Google.Cloud.Iap.V1.IdentityAwareProxyClient>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -592,6 +662,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_GetIdentityAwareProxyClientRequest,
         __Marshaller_google_cloud_iap_v1_IdentityAwareProxyClient);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest, global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> __Method_ResetIdentityAwareProxyClientSecret = new grpc::Method<global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest, global::Google.Cloud.Iap.V1.IdentityAwareProxyClient>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -599,6 +670,7 @@ namespace Google.Cloud.Iap.V1 {
         __Marshaller_google_cloud_iap_v1_ResetIdentityAwareProxyClientSecretRequest,
         __Marshaller_google_cloud_iap_v1_IdentityAwareProxyClient);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteIdentityAwareProxyClient = new grpc::Method<global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -622,6 +694,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.ListBrandsResponse> ListBrands(global::Google.Cloud.Iap.V1.ListBrandsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -639,6 +712,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.Brand> CreateBrand(global::Google.Cloud.Iap.V1.CreateBrandRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -650,6 +724,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.Brand> GetBrand(global::Google.Cloud.Iap.V1.GetBrandRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -663,6 +738,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> CreateIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -674,6 +750,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse> ListIdentityAwareProxyClients(global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -686,6 +763,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> GetIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -698,6 +776,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> ResetIdentityAwareProxyClientSecret(global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -711,6 +790,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -723,20 +803,24 @@ namespace Google.Cloud.Iap.V1 {
     {
       /// <summary>Creates a new client for IdentityAwareProxyOAuthService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IdentityAwareProxyOAuthServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IdentityAwareProxyOAuthService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IdentityAwareProxyOAuthServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IdentityAwareProxyOAuthServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IdentityAwareProxyOAuthServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -749,6 +833,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.ListBrandsResponse ListBrands(global::Google.Cloud.Iap.V1.ListBrandsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBrands(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -759,6 +844,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.ListBrandsResponse ListBrands(global::Google.Cloud.Iap.V1.ListBrandsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListBrands, null, options, request);
@@ -771,6 +857,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ListBrandsResponse> ListBrandsAsync(global::Google.Cloud.Iap.V1.ListBrandsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBrandsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -781,6 +868,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ListBrandsResponse> ListBrandsAsync(global::Google.Cloud.Iap.V1.ListBrandsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBrands, null, options, request);
@@ -799,6 +887,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.Brand CreateBrand(global::Google.Cloud.Iap.V1.CreateBrandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBrand(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -815,6 +904,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.Brand CreateBrand(global::Google.Cloud.Iap.V1.CreateBrandRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBrand, null, options, request);
@@ -833,6 +923,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.Brand> CreateBrandAsync(global::Google.Cloud.Iap.V1.CreateBrandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBrandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -849,6 +940,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.Brand> CreateBrandAsync(global::Google.Cloud.Iap.V1.CreateBrandRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBrand, null, options, request);
@@ -861,6 +953,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.Brand GetBrand(global::Google.Cloud.Iap.V1.GetBrandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBrand(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -871,6 +964,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.Brand GetBrand(global::Google.Cloud.Iap.V1.GetBrandRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBrand, null, options, request);
@@ -883,6 +977,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.Brand> GetBrandAsync(global::Google.Cloud.Iap.V1.GetBrandRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBrandAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -893,6 +988,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.Brand> GetBrandAsync(global::Google.Cloud.Iap.V1.GetBrandRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBrand, null, options, request);
@@ -907,6 +1003,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IdentityAwareProxyClient CreateIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIdentityAwareProxyClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -919,6 +1016,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IdentityAwareProxyClient CreateIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateIdentityAwareProxyClient, null, options, request);
@@ -933,6 +1031,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> CreateIdentityAwareProxyClientAsync(global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIdentityAwareProxyClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -945,6 +1044,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> CreateIdentityAwareProxyClientAsync(global::Google.Cloud.Iap.V1.CreateIdentityAwareProxyClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateIdentityAwareProxyClient, null, options, request);
@@ -957,6 +1057,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse ListIdentityAwareProxyClients(global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIdentityAwareProxyClients(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -967,6 +1068,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse ListIdentityAwareProxyClients(global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListIdentityAwareProxyClients, null, options, request);
@@ -979,6 +1081,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse> ListIdentityAwareProxyClientsAsync(global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIdentityAwareProxyClientsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -989,6 +1092,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsResponse> ListIdentityAwareProxyClientsAsync(global::Google.Cloud.Iap.V1.ListIdentityAwareProxyClientsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListIdentityAwareProxyClients, null, options, request);
@@ -1002,6 +1106,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IdentityAwareProxyClient GetIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIdentityAwareProxyClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1013,6 +1118,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IdentityAwareProxyClient GetIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIdentityAwareProxyClient, null, options, request);
@@ -1026,6 +1132,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> GetIdentityAwareProxyClientAsync(global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIdentityAwareProxyClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1037,6 +1144,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> GetIdentityAwareProxyClientAsync(global::Google.Cloud.Iap.V1.GetIdentityAwareProxyClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIdentityAwareProxyClient, null, options, request);
@@ -1050,6 +1158,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IdentityAwareProxyClient ResetIdentityAwareProxyClientSecret(global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetIdentityAwareProxyClientSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1061,6 +1170,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iap.V1.IdentityAwareProxyClient ResetIdentityAwareProxyClientSecret(global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResetIdentityAwareProxyClientSecret, null, options, request);
@@ -1074,6 +1184,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> ResetIdentityAwareProxyClientSecretAsync(global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetIdentityAwareProxyClientSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1085,6 +1196,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.IdentityAwareProxyClient> ResetIdentityAwareProxyClientSecretAsync(global::Google.Cloud.Iap.V1.ResetIdentityAwareProxyClientSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetIdentityAwareProxyClientSecret, null, options, request);
@@ -1099,6 +1211,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIdentityAwareProxyClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1111,6 +1224,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteIdentityAwareProxyClient(global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteIdentityAwareProxyClient, null, options, request);
@@ -1125,6 +1239,7 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteIdentityAwareProxyClientAsync(global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIdentityAwareProxyClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1137,11 +1252,13 @@ namespace Google.Cloud.Iap.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteIdentityAwareProxyClientAsync(global::Google.Cloud.Iap.V1.DeleteIdentityAwareProxyClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteIdentityAwareProxyClient, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IdentityAwareProxyOAuthServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new IdentityAwareProxyOAuthServiceClient(configuration);
@@ -1150,6 +1267,7 @@ namespace Google.Cloud.Iap.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(IdentityAwareProxyOAuthServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1167,6 +1285,7 @@ namespace Google.Cloud.Iap.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, IdentityAwareProxyOAuthServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListBrands, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.ListBrandsRequest, global::Google.Cloud.Iap.V1.ListBrandsResponse>(serviceImpl.ListBrands));

@@ -32,6 +32,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
   {
     static readonly string __ServiceName = "google.cloud.websecurityscanner.v1.WebSecurityScanner";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -46,11 +47,13 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,29 +65,52 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest> __Marshaller_google_cloud_websecurityscanner_v1_CreateScanConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> __Marshaller_google_cloud_websecurityscanner_v1_ScanConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest> __Marshaller_google_cloud_websecurityscanner_v1_DeleteScanConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest> __Marshaller_google_cloud_websecurityscanner_v1_GetScanConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest> __Marshaller_google_cloud_websecurityscanner_v1_ListScanConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse> __Marshaller_google_cloud_websecurityscanner_v1_ListScanConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest> __Marshaller_google_cloud_websecurityscanner_v1_UpdateScanConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest> __Marshaller_google_cloud_websecurityscanner_v1_StartScanRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> __Marshaller_google_cloud_websecurityscanner_v1_ScanRun = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ScanRun.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest> __Marshaller_google_cloud_websecurityscanner_v1_GetScanRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest> __Marshaller_google_cloud_websecurityscanner_v1_ListScanRunsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse> __Marshaller_google_cloud_websecurityscanner_v1_ListScanRunsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest> __Marshaller_google_cloud_websecurityscanner_v1_StopScanRunRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest> __Marshaller_google_cloud_websecurityscanner_v1_ListCrawledUrlsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse> __Marshaller_google_cloud_websecurityscanner_v1_ListCrawledUrlsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest> __Marshaller_google_cloud_websecurityscanner_v1_GetFindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.Finding> __Marshaller_google_cloud_websecurityscanner_v1_Finding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.Finding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest> __Marshaller_google_cloud_websecurityscanner_v1_ListFindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse> __Marshaller_google_cloud_websecurityscanner_v1_ListFindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest> __Marshaller_google_cloud_websecurityscanner_v1_ListFindingTypeStatsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse> __Marshaller_google_cloud_websecurityscanner_v1_ListFindingTypeStatsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> __Method_CreateScanConfig = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +118,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_CreateScanConfigRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ScanConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteScanConfig = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +126,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_DeleteScanConfigRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> __Method_GetScanConfig = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +134,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_GetScanConfigRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ScanConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse> __Method_ListScanConfigs = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +142,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_ListScanConfigsRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ListScanConfigsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> __Method_UpdateScanConfig = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +150,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_UpdateScanConfigRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ScanConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanRun> __Method_StartScanRun = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanRun>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -127,6 +158,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_StartScanRunRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ScanRun);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanRun> __Method_GetScanRun = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanRun>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,6 +166,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_GetScanRunRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ScanRun);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse> __Method_ListScanRuns = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +174,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_ListScanRunsRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ListScanRunsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanRun> __Method_StopScanRun = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanRun>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -148,6 +182,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_StopScanRunRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ScanRun);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse> __Method_ListCrawledUrls = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -155,6 +190,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_ListCrawledUrlsRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ListCrawledUrlsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest, global::Google.Cloud.WebSecurityScanner.V1.Finding> __Method_GetFinding = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest, global::Google.Cloud.WebSecurityScanner.V1.Finding>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -162,6 +198,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_GetFindingRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_Finding);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse> __Method_ListFindings = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,6 +206,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
         __Marshaller_google_cloud_websecurityscanner_v1_ListFindingsRequest,
         __Marshaller_google_cloud_websecurityscanner_v1_ListFindingsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse> __Method_ListFindingTypeStats = new grpc::Method<global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest, global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -192,6 +230,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> CreateScanConfig(global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -203,6 +242,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteScanConfig(global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -214,6 +254,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> GetScanConfig(global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -225,6 +266,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse> ListScanConfigs(global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -236,6 +278,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> UpdateScanConfig(global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -247,6 +290,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> StartScanRun(global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -258,6 +302,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> GetScanRun(global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -270,6 +315,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse> ListScanRuns(global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -281,6 +327,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> StopScanRun(global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -292,6 +339,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse> ListCrawledUrls(global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -303,6 +351,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.Finding> GetFinding(global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -314,6 +363,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse> ListFindings(global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -325,6 +375,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse> ListFindingTypeStats(global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -337,20 +388,24 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
     {
       /// <summary>Creates a new client for WebSecurityScanner</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public WebSecurityScannerClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for WebSecurityScanner that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public WebSecurityScannerClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected WebSecurityScannerClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected WebSecurityScannerClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -363,6 +418,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanConfig CreateScanConfig(global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateScanConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -373,6 +429,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanConfig CreateScanConfig(global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateScanConfig, null, options, request);
@@ -385,6 +442,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> CreateScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateScanConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -395,6 +453,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> CreateScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateScanConfig, null, options, request);
@@ -407,6 +466,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteScanConfig(global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteScanConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -417,6 +477,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteScanConfig(global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteScanConfig, null, options, request);
@@ -429,6 +490,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteScanConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -439,6 +501,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.DeleteScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteScanConfig, null, options, request);
@@ -451,6 +514,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanConfig GetScanConfig(global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetScanConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -461,6 +525,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanConfig GetScanConfig(global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetScanConfig, null, options, request);
@@ -473,6 +538,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> GetScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetScanConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -483,6 +549,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> GetScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.GetScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetScanConfig, null, options, request);
@@ -495,6 +562,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse ListScanConfigs(global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListScanConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -505,6 +573,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse ListScanConfigs(global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListScanConfigs, null, options, request);
@@ -517,6 +586,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse> ListScanConfigsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListScanConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -527,6 +597,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsResponse> ListScanConfigsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListScanConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListScanConfigs, null, options, request);
@@ -539,6 +610,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanConfig UpdateScanConfig(global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateScanConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -549,6 +621,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanConfig UpdateScanConfig(global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateScanConfig, null, options, request);
@@ -561,6 +634,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> UpdateScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateScanConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -571,6 +645,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanConfig> UpdateScanConfigAsync(global::Google.Cloud.WebSecurityScanner.V1.UpdateScanConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateScanConfig, null, options, request);
@@ -583,6 +658,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanRun StartScanRun(global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartScanRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -593,6 +669,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanRun StartScanRun(global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StartScanRun, null, options, request);
@@ -605,6 +682,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> StartScanRunAsync(global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StartScanRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -615,6 +693,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> StartScanRunAsync(global::Google.Cloud.WebSecurityScanner.V1.StartScanRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StartScanRun, null, options, request);
@@ -627,6 +706,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanRun GetScanRun(global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetScanRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -637,6 +717,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanRun GetScanRun(global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetScanRun, null, options, request);
@@ -649,6 +730,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> GetScanRunAsync(global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetScanRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -659,6 +741,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> GetScanRunAsync(global::Google.Cloud.WebSecurityScanner.V1.GetScanRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetScanRun, null, options, request);
@@ -672,6 +755,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse ListScanRuns(global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListScanRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -683,6 +767,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse ListScanRuns(global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListScanRuns, null, options, request);
@@ -696,6 +781,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse> ListScanRunsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListScanRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -707,6 +793,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsResponse> ListScanRunsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListScanRunsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListScanRuns, null, options, request);
@@ -719,6 +806,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanRun StopScanRun(global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopScanRun(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -729,6 +817,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ScanRun StopScanRun(global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_StopScanRun, null, options, request);
@@ -741,6 +830,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> StopScanRunAsync(global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StopScanRunAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -751,6 +841,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ScanRun> StopScanRunAsync(global::Google.Cloud.WebSecurityScanner.V1.StopScanRunRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_StopScanRun, null, options, request);
@@ -763,6 +854,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse ListCrawledUrls(global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCrawledUrls(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -773,6 +865,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse ListCrawledUrls(global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCrawledUrls, null, options, request);
@@ -785,6 +878,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse> ListCrawledUrlsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCrawledUrlsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -795,6 +889,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsResponse> ListCrawledUrlsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListCrawledUrlsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCrawledUrls, null, options, request);
@@ -807,6 +902,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.Finding GetFinding(global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetFinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -817,6 +913,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.Finding GetFinding(global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetFinding, null, options, request);
@@ -829,6 +926,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.Finding> GetFindingAsync(global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetFindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -839,6 +937,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.Finding> GetFindingAsync(global::Google.Cloud.WebSecurityScanner.V1.GetFindingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetFinding, null, options, request);
@@ -851,6 +950,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse ListFindings(global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListFindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -861,6 +961,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse ListFindings(global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListFindings, null, options, request);
@@ -873,6 +974,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse> ListFindingsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListFindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -883,6 +985,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListFindingsResponse> ListFindingsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListFindingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListFindings, null, options, request);
@@ -895,6 +998,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse ListFindingTypeStats(global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListFindingTypeStats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -905,6 +1009,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse ListFindingTypeStats(global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListFindingTypeStats, null, options, request);
@@ -917,6 +1022,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse> ListFindingTypeStatsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListFindingTypeStatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -927,11 +1033,13 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsResponse> ListFindingTypeStatsAsync(global::Google.Cloud.WebSecurityScanner.V1.ListFindingTypeStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListFindingTypeStats, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override WebSecurityScannerClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new WebSecurityScannerClient(configuration);
@@ -940,6 +1048,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(WebSecurityScannerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -962,6 +1071,7 @@ namespace Google.Cloud.WebSecurityScanner.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, WebSecurityScannerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateScanConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.WebSecurityScanner.V1.CreateScanConfigRequest, global::Google.Cloud.WebSecurityScanner.V1.ScanConfig>(serviceImpl.CreateScanConfig));

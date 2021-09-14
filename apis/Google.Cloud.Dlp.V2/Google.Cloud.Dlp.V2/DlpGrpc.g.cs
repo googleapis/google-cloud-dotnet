@@ -38,6 +38,7 @@ namespace Google.Cloud.Dlp.V2 {
   {
     static readonly string __ServiceName = "google.privacy.dlp.v2.DlpService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -52,11 +53,13 @@ namespace Google.Cloud.Dlp.V2 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -68,58 +71,110 @@ namespace Google.Cloud.Dlp.V2 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectContentRequest> __Marshaller_google_privacy_dlp_v2_InspectContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.InspectContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectContentResponse> __Marshaller_google_privacy_dlp_v2_InspectContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.InspectContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.RedactImageRequest> __Marshaller_google_privacy_dlp_v2_RedactImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.RedactImageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.RedactImageResponse> __Marshaller_google_privacy_dlp_v2_RedactImageResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.RedactImageResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest> __Marshaller_google_privacy_dlp_v2_DeidentifyContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeidentifyContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> __Marshaller_google_privacy_dlp_v2_DeidentifyContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeidentifyContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest> __Marshaller_google_privacy_dlp_v2_ReidentifyContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ReidentifyContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> __Marshaller_google_privacy_dlp_v2_ReidentifyContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ReidentifyContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest> __Marshaller_google_privacy_dlp_v2_ListInfoTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListInfoTypesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> __Marshaller_google_privacy_dlp_v2_ListInfoTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListInfoTypesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_CreateInspectTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.InspectTemplate> __Marshaller_google_privacy_dlp_v2_InspectTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.InspectTemplate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_UpdateInspectTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_GetInspectTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest> __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest> __Marshaller_google_privacy_dlp_v2_DeleteInspectTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_CreateDeidentifyTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeidentifyTemplate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_UpdateDeidentifyTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_GetDeidentifyTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest> __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest> __Marshaller_google_privacy_dlp_v2_DeleteDeidentifyTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_CreateJobTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.JobTrigger> __Marshaller_google_privacy_dlp_v2_JobTrigger = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.JobTrigger.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_UpdateJobTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_HybridInspectJobTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Marshaller_google_privacy_dlp_v2_HybridInspectResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.HybridInspectResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_GetJobTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetJobTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest> __Marshaller_google_privacy_dlp_v2_ListJobTriggersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListJobTriggersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> __Marshaller_google_privacy_dlp_v2_ListJobTriggersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_DeleteJobTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest> __Marshaller_google_privacy_dlp_v2_ActivateJobTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DlpJob> __Marshaller_google_privacy_dlp_v2_DlpJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DlpJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest> __Marshaller_google_privacy_dlp_v2_CreateDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateDlpJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest> __Marshaller_google_privacy_dlp_v2_ListDlpJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListDlpJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> __Marshaller_google_privacy_dlp_v2_ListDlpJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListDlpJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetDlpJobRequest> __Marshaller_google_privacy_dlp_v2_GetDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetDlpJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest> __Marshaller_google_privacy_dlp_v2_DeleteDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest> __Marshaller_google_privacy_dlp_v2_CancelDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CancelDlpJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_CreateStoredInfoTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.StoredInfoType> __Marshaller_google_privacy_dlp_v2_StoredInfoType = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.StoredInfoType.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_UpdateStoredInfoTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_GetStoredInfoTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest> __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest> __Marshaller_google_privacy_dlp_v2_DeleteStoredInfoTypeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest> __Marshaller_google_privacy_dlp_v2_HybridInspectDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest> __Marshaller_google_privacy_dlp_v2_FinishDlpJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dlp.V2.FinishDlpJobRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse> __Method_InspectContent = new grpc::Method<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -127,6 +182,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_InspectContentRequest,
         __Marshaller_google_privacy_dlp_v2_InspectContentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.RedactImageRequest, global::Google.Cloud.Dlp.V2.RedactImageResponse> __Method_RedactImage = new grpc::Method<global::Google.Cloud.Dlp.V2.RedactImageRequest, global::Google.Cloud.Dlp.V2.RedactImageResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,6 +190,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_RedactImageRequest,
         __Marshaller_google_privacy_dlp_v2_RedactImageResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest, global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> __Method_DeidentifyContent = new grpc::Method<global::Google.Cloud.Dlp.V2.DeidentifyContentRequest, global::Google.Cloud.Dlp.V2.DeidentifyContentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +198,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_DeidentifyContentRequest,
         __Marshaller_google_privacy_dlp_v2_DeidentifyContentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest, global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> __Method_ReidentifyContent = new grpc::Method<global::Google.Cloud.Dlp.V2.ReidentifyContentRequest, global::Google.Cloud.Dlp.V2.ReidentifyContentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -148,6 +206,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ReidentifyContentRequest,
         __Marshaller_google_privacy_dlp_v2_ReidentifyContentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> __Method_ListInfoTypes = new grpc::Method<global::Google.Cloud.Dlp.V2.ListInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListInfoTypesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -155,6 +214,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ListInfoTypesRequest,
         __Marshaller_google_privacy_dlp_v2_ListInfoTypesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate> __Method_CreateInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -162,6 +222,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_CreateInspectTemplateRequest,
         __Marshaller_google_privacy_dlp_v2_InspectTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate> __Method_UpdateInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -169,6 +230,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_UpdateInspectTemplateRequest,
         __Marshaller_google_privacy_dlp_v2_InspectTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate> __Method_GetInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest, global::Google.Cloud.Dlp.V2.InspectTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -176,6 +238,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_GetInspectTemplateRequest,
         __Marshaller_google_privacy_dlp_v2_InspectTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest, global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> __Method_ListInspectTemplates = new grpc::Method<global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest, global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -183,6 +246,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesRequest,
         __Marshaller_google_privacy_dlp_v2_ListInspectTemplatesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInspectTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -190,6 +254,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_DeleteInspectTemplateRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Method_CreateDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -197,6 +262,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_CreateDeidentifyTemplateRequest,
         __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Method_UpdateDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -204,6 +270,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_UpdateDeidentifyTemplateRequest,
         __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate> __Method_GetDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest, global::Google.Cloud.Dlp.V2.DeidentifyTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -211,6 +278,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_GetDeidentifyTemplateRequest,
         __Marshaller_google_privacy_dlp_v2_DeidentifyTemplate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest, global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> __Method_ListDeidentifyTemplates = new grpc::Method<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest, global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -218,6 +286,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesRequest,
         __Marshaller_google_privacy_dlp_v2_ListDeidentifyTemplatesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDeidentifyTemplate = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -225,6 +294,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_DeleteDeidentifyTemplateRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger> __Method_CreateJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -232,6 +302,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_CreateJobTriggerRequest,
         __Marshaller_google_privacy_dlp_v2_JobTrigger);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger> __Method_UpdateJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -239,6 +310,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_UpdateJobTriggerRequest,
         __Marshaller_google_privacy_dlp_v2_JobTrigger);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Method_HybridInspectJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -246,6 +318,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_HybridInspectJobTriggerRequest,
         __Marshaller_google_privacy_dlp_v2_HybridInspectResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger> __Method_GetJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.GetJobTriggerRequest, global::Google.Cloud.Dlp.V2.JobTrigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -253,6 +326,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_GetJobTriggerRequest,
         __Marshaller_google_privacy_dlp_v2_JobTrigger);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> __Method_ListJobTriggers = new grpc::Method<global::Google.Cloud.Dlp.V2.ListJobTriggersRequest, global::Google.Cloud.Dlp.V2.ListJobTriggersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -260,6 +334,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ListJobTriggersRequest,
         __Marshaller_google_privacy_dlp_v2_ListJobTriggersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -267,6 +342,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_DeleteJobTriggerRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_ActivateJobTrigger = new grpc::Method<global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -274,6 +350,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ActivateJobTriggerRequest,
         __Marshaller_google_privacy_dlp_v2_DlpJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_CreateDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -281,6 +358,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_CreateDlpJobRequest,
         __Marshaller_google_privacy_dlp_v2_DlpJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest, global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> __Method_ListDlpJobs = new grpc::Method<global::Google.Cloud.Dlp.V2.ListDlpJobsRequest, global::Google.Cloud.Dlp.V2.ListDlpJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -288,6 +366,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ListDlpJobsRequest,
         __Marshaller_google_privacy_dlp_v2_ListDlpJobsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob> __Method_GetDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.GetDlpJobRequest, global::Google.Cloud.Dlp.V2.DlpJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -295,6 +374,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_GetDlpJobRequest,
         __Marshaller_google_privacy_dlp_v2_DlpJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -302,6 +382,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_DeleteDlpJobRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.CancelDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -309,6 +390,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_CancelDlpJobRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_CreateStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -316,6 +398,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_CreateStoredInfoTypeRequest,
         __Marshaller_google_privacy_dlp_v2_StoredInfoType);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_UpdateStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -323,6 +406,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_UpdateStoredInfoTypeRequest,
         __Marshaller_google_privacy_dlp_v2_StoredInfoType);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType> __Method_GetStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest, global::Google.Cloud.Dlp.V2.StoredInfoType>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -330,6 +414,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_GetStoredInfoTypeRequest,
         __Marshaller_google_privacy_dlp_v2_StoredInfoType);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> __Method_ListStoredInfoTypes = new grpc::Method<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest, global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -337,6 +422,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesRequest,
         __Marshaller_google_privacy_dlp_v2_ListStoredInfoTypesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteStoredInfoType = new grpc::Method<global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -344,6 +430,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_DeleteStoredInfoTypeRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse> __Method_HybridInspectDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest, global::Google.Cloud.Dlp.V2.HybridInspectResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -351,6 +438,7 @@ namespace Google.Cloud.Dlp.V2 {
         __Marshaller_google_privacy_dlp_v2_HybridInspectDlpJobRequest,
         __Marshaller_google_privacy_dlp_v2_HybridInspectResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_FinishDlpJob = new grpc::Method<global::Google.Cloud.Dlp.V2.FinishDlpJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -382,6 +470,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.InspectContentResponse> InspectContent(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -400,6 +489,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.RedactImageResponse> RedactImage(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -418,6 +508,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> DeidentifyContent(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -432,6 +523,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> ReidentifyContent(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -445,6 +537,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> ListInfoTypes(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -458,6 +551,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.InspectTemplate> CreateInspectTemplate(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -470,6 +564,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.InspectTemplate> UpdateInspectTemplate(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -482,6 +577,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.InspectTemplate> GetInspectTemplate(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -494,6 +590,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> ListInspectTemplates(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -506,6 +603,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInspectTemplate(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -520,6 +618,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> CreateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -533,6 +632,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> UpdateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -546,6 +646,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> GetDeidentifyTemplate(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -559,6 +660,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> ListDeidentifyTemplates(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -572,6 +674,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeidentifyTemplate(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -585,6 +688,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.JobTrigger> CreateJobTrigger(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -597,6 +701,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.JobTrigger> UpdateJobTrigger(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -613,6 +718,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectJobTrigger(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -625,6 +731,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.JobTrigger> GetJobTrigger(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -637,6 +744,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> ListJobTriggers(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -649,6 +757,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTrigger(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -661,6 +770,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DlpJob> ActivateJobTrigger(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -678,6 +788,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DlpJob> CreateDlpJob(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -691,6 +802,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> ListDlpJobs(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -704,6 +816,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.DlpJob> GetDlpJob(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -719,6 +832,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDlpJob(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -734,6 +848,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelDlpJob(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -747,6 +862,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.StoredInfoType> CreateStoredInfoType(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -761,6 +877,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.StoredInfoType> UpdateStoredInfoType(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -774,6 +891,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.StoredInfoType> GetStoredInfoType(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -787,6 +905,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> ListStoredInfoTypes(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -800,6 +919,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -816,6 +936,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectDlpJob(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -831,6 +952,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> FinishDlpJob(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -843,20 +965,24 @@ namespace Google.Cloud.Dlp.V2 {
     {
       /// <summary>Creates a new client for DlpService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DlpServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DlpService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DlpServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DlpServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DlpServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -877,6 +1003,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectContentResponse InspectContent(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InspectContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -895,6 +1022,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectContentResponse InspectContent(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_InspectContent, null, options, request);
@@ -915,6 +1043,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectContentResponse> InspectContentAsync(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InspectContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -933,6 +1062,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectContentResponse> InspectContentAsync(global::Google.Cloud.Dlp.V2.InspectContentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_InspectContent, null, options, request);
@@ -952,6 +1082,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.RedactImageResponse RedactImage(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RedactImage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -969,6 +1100,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.RedactImageResponse RedactImage(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RedactImage, null, options, request);
@@ -988,6 +1120,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.RedactImageResponse> RedactImageAsync(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RedactImageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1005,6 +1138,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.RedactImageResponse> RedactImageAsync(global::Google.Cloud.Dlp.V2.RedactImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RedactImage, null, options, request);
@@ -1024,6 +1158,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyContentResponse DeidentifyContent(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeidentifyContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1041,6 +1176,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyContentResponse DeidentifyContent(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeidentifyContent, null, options, request);
@@ -1060,6 +1196,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> DeidentifyContentAsync(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeidentifyContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1077,6 +1214,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyContentResponse> DeidentifyContentAsync(global::Google.Cloud.Dlp.V2.DeidentifyContentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeidentifyContent, null, options, request);
@@ -1092,6 +1230,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ReidentifyContentResponse ReidentifyContent(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReidentifyContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1105,6 +1244,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ReidentifyContentResponse ReidentifyContent(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReidentifyContent, null, options, request);
@@ -1120,6 +1260,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> ReidentifyContentAsync(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReidentifyContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1133,6 +1274,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ReidentifyContentResponse> ReidentifyContentAsync(global::Google.Cloud.Dlp.V2.ReidentifyContentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReidentifyContent, null, options, request);
@@ -1147,6 +1289,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListInfoTypesResponse ListInfoTypes(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInfoTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1159,6 +1302,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListInfoTypesResponse ListInfoTypes(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInfoTypes, null, options, request);
@@ -1173,6 +1317,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> ListInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInfoTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1185,6 +1330,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInfoTypesResponse> ListInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListInfoTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInfoTypes, null, options, request);
@@ -1199,6 +1345,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectTemplate CreateInspectTemplate(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1211,6 +1358,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectTemplate CreateInspectTemplate(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInspectTemplate, null, options, request);
@@ -1225,6 +1373,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> CreateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1237,6 +1386,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> CreateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.CreateInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInspectTemplate, null, options, request);
@@ -1250,6 +1400,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectTemplate UpdateInspectTemplate(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1261,6 +1412,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectTemplate UpdateInspectTemplate(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateInspectTemplate, null, options, request);
@@ -1274,6 +1426,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> UpdateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1285,6 +1438,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> UpdateInspectTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInspectTemplate, null, options, request);
@@ -1298,6 +1452,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectTemplate GetInspectTemplate(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1309,6 +1464,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.InspectTemplate GetInspectTemplate(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInspectTemplate, null, options, request);
@@ -1322,6 +1478,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> GetInspectTemplateAsync(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1333,6 +1490,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.InspectTemplate> GetInspectTemplateAsync(global::Google.Cloud.Dlp.V2.GetInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInspectTemplate, null, options, request);
@@ -1346,6 +1504,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse ListInspectTemplates(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInspectTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1357,6 +1516,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse ListInspectTemplates(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInspectTemplates, null, options, request);
@@ -1370,6 +1530,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> ListInspectTemplatesAsync(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInspectTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1381,6 +1542,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListInspectTemplatesResponse> ListInspectTemplatesAsync(global::Google.Cloud.Dlp.V2.ListInspectTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInspectTemplates, null, options, request);
@@ -1394,6 +1556,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInspectTemplate(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInspectTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1405,6 +1568,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInspectTemplate(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInspectTemplate, null, options, request);
@@ -1418,6 +1582,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInspectTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInspectTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1429,6 +1594,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInspectTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteInspectTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInspectTemplate, null, options, request);
@@ -1444,6 +1610,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate CreateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1457,6 +1624,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate CreateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDeidentifyTemplate, null, options, request);
@@ -1472,6 +1640,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> CreateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1485,6 +1654,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> CreateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.CreateDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDeidentifyTemplate, null, options, request);
@@ -1499,6 +1669,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate UpdateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1511,6 +1682,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate UpdateDeidentifyTemplate(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDeidentifyTemplate, null, options, request);
@@ -1525,6 +1697,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> UpdateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1537,6 +1710,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> UpdateDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.UpdateDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDeidentifyTemplate, null, options, request);
@@ -1551,6 +1725,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate GetDeidentifyTemplate(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1563,6 +1738,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DeidentifyTemplate GetDeidentifyTemplate(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDeidentifyTemplate, null, options, request);
@@ -1577,6 +1753,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> GetDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1589,6 +1766,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DeidentifyTemplate> GetDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.GetDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDeidentifyTemplate, null, options, request);
@@ -1603,6 +1781,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse ListDeidentifyTemplates(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeidentifyTemplates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1615,6 +1794,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse ListDeidentifyTemplates(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDeidentifyTemplates, null, options, request);
@@ -1629,6 +1809,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> ListDeidentifyTemplatesAsync(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDeidentifyTemplatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1641,6 +1822,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesResponse> ListDeidentifyTemplatesAsync(global::Google.Cloud.Dlp.V2.ListDeidentifyTemplatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDeidentifyTemplates, null, options, request);
@@ -1655,6 +1837,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeidentifyTemplate(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeidentifyTemplate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1667,6 +1850,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDeidentifyTemplate(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDeidentifyTemplate, null, options, request);
@@ -1681,6 +1865,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDeidentifyTemplateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1693,6 +1878,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDeidentifyTemplateAsync(global::Google.Cloud.Dlp.V2.DeleteDeidentifyTemplateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDeidentifyTemplate, null, options, request);
@@ -1707,6 +1893,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.JobTrigger CreateJobTrigger(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1719,6 +1906,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.JobTrigger CreateJobTrigger(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateJobTrigger, null, options, request);
@@ -1733,6 +1921,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> CreateJobTriggerAsync(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1745,6 +1934,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> CreateJobTriggerAsync(global::Google.Cloud.Dlp.V2.CreateJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateJobTrigger, null, options, request);
@@ -1758,6 +1948,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.JobTrigger UpdateJobTrigger(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1769,6 +1960,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.JobTrigger UpdateJobTrigger(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateJobTrigger, null, options, request);
@@ -1782,6 +1974,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> UpdateJobTriggerAsync(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1793,6 +1986,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> UpdateJobTriggerAsync(global::Google.Cloud.Dlp.V2.UpdateJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateJobTrigger, null, options, request);
@@ -1810,6 +2004,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectJobTrigger(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return HybridInspectJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1825,6 +2020,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectJobTrigger(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_HybridInspectJobTrigger, null, options, request);
@@ -1842,6 +2038,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectJobTriggerAsync(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return HybridInspectJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1857,6 +2054,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectJobTriggerAsync(global::Google.Cloud.Dlp.V2.HybridInspectJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_HybridInspectJobTrigger, null, options, request);
@@ -1870,6 +2068,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.JobTrigger GetJobTrigger(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1881,6 +2080,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.JobTrigger GetJobTrigger(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetJobTrigger, null, options, request);
@@ -1894,6 +2094,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> GetJobTriggerAsync(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1905,6 +2106,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.JobTrigger> GetJobTriggerAsync(global::Google.Cloud.Dlp.V2.GetJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetJobTrigger, null, options, request);
@@ -1918,6 +2120,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListJobTriggersResponse ListJobTriggers(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobTriggers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1929,6 +2132,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListJobTriggersResponse ListJobTriggers(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListJobTriggers, null, options, request);
@@ -1942,6 +2146,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> ListJobTriggersAsync(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListJobTriggersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1953,6 +2158,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListJobTriggersResponse> ListJobTriggersAsync(global::Google.Cloud.Dlp.V2.ListJobTriggersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListJobTriggers, null, options, request);
@@ -1966,6 +2172,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJobTrigger(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1977,6 +2184,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteJobTrigger(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteJobTrigger, null, options, request);
@@ -1990,6 +2198,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTriggerAsync(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2001,6 +2210,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteJobTriggerAsync(global::Google.Cloud.Dlp.V2.DeleteJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteJobTrigger, null, options, request);
@@ -2014,6 +2224,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DlpJob ActivateJobTrigger(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ActivateJobTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2025,6 +2236,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DlpJob ActivateJobTrigger(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ActivateJobTrigger, null, options, request);
@@ -2038,6 +2250,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> ActivateJobTriggerAsync(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ActivateJobTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2049,6 +2262,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> ActivateJobTriggerAsync(global::Google.Cloud.Dlp.V2.ActivateJobTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ActivateJobTrigger, null, options, request);
@@ -2067,6 +2281,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DlpJob CreateDlpJob(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2083,6 +2298,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DlpJob CreateDlpJob(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDlpJob, null, options, request);
@@ -2101,6 +2317,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> CreateDlpJobAsync(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2117,6 +2334,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> CreateDlpJobAsync(global::Google.Cloud.Dlp.V2.CreateDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDlpJob, null, options, request);
@@ -2131,6 +2349,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListDlpJobsResponse ListDlpJobs(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDlpJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2143,6 +2362,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListDlpJobsResponse ListDlpJobs(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDlpJobs, null, options, request);
@@ -2157,6 +2377,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> ListDlpJobsAsync(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDlpJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2169,6 +2390,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListDlpJobsResponse> ListDlpJobsAsync(global::Google.Cloud.Dlp.V2.ListDlpJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDlpJobs, null, options, request);
@@ -2183,6 +2405,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DlpJob GetDlpJob(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2195,6 +2418,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.DlpJob GetDlpJob(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDlpJob, null, options, request);
@@ -2209,6 +2433,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> GetDlpJobAsync(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2221,6 +2446,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.DlpJob> GetDlpJobAsync(global::Google.Cloud.Dlp.V2.GetDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDlpJob, null, options, request);
@@ -2237,6 +2463,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDlpJob(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2251,6 +2478,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDlpJob(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDlpJob, null, options, request);
@@ -2267,6 +2495,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDlpJobAsync(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2281,6 +2510,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDlpJobAsync(global::Google.Cloud.Dlp.V2.DeleteDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDlpJob, null, options, request);
@@ -2297,6 +2527,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelDlpJob(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2311,6 +2542,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelDlpJob(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CancelDlpJob, null, options, request);
@@ -2327,6 +2559,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelDlpJobAsync(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2341,6 +2574,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelDlpJobAsync(global::Google.Cloud.Dlp.V2.CancelDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelDlpJob, null, options, request);
@@ -2355,6 +2589,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.StoredInfoType CreateStoredInfoType(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2367,6 +2602,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.StoredInfoType CreateStoredInfoType(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateStoredInfoType, null, options, request);
@@ -2381,6 +2617,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> CreateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2393,6 +2630,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> CreateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.CreateStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateStoredInfoType, null, options, request);
@@ -2408,6 +2646,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.StoredInfoType UpdateStoredInfoType(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2421,6 +2660,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.StoredInfoType UpdateStoredInfoType(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateStoredInfoType, null, options, request);
@@ -2436,6 +2676,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> UpdateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2449,6 +2690,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> UpdateStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.UpdateStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateStoredInfoType, null, options, request);
@@ -2463,6 +2705,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.StoredInfoType GetStoredInfoType(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2475,6 +2718,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.StoredInfoType GetStoredInfoType(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetStoredInfoType, null, options, request);
@@ -2489,6 +2733,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> GetStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2501,6 +2746,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.StoredInfoType> GetStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.GetStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetStoredInfoType, null, options, request);
@@ -2515,6 +2761,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse ListStoredInfoTypes(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListStoredInfoTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2527,6 +2774,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse ListStoredInfoTypes(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListStoredInfoTypes, null, options, request);
@@ -2541,6 +2789,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> ListStoredInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListStoredInfoTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2553,6 +2802,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.ListStoredInfoTypesResponse> ListStoredInfoTypesAsync(global::Google.Cloud.Dlp.V2.ListStoredInfoTypesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListStoredInfoTypes, null, options, request);
@@ -2567,6 +2817,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteStoredInfoType(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2579,6 +2830,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteStoredInfoType(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteStoredInfoType, null, options, request);
@@ -2593,6 +2845,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteStoredInfoTypeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2605,6 +2858,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteStoredInfoTypeAsync(global::Google.Cloud.Dlp.V2.DeleteStoredInfoTypeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStoredInfoType, null, options, request);
@@ -2622,6 +2876,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectDlpJob(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return HybridInspectDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2637,6 +2892,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dlp.V2.HybridInspectResponse HybridInspectDlpJob(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_HybridInspectDlpJob, null, options, request);
@@ -2654,6 +2910,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectDlpJobAsync(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return HybridInspectDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2669,6 +2926,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dlp.V2.HybridInspectResponse> HybridInspectDlpJobAsync(global::Google.Cloud.Dlp.V2.HybridInspectDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_HybridInspectDlpJob, null, options, request);
@@ -2685,6 +2943,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty FinishDlpJob(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FinishDlpJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2699,6 +2958,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty FinishDlpJob(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_FinishDlpJob, null, options, request);
@@ -2715,6 +2975,7 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FinishDlpJobAsync(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return FinishDlpJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2729,11 +2990,13 @@ namespace Google.Cloud.Dlp.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> FinishDlpJobAsync(global::Google.Cloud.Dlp.V2.FinishDlpJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_FinishDlpJob, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DlpServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DlpServiceClient(configuration);
@@ -2742,6 +3005,7 @@ namespace Google.Cloud.Dlp.V2 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DlpServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2785,6 +3049,7 @@ namespace Google.Cloud.Dlp.V2 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DlpServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_InspectContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dlp.V2.InspectContentRequest, global::Google.Cloud.Dlp.V2.InspectContentResponse>(serviceImpl.InspectContent));

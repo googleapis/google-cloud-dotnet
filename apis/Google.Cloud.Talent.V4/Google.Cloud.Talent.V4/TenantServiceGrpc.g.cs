@@ -30,6 +30,7 @@ namespace Google.Cloud.Talent.V4 {
   {
     static readonly string __ServiceName = "google.cloud.talent.v4.TenantService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Talent.V4 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,15 +63,24 @@ namespace Google.Cloud.Talent.V4 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.CreateTenantRequest> __Marshaller_google_cloud_talent_v4_CreateTenantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.CreateTenantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.Tenant> __Marshaller_google_cloud_talent_v4_Tenant = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.Tenant.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.GetTenantRequest> __Marshaller_google_cloud_talent_v4_GetTenantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.GetTenantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.UpdateTenantRequest> __Marshaller_google_cloud_talent_v4_UpdateTenantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.UpdateTenantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.DeleteTenantRequest> __Marshaller_google_cloud_talent_v4_DeleteTenantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.DeleteTenantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListTenantsRequest> __Marshaller_google_cloud_talent_v4_ListTenantsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.ListTenantsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Talent.V4.ListTenantsResponse> __Marshaller_google_cloud_talent_v4_ListTenantsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Talent.V4.ListTenantsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4.CreateTenantRequest, global::Google.Cloud.Talent.V4.Tenant> __Method_CreateTenant = new grpc::Method<global::Google.Cloud.Talent.V4.CreateTenantRequest, global::Google.Cloud.Talent.V4.Tenant>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +88,7 @@ namespace Google.Cloud.Talent.V4 {
         __Marshaller_google_cloud_talent_v4_CreateTenantRequest,
         __Marshaller_google_cloud_talent_v4_Tenant);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4.GetTenantRequest, global::Google.Cloud.Talent.V4.Tenant> __Method_GetTenant = new grpc::Method<global::Google.Cloud.Talent.V4.GetTenantRequest, global::Google.Cloud.Talent.V4.Tenant>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +96,7 @@ namespace Google.Cloud.Talent.V4 {
         __Marshaller_google_cloud_talent_v4_GetTenantRequest,
         __Marshaller_google_cloud_talent_v4_Tenant);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4.UpdateTenantRequest, global::Google.Cloud.Talent.V4.Tenant> __Method_UpdateTenant = new grpc::Method<global::Google.Cloud.Talent.V4.UpdateTenantRequest, global::Google.Cloud.Talent.V4.Tenant>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +104,7 @@ namespace Google.Cloud.Talent.V4 {
         __Marshaller_google_cloud_talent_v4_UpdateTenantRequest,
         __Marshaller_google_cloud_talent_v4_Tenant);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4.DeleteTenantRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTenant = new grpc::Method<global::Google.Cloud.Talent.V4.DeleteTenantRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +112,7 @@ namespace Google.Cloud.Talent.V4 {
         __Marshaller_google_cloud_talent_v4_DeleteTenantRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Talent.V4.ListTenantsRequest, global::Google.Cloud.Talent.V4.ListTenantsResponse> __Method_ListTenants = new grpc::Method<global::Google.Cloud.Talent.V4.ListTenantsRequest, global::Google.Cloud.Talent.V4.ListTenantsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +136,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4.Tenant> CreateTenant(global::Google.Cloud.Talent.V4.CreateTenantRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -131,6 +148,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4.Tenant> GetTenant(global::Google.Cloud.Talent.V4.GetTenantRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -142,6 +160,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4.Tenant> UpdateTenant(global::Google.Cloud.Talent.V4.UpdateTenantRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -153,6 +172,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTenant(global::Google.Cloud.Talent.V4.DeleteTenantRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -164,6 +184,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Talent.V4.ListTenantsResponse> ListTenants(global::Google.Cloud.Talent.V4.ListTenantsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -176,20 +197,24 @@ namespace Google.Cloud.Talent.V4 {
     {
       /// <summary>Creates a new client for TenantService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TenantServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for TenantService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TenantServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TenantServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TenantServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -202,6 +227,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.Tenant CreateTenant(global::Google.Cloud.Talent.V4.CreateTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTenant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -212,6 +238,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.Tenant CreateTenant(global::Google.Cloud.Talent.V4.CreateTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTenant, null, options, request);
@@ -224,6 +251,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.Tenant> CreateTenantAsync(global::Google.Cloud.Talent.V4.CreateTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTenantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -234,6 +262,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.Tenant> CreateTenantAsync(global::Google.Cloud.Talent.V4.CreateTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTenant, null, options, request);
@@ -246,6 +275,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.Tenant GetTenant(global::Google.Cloud.Talent.V4.GetTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTenant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -256,6 +286,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.Tenant GetTenant(global::Google.Cloud.Talent.V4.GetTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTenant, null, options, request);
@@ -268,6 +299,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.Tenant> GetTenantAsync(global::Google.Cloud.Talent.V4.GetTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTenantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -278,6 +310,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.Tenant> GetTenantAsync(global::Google.Cloud.Talent.V4.GetTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTenant, null, options, request);
@@ -290,6 +323,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.Tenant UpdateTenant(global::Google.Cloud.Talent.V4.UpdateTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTenant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -300,6 +334,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.Tenant UpdateTenant(global::Google.Cloud.Talent.V4.UpdateTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTenant, null, options, request);
@@ -312,6 +347,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.Tenant> UpdateTenantAsync(global::Google.Cloud.Talent.V4.UpdateTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTenantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -322,6 +358,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.Tenant> UpdateTenantAsync(global::Google.Cloud.Talent.V4.UpdateTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateTenant, null, options, request);
@@ -334,6 +371,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTenant(global::Google.Cloud.Talent.V4.DeleteTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTenant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -344,6 +382,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTenant(global::Google.Cloud.Talent.V4.DeleteTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTenant, null, options, request);
@@ -356,6 +395,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTenantAsync(global::Google.Cloud.Talent.V4.DeleteTenantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTenantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -366,6 +406,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTenantAsync(global::Google.Cloud.Talent.V4.DeleteTenantRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTenant, null, options, request);
@@ -378,6 +419,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.ListTenantsResponse ListTenants(global::Google.Cloud.Talent.V4.ListTenantsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTenants(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -388,6 +430,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Talent.V4.ListTenantsResponse ListTenants(global::Google.Cloud.Talent.V4.ListTenantsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTenants, null, options, request);
@@ -400,6 +443,7 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.ListTenantsResponse> ListTenantsAsync(global::Google.Cloud.Talent.V4.ListTenantsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTenantsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -410,11 +454,13 @@ namespace Google.Cloud.Talent.V4 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Talent.V4.ListTenantsResponse> ListTenantsAsync(global::Google.Cloud.Talent.V4.ListTenantsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTenants, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TenantServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new TenantServiceClient(configuration);
@@ -423,6 +469,7 @@ namespace Google.Cloud.Talent.V4 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(TenantServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -437,6 +484,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TenantServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateTenant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Talent.V4.CreateTenantRequest, global::Google.Cloud.Talent.V4.Tenant>(serviceImpl.CreateTenant));

@@ -33,6 +33,7 @@ namespace Google.Cloud.DocumentAI.V1 {
   {
     static readonly string __ServiceName = "google.cloud.documentai.v1.DocumentProcessorService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -47,11 +48,13 @@ namespace Google.Cloud.DocumentAI.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -63,12 +66,18 @@ namespace Google.Cloud.DocumentAI.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ProcessRequest> __Marshaller_google_cloud_documentai_v1_ProcessRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ProcessRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ProcessResponse> __Marshaller_google_cloud_documentai_v1_ProcessResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ProcessResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.BatchProcessRequest> __Marshaller_google_cloud_documentai_v1_BatchProcessRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.BatchProcessRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest> __Marshaller_google_cloud_documentai_v1_ReviewDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.ProcessRequest, global::Google.Cloud.DocumentAI.V1.ProcessResponse> __Method_ProcessDocument = new grpc::Method<global::Google.Cloud.DocumentAI.V1.ProcessRequest, global::Google.Cloud.DocumentAI.V1.ProcessResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -76,6 +85,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         __Marshaller_google_cloud_documentai_v1_ProcessRequest,
         __Marshaller_google_cloud_documentai_v1_ProcessResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.BatchProcessRequest, global::Google.LongRunning.Operation> __Method_BatchProcessDocuments = new grpc::Method<global::Google.Cloud.DocumentAI.V1.BatchProcessRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +93,7 @@ namespace Google.Cloud.DocumentAI.V1 {
         __Marshaller_google_cloud_documentai_v1_BatchProcessRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest, global::Google.LongRunning.Operation> __Method_ReviewDocument = new grpc::Method<global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +117,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DocumentAI.V1.ProcessResponse> ProcessDocument(global::Google.Cloud.DocumentAI.V1.ProcessRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -118,6 +130,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BatchProcessDocuments(global::Google.Cloud.DocumentAI.V1.BatchProcessRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -130,6 +143,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReviewDocument(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -142,20 +156,24 @@ namespace Google.Cloud.DocumentAI.V1 {
     {
       /// <summary>Creates a new client for DocumentProcessorService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DocumentProcessorServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DocumentProcessorService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DocumentProcessorServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DocumentProcessorServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DocumentProcessorServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -168,6 +186,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DocumentAI.V1.ProcessResponse ProcessDocument(global::Google.Cloud.DocumentAI.V1.ProcessRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ProcessDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -178,6 +197,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DocumentAI.V1.ProcessResponse ProcessDocument(global::Google.Cloud.DocumentAI.V1.ProcessRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ProcessDocument, null, options, request);
@@ -190,6 +210,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.ProcessResponse> ProcessDocumentAsync(global::Google.Cloud.DocumentAI.V1.ProcessRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ProcessDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -200,6 +221,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DocumentAI.V1.ProcessResponse> ProcessDocumentAsync(global::Google.Cloud.DocumentAI.V1.ProcessRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ProcessDocument, null, options, request);
@@ -213,6 +235,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation BatchProcessDocuments(global::Google.Cloud.DocumentAI.V1.BatchProcessRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchProcessDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -224,6 +247,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation BatchProcessDocuments(global::Google.Cloud.DocumentAI.V1.BatchProcessRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchProcessDocuments, null, options, request);
@@ -237,6 +261,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchProcessDocumentsAsync(global::Google.Cloud.DocumentAI.V1.BatchProcessRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchProcessDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -248,6 +273,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BatchProcessDocumentsAsync(global::Google.Cloud.DocumentAI.V1.BatchProcessRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchProcessDocuments, null, options, request);
@@ -261,6 +287,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReviewDocument(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReviewDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -272,6 +299,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReviewDocument(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReviewDocument, null, options, request);
@@ -285,6 +313,7 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReviewDocumentAsync(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReviewDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -296,11 +325,13 @@ namespace Google.Cloud.DocumentAI.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReviewDocumentAsync(global::Google.Cloud.DocumentAI.V1.ReviewDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReviewDocument, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentProcessorServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DocumentProcessorServiceClient(configuration);
@@ -309,6 +340,7 @@ namespace Google.Cloud.DocumentAI.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DocumentProcessorServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -321,6 +353,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DocumentProcessorServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ProcessDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DocumentAI.V1.ProcessRequest, global::Google.Cloud.DocumentAI.V1.ProcessResponse>(serviceImpl.ProcessDocument));

@@ -30,6 +30,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.speech.v1p1beta1.Adaptation";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,22 +63,38 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_CreatePhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> __Marshaller_google_cloud_speech_v1p1beta1_PhraseSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_GetPhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse> __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_UpdatePhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest> __Marshaller_google_cloud_speech_v1p1beta1_DeletePhraseSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_CreateCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> __Marshaller_google_cloud_speech_v1p1beta1_CustomClass = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_GetCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest> __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse> __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_UpdateCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest> __Marshaller_google_cloud_speech_v1p1beta1_DeleteCustomClassRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> __Method_CreatePhraseSet = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +102,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_CreatePhraseSetRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_PhraseSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> __Method_GetPhraseSet = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +110,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_GetPhraseSetRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_PhraseSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse> __Method_ListPhraseSet = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +118,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_ListPhraseSetResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> __Method_UpdatePhraseSet = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -104,6 +126,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_UpdatePhraseSetRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_PhraseSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeletePhraseSet = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -111,6 +134,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_DeletePhraseSetRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest, global::Google.Cloud.Speech.V1P1Beta1.CustomClass> __Method_CreateCustomClass = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest, global::Google.Cloud.Speech.V1P1Beta1.CustomClass>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -118,6 +142,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_CreateCustomClassRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_CustomClass);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest, global::Google.Cloud.Speech.V1P1Beta1.CustomClass> __Method_GetCustomClass = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest, global::Google.Cloud.Speech.V1P1Beta1.CustomClass>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -125,6 +150,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_GetCustomClassRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_CustomClass);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest, global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse> __Method_ListCustomClasses = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest, global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -132,6 +158,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_ListCustomClassesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest, global::Google.Cloud.Speech.V1P1Beta1.CustomClass> __Method_UpdateCustomClass = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest, global::Google.Cloud.Speech.V1P1Beta1.CustomClass>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -139,6 +166,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         __Marshaller_google_cloud_speech_v1p1beta1_UpdateCustomClassRequest,
         __Marshaller_google_cloud_speech_v1p1beta1_CustomClass);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCustomClass = new grpc::Method<global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -164,6 +192,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> CreatePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -175,6 +204,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> GetPhraseSet(global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -186,6 +216,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse> ListPhraseSet(global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -197,6 +228,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> UpdatePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -208,6 +240,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -219,6 +252,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> CreateCustomClass(global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -230,6 +264,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> GetCustomClass(global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -241,6 +276,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse> ListCustomClasses(global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -252,6 +288,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> UpdateCustomClass(global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -263,6 +300,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomClass(global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -275,20 +313,24 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     {
       /// <summary>Creates a new client for Adaptation</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AdaptationClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Adaptation that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AdaptationClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AdaptationClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AdaptationClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -303,6 +345,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.PhraseSet CreatePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePhraseSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -315,6 +358,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.PhraseSet CreatePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePhraseSet, null, options, request);
@@ -329,6 +373,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> CreatePhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreatePhraseSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -341,6 +386,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> CreatePhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePhraseSet, null, options, request);
@@ -353,6 +399,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.PhraseSet GetPhraseSet(global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPhraseSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -363,6 +410,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.PhraseSet GetPhraseSet(global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetPhraseSet, null, options, request);
@@ -375,6 +423,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> GetPhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPhraseSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -385,6 +434,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> GetPhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.GetPhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPhraseSet, null, options, request);
@@ -397,6 +447,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse ListPhraseSet(global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPhraseSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -407,6 +458,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse ListPhraseSet(global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListPhraseSet, null, options, request);
@@ -419,6 +471,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse> ListPhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListPhraseSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -429,6 +482,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetResponse> ListPhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.ListPhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListPhraseSet, null, options, request);
@@ -441,6 +495,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.PhraseSet UpdatePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdatePhraseSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -451,6 +506,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.PhraseSet UpdatePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdatePhraseSet, null, options, request);
@@ -463,6 +519,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> UpdatePhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdatePhraseSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -473,6 +530,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.PhraseSet> UpdatePhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.UpdatePhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdatePhraseSet, null, options, request);
@@ -485,6 +543,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePhraseSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -495,6 +554,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeletePhraseSet(global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePhraseSet, null, options, request);
@@ -507,6 +567,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeletePhraseSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -517,6 +578,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeletePhraseSetAsync(global::Google.Cloud.Speech.V1P1Beta1.DeletePhraseSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePhraseSet, null, options, request);
@@ -529,6 +591,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.CustomClass CreateCustomClass(global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCustomClass(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -539,6 +602,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.CustomClass CreateCustomClass(global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCustomClass, null, options, request);
@@ -551,6 +615,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> CreateCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCustomClassAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -561,6 +626,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> CreateCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.CreateCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCustomClass, null, options, request);
@@ -573,6 +639,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.CustomClass GetCustomClass(global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCustomClass(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -583,6 +650,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.CustomClass GetCustomClass(global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomClass, null, options, request);
@@ -595,6 +663,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> GetCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCustomClassAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -605,6 +674,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> GetCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.GetCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomClass, null, options, request);
@@ -617,6 +687,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse ListCustomClasses(global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCustomClasses(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -627,6 +698,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse ListCustomClasses(global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCustomClasses, null, options, request);
@@ -639,6 +711,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse> ListCustomClassesAsync(global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCustomClassesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -649,6 +722,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesResponse> ListCustomClassesAsync(global::Google.Cloud.Speech.V1P1Beta1.ListCustomClassesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomClasses, null, options, request);
@@ -661,6 +735,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.CustomClass UpdateCustomClass(global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCustomClass(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -671,6 +746,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Speech.V1P1Beta1.CustomClass UpdateCustomClass(global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomClass, null, options, request);
@@ -683,6 +759,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> UpdateCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCustomClassAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -693,6 +770,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Speech.V1P1Beta1.CustomClass> UpdateCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.UpdateCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomClass, null, options, request);
@@ -705,6 +783,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomClass(global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCustomClass(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -715,6 +794,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteCustomClass(global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteCustomClass, null, options, request);
@@ -727,6 +807,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteCustomClassAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -737,11 +818,13 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteCustomClassAsync(global::Google.Cloud.Speech.V1P1Beta1.DeleteCustomClassRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCustomClass, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AdaptationClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AdaptationClient(configuration);
@@ -750,6 +833,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AdaptationBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -769,6 +853,7 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AdaptationBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreatePhraseSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Speech.V1P1Beta1.CreatePhraseSetRequest, global::Google.Cloud.Speech.V1P1Beta1.PhraseSet>(serviceImpl.CreatePhraseSet));

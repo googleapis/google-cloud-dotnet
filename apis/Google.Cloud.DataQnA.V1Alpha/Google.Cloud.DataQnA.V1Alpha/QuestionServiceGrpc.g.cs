@@ -44,6 +44,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
   {
     static readonly string __ServiceName = "google.cloud.dataqna.v1alpha.QuestionService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -58,11 +59,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -74,14 +77,22 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_GetQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.Question> __Marshaller_google_cloud_dataqna_v1alpha_Question = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.Question.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_CreateQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest> __Marshaller_google_cloud_dataqna_v1alpha_ExecuteQuestionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest> __Marshaller_google_cloud_dataqna_v1alpha_GetUserFeedbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> __Marshaller_google_cloud_dataqna_v1alpha_UserFeedback = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.UserFeedback.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest> __Marshaller_google_cloud_dataqna_v1alpha_UpdateUserFeedbackRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question> __Method_GetQuestion = new grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -89,6 +100,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         __Marshaller_google_cloud_dataqna_v1alpha_GetQuestionRequest,
         __Marshaller_google_cloud_dataqna_v1alpha_Question);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question> __Method_CreateQuestion = new grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -96,6 +108,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         __Marshaller_google_cloud_dataqna_v1alpha_CreateQuestionRequest,
         __Marshaller_google_cloud_dataqna_v1alpha_Question);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question> __Method_ExecuteQuestion = new grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -103,6 +116,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         __Marshaller_google_cloud_dataqna_v1alpha_ExecuteQuestionRequest,
         __Marshaller_google_cloud_dataqna_v1alpha_Question);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest, global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> __Method_GetUserFeedback = new grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest, global::Google.Cloud.DataQnA.V1Alpha.UserFeedback>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -110,6 +124,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         __Marshaller_google_cloud_dataqna_v1alpha_GetUserFeedbackRequest,
         __Marshaller_google_cloud_dataqna_v1alpha_UserFeedback);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest, global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> __Method_UpdateUserFeedback = new grpc::Method<global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest, global::Google.Cloud.DataQnA.V1Alpha.UserFeedback>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +148,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataQnA.V1Alpha.Question> GetQuestion(global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -144,6 +160,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataQnA.V1Alpha.Question> CreateQuestion(global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -155,6 +172,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataQnA.V1Alpha.Question> ExecuteQuestion(global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -166,6 +184,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> GetUserFeedback(global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -178,6 +197,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> UpdateUserFeedback(global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -190,20 +210,24 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     {
       /// <summary>Creates a new client for QuestionService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public QuestionServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for QuestionService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public QuestionServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected QuestionServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected QuestionServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -216,6 +240,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.Question GetQuestion(global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -226,6 +251,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.Question GetQuestion(global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetQuestion, null, options, request);
@@ -238,6 +264,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.Question> GetQuestionAsync(global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -248,6 +275,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.Question> GetQuestionAsync(global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetQuestion, null, options, request);
@@ -260,6 +288,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.Question CreateQuestion(global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -270,6 +299,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.Question CreateQuestion(global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateQuestion, null, options, request);
@@ -282,6 +312,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.Question> CreateQuestionAsync(global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -292,6 +323,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.Question> CreateQuestionAsync(global::Google.Cloud.DataQnA.V1Alpha.CreateQuestionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateQuestion, null, options, request);
@@ -304,6 +336,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.Question ExecuteQuestion(global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteQuestion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -314,6 +347,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.Question ExecuteQuestion(global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteQuestion, null, options, request);
@@ -326,6 +360,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.Question> ExecuteQuestionAsync(global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteQuestionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -336,6 +371,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.Question> ExecuteQuestionAsync(global::Google.Cloud.DataQnA.V1Alpha.ExecuteQuestionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteQuestion, null, options, request);
@@ -348,6 +384,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.UserFeedback GetUserFeedback(global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUserFeedback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -358,6 +395,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.UserFeedback GetUserFeedback(global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetUserFeedback, null, options, request);
@@ -370,6 +408,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> GetUserFeedbackAsync(global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUserFeedbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -380,6 +419,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> GetUserFeedbackAsync(global::Google.Cloud.DataQnA.V1Alpha.GetUserFeedbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetUserFeedback, null, options, request);
@@ -393,6 +433,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.UserFeedback UpdateUserFeedback(global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateUserFeedback(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -404,6 +445,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataQnA.V1Alpha.UserFeedback UpdateUserFeedback(global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateUserFeedback, null, options, request);
@@ -417,6 +459,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> UpdateUserFeedbackAsync(global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateUserFeedbackAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -428,11 +471,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataQnA.V1Alpha.UserFeedback> UpdateUserFeedbackAsync(global::Google.Cloud.DataQnA.V1Alpha.UpdateUserFeedbackRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateUserFeedback, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override QuestionServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new QuestionServiceClient(configuration);
@@ -441,6 +486,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(QuestionServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -455,6 +501,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, QuestionServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetQuestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataQnA.V1Alpha.GetQuestionRequest, global::Google.Cloud.DataQnA.V1Alpha.Question>(serviceImpl.GetQuestion));

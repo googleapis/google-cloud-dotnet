@@ -41,6 +41,7 @@ namespace Google.Cloud.Kms.V1 {
   {
     static readonly string __ServiceName = "google.cloud.kms.v1.KeyManagementService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -55,11 +56,13 @@ namespace Google.Cloud.Kms.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -71,49 +74,92 @@ namespace Google.Cloud.Kms.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListKeyRingsRequest> __Marshaller_google_cloud_kms_v1_ListKeyRingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListKeyRingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListKeyRingsResponse> __Marshaller_google_cloud_kms_v1_ListKeyRingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListKeyRingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest> __Marshaller_google_cloud_kms_v1_ListCryptoKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListCryptoKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> __Marshaller_google_cloud_kms_v1_ListCryptoKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListCryptoKeysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest> __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListImportJobsRequest> __Marshaller_google_cloud_kms_v1_ListImportJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListImportJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ListImportJobsResponse> __Marshaller_google_cloud_kms_v1_ListImportJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ListImportJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetKeyRingRequest> __Marshaller_google_cloud_kms_v1_GetKeyRingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetKeyRingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.KeyRing> __Marshaller_google_cloud_kms_v1_KeyRing = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.KeyRing.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_GetCryptoKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetCryptoKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKey> __Marshaller_google_cloud_kms_v1_CryptoKey = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CryptoKey.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_GetCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Marshaller_google_cloud_kms_v1_CryptoKeyVersion = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CryptoKeyVersion.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetPublicKeyRequest> __Marshaller_google_cloud_kms_v1_GetPublicKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetPublicKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.PublicKey> __Marshaller_google_cloud_kms_v1_PublicKey = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.PublicKey.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GetImportJobRequest> __Marshaller_google_cloud_kms_v1_GetImportJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GetImportJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportJob> __Marshaller_google_cloud_kms_v1_ImportJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ImportJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateKeyRingRequest> __Marshaller_google_cloud_kms_v1_CreateKeyRingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateKeyRingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_CreateCryptoKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_CreateCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_ImportCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateImportJobRequest> __Marshaller_google_cloud_kms_v1_CreateImportJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest> __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyPrimaryVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_DestroyCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_RestoreCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EncryptRequest> __Marshaller_google_cloud_kms_v1_EncryptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.EncryptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.EncryptResponse> __Marshaller_google_cloud_kms_v1_EncryptResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.EncryptResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptRequest> __Marshaller_google_cloud_kms_v1_DecryptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DecryptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.DecryptResponse> __Marshaller_google_cloud_kms_v1_DecryptResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.DecryptResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignRequest> __Marshaller_google_cloud_kms_v1_AsymmetricSignRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.AsymmetricSignRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Marshaller_google_cloud_kms_v1_AsymmetricSignResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.AsymmetricSignResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest> __Marshaller_google_cloud_kms_v1_AsymmetricDecryptRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> __Marshaller_google_cloud_kms_v1_AsymmetricDecryptResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.MacSignRequest> __Marshaller_google_cloud_kms_v1_MacSignRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.MacSignRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.MacSignResponse> __Marshaller_google_cloud_kms_v1_MacSignResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.MacSignResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.MacVerifyRequest> __Marshaller_google_cloud_kms_v1_MacVerifyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.MacVerifyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.MacVerifyResponse> __Marshaller_google_cloud_kms_v1_MacVerifyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.MacVerifyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest> __Marshaller_google_cloud_kms_v1_GenerateRandomBytesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse> __Marshaller_google_cloud_kms_v1_GenerateRandomBytesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListKeyRingsRequest, global::Google.Cloud.Kms.V1.ListKeyRingsResponse> __Method_ListKeyRings = new grpc::Method<global::Google.Cloud.Kms.V1.ListKeyRingsRequest, global::Google.Cloud.Kms.V1.ListKeyRingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +167,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_ListKeyRingsRequest,
         __Marshaller_google_cloud_kms_v1_ListKeyRingsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest, global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> __Method_ListCryptoKeys = new grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeysRequest, global::Google.Cloud.Kms.V1.ListCryptoKeysResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +175,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_ListCryptoKeysRequest,
         __Marshaller_google_cloud_kms_v1_ListCryptoKeysResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> __Method_ListCryptoKeyVersions = new grpc::Method<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest, global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +183,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsRequest,
         __Marshaller_google_cloud_kms_v1_ListCryptoKeyVersionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ListImportJobsRequest, global::Google.Cloud.Kms.V1.ListImportJobsResponse> __Method_ListImportJobs = new grpc::Method<global::Google.Cloud.Kms.V1.ListImportJobsRequest, global::Google.Cloud.Kms.V1.ListImportJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +191,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_ListImportJobsRequest,
         __Marshaller_google_cloud_kms_v1_ListImportJobsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing> __Method_GetKeyRing = new grpc::Method<global::Google.Cloud.Kms.V1.GetKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +199,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_GetKeyRingRequest,
         __Marshaller_google_cloud_kms_v1_KeyRing);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_GetCryptoKey = new grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +207,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_GetCryptoKeyRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_GetCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +215,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_GetCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey> __Method_GetPublicKey = new grpc::Method<global::Google.Cloud.Kms.V1.GetPublicKeyRequest, global::Google.Cloud.Kms.V1.PublicKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -170,6 +223,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_GetPublicKeyRequest,
         __Marshaller_google_cloud_kms_v1_PublicKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GetImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob> __Method_GetImportJob = new grpc::Method<global::Google.Cloud.Kms.V1.GetImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -177,6 +231,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_GetImportJobRequest,
         __Marshaller_google_cloud_kms_v1_ImportJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing> __Method_CreateKeyRing = new grpc::Method<global::Google.Cloud.Kms.V1.CreateKeyRingRequest, global::Google.Cloud.Kms.V1.KeyRing>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -184,6 +239,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_CreateKeyRingRequest,
         __Marshaller_google_cloud_kms_v1_KeyRing);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_CreateCryptoKey = new grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -191,6 +247,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_CreateCryptoKeyRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_CreateCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -198,6 +255,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_CreateCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_ImportCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -205,6 +263,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_ImportCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob> __Method_CreateImportJob = new grpc::Method<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -212,6 +271,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_CreateImportJobRequest,
         __Marshaller_google_cloud_kms_v1_ImportJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_UpdateCryptoKey = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -219,6 +279,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_UpdateCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -226,6 +287,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest, global::Google.Cloud.Kms.V1.CryptoKey> __Method_UpdateCryptoKeyPrimaryVersion = new grpc::Method<global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest, global::Google.Cloud.Kms.V1.CryptoKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -233,6 +295,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyPrimaryVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_DestroyCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -240,6 +303,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_DestroyCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_RestoreCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -247,6 +311,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_RestoreCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.EncryptRequest, global::Google.Cloud.Kms.V1.EncryptResponse> __Method_Encrypt = new grpc::Method<global::Google.Cloud.Kms.V1.EncryptRequest, global::Google.Cloud.Kms.V1.EncryptResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -254,6 +319,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_EncryptRequest,
         __Marshaller_google_cloud_kms_v1_EncryptResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.DecryptRequest, global::Google.Cloud.Kms.V1.DecryptResponse> __Method_Decrypt = new grpc::Method<global::Google.Cloud.Kms.V1.DecryptRequest, global::Google.Cloud.Kms.V1.DecryptResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -261,6 +327,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_DecryptRequest,
         __Marshaller_google_cloud_kms_v1_DecryptResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse> __Method_AsymmetricSign = new grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricSignRequest, global::Google.Cloud.Kms.V1.AsymmetricSignResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -268,6 +335,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_AsymmetricSignRequest,
         __Marshaller_google_cloud_kms_v1_AsymmetricSignResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> __Method_AsymmetricDecrypt = new grpc::Method<global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest, global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -275,6 +343,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_AsymmetricDecryptRequest,
         __Marshaller_google_cloud_kms_v1_AsymmetricDecryptResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.MacSignRequest, global::Google.Cloud.Kms.V1.MacSignResponse> __Method_MacSign = new grpc::Method<global::Google.Cloud.Kms.V1.MacSignRequest, global::Google.Cloud.Kms.V1.MacSignResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -282,6 +351,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_MacSignRequest,
         __Marshaller_google_cloud_kms_v1_MacSignResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.MacVerifyRequest, global::Google.Cloud.Kms.V1.MacVerifyResponse> __Method_MacVerify = new grpc::Method<global::Google.Cloud.Kms.V1.MacVerifyRequest, global::Google.Cloud.Kms.V1.MacVerifyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -289,6 +359,7 @@ namespace Google.Cloud.Kms.V1 {
         __Marshaller_google_cloud_kms_v1_MacVerifyRequest,
         __Marshaller_google_cloud_kms_v1_MacVerifyResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest, global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse> __Method_GenerateRandomBytes = new grpc::Method<global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest, global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -312,6 +383,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ListKeyRingsResponse> ListKeyRings(global::Google.Cloud.Kms.V1.ListKeyRingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -323,6 +395,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> ListCryptoKeys(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -334,6 +407,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> ListCryptoKeyVersions(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -345,6 +419,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ListImportJobsResponse> ListImportJobs(global::Google.Cloud.Kms.V1.ListImportJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -356,6 +431,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.KeyRing> GetKeyRing(global::Google.Cloud.Kms.V1.GetKeyRingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -368,6 +444,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKey> GetCryptoKey(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -379,6 +456,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> GetCryptoKeyVersion(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -393,6 +471,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.PublicKey> GetPublicKey(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -404,6 +483,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ImportJob> GetImportJob(global::Google.Cloud.Kms.V1.GetImportJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -415,6 +495,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.KeyRing> CreateKeyRing(global::Google.Cloud.Kms.V1.CreateKeyRingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -430,6 +511,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKey> CreateCryptoKey(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -445,6 +527,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> CreateCryptoKeyVersion(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -461,6 +544,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> ImportCryptoKeyVersion(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -474,6 +558,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ImportJob> CreateImportJob(global::Google.Cloud.Kms.V1.CreateImportJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -485,6 +570,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKey> UpdateCryptoKey(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -502,6 +588,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> UpdateCryptoKeyVersion(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -516,6 +603,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKey> UpdateCryptoKeyPrimaryVersion(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -539,6 +627,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> DestroyCryptoKeyVersion(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -556,6 +645,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> RestoreCryptoKeyVersion(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -569,6 +659,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.EncryptResponse> Encrypt(global::Google.Cloud.Kms.V1.EncryptRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -581,6 +672,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.DecryptResponse> Decrypt(global::Google.Cloud.Kms.V1.DecryptRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -594,6 +686,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> AsymmetricSign(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -607,6 +700,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> AsymmetricDecrypt(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -620,6 +714,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.MacSignResponse> MacSign(global::Google.Cloud.Kms.V1.MacSignRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -633,6 +728,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.MacVerifyResponse> MacVerify(global::Google.Cloud.Kms.V1.MacVerifyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -645,6 +741,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse> GenerateRandomBytes(global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -657,20 +754,24 @@ namespace Google.Cloud.Kms.V1 {
     {
       /// <summary>Creates a new client for KeyManagementService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public KeyManagementServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for KeyManagementService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public KeyManagementServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected KeyManagementServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected KeyManagementServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -683,6 +784,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListKeyRingsResponse ListKeyRings(global::Google.Cloud.Kms.V1.ListKeyRingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListKeyRings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -693,6 +795,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListKeyRingsResponse ListKeyRings(global::Google.Cloud.Kms.V1.ListKeyRingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListKeyRings, null, options, request);
@@ -705,6 +808,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListKeyRingsResponse> ListKeyRingsAsync(global::Google.Cloud.Kms.V1.ListKeyRingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListKeyRingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -715,6 +819,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListKeyRingsResponse> ListKeyRingsAsync(global::Google.Cloud.Kms.V1.ListKeyRingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListKeyRings, null, options, request);
@@ -727,6 +832,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListCryptoKeysResponse ListCryptoKeys(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCryptoKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -737,6 +843,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListCryptoKeysResponse ListCryptoKeys(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCryptoKeys, null, options, request);
@@ -749,6 +856,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> ListCryptoKeysAsync(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCryptoKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -759,6 +867,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListCryptoKeysResponse> ListCryptoKeysAsync(global::Google.Cloud.Kms.V1.ListCryptoKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCryptoKeys, null, options, request);
@@ -771,6 +880,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse ListCryptoKeyVersions(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCryptoKeyVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -781,6 +891,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse ListCryptoKeyVersions(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListCryptoKeyVersions, null, options, request);
@@ -793,6 +904,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> ListCryptoKeyVersionsAsync(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListCryptoKeyVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -803,6 +915,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsResponse> ListCryptoKeyVersionsAsync(global::Google.Cloud.Kms.V1.ListCryptoKeyVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCryptoKeyVersions, null, options, request);
@@ -815,6 +928,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListImportJobsResponse ListImportJobs(global::Google.Cloud.Kms.V1.ListImportJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListImportJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -825,6 +939,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ListImportJobsResponse ListImportJobs(global::Google.Cloud.Kms.V1.ListImportJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListImportJobs, null, options, request);
@@ -837,6 +952,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListImportJobsResponse> ListImportJobsAsync(global::Google.Cloud.Kms.V1.ListImportJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListImportJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -847,6 +963,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ListImportJobsResponse> ListImportJobsAsync(global::Google.Cloud.Kms.V1.ListImportJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListImportJobs, null, options, request);
@@ -859,6 +976,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.KeyRing GetKeyRing(global::Google.Cloud.Kms.V1.GetKeyRingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetKeyRing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -869,6 +987,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.KeyRing GetKeyRing(global::Google.Cloud.Kms.V1.GetKeyRingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetKeyRing, null, options, request);
@@ -881,6 +1000,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.KeyRing> GetKeyRingAsync(global::Google.Cloud.Kms.V1.GetKeyRingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetKeyRingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -891,6 +1011,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.KeyRing> GetKeyRingAsync(global::Google.Cloud.Kms.V1.GetKeyRingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetKeyRing, null, options, request);
@@ -904,6 +1025,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey GetCryptoKey(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCryptoKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -915,6 +1037,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey GetCryptoKey(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCryptoKey, null, options, request);
@@ -928,6 +1051,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> GetCryptoKeyAsync(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCryptoKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -939,6 +1063,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> GetCryptoKeyAsync(global::Google.Cloud.Kms.V1.GetCryptoKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCryptoKey, null, options, request);
@@ -951,6 +1076,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion GetCryptoKeyVersion(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -961,6 +1087,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion GetCryptoKeyVersion(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetCryptoKeyVersion, null, options, request);
@@ -973,6 +1100,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> GetCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -983,6 +1111,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> GetCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.GetCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCryptoKeyVersion, null, options, request);
@@ -998,6 +1127,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.PublicKey GetPublicKey(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPublicKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1011,6 +1141,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.PublicKey GetPublicKey(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetPublicKey, null, options, request);
@@ -1026,6 +1157,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.PublicKey> GetPublicKeyAsync(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetPublicKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1039,6 +1171,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.PublicKey> GetPublicKeyAsync(global::Google.Cloud.Kms.V1.GetPublicKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetPublicKey, null, options, request);
@@ -1051,6 +1184,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ImportJob GetImportJob(global::Google.Cloud.Kms.V1.GetImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetImportJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1061,6 +1195,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ImportJob GetImportJob(global::Google.Cloud.Kms.V1.GetImportJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetImportJob, null, options, request);
@@ -1073,6 +1208,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ImportJob> GetImportJobAsync(global::Google.Cloud.Kms.V1.GetImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetImportJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1083,6 +1219,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ImportJob> GetImportJobAsync(global::Google.Cloud.Kms.V1.GetImportJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetImportJob, null, options, request);
@@ -1095,6 +1232,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.KeyRing CreateKeyRing(global::Google.Cloud.Kms.V1.CreateKeyRingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateKeyRing(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1105,6 +1243,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.KeyRing CreateKeyRing(global::Google.Cloud.Kms.V1.CreateKeyRingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateKeyRing, null, options, request);
@@ -1117,6 +1256,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.KeyRing> CreateKeyRingAsync(global::Google.Cloud.Kms.V1.CreateKeyRingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateKeyRingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1127,6 +1267,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.KeyRing> CreateKeyRingAsync(global::Google.Cloud.Kms.V1.CreateKeyRingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateKeyRing, null, options, request);
@@ -1143,6 +1284,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey CreateCryptoKey(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCryptoKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1157,6 +1299,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey CreateCryptoKey(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCryptoKey, null, options, request);
@@ -1173,6 +1316,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> CreateCryptoKeyAsync(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCryptoKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1187,6 +1331,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> CreateCryptoKeyAsync(global::Google.Cloud.Kms.V1.CreateCryptoKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCryptoKey, null, options, request);
@@ -1203,6 +1348,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion CreateCryptoKeyVersion(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1217,6 +1363,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion CreateCryptoKeyVersion(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCryptoKeyVersion, null, options, request);
@@ -1233,6 +1380,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> CreateCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1247,6 +1395,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> CreateCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.CreateCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCryptoKeyVersion, null, options, request);
@@ -1264,6 +1413,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion ImportCryptoKeyVersion(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1279,6 +1429,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion ImportCryptoKeyVersion(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportCryptoKeyVersion, null, options, request);
@@ -1296,6 +1447,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> ImportCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1311,6 +1463,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> ImportCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportCryptoKeyVersion, null, options, request);
@@ -1325,6 +1478,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ImportJob CreateImportJob(global::Google.Cloud.Kms.V1.CreateImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateImportJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1337,6 +1491,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.ImportJob CreateImportJob(global::Google.Cloud.Kms.V1.CreateImportJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateImportJob, null, options, request);
@@ -1351,6 +1506,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ImportJob> CreateImportJobAsync(global::Google.Cloud.Kms.V1.CreateImportJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateImportJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1363,6 +1519,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ImportJob> CreateImportJobAsync(global::Google.Cloud.Kms.V1.CreateImportJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateImportJob, null, options, request);
@@ -1375,6 +1532,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey UpdateCryptoKey(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCryptoKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1385,6 +1543,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey UpdateCryptoKey(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCryptoKey, null, options, request);
@@ -1397,6 +1556,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> UpdateCryptoKeyAsync(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCryptoKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1407,6 +1567,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> UpdateCryptoKeyAsync(global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCryptoKey, null, options, request);
@@ -1425,6 +1586,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion UpdateCryptoKeyVersion(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1441,6 +1603,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion UpdateCryptoKeyVersion(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCryptoKeyVersion, null, options, request);
@@ -1459,6 +1622,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> UpdateCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1475,6 +1639,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> UpdateCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCryptoKeyVersion, null, options, request);
@@ -1490,6 +1655,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey UpdateCryptoKeyPrimaryVersion(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCryptoKeyPrimaryVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1503,6 +1669,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKey UpdateCryptoKeyPrimaryVersion(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCryptoKeyPrimaryVersion, null, options, request);
@@ -1518,6 +1685,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateCryptoKeyPrimaryVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1531,6 +1699,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKey> UpdateCryptoKeyPrimaryVersionAsync(global::Google.Cloud.Kms.V1.UpdateCryptoKeyPrimaryVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCryptoKeyPrimaryVersion, null, options, request);
@@ -1555,6 +1724,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion DestroyCryptoKeyVersion(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DestroyCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1577,6 +1747,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion DestroyCryptoKeyVersion(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DestroyCryptoKeyVersion, null, options, request);
@@ -1601,6 +1772,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> DestroyCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DestroyCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1623,6 +1795,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> DestroyCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.DestroyCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DestroyCryptoKeyVersion, null, options, request);
@@ -1641,6 +1814,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion RestoreCryptoKeyVersion(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1657,6 +1831,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion RestoreCryptoKeyVersion(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RestoreCryptoKeyVersion, null, options, request);
@@ -1675,6 +1850,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> RestoreCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1691,6 +1867,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> RestoreCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.RestoreCryptoKeyVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreCryptoKeyVersion, null, options, request);
@@ -1705,6 +1882,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.EncryptResponse Encrypt(global::Google.Cloud.Kms.V1.EncryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Encrypt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1717,6 +1895,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.EncryptResponse Encrypt(global::Google.Cloud.Kms.V1.EncryptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Encrypt, null, options, request);
@@ -1731,6 +1910,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.EncryptResponse> EncryptAsync(global::Google.Cloud.Kms.V1.EncryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EncryptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1743,6 +1923,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.EncryptResponse> EncryptAsync(global::Google.Cloud.Kms.V1.EncryptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Encrypt, null, options, request);
@@ -1756,6 +1937,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.DecryptResponse Decrypt(global::Google.Cloud.Kms.V1.DecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Decrypt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1767,6 +1949,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.DecryptResponse Decrypt(global::Google.Cloud.Kms.V1.DecryptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Decrypt, null, options, request);
@@ -1780,6 +1963,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.DecryptResponse> DecryptAsync(global::Google.Cloud.Kms.V1.DecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DecryptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1791,6 +1975,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.DecryptResponse> DecryptAsync(global::Google.Cloud.Kms.V1.DecryptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Decrypt, null, options, request);
@@ -1805,6 +1990,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.AsymmetricSignResponse AsymmetricSign(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AsymmetricSign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1817,6 +2003,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.AsymmetricSignResponse AsymmetricSign(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AsymmetricSign, null, options, request);
@@ -1831,6 +2018,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> AsymmetricSignAsync(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AsymmetricSignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1843,6 +2031,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricSignResponse> AsymmetricSignAsync(global::Google.Cloud.Kms.V1.AsymmetricSignRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AsymmetricSign, null, options, request);
@@ -1857,6 +2046,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse AsymmetricDecrypt(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AsymmetricDecrypt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1869,6 +2059,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse AsymmetricDecrypt(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AsymmetricDecrypt, null, options, request);
@@ -1883,6 +2074,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> AsymmetricDecryptAsync(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AsymmetricDecryptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1895,6 +2087,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.AsymmetricDecryptResponse> AsymmetricDecryptAsync(global::Google.Cloud.Kms.V1.AsymmetricDecryptRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AsymmetricDecrypt, null, options, request);
@@ -1909,6 +2102,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.MacSignResponse MacSign(global::Google.Cloud.Kms.V1.MacSignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MacSign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1921,6 +2115,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.MacSignResponse MacSign(global::Google.Cloud.Kms.V1.MacSignRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_MacSign, null, options, request);
@@ -1935,6 +2130,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.MacSignResponse> MacSignAsync(global::Google.Cloud.Kms.V1.MacSignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MacSignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1947,6 +2143,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.MacSignResponse> MacSignAsync(global::Google.Cloud.Kms.V1.MacSignRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MacSign, null, options, request);
@@ -1961,6 +2158,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.MacVerifyResponse MacVerify(global::Google.Cloud.Kms.V1.MacVerifyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MacVerify(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1973,6 +2171,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.MacVerifyResponse MacVerify(global::Google.Cloud.Kms.V1.MacVerifyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_MacVerify, null, options, request);
@@ -1987,6 +2186,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.MacVerifyResponse> MacVerifyAsync(global::Google.Cloud.Kms.V1.MacVerifyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MacVerifyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1999,6 +2199,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.MacVerifyResponse> MacVerifyAsync(global::Google.Cloud.Kms.V1.MacVerifyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MacVerify, null, options, request);
@@ -2012,6 +2213,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse GenerateRandomBytes(global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateRandomBytes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2023,6 +2225,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse GenerateRandomBytes(global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateRandomBytes, null, options, request);
@@ -2036,6 +2239,7 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse> GenerateRandomBytesAsync(global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateRandomBytesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2047,11 +2251,13 @@ namespace Google.Cloud.Kms.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.GenerateRandomBytesResponse> GenerateRandomBytesAsync(global::Google.Cloud.Kms.V1.GenerateRandomBytesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateRandomBytes, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override KeyManagementServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new KeyManagementServiceClient(configuration);
@@ -2060,6 +2266,7 @@ namespace Google.Cloud.Kms.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(KeyManagementServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2095,6 +2302,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, KeyManagementServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListKeyRings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ListKeyRingsRequest, global::Google.Cloud.Kms.V1.ListKeyRingsResponse>(serviceImpl.ListKeyRings));

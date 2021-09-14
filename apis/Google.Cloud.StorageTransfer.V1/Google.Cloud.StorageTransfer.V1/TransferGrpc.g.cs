@@ -32,6 +32,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
   {
     static readonly string __ServiceName = "google.storagetransfer.v1.StorageTransferService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -46,11 +47,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,20 +65,34 @@ namespace Google.Cloud.StorageTransfer.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest> __Marshaller_google_storagetransfer_v1_GetGoogleServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount> __Marshaller_google_storagetransfer_v1_GoogleServiceAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest> __Marshaller_google_storagetransfer_v1_CreateTransferJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.TransferJob> __Marshaller_google_storagetransfer_v1_TransferJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.TransferJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest> __Marshaller_google_storagetransfer_v1_UpdateTransferJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest> __Marshaller_google_storagetransfer_v1_GetTransferJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest> __Marshaller_google_storagetransfer_v1_ListTransferJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse> __Marshaller_google_storagetransfer_v1_ListTransferJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest> __Marshaller_google_storagetransfer_v1_PauseTransferOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest> __Marshaller_google_storagetransfer_v1_ResumeTransferOperationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest> __Marshaller_google_storagetransfer_v1_RunTransferJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest, global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount> __Method_GetGoogleServiceAccount = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest, global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +100,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_GetGoogleServiceAccountRequest,
         __Marshaller_google_storagetransfer_v1_GoogleServiceAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest, global::Google.Cloud.StorageTransfer.V1.TransferJob> __Method_CreateTransferJob = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest, global::Google.Cloud.StorageTransfer.V1.TransferJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +108,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_CreateTransferJobRequest,
         __Marshaller_google_storagetransfer_v1_TransferJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest, global::Google.Cloud.StorageTransfer.V1.TransferJob> __Method_UpdateTransferJob = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest, global::Google.Cloud.StorageTransfer.V1.TransferJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +116,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_UpdateTransferJobRequest,
         __Marshaller_google_storagetransfer_v1_TransferJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest, global::Google.Cloud.StorageTransfer.V1.TransferJob> __Method_GetTransferJob = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest, global::Google.Cloud.StorageTransfer.V1.TransferJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -104,6 +124,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_GetTransferJobRequest,
         __Marshaller_google_storagetransfer_v1_TransferJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest, global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse> __Method_ListTransferJobs = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest, global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -111,6 +132,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_ListTransferJobsRequest,
         __Marshaller_google_storagetransfer_v1_ListTransferJobsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PauseTransferOperation = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -118,6 +140,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_PauseTransferOperationRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ResumeTransferOperation = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -125,6 +148,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
         __Marshaller_google_storagetransfer_v1_ResumeTransferOperationRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest, global::Google.LongRunning.Operation> __Method_RunTransferJob = new grpc::Method<global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -155,6 +179,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount> GetGoogleServiceAccount(global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -166,6 +191,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.TransferJob> CreateTransferJob(global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -184,6 +210,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.TransferJob> UpdateTransferJob(global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -195,6 +222,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.TransferJob> GetTransferJob(global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -206,6 +234,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse> ListTransferJobs(global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -217,6 +246,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PauseTransferOperation(global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -228,6 +258,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ResumeTransferOperation(global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -241,6 +272,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunTransferJob(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -253,20 +285,24 @@ namespace Google.Cloud.StorageTransfer.V1 {
     {
       /// <summary>Creates a new client for StorageTransferService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public StorageTransferServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for StorageTransferService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public StorageTransferServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected StorageTransferServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected StorageTransferServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -286,6 +322,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount GetGoogleServiceAccount(global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGoogleServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -303,6 +340,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount GetGoogleServiceAccount(global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGoogleServiceAccount, null, options, request);
@@ -322,6 +360,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount> GetGoogleServiceAccountAsync(global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetGoogleServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -339,6 +378,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount> GetGoogleServiceAccountAsync(global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGoogleServiceAccount, null, options, request);
@@ -351,6 +391,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.TransferJob CreateTransferJob(global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransferJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -361,6 +402,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.TransferJob CreateTransferJob(global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTransferJob, null, options, request);
@@ -373,6 +415,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.TransferJob> CreateTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransferJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -383,6 +426,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.TransferJob> CreateTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.CreateTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTransferJob, null, options, request);
@@ -402,6 +446,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.TransferJob UpdateTransferJob(global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransferJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -419,6 +464,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.TransferJob UpdateTransferJob(global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTransferJob, null, options, request);
@@ -438,6 +484,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.TransferJob> UpdateTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTransferJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -455,6 +502,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.TransferJob> UpdateTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.UpdateTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateTransferJob, null, options, request);
@@ -467,6 +515,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.TransferJob GetTransferJob(global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -477,6 +526,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.TransferJob GetTransferJob(global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTransferJob, null, options, request);
@@ -489,6 +539,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.TransferJob> GetTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTransferJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -499,6 +550,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.TransferJob> GetTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.GetTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTransferJob, null, options, request);
@@ -511,6 +563,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse ListTransferJobs(global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -521,6 +574,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse ListTransferJobs(global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferJobs, null, options, request);
@@ -533,6 +587,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse> ListTransferJobsAsync(global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTransferJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -543,6 +598,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.StorageTransfer.V1.ListTransferJobsResponse> ListTransferJobsAsync(global::Google.Cloud.StorageTransfer.V1.ListTransferJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferJobs, null, options, request);
@@ -555,6 +611,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty PauseTransferOperation(global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseTransferOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -565,6 +622,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty PauseTransferOperation(global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PauseTransferOperation, null, options, request);
@@ -577,6 +635,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PauseTransferOperationAsync(global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseTransferOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -587,6 +646,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PauseTransferOperationAsync(global::Google.Cloud.StorageTransfer.V1.PauseTransferOperationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PauseTransferOperation, null, options, request);
@@ -599,6 +659,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResumeTransferOperation(global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeTransferOperation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -609,6 +670,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResumeTransferOperation(global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResumeTransferOperation, null, options, request);
@@ -621,6 +683,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResumeTransferOperationAsync(global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeTransferOperationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -631,6 +694,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResumeTransferOperationAsync(global::Google.Cloud.StorageTransfer.V1.ResumeTransferOperationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResumeTransferOperation, null, options, request);
@@ -645,6 +709,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RunTransferJob(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunTransferJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -657,6 +722,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RunTransferJob(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunTransferJob, null, options, request);
@@ -671,6 +737,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RunTransferJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -683,11 +750,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunTransferJobAsync(global::Google.Cloud.StorageTransfer.V1.RunTransferJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunTransferJob, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageTransferServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new StorageTransferServiceClient(configuration);
@@ -696,6 +765,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(StorageTransferServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -713,6 +783,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, StorageTransferServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetGoogleServiceAccount, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.StorageTransfer.V1.GetGoogleServiceAccountRequest, global::Google.Cloud.StorageTransfer.V1.GoogleServiceAccount>(serviceImpl.GetGoogleServiceAccount));

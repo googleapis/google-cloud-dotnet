@@ -30,6 +30,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.Applications";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,13 +63,20 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.GetApplicationRequest> __Marshaller_google_appengine_v1_GetApplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.GetApplicationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.Application> __Marshaller_google_appengine_v1_Application = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.Application.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.CreateApplicationRequest> __Marshaller_google_appengine_v1_CreateApplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.CreateApplicationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest> __Marshaller_google_appengine_v1_UpdateApplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.RepairApplicationRequest> __Marshaller_google_appengine_v1_RepairApplicationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.RepairApplicationRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.GetApplicationRequest, global::Google.Cloud.AppEngine.V1.Application> __Method_GetApplication = new grpc::Method<global::Google.Cloud.AppEngine.V1.GetApplicationRequest, global::Google.Cloud.AppEngine.V1.Application>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -74,6 +84,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_GetApplicationRequest,
         __Marshaller_google_appengine_v1_Application);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.CreateApplicationRequest, global::Google.LongRunning.Operation> __Method_CreateApplication = new grpc::Method<global::Google.Cloud.AppEngine.V1.CreateApplicationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -81,6 +92,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_CreateApplicationRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest, global::Google.LongRunning.Operation> __Method_UpdateApplication = new grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -88,6 +100,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_UpdateApplicationRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.RepairApplicationRequest, global::Google.LongRunning.Operation> __Method_RepairApplication = new grpc::Method<global::Google.Cloud.AppEngine.V1.RepairApplicationRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -111,6 +124,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.Application> GetApplication(global::Google.Cloud.AppEngine.V1.GetApplicationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -128,6 +142,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateApplication(global::Google.Cloud.AppEngine.V1.CreateApplicationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -143,6 +158,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateApplication(global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -163,6 +179,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RepairApplication(global::Google.Cloud.AppEngine.V1.RepairApplicationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -175,20 +192,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for Applications</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ApplicationsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Applications that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ApplicationsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ApplicationsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ApplicationsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -201,6 +222,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Application GetApplication(global::Google.Cloud.AppEngine.V1.GetApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -211,6 +233,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Application GetApplication(global::Google.Cloud.AppEngine.V1.GetApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetApplication, null, options, request);
@@ -223,6 +246,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Application> GetApplicationAsync(global::Google.Cloud.AppEngine.V1.GetApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -233,6 +257,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Application> GetApplicationAsync(global::Google.Cloud.AppEngine.V1.GetApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetApplication, null, options, request);
@@ -251,6 +276,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateApplication(global::Google.Cloud.AppEngine.V1.CreateApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -267,6 +293,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateApplication(global::Google.Cloud.AppEngine.V1.CreateApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApplication, null, options, request);
@@ -285,6 +312,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateApplicationAsync(global::Google.Cloud.AppEngine.V1.CreateApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -301,6 +329,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateApplicationAsync(global::Google.Cloud.AppEngine.V1.CreateApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApplication, null, options, request);
@@ -317,6 +346,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateApplication(global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -331,6 +361,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateApplication(global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApplication, null, options, request);
@@ -347,6 +378,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApplicationAsync(global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -361,6 +393,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApplicationAsync(global::Google.Cloud.AppEngine.V1.UpdateApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApplication, null, options, request);
@@ -382,6 +415,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RepairApplication(global::Google.Cloud.AppEngine.V1.RepairApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RepairApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -401,6 +435,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RepairApplication(global::Google.Cloud.AppEngine.V1.RepairApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RepairApplication, null, options, request);
@@ -422,6 +457,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RepairApplicationAsync(global::Google.Cloud.AppEngine.V1.RepairApplicationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RepairApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -441,11 +477,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RepairApplicationAsync(global::Google.Cloud.AppEngine.V1.RepairApplicationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RepairApplication, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ApplicationsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ApplicationsClient(configuration);
@@ -454,6 +492,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ApplicationsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -467,6 +506,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ApplicationsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetApplication, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.GetApplicationRequest, global::Google.Cloud.AppEngine.V1.Application>(serviceImpl.GetApplication));
@@ -483,6 +523,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.Services";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -497,11 +538,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -513,14 +556,22 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListServicesRequest> __Marshaller_google_appengine_v1_ListServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListServicesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListServicesResponse> __Marshaller_google_appengine_v1_ListServicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListServicesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.GetServiceRequest> __Marshaller_google_appengine_v1_GetServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.GetServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.Service> __Marshaller_google_appengine_v1_Service = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.Service.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.UpdateServiceRequest> __Marshaller_google_appengine_v1_UpdateServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.UpdateServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DeleteServiceRequest> __Marshaller_google_appengine_v1_DeleteServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DeleteServiceRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.ListServicesRequest, global::Google.Cloud.AppEngine.V1.ListServicesResponse> __Method_ListServices = new grpc::Method<global::Google.Cloud.AppEngine.V1.ListServicesRequest, global::Google.Cloud.AppEngine.V1.ListServicesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -528,6 +579,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_ListServicesRequest,
         __Marshaller_google_appengine_v1_ListServicesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.GetServiceRequest, global::Google.Cloud.AppEngine.V1.Service> __Method_GetService = new grpc::Method<global::Google.Cloud.AppEngine.V1.GetServiceRequest, global::Google.Cloud.AppEngine.V1.Service>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -535,6 +587,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_GetServiceRequest,
         __Marshaller_google_appengine_v1_Service);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateServiceRequest, global::Google.LongRunning.Operation> __Method_UpdateService = new grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -542,6 +595,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_UpdateServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteServiceRequest, global::Google.LongRunning.Operation> __Method_DeleteService = new grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteServiceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -565,6 +619,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.ListServicesResponse> ListServices(global::Google.Cloud.AppEngine.V1.ListServicesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -576,6 +631,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.Service> GetService(global::Google.Cloud.AppEngine.V1.GetServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -587,6 +643,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateService(global::Google.Cloud.AppEngine.V1.UpdateServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -598,6 +655,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteService(global::Google.Cloud.AppEngine.V1.DeleteServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -610,20 +668,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for Services</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ServicesClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Services that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ServicesClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ServicesClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ServicesClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -636,6 +698,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListServicesResponse ListServices(global::Google.Cloud.AppEngine.V1.ListServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -646,6 +709,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListServicesResponse ListServices(global::Google.Cloud.AppEngine.V1.ListServicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListServices, null, options, request);
@@ -658,6 +722,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListServicesResponse> ListServicesAsync(global::Google.Cloud.AppEngine.V1.ListServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -668,6 +733,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListServicesResponse> ListServicesAsync(global::Google.Cloud.AppEngine.V1.ListServicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListServices, null, options, request);
@@ -680,6 +746,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Service GetService(global::Google.Cloud.AppEngine.V1.GetServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -690,6 +757,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Service GetService(global::Google.Cloud.AppEngine.V1.GetServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetService, null, options, request);
@@ -702,6 +770,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Service> GetServiceAsync(global::Google.Cloud.AppEngine.V1.GetServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -712,6 +781,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Service> GetServiceAsync(global::Google.Cloud.AppEngine.V1.GetServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetService, null, options, request);
@@ -724,6 +794,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateService(global::Google.Cloud.AppEngine.V1.UpdateServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -734,6 +805,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateService(global::Google.Cloud.AppEngine.V1.UpdateServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateService, null, options, request);
@@ -746,6 +818,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateServiceAsync(global::Google.Cloud.AppEngine.V1.UpdateServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -756,6 +829,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateServiceAsync(global::Google.Cloud.AppEngine.V1.UpdateServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateService, null, options, request);
@@ -768,6 +842,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteService(global::Google.Cloud.AppEngine.V1.DeleteServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -778,6 +853,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteService(global::Google.Cloud.AppEngine.V1.DeleteServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteService, null, options, request);
@@ -790,6 +866,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteServiceAsync(global::Google.Cloud.AppEngine.V1.DeleteServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -800,11 +877,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteServiceAsync(global::Google.Cloud.AppEngine.V1.DeleteServiceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteService, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ServicesClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ServicesClient(configuration);
@@ -813,6 +892,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ServicesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -826,6 +906,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ServicesBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListServices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.ListServicesRequest, global::Google.Cloud.AppEngine.V1.ListServicesResponse>(serviceImpl.ListServices));
@@ -842,6 +923,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.Versions";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -856,11 +938,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -872,15 +956,24 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListVersionsRequest> __Marshaller_google_appengine_v1_ListVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListVersionsResponse> __Marshaller_google_appengine_v1_ListVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListVersionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.GetVersionRequest> __Marshaller_google_appengine_v1_GetVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.GetVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.Version> __Marshaller_google_appengine_v1_Version = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.Version.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.CreateVersionRequest> __Marshaller_google_appengine_v1_CreateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.CreateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.UpdateVersionRequest> __Marshaller_google_appengine_v1_UpdateVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.UpdateVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DeleteVersionRequest> __Marshaller_google_appengine_v1_DeleteVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DeleteVersionRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.ListVersionsRequest, global::Google.Cloud.AppEngine.V1.ListVersionsResponse> __Method_ListVersions = new grpc::Method<global::Google.Cloud.AppEngine.V1.ListVersionsRequest, global::Google.Cloud.AppEngine.V1.ListVersionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -888,6 +981,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_ListVersionsRequest,
         __Marshaller_google_appengine_v1_ListVersionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.GetVersionRequest, global::Google.Cloud.AppEngine.V1.Version> __Method_GetVersion = new grpc::Method<global::Google.Cloud.AppEngine.V1.GetVersionRequest, global::Google.Cloud.AppEngine.V1.Version>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -895,6 +989,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_GetVersionRequest,
         __Marshaller_google_appengine_v1_Version);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.CreateVersionRequest, global::Google.LongRunning.Operation> __Method_CreateVersion = new grpc::Method<global::Google.Cloud.AppEngine.V1.CreateVersionRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -902,6 +997,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_CreateVersionRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateVersionRequest, global::Google.LongRunning.Operation> __Method_UpdateVersion = new grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateVersionRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -909,6 +1005,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_UpdateVersionRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteVersionRequest, global::Google.LongRunning.Operation> __Method_DeleteVersion = new grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteVersionRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -932,6 +1029,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.ListVersionsResponse> ListVersions(global::Google.Cloud.AppEngine.V1.ListVersionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -945,6 +1043,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.Version> GetVersion(global::Google.Cloud.AppEngine.V1.GetVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -956,6 +1055,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateVersion(global::Google.Cloud.AppEngine.V1.CreateVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1002,6 +1102,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateVersion(global::Google.Cloud.AppEngine.V1.UpdateVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1013,6 +1114,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteVersion(global::Google.Cloud.AppEngine.V1.DeleteVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1025,20 +1127,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for Versions</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public VersionsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Versions that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public VersionsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected VersionsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected VersionsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -1051,6 +1157,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListVersionsResponse ListVersions(global::Google.Cloud.AppEngine.V1.ListVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1061,6 +1168,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListVersionsResponse ListVersions(global::Google.Cloud.AppEngine.V1.ListVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListVersions, null, options, request);
@@ -1073,6 +1181,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListVersionsResponse> ListVersionsAsync(global::Google.Cloud.AppEngine.V1.ListVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1083,6 +1192,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListVersionsResponse> ListVersionsAsync(global::Google.Cloud.AppEngine.V1.ListVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListVersions, null, options, request);
@@ -1097,6 +1207,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Version GetVersion(global::Google.Cloud.AppEngine.V1.GetVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1109,6 +1220,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Version GetVersion(global::Google.Cloud.AppEngine.V1.GetVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetVersion, null, options, request);
@@ -1123,6 +1235,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Version> GetVersionAsync(global::Google.Cloud.AppEngine.V1.GetVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1135,6 +1248,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Version> GetVersionAsync(global::Google.Cloud.AppEngine.V1.GetVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetVersion, null, options, request);
@@ -1147,6 +1261,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateVersion(global::Google.Cloud.AppEngine.V1.CreateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1157,6 +1272,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateVersion(global::Google.Cloud.AppEngine.V1.CreateVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateVersion, null, options, request);
@@ -1169,6 +1285,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateVersionAsync(global::Google.Cloud.AppEngine.V1.CreateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1179,6 +1296,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateVersionAsync(global::Google.Cloud.AppEngine.V1.CreateVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateVersion, null, options, request);
@@ -1226,6 +1344,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateVersion(global::Google.Cloud.AppEngine.V1.UpdateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1271,6 +1390,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateVersion(global::Google.Cloud.AppEngine.V1.UpdateVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateVersion, null, options, request);
@@ -1318,6 +1438,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateVersionAsync(global::Google.Cloud.AppEngine.V1.UpdateVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1363,6 +1484,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateVersionAsync(global::Google.Cloud.AppEngine.V1.UpdateVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateVersion, null, options, request);
@@ -1375,6 +1497,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteVersion(global::Google.Cloud.AppEngine.V1.DeleteVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1385,6 +1508,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteVersion(global::Google.Cloud.AppEngine.V1.DeleteVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteVersion, null, options, request);
@@ -1397,6 +1521,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteVersionAsync(global::Google.Cloud.AppEngine.V1.DeleteVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1407,11 +1532,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteVersionAsync(global::Google.Cloud.AppEngine.V1.DeleteVersionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteVersion, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VersionsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new VersionsClient(configuration);
@@ -1420,6 +1547,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(VersionsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1434,6 +1562,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, VersionsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.ListVersionsRequest, global::Google.Cloud.AppEngine.V1.ListVersionsResponse>(serviceImpl.ListVersions));
@@ -1451,6 +1580,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.Instances";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -1465,11 +1595,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -1481,14 +1613,22 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListInstancesRequest> __Marshaller_google_appengine_v1_ListInstancesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListInstancesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListInstancesResponse> __Marshaller_google_appengine_v1_ListInstancesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListInstancesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.GetInstanceRequest> __Marshaller_google_appengine_v1_GetInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.GetInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.Instance> __Marshaller_google_appengine_v1_Instance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.Instance.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest> __Marshaller_google_appengine_v1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DebugInstanceRequest> __Marshaller_google_appengine_v1_DebugInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DebugInstanceRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.ListInstancesRequest, global::Google.Cloud.AppEngine.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.AppEngine.V1.ListInstancesRequest, global::Google.Cloud.AppEngine.V1.ListInstancesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1496,6 +1636,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_ListInstancesRequest,
         __Marshaller_google_appengine_v1_ListInstancesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.GetInstanceRequest, global::Google.Cloud.AppEngine.V1.Instance> __Method_GetInstance = new grpc::Method<global::Google.Cloud.AppEngine.V1.GetInstanceRequest, global::Google.Cloud.AppEngine.V1.Instance>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1503,6 +1644,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_GetInstanceRequest,
         __Marshaller_google_appengine_v1_Instance);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1510,6 +1652,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_DeleteInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.DebugInstanceRequest, global::Google.LongRunning.Operation> __Method_DebugInstance = new grpc::Method<global::Google.Cloud.AppEngine.V1.DebugInstanceRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1536,6 +1679,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.ListInstancesResponse> ListInstances(global::Google.Cloud.AppEngine.V1.ListInstancesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1547,6 +1691,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.Instance> GetInstance(global::Google.Cloud.AppEngine.V1.GetInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1569,6 +1714,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteInstance(global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1587,6 +1733,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DebugInstance(global::Google.Cloud.AppEngine.V1.DebugInstanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -1599,20 +1746,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for Instances</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public InstancesClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Instances that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public InstancesClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected InstancesClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected InstancesClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -1628,6 +1779,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListInstancesResponse ListInstances(global::Google.Cloud.AppEngine.V1.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1641,6 +1793,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListInstancesResponse ListInstances(global::Google.Cloud.AppEngine.V1.ListInstancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstances, null, options, request);
@@ -1656,6 +1809,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.AppEngine.V1.ListInstancesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1669,6 +1823,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.AppEngine.V1.ListInstancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstances, null, options, request);
@@ -1681,6 +1836,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Instance GetInstance(global::Google.Cloud.AppEngine.V1.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1691,6 +1847,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.Instance GetInstance(global::Google.Cloud.AppEngine.V1.GetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstance, null, options, request);
@@ -1703,6 +1860,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Instance> GetInstanceAsync(global::Google.Cloud.AppEngine.V1.GetInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1713,6 +1871,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.Instance> GetInstanceAsync(global::Google.Cloud.AppEngine.V1.GetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstance, null, options, request);
@@ -1736,6 +1895,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteInstance(global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1757,6 +1917,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteInstance(global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInstance, null, options, request);
@@ -1780,6 +1941,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteInstanceAsync(global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1801,6 +1963,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteInstanceAsync(global::Google.Cloud.AppEngine.V1.DeleteInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
@@ -1820,6 +1983,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DebugInstance(global::Google.Cloud.AppEngine.V1.DebugInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DebugInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1837,6 +2001,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DebugInstance(global::Google.Cloud.AppEngine.V1.DebugInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DebugInstance, null, options, request);
@@ -1856,6 +2021,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DebugInstanceAsync(global::Google.Cloud.AppEngine.V1.DebugInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DebugInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1873,11 +2039,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DebugInstanceAsync(global::Google.Cloud.AppEngine.V1.DebugInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DebugInstance, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override InstancesClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new InstancesClient(configuration);
@@ -1886,6 +2054,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(InstancesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1899,6 +2068,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, InstancesBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.ListInstancesRequest, global::Google.Cloud.AppEngine.V1.ListInstancesResponse>(serviceImpl.ListInstances));
@@ -1924,6 +2094,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.Firewall";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -1938,11 +2109,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -1954,17 +2127,28 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest> __Marshaller_google_appengine_v1_ListIngressRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse> __Marshaller_google_appengine_v1_ListIngressRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest> __Marshaller_google_appengine_v1_BatchUpdateIngressRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse> __Marshaller_google_appengine_v1_BatchUpdateIngressRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest> __Marshaller_google_appengine_v1_CreateIngressRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.FirewallRule> __Marshaller_google_appengine_v1_FirewallRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.FirewallRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest> __Marshaller_google_appengine_v1_GetIngressRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest> __Marshaller_google_appengine_v1_UpdateIngressRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest> __Marshaller_google_appengine_v1_DeleteIngressRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest, global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse> __Method_ListIngressRules = new grpc::Method<global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest, global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1972,6 +2156,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_ListIngressRulesRequest,
         __Marshaller_google_appengine_v1_ListIngressRulesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest, global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse> __Method_BatchUpdateIngressRules = new grpc::Method<global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest, global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1979,6 +2164,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_BatchUpdateIngressRulesRequest,
         __Marshaller_google_appengine_v1_BatchUpdateIngressRulesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest, global::Google.Cloud.AppEngine.V1.FirewallRule> __Method_CreateIngressRule = new grpc::Method<global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest, global::Google.Cloud.AppEngine.V1.FirewallRule>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1986,6 +2172,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_CreateIngressRuleRequest,
         __Marshaller_google_appengine_v1_FirewallRule);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest, global::Google.Cloud.AppEngine.V1.FirewallRule> __Method_GetIngressRule = new grpc::Method<global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest, global::Google.Cloud.AppEngine.V1.FirewallRule>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -1993,6 +2180,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_GetIngressRuleRequest,
         __Marshaller_google_appengine_v1_FirewallRule);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest, global::Google.Cloud.AppEngine.V1.FirewallRule> __Method_UpdateIngressRule = new grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest, global::Google.Cloud.AppEngine.V1.FirewallRule>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2000,6 +2188,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_UpdateIngressRuleRequest,
         __Marshaller_google_appengine_v1_FirewallRule);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteIngressRule = new grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2023,6 +2212,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse> ListIngressRules(global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2038,6 +2228,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse> BatchUpdateIngressRules(global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2049,6 +2240,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.FirewallRule> CreateIngressRule(global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2060,6 +2252,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.FirewallRule> GetIngressRule(global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2071,6 +2264,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.FirewallRule> UpdateIngressRule(global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2082,6 +2276,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteIngressRule(global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2094,20 +2289,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for Firewall</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public FirewallClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Firewall that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public FirewallClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected FirewallClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected FirewallClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -2120,6 +2319,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse ListIngressRules(global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIngressRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2130,6 +2330,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse ListIngressRules(global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListIngressRules, null, options, request);
@@ -2142,6 +2343,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse> ListIngressRulesAsync(global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListIngressRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2152,6 +2354,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse> ListIngressRulesAsync(global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListIngressRules, null, options, request);
@@ -2168,6 +2371,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse BatchUpdateIngressRules(global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchUpdateIngressRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2182,6 +2386,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse BatchUpdateIngressRules(global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateIngressRules, null, options, request);
@@ -2198,6 +2403,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse> BatchUpdateIngressRulesAsync(global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchUpdateIngressRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2212,6 +2418,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesResponse> BatchUpdateIngressRulesAsync(global::Google.Cloud.AppEngine.V1.BatchUpdateIngressRulesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateIngressRules, null, options, request);
@@ -2224,6 +2431,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.FirewallRule CreateIngressRule(global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIngressRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2234,6 +2442,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.FirewallRule CreateIngressRule(global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateIngressRule, null, options, request);
@@ -2246,6 +2455,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.FirewallRule> CreateIngressRuleAsync(global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateIngressRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2256,6 +2466,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.FirewallRule> CreateIngressRuleAsync(global::Google.Cloud.AppEngine.V1.CreateIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateIngressRule, null, options, request);
@@ -2268,6 +2479,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.FirewallRule GetIngressRule(global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIngressRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2278,6 +2490,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.FirewallRule GetIngressRule(global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIngressRule, null, options, request);
@@ -2290,6 +2503,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.FirewallRule> GetIngressRuleAsync(global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIngressRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2300,6 +2514,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.FirewallRule> GetIngressRuleAsync(global::Google.Cloud.AppEngine.V1.GetIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIngressRule, null, options, request);
@@ -2312,6 +2527,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.FirewallRule UpdateIngressRule(global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIngressRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2322,6 +2538,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.FirewallRule UpdateIngressRule(global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateIngressRule, null, options, request);
@@ -2334,6 +2551,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.FirewallRule> UpdateIngressRuleAsync(global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateIngressRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2344,6 +2562,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.FirewallRule> UpdateIngressRuleAsync(global::Google.Cloud.AppEngine.V1.UpdateIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIngressRule, null, options, request);
@@ -2356,6 +2575,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteIngressRule(global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIngressRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2366,6 +2586,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteIngressRule(global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteIngressRule, null, options, request);
@@ -2378,6 +2599,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteIngressRuleAsync(global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteIngressRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2388,11 +2610,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteIngressRuleAsync(global::Google.Cloud.AppEngine.V1.DeleteIngressRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteIngressRule, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FirewallClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new FirewallClient(configuration);
@@ -2401,6 +2625,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(FirewallBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2416,6 +2641,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, FirewallBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListIngressRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.ListIngressRulesRequest, global::Google.Cloud.AppEngine.V1.ListIngressRulesResponse>(serviceImpl.ListIngressRules));
@@ -2436,6 +2662,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.AuthorizedDomains";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -2450,11 +2677,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -2466,9 +2695,12 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest> __Marshaller_google_appengine_v1_ListAuthorizedDomainsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse> __Marshaller_google_appengine_v1_ListAuthorizedDomainsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest, global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse> __Method_ListAuthorizedDomains = new grpc::Method<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest, global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2492,6 +2724,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse> ListAuthorizedDomains(global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2504,20 +2737,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for AuthorizedDomains</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AuthorizedDomainsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AuthorizedDomains that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AuthorizedDomainsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AuthorizedDomainsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AuthorizedDomainsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -2530,6 +2767,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse ListAuthorizedDomains(global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAuthorizedDomains(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2540,6 +2778,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse ListAuthorizedDomains(global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAuthorizedDomains, null, options, request);
@@ -2552,6 +2791,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse> ListAuthorizedDomainsAsync(global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAuthorizedDomainsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2562,11 +2802,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse> ListAuthorizedDomainsAsync(global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAuthorizedDomains, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AuthorizedDomainsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AuthorizedDomainsClient(configuration);
@@ -2575,6 +2817,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AuthorizedDomainsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2585,6 +2828,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AuthorizedDomainsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListAuthorizedDomains, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsRequest, global::Google.Cloud.AppEngine.V1.ListAuthorizedDomainsResponse>(serviceImpl.ListAuthorizedDomains));
@@ -2599,6 +2843,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.AuthorizedCertificates";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -2613,11 +2858,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -2629,15 +2876,24 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest> __Marshaller_google_appengine_v1_ListAuthorizedCertificatesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse> __Marshaller_google_appengine_v1_ListAuthorizedCertificatesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest> __Marshaller_google_appengine_v1_GetAuthorizedCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> __Marshaller_google_appengine_v1_AuthorizedCertificate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.AuthorizedCertificate.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest> __Marshaller_google_appengine_v1_CreateAuthorizedCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest> __Marshaller_google_appengine_v1_UpdateAuthorizedCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest> __Marshaller_google_appengine_v1_DeleteAuthorizedCertificateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest, global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse> __Method_ListAuthorizedCertificates = new grpc::Method<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest, global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2645,6 +2901,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_ListAuthorizedCertificatesRequest,
         __Marshaller_google_appengine_v1_ListAuthorizedCertificatesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest, global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> __Method_GetAuthorizedCertificate = new grpc::Method<global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest, global::Google.Cloud.AppEngine.V1.AuthorizedCertificate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2652,6 +2909,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_GetAuthorizedCertificateRequest,
         __Marshaller_google_appengine_v1_AuthorizedCertificate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest, global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> __Method_CreateAuthorizedCertificate = new grpc::Method<global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest, global::Google.Cloud.AppEngine.V1.AuthorizedCertificate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2659,6 +2917,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_CreateAuthorizedCertificateRequest,
         __Marshaller_google_appengine_v1_AuthorizedCertificate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest, global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> __Method_UpdateAuthorizedCertificate = new grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest, global::Google.Cloud.AppEngine.V1.AuthorizedCertificate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2666,6 +2925,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_UpdateAuthorizedCertificateRequest,
         __Marshaller_google_appengine_v1_AuthorizedCertificate);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAuthorizedCertificate = new grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -2689,6 +2949,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse> ListAuthorizedCertificates(global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2700,6 +2961,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> GetAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2711,6 +2973,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> CreateAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2726,6 +2989,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> UpdateAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2737,6 +3001,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -2749,20 +3014,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for AuthorizedCertificates</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AuthorizedCertificatesClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AuthorizedCertificates that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AuthorizedCertificatesClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AuthorizedCertificatesClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AuthorizedCertificatesClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -2775,6 +3044,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse ListAuthorizedCertificates(global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAuthorizedCertificates(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2785,6 +3055,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse ListAuthorizedCertificates(global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAuthorizedCertificates, null, options, request);
@@ -2797,6 +3068,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse> ListAuthorizedCertificatesAsync(global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAuthorizedCertificatesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2807,6 +3079,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse> ListAuthorizedCertificatesAsync(global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAuthorizedCertificates, null, options, request);
@@ -2819,6 +3092,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.AuthorizedCertificate GetAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAuthorizedCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2829,6 +3103,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.AuthorizedCertificate GetAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAuthorizedCertificate, null, options, request);
@@ -2841,6 +3116,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> GetAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAuthorizedCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2851,6 +3127,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> GetAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.GetAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAuthorizedCertificate, null, options, request);
@@ -2863,6 +3140,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.AuthorizedCertificate CreateAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAuthorizedCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2873,6 +3151,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.AuthorizedCertificate CreateAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAuthorizedCertificate, null, options, request);
@@ -2885,6 +3164,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> CreateAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAuthorizedCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2895,6 +3175,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> CreateAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.CreateAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAuthorizedCertificate, null, options, request);
@@ -2911,6 +3192,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.AuthorizedCertificate UpdateAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateAuthorizedCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2925,6 +3207,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.AuthorizedCertificate UpdateAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateAuthorizedCertificate, null, options, request);
@@ -2941,6 +3224,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> UpdateAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateAuthorizedCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2955,6 +3239,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.AuthorizedCertificate> UpdateAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.UpdateAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAuthorizedCertificate, null, options, request);
@@ -2967,6 +3252,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAuthorizedCertificate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2977,6 +3263,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAuthorizedCertificate(global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAuthorizedCertificate, null, options, request);
@@ -2989,6 +3276,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAuthorizedCertificateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2999,11 +3287,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAuthorizedCertificateAsync(global::Google.Cloud.AppEngine.V1.DeleteAuthorizedCertificateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAuthorizedCertificate, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AuthorizedCertificatesClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AuthorizedCertificatesClient(configuration);
@@ -3012,6 +3302,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AuthorizedCertificatesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -3026,6 +3317,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AuthorizedCertificatesBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListAuthorizedCertificates, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesRequest, global::Google.Cloud.AppEngine.V1.ListAuthorizedCertificatesResponse>(serviceImpl.ListAuthorizedCertificates));
@@ -3043,6 +3335,7 @@ namespace Google.Cloud.AppEngine.V1 {
   {
     static readonly string __ServiceName = "google.appengine.v1.DomainMappings";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -3057,11 +3350,13 @@ namespace Google.Cloud.AppEngine.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -3073,15 +3368,24 @@ namespace Google.Cloud.AppEngine.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest> __Marshaller_google_appengine_v1_ListDomainMappingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse> __Marshaller_google_appengine_v1_ListDomainMappingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest> __Marshaller_google_appengine_v1_GetDomainMappingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DomainMapping> __Marshaller_google_appengine_v1_DomainMapping = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DomainMapping.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest> __Marshaller_google_appengine_v1_CreateDomainMappingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest> __Marshaller_google_appengine_v1_UpdateDomainMappingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest> __Marshaller_google_appengine_v1_DeleteDomainMappingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest, global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse> __Method_ListDomainMappings = new grpc::Method<global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest, global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -3089,6 +3393,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_ListDomainMappingsRequest,
         __Marshaller_google_appengine_v1_ListDomainMappingsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest, global::Google.Cloud.AppEngine.V1.DomainMapping> __Method_GetDomainMapping = new grpc::Method<global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest, global::Google.Cloud.AppEngine.V1.DomainMapping>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -3096,6 +3401,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_GetDomainMappingRequest,
         __Marshaller_google_appengine_v1_DomainMapping);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest, global::Google.LongRunning.Operation> __Method_CreateDomainMapping = new grpc::Method<global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -3103,6 +3409,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_CreateDomainMappingRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest, global::Google.LongRunning.Operation> __Method_UpdateDomainMapping = new grpc::Method<global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -3110,6 +3417,7 @@ namespace Google.Cloud.AppEngine.V1 {
         __Marshaller_google_appengine_v1_UpdateDomainMappingRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest, global::Google.LongRunning.Operation> __Method_DeleteDomainMapping = new grpc::Method<global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -3133,6 +3441,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse> ListDomainMappings(global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -3144,6 +3453,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AppEngine.V1.DomainMapping> GetDomainMapping(global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -3157,6 +3467,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDomainMapping(global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -3171,6 +3482,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDomainMapping(global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -3184,6 +3496,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDomainMapping(global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -3196,20 +3509,24 @@ namespace Google.Cloud.AppEngine.V1 {
     {
       /// <summary>Creates a new client for DomainMappings</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DomainMappingsClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DomainMappings that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DomainMappingsClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DomainMappingsClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DomainMappingsClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -3222,6 +3539,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse ListDomainMappings(global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDomainMappings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3232,6 +3550,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse ListDomainMappings(global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDomainMappings, null, options, request);
@@ -3244,6 +3563,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse> ListDomainMappingsAsync(global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDomainMappingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3254,6 +3574,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse> ListDomainMappingsAsync(global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDomainMappings, null, options, request);
@@ -3266,6 +3587,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.DomainMapping GetDomainMapping(global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDomainMapping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3276,6 +3598,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AppEngine.V1.DomainMapping GetDomainMapping(global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDomainMapping, null, options, request);
@@ -3288,6 +3611,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.DomainMapping> GetDomainMappingAsync(global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDomainMappingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3298,6 +3622,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AppEngine.V1.DomainMapping> GetDomainMappingAsync(global::Google.Cloud.AppEngine.V1.GetDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDomainMapping, null, options, request);
@@ -3312,6 +3637,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDomainMapping(global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDomainMapping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3324,6 +3650,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDomainMapping(global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDomainMapping, null, options, request);
@@ -3338,6 +3665,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDomainMappingAsync(global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDomainMappingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3350,6 +3678,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDomainMappingAsync(global::Google.Cloud.AppEngine.V1.CreateDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDomainMapping, null, options, request);
@@ -3365,6 +3694,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDomainMapping(global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDomainMapping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3378,6 +3708,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDomainMapping(global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDomainMapping, null, options, request);
@@ -3393,6 +3724,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDomainMappingAsync(global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDomainMappingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3406,6 +3738,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDomainMappingAsync(global::Google.Cloud.AppEngine.V1.UpdateDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDomainMapping, null, options, request);
@@ -3420,6 +3753,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDomainMapping(global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDomainMapping(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3432,6 +3766,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDomainMapping(global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDomainMapping, null, options, request);
@@ -3446,6 +3781,7 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDomainMappingAsync(global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDomainMappingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -3458,11 +3794,13 @@ namespace Google.Cloud.AppEngine.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDomainMappingAsync(global::Google.Cloud.AppEngine.V1.DeleteDomainMappingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDomainMapping, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DomainMappingsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DomainMappingsClient(configuration);
@@ -3471,6 +3809,7 @@ namespace Google.Cloud.AppEngine.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DomainMappingsBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -3485,6 +3824,7 @@ namespace Google.Cloud.AppEngine.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DomainMappingsBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListDomainMappings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AppEngine.V1.ListDomainMappingsRequest, global::Google.Cloud.AppEngine.V1.ListDomainMappingsResponse>(serviceImpl.ListDomainMappings));

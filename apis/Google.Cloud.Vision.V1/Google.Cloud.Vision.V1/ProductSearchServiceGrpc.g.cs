@@ -43,6 +43,7 @@ namespace Google.Cloud.Vision.V1 {
   {
     static readonly string __ServiceName = "google.cloud.vision.v1.ProductSearch";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -57,11 +58,13 @@ namespace Google.Cloud.Vision.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -73,35 +76,64 @@ namespace Google.Cloud.Vision.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateProductSetRequest> __Marshaller_google_cloud_vision_v1_CreateProductSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.CreateProductSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ProductSet> __Marshaller_google_cloud_vision_v1_ProductSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ProductSet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductSetsRequest> __Marshaller_google_cloud_vision_v1_ListProductSetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListProductSetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductSetsResponse> __Marshaller_google_cloud_vision_v1_ListProductSetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListProductSetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetProductSetRequest> __Marshaller_google_cloud_vision_v1_GetProductSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.GetProductSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.UpdateProductSetRequest> __Marshaller_google_cloud_vision_v1_UpdateProductSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.UpdateProductSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteProductSetRequest> __Marshaller_google_cloud_vision_v1_DeleteProductSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.DeleteProductSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateProductRequest> __Marshaller_google_cloud_vision_v1_CreateProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.CreateProductRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.Product> __Marshaller_google_cloud_vision_v1_Product = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.Product.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsRequest> __Marshaller_google_cloud_vision_v1_ListProductsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListProductsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsResponse> __Marshaller_google_cloud_vision_v1_ListProductsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListProductsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetProductRequest> __Marshaller_google_cloud_vision_v1_GetProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.GetProductRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.UpdateProductRequest> __Marshaller_google_cloud_vision_v1_UpdateProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.UpdateProductRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteProductRequest> __Marshaller_google_cloud_vision_v1_DeleteProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.DeleteProductRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest> __Marshaller_google_cloud_vision_v1_CreateReferenceImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.CreateReferenceImageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ReferenceImage> __Marshaller_google_cloud_vision_v1_ReferenceImage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ReferenceImage.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest> __Marshaller_google_cloud_vision_v1_DeleteReferenceImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest> __Marshaller_google_cloud_vision_v1_ListReferenceImagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListReferenceImagesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> __Marshaller_google_cloud_vision_v1_ListReferenceImagesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListReferenceImagesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.GetReferenceImageRequest> __Marshaller_google_cloud_vision_v1_GetReferenceImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.GetReferenceImageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest> __Marshaller_google_cloud_vision_v1_AddProductToProductSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.AddProductToProductSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest> __Marshaller_google_cloud_vision_v1_RemoveProductFromProductSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest> __Marshaller_google_cloud_vision_v1_ListProductsInProductSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> __Marshaller_google_cloud_vision_v1_ListProductsInProductSetResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.ImportProductSetsRequest> __Marshaller_google_cloud_vision_v1_ImportProductSetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.ImportProductSetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Vision.V1.PurgeProductsRequest> __Marshaller_google_cloud_vision_v1_PurgeProductsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Vision.V1.PurgeProductsRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet> __Method_CreateProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -109,6 +141,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_CreateProductSetRequest,
         __Marshaller_google_cloud_vision_v1_ProductSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListProductSetsRequest, global::Google.Cloud.Vision.V1.ListProductSetsResponse> __Method_ListProductSets = new grpc::Method<global::Google.Cloud.Vision.V1.ListProductSetsRequest, global::Google.Cloud.Vision.V1.ListProductSetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -116,6 +149,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_ListProductSetsRequest,
         __Marshaller_google_cloud_vision_v1_ListProductSetsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.GetProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet> __Method_GetProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.GetProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -123,6 +157,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_GetProductSetRequest,
         __Marshaller_google_cloud_vision_v1_ProductSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet> __Method_UpdateProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -130,6 +165,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_UpdateProductSetRequest,
         __Marshaller_google_cloud_vision_v1_ProductSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +173,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_DeleteProductSetRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.CreateProductRequest, global::Google.Cloud.Vision.V1.Product> __Method_CreateProduct = new grpc::Method<global::Google.Cloud.Vision.V1.CreateProductRequest, global::Google.Cloud.Vision.V1.Product>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -144,6 +181,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_CreateProductRequest,
         __Marshaller_google_cloud_vision_v1_Product);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListProductsRequest, global::Google.Cloud.Vision.V1.ListProductsResponse> __Method_ListProducts = new grpc::Method<global::Google.Cloud.Vision.V1.ListProductsRequest, global::Google.Cloud.Vision.V1.ListProductsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -151,6 +189,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_ListProductsRequest,
         __Marshaller_google_cloud_vision_v1_ListProductsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.GetProductRequest, global::Google.Cloud.Vision.V1.Product> __Method_GetProduct = new grpc::Method<global::Google.Cloud.Vision.V1.GetProductRequest, global::Google.Cloud.Vision.V1.Product>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -158,6 +197,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_GetProductRequest,
         __Marshaller_google_cloud_vision_v1_Product);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductRequest, global::Google.Cloud.Vision.V1.Product> __Method_UpdateProduct = new grpc::Method<global::Google.Cloud.Vision.V1.UpdateProductRequest, global::Google.Cloud.Vision.V1.Product>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -165,6 +205,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_UpdateProductRequest,
         __Marshaller_google_cloud_vision_v1_Product);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteProduct = new grpc::Method<global::Google.Cloud.Vision.V1.DeleteProductRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -172,6 +213,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_DeleteProductRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage> __Method_CreateReferenceImage = new grpc::Method<global::Google.Cloud.Vision.V1.CreateReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -179,6 +221,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_CreateReferenceImageRequest,
         __Marshaller_google_cloud_vision_v1_ReferenceImage);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteReferenceImage = new grpc::Method<global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -186,6 +229,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_DeleteReferenceImageRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest, global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> __Method_ListReferenceImages = new grpc::Method<global::Google.Cloud.Vision.V1.ListReferenceImagesRequest, global::Google.Cloud.Vision.V1.ListReferenceImagesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -193,6 +237,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_ListReferenceImagesRequest,
         __Marshaller_google_cloud_vision_v1_ListReferenceImagesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.GetReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage> __Method_GetReferenceImage = new grpc::Method<global::Google.Cloud.Vision.V1.GetReferenceImageRequest, global::Google.Cloud.Vision.V1.ReferenceImage>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -200,6 +245,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_GetReferenceImageRequest,
         __Marshaller_google_cloud_vision_v1_ReferenceImage);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_AddProductToProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.AddProductToProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -207,6 +253,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_AddProductToProductSetRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_RemoveProductFromProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -214,6 +261,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_RemoveProductFromProductSetRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest, global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> __Method_ListProductsInProductSet = new grpc::Method<global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest, global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -221,6 +269,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_ListProductsInProductSetRequest,
         __Marshaller_google_cloud_vision_v1_ListProductsInProductSetResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.ImportProductSetsRequest, global::Google.LongRunning.Operation> __Method_ImportProductSets = new grpc::Method<global::Google.Cloud.Vision.V1.ImportProductSetsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -228,6 +277,7 @@ namespace Google.Cloud.Vision.V1 {
         __Marshaller_google_cloud_vision_v1_ImportProductSetsRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Vision.V1.PurgeProductsRequest, global::Google.LongRunning.Operation> __Method_PurgeProducts = new grpc::Method<global::Google.Cloud.Vision.V1.PurgeProductsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -256,6 +306,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ProductSet> CreateProductSet(global::Google.Cloud.Vision.V1.CreateProductSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -272,6 +323,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ListProductSetsResponse> ListProductSets(global::Google.Cloud.Vision.V1.ListProductSetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -287,6 +339,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ProductSet> GetProductSet(global::Google.Cloud.Vision.V1.GetProductSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -305,6 +358,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ProductSet> UpdateProductSet(global::Google.Cloud.Vision.V1.UpdateProductSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -319,6 +373,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProductSet(global::Google.Cloud.Vision.V1.DeleteProductSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -337,6 +392,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.Product> CreateProduct(global::Google.Cloud.Vision.V1.CreateProductRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -352,6 +408,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ListProductsResponse> ListProducts(global::Google.Cloud.Vision.V1.ListProductsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -367,6 +424,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.Product> GetProduct(global::Google.Cloud.Vision.V1.GetProductRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -392,6 +450,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.Product> UpdateProduct(global::Google.Cloud.Vision.V1.UpdateProductRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -407,6 +466,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProduct(global::Google.Cloud.Vision.V1.DeleteProductRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -436,6 +496,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ReferenceImage> CreateReferenceImage(global::Google.Cloud.Vision.V1.CreateReferenceImageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -453,6 +514,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReferenceImage(global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -470,6 +532,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> ListReferenceImages(global::Google.Cloud.Vision.V1.ListReferenceImagesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -485,6 +548,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ReferenceImage> GetReferenceImage(global::Google.Cloud.Vision.V1.GetReferenceImageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -503,6 +567,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> AddProductToProductSet(global::Google.Cloud.Vision.V1.AddProductToProductSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -514,6 +579,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> RemoveProductFromProductSet(global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -531,6 +597,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> ListProductsInProductSet(global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -552,6 +619,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportProductSets(global::Google.Cloud.Vision.V1.ImportProductSetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -586,6 +654,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PurgeProducts(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -598,20 +667,24 @@ namespace Google.Cloud.Vision.V1 {
     {
       /// <summary>Creates a new client for ProductSearch</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ProductSearchClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ProductSearch that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public ProductSearchClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ProductSearchClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected ProductSearchClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -629,6 +702,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ProductSet CreateProductSet(global::Google.Cloud.Vision.V1.CreateProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -644,6 +718,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ProductSet CreateProductSet(global::Google.Cloud.Vision.V1.CreateProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateProductSet, null, options, request);
@@ -661,6 +736,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ProductSet> CreateProductSetAsync(global::Google.Cloud.Vision.V1.CreateProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -676,6 +752,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ProductSet> CreateProductSetAsync(global::Google.Cloud.Vision.V1.CreateProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateProductSet, null, options, request);
@@ -693,6 +770,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListProductSetsResponse ListProductSets(global::Google.Cloud.Vision.V1.ListProductSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProductSets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -708,6 +786,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListProductSetsResponse ListProductSets(global::Google.Cloud.Vision.V1.ListProductSetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListProductSets, null, options, request);
@@ -725,6 +804,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListProductSetsResponse> ListProductSetsAsync(global::Google.Cloud.Vision.V1.ListProductSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProductSetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -740,6 +820,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListProductSetsResponse> ListProductSetsAsync(global::Google.Cloud.Vision.V1.ListProductSetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListProductSets, null, options, request);
@@ -756,6 +837,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ProductSet GetProductSet(global::Google.Cloud.Vision.V1.GetProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -770,6 +852,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ProductSet GetProductSet(global::Google.Cloud.Vision.V1.GetProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetProductSet, null, options, request);
@@ -786,6 +869,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ProductSet> GetProductSetAsync(global::Google.Cloud.Vision.V1.GetProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -800,6 +884,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ProductSet> GetProductSetAsync(global::Google.Cloud.Vision.V1.GetProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetProductSet, null, options, request);
@@ -819,6 +904,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ProductSet UpdateProductSet(global::Google.Cloud.Vision.V1.UpdateProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -836,6 +922,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ProductSet UpdateProductSet(global::Google.Cloud.Vision.V1.UpdateProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateProductSet, null, options, request);
@@ -855,6 +942,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ProductSet> UpdateProductSetAsync(global::Google.Cloud.Vision.V1.UpdateProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -872,6 +960,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ProductSet> UpdateProductSetAsync(global::Google.Cloud.Vision.V1.UpdateProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateProductSet, null, options, request);
@@ -887,6 +976,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteProductSet(global::Google.Cloud.Vision.V1.DeleteProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -900,6 +990,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteProductSet(global::Google.Cloud.Vision.V1.DeleteProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteProductSet, null, options, request);
@@ -915,6 +1006,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProductSetAsync(global::Google.Cloud.Vision.V1.DeleteProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -928,6 +1020,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProductSetAsync(global::Google.Cloud.Vision.V1.DeleteProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteProductSet, null, options, request);
@@ -947,6 +1040,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.Product CreateProduct(global::Google.Cloud.Vision.V1.CreateProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateProduct(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -964,6 +1058,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.Product CreateProduct(global::Google.Cloud.Vision.V1.CreateProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateProduct, null, options, request);
@@ -983,6 +1078,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.Product> CreateProductAsync(global::Google.Cloud.Vision.V1.CreateProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateProductAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1000,6 +1096,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.Product> CreateProductAsync(global::Google.Cloud.Vision.V1.CreateProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateProduct, null, options, request);
@@ -1016,6 +1113,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListProductsResponse ListProducts(global::Google.Cloud.Vision.V1.ListProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProducts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1030,6 +1128,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListProductsResponse ListProducts(global::Google.Cloud.Vision.V1.ListProductsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListProducts, null, options, request);
@@ -1046,6 +1145,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListProductsResponse> ListProductsAsync(global::Google.Cloud.Vision.V1.ListProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProductsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1060,6 +1160,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListProductsResponse> ListProductsAsync(global::Google.Cloud.Vision.V1.ListProductsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListProducts, null, options, request);
@@ -1076,6 +1177,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.Product GetProduct(global::Google.Cloud.Vision.V1.GetProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetProduct(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1090,6 +1192,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.Product GetProduct(global::Google.Cloud.Vision.V1.GetProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetProduct, null, options, request);
@@ -1106,6 +1209,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.Product> GetProductAsync(global::Google.Cloud.Vision.V1.GetProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetProductAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1120,6 +1224,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.Product> GetProductAsync(global::Google.Cloud.Vision.V1.GetProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetProduct, null, options, request);
@@ -1146,6 +1251,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.Product UpdateProduct(global::Google.Cloud.Vision.V1.UpdateProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProduct(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1170,6 +1276,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.Product UpdateProduct(global::Google.Cloud.Vision.V1.UpdateProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateProduct, null, options, request);
@@ -1196,6 +1303,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.Product> UpdateProductAsync(global::Google.Cloud.Vision.V1.UpdateProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateProductAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1220,6 +1328,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.Product> UpdateProductAsync(global::Google.Cloud.Vision.V1.UpdateProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateProduct, null, options, request);
@@ -1236,6 +1345,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteProduct(global::Google.Cloud.Vision.V1.DeleteProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteProduct(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1250,6 +1360,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteProduct(global::Google.Cloud.Vision.V1.DeleteProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteProduct, null, options, request);
@@ -1266,6 +1377,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProductAsync(global::Google.Cloud.Vision.V1.DeleteProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteProductAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1280,6 +1392,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteProductAsync(global::Google.Cloud.Vision.V1.DeleteProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteProduct, null, options, request);
@@ -1310,6 +1423,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ReferenceImage CreateReferenceImage(global::Google.Cloud.Vision.V1.CreateReferenceImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateReferenceImage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1338,6 +1452,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ReferenceImage CreateReferenceImage(global::Google.Cloud.Vision.V1.CreateReferenceImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateReferenceImage, null, options, request);
@@ -1368,6 +1483,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ReferenceImage> CreateReferenceImageAsync(global::Google.Cloud.Vision.V1.CreateReferenceImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateReferenceImageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1396,6 +1512,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ReferenceImage> CreateReferenceImageAsync(global::Google.Cloud.Vision.V1.CreateReferenceImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateReferenceImage, null, options, request);
@@ -1414,6 +1531,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReferenceImage(global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteReferenceImage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1430,6 +1548,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteReferenceImage(global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteReferenceImage, null, options, request);
@@ -1448,6 +1567,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReferenceImageAsync(global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteReferenceImageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1464,6 +1584,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteReferenceImageAsync(global::Google.Cloud.Vision.V1.DeleteReferenceImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteReferenceImage, null, options, request);
@@ -1482,6 +1603,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListReferenceImagesResponse ListReferenceImages(global::Google.Cloud.Vision.V1.ListReferenceImagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListReferenceImages(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1498,6 +1620,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListReferenceImagesResponse ListReferenceImages(global::Google.Cloud.Vision.V1.ListReferenceImagesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListReferenceImages, null, options, request);
@@ -1516,6 +1639,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> ListReferenceImagesAsync(global::Google.Cloud.Vision.V1.ListReferenceImagesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListReferenceImagesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1532,6 +1656,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListReferenceImagesResponse> ListReferenceImagesAsync(global::Google.Cloud.Vision.V1.ListReferenceImagesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListReferenceImages, null, options, request);
@@ -1548,6 +1673,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ReferenceImage GetReferenceImage(global::Google.Cloud.Vision.V1.GetReferenceImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetReferenceImage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1562,6 +1688,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ReferenceImage GetReferenceImage(global::Google.Cloud.Vision.V1.GetReferenceImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetReferenceImage, null, options, request);
@@ -1578,6 +1705,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ReferenceImage> GetReferenceImageAsync(global::Google.Cloud.Vision.V1.GetReferenceImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetReferenceImageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1592,6 +1720,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ReferenceImage> GetReferenceImageAsync(global::Google.Cloud.Vision.V1.GetReferenceImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetReferenceImage, null, options, request);
@@ -1611,6 +1740,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty AddProductToProductSet(global::Google.Cloud.Vision.V1.AddProductToProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddProductToProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1628,6 +1758,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty AddProductToProductSet(global::Google.Cloud.Vision.V1.AddProductToProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AddProductToProductSet, null, options, request);
@@ -1647,6 +1778,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AddProductToProductSetAsync(global::Google.Cloud.Vision.V1.AddProductToProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AddProductToProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1664,6 +1796,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> AddProductToProductSetAsync(global::Google.Cloud.Vision.V1.AddProductToProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddProductToProductSet, null, options, request);
@@ -1676,6 +1809,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty RemoveProductFromProductSet(global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveProductFromProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1686,6 +1820,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty RemoveProductFromProductSet(global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RemoveProductFromProductSet, null, options, request);
@@ -1698,6 +1833,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RemoveProductFromProductSetAsync(global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveProductFromProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1708,6 +1844,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RemoveProductFromProductSetAsync(global::Google.Cloud.Vision.V1.RemoveProductFromProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RemoveProductFromProductSet, null, options, request);
@@ -1726,6 +1863,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse ListProductsInProductSet(global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProductsInProductSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1742,6 +1880,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse ListProductsInProductSet(global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListProductsInProductSet, null, options, request);
@@ -1760,6 +1899,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> ListProductsInProductSetAsync(global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListProductsInProductSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1776,6 +1916,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Vision.V1.ListProductsInProductSetResponse> ListProductsInProductSetAsync(global::Google.Cloud.Vision.V1.ListProductsInProductSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListProductsInProductSet, null, options, request);
@@ -1798,6 +1939,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportProductSets(global::Google.Cloud.Vision.V1.ImportProductSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportProductSets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1818,6 +1960,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportProductSets(global::Google.Cloud.Vision.V1.ImportProductSetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportProductSets, null, options, request);
@@ -1840,6 +1983,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportProductSetsAsync(global::Google.Cloud.Vision.V1.ImportProductSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportProductSetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1860,6 +2004,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportProductSetsAsync(global::Google.Cloud.Vision.V1.ImportProductSetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportProductSets, null, options, request);
@@ -1895,6 +2040,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation PurgeProducts(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PurgeProducts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1928,6 +2074,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation PurgeProducts(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PurgeProducts, null, options, request);
@@ -1963,6 +2110,7 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeProductsAsync(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PurgeProductsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1996,11 +2144,13 @@ namespace Google.Cloud.Vision.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PurgeProductsAsync(global::Google.Cloud.Vision.V1.PurgeProductsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PurgeProducts, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ProductSearchClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ProductSearchClient(configuration);
@@ -2009,6 +2159,7 @@ namespace Google.Cloud.Vision.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(ProductSearchBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2037,6 +2188,7 @@ namespace Google.Cloud.Vision.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ProductSearchBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateProductSet, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Vision.V1.CreateProductSetRequest, global::Google.Cloud.Vision.V1.ProductSet>(serviceImpl.CreateProductSet));

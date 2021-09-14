@@ -32,6 +32,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
   {
     static readonly string __ServiceName = "google.cloud.apigeeconnect.v1.Tether";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -46,11 +47,13 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,9 +65,12 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApigeeConnect.V1.EgressResponse> __Marshaller_google_cloud_apigeeconnect_v1_EgressResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApigeeConnect.V1.EgressResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApigeeConnect.V1.EgressRequest> __Marshaller_google_cloud_apigeeconnect_v1_EgressRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApigeeConnect.V1.EgressRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApigeeConnect.V1.EgressResponse, global::Google.Cloud.ApigeeConnect.V1.EgressRequest> __Method_Egress = new grpc::Method<global::Google.Cloud.ApigeeConnect.V1.EgressResponse, global::Google.Cloud.ApigeeConnect.V1.EgressRequest>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -95,6 +101,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task Egress(grpc::IAsyncStreamReader<global::Google.Cloud.ApigeeConnect.V1.EgressResponse> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.ApigeeConnect.V1.EgressRequest> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -107,20 +114,24 @@ namespace Google.Cloud.ApigeeConnect.V1 {
     {
       /// <summary>Creates a new client for Tether</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TetherClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Tether that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TetherClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TetherClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TetherClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -138,6 +149,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.ApigeeConnect.V1.EgressResponse, global::Google.Cloud.ApigeeConnect.V1.EgressRequest> Egress(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Egress(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -153,11 +165,13 @@ namespace Google.Cloud.ApigeeConnect.V1 {
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.ApigeeConnect.V1.EgressResponse, global::Google.Cloud.ApigeeConnect.V1.EgressRequest> Egress(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_Egress, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TetherClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new TetherClient(configuration);
@@ -166,6 +180,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(TetherBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -176,6 +191,7 @@ namespace Google.Cloud.ApigeeConnect.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TetherBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Egress, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.ApigeeConnect.V1.EgressResponse, global::Google.Cloud.ApigeeConnect.V1.EgressRequest>(serviceImpl.Egress));

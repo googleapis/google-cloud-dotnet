@@ -32,6 +32,7 @@ namespace Google.Cloud.Language.V1 {
   {
     static readonly string __ServiceName = "google.cloud.language.v1.LanguageService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -46,11 +47,13 @@ namespace Google.Cloud.Language.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,19 +65,32 @@ namespace Google.Cloud.Language.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest> __Marshaller_google_cloud_language_v1_AnalyzeSentimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSentimentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> __Marshaller_google_cloud_language_v1_AnalyzeSentimentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSentimentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest> __Marshaller_google_cloud_language_v1_AnalyzeEntitiesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> __Marshaller_google_cloud_language_v1_AnalyzeEntitiesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest> __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest> __Marshaller_google_cloud_language_v1_AnalyzeSyntaxRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> __Marshaller_google_cloud_language_v1_AnalyzeSyntaxResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextRequest> __Marshaller_google_cloud_language_v1_ClassifyTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.ClassifyTextRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.ClassifyTextResponse> __Marshaller_google_cloud_language_v1_ClassifyTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.ClassifyTextResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextRequest> __Marshaller_google_cloud_language_v1_AnnotateTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnnotateTextRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Language.V1.AnnotateTextResponse> __Marshaller_google_cloud_language_v1_AnnotateTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Language.V1.AnnotateTextResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest, global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> __Method_AnalyzeSentiment = new grpc::Method<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest, global::Google.Cloud.Language.V1.AnalyzeSentimentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -82,6 +98,7 @@ namespace Google.Cloud.Language.V1 {
         __Marshaller_google_cloud_language_v1_AnalyzeSentimentRequest,
         __Marshaller_google_cloud_language_v1_AnalyzeSentimentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest, global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> __Method_AnalyzeEntities = new grpc::Method<global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest, global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -89,6 +106,7 @@ namespace Google.Cloud.Language.V1 {
         __Marshaller_google_cloud_language_v1_AnalyzeEntitiesRequest,
         __Marshaller_google_cloud_language_v1_AnalyzeEntitiesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest, global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> __Method_AnalyzeEntitySentiment = new grpc::Method<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest, global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -96,6 +114,7 @@ namespace Google.Cloud.Language.V1 {
         __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentRequest,
         __Marshaller_google_cloud_language_v1_AnalyzeEntitySentimentResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest, global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> __Method_AnalyzeSyntax = new grpc::Method<global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest, global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -103,6 +122,7 @@ namespace Google.Cloud.Language.V1 {
         __Marshaller_google_cloud_language_v1_AnalyzeSyntaxRequest,
         __Marshaller_google_cloud_language_v1_AnalyzeSyntaxResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Language.V1.ClassifyTextRequest, global::Google.Cloud.Language.V1.ClassifyTextResponse> __Method_ClassifyText = new grpc::Method<global::Google.Cloud.Language.V1.ClassifyTextRequest, global::Google.Cloud.Language.V1.ClassifyTextResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -110,6 +130,7 @@ namespace Google.Cloud.Language.V1 {
         __Marshaller_google_cloud_language_v1_ClassifyTextRequest,
         __Marshaller_google_cloud_language_v1_ClassifyTextResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Language.V1.AnnotateTextRequest, global::Google.Cloud.Language.V1.AnnotateTextResponse> __Method_AnnotateText = new grpc::Method<global::Google.Cloud.Language.V1.AnnotateTextRequest, global::Google.Cloud.Language.V1.AnnotateTextResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +154,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -146,6 +168,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -158,6 +181,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> AnalyzeEntitySentiment(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -171,6 +195,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -182,6 +207,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -194,6 +220,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -206,20 +233,24 @@ namespace Google.Cloud.Language.V1 {
     {
       /// <summary>Creates a new client for LanguageService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public LanguageServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for LanguageService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public LanguageServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected LanguageServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected LanguageServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -232,6 +263,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeSentimentResponse AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSentiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -242,6 +274,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeSentimentResponse AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeSentiment, null, options, request);
@@ -254,6 +287,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentimentAsync(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSentimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -264,6 +298,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentimentAsync(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeSentiment, null, options, request);
@@ -278,6 +313,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntities(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -290,6 +326,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeEntities, null, options, request);
@@ -304,6 +341,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntitiesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -316,6 +354,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeEntities, null, options, request);
@@ -329,6 +368,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntitySentiment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -340,6 +380,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse AnalyzeEntitySentiment(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeEntitySentiment, null, options, request);
@@ -353,6 +394,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeEntitySentimentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -364,6 +406,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitySentimentResponse> AnalyzeEntitySentimentAsync(global::Google.Cloud.Language.V1.AnalyzeEntitySentimentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeEntitySentiment, null, options, request);
@@ -378,6 +421,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSyntax(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -390,6 +434,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeSyntax, null, options, request);
@@ -404,6 +449,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeSyntaxAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -416,6 +462,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeSyntax, null, options, request);
@@ -428,6 +475,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.ClassifyTextResponse ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ClassifyText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -438,6 +486,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.ClassifyTextResponse ClassifyText(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ClassifyText, null, options, request);
@@ -450,6 +499,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyTextAsync(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ClassifyTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -460,6 +510,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.ClassifyTextResponse> ClassifyTextAsync(global::Google.Cloud.Language.V1.ClassifyTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ClassifyText, null, options, request);
@@ -473,6 +524,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnnotateTextResponse AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -484,6 +536,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Language.V1.AnnotateTextResponse AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnnotateText, null, options, request);
@@ -497,6 +550,7 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateTextAsync(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnnotateTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -508,11 +562,13 @@ namespace Google.Cloud.Language.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateTextAsync(global::Google.Cloud.Language.V1.AnnotateTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnnotateText, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override LanguageServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new LanguageServiceClient(configuration);
@@ -521,6 +577,7 @@ namespace Google.Cloud.Language.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(LanguageServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -536,6 +593,7 @@ namespace Google.Cloud.Language.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, LanguageServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_AnalyzeSentiment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Language.V1.AnalyzeSentimentRequest, global::Google.Cloud.Language.V1.AnalyzeSentimentResponse>(serviceImpl.AnalyzeSentiment));

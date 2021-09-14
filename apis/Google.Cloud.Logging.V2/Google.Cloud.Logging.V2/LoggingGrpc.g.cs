@@ -30,6 +30,7 @@ namespace Google.Cloud.Logging.V2 {
   {
     static readonly string __ServiceName = "google.logging.v2.LoggingServiceV2";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.Logging.V2 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,19 +63,32 @@ namespace Google.Cloud.Logging.V2 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteLogRequest> __Marshaller_google_logging_v2_DeleteLogRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.DeleteLogRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest> __Marshaller_google_logging_v2_WriteLogEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.WriteLogEntriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> __Marshaller_google_logging_v2_WriteLogEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.WriteLogEntriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogEntriesRequest> __Marshaller_google_logging_v2_ListLogEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> __Marshaller_google_logging_v2_ListLogEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest> __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsRequest> __Marshaller_google_logging_v2_ListLogsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListLogsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListLogsResponse> __Marshaller_google_logging_v2_ListLogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.ListLogsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.TailLogEntriesRequest> __Marshaller_google_logging_v2_TailLogEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.TailLogEntriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.TailLogEntriesResponse> __Marshaller_google_logging_v2_TailLogEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Logging.V2.TailLogEntriesResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteLog = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -80,6 +96,7 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_logging_v2_DeleteLogRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest, global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> __Method_WriteLogEntries = new grpc::Method<global::Google.Cloud.Logging.V2.WriteLogEntriesRequest, global::Google.Cloud.Logging.V2.WriteLogEntriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -87,6 +104,7 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_logging_v2_WriteLogEntriesRequest,
         __Marshaller_google_logging_v2_WriteLogEntriesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListLogEntriesRequest, global::Google.Cloud.Logging.V2.ListLogEntriesResponse> __Method_ListLogEntries = new grpc::Method<global::Google.Cloud.Logging.V2.ListLogEntriesRequest, global::Google.Cloud.Logging.V2.ListLogEntriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -94,6 +112,7 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_logging_v2_ListLogEntriesRequest,
         __Marshaller_google_logging_v2_ListLogEntriesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> __Method_ListMonitoredResourceDescriptors = new grpc::Method<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -101,6 +120,7 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsRequest,
         __Marshaller_google_logging_v2_ListMonitoredResourceDescriptorsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse> __Method_ListLogs = new grpc::Method<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -108,6 +128,7 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_google_logging_v2_ListLogsRequest,
         __Marshaller_google_logging_v2_ListLogsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse> __Method_TailLogEntries = new grpc::Method<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -134,6 +155,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -151,6 +173,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -165,6 +188,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -176,6 +200,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -188,6 +213,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -201,6 +227,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task TailLogEntries(grpc::IAsyncStreamReader<global::Google.Cloud.Logging.V2.TailLogEntriesRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.Logging.V2.TailLogEntriesResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -213,20 +240,24 @@ namespace Google.Cloud.Logging.V2 {
     {
       /// <summary>Creates a new client for LoggingServiceV2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public LoggingServiceV2Client(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for LoggingServiceV2 that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public LoggingServiceV2Client(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected LoggingServiceV2Client() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected LoggingServiceV2Client(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -242,6 +273,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteLog(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -255,6 +287,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteLog, null, options, request);
@@ -270,6 +303,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteLogAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -283,6 +317,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Cloud.Logging.V2.DeleteLogRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLog, null, options, request);
@@ -301,6 +336,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return WriteLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -317,6 +353,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_WriteLogEntries, null, options, request);
@@ -335,6 +372,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return WriteLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -351,6 +389,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_WriteLogEntries, null, options, request);
@@ -366,6 +405,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -379,6 +419,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListLogEntries, null, options, request);
@@ -394,6 +435,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -407,6 +449,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogEntries, null, options, request);
@@ -419,6 +462,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -429,6 +473,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
@@ -441,6 +486,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -451,6 +497,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
@@ -464,6 +511,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -475,6 +523,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListLogs, null, options, request);
@@ -488,6 +537,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListLogsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -499,6 +549,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogs, null, options, request);
@@ -511,6 +562,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse> TailLogEntries(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TailLogEntries(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -521,11 +573,13 @@ namespace Google.Cloud.Logging.V2 {
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.Logging.V2.TailLogEntriesRequest, global::Google.Cloud.Logging.V2.TailLogEntriesResponse> TailLogEntries(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_TailLogEntries, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override LoggingServiceV2Client NewInstance(ClientBaseConfiguration configuration)
       {
         return new LoggingServiceV2Client(configuration);
@@ -534,6 +588,7 @@ namespace Google.Cloud.Logging.V2 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(LoggingServiceV2Base serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -549,6 +604,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, LoggingServiceV2Base serviceImpl)
     {
       serviceBinder.AddMethod(__Method_DeleteLog, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteLog));

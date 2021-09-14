@@ -41,6 +41,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
   {
     static readonly string __ServiceName = "google.area120.tables.v1alpha1.TablesService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -55,11 +56,13 @@ namespace Google.Area120.Tables.V1Alpha1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -71,28 +74,50 @@ namespace Google.Area120.Tables.V1Alpha1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetTableRequest> __Marshaller_google_area120_tables_v1alpha1_GetTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.GetTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Table> __Marshaller_google_area120_tables_v1alpha1_Table = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.Table.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListTablesRequest> __Marshaller_google_area120_tables_v1alpha1_ListTablesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListTablesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListTablesResponse> __Marshaller_google_area120_tables_v1alpha1_ListTablesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListTablesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest> __Marshaller_google_area120_tables_v1alpha1_GetWorkspaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Workspace> __Marshaller_google_area120_tables_v1alpha1_Workspace = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.Workspace.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest> __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse> __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.GetRowRequest> __Marshaller_google_area120_tables_v1alpha1_GetRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.GetRowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.Row> __Marshaller_google_area120_tables_v1alpha1_Row = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.Row.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListRowsRequest> __Marshaller_google_area120_tables_v1alpha1_ListRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListRowsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.ListRowsResponse> __Marshaller_google_area120_tables_v1alpha1_ListRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.ListRowsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.CreateRowRequest> __Marshaller_google_area120_tables_v1alpha1_CreateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.CreateRowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse> __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest> __Marshaller_google_area120_tables_v1alpha1_UpdateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse> __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest> __Marshaller_google_area120_tables_v1alpha1_DeleteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest> __Marshaller_google_area120_tables_v1alpha1_BatchDeleteRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetTableRequest, global::Google.Area120.Tables.V1Alpha1.Table> __Method_GetTable = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetTableRequest, global::Google.Area120.Tables.V1Alpha1.Table>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +125,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_GetTableRequest,
         __Marshaller_google_area120_tables_v1alpha1_Table);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.ListTablesRequest, global::Google.Area120.Tables.V1Alpha1.ListTablesResponse> __Method_ListTables = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.ListTablesRequest, global::Google.Area120.Tables.V1Alpha1.ListTablesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +133,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_ListTablesRequest,
         __Marshaller_google_area120_tables_v1alpha1_ListTablesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest, global::Google.Area120.Tables.V1Alpha1.Workspace> __Method_GetWorkspace = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest, global::Google.Area120.Tables.V1Alpha1.Workspace>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +141,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_GetWorkspaceRequest,
         __Marshaller_google_area120_tables_v1alpha1_Workspace);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest, global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse> __Method_ListWorkspaces = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest, global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +149,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesRequest,
         __Marshaller_google_area120_tables_v1alpha1_ListWorkspacesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetRowRequest, global::Google.Area120.Tables.V1Alpha1.Row> __Method_GetRow = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.GetRowRequest, global::Google.Area120.Tables.V1Alpha1.Row>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +157,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_GetRowRequest,
         __Marshaller_google_area120_tables_v1alpha1_Row);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.ListRowsRequest, global::Google.Area120.Tables.V1Alpha1.ListRowsResponse> __Method_ListRows = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.ListRowsRequest, global::Google.Area120.Tables.V1Alpha1.ListRowsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +165,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_ListRowsRequest,
         __Marshaller_google_area120_tables_v1alpha1_ListRowsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.CreateRowRequest, global::Google.Area120.Tables.V1Alpha1.Row> __Method_CreateRow = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.CreateRowRequest, global::Google.Area120.Tables.V1Alpha1.Row>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +173,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_CreateRowRequest,
         __Marshaller_google_area120_tables_v1alpha1_Row);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest, global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse> __Method_BatchCreateRows = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest, global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +181,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsRequest,
         __Marshaller_google_area120_tables_v1alpha1_BatchCreateRowsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest, global::Google.Area120.Tables.V1Alpha1.Row> __Method_UpdateRow = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest, global::Google.Area120.Tables.V1Alpha1.Row>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +189,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_UpdateRowRequest,
         __Marshaller_google_area120_tables_v1alpha1_Row);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest, global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse> __Method_BatchUpdateRows = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest, global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +197,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsRequest,
         __Marshaller_google_area120_tables_v1alpha1_BatchUpdateRowsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteRow = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -170,6 +205,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
         __Marshaller_google_area120_tables_v1alpha1_DeleteRowRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_BatchDeleteRows = new grpc::Method<global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -193,6 +229,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.Table> GetTable(global::Google.Area120.Tables.V1Alpha1.GetTableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -204,6 +241,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.ListTablesResponse> ListTables(global::Google.Area120.Tables.V1Alpha1.ListTablesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -215,6 +253,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.Workspace> GetWorkspace(global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -226,6 +265,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse> ListWorkspaces(global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -237,6 +277,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.Row> GetRow(global::Google.Area120.Tables.V1Alpha1.GetRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -248,6 +289,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.ListRowsResponse> ListRows(global::Google.Area120.Tables.V1Alpha1.ListRowsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -259,6 +301,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.Row> CreateRow(global::Google.Area120.Tables.V1Alpha1.CreateRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -270,6 +313,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse> BatchCreateRows(global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -281,6 +325,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.Row> UpdateRow(global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -292,6 +337,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse> BatchUpdateRows(global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -303,6 +349,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRow(global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -314,6 +361,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteRows(global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -326,20 +374,24 @@ namespace Google.Area120.Tables.V1Alpha1 {
     {
       /// <summary>Creates a new client for TablesService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TablesServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for TablesService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public TablesServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TablesServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected TablesServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -352,6 +404,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Table GetTable(global::Google.Area120.Tables.V1Alpha1.GetTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -362,6 +415,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Table GetTable(global::Google.Area120.Tables.V1Alpha1.GetTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTable, null, options, request);
@@ -374,6 +428,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Table> GetTableAsync(global::Google.Area120.Tables.V1Alpha1.GetTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -384,6 +439,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Table> GetTableAsync(global::Google.Area120.Tables.V1Alpha1.GetTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTable, null, options, request);
@@ -396,6 +452,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.ListTablesResponse ListTables(global::Google.Area120.Tables.V1Alpha1.ListTablesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTables(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -406,6 +463,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.ListTablesResponse ListTables(global::Google.Area120.Tables.V1Alpha1.ListTablesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTables, null, options, request);
@@ -418,6 +476,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.ListTablesResponse> ListTablesAsync(global::Google.Area120.Tables.V1Alpha1.ListTablesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTablesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -428,6 +487,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.ListTablesResponse> ListTablesAsync(global::Google.Area120.Tables.V1Alpha1.ListTablesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTables, null, options, request);
@@ -440,6 +500,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Workspace GetWorkspace(global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkspace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -450,6 +511,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Workspace GetWorkspace(global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetWorkspace, null, options, request);
@@ -462,6 +524,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Workspace> GetWorkspaceAsync(global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetWorkspaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -472,6 +535,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Workspace> GetWorkspaceAsync(global::Google.Area120.Tables.V1Alpha1.GetWorkspaceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetWorkspace, null, options, request);
@@ -484,6 +548,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse ListWorkspaces(global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkspaces(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -494,6 +559,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse ListWorkspaces(global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListWorkspaces, null, options, request);
@@ -506,6 +572,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse> ListWorkspacesAsync(global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListWorkspacesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -516,6 +583,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.ListWorkspacesResponse> ListWorkspacesAsync(global::Google.Area120.Tables.V1Alpha1.ListWorkspacesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListWorkspaces, null, options, request);
@@ -528,6 +596,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Row GetRow(global::Google.Area120.Tables.V1Alpha1.GetRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -538,6 +607,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Row GetRow(global::Google.Area120.Tables.V1Alpha1.GetRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRow, null, options, request);
@@ -550,6 +620,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Row> GetRowAsync(global::Google.Area120.Tables.V1Alpha1.GetRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -560,6 +631,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Row> GetRowAsync(global::Google.Area120.Tables.V1Alpha1.GetRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRow, null, options, request);
@@ -572,6 +644,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.ListRowsResponse ListRows(global::Google.Area120.Tables.V1Alpha1.ListRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -582,6 +655,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.ListRowsResponse ListRows(global::Google.Area120.Tables.V1Alpha1.ListRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListRows, null, options, request);
@@ -594,6 +668,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.ListRowsResponse> ListRowsAsync(global::Google.Area120.Tables.V1Alpha1.ListRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -604,6 +679,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.ListRowsResponse> ListRowsAsync(global::Google.Area120.Tables.V1Alpha1.ListRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListRows, null, options, request);
@@ -616,6 +692,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Row CreateRow(global::Google.Area120.Tables.V1Alpha1.CreateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -626,6 +703,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Row CreateRow(global::Google.Area120.Tables.V1Alpha1.CreateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateRow, null, options, request);
@@ -638,6 +716,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Row> CreateRowAsync(global::Google.Area120.Tables.V1Alpha1.CreateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -648,6 +727,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Row> CreateRowAsync(global::Google.Area120.Tables.V1Alpha1.CreateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRow, null, options, request);
@@ -660,6 +740,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse BatchCreateRows(global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchCreateRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -670,6 +751,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse BatchCreateRows(global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateRows, null, options, request);
@@ -682,6 +764,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse> BatchCreateRowsAsync(global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchCreateRowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -692,6 +775,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsResponse> BatchCreateRowsAsync(global::Google.Area120.Tables.V1Alpha1.BatchCreateRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateRows, null, options, request);
@@ -704,6 +788,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Row UpdateRow(global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -714,6 +799,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.Row UpdateRow(global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateRow, null, options, request);
@@ -726,6 +812,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Row> UpdateRowAsync(global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -736,6 +823,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.Row> UpdateRowAsync(global::Google.Area120.Tables.V1Alpha1.UpdateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateRow, null, options, request);
@@ -748,6 +836,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse BatchUpdateRows(global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchUpdateRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -758,6 +847,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse BatchUpdateRows(global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateRows, null, options, request);
@@ -770,6 +860,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse> BatchUpdateRowsAsync(global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchUpdateRowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -780,6 +871,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsResponse> BatchUpdateRowsAsync(global::Google.Area120.Tables.V1Alpha1.BatchUpdateRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateRows, null, options, request);
@@ -792,6 +884,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRow(global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -802,6 +895,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteRow(global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteRow, null, options, request);
@@ -814,6 +908,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRowAsync(global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -824,6 +919,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRowAsync(global::Google.Area120.Tables.V1Alpha1.DeleteRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRow, null, options, request);
@@ -836,6 +932,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteRows(global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchDeleteRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -846,6 +943,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty BatchDeleteRows(global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchDeleteRows, null, options, request);
@@ -858,6 +956,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteRowsAsync(global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchDeleteRowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -868,11 +967,13 @@ namespace Google.Area120.Tables.V1Alpha1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> BatchDeleteRowsAsync(global::Google.Area120.Tables.V1Alpha1.BatchDeleteRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchDeleteRows, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TablesServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new TablesServiceClient(configuration);
@@ -881,6 +982,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(TablesServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -902,6 +1004,7 @@ namespace Google.Area120.Tables.V1Alpha1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TablesServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Area120.Tables.V1Alpha1.GetTableRequest, global::Google.Area120.Tables.V1Alpha1.Table>(serviceImpl.GetTable));

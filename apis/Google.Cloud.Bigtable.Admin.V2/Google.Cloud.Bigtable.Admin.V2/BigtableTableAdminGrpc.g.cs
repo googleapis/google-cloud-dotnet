@@ -33,6 +33,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   {
     static readonly string __ServiceName = "google.bigtable.admin.v2.BigtableTableAdmin";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -47,11 +48,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -63,41 +66,76 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest> __Marshaller_google_bigtable_admin_v2_CreateTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Table> __Marshaller_google_bigtable_admin_v2_Table = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.Table.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest> __Marshaller_google_bigtable_admin_v2_CreateTableFromSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest> __Marshaller_google_bigtable_admin_v2_ListTablesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> __Marshaller_google_bigtable_admin_v2_ListTablesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest> __Marshaller_google_bigtable_admin_v2_GetTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest> __Marshaller_google_bigtable_admin_v2_DeleteTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest> __Marshaller_google_bigtable_admin_v2_ModifyColumnFamiliesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest> __Marshaller_google_bigtable_admin_v2_DropRowRangeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest> __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest> __Marshaller_google_bigtable_admin_v2_CheckConsistencyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> __Marshaller_google_bigtable_admin_v2_CheckConsistencyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest> __Marshaller_google_bigtable_admin_v2_SnapshotTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest> __Marshaller_google_bigtable_admin_v2_GetSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> __Marshaller_google_bigtable_admin_v2_Snapshot = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.Snapshot.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest> __Marshaller_google_bigtable_admin_v2_ListSnapshotsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> __Marshaller_google_bigtable_admin_v2_ListSnapshotsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest> __Marshaller_google_bigtable_admin_v2_DeleteSnapshotRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest> __Marshaller_google_bigtable_admin_v2_CreateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest> __Marshaller_google_bigtable_admin_v2_GetBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.Backup> __Marshaller_google_bigtable_admin_v2_Backup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.Backup.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest> __Marshaller_google_bigtable_admin_v2_UpdateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest> __Marshaller_google_bigtable_admin_v2_DeleteBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest> __Marshaller_google_bigtable_admin_v2_ListBackupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse> __Marshaller_google_bigtable_admin_v2_ListBackupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest> __Marshaller_google_bigtable_admin_v2_RestoreTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_CreateTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -105,6 +143,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_CreateTableRequest,
         __Marshaller_google_bigtable_admin_v2_Table);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation> __Method_CreateTableFromSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -112,6 +151,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_CreateTableFromSnapshotRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> __Method_ListTables = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest, global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -119,6 +159,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_ListTablesRequest,
         __Marshaller_google_bigtable_admin_v2_ListTablesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_GetTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -126,6 +167,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_GetTableRequest,
         __Marshaller_google_bigtable_admin_v2_Table);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -133,6 +175,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_DeleteTableRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table> __Method_ModifyColumnFamilies = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -140,6 +183,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_ModifyColumnFamiliesRequest,
         __Marshaller_google_bigtable_admin_v2_Table);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DropRowRange = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -147,6 +191,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_DropRowRangeRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> __Method_GenerateConsistencyToken = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest, global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -154,6 +199,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenRequest,
         __Marshaller_google_bigtable_admin_v2_GenerateConsistencyTokenResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> __Method_CheckConsistency = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest, global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -161,6 +207,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_CheckConsistencyRequest,
         __Marshaller_google_bigtable_admin_v2_CheckConsistencyResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest, global::Google.LongRunning.Operation> __Method_SnapshotTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -168,6 +215,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_SnapshotTableRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest, global::Google.Cloud.Bigtable.Admin.V2.Snapshot> __Method_GetSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest, global::Google.Cloud.Bigtable.Admin.V2.Snapshot>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -175,6 +223,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_GetSnapshotRequest,
         __Marshaller_google_bigtable_admin_v2_Snapshot);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> __Method_ListSnapshots = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -182,6 +231,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_ListSnapshotsRequest,
         __Marshaller_google_bigtable_admin_v2_ListSnapshotsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSnapshot = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -189,6 +239,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_DeleteSnapshotRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest, global::Google.LongRunning.Operation> __Method_CreateBackup = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -196,6 +247,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_CreateBackupRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest, global::Google.Cloud.Bigtable.Admin.V2.Backup> __Method_GetBackup = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest, global::Google.Cloud.Bigtable.Admin.V2.Backup>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -203,6 +255,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_GetBackupRequest,
         __Marshaller_google_bigtable_admin_v2_Backup);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest, global::Google.Cloud.Bigtable.Admin.V2.Backup> __Method_UpdateBackup = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest, global::Google.Cloud.Bigtable.Admin.V2.Backup>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -210,6 +263,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_UpdateBackupRequest,
         __Marshaller_google_bigtable_admin_v2_Backup);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBackup = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -217,6 +271,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_DeleteBackupRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse> __Method_ListBackups = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest, global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -224,6 +279,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_ListBackupsRequest,
         __Marshaller_google_bigtable_admin_v2_ListBackupsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest, global::Google.LongRunning.Operation> __Method_RestoreTable = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -231,6 +287,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_bigtable_admin_v2_RestoreTableRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -238,6 +295,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -245,6 +303,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -270,6 +329,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Table> CreateTable(global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -288,6 +348,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateTableFromSnapshot(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -299,6 +360,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> ListTables(global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -310,6 +372,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Table> GetTable(global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -321,6 +384,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTable(global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -335,6 +399,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Table> ModifyColumnFamilies(global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -348,6 +413,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DropRowRange(global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -362,6 +428,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> GenerateConsistencyToken(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -375,6 +442,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> CheckConsistency(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -393,6 +461,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SnapshotTable(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -410,6 +479,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> GetSnapshot(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -427,6 +497,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> ListSnapshots(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -444,6 +515,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSnapshot(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -462,6 +534,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateBackup(global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -473,6 +546,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Backup> GetBackup(global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -484,6 +558,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.Backup> UpdateBackup(global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -495,6 +570,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackup(global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -507,6 +583,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse> ListBackups(global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -525,6 +602,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RestoreTable(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -538,6 +616,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -550,6 +629,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -561,6 +641,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -573,20 +654,24 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     {
       /// <summary>Creates a new client for BigtableTableAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public BigtableTableAdminClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for BigtableTableAdmin that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public BigtableTableAdminClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected BigtableTableAdminClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected BigtableTableAdminClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -601,6 +686,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Table CreateTable(global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -613,6 +699,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Table CreateTable(global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTable, null, options, request);
@@ -627,6 +714,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> CreateTableAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -639,6 +727,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> CreateTableAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTable, null, options, request);
@@ -658,6 +747,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateTableFromSnapshot(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTableFromSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -675,6 +765,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateTableFromSnapshot(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTableFromSnapshot, null, options, request);
@@ -694,6 +785,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTableFromSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTableFromSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -711,6 +803,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTableFromSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateTableFromSnapshotRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTableFromSnapshot, null, options, request);
@@ -723,6 +816,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse ListTables(global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTables(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -733,6 +827,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse ListTables(global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTables, null, options, request);
@@ -745,6 +840,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> ListTablesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTablesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -755,6 +851,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListTablesResponse> ListTablesAsync(global::Google.Cloud.Bigtable.Admin.V2.ListTablesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTables, null, options, request);
@@ -767,6 +864,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Table GetTable(global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -777,6 +875,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Table GetTable(global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTable, null, options, request);
@@ -789,6 +888,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> GetTableAsync(global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -799,6 +899,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> GetTableAsync(global::Google.Cloud.Bigtable.Admin.V2.GetTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTable, null, options, request);
@@ -811,6 +912,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTable(global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -821,6 +923,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTable(global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTable, null, options, request);
@@ -833,6 +936,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTableAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -843,6 +947,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTableAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTable, null, options, request);
@@ -858,6 +963,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Table ModifyColumnFamilies(global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ModifyColumnFamilies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -871,6 +977,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Table ModifyColumnFamilies(global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ModifyColumnFamilies, null, options, request);
@@ -886,6 +993,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> ModifyColumnFamiliesAsync(global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ModifyColumnFamiliesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -899,6 +1007,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Table> ModifyColumnFamiliesAsync(global::Google.Cloud.Bigtable.Admin.V2.ModifyColumnFamiliesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ModifyColumnFamilies, null, options, request);
@@ -913,6 +1022,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DropRowRange(global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DropRowRange(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -925,6 +1035,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DropRowRange(global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DropRowRange, null, options, request);
@@ -939,6 +1050,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropRowRangeAsync(global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DropRowRangeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -951,6 +1063,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropRowRangeAsync(global::Google.Cloud.Bigtable.Admin.V2.DropRowRangeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DropRowRange, null, options, request);
@@ -966,6 +1079,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse GenerateConsistencyToken(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateConsistencyToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -979,6 +1093,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse GenerateConsistencyToken(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GenerateConsistencyToken, null, options, request);
@@ -994,6 +1109,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GenerateConsistencyTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1007,6 +1123,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(global::Google.Cloud.Bigtable.Admin.V2.GenerateConsistencyTokenRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GenerateConsistencyToken, null, options, request);
@@ -1021,6 +1138,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse CheckConsistency(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckConsistency(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1033,6 +1151,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse CheckConsistency(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckConsistency, null, options, request);
@@ -1047,6 +1166,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> CheckConsistencyAsync(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckConsistencyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1059,6 +1179,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyResponse> CheckConsistencyAsync(global::Google.Cloud.Bigtable.Admin.V2.CheckConsistencyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckConsistency, null, options, request);
@@ -1078,6 +1199,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SnapshotTable(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SnapshotTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1095,6 +1217,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation SnapshotTable(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SnapshotTable, null, options, request);
@@ -1114,6 +1237,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SnapshotTableAsync(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SnapshotTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1131,6 +1255,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SnapshotTableAsync(global::Google.Cloud.Bigtable.Admin.V2.SnapshotTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SnapshotTable, null, options, request);
@@ -1149,6 +1274,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Snapshot GetSnapshot(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1165,6 +1291,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Snapshot GetSnapshot(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSnapshot, null, options, request);
@@ -1183,6 +1310,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> GetSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1199,6 +1327,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Snapshot> GetSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.GetSnapshotRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSnapshot, null, options, request);
@@ -1217,6 +1346,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse ListSnapshots(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSnapshots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1233,6 +1363,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse ListSnapshots(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSnapshots, null, options, request);
@@ -1251,6 +1382,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> ListSnapshotsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListSnapshotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1267,6 +1399,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsResponse> ListSnapshotsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListSnapshotsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSnapshots, null, options, request);
@@ -1285,6 +1418,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSnapshot(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSnapshot(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1301,6 +1435,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSnapshot(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSnapshot, null, options, request);
@@ -1319,6 +1454,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteSnapshotAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1335,6 +1471,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSnapshotAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteSnapshotRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSnapshot, null, options, request);
@@ -1354,6 +1491,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1371,6 +1509,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateBackup(global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateBackup, null, options, request);
@@ -1390,6 +1529,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1407,6 +1547,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.CreateBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateBackup, null, options, request);
@@ -1419,6 +1560,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Backup GetBackup(global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1429,6 +1571,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Backup GetBackup(global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetBackup, null, options, request);
@@ -1441,6 +1584,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Backup> GetBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1451,6 +1595,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Backup> GetBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.GetBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetBackup, null, options, request);
@@ -1463,6 +1608,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Backup UpdateBackup(global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1473,6 +1619,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.Backup UpdateBackup(global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateBackup, null, options, request);
@@ -1485,6 +1632,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Backup> UpdateBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1495,6 +1643,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.Backup> UpdateBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.UpdateBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBackup, null, options, request);
@@ -1507,6 +1656,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackup(global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteBackup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1517,6 +1667,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteBackup(global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteBackup, null, options, request);
@@ -1529,6 +1680,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteBackupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1539,6 +1691,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteBackupAsync(global::Google.Cloud.Bigtable.Admin.V2.DeleteBackupRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBackup, null, options, request);
@@ -1552,6 +1705,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse ListBackups(global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBackups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1563,6 +1717,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse ListBackups(global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListBackups, null, options, request);
@@ -1576,6 +1731,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListBackupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1587,6 +1743,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.Admin.V2.ListBackupsResponse> ListBackupsAsync(global::Google.Cloud.Bigtable.Admin.V2.ListBackupsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListBackups, null, options, request);
@@ -1606,6 +1763,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RestoreTable(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreTable(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1623,6 +1781,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation RestoreTable(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RestoreTable, null, options, request);
@@ -1642,6 +1801,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreTableAsync(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RestoreTableAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1659,6 +1819,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RestoreTableAsync(global::Google.Cloud.Bigtable.Admin.V2.RestoreTableRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RestoreTable, null, options, request);
@@ -1673,6 +1834,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1685,6 +1847,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1699,6 +1862,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1711,6 +1875,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1724,6 +1889,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1735,6 +1901,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1748,6 +1915,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1759,6 +1927,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1771,6 +1940,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1781,6 +1951,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1793,6 +1964,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1803,11 +1975,13 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BigtableTableAdminClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new BigtableTableAdminClient(configuration);
@@ -1816,6 +1990,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(BigtableTableAdminBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1847,6 +2022,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, BigtableTableAdminBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateTableRequest, global::Google.Cloud.Bigtable.Admin.V2.Table>(serviceImpl.CreateTable));

@@ -43,6 +43,7 @@ namespace Google.Cloud.AutoML.V1 {
   {
     static readonly string __ServiceName = "google.cloud.automl.v1.AutoMl";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -57,11 +58,13 @@ namespace Google.Cloud.AutoML.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -73,33 +76,60 @@ namespace Google.Cloud.AutoML.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.CreateDatasetRequest> __Marshaller_google_cloud_automl_v1_CreateDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.CreateDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetDatasetRequest> __Marshaller_google_cloud_automl_v1_GetDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.Dataset> __Marshaller_google_cloud_automl_v1_Dataset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.Dataset.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListDatasetsRequest> __Marshaller_google_cloud_automl_v1_ListDatasetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListDatasetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListDatasetsResponse> __Marshaller_google_cloud_automl_v1_ListDatasetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListDatasetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UpdateDatasetRequest> __Marshaller_google_cloud_automl_v1_UpdateDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.UpdateDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteDatasetRequest> __Marshaller_google_cloud_automl_v1_DeleteDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.DeleteDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ImportDataRequest> __Marshaller_google_cloud_automl_v1_ImportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ImportDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportDataRequest> __Marshaller_google_cloud_automl_v1_ExportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ExportDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest> __Marshaller_google_cloud_automl_v1_GetAnnotationSpecRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.AnnotationSpec> __Marshaller_google_cloud_automl_v1_AnnotationSpec = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.AnnotationSpec.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.CreateModelRequest> __Marshaller_google_cloud_automl_v1_CreateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.CreateModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelRequest> __Marshaller_google_cloud_automl_v1_GetModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.Model> __Marshaller_google_cloud_automl_v1_Model = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.Model.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelsRequest> __Marshaller_google_cloud_automl_v1_ListModelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelsResponse> __Marshaller_google_cloud_automl_v1_ListModelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeleteModelRequest> __Marshaller_google_cloud_automl_v1_DeleteModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.DeleteModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UpdateModelRequest> __Marshaller_google_cloud_automl_v1_UpdateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.UpdateModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.DeployModelRequest> __Marshaller_google_cloud_automl_v1_DeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.DeployModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.UndeployModelRequest> __Marshaller_google_cloud_automl_v1_UndeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.UndeployModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ExportModelRequest> __Marshaller_google_cloud_automl_v1_ExportModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ExportModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest> __Marshaller_google_cloud_automl_v1_GetModelEvaluationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ModelEvaluation> __Marshaller_google_cloud_automl_v1_ModelEvaluation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ModelEvaluation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest> __Marshaller_google_cloud_automl_v1_ListModelEvaluationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse> __Marshaller_google_cloud_automl_v1_ListModelEvaluationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.CreateDatasetRequest, global::Google.LongRunning.Operation> __Method_CreateDataset = new grpc::Method<global::Google.Cloud.AutoML.V1.CreateDatasetRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +137,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_CreateDatasetRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.GetDatasetRequest, global::Google.Cloud.AutoML.V1.Dataset> __Method_GetDataset = new grpc::Method<global::Google.Cloud.AutoML.V1.GetDatasetRequest, global::Google.Cloud.AutoML.V1.Dataset>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -114,6 +145,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_GetDatasetRequest,
         __Marshaller_google_cloud_automl_v1_Dataset);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.ListDatasetsRequest, global::Google.Cloud.AutoML.V1.ListDatasetsResponse> __Method_ListDatasets = new grpc::Method<global::Google.Cloud.AutoML.V1.ListDatasetsRequest, global::Google.Cloud.AutoML.V1.ListDatasetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +153,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_ListDatasetsRequest,
         __Marshaller_google_cloud_automl_v1_ListDatasetsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.UpdateDatasetRequest, global::Google.Cloud.AutoML.V1.Dataset> __Method_UpdateDataset = new grpc::Method<global::Google.Cloud.AutoML.V1.UpdateDatasetRequest, global::Google.Cloud.AutoML.V1.Dataset>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +161,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_UpdateDatasetRequest,
         __Marshaller_google_cloud_automl_v1_Dataset);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.DeleteDatasetRequest, global::Google.LongRunning.Operation> __Method_DeleteDataset = new grpc::Method<global::Google.Cloud.AutoML.V1.DeleteDatasetRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -135,6 +169,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_DeleteDatasetRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.ImportDataRequest, global::Google.LongRunning.Operation> __Method_ImportData = new grpc::Method<global::Google.Cloud.AutoML.V1.ImportDataRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,6 +177,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_ImportDataRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.ExportDataRequest, global::Google.LongRunning.Operation> __Method_ExportData = new grpc::Method<global::Google.Cloud.AutoML.V1.ExportDataRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -149,6 +185,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_ExportDataRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest, global::Google.Cloud.AutoML.V1.AnnotationSpec> __Method_GetAnnotationSpec = new grpc::Method<global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest, global::Google.Cloud.AutoML.V1.AnnotationSpec>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -156,6 +193,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_GetAnnotationSpecRequest,
         __Marshaller_google_cloud_automl_v1_AnnotationSpec);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.CreateModelRequest, global::Google.LongRunning.Operation> __Method_CreateModel = new grpc::Method<global::Google.Cloud.AutoML.V1.CreateModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -163,6 +201,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_CreateModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.GetModelRequest, global::Google.Cloud.AutoML.V1.Model> __Method_GetModel = new grpc::Method<global::Google.Cloud.AutoML.V1.GetModelRequest, global::Google.Cloud.AutoML.V1.Model>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -170,6 +209,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_GetModelRequest,
         __Marshaller_google_cloud_automl_v1_Model);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.ListModelsRequest, global::Google.Cloud.AutoML.V1.ListModelsResponse> __Method_ListModels = new grpc::Method<global::Google.Cloud.AutoML.V1.ListModelsRequest, global::Google.Cloud.AutoML.V1.ListModelsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -177,6 +217,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_ListModelsRequest,
         __Marshaller_google_cloud_automl_v1_ListModelsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.DeleteModelRequest, global::Google.LongRunning.Operation> __Method_DeleteModel = new grpc::Method<global::Google.Cloud.AutoML.V1.DeleteModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -184,6 +225,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_DeleteModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.UpdateModelRequest, global::Google.Cloud.AutoML.V1.Model> __Method_UpdateModel = new grpc::Method<global::Google.Cloud.AutoML.V1.UpdateModelRequest, global::Google.Cloud.AutoML.V1.Model>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -191,6 +233,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_UpdateModelRequest,
         __Marshaller_google_cloud_automl_v1_Model);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.DeployModelRequest, global::Google.LongRunning.Operation> __Method_DeployModel = new grpc::Method<global::Google.Cloud.AutoML.V1.DeployModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -198,6 +241,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_DeployModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.UndeployModelRequest, global::Google.LongRunning.Operation> __Method_UndeployModel = new grpc::Method<global::Google.Cloud.AutoML.V1.UndeployModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -205,6 +249,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_UndeployModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.ExportModelRequest, global::Google.LongRunning.Operation> __Method_ExportModel = new grpc::Method<global::Google.Cloud.AutoML.V1.ExportModelRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -212,6 +257,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_ExportModelRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest, global::Google.Cloud.AutoML.V1.ModelEvaluation> __Method_GetModelEvaluation = new grpc::Method<global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest, global::Google.Cloud.AutoML.V1.ModelEvaluation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -219,6 +265,7 @@ namespace Google.Cloud.AutoML.V1 {
         __Marshaller_google_cloud_automl_v1_GetModelEvaluationRequest,
         __Marshaller_google_cloud_automl_v1_ModelEvaluation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest, global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse> __Method_ListModelEvaluations = new grpc::Method<global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest, global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -242,6 +289,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDataset(global::Google.Cloud.AutoML.V1.CreateDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -253,6 +301,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.Dataset> GetDataset(global::Google.Cloud.AutoML.V1.GetDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -264,6 +313,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.ListDatasetsResponse> ListDatasets(global::Google.Cloud.AutoML.V1.ListDatasetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -275,6 +325,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.Dataset> UpdateDataset(global::Google.Cloud.AutoML.V1.UpdateDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -290,6 +341,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDataset(global::Google.Cloud.AutoML.V1.DeleteDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -309,6 +361,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportData(global::Google.Cloud.AutoML.V1.ImportDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -322,6 +375,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportData(global::Google.Cloud.AutoML.V1.ExportDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -333,6 +387,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.AnnotationSpec> GetAnnotationSpec(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -348,6 +403,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateModel(global::Google.Cloud.AutoML.V1.CreateModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -359,6 +415,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.Model> GetModel(global::Google.Cloud.AutoML.V1.GetModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -370,6 +427,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.ListModelsResponse> ListModels(global::Google.Cloud.AutoML.V1.ListModelsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -385,6 +443,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteModel(global::Google.Cloud.AutoML.V1.DeleteModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -396,6 +455,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.Model> UpdateModel(global::Google.Cloud.AutoML.V1.UpdateModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -418,6 +478,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeployModel(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -435,6 +496,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UndeployModel(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -452,6 +514,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportModel(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -463,6 +526,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.ModelEvaluation> GetModelEvaluation(global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -474,6 +538,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse> ListModelEvaluations(global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -486,20 +551,24 @@ namespace Google.Cloud.AutoML.V1 {
     {
       /// <summary>Creates a new client for AutoMl</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AutoMlClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AutoMl that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AutoMlClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AutoMlClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AutoMlClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -512,6 +581,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataset(global::Google.Cloud.AutoML.V1.CreateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -522,6 +592,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataset(global::Google.Cloud.AutoML.V1.CreateDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDataset, null, options, request);
@@ -534,6 +605,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatasetAsync(global::Google.Cloud.AutoML.V1.CreateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -544,6 +616,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatasetAsync(global::Google.Cloud.AutoML.V1.CreateDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDataset, null, options, request);
@@ -556,6 +629,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Dataset GetDataset(global::Google.Cloud.AutoML.V1.GetDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -566,6 +640,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Dataset GetDataset(global::Google.Cloud.AutoML.V1.GetDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataset, null, options, request);
@@ -578,6 +653,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Dataset> GetDatasetAsync(global::Google.Cloud.AutoML.V1.GetDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -588,6 +664,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Dataset> GetDatasetAsync(global::Google.Cloud.AutoML.V1.GetDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataset, null, options, request);
@@ -600,6 +677,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ListDatasetsResponse ListDatasets(global::Google.Cloud.AutoML.V1.ListDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDatasets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -610,6 +688,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ListDatasetsResponse ListDatasets(global::Google.Cloud.AutoML.V1.ListDatasetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDatasets, null, options, request);
@@ -622,6 +701,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ListDatasetsResponse> ListDatasetsAsync(global::Google.Cloud.AutoML.V1.ListDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDatasetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -632,6 +712,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ListDatasetsResponse> ListDatasetsAsync(global::Google.Cloud.AutoML.V1.ListDatasetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatasets, null, options, request);
@@ -644,6 +725,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Dataset UpdateDataset(global::Google.Cloud.AutoML.V1.UpdateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -654,6 +736,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Dataset UpdateDataset(global::Google.Cloud.AutoML.V1.UpdateDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDataset, null, options, request);
@@ -666,6 +749,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Dataset> UpdateDatasetAsync(global::Google.Cloud.AutoML.V1.UpdateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -676,6 +760,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Dataset> UpdateDatasetAsync(global::Google.Cloud.AutoML.V1.UpdateDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDataset, null, options, request);
@@ -692,6 +777,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataset(global::Google.Cloud.AutoML.V1.DeleteDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -706,6 +792,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataset(global::Google.Cloud.AutoML.V1.DeleteDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDataset, null, options, request);
@@ -722,6 +809,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatasetAsync(global::Google.Cloud.AutoML.V1.DeleteDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -736,6 +824,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDatasetAsync(global::Google.Cloud.AutoML.V1.DeleteDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDataset, null, options, request);
@@ -756,6 +845,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.AutoML.V1.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -774,6 +864,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.AutoML.V1.ImportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportData, null, options, request);
@@ -794,6 +885,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.AutoML.V1.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -812,6 +904,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.AutoML.V1.ImportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportData, null, options, request);
@@ -826,6 +919,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.AutoML.V1.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -838,6 +932,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.AutoML.V1.ExportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExportData, null, options, request);
@@ -852,6 +947,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.AutoML.V1.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -864,6 +960,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.AutoML.V1.ExportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportData, null, options, request);
@@ -876,6 +973,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.AnnotationSpec GetAnnotationSpec(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnnotationSpec(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -886,6 +984,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.AnnotationSpec GetAnnotationSpec(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAnnotationSpec, null, options, request);
@@ -898,6 +997,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.AnnotationSpec> GetAnnotationSpecAsync(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnnotationSpecAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -908,6 +1008,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.AnnotationSpec> GetAnnotationSpecAsync(global::Google.Cloud.AutoML.V1.GetAnnotationSpecRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAnnotationSpec, null, options, request);
@@ -924,6 +1025,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateModel(global::Google.Cloud.AutoML.V1.CreateModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -938,6 +1040,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateModel(global::Google.Cloud.AutoML.V1.CreateModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateModel, null, options, request);
@@ -954,6 +1057,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateModelAsync(global::Google.Cloud.AutoML.V1.CreateModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -968,6 +1072,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateModelAsync(global::Google.Cloud.AutoML.V1.CreateModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateModel, null, options, request);
@@ -980,6 +1085,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Model GetModel(global::Google.Cloud.AutoML.V1.GetModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -990,6 +1096,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Model GetModel(global::Google.Cloud.AutoML.V1.GetModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetModel, null, options, request);
@@ -1002,6 +1109,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Model> GetModelAsync(global::Google.Cloud.AutoML.V1.GetModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1012,6 +1120,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Model> GetModelAsync(global::Google.Cloud.AutoML.V1.GetModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetModel, null, options, request);
@@ -1024,6 +1133,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ListModelsResponse ListModels(global::Google.Cloud.AutoML.V1.ListModelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListModels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1034,6 +1144,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ListModelsResponse ListModels(global::Google.Cloud.AutoML.V1.ListModelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListModels, null, options, request);
@@ -1046,6 +1157,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ListModelsResponse> ListModelsAsync(global::Google.Cloud.AutoML.V1.ListModelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListModelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1056,6 +1168,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ListModelsResponse> ListModelsAsync(global::Google.Cloud.AutoML.V1.ListModelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListModels, null, options, request);
@@ -1072,6 +1185,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteModel(global::Google.Cloud.AutoML.V1.DeleteModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1086,6 +1200,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteModel(global::Google.Cloud.AutoML.V1.DeleteModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteModel, null, options, request);
@@ -1102,6 +1217,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelAsync(global::Google.Cloud.AutoML.V1.DeleteModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1116,6 +1232,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteModelAsync(global::Google.Cloud.AutoML.V1.DeleteModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteModel, null, options, request);
@@ -1128,6 +1245,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Model UpdateModel(global::Google.Cloud.AutoML.V1.UpdateModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1138,6 +1256,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.Model UpdateModel(global::Google.Cloud.AutoML.V1.UpdateModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateModel, null, options, request);
@@ -1150,6 +1269,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Model> UpdateModelAsync(global::Google.Cloud.AutoML.V1.UpdateModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1160,6 +1280,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.Model> UpdateModelAsync(global::Google.Cloud.AutoML.V1.UpdateModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateModel, null, options, request);
@@ -1183,6 +1304,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeployModel(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeployModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1204,6 +1326,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeployModel(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeployModel, null, options, request);
@@ -1227,6 +1350,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeployModelAsync(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeployModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1248,6 +1372,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeployModelAsync(global::Google.Cloud.AutoML.V1.DeployModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeployModel, null, options, request);
@@ -1266,6 +1391,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UndeployModel(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeployModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1282,6 +1408,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UndeployModel(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UndeployModel, null, options, request);
@@ -1300,6 +1427,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeployModelAsync(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeployModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1316,6 +1444,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UndeployModelAsync(global::Google.Cloud.AutoML.V1.UndeployModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeployModel, null, options, request);
@@ -1334,6 +1463,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportModel(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1350,6 +1480,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportModel(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExportModel, null, options, request);
@@ -1368,6 +1499,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportModelAsync(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1384,6 +1516,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportModelAsync(global::Google.Cloud.AutoML.V1.ExportModelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportModel, null, options, request);
@@ -1396,6 +1529,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ModelEvaluation GetModelEvaluation(global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetModelEvaluation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1406,6 +1540,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ModelEvaluation GetModelEvaluation(global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetModelEvaluation, null, options, request);
@@ -1418,6 +1553,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ModelEvaluation> GetModelEvaluationAsync(global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetModelEvaluationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1428,6 +1564,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ModelEvaluation> GetModelEvaluationAsync(global::Google.Cloud.AutoML.V1.GetModelEvaluationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetModelEvaluation, null, options, request);
@@ -1440,6 +1577,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse ListModelEvaluations(global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListModelEvaluations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1450,6 +1588,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse ListModelEvaluations(global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListModelEvaluations, null, options, request);
@@ -1462,6 +1601,7 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse> ListModelEvaluationsAsync(global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListModelEvaluationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1472,11 +1612,13 @@ namespace Google.Cloud.AutoML.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AutoML.V1.ListModelEvaluationsResponse> ListModelEvaluationsAsync(global::Google.Cloud.AutoML.V1.ListModelEvaluationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListModelEvaluations, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AutoMlClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AutoMlClient(configuration);
@@ -1485,6 +1627,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AutoMlBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1512,6 +1655,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AutoMlBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AutoML.V1.CreateDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDataset));

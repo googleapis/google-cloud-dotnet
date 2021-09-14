@@ -30,6 +30,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.mediatranslation.v1beta1.SpeechTranslationService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -44,11 +45,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -60,9 +63,12 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest> __Marshaller_google_cloud_mediatranslation_v1beta1_StreamingTranslateSpeechRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse> __Marshaller_google_cloud_mediatranslation_v1beta1_StreamingTranslateSpeechResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest, global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse> __Method_StreamingTranslateSpeech = new grpc::Method<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest, global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse>(
         grpc::MethodType.DuplexStreaming,
         __ServiceName,
@@ -88,6 +94,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       /// <param name="responseStream">Used for sending responses back to the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamingTranslateSpeech(grpc::IAsyncStreamReader<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -100,20 +107,24 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     {
       /// <summary>Creates a new client for SpeechTranslationService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SpeechTranslationServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for SpeechTranslationService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public SpeechTranslationServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SpeechTranslationServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected SpeechTranslationServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -126,6 +137,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest, global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse> StreamingTranslateSpeech(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return StreamingTranslateSpeech(new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -136,11 +148,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
       /// </summary>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest, global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse> StreamingTranslateSpeech(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingTranslateSpeech, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SpeechTranslationServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SpeechTranslationServiceClient(configuration);
@@ -149,6 +163,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(SpeechTranslationServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -159,6 +174,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SpeechTranslationServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_StreamingTranslateSpeech, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechRequest, global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse>(serviceImpl.StreamingTranslateSpeech));

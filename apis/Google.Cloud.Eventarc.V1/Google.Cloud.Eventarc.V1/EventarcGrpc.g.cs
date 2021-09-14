@@ -31,6 +31,7 @@ namespace Google.Cloud.Eventarc.V1 {
   {
     static readonly string __ServiceName = "google.cloud.eventarc.v1.Eventarc";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Eventarc.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,15 +64,24 @@ namespace Google.Cloud.Eventarc.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.GetTriggerRequest> __Marshaller_google_cloud_eventarc_v1_GetTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.GetTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.Trigger> __Marshaller_google_cloud_eventarc_v1_Trigger = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.Trigger.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.ListTriggersRequest> __Marshaller_google_cloud_eventarc_v1_ListTriggersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.ListTriggersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.ListTriggersResponse> __Marshaller_google_cloud_eventarc_v1_ListTriggersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.ListTriggersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.CreateTriggerRequest> __Marshaller_google_cloud_eventarc_v1_CreateTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.CreateTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest> __Marshaller_google_cloud_eventarc_v1_UpdateTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest> __Marshaller_google_cloud_eventarc_v1_DeleteTriggerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.GetTriggerRequest, global::Google.Cloud.Eventarc.V1.Trigger> __Method_GetTrigger = new grpc::Method<global::Google.Cloud.Eventarc.V1.GetTriggerRequest, global::Google.Cloud.Eventarc.V1.Trigger>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -77,6 +89,7 @@ namespace Google.Cloud.Eventarc.V1 {
         __Marshaller_google_cloud_eventarc_v1_GetTriggerRequest,
         __Marshaller_google_cloud_eventarc_v1_Trigger);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.ListTriggersRequest, global::Google.Cloud.Eventarc.V1.ListTriggersResponse> __Method_ListTriggers = new grpc::Method<global::Google.Cloud.Eventarc.V1.ListTriggersRequest, global::Google.Cloud.Eventarc.V1.ListTriggersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -84,6 +97,7 @@ namespace Google.Cloud.Eventarc.V1 {
         __Marshaller_google_cloud_eventarc_v1_ListTriggersRequest,
         __Marshaller_google_cloud_eventarc_v1_ListTriggersResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.CreateTriggerRequest, global::Google.LongRunning.Operation> __Method_CreateTrigger = new grpc::Method<global::Google.Cloud.Eventarc.V1.CreateTriggerRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +105,7 @@ namespace Google.Cloud.Eventarc.V1 {
         __Marshaller_google_cloud_eventarc_v1_CreateTriggerRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest, global::Google.LongRunning.Operation> __Method_UpdateTrigger = new grpc::Method<global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +113,7 @@ namespace Google.Cloud.Eventarc.V1 {
         __Marshaller_google_cloud_eventarc_v1_UpdateTriggerRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest, global::Google.LongRunning.Operation> __Method_DeleteTrigger = new grpc::Method<global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -121,6 +137,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.V1.Trigger> GetTrigger(global::Google.Cloud.Eventarc.V1.GetTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -132,6 +149,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Eventarc.V1.ListTriggersResponse> ListTriggers(global::Google.Cloud.Eventarc.V1.ListTriggersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -143,6 +161,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateTrigger(global::Google.Cloud.Eventarc.V1.CreateTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -154,6 +173,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateTrigger(global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -165,6 +185,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteTrigger(global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -177,20 +198,24 @@ namespace Google.Cloud.Eventarc.V1 {
     {
       /// <summary>Creates a new client for Eventarc</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public EventarcClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for Eventarc that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public EventarcClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected EventarcClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected EventarcClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -203,6 +228,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Eventarc.V1.Trigger GetTrigger(global::Google.Cloud.Eventarc.V1.GetTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -213,6 +239,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Eventarc.V1.Trigger GetTrigger(global::Google.Cloud.Eventarc.V1.GetTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTrigger, null, options, request);
@@ -225,6 +252,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.Trigger> GetTriggerAsync(global::Google.Cloud.Eventarc.V1.GetTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -235,6 +263,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.Trigger> GetTriggerAsync(global::Google.Cloud.Eventarc.V1.GetTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTrigger, null, options, request);
@@ -247,6 +276,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Eventarc.V1.ListTriggersResponse ListTriggers(global::Google.Cloud.Eventarc.V1.ListTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTriggers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -257,6 +287,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Eventarc.V1.ListTriggersResponse ListTriggers(global::Google.Cloud.Eventarc.V1.ListTriggersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTriggers, null, options, request);
@@ -269,6 +300,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.ListTriggersResponse> ListTriggersAsync(global::Google.Cloud.Eventarc.V1.ListTriggersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTriggersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -279,6 +311,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Eventarc.V1.ListTriggersResponse> ListTriggersAsync(global::Google.Cloud.Eventarc.V1.ListTriggersRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTriggers, null, options, request);
@@ -291,6 +324,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateTrigger(global::Google.Cloud.Eventarc.V1.CreateTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -301,6 +335,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateTrigger(global::Google.Cloud.Eventarc.V1.CreateTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTrigger, null, options, request);
@@ -313,6 +348,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTriggerAsync(global::Google.Cloud.Eventarc.V1.CreateTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -323,6 +359,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateTriggerAsync(global::Google.Cloud.Eventarc.V1.CreateTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTrigger, null, options, request);
@@ -335,6 +372,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateTrigger(global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -345,6 +383,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateTrigger(global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateTrigger, null, options, request);
@@ -357,6 +396,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateTriggerAsync(global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -367,6 +407,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateTriggerAsync(global::Google.Cloud.Eventarc.V1.UpdateTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateTrigger, null, options, request);
@@ -379,6 +420,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteTrigger(global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTrigger(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -389,6 +431,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteTrigger(global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTrigger, null, options, request);
@@ -401,6 +444,7 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTriggerAsync(global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteTriggerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -411,11 +455,13 @@ namespace Google.Cloud.Eventarc.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTriggerAsync(global::Google.Cloud.Eventarc.V1.DeleteTriggerRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTrigger, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EventarcClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new EventarcClient(configuration);
@@ -424,6 +470,7 @@ namespace Google.Cloud.Eventarc.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(EventarcBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -438,6 +485,7 @@ namespace Google.Cloud.Eventarc.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, EventarcBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetTrigger, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Eventarc.V1.GetTriggerRequest, global::Google.Cloud.Eventarc.V1.Trigger>(serviceImpl.GetTrigger));

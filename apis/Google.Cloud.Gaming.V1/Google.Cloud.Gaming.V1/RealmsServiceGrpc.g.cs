@@ -31,6 +31,7 @@ namespace Google.Cloud.Gaming.V1 {
   {
     static readonly string __ServiceName = "google.cloud.gaming.v1.RealmsService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Gaming.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,17 +64,28 @@ namespace Google.Cloud.Gaming.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.ListRealmsRequest> __Marshaller_google_cloud_gaming_v1_ListRealmsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.ListRealmsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.ListRealmsResponse> __Marshaller_google_cloud_gaming_v1_ListRealmsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.ListRealmsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.GetRealmRequest> __Marshaller_google_cloud_gaming_v1_GetRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.GetRealmRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.Realm> __Marshaller_google_cloud_gaming_v1_Realm = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.Realm.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.CreateRealmRequest> __Marshaller_google_cloud_gaming_v1_CreateRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.CreateRealmRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.DeleteRealmRequest> __Marshaller_google_cloud_gaming_v1_DeleteRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.DeleteRealmRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.UpdateRealmRequest> __Marshaller_google_cloud_gaming_v1_UpdateRealmRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.UpdateRealmRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest> __Marshaller_google_cloud_gaming_v1_PreviewRealmUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse> __Marshaller_google_cloud_gaming_v1_PreviewRealmUpdateResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.ListRealmsRequest, global::Google.Cloud.Gaming.V1.ListRealmsResponse> __Method_ListRealms = new grpc::Method<global::Google.Cloud.Gaming.V1.ListRealmsRequest, global::Google.Cloud.Gaming.V1.ListRealmsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -79,6 +93,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_ListRealmsRequest,
         __Marshaller_google_cloud_gaming_v1_ListRealmsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.GetRealmRequest, global::Google.Cloud.Gaming.V1.Realm> __Method_GetRealm = new grpc::Method<global::Google.Cloud.Gaming.V1.GetRealmRequest, global::Google.Cloud.Gaming.V1.Realm>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -86,6 +101,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_GetRealmRequest,
         __Marshaller_google_cloud_gaming_v1_Realm);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.CreateRealmRequest, global::Google.LongRunning.Operation> __Method_CreateRealm = new grpc::Method<global::Google.Cloud.Gaming.V1.CreateRealmRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -93,6 +109,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_CreateRealmRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.DeleteRealmRequest, global::Google.LongRunning.Operation> __Method_DeleteRealm = new grpc::Method<global::Google.Cloud.Gaming.V1.DeleteRealmRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -100,6 +117,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_DeleteRealmRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.UpdateRealmRequest, global::Google.LongRunning.Operation> __Method_UpdateRealm = new grpc::Method<global::Google.Cloud.Gaming.V1.UpdateRealmRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -107,6 +125,7 @@ namespace Google.Cloud.Gaming.V1 {
         __Marshaller_google_cloud_gaming_v1_UpdateRealmRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest, global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse> __Method_PreviewRealmUpdate = new grpc::Method<global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest, global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -130,6 +149,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.ListRealmsResponse> ListRealms(global::Google.Cloud.Gaming.V1.ListRealmsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -141,6 +161,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.Realm> GetRealm(global::Google.Cloud.Gaming.V1.GetRealmRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -152,6 +173,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateRealm(global::Google.Cloud.Gaming.V1.CreateRealmRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -163,6 +185,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRealm(global::Google.Cloud.Gaming.V1.DeleteRealmRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -174,6 +197,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateRealm(global::Google.Cloud.Gaming.V1.UpdateRealmRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -185,6 +209,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse> PreviewRealmUpdate(global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -197,20 +222,24 @@ namespace Google.Cloud.Gaming.V1 {
     {
       /// <summary>Creates a new client for RealmsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public RealmsServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for RealmsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public RealmsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected RealmsServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected RealmsServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -223,6 +252,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.ListRealmsResponse ListRealms(global::Google.Cloud.Gaming.V1.ListRealmsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRealms(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -233,6 +263,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.ListRealmsResponse ListRealms(global::Google.Cloud.Gaming.V1.ListRealmsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListRealms, null, options, request);
@@ -245,6 +276,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.ListRealmsResponse> ListRealmsAsync(global::Google.Cloud.Gaming.V1.ListRealmsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRealmsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -255,6 +287,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.ListRealmsResponse> ListRealmsAsync(global::Google.Cloud.Gaming.V1.ListRealmsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListRealms, null, options, request);
@@ -267,6 +300,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.Realm GetRealm(global::Google.Cloud.Gaming.V1.GetRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -277,6 +311,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.Realm GetRealm(global::Google.Cloud.Gaming.V1.GetRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRealm, null, options, request);
@@ -289,6 +324,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.Realm> GetRealmAsync(global::Google.Cloud.Gaming.V1.GetRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -299,6 +335,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.Realm> GetRealmAsync(global::Google.Cloud.Gaming.V1.GetRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRealm, null, options, request);
@@ -311,6 +348,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateRealm(global::Google.Cloud.Gaming.V1.CreateRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -321,6 +359,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateRealm(global::Google.Cloud.Gaming.V1.CreateRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateRealm, null, options, request);
@@ -333,6 +372,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRealmAsync(global::Google.Cloud.Gaming.V1.CreateRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -343,6 +383,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateRealmAsync(global::Google.Cloud.Gaming.V1.CreateRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRealm, null, options, request);
@@ -355,6 +396,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteRealm(global::Google.Cloud.Gaming.V1.DeleteRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -365,6 +407,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteRealm(global::Google.Cloud.Gaming.V1.DeleteRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteRealm, null, options, request);
@@ -377,6 +420,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRealmAsync(global::Google.Cloud.Gaming.V1.DeleteRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -387,6 +431,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRealmAsync(global::Google.Cloud.Gaming.V1.DeleteRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRealm, null, options, request);
@@ -399,6 +444,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateRealm(global::Google.Cloud.Gaming.V1.UpdateRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRealm(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -409,6 +455,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateRealm(global::Google.Cloud.Gaming.V1.UpdateRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateRealm, null, options, request);
@@ -421,6 +468,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRealmAsync(global::Google.Cloud.Gaming.V1.UpdateRealmRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRealmAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -431,6 +479,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateRealmAsync(global::Google.Cloud.Gaming.V1.UpdateRealmRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateRealm, null, options, request);
@@ -443,6 +492,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse PreviewRealmUpdate(global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PreviewRealmUpdate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -453,6 +503,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse PreviewRealmUpdate(global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PreviewRealmUpdate, null, options, request);
@@ -465,6 +516,7 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse> PreviewRealmUpdateAsync(global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PreviewRealmUpdateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -475,11 +527,13 @@ namespace Google.Cloud.Gaming.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Gaming.V1.PreviewRealmUpdateResponse> PreviewRealmUpdateAsync(global::Google.Cloud.Gaming.V1.PreviewRealmUpdateRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PreviewRealmUpdate, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RealmsServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new RealmsServiceClient(configuration);
@@ -488,6 +542,7 @@ namespace Google.Cloud.Gaming.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(RealmsServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -503,6 +558,7 @@ namespace Google.Cloud.Gaming.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, RealmsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListRealms, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Gaming.V1.ListRealmsRequest, global::Google.Cloud.Gaming.V1.ListRealmsResponse>(serviceImpl.ListRealms));

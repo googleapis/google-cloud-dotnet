@@ -48,6 +48,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
   {
     static readonly string __ServiceName = "google.iam.admin.v1.IAM";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -62,11 +63,13 @@ namespace Google.Cloud.Iam.Admin.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -78,51 +81,96 @@ namespace Google.Cloud.Iam.Admin.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest> __Marshaller_google_iam_admin_v1_ListServiceAccountsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse> __Marshaller_google_iam_admin_v1_ListServiceAccountsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest> __Marshaller_google_iam_admin_v1_GetServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> __Marshaller_google_iam_admin_v1_ServiceAccount = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ServiceAccount.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest> __Marshaller_google_iam_admin_v1_CreateServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest> __Marshaller_google_iam_admin_v1_PatchServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest> __Marshaller_google_iam_admin_v1_DeleteServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest> __Marshaller_google_iam_admin_v1_UndeleteServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse> __Marshaller_google_iam_admin_v1_UndeleteServiceAccountResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest> __Marshaller_google_iam_admin_v1_EnableServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest> __Marshaller_google_iam_admin_v1_DisableServiceAccountRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest> __Marshaller_google_iam_admin_v1_ListServiceAccountKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse> __Marshaller_google_iam_admin_v1_ListServiceAccountKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_GetServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> __Marshaller_google_iam_admin_v1_ServiceAccountKey = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_CreateServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_UploadServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest> __Marshaller_google_iam_admin_v1_DeleteServiceAccountKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.SignBlobRequest> __Marshaller_google_iam_admin_v1_SignBlobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.SignBlobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.SignBlobResponse> __Marshaller_google_iam_admin_v1_SignBlobResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.SignBlobResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.SignJwtRequest> __Marshaller_google_iam_admin_v1_SignJwtRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.SignJwtRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.SignJwtResponse> __Marshaller_google_iam_admin_v1_SignJwtResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.SignJwtResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest> __Marshaller_google_iam_admin_v1_QueryGrantableRolesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse> __Marshaller_google_iam_admin_v1_QueryGrantableRolesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ListRolesRequest> __Marshaller_google_iam_admin_v1_ListRolesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ListRolesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.ListRolesResponse> __Marshaller_google_iam_admin_v1_ListRolesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.ListRolesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.GetRoleRequest> __Marshaller_google_iam_admin_v1_GetRoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.GetRoleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.Role> __Marshaller_google_iam_admin_v1_Role = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.Role.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest> __Marshaller_google_iam_admin_v1_CreateRoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest> __Marshaller_google_iam_admin_v1_UpdateRoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest> __Marshaller_google_iam_admin_v1_DeleteRoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest> __Marshaller_google_iam_admin_v1_UndeleteRoleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest> __Marshaller_google_iam_admin_v1_QueryTestablePermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse> __Marshaller_google_iam_admin_v1_QueryTestablePermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest> __Marshaller_google_iam_admin_v1_QueryAuditableServicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse> __Marshaller_google_iam_admin_v1_QueryAuditableServicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest> __Marshaller_google_iam_admin_v1_LintPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse> __Marshaller_google_iam_admin_v1_LintPolicyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse> __Method_ListServiceAccounts = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -130,6 +178,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_ListServiceAccountsRequest,
         __Marshaller_google_iam_admin_v1_ListServiceAccountsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccount> __Method_GetServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +186,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_GetServiceAccountRequest,
         __Marshaller_google_iam_admin_v1_ServiceAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccount> __Method_CreateServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -144,6 +194,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_CreateServiceAccountRequest,
         __Marshaller_google_iam_admin_v1_ServiceAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.ServiceAccount, global::Google.Cloud.Iam.Admin.V1.ServiceAccount> __Method_UpdateServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.ServiceAccount, global::Google.Cloud.Iam.Admin.V1.ServiceAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -151,6 +202,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_ServiceAccount,
         __Marshaller_google_iam_admin_v1_ServiceAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccount> __Method_PatchServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccount>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -158,6 +210,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_PatchServiceAccountRequest,
         __Marshaller_google_iam_admin_v1_ServiceAccount);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -165,6 +218,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_DeleteServiceAccountRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse> __Method_UndeleteServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest, global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -172,6 +226,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_UndeleteServiceAccountRequest,
         __Marshaller_google_iam_admin_v1_UndeleteServiceAccountResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_EnableServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -179,6 +234,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_EnableServiceAccountRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DisableServiceAccount = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -186,6 +242,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_DisableServiceAccountRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse> __Method_ListServiceAccountKeys = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -193,6 +250,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_ListServiceAccountKeysRequest,
         __Marshaller_google_iam_admin_v1_ListServiceAccountKeysResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> __Method_GetServiceAccountKey = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -200,6 +258,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_GetServiceAccountKeyRequest,
         __Marshaller_google_iam_admin_v1_ServiceAccountKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> __Method_CreateServiceAccountKey = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -207,6 +266,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_CreateServiceAccountKeyRequest,
         __Marshaller_google_iam_admin_v1_ServiceAccountKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> __Method_UploadServiceAccountKey = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest, global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -214,6 +274,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_UploadServiceAccountKeyRequest,
         __Marshaller_google_iam_admin_v1_ServiceAccountKey);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteServiceAccountKey = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -221,6 +282,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_DeleteServiceAccountKeyRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.SignBlobRequest, global::Google.Cloud.Iam.Admin.V1.SignBlobResponse> __Method_SignBlob = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.SignBlobRequest, global::Google.Cloud.Iam.Admin.V1.SignBlobResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -228,6 +290,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_SignBlobRequest,
         __Marshaller_google_iam_admin_v1_SignBlobResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.SignJwtRequest, global::Google.Cloud.Iam.Admin.V1.SignJwtResponse> __Method_SignJwt = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.SignJwtRequest, global::Google.Cloud.Iam.Admin.V1.SignJwtResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -235,6 +298,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_SignJwtRequest,
         __Marshaller_google_iam_admin_v1_SignJwtResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -242,6 +306,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -249,6 +314,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_v1_SetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -256,6 +322,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest, global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse> __Method_QueryGrantableRoles = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest, global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -263,6 +330,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_QueryGrantableRolesRequest,
         __Marshaller_google_iam_admin_v1_QueryGrantableRolesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.ListRolesRequest, global::Google.Cloud.Iam.Admin.V1.ListRolesResponse> __Method_ListRoles = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.ListRolesRequest, global::Google.Cloud.Iam.Admin.V1.ListRolesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -270,6 +338,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_ListRolesRequest,
         __Marshaller_google_iam_admin_v1_ListRolesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.GetRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role> __Method_GetRole = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.GetRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -277,6 +346,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_GetRoleRequest,
         __Marshaller_google_iam_admin_v1_Role);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role> __Method_CreateRole = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -284,6 +354,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_CreateRoleRequest,
         __Marshaller_google_iam_admin_v1_Role);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role> __Method_UpdateRole = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -291,6 +362,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_UpdateRoleRequest,
         __Marshaller_google_iam_admin_v1_Role);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role> __Method_DeleteRole = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -298,6 +370,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_DeleteRoleRequest,
         __Marshaller_google_iam_admin_v1_Role);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role> __Method_UndeleteRole = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest, global::Google.Cloud.Iam.Admin.V1.Role>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -305,6 +378,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_UndeleteRoleRequest,
         __Marshaller_google_iam_admin_v1_Role);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest, global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse> __Method_QueryTestablePermissions = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest, global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -312,6 +386,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_QueryTestablePermissionsRequest,
         __Marshaller_google_iam_admin_v1_QueryTestablePermissionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest, global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse> __Method_QueryAuditableServices = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest, global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -319,6 +394,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
         __Marshaller_google_iam_admin_v1_QueryAuditableServicesRequest,
         __Marshaller_google_iam_admin_v1_QueryAuditableServicesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest, global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse> __Method_LintPolicy = new grpc::Method<global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest, global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -342,6 +418,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse> ListServiceAccounts(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -353,6 +430,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> GetServiceAccount(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -364,6 +442,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> CreateServiceAccount(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -380,6 +459,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> UpdateServiceAccount(global::Google.Cloud.Iam.Admin.V1.ServiceAccount request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -391,6 +471,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> PatchServiceAccount(global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -416,6 +497,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccount(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -434,6 +516,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse> UndeleteServiceAccount(global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -452,6 +535,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> EnableServiceAccount(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -478,6 +562,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DisableServiceAccount(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -489,6 +574,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse> ListServiceAccountKeys(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -500,6 +586,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> GetServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -511,6 +598,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> CreateServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -522,6 +610,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> UploadServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -535,6 +624,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -553,6 +643,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.SignBlobResponse> SignBlob(global::Google.Cloud.Iam.Admin.V1.SignBlobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -572,6 +663,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.SignJwtResponse> SignJwt(global::Google.Cloud.Iam.Admin.V1.SignJwtRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -592,6 +684,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -619,6 +712,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -631,6 +725,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -644,6 +739,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse> QueryGrantableRoles(global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -656,6 +752,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.ListRolesResponse> ListRoles(global::Google.Cloud.Iam.Admin.V1.ListRolesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -667,6 +764,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.Role> GetRole(global::Google.Cloud.Iam.Admin.V1.GetRoleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -678,6 +776,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.Role> CreateRole(global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -689,6 +788,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.Role> UpdateRole(global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -716,6 +816,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.Role> DeleteRole(global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -727,6 +828,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.Role> UndeleteRole(global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -740,6 +842,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse> QueryTestablePermissions(global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -755,6 +858,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse> QueryAuditableServices(global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -771,6 +875,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse> LintPolicy(global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -783,20 +888,24 @@ namespace Google.Cloud.Iam.Admin.V1 {
     {
       /// <summary>Creates a new client for IAM</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IAMClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for IAM that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public IAMClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IAMClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected IAMClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -809,6 +918,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse ListServiceAccounts(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceAccounts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -819,6 +929,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse ListServiceAccounts(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListServiceAccounts, null, options, request);
@@ -831,6 +942,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse> ListServiceAccountsAsync(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceAccountsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -841,6 +953,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse> ListServiceAccountsAsync(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListServiceAccounts, null, options, request);
@@ -853,6 +966,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount GetServiceAccount(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -863,6 +977,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount GetServiceAccount(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetServiceAccount, null, options, request);
@@ -875,6 +990,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> GetServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -885,6 +1001,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> GetServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetServiceAccount, null, options, request);
@@ -897,6 +1014,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount CreateServiceAccount(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -907,6 +1025,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount CreateServiceAccount(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateServiceAccount, null, options, request);
@@ -919,6 +1038,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> CreateServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -929,6 +1049,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> CreateServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateServiceAccount, null, options, request);
@@ -946,6 +1067,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount UpdateServiceAccount(global::Google.Cloud.Iam.Admin.V1.ServiceAccount request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -961,6 +1083,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount UpdateServiceAccount(global::Google.Cloud.Iam.Admin.V1.ServiceAccount request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateServiceAccount, null, options, request);
@@ -978,6 +1101,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> UpdateServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.ServiceAccount request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -993,6 +1117,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> UpdateServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.ServiceAccount request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateServiceAccount, null, options, request);
@@ -1005,6 +1130,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount PatchServiceAccount(global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PatchServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1015,6 +1141,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccount PatchServiceAccount(global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PatchServiceAccount, null, options, request);
@@ -1027,6 +1154,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> PatchServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PatchServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1037,6 +1165,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccount> PatchServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.PatchServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PatchServiceAccount, null, options, request);
@@ -1063,6 +1192,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteServiceAccount(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1087,6 +1217,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteServiceAccount(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteServiceAccount, null, options, request);
@@ -1113,6 +1244,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1137,6 +1269,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteServiceAccount, null, options, request);
@@ -1156,6 +1289,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse UndeleteServiceAccount(global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeleteServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1173,6 +1307,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse UndeleteServiceAccount(global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UndeleteServiceAccount, null, options, request);
@@ -1192,6 +1327,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse> UndeleteServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeleteServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1209,6 +1345,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountResponse> UndeleteServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.UndeleteServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeleteServiceAccount, null, options, request);
@@ -1228,6 +1365,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty EnableServiceAccount(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1245,6 +1383,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty EnableServiceAccount(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_EnableServiceAccount, null, options, request);
@@ -1264,6 +1403,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnableServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EnableServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1281,6 +1421,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnableServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.EnableServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_EnableServiceAccount, null, options, request);
@@ -1308,6 +1449,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DisableServiceAccount(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableServiceAccount(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1333,6 +1475,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DisableServiceAccount(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DisableServiceAccount, null, options, request);
@@ -1360,6 +1503,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DisableServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DisableServiceAccountAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1385,6 +1529,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DisableServiceAccountAsync(global::Google.Cloud.Iam.Admin.V1.DisableServiceAccountRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DisableServiceAccount, null, options, request);
@@ -1397,6 +1542,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse ListServiceAccountKeys(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceAccountKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1407,6 +1553,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse ListServiceAccountKeys(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListServiceAccountKeys, null, options, request);
@@ -1419,6 +1566,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse> ListServiceAccountKeysAsync(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListServiceAccountKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1429,6 +1577,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysResponse> ListServiceAccountKeysAsync(global::Google.Cloud.Iam.Admin.V1.ListServiceAccountKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListServiceAccountKeys, null, options, request);
@@ -1441,6 +1590,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey GetServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1451,6 +1601,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey GetServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetServiceAccountKey, null, options, request);
@@ -1463,6 +1614,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> GetServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetServiceAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1473,6 +1625,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> GetServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.GetServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetServiceAccountKey, null, options, request);
@@ -1485,6 +1638,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey CreateServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1495,6 +1649,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey CreateServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateServiceAccountKey, null, options, request);
@@ -1507,6 +1662,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> CreateServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateServiceAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1517,6 +1673,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> CreateServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.CreateServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateServiceAccountKey, null, options, request);
@@ -1529,6 +1686,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey UploadServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UploadServiceAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1539,6 +1697,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey UploadServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UploadServiceAccountKey, null, options, request);
@@ -1551,6 +1710,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> UploadServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UploadServiceAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1561,6 +1721,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ServiceAccountKey> UploadServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.UploadServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UploadServiceAccountKey, null, options, request);
@@ -1575,6 +1736,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteServiceAccountKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1587,6 +1749,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteServiceAccountKey(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteServiceAccountKey, null, options, request);
@@ -1601,6 +1764,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteServiceAccountKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1613,6 +1777,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteServiceAccountKeyAsync(global::Google.Cloud.Iam.Admin.V1.DeleteServiceAccountKeyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteServiceAccountKey, null, options, request);
@@ -1632,6 +1797,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.SignBlobResponse SignBlob(global::Google.Cloud.Iam.Admin.V1.SignBlobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SignBlob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1649,6 +1815,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.SignBlobResponse SignBlob(global::Google.Cloud.Iam.Admin.V1.SignBlobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SignBlob, null, options, request);
@@ -1668,6 +1835,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.SignBlobResponse> SignBlobAsync(global::Google.Cloud.Iam.Admin.V1.SignBlobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SignBlobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1685,6 +1853,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.SignBlobResponse> SignBlobAsync(global::Google.Cloud.Iam.Admin.V1.SignBlobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SignBlob, null, options, request);
@@ -1705,6 +1874,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.SignJwtResponse SignJwt(global::Google.Cloud.Iam.Admin.V1.SignJwtRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SignJwt(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1723,6 +1893,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.SignJwtResponse SignJwt(global::Google.Cloud.Iam.Admin.V1.SignJwtRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SignJwt, null, options, request);
@@ -1743,6 +1914,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.SignJwtResponse> SignJwtAsync(global::Google.Cloud.Iam.Admin.V1.SignJwtRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SignJwtAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1761,6 +1933,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.SignJwtResponse> SignJwtAsync(global::Google.Cloud.Iam.Admin.V1.SignJwtRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SignJwt, null, options, request);
@@ -1782,6 +1955,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1801,6 +1975,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1822,6 +1997,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1841,6 +2017,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
@@ -1869,6 +2046,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1895,6 +2073,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1923,6 +2102,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1949,6 +2129,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
@@ -1962,6 +2143,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1973,6 +2155,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -1986,6 +2169,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1997,6 +2181,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
@@ -2011,6 +2196,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse QueryGrantableRoles(global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryGrantableRoles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2023,6 +2209,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse QueryGrantableRoles(global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_QueryGrantableRoles, null, options, request);
@@ -2037,6 +2224,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse> QueryGrantableRolesAsync(global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryGrantableRolesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2049,6 +2237,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesResponse> QueryGrantableRolesAsync(global::Google.Cloud.Iam.Admin.V1.QueryGrantableRolesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryGrantableRoles, null, options, request);
@@ -2062,6 +2251,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ListRolesResponse ListRoles(global::Google.Cloud.Iam.Admin.V1.ListRolesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRoles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2073,6 +2263,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.ListRolesResponse ListRoles(global::Google.Cloud.Iam.Admin.V1.ListRolesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListRoles, null, options, request);
@@ -2086,6 +2277,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ListRolesResponse> ListRolesAsync(global::Google.Cloud.Iam.Admin.V1.ListRolesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListRolesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2097,6 +2289,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.ListRolesResponse> ListRolesAsync(global::Google.Cloud.Iam.Admin.V1.ListRolesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListRoles, null, options, request);
@@ -2109,6 +2302,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role GetRole(global::Google.Cloud.Iam.Admin.V1.GetRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2119,6 +2313,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role GetRole(global::Google.Cloud.Iam.Admin.V1.GetRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetRole, null, options, request);
@@ -2131,6 +2326,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> GetRoleAsync(global::Google.Cloud.Iam.Admin.V1.GetRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2141,6 +2337,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> GetRoleAsync(global::Google.Cloud.Iam.Admin.V1.GetRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRole, null, options, request);
@@ -2153,6 +2350,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role CreateRole(global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2163,6 +2361,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role CreateRole(global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateRole, null, options, request);
@@ -2175,6 +2374,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> CreateRoleAsync(global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2185,6 +2385,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> CreateRoleAsync(global::Google.Cloud.Iam.Admin.V1.CreateRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateRole, null, options, request);
@@ -2197,6 +2398,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role UpdateRole(global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2207,6 +2409,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role UpdateRole(global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateRole, null, options, request);
@@ -2219,6 +2422,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> UpdateRoleAsync(global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2229,6 +2433,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> UpdateRoleAsync(global::Google.Cloud.Iam.Admin.V1.UpdateRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateRole, null, options, request);
@@ -2257,6 +2462,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role DeleteRole(global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2283,6 +2489,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role DeleteRole(global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteRole, null, options, request);
@@ -2311,6 +2518,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> DeleteRoleAsync(global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2337,6 +2545,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> DeleteRoleAsync(global::Google.Cloud.Iam.Admin.V1.DeleteRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRole, null, options, request);
@@ -2349,6 +2558,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role UndeleteRole(global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeleteRole(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2359,6 +2569,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.Role UndeleteRole(global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UndeleteRole, null, options, request);
@@ -2371,6 +2582,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> UndeleteRoleAsync(global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UndeleteRoleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2381,6 +2593,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.Role> UndeleteRoleAsync(global::Google.Cloud.Iam.Admin.V1.UndeleteRoleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeleteRole, null, options, request);
@@ -2395,6 +2608,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse QueryTestablePermissions(global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryTestablePermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2407,6 +2621,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse QueryTestablePermissions(global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_QueryTestablePermissions, null, options, request);
@@ -2421,6 +2636,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse> QueryTestablePermissionsAsync(global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryTestablePermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2433,6 +2649,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsResponse> QueryTestablePermissionsAsync(global::Google.Cloud.Iam.Admin.V1.QueryTestablePermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryTestablePermissions, null, options, request);
@@ -2449,6 +2666,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse QueryAuditableServices(global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryAuditableServices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2463,6 +2681,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse QueryAuditableServices(global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_QueryAuditableServices, null, options, request);
@@ -2479,6 +2698,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse> QueryAuditableServicesAsync(global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryAuditableServicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2493,6 +2713,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesResponse> QueryAuditableServicesAsync(global::Google.Cloud.Iam.Admin.V1.QueryAuditableServicesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryAuditableServices, null, options, request);
@@ -2510,6 +2731,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse LintPolicy(global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LintPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2525,6 +2747,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse LintPolicy(global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LintPolicy, null, options, request);
@@ -2542,6 +2765,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse> LintPolicyAsync(global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LintPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2557,11 +2781,13 @@ namespace Google.Cloud.Iam.Admin.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.Admin.V1.LintPolicyResponse> LintPolicyAsync(global::Google.Cloud.Iam.Admin.V1.LintPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LintPolicy, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IAMClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new IAMClient(configuration);
@@ -2570,6 +2796,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(IAMBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2608,6 +2835,7 @@ namespace Google.Cloud.Iam.Admin.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, IAMBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListServiceAccounts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsRequest, global::Google.Cloud.Iam.Admin.V1.ListServiceAccountsResponse>(serviceImpl.ListServiceAccounts));

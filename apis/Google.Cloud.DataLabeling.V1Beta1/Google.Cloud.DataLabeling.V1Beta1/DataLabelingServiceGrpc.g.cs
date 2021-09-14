@@ -31,6 +31,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
   {
     static readonly string __ServiceName = "google.cloud.datalabeling.v1beta1.DataLabelingService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,60 +64,114 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_CreateDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.Dataset> __Marshaller_google_cloud_datalabeling_v1beta1_Dataset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.Dataset.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ListDatasetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_ListDatasetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_DeleteDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ImportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ExportDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetDataItemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.DataItem> __Marshaller_google_cloud_datalabeling_v1beta1_DataItem = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.DataItem.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ListDataItemsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_ListDataItemsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetAnnotatedDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset> __Marshaller_google_cloud_datalabeling_v1beta1_AnnotatedDataset = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotatedDatasetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotatedDatasetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_DeleteAnnotatedDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest> __Marshaller_google_cloud_datalabeling_v1beta1_LabelImageRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest> __Marshaller_google_cloud_datalabeling_v1beta1_LabelVideoRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest> __Marshaller_google_cloud_datalabeling_v1beta1_LabelTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetExampleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.Example> __Marshaller_google_cloud_datalabeling_v1beta1_Example = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.Example.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ListExamplesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse> __Marshaller_google_cloud_datalabeling_v1beta1_ListExamplesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_CreateAnnotationSpecSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> __Marshaller_google_cloud_datalabeling_v1beta1_AnnotationSpecSet = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetAnnotationSpecSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotationSpecSetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotationSpecSetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest> __Marshaller_google_cloud_datalabeling_v1beta1_DeleteAnnotationSpecSetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest> __Marshaller_google_cloud_datalabeling_v1beta1_CreateInstructionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetInstructionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.Instruction> __Marshaller_google_cloud_datalabeling_v1beta1_Instruction = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.Instruction.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ListInstructionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_ListInstructionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest> __Marshaller_google_cloud_datalabeling_v1beta1_DeleteInstructionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetEvaluationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.Evaluation> __Marshaller_google_cloud_datalabeling_v1beta1_Evaluation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.Evaluation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_SearchEvaluationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_SearchEvaluationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_SearchExampleComparisonsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_SearchExampleComparisonsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest> __Marshaller_google_cloud_datalabeling_v1beta1_CreateEvaluationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> __Marshaller_google_cloud_datalabeling_v1beta1_EvaluationJob = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest> __Marshaller_google_cloud_datalabeling_v1beta1_UpdateEvaluationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest> __Marshaller_google_cloud_datalabeling_v1beta1_GetEvaluationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest> __Marshaller_google_cloud_datalabeling_v1beta1_PauseEvaluationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ResumeEvaluationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest> __Marshaller_google_cloud_datalabeling_v1beta1_DeleteEvaluationJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest> __Marshaller_google_cloud_datalabeling_v1beta1_ListEvaluationJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse> __Marshaller_google_cloud_datalabeling_v1beta1_ListEvaluationJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest, global::Google.Cloud.DataLabeling.V1Beta1.Dataset> __Method_CreateDataset = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest, global::Google.Cloud.DataLabeling.V1Beta1.Dataset>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -122,6 +179,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_CreateDatasetRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_Dataset);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest, global::Google.Cloud.DataLabeling.V1Beta1.Dataset> __Method_GetDataset = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest, global::Google.Cloud.DataLabeling.V1Beta1.Dataset>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -129,6 +187,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetDatasetRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_Dataset);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse> __Method_ListDatasets = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -136,6 +195,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ListDatasetsRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_ListDatasetsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDataset = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -143,6 +203,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_DeleteDatasetRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest, global::Google.LongRunning.Operation> __Method_ImportData = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,6 +211,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ImportDataRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest, global::Google.LongRunning.Operation> __Method_ExportData = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -157,6 +219,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ExportDataRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest, global::Google.Cloud.DataLabeling.V1Beta1.DataItem> __Method_GetDataItem = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest, global::Google.Cloud.DataLabeling.V1Beta1.DataItem>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -164,6 +227,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetDataItemRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_DataItem);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse> __Method_ListDataItems = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -171,6 +235,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ListDataItemsRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_ListDataItemsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest, global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset> __Method_GetAnnotatedDataset = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest, global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -178,6 +243,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetAnnotatedDatasetRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_AnnotatedDataset);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse> __Method_ListAnnotatedDatasets = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -185,6 +251,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotatedDatasetsRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotatedDatasetsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAnnotatedDataset = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -192,6 +259,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_DeleteAnnotatedDatasetRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest, global::Google.LongRunning.Operation> __Method_LabelImage = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -199,6 +267,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_LabelImageRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest, global::Google.LongRunning.Operation> __Method_LabelVideo = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -206,6 +275,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_LabelVideoRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest, global::Google.LongRunning.Operation> __Method_LabelText = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -213,6 +283,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_LabelTextRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest, global::Google.Cloud.DataLabeling.V1Beta1.Example> __Method_GetExample = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest, global::Google.Cloud.DataLabeling.V1Beta1.Example>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -220,6 +291,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetExampleRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_Example);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse> __Method_ListExamples = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -227,6 +299,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ListExamplesRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_ListExamplesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest, global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> __Method_CreateAnnotationSpecSet = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest, global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -234,6 +307,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_CreateAnnotationSpecSetRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_AnnotationSpecSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest, global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> __Method_GetAnnotationSpecSet = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest, global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -241,6 +315,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetAnnotationSpecSetRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_AnnotationSpecSet);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse> __Method_ListAnnotationSpecSets = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -248,6 +323,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotationSpecSetsRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_ListAnnotationSpecSetsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAnnotationSpecSet = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -255,6 +331,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_DeleteAnnotationSpecSetRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest, global::Google.LongRunning.Operation> __Method_CreateInstruction = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -262,6 +339,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_CreateInstructionRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest, global::Google.Cloud.DataLabeling.V1Beta1.Instruction> __Method_GetInstruction = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest, global::Google.Cloud.DataLabeling.V1Beta1.Instruction>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -269,6 +347,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetInstructionRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_Instruction);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse> __Method_ListInstructions = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -276,6 +355,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ListInstructionsRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_ListInstructionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInstruction = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -283,6 +363,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_DeleteInstructionRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest, global::Google.Cloud.DataLabeling.V1Beta1.Evaluation> __Method_GetEvaluation = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest, global::Google.Cloud.DataLabeling.V1Beta1.Evaluation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -290,6 +371,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetEvaluationRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_Evaluation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest, global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse> __Method_SearchEvaluations = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest, global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -297,6 +379,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_SearchEvaluationsRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_SearchEvaluationsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest, global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse> __Method_SearchExampleComparisons = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest, global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -304,6 +387,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_SearchExampleComparisonsRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_SearchExampleComparisonsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest, global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> __Method_CreateEvaluationJob = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest, global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -311,6 +395,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_CreateEvaluationJobRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_EvaluationJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest, global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> __Method_UpdateEvaluationJob = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest, global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -318,6 +403,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_UpdateEvaluationJobRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_EvaluationJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest, global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> __Method_GetEvaluationJob = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest, global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -325,6 +411,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_GetEvaluationJobRequest,
         __Marshaller_google_cloud_datalabeling_v1beta1_EvaluationJob);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PauseEvaluationJob = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -332,6 +419,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_PauseEvaluationJobRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ResumeEvaluationJob = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -339,6 +427,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_ResumeEvaluationJobRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteEvaluationJob = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -346,6 +435,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
         __Marshaller_google_cloud_datalabeling_v1beta1_DeleteEvaluationJobRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse> __Method_ListEvaluationJobs = new grpc::Method<global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest, global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -369,6 +459,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.Dataset> CreateDataset(global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -380,6 +471,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.Dataset> GetDataset(global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -391,6 +483,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse> ListDatasets(global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -402,6 +495,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDataset(global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -417,6 +511,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportData(global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -428,6 +523,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportData(global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -440,6 +536,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.DataItem> GetDataItem(global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -452,6 +549,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse> ListDataItems(global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -463,6 +561,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset> GetAnnotatedDataset(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -474,6 +573,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse> ListAnnotatedDatasets(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -485,6 +585,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnnotatedDataset(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -497,6 +598,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> LabelImage(global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -509,6 +611,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> LabelVideo(global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -521,6 +624,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> LabelText(global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -532,6 +636,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.Example> GetExample(global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -543,6 +648,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse> ListExamples(global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -554,6 +660,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> CreateAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -565,6 +672,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> GetAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -576,6 +684,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse> ListAnnotationSpecSets(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -587,6 +696,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -598,6 +708,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateInstruction(global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -609,6 +720,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.Instruction> GetInstruction(global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -620,6 +732,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse> ListInstructions(global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -631,6 +744,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstruction(global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -643,6 +757,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.Evaluation> GetEvaluation(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -654,6 +769,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse> SearchEvaluations(global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -667,6 +783,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse> SearchExampleComparisons(global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -678,6 +795,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> CreateEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -694,6 +812,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> UpdateEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -705,6 +824,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> GetEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -717,6 +837,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PauseEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -729,6 +850,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ResumeEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -740,6 +862,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -752,6 +875,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse> ListEvaluationJobs(global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -764,20 +888,24 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     {
       /// <summary>Creates a new client for DataLabelingService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DataLabelingServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DataLabelingService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public DataLabelingServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DataLabelingServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected DataLabelingServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -790,6 +918,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Dataset CreateDataset(global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -800,6 +929,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Dataset CreateDataset(global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDataset, null, options, request);
@@ -812,6 +942,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Dataset> CreateDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -822,6 +953,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Dataset> CreateDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDataset, null, options, request);
@@ -834,6 +966,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Dataset GetDataset(global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -844,6 +977,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Dataset GetDataset(global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataset, null, options, request);
@@ -856,6 +990,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Dataset> GetDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -866,6 +1001,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Dataset> GetDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataset, null, options, request);
@@ -878,6 +1014,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse ListDatasets(global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDatasets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -888,6 +1025,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse ListDatasets(global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDatasets, null, options, request);
@@ -900,6 +1038,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse> ListDatasetsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDatasetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -910,6 +1049,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsResponse> ListDatasetsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListDatasetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatasets, null, options, request);
@@ -922,6 +1062,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDataset(global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -932,6 +1073,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDataset(global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDataset, null, options, request);
@@ -944,6 +1086,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -954,6 +1097,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDataset, null, options, request);
@@ -970,6 +1114,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -984,6 +1129,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportData(global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ImportData, null, options, request);
@@ -1000,6 +1146,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ImportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1014,6 +1161,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDataAsync(global::Google.Cloud.DataLabeling.V1Beta1.ImportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportData, null, options, request);
@@ -1026,6 +1174,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1036,6 +1185,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportData(global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExportData, null, options, request);
@@ -1048,6 +1198,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1058,6 +1209,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDataAsync(global::Google.Cloud.DataLabeling.V1Beta1.ExportDataRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportData, null, options, request);
@@ -1071,6 +1223,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.DataItem GetDataItem(global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataItem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1082,6 +1235,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.DataItem GetDataItem(global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataItem, null, options, request);
@@ -1095,6 +1249,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.DataItem> GetDataItemAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDataItemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1106,6 +1261,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.DataItem> GetDataItemAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetDataItemRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataItem, null, options, request);
@@ -1119,6 +1275,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse ListDataItems(global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDataItems(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1130,6 +1287,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse ListDataItems(global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDataItems, null, options, request);
@@ -1143,6 +1301,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse> ListDataItemsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListDataItemsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1154,6 +1313,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsResponse> ListDataItemsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListDataItemsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDataItems, null, options, request);
@@ -1166,6 +1326,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset GetAnnotatedDataset(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnnotatedDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1176,6 +1337,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset GetAnnotatedDataset(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAnnotatedDataset, null, options, request);
@@ -1188,6 +1350,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset> GetAnnotatedDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnnotatedDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1198,6 +1361,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.AnnotatedDataset> GetAnnotatedDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotatedDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAnnotatedDataset, null, options, request);
@@ -1210,6 +1374,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse ListAnnotatedDatasets(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAnnotatedDatasets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1220,6 +1385,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse ListAnnotatedDatasets(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAnnotatedDatasets, null, options, request);
@@ -1232,6 +1398,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse> ListAnnotatedDatasetsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAnnotatedDatasetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1242,6 +1409,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsResponse> ListAnnotatedDatasetsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotatedDatasetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAnnotatedDatasets, null, options, request);
@@ -1254,6 +1422,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnnotatedDataset(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAnnotatedDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1264,6 +1433,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnnotatedDataset(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAnnotatedDataset, null, options, request);
@@ -1276,6 +1446,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnnotatedDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAnnotatedDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1286,6 +1457,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnnotatedDatasetAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotatedDatasetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAnnotatedDataset, null, options, request);
@@ -1299,6 +1471,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LabelImage(global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LabelImage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1310,6 +1483,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LabelImage(global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LabelImage, null, options, request);
@@ -1323,6 +1497,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LabelImageAsync(global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LabelImageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1334,6 +1509,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LabelImageAsync(global::Google.Cloud.DataLabeling.V1Beta1.LabelImageRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LabelImage, null, options, request);
@@ -1347,6 +1523,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LabelVideo(global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LabelVideo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1358,6 +1535,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LabelVideo(global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LabelVideo, null, options, request);
@@ -1371,6 +1549,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LabelVideoAsync(global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LabelVideoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1382,6 +1561,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LabelVideoAsync(global::Google.Cloud.DataLabeling.V1Beta1.LabelVideoRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LabelVideo, null, options, request);
@@ -1395,6 +1575,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LabelText(global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LabelText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1406,6 +1587,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation LabelText(global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_LabelText, null, options, request);
@@ -1419,6 +1601,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LabelTextAsync(global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LabelTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1430,6 +1613,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> LabelTextAsync(global::Google.Cloud.DataLabeling.V1Beta1.LabelTextRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_LabelText, null, options, request);
@@ -1442,6 +1626,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Example GetExample(global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExample(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1452,6 +1637,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Example GetExample(global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetExample, null, options, request);
@@ -1464,6 +1650,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Example> GetExampleAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetExampleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1474,6 +1661,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Example> GetExampleAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetExampleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetExample, null, options, request);
@@ -1486,6 +1674,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse ListExamples(global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExamples(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1496,6 +1685,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse ListExamples(global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListExamples, null, options, request);
@@ -1508,6 +1698,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse> ListExamplesAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListExamplesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1518,6 +1709,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesResponse> ListExamplesAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListExamplesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListExamples, null, options, request);
@@ -1530,6 +1722,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet CreateAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAnnotationSpecSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1540,6 +1733,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet CreateAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAnnotationSpecSet, null, options, request);
@@ -1552,6 +1746,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> CreateAnnotationSpecSetAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAnnotationSpecSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1562,6 +1757,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> CreateAnnotationSpecSetAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateAnnotationSpecSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAnnotationSpecSet, null, options, request);
@@ -1574,6 +1770,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet GetAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnnotationSpecSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1584,6 +1781,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet GetAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAnnotationSpecSet, null, options, request);
@@ -1596,6 +1794,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> GetAnnotationSpecSetAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAnnotationSpecSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1606,6 +1805,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpecSet> GetAnnotationSpecSetAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetAnnotationSpecSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAnnotationSpecSet, null, options, request);
@@ -1618,6 +1818,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse ListAnnotationSpecSets(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAnnotationSpecSets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1628,6 +1829,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse ListAnnotationSpecSets(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAnnotationSpecSets, null, options, request);
@@ -1640,6 +1842,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse> ListAnnotationSpecSetsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAnnotationSpecSetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1650,6 +1853,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsResponse> ListAnnotationSpecSetsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListAnnotationSpecSetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAnnotationSpecSets, null, options, request);
@@ -1662,6 +1866,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAnnotationSpecSet(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1672,6 +1877,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAnnotationSpecSet(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAnnotationSpecSet, null, options, request);
@@ -1684,6 +1890,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnnotationSpecSetAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAnnotationSpecSetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1694,6 +1901,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAnnotationSpecSetAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteAnnotationSpecSetRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAnnotationSpecSet, null, options, request);
@@ -1706,6 +1914,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateInstruction(global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstruction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1716,6 +1925,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateInstruction(global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInstruction, null, options, request);
@@ -1728,6 +1938,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstructionAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateInstructionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1738,6 +1949,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstructionAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateInstructionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInstruction, null, options, request);
@@ -1750,6 +1962,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Instruction GetInstruction(global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstruction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1760,6 +1973,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Instruction GetInstruction(global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstruction, null, options, request);
@@ -1772,6 +1986,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Instruction> GetInstructionAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetInstructionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1782,6 +1997,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Instruction> GetInstructionAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetInstructionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstruction, null, options, request);
@@ -1794,6 +2010,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse ListInstructions(global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstructions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1804,6 +2021,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse ListInstructions(global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstructions, null, options, request);
@@ -1816,6 +2034,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse> ListInstructionsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListInstructionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1826,6 +2045,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsResponse> ListInstructionsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListInstructionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstructions, null, options, request);
@@ -1838,6 +2058,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstruction(global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstruction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1848,6 +2069,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstruction(global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInstruction, null, options, request);
@@ -1860,6 +2082,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstructionAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteInstructionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1870,6 +2093,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstructionAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteInstructionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstruction, null, options, request);
@@ -1883,6 +2107,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Evaluation GetEvaluation(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEvaluation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1894,6 +2119,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.Evaluation GetEvaluation(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetEvaluation, null, options, request);
@@ -1907,6 +2133,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Evaluation> GetEvaluationAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEvaluationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1918,6 +2145,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.Evaluation> GetEvaluationAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetEvaluation, null, options, request);
@@ -1930,6 +2158,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse SearchEvaluations(global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchEvaluations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1940,6 +2169,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse SearchEvaluations(global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchEvaluations, null, options, request);
@@ -1952,6 +2182,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse> SearchEvaluationsAsync(global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchEvaluationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1962,6 +2193,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsResponse> SearchEvaluationsAsync(global::Google.Cloud.DataLabeling.V1Beta1.SearchEvaluationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchEvaluations, null, options, request);
@@ -1976,6 +2208,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse SearchExampleComparisons(global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchExampleComparisons(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1988,6 +2221,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse SearchExampleComparisons(global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchExampleComparisons, null, options, request);
@@ -2002,6 +2236,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse> SearchExampleComparisonsAsync(global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchExampleComparisonsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2014,6 +2249,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsResponse> SearchExampleComparisonsAsync(global::Google.Cloud.DataLabeling.V1Beta1.SearchExampleComparisonsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchExampleComparisons, null, options, request);
@@ -2026,6 +2262,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob CreateEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEvaluationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2036,6 +2273,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob CreateEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEvaluationJob, null, options, request);
@@ -2048,6 +2286,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> CreateEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateEvaluationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2058,6 +2297,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> CreateEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.CreateEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEvaluationJob, null, options, request);
@@ -2075,6 +2315,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob UpdateEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateEvaluationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2090,6 +2331,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob UpdateEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateEvaluationJob, null, options, request);
@@ -2107,6 +2349,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> UpdateEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateEvaluationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2122,6 +2365,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> UpdateEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.UpdateEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEvaluationJob, null, options, request);
@@ -2134,6 +2378,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob GetEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEvaluationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2144,6 +2389,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob GetEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetEvaluationJob, null, options, request);
@@ -2156,6 +2402,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> GetEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetEvaluationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2166,6 +2413,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.EvaluationJob> GetEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.GetEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetEvaluationJob, null, options, request);
@@ -2179,6 +2427,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty PauseEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseEvaluationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2190,6 +2439,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty PauseEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PauseEvaluationJob, null, options, request);
@@ -2203,6 +2453,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PauseEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PauseEvaluationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2214,6 +2465,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PauseEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.PauseEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PauseEvaluationJob, null, options, request);
@@ -2227,6 +2479,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResumeEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeEvaluationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2238,6 +2491,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty ResumeEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResumeEvaluationJob, null, options, request);
@@ -2251,6 +2505,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResumeEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResumeEvaluationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2262,6 +2517,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResumeEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.ResumeEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResumeEvaluationJob, null, options, request);
@@ -2274,6 +2530,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteEvaluationJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2284,6 +2541,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEvaluationJob(global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEvaluationJob, null, options, request);
@@ -2296,6 +2554,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteEvaluationJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2306,6 +2565,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEvaluationJobAsync(global::Google.Cloud.DataLabeling.V1Beta1.DeleteEvaluationJobRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEvaluationJob, null, options, request);
@@ -2319,6 +2579,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse ListEvaluationJobs(global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEvaluationJobs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2330,6 +2591,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse ListEvaluationJobs(global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListEvaluationJobs, null, options, request);
@@ -2343,6 +2605,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse> ListEvaluationJobsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListEvaluationJobsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -2354,11 +2617,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsResponse> ListEvaluationJobsAsync(global::Google.Cloud.DataLabeling.V1Beta1.ListEvaluationJobsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEvaluationJobs, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataLabelingServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DataLabelingServiceClient(configuration);
@@ -2367,6 +2632,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(DataLabelingServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -2410,6 +2676,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DataLabelingServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_CreateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataLabeling.V1Beta1.CreateDatasetRequest, global::Google.Cloud.DataLabeling.V1Beta1.Dataset>(serviceImpl.CreateDataset));
