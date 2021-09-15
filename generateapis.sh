@@ -89,7 +89,7 @@ fetch_github_repos() {
 }
 
 delete_generated() {
-  rm -f "$1/*.g.cs"
+  rm -f $1/*.g.cs
 }
 
 generate_microgenerator() {
