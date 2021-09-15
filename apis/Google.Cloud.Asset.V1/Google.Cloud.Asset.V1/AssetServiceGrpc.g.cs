@@ -30,7 +30,6 @@ namespace Google.Cloud.Asset.V1 {
   {
     static readonly string __ServiceName = "google.cloud.asset.v1.AssetService";
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,13 +44,11 @@ namespace Google.Cloud.Asset.V1 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -63,54 +60,30 @@ namespace Google.Cloud.Asset.V1 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ExportAssetsRequest> __Marshaller_google_cloud_asset_v1_ExportAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ExportAssetsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListAssetsRequest> __Marshaller_google_cloud_asset_v1_ListAssetsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListAssetsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListAssetsResponse> __Marshaller_google_cloud_asset_v1_ListAssetsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListAssetsResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.CreateFeedRequest> __Marshaller_google_cloud_asset_v1_CreateFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.CreateFeedRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.Feed> __Marshaller_google_cloud_asset_v1_Feed = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.Feed.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.GetFeedRequest> __Marshaller_google_cloud_asset_v1_GetFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.GetFeedRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsRequest> __Marshaller_google_cloud_asset_v1_ListFeedsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListFeedsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.ListFeedsResponse> __Marshaller_google_cloud_asset_v1_ListFeedsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.ListFeedsResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.UpdateFeedRequest> __Marshaller_google_cloud_asset_v1_UpdateFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.UpdateFeedRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.DeleteFeedRequest> __Marshaller_google_cloud_asset_v1_DeleteFeedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.DeleteFeedRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllResourcesRequest> __Marshaller_google_cloud_asset_v1_SearchAllResourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllResourcesRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllResourcesResponse> __Marshaller_google_cloud_asset_v1_SearchAllResourcesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllResourcesResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest> __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse> __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest> __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyLongrunningRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest> __Marshaller_google_cloud_asset_v1_AnalyzeMoveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeMoveRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> __Marshaller_google_cloud_asset_v1_AnalyzeMoveResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse.Parser));
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation> __Method_ExportAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -118,7 +91,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_ExportAssetsRequest,
         __Marshaller_google_longrunning_Operation);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ListAssetsRequest, global::Google.Cloud.Asset.V1.ListAssetsResponse> __Method_ListAssets = new grpc::Method<global::Google.Cloud.Asset.V1.ListAssetsRequest, global::Google.Cloud.Asset.V1.ListAssetsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -126,7 +98,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_ListAssetsRequest,
         __Marshaller_google_cloud_asset_v1_ListAssetsResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> __Method_BatchGetAssetsHistory = new grpc::Method<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest, global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,7 +105,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryRequest,
         __Marshaller_google_cloud_asset_v1_BatchGetAssetsHistoryResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.CreateFeedRequest, global::Google.Cloud.Asset.V1.Feed> __Method_CreateFeed = new grpc::Method<global::Google.Cloud.Asset.V1.CreateFeedRequest, global::Google.Cloud.Asset.V1.Feed>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -142,7 +112,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_CreateFeedRequest,
         __Marshaller_google_cloud_asset_v1_Feed);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.GetFeedRequest, global::Google.Cloud.Asset.V1.Feed> __Method_GetFeed = new grpc::Method<global::Google.Cloud.Asset.V1.GetFeedRequest, global::Google.Cloud.Asset.V1.Feed>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -150,7 +119,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_GetFeedRequest,
         __Marshaller_google_cloud_asset_v1_Feed);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.ListFeedsRequest, global::Google.Cloud.Asset.V1.ListFeedsResponse> __Method_ListFeeds = new grpc::Method<global::Google.Cloud.Asset.V1.ListFeedsRequest, global::Google.Cloud.Asset.V1.ListFeedsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -158,7 +126,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_ListFeedsRequest,
         __Marshaller_google_cloud_asset_v1_ListFeedsResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.UpdateFeedRequest, global::Google.Cloud.Asset.V1.Feed> __Method_UpdateFeed = new grpc::Method<global::Google.Cloud.Asset.V1.UpdateFeedRequest, global::Google.Cloud.Asset.V1.Feed>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -166,7 +133,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_UpdateFeedRequest,
         __Marshaller_google_cloud_asset_v1_Feed);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.DeleteFeedRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteFeed = new grpc::Method<global::Google.Cloud.Asset.V1.DeleteFeedRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -174,7 +140,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_DeleteFeedRequest,
         __Marshaller_google_protobuf_Empty);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.SearchAllResourcesRequest, global::Google.Cloud.Asset.V1.SearchAllResourcesResponse> __Method_SearchAllResources = new grpc::Method<global::Google.Cloud.Asset.V1.SearchAllResourcesRequest, global::Google.Cloud.Asset.V1.SearchAllResourcesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -182,7 +147,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_SearchAllResourcesRequest,
         __Marshaller_google_cloud_asset_v1_SearchAllResourcesResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest, global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse> __Method_SearchAllIamPolicies = new grpc::Method<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest, global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -190,7 +154,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesRequest,
         __Marshaller_google_cloud_asset_v1_SearchAllIamPoliciesResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> __Method_AnalyzeIamPolicy = new grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest, global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -198,7 +161,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyRequest,
         __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest, global::Google.LongRunning.Operation> __Method_AnalyzeIamPolicyLongrunning = new grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest, global::Google.LongRunning.Operation>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -206,7 +168,6 @@ namespace Google.Cloud.Asset.V1 {
         __Marshaller_google_cloud_asset_v1_AnalyzeIamPolicyLongrunningRequest,
         __Marshaller_google_longrunning_Operation);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> __Method_AnalyzeMove = new grpc::Method<global::Google.Cloud.Asset.V1.AnalyzeMoveRequest, global::Google.Cloud.Asset.V1.AnalyzeMoveResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -239,7 +200,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportAssets(global::Google.Cloud.Asset.V1.ExportAssetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -252,7 +212,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.ListAssetsResponse> ListAssets(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -270,7 +229,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> BatchGetAssetsHistory(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -283,7 +241,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.Feed> CreateFeed(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -295,7 +252,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.Feed> GetFeed(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -307,7 +263,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.ListFeedsResponse> ListFeeds(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -319,7 +274,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.Feed> UpdateFeed(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -331,7 +285,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeed(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -346,7 +299,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.SearchAllResourcesResponse> SearchAllResources(global::Google.Cloud.Asset.V1.SearchAllResourcesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -361,7 +313,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse> SearchAllIamPolicies(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -374,7 +325,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> AnalyzeIamPolicy(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -394,7 +344,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AnalyzeIamPolicyLongrunning(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -410,7 +359,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -423,24 +371,20 @@ namespace Google.Cloud.Asset.V1 {
     {
       /// <summary>Creates a new client for AssetService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AssetServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AssetService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AssetServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AssetServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AssetServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -462,7 +406,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportAssets(global::Google.Cloud.Asset.V1.ExportAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportAssets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -482,7 +425,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ExportAssets(global::Google.Cloud.Asset.V1.ExportAssetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExportAssets, null, options, request);
@@ -504,7 +446,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportAssetsAsync(global::Google.Cloud.Asset.V1.ExportAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExportAssetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -524,7 +465,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportAssetsAsync(global::Google.Cloud.Asset.V1.ExportAssetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportAssets, null, options, request);
@@ -538,7 +478,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.ListAssetsResponse ListAssets(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAssets(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -550,7 +489,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.ListAssetsResponse ListAssets(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAssets, null, options, request);
@@ -564,7 +502,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListAssetsResponse> ListAssetsAsync(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAssetsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -576,7 +513,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListAssetsResponse> ListAssetsAsync(global::Google.Cloud.Asset.V1.ListAssetsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAssets, null, options, request);
@@ -595,7 +531,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse BatchGetAssetsHistory(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetAssetsHistory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -612,7 +547,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse BatchGetAssetsHistory(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchGetAssetsHistory, null, options, request);
@@ -631,7 +565,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> BatchGetAssetsHistoryAsync(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetAssetsHistoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -648,7 +581,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryResponse> BatchGetAssetsHistoryAsync(global::Google.Cloud.Asset.V1.BatchGetAssetsHistoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchGetAssetsHistory, null, options, request);
@@ -662,7 +594,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.Feed CreateFeed(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -674,7 +605,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.Feed CreateFeed(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateFeed, null, options, request);
@@ -688,7 +618,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> CreateFeedAsync(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -700,7 +629,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> CreateFeedAsync(global::Google.Cloud.Asset.V1.CreateFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateFeed, null, options, request);
@@ -713,7 +641,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.Feed GetFeed(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -724,7 +651,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.Feed GetFeed(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetFeed, null, options, request);
@@ -737,7 +663,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> GetFeedAsync(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -748,7 +673,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> GetFeedAsync(global::Google.Cloud.Asset.V1.GetFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetFeed, null, options, request);
@@ -761,7 +685,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.ListFeedsResponse ListFeeds(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListFeeds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -772,7 +695,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.ListFeedsResponse ListFeeds(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListFeeds, null, options, request);
@@ -785,7 +707,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListFeedsResponse> ListFeedsAsync(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListFeedsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -796,7 +717,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.ListFeedsResponse> ListFeedsAsync(global::Google.Cloud.Asset.V1.ListFeedsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListFeeds, null, options, request);
@@ -809,7 +729,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.Feed UpdateFeed(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -820,7 +739,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.Feed UpdateFeed(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateFeed, null, options, request);
@@ -833,7 +751,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> UpdateFeedAsync(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -844,7 +761,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.Feed> UpdateFeedAsync(global::Google.Cloud.Asset.V1.UpdateFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateFeed, null, options, request);
@@ -857,7 +773,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFeed(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteFeed(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -868,7 +783,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteFeed(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteFeed, null, options, request);
@@ -881,7 +795,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeedAsync(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteFeedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -892,7 +805,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFeedAsync(global::Google.Cloud.Asset.V1.DeleteFeedRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteFeed, null, options, request);
@@ -908,7 +820,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.SearchAllResourcesResponse SearchAllResources(global::Google.Cloud.Asset.V1.SearchAllResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAllResources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -922,7 +833,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.SearchAllResourcesResponse SearchAllResources(global::Google.Cloud.Asset.V1.SearchAllResourcesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAllResources, null, options, request);
@@ -938,7 +848,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SearchAllResourcesResponse> SearchAllResourcesAsync(global::Google.Cloud.Asset.V1.SearchAllResourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAllResourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -952,7 +861,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SearchAllResourcesResponse> SearchAllResourcesAsync(global::Google.Cloud.Asset.V1.SearchAllResourcesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAllResources, null, options, request);
@@ -968,7 +876,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse SearchAllIamPolicies(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAllIamPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -982,7 +889,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse SearchAllIamPolicies(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAllIamPolicies, null, options, request);
@@ -998,7 +904,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse> SearchAllIamPoliciesAsync(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchAllIamPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1012,7 +917,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.SearchAllIamPoliciesResponse> SearchAllIamPoliciesAsync(global::Google.Cloud.Asset.V1.SearchAllIamPoliciesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAllIamPolicies, null, options, request);
@@ -1026,7 +930,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse AnalyzeIamPolicy(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1038,7 +941,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse AnalyzeIamPolicy(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeIamPolicy, null, options, request);
@@ -1052,7 +954,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> AnalyzeIamPolicyAsync(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1064,7 +965,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeIamPolicyResponse> AnalyzeIamPolicyAsync(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeIamPolicy, null, options, request);
@@ -1085,7 +985,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation AnalyzeIamPolicyLongrunning(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeIamPolicyLongrunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1104,7 +1003,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation AnalyzeIamPolicyLongrunning(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeIamPolicyLongrunning, null, options, request);
@@ -1125,7 +1023,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnalyzeIamPolicyLongrunningAsync(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeIamPolicyLongrunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1144,7 +1041,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AnalyzeIamPolicyLongrunningAsync(global::Google.Cloud.Asset.V1.AnalyzeIamPolicyLongrunningRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeIamPolicyLongrunning, null, options, request);
@@ -1161,7 +1057,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.AnalyzeMoveResponse AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeMove(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1176,7 +1071,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Asset.V1.AnalyzeMoveResponse AnalyzeMove(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeMove, null, options, request);
@@ -1193,7 +1087,6 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMoveAsync(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return AnalyzeMoveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -1208,13 +1101,11 @@ namespace Google.Cloud.Asset.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Asset.V1.AnalyzeMoveResponse> AnalyzeMoveAsync(global::Google.Cloud.Asset.V1.AnalyzeMoveRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeMove, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AssetServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AssetServiceClient(configuration);
@@ -1223,7 +1114,6 @@ namespace Google.Cloud.Asset.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AssetServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -1246,7 +1136,6 @@ namespace Google.Cloud.Asset.V1 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AssetServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ExportAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Asset.V1.ExportAssetsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportAssets));
