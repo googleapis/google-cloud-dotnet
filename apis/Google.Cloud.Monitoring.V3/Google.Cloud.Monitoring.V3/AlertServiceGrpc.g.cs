@@ -38,6 +38,7 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.AlertPolicyService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -52,11 +53,13 @@ namespace Google.Cloud.Monitoring.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -68,15 +71,24 @@ namespace Google.Cloud.Monitoring.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest> __Marshaller_google_monitoring_v3_ListAlertPoliciesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> __Marshaller_google_monitoring_v3_ListAlertPoliciesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest> __Marshaller_google_monitoring_v3_GetAlertPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.AlertPolicy> __Marshaller_google_monitoring_v3_AlertPolicy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest> __Marshaller_google_monitoring_v3_CreateAlertPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest> __Marshaller_google_monitoring_v3_DeleteAlertPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest> __Marshaller_google_monitoring_v3_UpdateAlertPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> __Method_ListAlertPolicies = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -84,6 +96,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_ListAlertPoliciesRequest,
         __Marshaller_google_monitoring_v3_ListAlertPoliciesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy> __Method_GetAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -91,6 +104,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_GetAlertPolicyRequest,
         __Marshaller_google_monitoring_v3_AlertPolicy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy> __Method_CreateAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -98,6 +112,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_CreateAlertPolicyRequest,
         __Marshaller_google_monitoring_v3_AlertPolicy);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -105,6 +120,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_DeleteAlertPolicyRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy> __Method_UpdateAlertPolicy = new grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest, global::Google.Cloud.Monitoring.V3.AlertPolicy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -128,6 +144,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> ListAlertPolicies(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -139,6 +156,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.AlertPolicy> GetAlertPolicy(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -150,6 +168,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.AlertPolicy> CreateAlertPolicy(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -161,6 +180,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAlertPolicy(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -175,6 +195,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.AlertPolicy> UpdateAlertPolicy(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -187,20 +208,24 @@ namespace Google.Cloud.Monitoring.V3 {
     {
       /// <summary>Creates a new client for AlertPolicyService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AlertPolicyServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for AlertPolicyService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public AlertPolicyServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AlertPolicyServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected AlertPolicyServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -213,6 +238,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse ListAlertPolicies(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAlertPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -223,6 +249,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse ListAlertPolicies(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListAlertPolicies, null, options, request);
@@ -235,6 +262,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> ListAlertPoliciesAsync(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListAlertPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -245,6 +273,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse> ListAlertPoliciesAsync(global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAlertPolicies, null, options, request);
@@ -257,6 +286,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.AlertPolicy GetAlertPolicy(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAlertPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -267,6 +297,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.AlertPolicy GetAlertPolicy(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAlertPolicy, null, options, request);
@@ -279,6 +310,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.AlertPolicy> GetAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAlertPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -289,6 +321,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.AlertPolicy> GetAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.GetAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAlertPolicy, null, options, request);
@@ -301,6 +334,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.AlertPolicy CreateAlertPolicy(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAlertPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -311,6 +345,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.AlertPolicy CreateAlertPolicy(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAlertPolicy, null, options, request);
@@ -323,6 +358,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.AlertPolicy> CreateAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateAlertPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -333,6 +369,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.AlertPolicy> CreateAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.CreateAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAlertPolicy, null, options, request);
@@ -345,6 +382,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAlertPolicy(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAlertPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -355,6 +393,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteAlertPolicy(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAlertPolicy, null, options, request);
@@ -367,6 +406,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteAlertPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -377,6 +417,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.DeleteAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteAlertPolicy, null, options, request);
@@ -392,6 +433,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.AlertPolicy UpdateAlertPolicy(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateAlertPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -405,6 +447,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.AlertPolicy UpdateAlertPolicy(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateAlertPolicy, null, options, request);
@@ -420,6 +463,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.AlertPolicy> UpdateAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateAlertPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -433,11 +477,13 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.AlertPolicy> UpdateAlertPolicyAsync(global::Google.Cloud.Monitoring.V3.UpdateAlertPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAlertPolicy, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AlertPolicyServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new AlertPolicyServiceClient(configuration);
@@ -446,6 +492,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(AlertPolicyServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -460,6 +507,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, AlertPolicyServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListAlertPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListAlertPoliciesRequest, global::Google.Cloud.Monitoring.V3.ListAlertPoliciesResponse>(serviceImpl.ListAlertPolicies));

@@ -37,6 +37,7 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.UptimeCheckService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -51,11 +52,13 @@ namespace Google.Cloud.Monitoring.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -67,17 +70,28 @@ namespace Google.Cloud.Monitoring.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest> __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_GetUptimeCheckConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Marshaller_google_monitoring_v3_UptimeCheckConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_CreateUptimeCheckConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_UpdateUptimeCheckConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest> __Marshaller_google_monitoring_v3_DeleteUptimeCheckConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest> __Marshaller_google_monitoring_v3_ListUptimeCheckIpsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> __Marshaller_google_monitoring_v3_ListUptimeCheckIpsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> __Method_ListUptimeCheckConfigs = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -85,6 +99,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsRequest,
         __Marshaller_google_monitoring_v3_ListUptimeCheckConfigsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Method_GetUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +107,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_GetUptimeCheckConfigRequest,
         __Marshaller_google_monitoring_v3_UptimeCheckConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Method_CreateUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +115,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_CreateUptimeCheckConfigRequest,
         __Marshaller_google_monitoring_v3_UptimeCheckConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> __Method_UpdateUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest, global::Google.Cloud.Monitoring.V3.UptimeCheckConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +123,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_UpdateUptimeCheckConfigRequest,
         __Marshaller_google_monitoring_v3_UptimeCheckConfig);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUptimeCheckConfig = new grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +131,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_DeleteUptimeCheckConfigRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> __Method_ListUptimeCheckIps = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -137,6 +156,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> ListUptimeCheckConfigs(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -148,6 +168,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> GetUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -159,6 +180,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> CreateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -173,6 +195,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> UpdateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -186,6 +209,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -197,6 +221,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> ListUptimeCheckIps(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -209,20 +234,24 @@ namespace Google.Cloud.Monitoring.V3 {
     {
       /// <summary>Creates a new client for UptimeCheckService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public UptimeCheckServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for UptimeCheckService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public UptimeCheckServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected UptimeCheckServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected UptimeCheckServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -236,6 +265,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse ListUptimeCheckConfigs(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -247,6 +277,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse ListUptimeCheckConfigs(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListUptimeCheckConfigs, null, options, request);
@@ -260,6 +291,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> ListUptimeCheckConfigsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -271,6 +303,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse> ListUptimeCheckConfigsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListUptimeCheckConfigs, null, options, request);
@@ -283,6 +316,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig GetUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -293,6 +327,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig GetUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetUptimeCheckConfig, null, options, request);
@@ -305,6 +340,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> GetUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -315,6 +351,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> GetUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.GetUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetUptimeCheckConfig, null, options, request);
@@ -327,6 +364,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig CreateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -337,6 +375,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig CreateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateUptimeCheckConfig, null, options, request);
@@ -349,6 +388,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> CreateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -359,6 +399,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> CreateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.CreateUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateUptimeCheckConfig, null, options, request);
@@ -374,6 +415,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig UpdateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -387,6 +429,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.UptimeCheckConfig UpdateUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateUptimeCheckConfig, null, options, request);
@@ -402,6 +445,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> UpdateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -415,6 +459,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.UptimeCheckConfig> UpdateUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.UpdateUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateUptimeCheckConfig, null, options, request);
@@ -429,6 +474,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteUptimeCheckConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -441,6 +487,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUptimeCheckConfig(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteUptimeCheckConfig, null, options, request);
@@ -455,6 +502,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteUptimeCheckConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -467,6 +515,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUptimeCheckConfigAsync(global::Google.Cloud.Monitoring.V3.DeleteUptimeCheckConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteUptimeCheckConfig, null, options, request);
@@ -479,6 +528,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse ListUptimeCheckIps(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckIps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -489,6 +539,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse ListUptimeCheckIps(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListUptimeCheckIps, null, options, request);
@@ -501,6 +552,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> ListUptimeCheckIpsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListUptimeCheckIpsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -511,11 +563,13 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsResponse> ListUptimeCheckIpsAsync(global::Google.Cloud.Monitoring.V3.ListUptimeCheckIpsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListUptimeCheckIps, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override UptimeCheckServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new UptimeCheckServiceClient(configuration);
@@ -524,6 +578,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(UptimeCheckServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -539,6 +594,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, UptimeCheckServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListUptimeCheckConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsRequest, global::Google.Cloud.Monitoring.V3.ListUptimeCheckConfigsResponse>(serviceImpl.ListUptimeCheckConfigs));

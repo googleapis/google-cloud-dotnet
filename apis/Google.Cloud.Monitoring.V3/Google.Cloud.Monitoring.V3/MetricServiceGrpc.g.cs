@@ -31,6 +31,7 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.MetricService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Monitoring.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,21 +64,36 @@ namespace Google.Cloud.Monitoring.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest> __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest> __Marshaller_google_monitoring_v3_GetMonitoredResourceDescriptorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Api.MonitoredResourceDescriptor> __Marshaller_google_api_MonitoredResourceDescriptor = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.MonitoredResourceDescriptor.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest> __Marshaller_google_monitoring_v3_ListMetricDescriptorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> __Marshaller_google_monitoring_v3_ListMetricDescriptorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest> __Marshaller_google_monitoring_v3_GetMetricDescriptorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Api.MetricDescriptor> __Marshaller_google_api_MetricDescriptor = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Api.MetricDescriptor.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest> __Marshaller_google_monitoring_v3_CreateMetricDescriptorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest> __Marshaller_google_monitoring_v3_DeleteMetricDescriptorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest> __Marshaller_google_monitoring_v3_ListTimeSeriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> __Marshaller_google_monitoring_v3_ListTimeSeriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest> __Marshaller_google_monitoring_v3_CreateTimeSeriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> __Method_ListMonitoredResourceDescriptors = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -83,6 +101,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsRequest,
         __Marshaller_google_monitoring_v3_ListMonitoredResourceDescriptorsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest, global::Google.Api.MonitoredResourceDescriptor> __Method_GetMonitoredResourceDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest, global::Google.Api.MonitoredResourceDescriptor>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -90,6 +109,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_GetMonitoredResourceDescriptorRequest,
         __Marshaller_google_api_MonitoredResourceDescriptor);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> __Method_ListMetricDescriptors = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -97,6 +117,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_ListMetricDescriptorsRequest,
         __Marshaller_google_monitoring_v3_ListMetricDescriptorsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest, global::Google.Api.MetricDescriptor> __Method_GetMetricDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest, global::Google.Api.MetricDescriptor>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -104,6 +125,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_GetMetricDescriptorRequest,
         __Marshaller_google_api_MetricDescriptor);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest, global::Google.Api.MetricDescriptor> __Method_CreateMetricDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest, global::Google.Api.MetricDescriptor>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -111,6 +133,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_CreateMetricDescriptorRequest,
         __Marshaller_google_api_MetricDescriptor);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteMetricDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -118,6 +141,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_DeleteMetricDescriptorRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> __Method_ListTimeSeries = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -125,6 +149,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_ListTimeSeriesRequest,
         __Marshaller_google_monitoring_v3_ListTimeSeriesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CreateTimeSeries = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -148,6 +173,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -159,6 +185,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -170,6 +197,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -181,6 +209,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MetricDescriptor> GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -194,6 +223,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MetricDescriptor> CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -207,6 +237,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -218,6 +249,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -232,6 +264,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -244,20 +277,24 @@ namespace Google.Cloud.Monitoring.V3 {
     {
       /// <summary>Creates a new client for MetricService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public MetricServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for MetricService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public MetricServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected MetricServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected MetricServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -270,6 +307,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -280,6 +318,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
@@ -292,6 +331,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -302,6 +342,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
@@ -314,6 +355,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMonitoredResourceDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -324,6 +366,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
@@ -336,6 +379,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMonitoredResourceDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -346,6 +390,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
@@ -358,6 +403,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMetricDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -368,6 +414,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMetricDescriptors, null, options, request);
@@ -380,6 +427,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListMetricDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -390,6 +438,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMetricDescriptors, null, options, request);
@@ -402,6 +451,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMetricDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -412,6 +462,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMetricDescriptor, null, options, request);
@@ -424,6 +475,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetMetricDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -434,6 +486,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMetricDescriptor, null, options, request);
@@ -448,6 +501,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.MetricDescriptor CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMetricDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -460,6 +514,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Api.MetricDescriptor CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMetricDescriptor, null, options, request);
@@ -474,6 +529,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> CreateMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateMetricDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -486,6 +542,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Api.MetricDescriptor> CreateMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateMetricDescriptor, null, options, request);
@@ -500,6 +557,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMetricDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -512,6 +570,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteMetricDescriptor, null, options, request);
@@ -526,6 +585,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteMetricDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -538,6 +598,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMetricDescriptor, null, options, request);
@@ -550,6 +611,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -560,6 +622,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTimeSeries, null, options, request);
@@ -572,6 +635,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -582,6 +646,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTimeSeries, null, options, request);
@@ -597,6 +662,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -610,6 +676,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTimeSeries, null, options, request);
@@ -625,6 +692,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -638,11 +706,13 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTimeSeries, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override MetricServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new MetricServiceClient(configuration);
@@ -651,6 +721,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(MetricServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -668,6 +739,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MetricServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse>(serviceImpl.ListMonitoredResourceDescriptors));
