@@ -31,6 +31,7 @@ namespace Google.Cloud.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.NotificationChannelService";
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -45,11 +46,13 @@ namespace Google.Cloud.Monitoring.V3 {
       context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static class __Helper_MessageCache<T>
     {
       public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
     {
       #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
@@ -61,23 +64,40 @@ namespace Google.Cloud.Monitoring.V3 {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest> __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelDescriptorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> __Marshaller_google_monitoring_v3_NotificationChannelDescriptor = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest> __Marshaller_google_monitoring_v3_ListNotificationChannelsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> __Marshaller_google_monitoring_v3_ListNotificationChannelsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.NotificationChannel> __Marshaller_google_monitoring_v3_NotificationChannel = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.NotificationChannel.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest> __Marshaller_google_monitoring_v3_CreateNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest> __Marshaller_google_monitoring_v3_UpdateNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest> __Marshaller_google_monitoring_v3_DeleteNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest> __Marshaller_google_monitoring_v3_SendNotificationChannelVerificationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest> __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest> __Marshaller_google_monitoring_v3_VerifyNotificationChannelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest.Parser));
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> __Method_ListNotificationChannelDescriptors = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -85,6 +105,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsRequest,
         __Marshaller_google_monitoring_v3_ListNotificationChannelDescriptorsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest, global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> __Method_GetNotificationChannelDescriptor = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest, global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -92,6 +113,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_GetNotificationChannelDescriptorRequest,
         __Marshaller_google_monitoring_v3_NotificationChannelDescriptor);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest, global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> __Method_ListNotificationChannels = new grpc::Method<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest, global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -99,6 +121,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_ListNotificationChannelsRequest,
         __Marshaller_google_monitoring_v3_ListNotificationChannelsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel> __Method_GetNotificationChannel = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -106,6 +129,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_GetNotificationChannelRequest,
         __Marshaller_google_monitoring_v3_NotificationChannel);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel> __Method_CreateNotificationChannel = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -113,6 +137,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_CreateNotificationChannelRequest,
         __Marshaller_google_monitoring_v3_NotificationChannel);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel> __Method_UpdateNotificationChannel = new grpc::Method<global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -120,6 +145,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_UpdateNotificationChannelRequest,
         __Marshaller_google_monitoring_v3_NotificationChannel);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteNotificationChannel = new grpc::Method<global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -127,6 +153,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_DeleteNotificationChannelRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_SendNotificationChannelVerificationCode = new grpc::Method<global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -134,6 +161,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_SendNotificationChannelVerificationCodeRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest, global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> __Method_GetNotificationChannelVerificationCode = new grpc::Method<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest, global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -141,6 +169,7 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeRequest,
         __Marshaller_google_monitoring_v3_GetNotificationChannelVerificationCodeResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel> __Method_VerifyNotificationChannel = new grpc::Method<global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest, global::Google.Cloud.Monitoring.V3.NotificationChannel>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -165,6 +194,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> ListNotificationChannelDescriptors(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -177,6 +207,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> GetNotificationChannelDescriptor(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -188,6 +219,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> ListNotificationChannels(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -203,6 +235,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.NotificationChannel> GetNotificationChannel(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -215,6 +248,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.NotificationChannel> CreateNotificationChannel(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -227,6 +261,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.NotificationChannel> UpdateNotificationChannel(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -238,6 +273,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationChannel(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -250,6 +286,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> SendNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -281,6 +318,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -294,6 +332,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.NotificationChannel> VerifyNotificationChannel(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -306,20 +345,24 @@ namespace Google.Cloud.Monitoring.V3 {
     {
       /// <summary>Creates a new client for NotificationChannelService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public NotificationChannelServiceClient(grpc::ChannelBase channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for NotificationChannelService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public NotificationChannelServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected NotificationChannelServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected NotificationChannelServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
@@ -333,6 +376,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse ListNotificationChannelDescriptors(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannelDescriptors(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -344,6 +388,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse ListNotificationChannelDescriptors(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListNotificationChannelDescriptors, null, options, request);
@@ -357,6 +402,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> ListNotificationChannelDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannelDescriptorsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -368,6 +414,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse> ListNotificationChannelDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListNotificationChannelDescriptors, null, options, request);
@@ -381,6 +428,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor GetNotificationChannelDescriptor(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelDescriptor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -392,6 +440,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor GetNotificationChannelDescriptor(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetNotificationChannelDescriptor, null, options, request);
@@ -405,6 +454,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelDescriptorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -416,6 +466,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannelDescriptor> GetNotificationChannelDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelDescriptorRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNotificationChannelDescriptor, null, options, request);
@@ -428,6 +479,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse ListNotificationChannels(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannels(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -438,6 +490,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse ListNotificationChannels(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListNotificationChannels, null, options, request);
@@ -450,6 +503,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> ListNotificationChannelsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ListNotificationChannelsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -460,6 +514,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListNotificationChannelsResponse> ListNotificationChannelsAsync(global::Google.Cloud.Monitoring.V3.ListNotificationChannelsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListNotificationChannels, null, options, request);
@@ -476,6 +531,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel GetNotificationChannel(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -490,6 +546,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel GetNotificationChannel(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetNotificationChannel, null, options, request);
@@ -506,6 +563,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> GetNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -520,6 +578,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> GetNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNotificationChannel, null, options, request);
@@ -533,6 +592,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel CreateNotificationChannel(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -544,6 +604,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel CreateNotificationChannel(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateNotificationChannel, null, options, request);
@@ -557,6 +618,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> CreateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -568,6 +630,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> CreateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.CreateNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateNotificationChannel, null, options, request);
@@ -581,6 +644,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel UpdateNotificationChannel(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -592,6 +656,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel UpdateNotificationChannel(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateNotificationChannel, null, options, request);
@@ -605,6 +670,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> UpdateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -616,6 +682,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> UpdateNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.UpdateNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateNotificationChannel, null, options, request);
@@ -628,6 +695,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationChannel(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -638,6 +706,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteNotificationChannel(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteNotificationChannel, null, options, request);
@@ -650,6 +719,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DeleteNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -660,6 +730,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.DeleteNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteNotificationChannel, null, options, request);
@@ -673,6 +744,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty SendNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendNotificationChannelVerificationCode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -684,6 +756,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty SendNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SendNotificationChannelVerificationCode, null, options, request);
@@ -697,6 +770,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SendNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SendNotificationChannelVerificationCodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -708,6 +782,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> SendNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.SendNotificationChannelVerificationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SendNotificationChannelVerificationCode, null, options, request);
@@ -740,6 +815,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelVerificationCode(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -770,6 +846,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse GetNotificationChannelVerificationCode(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetNotificationChannelVerificationCode, null, options, request);
@@ -802,6 +879,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetNotificationChannelVerificationCodeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -832,6 +910,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeResponse> GetNotificationChannelVerificationCodeAsync(global::Google.Cloud.Monitoring.V3.GetNotificationChannelVerificationCodeRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetNotificationChannelVerificationCode, null, options, request);
@@ -846,6 +925,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel VerifyNotificationChannel(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return VerifyNotificationChannel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -858,6 +938,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.NotificationChannel VerifyNotificationChannel(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_VerifyNotificationChannel, null, options, request);
@@ -872,6 +953,7 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> VerifyNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return VerifyNotificationChannelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -884,11 +966,13 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.NotificationChannel> VerifyNotificationChannelAsync(global::Google.Cloud.Monitoring.V3.VerifyNotificationChannelRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_VerifyNotificationChannel, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NotificationChannelServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new NotificationChannelServiceClient(configuration);
@@ -897,6 +981,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static grpc::ServerServiceDefinition BindService(NotificationChannelServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
@@ -916,6 +1001,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
     /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, NotificationChannelServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListNotificationChannelDescriptors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsRequest, global::Google.Cloud.Monitoring.V3.ListNotificationChannelDescriptorsResponse>(serviceImpl.ListNotificationChannelDescriptors));
