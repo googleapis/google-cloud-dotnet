@@ -1230,9 +1230,12 @@ namespace Google.Cloud.Talent.V4.Tests
                 MaxPageSize = -1271917583,
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
-                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
+                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+#pragma warning disable CS0612
                 DisableKeywordMatch = true,
+#pragma warning restore CS0612
+                KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
@@ -1279,9 +1282,12 @@ namespace Google.Cloud.Talent.V4.Tests
                 MaxPageSize = -1271917583,
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
-                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
+                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+#pragma warning disable CS0612
                 DisableKeywordMatch = true,
+#pragma warning restore CS0612
+                KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
@@ -1330,9 +1336,12 @@ namespace Google.Cloud.Talent.V4.Tests
                 MaxPageSize = -1271917583,
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
-                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
+                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+#pragma warning disable CS0612
                 DisableKeywordMatch = true,
+#pragma warning restore CS0612
+                KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
@@ -1379,9 +1388,12 @@ namespace Google.Cloud.Talent.V4.Tests
                 MaxPageSize = -1271917583,
                 PageToken = "page_tokenf09e5538",
                 OrderBy = "order_byb4d33ada",
-                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Disabled,
+                DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.TwoPerCompany,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
+#pragma warning disable CS0612
                 DisableKeywordMatch = true,
+#pragma warning restore CS0612
+                KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
             };
             SearchJobsResponse expectedResponse = new SearchJobsResponse
             {
