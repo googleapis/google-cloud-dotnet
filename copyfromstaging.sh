@@ -47,6 +47,12 @@ copy_one_api() {
     )
   fi
 
+  if [[ -f $PACKAGE_DIR/postgeneration.sh ]]
+  then    
+    echo "Running post-generation script for $PACKAGE"
+    (cd $PACKAGE_DIR; ./postgeneration.sh)
+  fi
+
   if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -Ev "namespace ${1}[[:space:]{]*\$") ]]; then
     # We know Google.LongRunning contains a proto in Google.Cloud.
     if [[ $1 == "Google.LongRunning" ]]; then
