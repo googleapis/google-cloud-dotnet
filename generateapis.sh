@@ -278,12 +278,7 @@ generate_protogrpc() {
 generate_api() {
   PACKAGE=$1
   PACKAGE_DIR=apis/$1
-  if [[ $CHECK_COMPATIBILITY == "true" && -d $PACKAGE_DIR ]]
-  then
-    echo "Building existing version of $PACKAGE for compatibility checking"
-    dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
-    cp $PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll $OUTDIR
-  fi
+
   echo "Generating $PACKAGE"
   GENERATOR=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE generator)
   if [[ -f $PACKAGE_DIR/pregeneration.sh ]]
@@ -330,36 +325,6 @@ generate_api() {
     else
       echo "API $1 has broken namespace declarations"
       exit 1
-    fi
-  fi
-
-  if [[ $CHECK_COMPATIBILITY == "true" ]]
-  then
-    if [[ -f $OUTDIR/$PACKAGE.dll ]]
-    then
-      # In order to skip expensive "build and check compatibility" step,
-      # first see whether git thinks anything has changed.
-      # Command line arguments:
-      # -c core.safecrlf=false: don't warn on line ending changes
-      # diff: do a diff :)
-      # -s: suppress output as we only care about the exit code
-      # -b: ignore whitespace
-      # --exit-code: set the exit code to 0 for no diff, 1 when a diff is detected      
-      if git -c core.safecrlf=false diff -s -b --exit-code -- $PACKAGE_DIR
-      then
-        echo "git detects no change in $PACKAGE; skipping compatibility checking"
-      else
-        echo "Building new version of $PACKAGE for compatibility checking"
-        dotnet build -c Release -f netstandard2.0 -v quiet -nologo -clp:NoSummary -p:SourceLinkCreate=false $PACKAGE_DIR/$PACKAGE
-        echo ""
-        echo "Changes in $PACKAGE:"
-        dotnet run -p tools/Google.Cloud.Tools.CompareVersions -- \
-          --file1=$OUTDIR/$PACKAGE.dll \
-          --file2=$PACKAGE_DIR/$PACKAGE/bin/Release/netstandard2.0/$PACKAGE.dll
-      fi
-    else
-      echo ""
-      echo "$PACKAGE is a new API."
     fi
   fi
 
