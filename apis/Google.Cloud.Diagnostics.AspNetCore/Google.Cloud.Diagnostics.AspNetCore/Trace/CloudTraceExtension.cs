@@ -34,48 +34,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     ///  and metadata will be sent to the Google Cloud Trace API.  Also allows for more
     ///  finely grained manual tracing.
     /// </summary>
-    ///
-    /// <example>
-    /// <code>
-    /// public void ConfigureServices(IServiceCollection services)
-    /// {
-    ///     string projectId = "[Google Cloud Platform project ID]";
-    ///     services.AddGoogleTrace(projectId);
-    ///     ...
-    /// }
-    /// </code>
-    /// </example>
-    ///
-    /// <example>
-    /// <code>
-    /// public void Configure(IApplicationBuilder app)
-    /// {
-    ///     // Use at the start of the request pipeline to ensure the entire
-    ///     // request is traced.
-    ///     app.UseGoogleTrace();
-    ///     ...
-    /// }
-    /// </code>
-    /// </example>
-    ///
-    /// <example>
-    /// <code>
-    /// public void SomeFunction(IManagedTracer tracer)
-    /// {
-    ///     using (tracer.StartSpan(nameof(SomeFunction)))
-    ///     {
-    ///         ...
-    ///         // Do work.
-    ///         ...
-    ///     }
-    /// }
-    /// </code>
-    /// </example>
-    ///
     /// <remarks>
     /// Traces requests and reports them to Google Cloud Trace.
     /// Docs: https://cloud.google.com/trace/docs/
     /// </remarks>
+#if NETCOREAPP3_1
+    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreTraceExtensions instead.")]
+#elif NETSTANDARD2_0
+    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreTraceExtensions instead.")]
+#else
+#error unknown target framework
+#endif
     public static class CloudTraceExtension
     {
         /// <summary>
@@ -83,6 +52,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// The time taken and metadata will be sent to the Google Cloud Trace API. To be
         /// used with <see cref="AddGoogleTrace"/>,
         /// </summary>
+#if NETCOREAPP3_1
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore" +
+            "for configuring Google Cloud Trace in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
+#elif NETSTANDARD2_0
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore" +
+            "for configuring Google Cloud Trace in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
+#else
+#error unknown target framework
+#endif
         public static IApplicationBuilder UseGoogleTrace(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
@@ -101,6 +79,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// with both exceptions will be thrown.  Otherwise only the exception from the <see cref="RequestDelegate"/>
         /// will be thrown.
         /// </remarks>
+#if NETCOREAPP3_1
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore instead.")]
+#elif NETSTANDARD2_0
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreTraceExtensions.AddGoogleTraceForAspNetCore instead.")]
+#else
+#error unknown target framework
+#endif
         public static IServiceCollection AddGoogleTrace(
             this IServiceCollection services, Action<TraceServiceOptions> setupAction)
         {
@@ -110,26 +95,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var serviceOptions = new TraceServiceOptions();
             setupAction(serviceOptions);
 
-            services.AddGoogleTrace((Common.TraceServiceOptions commonOptions) =>
-            {
-                commonOptions.ProjectId = serviceOptions.ProjectId;
-                commonOptions.Options = serviceOptions.Options;
-                commonOptions.Client = serviceOptions.Client;
+            services.AddGoogleTraceForAspNetCore(false, new AspNetCoreTraceOptions
+            { 
+                TraceFallbackPredicate = serviceOptions.TraceFallbackPredicate,
+                ServiceOptions = new Common.TraceServiceOptions
+                {
+                    Client = serviceOptions.Client,
+                    Options = serviceOptions.Options,
+                    ProjectId = serviceOptions.ProjectId
+                }
             });
-
-            var traceFallbackPredicate = serviceOptions.TraceFallbackPredicate ?? TraceDecisionPredicate.Default;
-
-            // We use TryAdd... here to allow user code to inject their own trace context provider
-            // and matching trace context response propagator. We use Google trace header otherwise.
-            services.TryAddGoogleTraceContextProvider();
-            services.TryAddSingleton<Action<HttpResponse, ITraceContext>>(PropagateGoogleTraceHeaders);
-
-            // Obsolete: Adding this for backwards compatibility in case someone is using the old factory type.
-            // The new and prefered factory type is Func<ITraceContext, IManagedTracer>.
-            services.AddSingleton<Func<TraceHeaderContext, IManagedTracer>>(sp => sp.GetRequiredService<Func<ITraceContext, IManagedTracer>>());
-
-            services.AddHttpContextAccessor();
-            services.AddTransient<ICloudTraceNameProvider, DefaultCloudTraceNameProvider>();
 
             // This is to be used for explicitly creating an HttpClient instance. Valid for all platforms but subject to
             // issues with HttpClient lifetime as described in
@@ -142,46 +117,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             // Obsolete: We are targeting netstastandard2.0 so user code can use the preferred UnchainedTraceHeaderPropagatingHandler.
             services.TryAddSingleton(new TraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer));
 
-            return services.AddSingleton(traceFallbackPredicate);
-        }
-
-        /// <summary>
-        /// Adds the services needed for obtaining the trace context from Google's own trace header,
-        /// but only if no other trace context provider is registered.
-        /// If you are using <see cref="AddGoogleTrace(IServiceCollection, Action{TraceServiceOptions})"/>
-        /// you don't need to call this method. Only use this method if you want to extract the trace context
-        /// information from Google's own header for your own code to use, or if you are not using the tracing
-        /// component of this library but are using the logging component and want the trace context information
-        /// to be associated with the log entries.
-        /// </summary>
-        public static IServiceCollection TryAddGoogleTraceContextProvider(this IServiceCollection services)
-        {
-            // We use TryAdd... here to allow user code to inject their own trace context provider
-            // and matching trace context response propagator. We use Google trace header otherwise.
-            services.TryAddScoped<ITraceContext>(ProvideGoogleTraceHeaderContext);
             return services;
-        }
-
-        /// <summary>
-        /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>
-        /// and a <see cref="TraceDecisionPredicate"/>.
-        /// Used by default to obtain trace context, if user code has not specified a trace context provider.
-        /// </summary>
-        internal static TraceHeaderContext ProvideGoogleTraceHeaderContext(IServiceProvider serviceProvider)
-        {
-            var accessor = serviceProvider.GetRequiredService<IHttpContextAccessor>();
-            string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
-            return TraceHeaderContext.FromHeader(header);
-        }
-
-        /// <summary>
-        /// Propagates Google trace context information to the response.
-        /// Used by default if user code has not specified a propagator of their own.
-        /// </summary>
-        internal static void PropagateGoogleTraceHeaders(HttpResponse response, ITraceContext traceContext)
-        {
-            var googleHeader = TraceHeaderContext.Create(traceContext.TraceId, traceContext.SpanId ?? 0, traceContext.ShouldTrace);
-            response.Headers.Add(TraceHeaderContext.TraceHeader, googleHeader.ToString());
         }
     }
 }

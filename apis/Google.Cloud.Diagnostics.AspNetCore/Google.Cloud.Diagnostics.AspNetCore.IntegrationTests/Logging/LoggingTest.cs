@@ -874,14 +874,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public override void ConfigureServices(IServiceCollection services) =>
             base.ConfigureServices(services
                 .AddHttpContextAccessor()
-                .AddGoogleTrace(options =>
+                .AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
                 {
-                    options.ProjectId = _projectId;
-                    options.Options = TraceOptions.Create(_traceQps, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate));
+                    ServiceOptions = new Common.TraceServiceOptions
+                    {
+                        ProjectId = _projectId,
+                        Options = TraceOptions.Create(
+                            _traceQps, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                    }
                 }));
-
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app.UseGoogleTrace(), loggerFactory);
     }
 
     /// <summary>

@@ -132,10 +132,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             services.AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>();
             services.AddSingleton<IStartupFilter>(new GoogleDiagnosticsStartupFilter(projectId, loggerOptions));
-            services.AddGoogleTrace(options =>
+            services.AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions 
             {
-                options.ProjectId = projectId;
-                options.Options = traceOptions;
+                ServiceOptions = new Common.TraceServiceOptions
+                {
+                    ProjectId = projectId,
+                    Options = traceOptions
+                }
             });
             services.AddGoogleExceptionLogging(options =>
             {

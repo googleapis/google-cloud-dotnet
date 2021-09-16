@@ -24,29 +24,8 @@ namespace Google.Cloud.Diagnostics.Common
     /// <remarks>
     /// <para>
     /// The functions here, aside from <see cref="IDisposable.Dispose"/>, do not need to be used in most cases. 
-    /// They need to be used when updating the current span in a disjoint thread. For example:
+    /// They need to be used when updating the current span in a disjoint thread.
     /// </para>
-    /// <code>
-    /// public void DoSomething(IManagedTracer tracer)
-    /// {
-    ///     var tcs = new TaskCompletionSource&lt;bool&gt;();
-    ///     ISpan span = null;
-    ///     Thread t = new Thread(() => 
-    ///     {
-    ///         span = tracer.StartSpan(nameof(DoSomething));
-    ///         tcs.SetResult(true);
-    ///     });
-    ///     Thread t2 = new Thread(() =>
-    ///     {
-    ///         tcs.Task.Wait();
-    ///         span.AnnotateSpan(new Dictionary&lt;string, string&gt; { { "new", "label"} });
-    ///         span.Dispose();
-    ///     });
-    ///     
-    ///     t.Start();
-    ///     t2.Start();
-    /// }
-    /// </code>
     /// <para>
     /// NOTE: While it is possible to end a span in another thread any new spans after this may be in
     /// a poor state.

@@ -15,15 +15,12 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Protobuf.WellKnownTypes;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -146,7 +143,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var childSpanName = EntryData.GetMessage(nameof(TraceController.TraceOutgoing), _testId);
             var outgoingSpanName = "https://google.com/";
 
-            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>();
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(
+                builder => builder.ConfigureServices(
+                    services => services.TryAddSingleton(
+#pragma warning disable CS0618 // Type or member is obsolete
+                        new TraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer))));
+#pragma warning restore CS0618 // Type or member is obsolete
             using var client = server.CreateClient();
             await client.GetAsync(uri);
 
@@ -675,10 +677,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddGoogleTrace(options =>
+            services.AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
             {
-                options.ProjectId = TestEnvironment.GetTestProjectId();
-                options.Options = TraceOptions.Create(GetSampleRate(), GetBufferOptions(), GetRetryOptions());
+                ServiceOptions = new Common.TraceServiceOptions
+                {
+                    ProjectId = TestEnvironment.GetTestProjectId(),
+                    Options = TraceOptions.Create(GetSampleRate(), GetBufferOptions(), GetRetryOptions())
+                }
             });
 
             services
@@ -687,9 +692,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             base.ConfigureServices(services);
         }
-
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) => 
-            base.Configure(app.UseGoogleTrace(), loggerFactory);
     }
 
     [Route("_ah")]
@@ -767,7 +769,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             return message;
         }
 
+#pragma warning disable CS0618 // Type or member is obsolete
         public async Task<string> TraceOutgoing(string id, [FromServices] IManagedTracer tracer, [FromServices] TraceHeaderPropagatingHandler propagatingHandler)
+#pragma warning restore CS0618 // Type or member is obsolete
         {
             string message = EntryData.GetMessage(nameof(TraceOutgoing), id);
             using (tracer.StartSpan(message))

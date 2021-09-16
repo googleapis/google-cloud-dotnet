@@ -14,7 +14,6 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Trace.V1;
-using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -112,7 +111,9 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private async Task TraceOutGoingRequest(string rootSpanName, string uri, bool exceptionExpected)
         {
             using (_tracer.StartSpan(rootSpanName))
+#pragma warning disable CS0618 // Type or member is obsolete
             using (var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => _tracer))
+#pragma warning restore CS0618 // Type or member is obsolete
             using (var httpClient = new HttpClient(traceHeaderHandler))
             {
                 try

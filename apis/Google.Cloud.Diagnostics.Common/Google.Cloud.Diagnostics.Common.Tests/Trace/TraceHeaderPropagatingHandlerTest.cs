@@ -30,7 +30,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void InnerHandler_Set()
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             var traceHandler = new TraceHeaderPropagatingHandler(() => new FakeManagedTracer(null, null));
+#pragma warning restore CS0618 // Type or member is obsolete
             Assert.NotNull(traceHandler.InnerHandler);
         }
 
@@ -38,7 +40,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task SendAsync_NoTrace()
         {
             var managedTracer = new FakeManagedTracer(null, null);
+#pragma warning disable CS0618 // Type or member is obsolete
             var traceHandler = new TraceHeaderPropagatingHandler(() => managedTracer, new BounceBackRequestHandler());
+#pragma warning restore CS0618 // Type or member is obsolete
 
             using var httpClient = new HttpClient(traceHandler);
             var response = await httpClient.GetAsync("https://www.google.com");
@@ -53,7 +57,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task SendAsync_Trace_Default()
         {
             var managedTracer = new FakeManagedTracer(TraceId, SpanId);
+#pragma warning disable CS0618 // Type or member is obsolete
             var traceHandler = new TraceHeaderPropagatingHandler(() => managedTracer, new BounceBackRequestHandler());
+#pragma warning restore CS0618 // Type or member is obsolete
 
             var url = "https://www.google.com/";
 
@@ -70,7 +76,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task SendAsync_Trace_Custom()
         {
             var managedTracer = new FakeManagedTracer(TraceId, SpanId);
+#pragma warning disable CS0618 // Type or member is obsolete
             var traceHandler = new TraceHeaderPropagatingHandler(
+#pragma warning restore CS0618 // Type or member is obsolete
                 () => managedTracer, SetOutgoingHttpTraceContext, new BounceBackRequestHandler());
 
             var url = "https://www.google.com/";

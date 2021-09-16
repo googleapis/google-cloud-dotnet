@@ -24,26 +24,21 @@ namespace Google.Cloud.Diagnostics.Common
     /// Extension methods for registering Google Cloud Trace for
     /// dependency injection.
     /// </summary>
-    public static class CloudTraceExtensions
+    public static class TraceExtensions
     {
         /// <summary>
         /// Configures Google Cloud Trace for dependency injection.
         /// </summary>
-        public static IServiceCollection AddGoogleTrace(
-            this IServiceCollection services, Action<TraceServiceOptions> setupAction)
+        public static IServiceCollection AddGoogleTrace(this IServiceCollection services, TraceServiceOptions options = null)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
-            GaxPreconditions.CheckNotNull(setupAction, nameof(setupAction));
 
-            var serviceOptions = new TraceServiceOptions();
-            setupAction(serviceOptions);
+            var client = options?.Client ?? TraceServiceClient.Create();
+            var traceOptions = options?.Options ?? TraceOptions.Create();
+            var projectId = Project.GetAndCheckProjectId(options?.ProjectId);
 
-            var client = serviceOptions.Client ?? TraceServiceClient.Create();
-            var options = serviceOptions.Options ?? TraceOptions.Create();
-            var projectId = Project.GetAndCheckProjectId(serviceOptions.ProjectId);
-
-            var consumer = ManagedTracer.CreateConsumer(client, options);
-            var tracerFactory = ManagedTracer.CreateFactory(projectId, consumer, options);
+            var consumer = ManagedTracer.CreateConsumer(client, traceOptions);
+            var tracerFactory = ManagedTracer.CreateFactory(projectId, consumer, traceOptions);
 
             services.AddSingleton(tracerFactory);
             services.AddSingleton(ManagedTracer.CreateDelegatingTracer(ContextTracerManager.GetCurrentTracer));
