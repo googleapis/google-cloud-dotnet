@@ -180,6 +180,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.PasswordCorrect,
+                Reasons =
+                {
+                    AnnotateAssessmentRequest.Types.Reason.InitiatedTwoFactor,
+                },
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -197,6 +201,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.PasswordCorrect,
+                Reasons =
+                {
+                    AnnotateAssessmentRequest.Types.Reason.InitiatedTwoFactor,
+                },
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -304,6 +312,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -336,6 +345,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
             };
             mockGrpcClient.Setup(x => x.CreateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -369,6 +379,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -400,6 +411,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
             };
             mockGrpcClient.Setup(x => x.GetKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -434,6 +446,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
             };
             mockGrpcClient.Setup(x => x.UpdateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -466,6 +479,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                     },
                 },
                 CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
             };
             mockGrpcClient.Setup(x => x.UpdateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -504,6 +518,228 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
             await client.DeleteKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteKeyAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void MigrateKeyRequestObject()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            MigrateKeyRequest request = new MigrateKeyRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Key expectedResponse = new Key
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                DisplayName = "display_name137f65c2",
+                WebSettings = new WebKeySettings(),
+                AndroidSettings = new AndroidKeySettings(),
+                IosSettings = new IOSKeySettings(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
+            };
+            mockGrpcClient.Setup(x => x.MigrateKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Key response = client.MigrateKey(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task MigrateKeyRequestObjectAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            MigrateKeyRequest request = new MigrateKeyRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Key expectedResponse = new Key
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+                DisplayName = "display_name137f65c2",
+                WebSettings = new WebKeySettings(),
+                AndroidSettings = new AndroidKeySettings(),
+                IosSettings = new IOSKeySettings(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                TestingOptions = new TestingOptions(),
+            };
+            mockGrpcClient.Setup(x => x.MigrateKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Key>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Key responseCallSettings = await client.MigrateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Key responseCancellationToken = await client.MigrateKeyAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMetricsRequestObject()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Metrics expectedResponse = new Metrics
+            {
+                StartTime = new wkt::Timestamp(),
+                ScoreMetrics = { new ScoreMetrics(), },
+                ChallengeMetrics =
+                {
+                    new ChallengeMetrics(),
+                },
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetrics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Metrics response = client.GetMetrics(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetricsRequestObjectAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Metrics expectedResponse = new Metrics
+            {
+                StartTime = new wkt::Timestamp(),
+                ScoreMetrics = { new ScoreMetrics(), },
+                ChallengeMetrics =
+                {
+                    new ChallengeMetrics(),
+                },
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetricsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metrics>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Metrics responseCallSettings = await client.GetMetricsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Metrics responseCancellationToken = await client.GetMetricsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMetrics()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Metrics expectedResponse = new Metrics
+            {
+                StartTime = new wkt::Timestamp(),
+                ScoreMetrics = { new ScoreMetrics(), },
+                ChallengeMetrics =
+                {
+                    new ChallengeMetrics(),
+                },
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetrics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Metrics response = client.GetMetrics(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetricsAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Metrics expectedResponse = new Metrics
+            {
+                StartTime = new wkt::Timestamp(),
+                ScoreMetrics = { new ScoreMetrics(), },
+                ChallengeMetrics =
+                {
+                    new ChallengeMetrics(),
+                },
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetricsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metrics>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Metrics responseCallSettings = await client.GetMetricsAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Metrics responseCancellationToken = await client.GetMetricsAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMetricsResourceNames()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Metrics expectedResponse = new Metrics
+            {
+                StartTime = new wkt::Timestamp(),
+                ScoreMetrics = { new ScoreMetrics(), },
+                ChallengeMetrics =
+                {
+                    new ChallengeMetrics(),
+                },
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetrics(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Metrics response = client.GetMetrics(request.MetricsName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMetricsResourceNamesAsync()
+        {
+            moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient> mockGrpcClient = new moq::Mock<RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient>(moq::MockBehavior.Strict);
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            Metrics expectedResponse = new Metrics
+            {
+                StartTime = new wkt::Timestamp(),
+                ScoreMetrics = { new ScoreMetrics(), },
+                ChallengeMetrics =
+                {
+                    new ChallengeMetrics(),
+                },
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            mockGrpcClient.Setup(x => x.GetMetricsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Metrics>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
+            Metrics responseCallSettings = await client.GetMetricsAsync(request.MetricsName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Metrics responseCancellationToken = await client.GetMetricsAsync(request.MetricsName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
     }

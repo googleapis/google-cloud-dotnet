@@ -40,10 +40,22 @@
                 "GetKeyAsync"
               ]
             },
+            "GetMetrics": {
+              "methods": [
+                "GetMetrics",
+                "GetMetricsAsync"
+              ]
+            },
             "ListKeys": {
               "methods": [
                 "ListKeys",
                 "ListKeysAsync"
+              ]
+            },
+            "MigrateKey": {
+              "methods": [
+                "MigrateKey",
+                "MigrateKeyAsync"
               ]
             },
             "UpdateKey": {
