@@ -214,21 +214,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 application.ConfigureServices(services);
                 base.ConfigureServices(services);
             }
-
-            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-            {
-                application.Configure(app);
-                base.Configure(app, loggerFactory);
-            }
         }
 
         // Sample: RegisterGoogleTracer
         public void ConfigureServices(IServiceCollection services)
         {
             // Replace ProjectId with your Google Cloud Project ID.
-            services.AddGoogleTrace(options =>
+            services.AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
             {
-                options.ProjectId = ProjectId;
+                ServiceOptions = new Common.TraceServiceOptions
+                {
+                    ProjectId = ProjectId
+                }
             });
 
             // Add any other services your application requires, for instance,
@@ -238,32 +235,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // services.AddMvc();
 
             // services.AddControllersWithViews();
-        }
-
-        public void Configure(IApplicationBuilder app)
-        {
-            // Use at the start of the request pipeline to ensure the entire request is traced.
-            app.UseGoogleTrace();
-
-            // Add any other configuration your application requires, for instance,
-            // depending on the verson of ASP.NET Core you are using, you may
-            // need one of the following:
-
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=Index}/{id?}");
-            //});
-
-            //app.UseRouting();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //    endpoints.MapRazorPages();
-            //});
         }
         // End sample
     }
@@ -283,21 +254,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 application.ConfigureServices(services);
                 base.ConfigureServices(services);
             }
-
-            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-            {
-                application.Configure(app);
-                base.Configure(app, loggerFactory);
-            }
         }
 
         // Sample: ConfigureHttpClient
         public void ConfigureServices(IServiceCollection services)
         {
             // Replace ProjectId with your Google Cloud Project ID.
-            services.AddGoogleTrace(options =>
+            services.AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
             {
-                options.ProjectId = ProjectId;
+                ServiceOptions = new Common.TraceServiceOptions
+                {
+                    ProjectId = ProjectId
+                }
             });
 
             // Register an HttpClient for outgoing requests.
@@ -313,32 +281,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // services.AddMvc();
 
             // services.AddControllersWithViews();
-        }
-
-        public void Configure(IApplicationBuilder app)
-        {
-            // Use at the start of the request pipeline to ensure the entire request is traced.
-            app.UseGoogleTrace();
-
-            // Add any other configuration your application requires, for instance,
-            // depending on the verson of ASP.NET Core you are using, you may
-            // need one of the following:
-
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=Index}/{id?}");
-            //});
-
-            //app.UseRouting();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //    endpoints.MapRazorPages();
-            //});
         }
         // End sample
     }
@@ -357,12 +299,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             {
                 application.ConfigureServices(services);
                 base.ConfigureServices(services);
-            }
-
-            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-            {
-                application.Configure(app);
-                base.Configure(app, loggerFactory);
             }
         }
 
@@ -387,9 +323,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // Now you can register Google Trace normally.
 
             // Replace ProjectId with your Google Cloud Project ID.
-            services.AddGoogleTrace(options =>
+            services.AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
             {
-                options.ProjectId = ProjectId;
+                ServiceOptions = new Common.TraceServiceOptions
+                {
+                    ProjectId = ProjectId
+                }
             });
 
             // If your application is making outgoing HTTP requests then you configure
@@ -413,32 +352,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // services.AddMvc();
 
             // services.AddControllersWithViews();
-        }
-
-        public void Configure(IApplicationBuilder app)
-        {
-            // Use at the start of the request pipeline to ensure the entire request is traced.
-            app.UseGoogleTrace();
-
-            // Add any other configuration your application requires, for instance,
-            // depending on the verson of ASP.NET Core you are using, you may
-            // need one of the following:
-
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=Index}/{id?}");
-            //});
-
-            //app.UseRouting();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //    endpoints.MapRazorPages();
-            //});
         }
         // End sample
     }

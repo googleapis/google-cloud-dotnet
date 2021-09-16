@@ -13,16 +13,14 @@
 // limitations under the License.
 
 using Google.Cloud.ClientTesting;
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
+namespace Google.Cloud.Diagnostics.Common.Snippets
 {
     public class StandaloneTraceSnippets
     {
@@ -48,7 +46,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             new HostBuilder()
                 .ConfigureServices(services =>
                 {
-                    services.AddGoogleTrace(options => options.ProjectId = ProjectId);
+                    services.AddGoogleTrace(new Common.TraceServiceOptions { ProjectId = ProjectId });
                     // Register other services here if you need them.
                 });
         // End sample

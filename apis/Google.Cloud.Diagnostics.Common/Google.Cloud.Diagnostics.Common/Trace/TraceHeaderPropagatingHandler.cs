@@ -20,25 +20,15 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Traces outgoing HTTP requests and propagates the trace header.
     /// </summary>
-    /// 
-    /// <example>
-    /// <code>
-    /// public void DoSomething(IManagedTracer tracer)
-    /// {
-    ///     var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => tracer);
-    ///     using (var httpClient = new HttpClient(traceHeaderHandler))
-    ///     {
-    ///         ...
-    ///     }
-    /// }
-    /// </code>
-    /// </example>
-    ///
     /// <remarks>
     /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
     /// traces the total time of the outgoing HTTP request. This is only done if tracing is initialized
-    /// and tracing is enabled for the request current request.
+    /// and tracing is enabled for the current request.
     /// </remarks>
+    [Obsolete(
+        "Use Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions.AddOutgoingGoogleTraceHandler insted. " +
+        "For more information see " +
+        "https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests")]
     public class TraceHeaderPropagatingHandler : UnchainedTraceHeaderPropagatingHandler
     {
         /// <summary>

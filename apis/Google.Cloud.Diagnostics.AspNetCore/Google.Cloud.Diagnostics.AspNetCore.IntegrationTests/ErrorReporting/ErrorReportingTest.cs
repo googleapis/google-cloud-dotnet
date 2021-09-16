@@ -159,15 +159,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                         // This is just so that our validator finds the log entries associated to errors.
                         options.Options = ErrorReportingOptions.Create(EventTarget.ForLogging(ProjectId, "aspnetcore"));
                     })
-                    .AddGoogleTrace(options =>
+                    .AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
                     {
-                        options.ProjectId = ProjectId;
-                        options.Options = TraceOptions.Create(
-                            double.PositiveInfinity, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate));
+                        ServiceOptions = new Common.TraceServiceOptions
+                        {
+                            ProjectId = ProjectId,
+                            Options = TraceOptions.Create(
+                                double.PositiveInfinity, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                        }
                     }));
 
             public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-                base.Configure(app.UseGoogleTrace().UseGoogleExceptionLogging(), loggerFactory);
+                base.Configure(app.UseGoogleExceptionLogging(), loggerFactory);
         }
     }
 

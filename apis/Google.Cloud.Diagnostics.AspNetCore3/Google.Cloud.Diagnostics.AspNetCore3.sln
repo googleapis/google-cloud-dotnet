@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests", "Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests.csproj", "{55ADEA18-CC4A-4D59-B45E-019EB2556321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.AspNetCore3.Snippets", "Google.Cloud.Diagnostics.AspNetCore3.Snippets\Google.Cloud.Diagnostics.AspNetCore3.Snippets.csproj", "{4E2ABCC6-9E0F-4072-BFE2-4FCF2F3ECD55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.AspNetCore3.Snippets", "Google.Cloud.Diagnostics.AspNetCore3.Snippets\Google.Cloud.Diagnostics.AspNetCore3.Snippets.csproj", "{4E2ABCC6-9E0F-4072-BFE2-4FCF2F3ECD55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{E674FE57-7F07-4F3D-AF76-4A9FB5737129}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{E674FE57-7F07-4F3D-AF76-4A9FB5737129}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Diagnostics.Common.Snippets", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Snippets\Google.Cloud.Diagnostics.Common.Snippets.csproj", "{0DB81989-606E-4BF6-9E6C-938896D65727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{E674FE57-7F07-4F3D-AF76-4A9FB5737129}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E674FE57-7F07-4F3D-AF76-4A9FB5737129}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E674FE57-7F07-4F3D-AF76-4A9FB5737129}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB81989-606E-4BF6-9E6C-938896D65727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB81989-606E-4BF6-9E6C-938896D65727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB81989-606E-4BF6-9E6C-938896D65727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB81989-606E-4BF6-9E6C-938896D65727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
