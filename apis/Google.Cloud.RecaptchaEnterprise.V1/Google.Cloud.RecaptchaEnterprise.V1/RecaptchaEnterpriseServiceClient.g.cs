@@ -55,6 +55,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             GetKeySettings = existing.GetKeySettings;
             UpdateKeySettings = existing.UpdateKeySettings;
             DeleteKeySettings = existing.DeleteKeySettings;
+            MigrateKeySettings = existing.MigrateKeySettings;
+            GetMetricsSettings = existing.GetMetricsSettings;
             OnCopy(existing);
         }
 
@@ -148,6 +150,32 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.MigrateKey</c> and <c>RecaptchaEnterpriseServiceClient.MigrateKeyAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MigrateKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.GetMetrics</c> and <c>RecaptchaEnterpriseServiceClient.GetMetricsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMetricsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RecaptchaEnterpriseServiceSettings"/> object.</returns>
@@ -448,7 +476,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -458,7 +486,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -468,7 +496,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -478,14 +506,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -498,14 +528,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -518,14 +550,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -534,14 +568,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -554,14 +590,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -574,14 +612,16 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Assessment, in the format
         /// "projects/{project}/assessments/{assessment}".
         /// </param>
         /// <param name="annotation">
-        /// Required. The annotation that will be assigned to the Event.
+        /// Optional. The annotation that will be assigned to the Event. This field can be left
+        /// empty to provide reasons that apply to an event without concluding whether
+        /// the event is legitimate or fraudulent.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -713,6 +753,168 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteKeyAsync(DeleteKeyRequest request, st::CancellationToken cancellationToken) =>
             DeleteKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+        /// Once a key is migrated, it can be used from either product. SiteVerify
+        /// requests are billed as CreateAssessment calls. You must be
+        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+        /// destination project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Key MigrateKey(MigrateKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+        /// Once a key is migrated, it can be used from either product. SiteVerify
+        /// requests are billed as CreateAssessment calls. You must be
+        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+        /// destination project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> MigrateKeyAsync(MigrateKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+        /// Once a key is migrated, it can be used from either product. SiteVerify
+        /// requests are billed as CreateAssessment calls. You must be
+        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+        /// destination project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Key> MigrateKeyAsync(MigrateKeyRequest request, st::CancellationToken cancellationToken) =>
+            MigrateKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Metrics GetMetrics(GetMetricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metrics> GetMetricsAsync(GetMetricsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metrics> GetMetricsAsync(GetMetricsRequest request, st::CancellationToken cancellationToken) =>
+            GetMetricsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested metrics, in the format
+        /// "projects/{project}/keys/{key}/metrics".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Metrics GetMetrics(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetrics(new GetMetricsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested metrics, in the format
+        /// "projects/{project}/keys/{key}/metrics".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metrics> GetMetricsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetricsAsync(new GetMetricsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested metrics, in the format
+        /// "projects/{project}/keys/{key}/metrics".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metrics> GetMetricsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMetricsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested metrics, in the format
+        /// "projects/{project}/keys/{key}/metrics".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Metrics GetMetrics(MetricsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetrics(new GetMetricsRequest
+            {
+                MetricsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested metrics, in the format
+        /// "projects/{project}/keys/{key}/metrics".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metrics> GetMetricsAsync(MetricsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMetricsAsync(new GetMetricsRequest
+            {
+                MetricsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the requested metrics, in the format
+        /// "projects/{project}/keys/{key}/metrics".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Metrics> GetMetricsAsync(MetricsName name, st::CancellationToken cancellationToken) =>
+            GetMetricsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>RecaptchaEnterpriseService client wrapper implementation, for convenient use.</summary>
@@ -734,6 +936,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         private readonly gaxgrpc::ApiCall<UpdateKeyRequest, Key> _callUpdateKey;
 
         private readonly gaxgrpc::ApiCall<DeleteKeyRequest, wkt::Empty> _callDeleteKey;
+
+        private readonly gaxgrpc::ApiCall<MigrateKeyRequest, Key> _callMigrateKey;
+
+        private readonly gaxgrpc::ApiCall<GetMetricsRequest, Metrics> _callGetMetrics;
 
         /// <summary>
         /// Constructs a client wrapper for the RecaptchaEnterpriseService service, with the specified gRPC client and
@@ -769,6 +975,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callDeleteKey = clientHelper.BuildApiCall<DeleteKeyRequest, wkt::Empty>(grpcClient.DeleteKeyAsync, grpcClient.DeleteKey, effectiveSettings.DeleteKeySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteKey);
             Modify_DeleteKeyApiCall(ref _callDeleteKey);
+            _callMigrateKey = clientHelper.BuildApiCall<MigrateKeyRequest, Key>(grpcClient.MigrateKeyAsync, grpcClient.MigrateKey, effectiveSettings.MigrateKeySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMigrateKey);
+            Modify_MigrateKeyApiCall(ref _callMigrateKey);
+            _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>(grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMetrics);
+            Modify_GetMetricsApiCall(ref _callGetMetrics);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -788,6 +1000,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_DeleteKeyApiCall(ref gaxgrpc::ApiCall<DeleteKeyRequest, wkt::Empty> call);
 
+        partial void Modify_MigrateKeyApiCall(ref gaxgrpc::ApiCall<MigrateKeyRequest, Key> call);
+
+        partial void Modify_GetMetricsApiCall(ref gaxgrpc::ApiCall<GetMetricsRequest, Metrics> call);
+
         partial void OnConstruction(RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient grpcClient, RecaptchaEnterpriseServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC RecaptchaEnterpriseService client</summary>
@@ -806,6 +1022,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_UpdateKeyRequest(ref UpdateKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteKeyRequest(ref DeleteKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MigrateKeyRequest(ref MigrateKeyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMetricsRequest(ref GetMetricsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates an Assessment of the likelihood an event is legitimate.
@@ -833,7 +1053,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -846,7 +1066,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         /// <summary>
         /// Annotates a previously created Assessment to provide additional information
-        /// on whether the event turned out to be authentic or fradulent.
+        /// on whether the event turned out to be authentic or fraudulent.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -975,6 +1195,66 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         {
             Modify_DeleteKeyRequest(ref request, ref callSettings);
             return _callDeleteKey.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+        /// Once a key is migrated, it can be used from either product. SiteVerify
+        /// requests are billed as CreateAssessment calls. You must be
+        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+        /// destination project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Key MigrateKey(MigrateKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MigrateKeyRequest(ref request, ref callSettings);
+            return _callMigrateKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+        /// Once a key is migrated, it can be used from either product. SiteVerify
+        /// requests are billed as CreateAssessment calls. You must be
+        /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+        /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+        /// destination project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Key> MigrateKeyAsync(MigrateKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MigrateKeyRequest(ref request, ref callSettings);
+            return _callMigrateKey.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Metrics GetMetrics(GetMetricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetricsRequest(ref request, ref callSettings);
+            return _callGetMetrics.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get some aggregated metrics for a Key. This data can be used to build
+        /// dashboards.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Metrics> GetMetricsAsync(GetMetricsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMetricsRequest(ref request, ref callSettings);
+            return _callGetMetrics.Async(request, callSettings);
         }
     }
 

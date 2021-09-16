@@ -3,7 +3,7 @@
 //     source: google/cloud/recaptchaenterprise/v1/recaptchaenterprise.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -87,6 +87,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_MigrateKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> __Marshaller_google_cloud_recaptchaenterprise_v1_Metrics = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Assessment> __Method_CreateAssessment = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Assessment>(
@@ -144,6 +150,22 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         __Marshaller_google_cloud_recaptchaenterprise_v1_DeleteKeyRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key> __Method_MigrateKey = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MigrateKey",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_MigrateKeyRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_Key);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> __Method_GetMetrics = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMetrics",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_GetMetricsRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_Metrics);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -168,7 +190,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
 
       /// <summary>
       /// Annotates a previously created Assessment to provide additional information
-      /// on whether the event turned out to be authentic or fradulent.
+      /// on whether the event turned out to be authentic or fraudulent.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -235,6 +257,36 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteKey(global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+      /// Once a key is migrated, it can be used from either product. SiteVerify
+      /// requests are billed as CreateAssessment calls. You must be
+      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+      /// destination project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.Key> MigrateKey(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get some aggregated metrics for a Key. This data can be used to build
+      /// dashboards.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> GetMetrics(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -318,7 +370,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
       /// <summary>
       /// Annotates a previously created Assessment to provide additional information
-      /// on whether the event turned out to be authentic or fradulent.
+      /// on whether the event turned out to be authentic or fraudulent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -332,7 +384,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
       /// <summary>
       /// Annotates a previously created Assessment to provide additional information
-      /// on whether the event turned out to be authentic or fradulent.
+      /// on whether the event turned out to be authentic or fraudulent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -344,7 +396,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
       /// <summary>
       /// Annotates a previously created Assessment to provide additional information
-      /// on whether the event turned out to be authentic or fradulent.
+      /// on whether the event turned out to be authentic or fraudulent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -358,7 +410,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       }
       /// <summary>
       /// Annotates a previously created Assessment to provide additional information
-      /// on whether the event turned out to be authentic or fradulent.
+      /// on whether the event turned out to be authentic or fraudulent.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -608,6 +660,126 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteKey, null, options, request);
       }
+      /// <summary>
+      /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+      /// Once a key is migrated, it can be used from either product. SiteVerify
+      /// requests are billed as CreateAssessment calls. You must be
+      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+      /// destination project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.Key MigrateKey(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MigrateKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+      /// Once a key is migrated, it can be used from either product. SiteVerify
+      /// requests are billed as CreateAssessment calls. You must be
+      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+      /// destination project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.Key MigrateKey(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MigrateKey, null, options, request);
+      }
+      /// <summary>
+      /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+      /// Once a key is migrated, it can be used from either product. SiteVerify
+      /// requests are billed as CreateAssessment calls. You must be
+      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+      /// destination project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.Key> MigrateKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MigrateKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise.
+      /// Once a key is migrated, it can be used from either product. SiteVerify
+      /// requests are billed as CreateAssessment calls. You must be
+      /// authenticated as one of the current owners of the reCAPTCHA Site Key, and
+      /// your user must have the reCAPTCHA Enterprise Admin IAM role in the
+      /// destination project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.Key> MigrateKeyAsync(global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MigrateKey, null, options, request);
+      }
+      /// <summary>
+      /// Get some aggregated metrics for a Key. This data can be used to build
+      /// dashboards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.Metrics GetMetrics(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMetrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get some aggregated metrics for a Key. This data can be used to build
+      /// dashboards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.Metrics GetMetrics(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Get some aggregated metrics for a Key. This data can be used to build
+      /// dashboards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> GetMetricsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMetricsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get some aggregated metrics for a Key. This data can be used to build
+      /// dashboards.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> GetMetricsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMetrics, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RecaptchaEnterpriseServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -628,7 +800,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
           .AddMethod(__Method_ListKeys, serviceImpl.ListKeys)
           .AddMethod(__Method_GetKey, serviceImpl.GetKey)
           .AddMethod(__Method_UpdateKey, serviceImpl.UpdateKey)
-          .AddMethod(__Method_DeleteKey, serviceImpl.DeleteKey).Build();
+          .AddMethod(__Method_DeleteKey, serviceImpl.DeleteKey)
+          .AddMethod(__Method_MigrateKey, serviceImpl.MigrateKey)
+          .AddMethod(__Method_GetMetrics, serviceImpl.GetMetrics).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -645,6 +819,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       serviceBinder.AddMethod(__Method_GetKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.GetKey));
       serviceBinder.AddMethod(__Method_UpdateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.UpdateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.UpdateKey));
       serviceBinder.AddMethod(__Method_DeleteKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteKey));
+      serviceBinder.AddMethod(__Method_MigrateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.MigrateKey));
+      serviceBinder.AddMethod(__Method_GetMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics>(serviceImpl.GetMetrics));
     }
 
   }

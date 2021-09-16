@@ -130,6 +130,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+                Reasons =
+                {
+                    AnnotateAssessmentRequest.Types.Reason.Unspecified,
+                },
             };
             // Make the request
             AnnotateAssessmentResponse response = recaptchaEnterpriseServiceClient.AnnotateAssessment(request);
@@ -148,6 +152,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             {
                 AssessmentName = AssessmentName.FromProjectAssessment("[PROJECT]", "[ASSESSMENT]"),
                 Annotation = AnnotateAssessmentRequest.Types.Annotation.Unspecified,
+                Reasons =
+                {
+                    AnnotateAssessmentRequest.Types.Reason.Unspecified,
+                },
             };
             // Make the request
             AnnotateAssessmentResponse response = await recaptchaEnterpriseServiceClient.AnnotateAssessmentAsync(request);
@@ -441,6 +449,126 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Snippets
             };
             // Make the request
             await recaptchaEnterpriseServiceClient.DeleteKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MigrateKey</summary>
+        public void MigrateKeyRequestObject()
+        {
+            // Snippet: MigrateKey(MigrateKeyRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            MigrateKeyRequest request = new MigrateKeyRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Key response = recaptchaEnterpriseServiceClient.MigrateKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MigrateKeyAsync</summary>
+        public async Task MigrateKeyRequestObjectAsync()
+        {
+            // Snippet: MigrateKeyAsync(MigrateKeyRequest, CallSettings)
+            // Additional: MigrateKeyAsync(MigrateKeyRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MigrateKeyRequest request = new MigrateKeyRequest
+            {
+                KeyName = KeyName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Key response = await recaptchaEnterpriseServiceClient.MigrateKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetrics</summary>
+        public void GetMetricsRequestObject()
+        {
+            // Snippet: GetMetrics(GetMetricsRequest, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Metrics response = recaptchaEnterpriseServiceClient.GetMetrics(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetricsAsync</summary>
+        public async Task GetMetricsRequestObjectAsync()
+        {
+            // Snippet: GetMetricsAsync(GetMetricsRequest, CallSettings)
+            // Additional: GetMetricsAsync(GetMetricsRequest, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMetricsRequest request = new GetMetricsRequest
+            {
+                MetricsName = MetricsName.FromProjectKey("[PROJECT]", "[KEY]"),
+            };
+            // Make the request
+            Metrics response = await recaptchaEnterpriseServiceClient.GetMetricsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetrics</summary>
+        public void GetMetrics()
+        {
+            // Snippet: GetMetrics(string, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]/metrics";
+            // Make the request
+            Metrics response = recaptchaEnterpriseServiceClient.GetMetrics(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetricsAsync</summary>
+        public async Task GetMetricsAsync()
+        {
+            // Snippet: GetMetricsAsync(string, CallSettings)
+            // Additional: GetMetricsAsync(string, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/keys/[KEY]/metrics";
+            // Make the request
+            Metrics response = await recaptchaEnterpriseServiceClient.GetMetricsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetrics</summary>
+        public void GetMetricsResourceNames()
+        {
+            // Snippet: GetMetrics(MetricsName, CallSettings)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = RecaptchaEnterpriseServiceClient.Create();
+            // Initialize request argument(s)
+            MetricsName name = MetricsName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            Metrics response = recaptchaEnterpriseServiceClient.GetMetrics(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMetricsAsync</summary>
+        public async Task GetMetricsResourceNamesAsync()
+        {
+            // Snippet: GetMetricsAsync(MetricsName, CallSettings)
+            // Additional: GetMetricsAsync(MetricsName, CancellationToken)
+            // Create client
+            RecaptchaEnterpriseServiceClient recaptchaEnterpriseServiceClient = await RecaptchaEnterpriseServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MetricsName name = MetricsName.FromProjectKey("[PROJECT]", "[KEY]");
+            // Make the request
+            Metrics response = await recaptchaEnterpriseServiceClient.GetMetricsAsync(name);
             // End snippet
         }
     }
