@@ -43,7 +43,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes on individual mutations:
-        /// <list>
+        /// <list type="bullet">
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
@@ -70,7 +70,7 @@ namespace Google.Cloud.Bigtable.V2
         /// <item><description>Retry maximum delay: 60000 milliseconds</description></item>
         /// </list>
         /// Retry will be attempted on the following response status codes on individual mutations:
-        /// <list>
+        /// <list type="bullet">
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
