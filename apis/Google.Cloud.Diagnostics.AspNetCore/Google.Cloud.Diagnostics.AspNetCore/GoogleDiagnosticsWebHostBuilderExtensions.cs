@@ -140,12 +140,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                     Options = traceOptions
                 }
             });
-            services.AddGoogleExceptionLogging(options =>
+            services.AddGoogleErrorReportingForAspNetCore(new Common.ErrorReportingServiceOptions
             {
-                options.ProjectId = projectId;
-                options.ServiceName = Project.GetServiceName(serviceName, null);
-                options.Version = Project.GetServiceVersion(serviceVersion, null);
-                options.Options = errorReportingOptions;
+                ProjectId = projectId,
+                ServiceName = serviceName,
+                Version = serviceVersion,
+                Options = errorReportingOptions
             });
         }
     }

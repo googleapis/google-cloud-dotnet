@@ -74,8 +74,12 @@ namespace Google.Cloud.Diagnostics.Common
             ErrorReportingOptions options = null)
         {
             options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = options.CreateConsumer();
-            return new ErrorReportingContextExceptionLogger(consumer, serviceName, version, options, serviceProvider);
+            return new ErrorReportingContextExceptionLogger(
+                options.CreateConsumer(),
+                Project.GetServiceName(serviceName, options.EventTarget?.MonitoredResource),
+                Project.GetServiceVersion(version, options.EventTarget?.MonitoredResource),
+                options,
+                serviceProvider);
         }
 
         /// <inheritdoc />

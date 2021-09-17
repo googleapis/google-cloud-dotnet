@@ -16,11 +16,9 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.V2;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Net;
@@ -151,14 +149,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             public override void ConfigureServices(IServiceCollection services) =>
                 base.ConfigureServices(services
-                    .AddGoogleExceptionLogging(options =>
-                    {
-                        options.ProjectId = ProjectId;
-                        options.ServiceName = EntryData.Service;
-                        options.Version = EntryData.Version;
-                        // This is just so that our validator finds the log entries associated to errors.
-                        options.Options = ErrorReportingOptions.Create(EventTarget.ForLogging(ProjectId, "aspnetcore"));
-                    })
                     .AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
                     {
                         ServiceOptions = new Common.TraceServiceOptions
@@ -167,10 +157,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                             Options = TraceOptions.Create(
                                 double.PositiveInfinity, BufferOptions.NoBuffer(), RetryOptions.NoRetry(ExceptionHandling.Propagate))
                         }
+                    })
+                    .AddGoogleErrorReportingForAspNetCore(new Common.ErrorReportingServiceOptions
+                    {
+                        ProjectId = ProjectId,
+                        ServiceName = EntryData.Service,
+                        Version = EntryData.Version,
+                        // This is just so that our validator finds the log entries associated to errors.
+                        Options = ErrorReportingOptions.Create(EventTarget.ForLogging(ProjectId, "aspnetcore"))
                     }));
-
-            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-                base.Configure(app.UseGoogleExceptionLogging(), loggerFactory);
         }
     }
 

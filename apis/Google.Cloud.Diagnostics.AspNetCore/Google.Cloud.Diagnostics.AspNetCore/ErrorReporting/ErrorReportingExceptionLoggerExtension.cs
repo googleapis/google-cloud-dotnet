@@ -32,35 +32,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     ///  To ensure all unhandled exceptions are reported, this should be
     ///  the first piece of middleware used.
     /// </summary>
-    /// 
-    /// <example>
-    /// <code>
-    /// public void ConfigureServices(IServiceCollection services)
-    /// {
-    ///     string projectId = "[Google Cloud Platform project ID]";
-    ///     string serviceName = "[Name of service]";
-    ///     string version = "[Version of service]";
-    ///     services.AddGoogleExceptionLogging(projectId, serviceName, version);
-    ///     ...
-    /// }
-    /// </code>
-    /// </example>
-    /// 
-    /// <example>
-    /// <code>
-    /// public void Configure(IApplicationBuilder app)
-    /// {
-    ///     // Use before handling any requests to ensure all unhandled exceptions are reported.
-    ///     app.UseGoogleExceptionLogging();
-    ///     ...
-    /// }
-    /// </code>
-    /// </example>
-    /// 
-    /// <remarks>
-    /// Reports unhandled exceptions to Google Cloud Error Reporting.
-    /// Docs: https://cloud.google.com/error-reporting/docs/
-    /// </remarks>
+#if NETCOREAPP3_1
+    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreErrorReportingExtensions instead.")]
+#elif NETSTANDARD2_0
+    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreErrorReportingExtensions instead.")]
+#else
+#error unknown target framework
+#endif
     public static class ErrorReportingExceptionLoggerExtension
     {
         /// <summary>
@@ -68,6 +46,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Error Reporting API.
         /// </summary>
         /// <param name="app">The application builder. Must not be null.</param>
+#if NETCOREAPP3_1
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore " +
+            "for configuring Google Cloud Error Reporting in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
+#elif NETSTANDARD2_0
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore " +
+            "for configuring Google Cloud Error Reporting in ASP.NET Core applications. There's no need to explicitly register the middleware.")]
+#else
+#error unknown target framework
+#endif
         public static IApplicationBuilder UseGoogleExceptionLogging(this IApplicationBuilder app)
         {
             GaxPreconditions.CheckNotNull(app, nameof(app));
@@ -92,7 +79,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// with both exceptions will be thrown.  Otherwise only the exception from the <see cref="RequestDelegate"/>
         /// will be thrown.
         /// </remarks>
-        public static IServiceCollection AddGoogleExceptionLogging(
+#if NETCOREAPP3_1
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore instead.")]
+#elif NETSTANDARD2_0
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreErrorReportingExtensions.AddGoogleErrorReportingForAspNetCore instead.")]
+#else
+#error unknown target framework
+#endif
+    public static IServiceCollection AddGoogleExceptionLogging(
             this IServiceCollection services, Action<ErrorReportingServiceOptions> setupAction)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
@@ -100,21 +94,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             var serviceOptions = new ErrorReportingServiceOptions();
             setupAction(serviceOptions);
-            services.AddHttpContextAccessor();
-            services.AddSingleton(ContextExceptionLogger.Create(
-                serviceOptions.ProjectId, serviceOptions.ServiceName, serviceOptions.Version, serviceOptions.Options));
-            return services.AddSingleton(CreateExceptionLogger);
-        }
 
-
-        /// <summary>
-        /// Creates an <see cref="IExceptionLogger"/>.
-        /// </summary>
-        private static IExceptionLogger CreateExceptionLogger(IServiceProvider provider)
-        {
-            var accessor = provider.GetRequiredService<IHttpContextAccessor>();
-            var contextLogger = provider.GetRequiredService<IContextExceptionLogger>();
-            return new GoogleExceptionLogger(contextLogger, accessor);
+            return services.AddGoogleErrorReportingForAspNetCore(registerMiddleware: false, new Common.ErrorReportingServiceOptions
+            {
+                ProjectId = serviceOptions.ProjectId,
+                ServiceName = serviceOptions.ServiceName,
+                Version = serviceOptions.Version,
+                Options = serviceOptions.Options
+            });
         }
     }
 }
