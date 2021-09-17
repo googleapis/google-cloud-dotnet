@@ -19,7 +19,8 @@ using System.Diagnostics;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Optional configuration to be used when initializing error reporting.
+    /// Optional configuration to be used when initializing
+    /// Google Cloud Error Reporting.
     /// </summary>
     public sealed class ErrorReportingOptions
     {

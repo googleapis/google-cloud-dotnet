@@ -59,7 +59,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             {
                 var loggerFactory = app.ApplicationServices.GetRequiredService<ILoggerFactory>();
                 loggerFactory.AddGoogle(app.ApplicationServices, _projectId, _loggerOptions);
-                app.UseGoogleExceptionLogging();
 
                 next(app);
             };

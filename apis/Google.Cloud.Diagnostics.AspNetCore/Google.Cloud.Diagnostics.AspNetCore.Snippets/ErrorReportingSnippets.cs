@@ -14,11 +14,9 @@
 
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -115,25 +113,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 application.ConfigureServices(services);
                 base.ConfigureServices(services);
             }
-
-            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-            {
-                application.Configure(app);
-                base.Configure(app, loggerFactory);
-            }
         }
 
         // Sample: ReportUnhandledExceptions
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddGoogleExceptionLogging(options =>
+            services.AddGoogleErrorReportingForAspNetCore(new Common.ErrorReportingServiceOptions
             {
                 // Replace ProjectId with your Google Cloud Project ID.
-                options.ProjectId = ProjectId;
+                ProjectId = ProjectId,
                 // Replace Service with a name or identifier for the service.
-                options.ServiceName = Service;
+                ServiceName = Service,
                 // Replace Version with a version for the service.
-                options.Version = Version;
+                Version = Version
             });
 
             // Add any other services your application requires, for instance,
@@ -143,32 +135,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // services.AddMvc();
 
             // services.AddControllersWithViews();
-        }
-
-        public void Configure(IApplicationBuilder app)
-        {
-            // Use before handling any requests to ensure all unhandled exceptions are reported.
-            app.UseGoogleExceptionLogging();
-
-            // Add any other configuration your application requires, for instance,
-            // depending on the verson of ASP.NET Core you are using, you may
-            // need one of the following:
-
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=Index}/{id?}");
-            //});
-
-            //app.UseRouting();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //    endpoints.MapRazorPages();
-            //});
         }
         // End sample
     }
