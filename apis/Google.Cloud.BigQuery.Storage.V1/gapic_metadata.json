@@ -31,6 +31,51 @@
           }
         }
       }
+    },
+    "BigQueryWrite": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BigQueryWriteClient",
+          "rpcs": {
+            "AppendRows": {
+              "methods": [
+                "AppendRows",
+                "AppendRowsAsync"
+              ]
+            },
+            "BatchCommitWriteStreams": {
+              "methods": [
+                "BatchCommitWriteStreams",
+                "BatchCommitWriteStreamsAsync"
+              ]
+            },
+            "CreateWriteStream": {
+              "methods": [
+                "CreateWriteStream",
+                "CreateWriteStreamAsync"
+              ]
+            },
+            "FinalizeWriteStream": {
+              "methods": [
+                "FinalizeWriteStream",
+                "FinalizeWriteStreamAsync"
+              ]
+            },
+            "FlushRows": {
+              "methods": [
+                "FlushRows",
+                "FlushRowsAsync"
+              ]
+            },
+            "GetWriteStream": {
+              "methods": [
+                "GetWriteStream",
+                "GetWriteStreamAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

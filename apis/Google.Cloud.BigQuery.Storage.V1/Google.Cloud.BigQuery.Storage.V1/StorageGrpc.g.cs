@@ -493,5 +493,713 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
   }
+  /// <summary>
+  /// BigQuery Write API.
+  ///
+  /// The Write API can be used to write data to BigQuery.
+  ///
+  /// For supplementary information about the Write API, see:
+  /// https://cloud.google.com/bigquery/docs/write-api
+  /// </summary>
+  public static partial class BigQueryWrite
+  {
+    static readonly string __ServiceName = "google.cloud.bigquery.storage.v1.BigQueryWrite";
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (message is global::Google.Protobuf.IBufferMessage)
+      {
+        context.SetPayloadLength(message.CalculateSize());
+        global::Google.Protobuf.MessageExtensions.WriteTo(message, context.GetBufferWriter());
+        context.Complete();
+        return;
+      }
+      #endif
+      context.Complete(global::Google.Protobuf.MessageExtensions.ToByteArray(message));
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static class __Helper_MessageCache<T>
+    {
+      public static readonly bool IsBufferMessage = global::System.Reflection.IntrospectionExtensions.GetTypeInfo(typeof(global::Google.Protobuf.IBufferMessage)).IsAssignableFrom(typeof(T));
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static T __Helper_DeserializeMessage<T>(grpc::DeserializationContext context, global::Google.Protobuf.MessageParser<T> parser) where T : global::Google.Protobuf.IMessage<T>
+    {
+      #if !GRPC_DISABLE_PROTOBUF_BUFFER_SERIALIZATION
+      if (__Helper_MessageCache<T>.IsBufferMessage)
+      {
+        return parser.ParseFrom(context.PayloadAsReadOnlySequence());
+      }
+      #endif
+      return parser.ParseFrom(context.PayloadAsNewBuffer());
+    }
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest> __Marshaller_google_cloud_bigquery_storage_v1_CreateWriteStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.WriteStream> __Marshaller_google_cloud_bigquery_storage_v1_WriteStream = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest> __Marshaller_google_cloud_bigquery_storage_v1_AppendRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse> __Marshaller_google_cloud_bigquery_storage_v1_AppendRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest> __Marshaller_google_cloud_bigquery_storage_v1_GetWriteStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest> __Marshaller_google_cloud_bigquery_storage_v1_FinalizeWriteStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse> __Marshaller_google_cloud_bigquery_storage_v1_FinalizeWriteStreamResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest> __Marshaller_google_cloud_bigquery_storage_v1_BatchCommitWriteStreamsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse> __Marshaller_google_cloud_bigquery_storage_v1_BatchCommitWriteStreamsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest> __Marshaller_google_cloud_bigquery_storage_v1_FlushRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse> __Marshaller_google_cloud_bigquery_storage_v1_FlushRowsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.WriteStream> __Method_CreateWriteStream = new grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.WriteStream>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateWriteStream",
+        __Marshaller_google_cloud_bigquery_storage_v1_CreateWriteStreamRequest,
+        __Marshaller_google_cloud_bigquery_storage_v1_WriteStream);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse> __Method_AppendRows = new grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "AppendRows",
+        __Marshaller_google_cloud_bigquery_storage_v1_AppendRowsRequest,
+        __Marshaller_google_cloud_bigquery_storage_v1_AppendRowsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.WriteStream> __Method_GetWriteStream = new grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.WriteStream>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetWriteStream",
+        __Marshaller_google_cloud_bigquery_storage_v1_GetWriteStreamRequest,
+        __Marshaller_google_cloud_bigquery_storage_v1_WriteStream);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse> __Method_FinalizeWriteStream = new grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FinalizeWriteStream",
+        __Marshaller_google_cloud_bigquery_storage_v1_FinalizeWriteStreamRequest,
+        __Marshaller_google_cloud_bigquery_storage_v1_FinalizeWriteStreamResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest, global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse> __Method_BatchCommitWriteStreams = new grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest, global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCommitWriteStreams",
+        __Marshaller_google_cloud_bigquery_storage_v1_BatchCommitWriteStreamsRequest,
+        __Marshaller_google_cloud_bigquery_storage_v1_BatchCommitWriteStreamsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse> __Method_FlushRows = new grpc::Method<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FlushRows",
+        __Marshaller_google_cloud_bigquery_storage_v1_FlushRowsRequest,
+        __Marshaller_google_cloud_bigquery_storage_v1_FlushRowsResponse);
+
+    /// <summary>Service descriptor</summary>
+    public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
+    {
+      get { return global::Google.Cloud.BigQuery.Storage.V1.StorageReflection.Descriptor.Services[1]; }
+    }
+
+    /// <summary>Base class for server-side implementations of BigQueryWrite</summary>
+    [grpc::BindServiceMethod(typeof(BigQueryWrite), "BindService")]
+    public abstract partial class BigQueryWriteBase
+    {
+      /// <summary>
+      /// Creates a write stream to the given table.
+      /// Additionally, every table has a special stream named '_default'
+      /// to which data can be written. This stream doesn't need to be created using
+      /// CreateWriteStream. It is a stream that can be used simultaneously by any
+      /// number of clients. Data written to this stream is considered committed as
+      /// soon as an acknowledgement is received.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Storage.V1.WriteStream> CreateWriteStream(global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Appends data to the given stream.
+      ///
+      /// If `offset` is specified, the `offset` is checked against the end of
+      /// stream. The server returns `OUT_OF_RANGE` in `AppendRowsResponse` if an
+      /// attempt is made to append to an offset beyond the current end of the stream
+      /// or `ALREADY_EXISTS` if user provides an `offset` that has already been
+      /// written to. User can retry with adjusted offset within the same RPC
+      /// connection. If `offset` is not specified, append happens at the end of the
+      /// stream.
+      ///
+      /// The response contains an optional offset at which the append
+      /// happened.  No offset information will be returned for appends to a
+      /// default stream.
+      ///
+      /// Responses are received in the same order in which requests are sent.
+      /// There will be one response for each successful inserted request.  Responses
+      /// may optionally embed error information if the originating AppendRequest was
+      /// not successfully processed.
+      ///
+      /// The specifics of when successfully appended data is made visible to the
+      /// table are governed by the type of stream:
+      ///
+      /// * For COMMITTED streams (which includes the default stream), data is
+      /// visible immediately upon successful append.
+      ///
+      /// * For BUFFERED streams, data is made visible via a subsequent `FlushRows`
+      /// rpc which advances a cursor to a newer offset in the stream.
+      ///
+      /// * For PENDING streams, data is not made visible until the stream itself is
+      /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
+      /// committed via the `BatchCommitWriteStreams` rpc.
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task AppendRows(grpc::IAsyncStreamReader<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest> requestStream, grpc::IServerStreamWriter<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about a write stream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Storage.V1.WriteStream> GetWriteStream(global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Finalize a write stream so that no new data can be appended to the
+      /// stream. Finalize is not supported on the '_default' stream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse> FinalizeWriteStream(global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Atomically commits a group of `PENDING` streams that belong to the same
+      /// `parent` table.
+      ///
+      /// Streams must be finalized before commit and cannot be committed multiple
+      /// times. Once a stream is committed, data in the stream becomes available
+      /// for read operations.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse> BatchCommitWriteStreams(global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Flushes rows to a BUFFERED stream.
+      ///
+      /// If users are appending rows to BUFFERED stream, flush operation is
+      /// required in order for the rows to become available for reading. A
+      /// Flush operation flushes up to any previously flushed offset in a BUFFERED
+      /// stream, to the offset specified in the request.
+      ///
+      /// Flush is not supported on the _default stream, since it is not BUFFERED.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse> FlushRows(global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+    }
+
+    /// <summary>Client for BigQueryWrite</summary>
+    public partial class BigQueryWriteClient : grpc::ClientBase<BigQueryWriteClient>
+    {
+      /// <summary>Creates a new client for BigQueryWrite</summary>
+      /// <param name="channel">The channel to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public BigQueryWriteClient(grpc::ChannelBase channel) : base(channel)
+      {
+      }
+      /// <summary>Creates a new client for BigQueryWrite that uses a custom <c>CallInvoker</c>.</summary>
+      /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public BigQueryWriteClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      {
+      }
+      /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      protected BigQueryWriteClient() : base()
+      {
+      }
+      /// <summary>Protected constructor to allow creation of configured clients.</summary>
+      /// <param name="configuration">The client configuration.</param>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      protected BigQueryWriteClient(ClientBaseConfiguration configuration) : base(configuration)
+      {
+      }
+
+      /// <summary>
+      /// Creates a write stream to the given table.
+      /// Additionally, every table has a special stream named '_default'
+      /// to which data can be written. This stream doesn't need to be created using
+      /// CreateWriteStream. It is a stream that can be used simultaneously by any
+      /// number of clients. Data written to this stream is considered committed as
+      /// soon as an acknowledgement is received.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.WriteStream CreateWriteStream(global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWriteStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a write stream to the given table.
+      /// Additionally, every table has a special stream named '_default'
+      /// to which data can be written. This stream doesn't need to be created using
+      /// CreateWriteStream. It is a stream that can be used simultaneously by any
+      /// number of clients. Data written to this stream is considered committed as
+      /// soon as an acknowledgement is received.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.WriteStream CreateWriteStream(global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateWriteStream, null, options, request);
+      }
+      /// <summary>
+      /// Creates a write stream to the given table.
+      /// Additionally, every table has a special stream named '_default'
+      /// to which data can be written. This stream doesn't need to be created using
+      /// CreateWriteStream. It is a stream that can be used simultaneously by any
+      /// number of clients. Data written to this stream is considered committed as
+      /// soon as an acknowledgement is received.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.WriteStream> CreateWriteStreamAsync(global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWriteStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a write stream to the given table.
+      /// Additionally, every table has a special stream named '_default'
+      /// to which data can be written. This stream doesn't need to be created using
+      /// CreateWriteStream. It is a stream that can be used simultaneously by any
+      /// number of clients. Data written to this stream is considered committed as
+      /// soon as an acknowledgement is received.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.WriteStream> CreateWriteStreamAsync(global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateWriteStream, null, options, request);
+      }
+      /// <summary>
+      /// Appends data to the given stream.
+      ///
+      /// If `offset` is specified, the `offset` is checked against the end of
+      /// stream. The server returns `OUT_OF_RANGE` in `AppendRowsResponse` if an
+      /// attempt is made to append to an offset beyond the current end of the stream
+      /// or `ALREADY_EXISTS` if user provides an `offset` that has already been
+      /// written to. User can retry with adjusted offset within the same RPC
+      /// connection. If `offset` is not specified, append happens at the end of the
+      /// stream.
+      ///
+      /// The response contains an optional offset at which the append
+      /// happened.  No offset information will be returned for appends to a
+      /// default stream.
+      ///
+      /// Responses are received in the same order in which requests are sent.
+      /// There will be one response for each successful inserted request.  Responses
+      /// may optionally embed error information if the originating AppendRequest was
+      /// not successfully processed.
+      ///
+      /// The specifics of when successfully appended data is made visible to the
+      /// table are governed by the type of stream:
+      ///
+      /// * For COMMITTED streams (which includes the default stream), data is
+      /// visible immediately upon successful append.
+      ///
+      /// * For BUFFERED streams, data is made visible via a subsequent `FlushRows`
+      /// rpc which advances a cursor to a newer offset in the stream.
+      ///
+      /// * For PENDING streams, data is not made visible until the stream itself is
+      /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
+      /// committed via the `BatchCommitWriteStreams` rpc.
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse> AppendRows(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AppendRows(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Appends data to the given stream.
+      ///
+      /// If `offset` is specified, the `offset` is checked against the end of
+      /// stream. The server returns `OUT_OF_RANGE` in `AppendRowsResponse` if an
+      /// attempt is made to append to an offset beyond the current end of the stream
+      /// or `ALREADY_EXISTS` if user provides an `offset` that has already been
+      /// written to. User can retry with adjusted offset within the same RPC
+      /// connection. If `offset` is not specified, append happens at the end of the
+      /// stream.
+      ///
+      /// The response contains an optional offset at which the append
+      /// happened.  No offset information will be returned for appends to a
+      /// default stream.
+      ///
+      /// Responses are received in the same order in which requests are sent.
+      /// There will be one response for each successful inserted request.  Responses
+      /// may optionally embed error information if the originating AppendRequest was
+      /// not successfully processed.
+      ///
+      /// The specifics of when successfully appended data is made visible to the
+      /// table are governed by the type of stream:
+      ///
+      /// * For COMMITTED streams (which includes the default stream), data is
+      /// visible immediately upon successful append.
+      ///
+      /// * For BUFFERED streams, data is made visible via a subsequent `FlushRows`
+      /// rpc which advances a cursor to a newer offset in the stream.
+      ///
+      /// * For PENDING streams, data is not made visible until the stream itself is
+      /// finalized (via the `FinalizeWriteStream` rpc), and the stream is explicitly
+      /// committed via the `BatchCommitWriteStreams` rpc.
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse> AppendRows(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_AppendRows, null, options);
+      }
+      /// <summary>
+      /// Gets information about a write stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.WriteStream GetWriteStream(global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetWriteStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a write stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.WriteStream GetWriteStream(global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetWriteStream, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about a write stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.WriteStream> GetWriteStreamAsync(global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetWriteStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a write stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.WriteStream> GetWriteStreamAsync(global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetWriteStream, null, options, request);
+      }
+      /// <summary>
+      /// Finalize a write stream so that no new data can be appended to the
+      /// stream. Finalize is not supported on the '_default' stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse FinalizeWriteStream(global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinalizeWriteStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finalize a write stream so that no new data can be appended to the
+      /// stream. Finalize is not supported on the '_default' stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse FinalizeWriteStream(global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FinalizeWriteStream, null, options, request);
+      }
+      /// <summary>
+      /// Finalize a write stream so that no new data can be appended to the
+      /// stream. Finalize is not supported on the '_default' stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse> FinalizeWriteStreamAsync(global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinalizeWriteStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finalize a write stream so that no new data can be appended to the
+      /// stream. Finalize is not supported on the '_default' stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse> FinalizeWriteStreamAsync(global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FinalizeWriteStream, null, options, request);
+      }
+      /// <summary>
+      /// Atomically commits a group of `PENDING` streams that belong to the same
+      /// `parent` table.
+      ///
+      /// Streams must be finalized before commit and cannot be committed multiple
+      /// times. Once a stream is committed, data in the stream becomes available
+      /// for read operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse BatchCommitWriteStreams(global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCommitWriteStreams(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Atomically commits a group of `PENDING` streams that belong to the same
+      /// `parent` table.
+      ///
+      /// Streams must be finalized before commit and cannot be committed multiple
+      /// times. Once a stream is committed, data in the stream becomes available
+      /// for read operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse BatchCommitWriteStreams(global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCommitWriteStreams, null, options, request);
+      }
+      /// <summary>
+      /// Atomically commits a group of `PENDING` streams that belong to the same
+      /// `parent` table.
+      ///
+      /// Streams must be finalized before commit and cannot be committed multiple
+      /// times. Once a stream is committed, data in the stream becomes available
+      /// for read operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse> BatchCommitWriteStreamsAsync(global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCommitWriteStreamsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Atomically commits a group of `PENDING` streams that belong to the same
+      /// `parent` table.
+      ///
+      /// Streams must be finalized before commit and cannot be committed multiple
+      /// times. Once a stream is committed, data in the stream becomes available
+      /// for read operations.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse> BatchCommitWriteStreamsAsync(global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCommitWriteStreams, null, options, request);
+      }
+      /// <summary>
+      /// Flushes rows to a BUFFERED stream.
+      ///
+      /// If users are appending rows to BUFFERED stream, flush operation is
+      /// required in order for the rows to become available for reading. A
+      /// Flush operation flushes up to any previously flushed offset in a BUFFERED
+      /// stream, to the offset specified in the request.
+      ///
+      /// Flush is not supported on the _default stream, since it is not BUFFERED.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse FlushRows(global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FlushRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Flushes rows to a BUFFERED stream.
+      ///
+      /// If users are appending rows to BUFFERED stream, flush operation is
+      /// required in order for the rows to become available for reading. A
+      /// Flush operation flushes up to any previously flushed offset in a BUFFERED
+      /// stream, to the offset specified in the request.
+      ///
+      /// Flush is not supported on the _default stream, since it is not BUFFERED.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse FlushRows(global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FlushRows, null, options, request);
+      }
+      /// <summary>
+      /// Flushes rows to a BUFFERED stream.
+      ///
+      /// If users are appending rows to BUFFERED stream, flush operation is
+      /// required in order for the rows to become available for reading. A
+      /// Flush operation flushes up to any previously flushed offset in a BUFFERED
+      /// stream, to the offset specified in the request.
+      ///
+      /// Flush is not supported on the _default stream, since it is not BUFFERED.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse> FlushRowsAsync(global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FlushRowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Flushes rows to a BUFFERED stream.
+      ///
+      /// If users are appending rows to BUFFERED stream, flush operation is
+      /// required in order for the rows to become available for reading. A
+      /// Flush operation flushes up to any previously flushed offset in a BUFFERED
+      /// stream, to the offset specified in the request.
+      ///
+      /// Flush is not supported on the _default stream, since it is not BUFFERED.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse> FlushRowsAsync(global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FlushRows, null, options, request);
+      }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      protected override BigQueryWriteClient NewInstance(ClientBaseConfiguration configuration)
+      {
+        return new BigQueryWriteClient(configuration);
+      }
+    }
+
+    /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public static grpc::ServerServiceDefinition BindService(BigQueryWriteBase serviceImpl)
+    {
+      return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_CreateWriteStream, serviceImpl.CreateWriteStream)
+          .AddMethod(__Method_AppendRows, serviceImpl.AppendRows)
+          .AddMethod(__Method_GetWriteStream, serviceImpl.GetWriteStream)
+          .AddMethod(__Method_FinalizeWriteStream, serviceImpl.FinalizeWriteStream)
+          .AddMethod(__Method_BatchCommitWriteStreams, serviceImpl.BatchCommitWriteStreams)
+          .AddMethod(__Method_FlushRows, serviceImpl.FlushRows).Build();
+    }
+
+    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    public static void BindService(grpc::ServiceBinderBase serviceBinder, BigQueryWriteBase serviceImpl)
+    {
+      serviceBinder.AddMethod(__Method_CreateWriteStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Storage.V1.CreateWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.WriteStream>(serviceImpl.CreateWriteStream));
+      serviceBinder.AddMethod(__Method_AppendRows, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Google.Cloud.BigQuery.Storage.V1.AppendRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.AppendRowsResponse>(serviceImpl.AppendRows));
+      serviceBinder.AddMethod(__Method_GetWriteStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Storage.V1.GetWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.WriteStream>(serviceImpl.GetWriteStream));
+      serviceBinder.AddMethod(__Method_FinalizeWriteStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamRequest, global::Google.Cloud.BigQuery.Storage.V1.FinalizeWriteStreamResponse>(serviceImpl.FinalizeWriteStream));
+      serviceBinder.AddMethod(__Method_BatchCommitWriteStreams, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsRequest, global::Google.Cloud.BigQuery.Storage.V1.BatchCommitWriteStreamsResponse>(serviceImpl.BatchCommitWriteStreams));
+      serviceBinder.AddMethod(__Method_FlushRows, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.Storage.V1.FlushRowsRequest, global::Google.Cloud.BigQuery.Storage.V1.FlushRowsResponse>(serviceImpl.FlushRows));
+    }
+
+  }
 }
 #endregion
