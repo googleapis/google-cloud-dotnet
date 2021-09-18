@@ -285,4 +285,62 @@ namespace Google.Cloud.BigQuery.Storage.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateWriteStreamRequest
+    {
+        /// <summary><see cref="TableName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public TableName ParentAsTableName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TableName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AppendRowsRequest
+    {
+        /// <summary>
+        /// <see cref="WriteStreamName"/>-typed view over the <see cref="WriteStream"/> resource name property.
+        /// </summary>
+        public WriteStreamName WriteStreamAsWriteStreamName
+        {
+            get => string.IsNullOrEmpty(WriteStream) ? null : WriteStreamName.Parse(WriteStream, allowUnparsed: true);
+            set => WriteStream = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetWriteStreamRequest
+    {
+        /// <summary>
+        /// <see cref="gcbsv::WriteStreamName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbsv::WriteStreamName WriteStreamName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbsv::WriteStreamName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FinalizeWriteStreamRequest
+    {
+        /// <summary>
+        /// <see cref="gcbsv::WriteStreamName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbsv::WriteStreamName WriteStreamName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbsv::WriteStreamName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FlushRowsRequest
+    {
+        /// <summary>
+        /// <see cref="WriteStreamName"/>-typed view over the <see cref="WriteStream"/> resource name property.
+        /// </summary>
+        public WriteStreamName WriteStreamAsWriteStreamName
+        {
+            get => string.IsNullOrEmpty(WriteStream) ? null : WriteStreamName.Parse(WriteStream, allowUnparsed: true);
+            set => WriteStream = value?.ToString() ?? "";
+        }
+    }
 }

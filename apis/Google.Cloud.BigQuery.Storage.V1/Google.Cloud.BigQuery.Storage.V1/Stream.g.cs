@@ -29,47 +29,59 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
             "LnByb3RvGixnb29nbGUvY2xvdWQvYmlncXVlcnkvc3RvcmFnZS92MS9hcnJv",
             "dy5wcm90bxorZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvYXZy",
-            "by5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKkCAoL",
-            "UmVhZFNlc3Npb24SEQoEbmFtZRgBIAEoCUID4EEDEjQKC2V4cGlyZV90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkYKC2Rh",
-            "dGFfZm9ybWF0GAMgASgOMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3Jh",
-            "Z2UudjEuRGF0YUZvcm1hdEID4EEFEkgKC2F2cm9fc2NoZW1hGAQgASgLMiwu",
-            "Z29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5LnN0b3JhZ2UudjEuQXZyb1NjaGVtYUID",
-            "4EEDSAASSgoMYXJyb3dfc2NoZW1hGAUgASgLMi0uZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnN0b3JhZ2UudjEuQXJyb3dTY2hlbWFCA+BBA0gAEjQKBXRhYmxl",
-            "GAYgASgJQiXgQQX6QR8KHWJpZ3F1ZXJ5Lmdvb2dsZWFwaXMuY29tL1RhYmxl",
-            "EloKD3RhYmxlX21vZGlmaWVycxgHIAEoCzI8Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5zdG9yYWdlLnYxLlJlYWRTZXNzaW9uLlRhYmxlTW9kaWZpZXJzQgPg",
-            "QQESWQoMcmVhZF9vcHRpb25zGAggASgLMj4uZ29vZ2xlLmNsb3VkLmJpZ3F1",
-            "ZXJ5LnN0b3JhZ2UudjEuUmVhZFNlc3Npb24uVGFibGVSZWFkT3B0aW9uc0ID",
-            "4EEBEkIKB3N0cmVhbXMYCiADKAsyLC5nb29nbGUuY2xvdWQuYmlncXVlcnku",
-            "c3RvcmFnZS52MS5SZWFkU3RyZWFtQgPgQQMSKgodZXN0aW1hdGVkX3RvdGFs",
-            "X2J5dGVzX3NjYW5uZWQYDCABKANCA+BBAxpDCg5UYWJsZU1vZGlmaWVycxIx",
-            "Cg1zbmFwc2hvdF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBrUAQoQVGFibGVSZWFkT3B0aW9ucxIXCg9zZWxlY3RlZF9maWVsZHMY",
-            "ASADKAkSFwoPcm93X3Jlc3RyaWN0aW9uGAIgASgJEmcKG2Fycm93X3Nlcmlh",
-            "bGl6YXRpb25fb3B0aW9ucxgDIAEoCzI7Lmdvb2dsZS5jbG91ZC5iaWdxdWVy",
-            "eS5zdG9yYWdlLnYxLkFycm93U2VyaWFsaXphdGlvbk9wdGlvbnNCA+BBAUgA",
-            "QiUKI291dHB1dF9mb3JtYXRfc2VyaWFsaXphdGlvbl9vcHRpb25zOmvqQWgK",
-            "KmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9SZWFkU2Vzc2lvbhI6",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3Nlc3Np",
-            "b25zL3tzZXNzaW9ufUIICgZzY2hlbWEinAEKClJlYWRTdHJlYW0SEQoEbmFt",
-            "ZRgBIAEoCUID4EEDOnvqQXgKKWJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlz",
-            "LmNvbS9SZWFkU3RyZWFtEktwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vc2Vzc2lvbnMve3Nlc3Npb259L3N0cmVhbXMve3N0cmVh",
-            "bX0qPgoKRGF0YUZvcm1hdBIbChdEQVRBX0ZPUk1BVF9VTlNQRUNJRklFRBAA",
-            "EggKBEFWUk8QARIJCgVBUlJPVxACQsQBCiRjb20uZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5LnN0b3JhZ2UudjFCC1N0cmVhbVByb3RvUAFaR2dvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmlncXVlcnkvc3Rv",
-            "cmFnZS92MTtzdG9yYWdlqgIgR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5LlN0b3Jh",
-            "Z2UuVjHKAiBHb29nbGVcQ2xvdWRcQmlnUXVlcnlcU3RvcmFnZVxWMWIGcHJv",
-            "dG8z"));
+            "by5wcm90bxosZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjEvdGFi",
+            "bGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipAgK",
+            "C1JlYWRTZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBAxI0CgtleHBpcmVfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJGCgtk",
+            "YXRhX2Zvcm1hdBgDIAEoDjIsLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9y",
+            "YWdlLnYxLkRhdGFGb3JtYXRCA+BBBRJICgthdnJvX3NjaGVtYRgEIAEoCzIs",
+            "Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLkF2cm9TY2hlbWFC",
+            "A+BBA0gAEkoKDGFycm93X3NjaGVtYRgFIAEoCzItLmdvb2dsZS5jbG91ZC5i",
+            "aWdxdWVyeS5zdG9yYWdlLnYxLkFycm93U2NoZW1hQgPgQQNIABI0CgV0YWJs",
+            "ZRgGIAEoCUIl4EEF+kEfCh1iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9UYWJs",
+            "ZRJaCg90YWJsZV9tb2RpZmllcnMYByABKAsyPC5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkuc3RvcmFnZS52MS5SZWFkU2Vzc2lvbi5UYWJsZU1vZGlmaWVyc0ID",
+            "4EEBElkKDHJlYWRfb3B0aW9ucxgIIAEoCzI+Lmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5zdG9yYWdlLnYxLlJlYWRTZXNzaW9uLlRhYmxlUmVhZE9wdGlvbnNC",
+            "A+BBARJCCgdzdHJlYW1zGAogAygLMiwuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5",
+            "LnN0b3JhZ2UudjEuUmVhZFN0cmVhbUID4EEDEioKHWVzdGltYXRlZF90b3Rh",
+            "bF9ieXRlc19zY2FubmVkGAwgASgDQgPgQQMaQwoOVGFibGVNb2RpZmllcnMS",
+            "MQoNc25hcHNob3RfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXAa1AEKEFRhYmxlUmVhZE9wdGlvbnMSFwoPc2VsZWN0ZWRfZmllbGRz",
+            "GAEgAygJEhcKD3Jvd19yZXN0cmljdGlvbhgCIAEoCRJnChthcnJvd19zZXJp",
+            "YWxpemF0aW9uX29wdGlvbnMYAyABKAsyOy5nb29nbGUuY2xvdWQuYmlncXVl",
+            "cnkuc3RvcmFnZS52MS5BcnJvd1NlcmlhbGl6YXRpb25PcHRpb25zQgPgQQFI",
+            "AEIlCiNvdXRwdXRfZm9ybWF0X3NlcmlhbGl6YXRpb25fb3B0aW9uczpr6kFo",
+            "CipiaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vUmVhZFNlc3Npb24S",
+            "OnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXNz",
+            "aW9ucy97c2Vzc2lvbn1CCAoGc2NoZW1hIpwBCgpSZWFkU3RyZWFtEhEKBG5h",
+            "bWUYASABKAlCA+BBAzp76kF4CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBp",
+            "cy5jb20vUmVhZFN0cmVhbRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3Nlc3Npb25zL3tzZXNzaW9ufS9zdHJlYW1zL3tzdHJl",
+            "YW19It0DCgtXcml0ZVN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSRQoEdHlw",
+            "ZRgCIAEoDjIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldy",
+            "aXRlU3RyZWFtLlR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtjb21taXRfdGltZRgE",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgx0YWJs",
+            "ZV9zY2hlbWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFn",
+            "ZS52MS5UYWJsZVNjaGVtYUID4EEDIkYKBFR5cGUSFAoQVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BFTkRJTkcQAhIMCghCVUZGRVJF",
+            "RBADOnbqQXMKKmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9Xcml0",
+            "ZVN0cmVhbRJFcHJvamVjdHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0",
+            "fS90YWJsZXMve3RhYmxlfS9zdHJlYW1zL3tzdHJlYW19Kj4KCkRhdGFGb3Jt",
+            "YXQSGwoXREFUQV9GT1JNQVRfVU5TUEVDSUZJRUQQABIICgRBVlJPEAESCQoF",
+            "QVJST1cQAkLEAQokY29tLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdl",
+            "LnYxQgtTdHJlYW1Qcm90b1ABWkdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL2JpZ3F1ZXJ5L3N0b3JhZ2UvdjE7c3RvcmFn",
+            "ZaoCIEdvb2dsZS5DbG91ZC5CaWdRdWVyeS5TdG9yYWdlLlYxygIgR29vZ2xl",
+            "XENsb3VkXEJpZ1F1ZXJ5XFN0b3JhZ2VcVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.ArrowReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.AvroReflection.Descriptor, global::Google.Cloud.BigQuery.Storage.V1.TableReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.BigQuery.Storage.V1.DataFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams", "EstimatedTotalBytesScanned" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions" }, new[]{ "OutputFormatSerializationOptions" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type) }, null, null)
           }));
     }
     #endregion
@@ -1379,6 +1391,405 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Information about a single stream that gets data inside the storage system.
+  /// </summary>
+  public sealed partial class WriteStream : pb::IMessage<WriteStream>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WriteStream> _parser = new pb::MessageParser<WriteStream>(() => new WriteStream());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<WriteStream> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Storage.V1.StreamReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WriteStream() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WriteStream(WriteStream other) : this() {
+      name_ = other.name_;
+      type_ = other.type_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      commitTime_ = other.commitTime_ != null ? other.commitTime_.Clone() : null;
+      tableSchema_ = other.tableSchema_ != null ? other.tableSchema_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WriteStream Clone() {
+      return new WriteStream(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. Name of the stream, in the form
+    /// `projects/{project}/datasets/{dataset}/tables/{table}/streams/{stream}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type type_ = global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type.Unspecified;
+    /// <summary>
+    /// Immutable. Type of the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. Create time of the stream. For the _default stream, this is the
+    /// creation_time of the table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "commit_time" field.</summary>
+    public const int CommitTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp commitTime_;
+    /// <summary>
+    /// Output only. Commit time of the stream.
+    /// If a stream is of `COMMITTED` type, then it will have a commit_time same as
+    /// `create_time`. If the stream is of `PENDING` type, empty commit_time
+    /// means it is not committed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CommitTime {
+      get { return commitTime_; }
+      set {
+        commitTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "table_schema" field.</summary>
+    public const int TableSchemaFieldNumber = 5;
+    private global::Google.Cloud.BigQuery.Storage.V1.TableSchema tableSchema_;
+    /// <summary>
+    /// Output only. The schema of the destination table. It is only returned in
+    /// `CreateWriteStream` response. Caller should generate data that's
+    /// compatible with this schema to send in initial `AppendRowsRequest`.
+    /// The table schema could go out of date during the life time of the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.BigQuery.Storage.V1.TableSchema TableSchema {
+      get { return tableSchema_; }
+      set {
+        tableSchema_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as WriteStream);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(WriteStream other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Type != other.Type) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (!object.Equals(CommitTime, other.CommitTime)) return false;
+      if (!object.Equals(TableSchema, other.TableSchema)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Type != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (commitTime_ != null) hash ^= CommitTime.GetHashCode();
+      if (tableSchema_ != null) hash ^= TableSchema.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Type != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (commitTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CommitTime);
+      }
+      if (tableSchema_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TableSchema);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Type != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Type);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (commitTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CommitTime);
+      }
+      if (tableSchema_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TableSchema);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Type != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (commitTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CommitTime);
+      }
+      if (tableSchema_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TableSchema);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(WriteStream other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Type != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.commitTime_ != null) {
+        if (commitTime_ == null) {
+          CommitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CommitTime.MergeFrom(other.CommitTime);
+      }
+      if (other.tableSchema_ != null) {
+        if (tableSchema_ == null) {
+          TableSchema = new global::Google.Cloud.BigQuery.Storage.V1.TableSchema();
+        }
+        TableSchema.MergeFrom(other.TableSchema);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (commitTime_ == null) {
+              CommitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CommitTime);
+            break;
+          }
+          case 42: {
+            if (tableSchema_ == null) {
+              TableSchema = new global::Google.Cloud.BigQuery.Storage.V1.TableSchema();
+            }
+            input.ReadMessage(TableSchema);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            Type = (global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+          case 34: {
+            if (commitTime_ == null) {
+              CommitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CommitTime);
+            break;
+          }
+          case 42: {
+            if (tableSchema_ == null) {
+              TableSchema = new global::Google.Cloud.BigQuery.Storage.V1.TableSchema();
+            }
+            input.ReadMessage(TableSchema);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the WriteStream message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      /// <summary>
+      /// Type enum of the stream.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Unknown type.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Data will commit automatically and appear as soon as the write is
+        /// acknowledged.
+        /// </summary>
+        [pbr::OriginalName("COMMITTED")] Committed = 1,
+        /// <summary>
+        /// Data is invisible until the stream is committed.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 2,
+        /// <summary>
+        /// Data is only visible up to the offset to which it was flushed.
+        /// </summary>
+        [pbr::OriginalName("BUFFERED")] Buffered = 3,
+      }
+
+    }
+    #endregion
 
   }
 
