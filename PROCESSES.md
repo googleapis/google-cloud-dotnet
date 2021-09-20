@@ -174,6 +174,10 @@ check this is really what you meant to do.
     This just avoids you having to look up the current version number
     if you don't already know it. If you want to look up the version
     number anyway, use `./prepare-release.sh show-version <api>`.
+    
+    If the API you're releasing is part of a package group (multiple
+    packages that need to be released together), the `increment-version`
+    command will automatically increment all of them.
 
 3. If you want to perform an API surface comparison,
 run `./prepare-release.sh compare`. This will build the code
@@ -195,10 +199,9 @@ changes, with a message taken from the version history for the
 package. Use `git commit --amend` to change the commit message if
 you need to.
 
-    If you're releasing more than one package, use
-    `./prepare-release.sh commit-multiple <commit title>`, e.g.
-    `./prepare-release.sh commit-multiple "Release Spanner libraries version 3.3.0"`.
-    Alternatively, create the commit manually, including one line per package of the form
+    If you're releasing a package group, use
+    `./prepare-release.sh commit-group`. Alternatively, create
+    the commit manually, including one line per package of the form
     `- Release XYZ version ABC`.
 
     **Note:** If you're using the Dockerfile described in
