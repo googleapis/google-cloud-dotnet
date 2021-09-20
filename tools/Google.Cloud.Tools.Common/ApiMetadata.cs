@@ -208,6 +208,14 @@ namespace Google.Cloud.Tools.Common
         /// by <see cref="ApiCatalog.FromJson(string)"/> and <see cref="ApiCatalog.Load"/>, and
         /// the token is part of <see cref="ApiCatalog.Json"/>.
         /// </summary>
+        [JsonIgnore]
         public JToken Json { get; set; }
+
+        /// <summary>
+        /// The package group that this package is part of. This is populated
+        /// by <see cref="ApiCatalog.FromJson(string)"/> and <see cref="ApiCatalog.Load"/>.
+        /// </summary>
+        [JsonIgnore]
+        public PackageGroup PackageGroup { get; set; }
     }
 }
