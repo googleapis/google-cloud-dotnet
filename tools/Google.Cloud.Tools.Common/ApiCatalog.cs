@@ -26,6 +26,11 @@ namespace Google.Cloud.Tools.Common
     public class ApiCatalog
     {
         /// <summary>
+        /// Groups of related packages which need to be released together.
+        /// </summary>
+        public List<PackageGroup> PackageGroups { get; set; }
+
+        /// <summary>
         /// The APIs within the catalog.
         /// </summary>
         public List<ApiMetadata> Apis { get; set; }
@@ -101,11 +106,32 @@ namespace Google.Cloud.Tools.Common
             JToken parsed = JToken.Parse(json);
             var catalog = parsed.ToObject<ApiCatalog>(new JsonSerializer { MissingMemberHandling = MissingMemberHandling.Error });
             catalog.Json = parsed;
+            // Provide the loaded JSON token for each API.
             foreach (var apiJson in parsed["apis"].Children().OfType<JObject>())
             {
                 if (apiJson.TryGetValue("id", out var idToken))
                 {
                     catalog[idToken.Value<string>()].Json = apiJson;
+                }
+            }
+
+            // Populate package group relationships
+            foreach (var group in catalog.PackageGroups)
+            {
+                foreach (var id in group.PackageIds)
+                {
+                    if (catalog.TryGetApi(id, out var member))
+                    {
+                        if (member.PackageGroup is object)
+                        {
+                            throw new UserErrorException($"Package '{id}' is in groups '{group.Id}' and '{member.PackageGroup.Id}'");
+                        }
+                        member.PackageGroup = group;
+                    }
+                    else
+                    {
+                        throw new UserErrorException($"Package '{id}' in group '{group.Id}' is unknonwn");
+                    }
                 }
             }
             return catalog;

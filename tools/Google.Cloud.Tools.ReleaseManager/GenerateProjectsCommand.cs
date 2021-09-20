@@ -146,6 +146,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             ValidateCommonHiddenProductionDependencies();
             var root = DirectoryLayout.DetermineRootDirectory();
             var catalog = ApiCatalog.Load();
+            ValidateApiCatalog(catalog);
             Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
             // Now we know we can parse the API catalog, let's reformat it.
             ReformatApiCatalog(catalog);
@@ -161,6 +162,31 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateDocumentationStub(path, api);
                 GenerateSynthConfiguration(path, api);
                 GenerateMetadataFile(path, api);
+            }
+        }
+
+        /// <summary>
+        /// Perform some basic validation of the API catalog. Current validation steps:
+        /// - Check that all project dependencies (prod-only; test is fine) are within a package group
+        /// </summary>
+        private static void ValidateApiCatalog(ApiCatalog catalog)
+        {
+            foreach (var api in catalog.Apis)
+            {
+                var projectDependencies = api.Dependencies.Where(d => d.Value == ProjectVersionValue).Select(d => d.Key).ToList();
+                if (projectDependencies.Count == 0)
+                {
+                    continue;
+                }
+                if (api.PackageGroup is null)
+                {
+                    throw new UserErrorException($"Package '{api.Id}' cannot have project dependencies as it is not in a package group");
+                }
+                var badDependencies = projectDependencies.Except(api.PackageGroup.PackageIds).ToList();
+                if (badDependencies.Any())
+                {
+                    throw new UserErrorException($"Package '{api.Id}' has bad project dependencies (outside package group '{api.PackageGroup.Id}': '{string.Join("', '", badDependencies)}'");
+                }
             }
         }
 
