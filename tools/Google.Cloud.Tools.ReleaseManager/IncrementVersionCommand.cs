@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using System;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -32,8 +34,19 @@ namespace Google.Cloud.Tools.ReleaseManager
             // is annoying too, but it's insignficant really - and at least the code is simple.
             var catalog = ApiCatalog.Load();
             var api = catalog[id];
-            var version = api.StructuredVersion.AfterIncrement().ToString();
-            new SetVersionCommand().Execute(new[] { id, version });
+
+            var apisToIncrement = new[] { api };
+            if (api.PackageGroup is PackageGroup group)
+            {
+                Console.WriteLine($"API '{id}' is in package group '{group.Id}'. Incrementing all APIs.");
+                apisToIncrement = group.PackageIds.Select(x => catalog[x]).ToArray();
+            }
+
+            foreach (var apiToIncrement in apisToIncrement)
+            {
+                var version = apiToIncrement.StructuredVersion.AfterIncrement().ToString();
+                new SetVersionCommand().InternalExecute(apiToIncrement.Id, version, quiet: false);
+            }
         }
     }
 }
