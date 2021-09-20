@@ -27,7 +27,8 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
     /// </summary>
     internal class ReleaseProposal
     {
-        public string Id { get; }
+        private ApiMetadata api;
+        public string Id => api.Id;
         public StructuredVersion OldVersion { get; }
         public StructuredVersion NewVersion { get; }
         private HistoryFile ModifiedHistoryFile { get; }
@@ -54,8 +55,8 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         // Handy for debugging
         public override string ToString() => $"Update {Id} from {OldVersion} to {NewVersion}";
 
-        private ReleaseProposal(string id, StructuredVersion oldVersion, StructuredVersion newVersion, HistoryFile historyFile) =>
-            (Id, OldVersion, NewVersion, ModifiedHistoryFile) = (id, oldVersion, newVersion, historyFile);
+        private ReleaseProposal(ApiMetadata api, StructuredVersion oldVersion, StructuredVersion newVersion, HistoryFile historyFile) =>
+            (this.api, OldVersion, NewVersion, ModifiedHistoryFile) = (api, oldVersion, newVersion, historyFile);
 
         public static ReleaseProposal CreateFromHistory(Repository repo, string id, StructuredVersion newVersion)
         {
@@ -74,12 +75,19 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                     throw new UserErrorException($"API {api.Id} would have {sectionsInserted.Count} new history sections");
                 }
             }
-            return new ReleaseProposal(api.Id, oldVersion, newVersion, historyFile);
+            return new ReleaseProposal(api, oldVersion, newVersion, historyFile);
         }
 
         public void Execute(BatchReleaseConfig config)
         {
             Console.WriteLine(this);
+
+            if (api.PackageGroup is PackageGroup group)
+            {
+                Console.WriteLine($"Package '{api.Id}' is in package group '{group.Id}'");
+                Console.WriteLine($"Batch release of package groups is not currently supported. Skipping.");
+                return;
+            }
 
             if (config.ShowHistory)
             {
