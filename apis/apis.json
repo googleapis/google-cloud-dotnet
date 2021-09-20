@@ -2977,7 +2977,7 @@
       "id": "Google.Cloud.Workflows.Common.V1",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Common resource names used by all Workflows V1 APIs",
       "tags": [
         "Spanner"
@@ -3003,7 +3003,7 @@
     },
     {
       "id": "Google.Cloud.Workflows.Executions.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflow Executions",
@@ -3039,7 +3039,7 @@
     },
     {
       "id": "Google.Cloud.Workflows.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "commonResourcesConfig": "apis/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflows",
@@ -3051,7 +3051,7 @@
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.Workflows.Common.V1": "project",
-        "Google.LongRunning": "2.2.0",
+        "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
