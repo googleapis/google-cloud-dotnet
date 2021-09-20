@@ -44,7 +44,7 @@
     },
     {
       "id": "Google.Apps.Script.Type",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "targetFrameworks": "netstandard2.0;net461",
       "type": "other",
       "description": "Version-agnostic types for Apps Script APIs.",
@@ -1192,7 +1192,7 @@
     },
     {
       "id": "Google.Cloud.GSuiteAddOns.V1",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Google Workspace Add-ons",
       "productUrl": "https://developers.google.com/gsuite/add-ons/overview",
