@@ -98,6 +98,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             {
                 Config = new RecognitionConfig(),
                 Audio = new RecognitionAudio(),
+                OutputConfig = new TranscriptOutputConfig(),
             };
             // Make the request
             Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response = speechClient.LongRunningRecognize(request);
@@ -132,6 +133,7 @@ namespace Google.Cloud.Speech.V1.Snippets
             {
                 Config = new RecognitionConfig(),
                 Audio = new RecognitionAudio(),
+                OutputConfig = new TranscriptOutputConfig(),
             };
             // Make the request
             Operation<LongRunningRecognizeResponse, LongRunningRecognizeMetadata> response = await speechClient.LongRunningRecognizeAsync(request);
