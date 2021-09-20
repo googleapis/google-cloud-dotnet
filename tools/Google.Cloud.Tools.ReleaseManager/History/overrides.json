@@ -24,5 +24,7 @@
   "d8d8eb7": "skip",
   "a78cbb2": "skip",
   "209588c": "skip",
-  "7b76d4e": "skip"
+  "7b76d4e": "skip",
+  "f5e5ec7": "skip", // Rename GrpcCtorCompatibility.g.cs
+  "84832b8": "skip", // Regenerate with later protoc; adds GeneratedCodeAttribute
 }
