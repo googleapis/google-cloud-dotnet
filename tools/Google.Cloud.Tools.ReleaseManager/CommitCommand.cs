@@ -36,7 +36,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var diffs = FindChangedVersions();
             if (diffs.Count != 1)
             {
-                throw new UserErrorException($"Can only automate a single-package release commit with exactly 1 release. Found {diffs.Count}. Did you mean 'commit-multiple'?");
+                throw new UserErrorException($"Can only automate a single-package release commit with exactly 1 release. Found {diffs.Count}. Did you mean 'commit-group'?");
             }
             var diff = diffs[0];
             if (diff.NewVersion is null)

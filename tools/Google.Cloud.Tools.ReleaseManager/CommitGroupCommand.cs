@@ -22,28 +22,36 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
-    public sealed class CommitMultipleCommand : CommandBase
+    public sealed class CommitGroupCommand : CommandBase
     {
-        public CommitMultipleCommand()
-            : base("commit-multiple", "Commit the current set of changes to multiple projects with an appropriate commit message", "title")
+        public CommitGroupCommand()
+            : base("commit-group", "Commit the current set of changes, which are expected to form a complete group")
         {
         }
 
         protected override void ExecuteImpl(string[] args)
         {
-            string title = args[0];
+            var catalog = ApiCatalog.Load();
 
+            // Work out the package group that we're modifying.
             var diffs = FindChangedVersions();
-            if (diffs.Count < 2)
+            var groups = diffs.Select(pair => catalog[pair.Id].PackageGroup).Distinct().ToList();
+
+            if (groups.Count != 1 || groups[0] is null)
             {
-                throw new UserErrorException($"Can only automate a multi-package release commit with more than one release. Found {diffs.Count}. Did you mean 'commit'?");
+                throw new UserErrorException("Current set of changes does not represent a package group.");
             }
+
+            var packageGroup = groups[0];
+            if (packageGroup.PackageIds.Count != diffs.Count)
+            {
+                throw new UserErrorException($"Expected complete package group to be updated. Group contains: '{string.Join("', '", packageGroup.PackageIds)}'");
+            }
+
             if (diffs.Any(diff => diff.NewVersion is null))
             {
                 throw new UserErrorException($"Cannot automate a release commit for a deleted API.");
             }
-
-            var catalog = ApiCatalog.Load();
 
             var diffsWithHistory = diffs
                 .Where(diff => !catalog[diff.Id].NoVersionHistory)
@@ -61,12 +69,17 @@ namespace Google.Cloud.Tools.ReleaseManager
 
 
             // Commit has three sections:
-            // - User-provided title
+            // - Title generated from the package group
             // - Lists of changes (one list per package that has history)
             // - List of released packages
 
             var lines = new List<string>();
-            lines.Add(title);
+
+            // If we've got a single new version, use that in the commit title. Otherwise don't use it at all.
+            var allNewVersions = diffs.Select(d => d.NewVersion).Distinct().ToList();
+            var suffix = allNewVersions.Count == 1 ? $" version {allNewVersions[0]}" : "";
+
+            lines.Add($"Release {packageGroup.DisplayName} libraries{suffix}");
             lines.Add("");
 
             foreach (var (diff, history) in diffHistoryPairs)
