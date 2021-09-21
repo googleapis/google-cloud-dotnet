@@ -789,6 +789,27 @@
       }
     },
     {
+      "id": "Google.Cloud.Deploy.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Deploy",
+      "productUrl": "https://cloud.google.com/deploy/",
+      "description": "Recommended Google client library to access the Google Cloud Deploy API, which automates delivery of your applications to a series of target environments in a defined sequence.",
+      "tags": [
+        "deploy",
+        "deployment",
+        "continuous-integration",
+        "continuous-deployment",
+        "gke",
+        "kubernetes"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/deploy/v1"
+    },
+    {
       "id": "Google.Cloud.DevTools.Common",
       "version": "2.1.0",
       "type": "other",
