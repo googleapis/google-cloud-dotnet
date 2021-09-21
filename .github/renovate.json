@@ -48,6 +48,7 @@
     "apis/Google.Cloud.Datastore.V1/Google.Cloud.Datastore.V1/**",
     "apis/Google.Cloud.Datastream.V1Alpha1/Google.Cloud.Datastream.V1Alpha1/**",
     "apis/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2/**",
+    "apis/Google.Cloud.Deploy.V1/Google.Cloud.Deploy.V1/**",
     "apis/Google.Cloud.DevTools.Common/Google.Cloud.DevTools.Common/**",
     "apis/Google.Cloud.DevTools.ContainerAnalysis.V1/Google.Cloud.DevTools.ContainerAnalysis.V1/**",
     "apis/Google.Cloud.Diagnostics.AspNetCore/Google.Cloud.Diagnostics.AspNetCore/**",
