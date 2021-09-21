@@ -143,7 +143,11 @@ install_microgenerator() {
       git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -b master --depth 1
     fi
 
-    (cd $GENERATOR_ROOT; dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
+    # The dotnet restore step isn't generally required when cloning from elsewhere,
+    # but helps when running a local generator. (It does no harm even when not required.)
+    (cd $GENERATOR_ROOT; \
+     dotnet restore -v quiet; \
+     dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
   fi
 }
 
