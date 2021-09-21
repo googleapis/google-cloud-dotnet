@@ -2577,6 +2577,7 @@
     },
     {
       "id": "Google.Cloud.Speech.V1",
+      "autoGenerator": "OwlBot",
       "generator": "micro",
       "protoPath": "google/cloud/speech/v1",
       "productName": "Google Cloud Speech",
