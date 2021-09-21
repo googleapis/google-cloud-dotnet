@@ -122,11 +122,33 @@ namespace Google.Cloud.Tools.Common
         // Using a SortedDictionary means we'll keep dependencies in alphabetical order.
         public SortedDictionary<string, string> Dependencies { get; set; } = new SortedDictionary<string, string>(StringComparer.Ordinal);
         public SortedDictionary<string, string> TestDependencies { get; set; } = new SortedDictionary<string, string>(StringComparer.Ordinal);
-        
+
         /// <summary>
         /// The type of generator used to generate source code for this API.
         /// </summary>
-        public GeneratorType Generator { get; set;  }
+        public GeneratorType Generator { get; set; }
+
+        /// <summary>
+        /// The autogenerator type used to maintain this API, when specified explicitly.
+        /// </summary>
+        public AutoGeneratorType? AutoGenerator { get; set; }
+
+        /// <summary>
+        /// Determines the autogenerator type for this API based on what's explicitly configured,
+        /// and sensible defaults otherwise.
+        /// </summary>
+        public AutoGeneratorType DetermineAutoGeneratorType(string apiDirectory)
+        {
+            if (AutoGenerator != null)
+            {
+                return AutoGenerator.Value;
+            }
+
+            // Currently, default to just "synthtool if anything". Once we have confidence that
+            // we've got the OwlBot configuration right, we can return check whether there are any pre/mid/post-generation
+            // scripts, and opt into OwlBot automatically when there aren't.
+            return Generator == GeneratorType.None ? AutoGeneratorType.None : AutoGeneratorType.Synthtool;
+        }
         
         /// <summary>
         /// The path within googleapis for the API protos.
