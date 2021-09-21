@@ -31,6 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// <see cref="ILoggerProvider"/> for Google Cloud Logging.
     /// </summary>
+    [Obsolete("Use Google.Cloud.Diagnostics.Common.GoogleLoggerProvider instead.")]
     public sealed class GoogleLoggerProvider : ILoggerProvider
     {
         private readonly Common.GoogleLoggerProvider _loggerProvider;
@@ -52,8 +53,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
         public static GoogleLoggerProvider Create(
-            IServiceProvider serviceProvider, string projectId = null, LoggerOptions options = null, LoggingServiceV2Client client = null) =>
-            new GoogleLoggerProvider(Common.GoogleLoggerProvider.Create(serviceProvider, projectId, options?.CommonLoggerOptions, client));
+            IServiceProvider serviceProvider, string projectId = null, LoggerOptions options = null, LoggingServiceV2Client client = null)
+        {
+            options = options ?? LoggerOptions.Create();
+            options.CommonLoggerOptions.Client = client;
+            options.CommonLoggerOptions.ProjectId = projectId;
+            return new GoogleLoggerProvider(Common.GoogleLoggerProvider.Create(serviceProvider, options.CommonLoggerOptions));
+        }
 
         /// <summary>
         /// Create an <see cref="ILoggerProvider"/> for Google Cloud Logging.
@@ -64,8 +70,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
         public static GoogleLoggerProvider Create(
-            LogTarget logTarget, IServiceProvider serviceProvider, LoggerOptions options = null, LoggingServiceV2Client client = null) =>
-            new GoogleLoggerProvider(Common.GoogleLoggerProvider.Create(logTarget, serviceProvider, options?.CommonLoggerOptions, client));
+            LogTarget logTarget, IServiceProvider serviceProvider, LoggerOptions options = null, LoggingServiceV2Client client = null)
+        {
+            options = options ?? LoggerOptions.Create();
+            options.CommonLoggerOptions.Client = client;
+            options.CommonLoggerOptions.LogTarget = logTarget;
+            return new GoogleLoggerProvider(Common.GoogleLoggerProvider.Create(serviceProvider, options.CommonLoggerOptions));
+        }
+
 
         // Adapter function to be used to get labels set with the obsolete AspNetCore*.ILogEntryLabelProvider.
         // Will be used to pass these labels from AspNetCore*.GoogleLogger to Common.GoogleLogger because
@@ -105,9 +117,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="logName">The name of the log.  This will be combined with the log location
         ///     (<see cref="LogTarget"/>) to generate the resource name for the log.</param>
         public ILogger CreateLogger(string logName) =>
-#pragma warning disable CS0618 // Type or member is obsolete
             new GoogleLogger(_loggerProvider.CreateLogger(logName, ObsoleteLabelsGetter, ObsoleteTraceContextGetter));
-#pragma warning restore CS0618 // Type or member is obsolete
 
         /// <inheritdoc />
         public void Dispose() => _loggerProvider.Dispose();

@@ -16,6 +16,7 @@ using Google.Api;
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -30,31 +31,33 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Options for a <see cref="GoogleLogger"/>.
     /// </summary>
+    [Obsolete("Use Google.Cloud.Diagnostics.Common.LoggingOptions and" +
+        "Google.Cloud.Diagnostics.Common.LoggingServiceOptions instead.")]
     public sealed class LoggerOptions
     {
-        internal Common.LoggerOptions CommonLoggerOptions { get; }
+        internal LoggingServiceOptions CommonLoggerOptions { get; }
 
         /// <summary>The minimum log level.</summary>
-        public LogLevel LogLevel => CommonLoggerOptions.LogLevel;
+        public LogLevel LogLevel => CommonLoggerOptions.Options.LogLevel;
 
         /// <summary>The name for the all logs.</summary>
-        public string LogName => CommonLoggerOptions.LogName;
+        public string LogName => CommonLoggerOptions.Options.LogName;
 
         /// <summary>The monitored resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
-        public MonitoredResource MonitoredResource => CommonLoggerOptions.MonitoredResource;
+        public MonitoredResource MonitoredResource => CommonLoggerOptions.Options.MonitoredResource;
 
         /// <summary>The buffer options for the logger.</summary>
-        public BufferOptions BufferOptions => CommonLoggerOptions.BufferOptions;
+        public BufferOptions BufferOptions => CommonLoggerOptions.Options.BufferOptions;
 
         /// <summary>The retry options for the logger.</summary>
-        public RetryOptions RetryOptions => CommonLoggerOptions.RetryOptions;
+        public RetryOptions RetryOptions => CommonLoggerOptions.Options.RetryOptions;
 
         /// <summary>Custom labels for log entries.</summary>
         /// <remarks>Keys and values added to <see cref="Labels"/> should not be null.
         /// If they are, an exception will be throw when attempting to log an entry.
         /// The entry won't be logged and the exception will be propagated depending
         /// on the value of <see cref="RetryOptions.ExceptionHandling"/>.</remarks>
-        public Dictionary<string, string> Labels => CommonLoggerOptions.Labels;
+        public Dictionary<string, string> Labels => CommonLoggerOptions.Options.Labels;
 
         /// <summary>
         /// A <see cref="TextWriter"/> to write diagnostics info about loggers created
@@ -76,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         public string Version => CommonLoggerOptions.Version;
 
-        private LoggerOptions(Common.LoggerOptions loggerOptions) =>
+        private LoggerOptions(Common.LoggingServiceOptions loggerOptions) =>
             CommonLoggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
 
         /// <summary>
@@ -177,7 +180,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             RetryOptions retryOptions = null,
             TextWriter loggerDiagnosticsOutput = null,
             string serviceName = null,
-            string version = null) => new LoggerOptions(Common.LoggerOptions.CreateWithServiceContext(
-                logLevel, logName, labels, monitoredResource, bufferOptions, retryOptions, loggerDiagnosticsOutput, serviceName, version));
+            string version = null) => new LoggerOptions(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel, logName, labels, monitoredResource, bufferOptions, retryOptions),
+                LoggerDiagnosticsOutput = loggerDiagnosticsOutput,
+                ServiceName = serviceName,
+                Version = version
+            });
     }
 }

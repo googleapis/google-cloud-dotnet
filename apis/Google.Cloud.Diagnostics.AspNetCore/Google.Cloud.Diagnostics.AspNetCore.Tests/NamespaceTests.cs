@@ -44,14 +44,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void Library_OnlyAspNetCoreNamespace() =>
             CodeHealthTester.AssertOnlyAllowedNamespaces(
-                typeof(GoogleDiagnosticsStartupFilter), BaseNamespace);
+                typeof(AspNetCoreErrorReportingExtensions), BaseNamespace);
         
         [Fact]
         public void Library_NoComponentSpecificNamespaces() =>
             // Note: If this test fails, the other one in this file will fail as well
             // but let's have the double protection.
             CodeHealthTester.AssertNoDisallowedNamespaces(
-                typeof(GoogleDiagnosticsStartupFilter),
+                typeof(AspNetCoreErrorReportingExtensions),
                 BaseNamespace + ".ErrorReporting",
                 BaseNamespace + ".Logging",
                 BaseNamespace + ".Trace");

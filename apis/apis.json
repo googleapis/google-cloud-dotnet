@@ -894,7 +894,6 @@
         "Microsoft.AspNetCore.Http.Extensions": "2.1.1"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "3.5.0",
         "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
         "Google.Cloud.Diagnostics.Common.Tests": "project"
       }
@@ -920,7 +919,6 @@
         "Grpc.Core": "2.38.1"
       },
       "testDependencies": {
-        "Google.Api.Gax.Testing": "3.5.0",
         "Google.Cloud.Diagnostics.Common.IntegrationTests": "project",
         "Google.Cloud.Diagnostics.Common.Tests": "project"
       }
@@ -948,6 +946,7 @@
         "System.Diagnostics.StackTrace": "4.3.0"
       },
       "testDependencies": {
+        "Google.Api.Gax.Testing": "3.5.0",
         "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta04"
       }
     },

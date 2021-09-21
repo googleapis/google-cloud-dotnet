@@ -1,11 +1,11 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
-//
+﻿// Copyright 2021 Google LLC
+// 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
+// 
+//     https://www.apache.org/licenses/LICENSE-2.0
+// 
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,7 +16,6 @@ using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.Logging;
@@ -26,13 +25,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-#if NETCOREAPP3_1
-namespace Google.Cloud.Diagnostics.AspNetCore3.Tests
-#elif NETCOREAPP2_1 || NET461
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests
-#else
-#error unknown target framework
-#endif
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class GoogleLoggerTest
     {
@@ -64,15 +57,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             consumer ??= new Mock<IConsumer<LogEntry>>(MockBehavior.Strict).Object;
             monitoredResource ??= MonitoredResourceBuilder.GlobalResource;
             logTarget ??= s_defaultLogTarget;
-            Common.LoggerOptions options = Common.LoggerOptions.CreateWithServiceContext(
-                logLevel, logName, labels, monitoredResource, retryOptions: retryOptions, serviceName: serviceName, version: version);
-#pragma warning disable CS0618 // Type or member is obsolete
-            Common.GoogleLogger _innerLogger = new Common.GoogleLogger(
-                consumer, logTarget, options, LogName,
-                GoogleLoggerProvider.ObsoleteLabelsGetter, GoogleLoggerProvider.ObsoleteTraceContextGetter,
-                s_clock, serviceProvider);
-#pragma warning restore CS0618 // Type or member is obsolete
-            return new GoogleLogger(_innerLogger);
+            var options = LoggingOptions.Create(logLevel, logName, labels, monitoredResource, retryOptions: retryOptions);
+            var serviceContext = ServiceContextUtils.CreateServiceContext(serviceName, version);
+            return new GoogleLogger(consumer, logTarget, serviceContext, options, LogName, s_clock, serviceProvider);
         }
 
         [Fact]
@@ -484,8 +471,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             };
 
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
-                .Returns(new Common.ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -508,8 +495,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             };
 
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
-                .Returns(new Common.ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -522,8 +509,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log_DoesNotLogIfNullLabels()
         {
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
-                .Returns(new Common.ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName);
@@ -535,8 +522,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log_ThrowsIfNullLabels_RetryOptionsPropagateExceptions()
         {
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
-                .Returns(new Common.ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new EmptyLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             var logger = GetLogger(mockConsumer.Object, LogLevel.Information, serviceProvider: mockServiceProvider.Object, logName: BaseLogName, retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate));
@@ -567,8 +554,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             };
 
             var mockServiceProvider = new Mock<IServiceProvider>();
-            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<Common.ILogEntryLabelProvider>)))
-                .Returns(new Common.ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
+            mockServiceProvider.Setup(sp => sp.GetService(typeof(IEnumerable<ILogEntryLabelProvider>)))
+                .Returns(new ILogEntryLabelProvider[] { new FooLogEntryLabelProvider(), new BarLogEntryLabelProvider() });
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
@@ -669,7 +656,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
     }
 
-    internal class FooLogEntryLabelProvider : Common.ILogEntryLabelProvider
+    internal class FooLogEntryLabelProvider : ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {
@@ -677,7 +664,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
     }
 
-    internal class BarLogEntryLabelProvider : Common.ILogEntryLabelProvider
+    internal class BarLogEntryLabelProvider : ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {
@@ -685,7 +672,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
     }
 
-    internal class EmptyLogEntryLabelProvider : Common.ILogEntryLabelProvider
+    internal class EmptyLogEntryLabelProvider : ILogEntryLabelProvider
     {
         public void Invoke(Dictionary<string, string> labels)
         {
