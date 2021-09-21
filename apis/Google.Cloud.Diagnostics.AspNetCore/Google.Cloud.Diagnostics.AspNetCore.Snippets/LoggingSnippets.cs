@@ -18,7 +18,6 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
 using Grpc.Core;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
@@ -164,7 +163,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var hostBuilder = Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder => webBuilder
                     // Replace projectId with your Google Cloud Project ID.
-                    .ConfigureServices(services => services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, projectId)))
+                    .ConfigureLogging(builder => builder.AddGoogle(new LoggingServiceOptions { ProjectId = projectId }))
                     .UseStartup<Startup>());
             // End sample
             return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
@@ -178,7 +177,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var hostBuilder = Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder => webBuilder
                     // Replace projectId with your Google Cloud Project ID.
-                    .ConfigureLogging(builder => builder.AddProvider(GoogleLoggerProvider.Create(serviceProvider: null, projectId)))
+                    .ConfigureLogging(builder => builder.AddGoogle(new LoggingServiceOptions { ProjectId = projectId }))
                     .UseStartup<Startup>());
             // End sample
             return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
@@ -194,7 +193,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             RetryOptions retryOptions = RetryOptions.NoRetry(ExceptionHandling.Propagate);
             // Also set the no buffer option so that writing the logs is attempted immediately.
             BufferOptions bufferOptions = BufferOptions.NoBuffer();
+#pragma warning disable CS0618 // Type or member is obsolete
             LoggerOptions loggerOptions = LoggerOptions.Create(bufferOptions: bufferOptions, retryOptions: retryOptions);
+#pragma warning restore CS0618 // Type or member is obsolete
             var hostBuilder = Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder => webBuilder
                     // Replace projectId with your Google Cloud Project ID.
@@ -212,7 +213,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             var hostBuilder = Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder => webBuilder
                     // Replace projectId with your Google Cloud Project ID.
-                    .UseGoogleDiagnostics(projectId, loggerOptions: LoggerOptions.Create(loggerDiagnosticsOutput: Console.Out))
+                    .UseGoogleDiagnostics(
+                        projectId,
+#pragma warning disable CS0618 // Type or member is obsolete
+                        loggerOptions: LoggerOptions.Create(loggerDiagnosticsOutput: Console.Out))
+#pragma warning restore CS0618 // Type or member is obsolete
                     .UseStartup<Startup>());
             // End sample
             return hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
@@ -227,7 +232,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 .ConfigureServices(services =>
                 {
                     // Replace projectId with your Google Cloud Project ID.
-                    services.AddSingleton<ILoggerProvider>(sp => GoogleLoggerProvider.Create(sp, projectId));
+                    services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions { ProjectId = projectId}));
                 })
                 .UseStartup<Startup>();
             // End sample
@@ -239,7 +244,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             // Sample: RegisterGoogleLogger3
             return new WebHostBuilder()
-                .ConfigureLogging(builder => builder.AddProvider(GoogleLoggerProvider.Create(serviceProvider: null, projectId)))
+                .ConfigureLogging(builder => builder.AddGoogle(new LoggingServiceOptions { ProjectId = projectId }))
                 .UseStartup<Startup>();
             // End sample
         }
@@ -253,7 +258,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             RetryOptions retryOptions = RetryOptions.NoRetry(ExceptionHandling.Propagate);
             // Also set the no buffer option so that writing the logs is attempted immediately.
             BufferOptions bufferOptions = BufferOptions.NoBuffer();
+#pragma warning disable CS0618 // Type or member is obsolete
             LoggerOptions loggerOptions = LoggerOptions.Create(bufferOptions: bufferOptions, retryOptions: retryOptions);
+#pragma warning restore CS0618 // Type or member is obsolete
             return new WebHostBuilder()
                 .UseGoogleDiagnostics(projectId, loggerOptions: loggerOptions)
                 .UseStartup<Startup>();
@@ -266,7 +273,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             // Sample: RegisterGoogleLoggerWriteUrl
             return new WebHostBuilder()
-                .UseGoogleDiagnostics(projectId, loggerOptions: LoggerOptions.Create(loggerDiagnosticsOutput: Console.Out))
+                .UseGoogleDiagnostics(
+                    projectId,
+#pragma warning disable CS0618 // Type or member is obsolete
+                    loggerOptions: LoggerOptions.Create(loggerDiagnosticsOutput: Console.Out))
+#pragma warning restore CS0618 // Type or member is obsolete
                 .UseStartup<Startup>();
             // End sample
         }
@@ -294,52 +305,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 application.ConfigureServices(services);
                 base.ConfigureServices(services);
             }
-
-            public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-            {
-                application.Configure(app, loggerFactory);
-                base.Configure(app, loggerFactory);
-            }
         }
 
         // Sample: RegisterGoogleLogger
         public void ConfigureServices(IServiceCollection services)
         {
-            // No specific services are needed to use Google Logging.
+            // Replace ProjectId with your Google Cloud Project ID.
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                ProjectId = ProjectId
+            }));
 
-            // Add any services your application requires, for instance,
+            // Add any other services your application requires, for instance,
             // depending on the version of ASP.NET Core you are using, you may
             // need one of the following:
 
             // services.AddMvc();
 
             // services.AddControllersWithViews();
-        }
-
-        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-        {
-            // Replace ProjectId with your Google Cloud Project ID.
-            loggerFactory.AddGoogle(app.ApplicationServices, ProjectId);
-
-            // Add any other configuration your application requires, for instance,
-            // depending on the verson of ASP.NET Core you are using, you may
-            // need one of the following:
-
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //        name: "default",
-            //        template: "{controller=Home}/{action=Index}/{id?}");
-            //});
-
-            //app.UseRouting();
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //    endpoints.MapRazorPages();
-            //});
         }
         // End sample
     }

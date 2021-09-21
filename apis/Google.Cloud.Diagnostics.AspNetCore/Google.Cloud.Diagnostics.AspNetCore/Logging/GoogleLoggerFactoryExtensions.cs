@@ -29,23 +29,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Extensions to add <see cref="GoogleLoggerProvider"/>s to an <see cref="ILoggerFactory"/>.
     /// </summary>
-    /// 
-    /// <example>
-    /// <code>
-    /// public void Configure(ILoggerFactory loggerFactory)
-    /// {
-    ///     string projectId = "[Google Cloud Platform project ID]";
-    ///     loggerFactory.AddGoogle(projectId);
-    ///     ...
-    /// }
-    /// </code>
-    /// </example>
-    /// 
     /// <remarks>
     /// Logs to Google Cloud Logging.
     /// Docs: https://cloud.google.com/logging/docs/
     /// </remarks>
     /// <seealso cref="GoogleLogger"/>
+    [Obsolete("Use Google.Cloud.Diagnostics.Common.LoggingExtensions methods instead.")]
     public static class GoogleLoggerFactoryExtensions
     {
         /// <summary>
@@ -58,6 +47,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
+        [Obsolete("Use Google.Cloud.Diagnostics.Common.LoggingExtensions methods instead.")]
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, IServiceProvider serviceProvider, string projectId = null,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
@@ -75,6 +65,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="serviceProvider">The service provider to resolve additional services from.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
+        [Obsolete("Use Google.Cloud.Diagnostics.Common.LoggingExtensions methods instead.")]
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTarget logTarget, IServiceProvider serviceProvider,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {

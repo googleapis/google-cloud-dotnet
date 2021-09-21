@@ -27,6 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// <see cref="ILogger"/> for Google Cloud Logging.
     /// </summary>
+    [Obsolete("Use Google.Cloud.Diagnostics.Common.GoogleLogger instead.")]
     public sealed class GoogleLogger : ILogger
     {
         private readonly Common.GoogleLogger _logger;

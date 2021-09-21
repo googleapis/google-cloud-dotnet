@@ -17,8 +17,6 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
-using Google.Protobuf.WellKnownTypes;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -57,10 +55,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var server = GetTestServer(hostBuilder);
             var services = GetServices(server);
 
-            // Test Google diagnostics startup filter
-            var startupFilters = services.GetServices<IStartupFilter>();
-            Assert.NotNull(startupFilters.FirstOrDefault(r => r is GoogleDiagnosticsStartupFilter));
-
             // Test tracing
             Assert.NotNull(services.GetService<IHttpContextAccessor>());
             Assert.NotNull(services.GetService<IManagedTracer>());
@@ -87,7 +81,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 }
             };
             // We won't be able to detect the right monitored resource, so specify it explicitly.
+#pragma warning disable CS0618 // Type or member is obsolete
             var loggerOptions = LoggerOptions.Create(monitoredResource: resource);
+#pragma warning restore CS0618 // Type or member is obsolete
             var hostBuilder = GetHostBuilder(
                 webHostBuilder => webHostBuilder.UseGoogleDiagnostics(
                     TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version, loggerOptions));

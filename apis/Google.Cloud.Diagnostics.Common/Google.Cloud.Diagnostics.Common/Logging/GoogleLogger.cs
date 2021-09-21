@@ -45,8 +45,11 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private readonly LogTarget _logTarget;
 
+        /// <summary>Service context to associate to log entries, if any.</summary>
+        private readonly Struct _serviceContext;
+
         /// <summary>The logger options.</summary>
-        private readonly LoggerOptions _loggerOptions;
+        private readonly LoggingOptions _loggerOptions;
 
         /// <summary>The formatted log name.</summary>
         private readonly string _fullLogName;
@@ -62,16 +65,16 @@ namespace Google.Cloud.Diagnostics.Common
         private readonly AmbientScopeManager _ambientScopeManager;
 
         internal GoogleLogger(
-            IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions,
+            IConsumer<LogEntry> consumer, LogTarget logTarget, Struct serviceContext, LoggingOptions loggerOptions,
             string logName, IClock clock = null, IServiceProvider serviceProvider = null)
 #pragma warning disable CS0618 // Type or member is obsolete
-            : this (consumer, logTarget, loggerOptions, logName, null, null, clock, serviceProvider)
+            : this (consumer, logTarget, serviceContext, loggerOptions, logName, null, null, clock, serviceProvider)
 #pragma warning restore CS0618 // Type or member is obsolete
         {
         }
 
         [Obsolete("Added for backward compatibility only when moving GoogleLogger to Common.")]
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions, string logName,
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, Struct serviceContext, LoggingOptions loggerOptions, string logName,
             Action<IServiceProvider, Dictionary<string, string>> obsoleteLabelsGetter,
             Action<IServiceProvider, LogEntry, TraceTarget> obsoleteTraceContextGetter,
             IClock clock = null, IServiceProvider serviceProvider = null)
@@ -79,6 +82,7 @@ namespace Google.Cloud.Diagnostics.Common
             _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _traceTarget = logTarget.Kind == LogTargetKind.Project ?
                 TraceTarget.ForProject(logTarget.ProjectId) : null;
+            _serviceContext = serviceContext;
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
             _logName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
@@ -137,9 +141,9 @@ namespace Google.Cloud.Diagnostics.Common
             jsonStruct.Fields.Add("message", Value.ForString(message));
             jsonStruct.Fields.Add("log_name", Value.ForString(_logName));
 
-            if (_loggerOptions.ServiceContext != null)
+            if (_serviceContext != null)
             {
-                jsonStruct.Fields.Add("serviceContext", Value.ForStruct(_loggerOptions.ServiceContext));
+                jsonStruct.Fields.Add("serviceContext", Value.ForStruct(_serviceContext));
             }
             if (exception != null)
             {
@@ -250,7 +254,7 @@ namespace Google.Cloud.Diagnostics.Common
             private readonly IServiceProvider _serviceProvider;
             private readonly Action<IServiceProvider, Dictionary<string, string>> _obsoleteLabelsGetter;
 
-            internal AmbientScopeManager(LoggerOptions options, IServiceProvider serviceProvider, Action<IServiceProvider, Dictionary<string, string>> obsoleteLabelsGetter)
+            internal AmbientScopeManager(LoggingOptions options, IServiceProvider serviceProvider, Action<IServiceProvider, Dictionary<string, string>> obsoleteLabelsGetter)
             {
                 _permanentParent = options?.Labels is null ? null : GoogleLoggerScope.CreateScope(new LabellingScopeState(options.Labels), null);
                 _serviceProvider = serviceProvider;

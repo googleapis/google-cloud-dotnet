@@ -708,12 +708,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = IdGenerator.FromDateTime();
 
             var builder = GetHostBuilder<VanillaApplication>(webHostBuilder =>
-                webHostBuilder.ConfigureLogging(loggingBuilder =>
+                webHostBuilder.ConfigureLogging(loggingBuilder => loggingBuilder.AddGoogle(new LoggingServiceOptions
                 {
-                    var projectId = TestEnvironment.GetTestProjectId();
-                    var provider = GoogleLoggerProvider.Create(serviceProvider: null, projectId, LoggerOptions.Create(LogLevel.Warning));
-                    loggingBuilder.AddProvider(provider);
-                }));
+                    Options = LoggingOptions.Create(LogLevel.Warning),
+                    ProjectId = TestEnvironment.GetTestProjectId()
+                })));
+
             using (TestServer server = GetTestServer(builder))
             using (var client = server.CreateClient())
             {
@@ -825,18 +825,33 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     {
         protected readonly string _projectId = TestEnvironment.GetTestProjectId();
 
-        public override void ConfigureServices(IServiceCollection services) => base.ConfigureServices(services.AddHttpContextAccessor());
-
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
+        public override void ConfigureServices(IServiceCollection services) 
+        {
+            services.AddHttpContextAccessor();
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId
+            })) ;
+            base.ConfigureServices(services);
+        }
     }
 
-    public class ObsoleteExternalTracingTestApplication : LoggerNoTracingActivatedTestApplication
+    public class ObsoleteExternalTracingTestApplication : BaseStartup
     {
+        protected readonly string _projectId = TestEnvironment.GetTestProjectId();
+
         public override void ConfigureServices(IServiceCollection services) =>
+            base.ConfigureServices(services
+                .AddHttpContextAccessor()
 #pragma warning disable CS0618 // Type or member is obsolete
-            base.ConfigureServices(services.AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>());
+                .AddSingleton<IExternalTraceProvider, SpanCountingExternalTraceProvider>());
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+#pragma warning disable CS0618 // Type or member is obsolete
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
 #pragma warning restore CS0618 // Type or member is obsolete
     }
 
@@ -899,9 +914,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             : base(traceQps)
         { }
 
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId
+            }));
+            base.ConfigureServices(services);
+        }
     }
 
     public class NoBufferWarningLoggerTracesAllTestApplication : NoBufferWarningLoggerTestApplication
@@ -911,11 +932,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         { }
     }
 
-    public class ObsoleteNoBufferWarningLoggerExternalTraceTestApplication : NoBufferWarningLoggerTestApplication
+    public class ObsoleteNoBufferWarningLoggerExternalTraceTestApplication : LoggerTestApplication
     {
         public override void ConfigureServices(IServiceCollection services) =>
 #pragma warning disable CS0618 // Type or member is obsolete
             base.ConfigureServices(services.AddSingleton<IExternalTraceProvider>(new SpanCountingExternalTraceProvider()));
+#pragma warning restore CS0618 // Type or member is obsolete
+
+        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+#pragma warning disable CS0618 // Type or member is obsolete
+            base.Configure(app, loggerFactory.AddGoogle(
+                app.ApplicationServices, _projectId, LoggerOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer())));
 #pragma warning restore CS0618 // Type or member is obsolete
     }
 
@@ -945,11 +972,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
         };
 
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices,
-                _projectId,
-                LoggerOptions.Create(logLevel: LogLevel.Warning, monitoredResource: Resource, bufferOptions: BufferOptions.NoBuffer())));
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, monitoredResource: Resource, bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId
+            }));
+            base.ConfigureServices(services);
+        }
     }
 
     /// <summary>
@@ -958,15 +989,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class WarningWithLabelsLoggerTestApplication : LoggerTestApplication
     {
-        public override void ConfigureServices(IServiceCollection services) =>
-            base.ConfigureServices(services
-                .AddLogEntryLabelProvider<FooLogEntryLabelProvider>()
-                .AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>()
+        public override void ConfigureServices(IServiceCollection services)
+        {
 #pragma warning disable CS0618 // Type or member is obsolete
-                .AddSingleton<ILogEntryLabelProvider, BarLogEntryLabelProvider>());
+            services
+                .AddLogEntryLabelProviderSingleton<FooLogEntryLabelProvider>()
+                .AddSingleton<ILogEntryLabelProvider, BarLogEntryLabelProvider>();
 #pragma warning restore CS0618 // Type or member is obsolete
+            LoggingExtensions.AddLogEntryLabelProviderSingleton<TraceIdLogEntryLabelProvider>(services);
+            base.ConfigureServices(services);
+        }
 
         public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
+#pragma warning disable CS0618 // Type or member is obsolete
             base.Configure(app, loggerFactory.AddGoogle(
                 app.ApplicationServices,
                 _projectId,
@@ -974,16 +1009,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     logLevel: LogLevel.Warning,
                     labels: new Dictionary<string, string> { { "some-key", "some-value" } },
                     bufferOptions: BufferOptions.NoBuffer())));
+#pragma warning restore CS0618 // Type or member is obsolete
     }
 
     public class DiagnosticsOutputLoggerTestApplication : LoggerTestApplication
     {
-        public override void ConfigureServices(IServiceCollection services) =>
-            base.ConfigureServices(services.AddSingleton<TextWriter, StringWriter>());
+        public override void ConfigureServices(IServiceCollection services)
+        {
 
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices, _projectId, LoggerOptions.Create(loggerDiagnosticsOutput: app.ApplicationServices.GetRequiredService<TextWriter>())));
+            var writer = new StringWriter();
+            services.AddSingleton<TextWriter>(writer);
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId,
+                LoggerDiagnosticsOutput = writer
+            }));
+            base.ConfigureServices(services);
+        }
     }
 
     /// <summary>
@@ -993,15 +1036,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningServiceContextLoggerTestApplication : LoggerTestApplication
     {
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices,
-                _projectId,
-                LoggerOptions.CreateWithServiceContext(
-                    logLevel: LogLevel.Warning,
-                    bufferOptions: BufferOptions.NoBuffer(),
-                    serviceName: "my.test.service",
-                    version: "v1.0.0-alpha01")));
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId,
+                ServiceName = "my.test.service",
+                Version = "v1.0.0-alpha01"
+            }));
+            base.ConfigureServices(services);
+        }
     }
 
     /// <summary>
@@ -1011,14 +1056,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningServiceContextServiceNameOnlyLoggerTestApplication : LoggerTestApplication
     {
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices,
-                _projectId,
-                LoggerOptions.CreateWithServiceContext(
-                    logLevel: LogLevel.Warning,
-                    bufferOptions: BufferOptions.NoBuffer(),
-                    serviceName: "my.test.service")));
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId,
+                ServiceName = "my.test.service"
+            }));
+            base.ConfigureServices(services);
+        }
     }
 
     /// <summary>
@@ -1028,14 +1075,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferWarningServiceContextVersionOnlyLoggerTestApplication : LoggerTestApplication
     {
-        public override void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) =>
-            base.Configure(app, loggerFactory.AddGoogle(
-                app.ApplicationServices,
-                _projectId,
-                LoggerOptions.CreateWithServiceContext(
-                    logLevel: LogLevel.Warning,
-                    bufferOptions: BufferOptions.NoBuffer(),
-                    version: "v1.0.0-alpha01")));
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId,
+                Version = "v1.0.0-alpha01"
+            }));
+            base.ConfigureServices(services);
+        }
     }
 
     /// <summary>

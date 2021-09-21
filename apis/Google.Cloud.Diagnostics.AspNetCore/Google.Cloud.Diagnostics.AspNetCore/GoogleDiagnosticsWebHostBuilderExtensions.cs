@@ -29,6 +29,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Extensions to configure Google Diagnostics on the <see cref="IWebHostBuilder"/>.
     /// </summary>
+    [Obsolete("Alternatives to be provided in the next commit.")]
     public static class GoogleDiagnosticsWebHostBuilderExtensions
     {
         /// <summary>
@@ -131,7 +132,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             projectId = Project.GetAndCheckProjectId(projectId, null);
 
             services.AddLogEntryLabelProvider<TraceIdLogEntryLabelProvider>();
-            services.AddSingleton<IStartupFilter>(new GoogleDiagnosticsStartupFilter(projectId, loggerOptions));
             services.AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions 
             {
                 ServiceOptions = new Common.TraceServiceOptions
@@ -147,6 +147,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Version = serviceVersion,
                 Options = errorReportingOptions
             });
+
+            loggerOptions = loggerOptions ?? LoggerOptions.Create();
+            loggerOptions.CommonLoggerOptions.ProjectId = projectId;
+            services.AddLogging(builder => builder.AddGoogle(loggerOptions.CommonLoggerOptions));
         }
     }
 }
