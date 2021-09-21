@@ -328,11 +328,13 @@ generate_api() {
     fi
   fi
 
-  # Record the commit in synth.metadata, using either googleapis or googleapis-discovery
-  # depending on the generator.
-  if [[ "$GENERATOR" == "regapic" ]]
+  if [[ -f $PACKAGE_DIR/synth.ph ]]
   then
-    cat > $PACKAGE_DIR/synth.metadata <<END
+    # Record the commit in synth.metadata, using either googleapis or googleapis-discovery
+    # depending on the generator.
+    if [[ "$GENERATOR" == "regapic" ]]
+    then
+      cat > $PACKAGE_DIR/synth.metadata <<END
 {
   "sources": [
     {
@@ -352,8 +354,8 @@ generate_api() {
   ]
 }
 END
-  else
-    cat > $PACKAGE_DIR/synth.metadata <<END
+    else
+      cat > $PACKAGE_DIR/synth.metadata <<END
 {
   "sources": [
     {
@@ -366,6 +368,7 @@ END
   ]
 }
 END
+    fi
   fi
 }
 
@@ -394,6 +397,9 @@ then
   packages=$($PYTHON3 tools/listapis.py apis/apis.json --test generator)
 fi
 
+# TODO: For OwlBot APIs, should we just copy from googleapis-gen,
+# unless we're testing a generator change? (Using two different generation
+# paths may end up causing issues.)
 for package in $packages
 do
   generate_api $package

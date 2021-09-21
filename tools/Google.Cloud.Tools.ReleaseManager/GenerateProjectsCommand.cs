@@ -161,6 +161,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateSolutionFiles(path, api);
                 GenerateDocumentationStub(path, api);
                 GenerateSynthConfiguration(path, api);
+                GenerateOwlBotConfiguration(path, api);
                 GenerateMetadataFile(path, api);
             }
         }
@@ -487,11 +488,14 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
         {
-            if (api.Generator == GeneratorType.None)
+            var synthFile = Path.Combine(apiRoot, "synth.py");
+            if (api.DetermineAutoGeneratorType(apiRoot) != AutoGeneratorType.Synthtool)
             {
+                // Clean up any previous synth configuration
+                File.Delete(synthFile);
+                File.Delete(Path.Combine(apiRoot, "synth.metadata"));
                 return;
             }
-            var synthFile = Path.Combine(apiRoot, "synth.py");
 
             // Currently all APIs use the exact same synth file, so we can just replace it every time.
             // We may need something more sophisticated in the future.
@@ -524,6 +528,41 @@ shell.run(
   hide_output = False)
 ";
             File.WriteAllText(synthFile, content);
+        }
+
+        private static void GenerateOwlBotConfiguration(string apiRoot, ApiMetadata api)
+        {
+            var owlBotConfigFile = Path.Combine(apiRoot, ".OwlBot.yaml");
+            if (api.DetermineAutoGeneratorType(apiRoot) != AutoGeneratorType.OwlBot)
+            {
+                // Clean up any previous synth configuration
+                File.Delete(owlBotConfigFile);
+                return;
+            }
+            string content =
+$@"
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the ""License"");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an ""AS IS"" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+deep-remove-regex:
+    - /owl-bot-staging
+
+deep-copy-regex:
+    - source: /{api.ProtoPath}/.*-csharp/(.*)
+      dest: /owl-bot-staging/{api.Id}/$1
+";
+            File.WriteAllText(owlBotConfigFile, content);
         }
 
         /// <summary>
