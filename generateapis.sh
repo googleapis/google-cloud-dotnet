@@ -328,7 +328,7 @@ generate_api() {
     fi
   fi
 
-  if [[ -f $PACKAGE_DIR/synth.ph ]]
+  if [[ -f $PACKAGE_DIR/synth.py ]]
   then
     # Record the commit in synth.metadata, using either googleapis or googleapis-discovery
     # depending on the generator.
