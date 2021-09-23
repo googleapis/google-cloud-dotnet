@@ -1,5 +1,11 @@
 # Version history
 
+# Version 3.5.0, released 2021-09-23
+
+- [Commit 6687459](https://github.com/googleapis/google-cloud-dotnet/commit/6687459): docs: clarified some LRO types
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+- [Commit 0c649d8](https://github.com/googleapis/google-cloud-dotnet/commit/0c649d8): feat: expose `Locations` service to get/list avaliable locations of Dialogflow products; fixed some API annotations
+
 # Version 3.4.0, released 2021-08-10
 
 - [Commit 5dba1ca](https://github.com/googleapis/google-cloud-dotnet/commit/5dba1ca):
