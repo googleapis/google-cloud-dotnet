@@ -1,5 +1,14 @@
 # Version history
 
+# Version 1.2.0, released 2021-09-23
+
+- [Commit d4815e4](https://github.com/googleapis/google-cloud-dotnet/commit/d4815e4): feat: add SecurityLevel option on HttpsTrigger
+- [Commit 9ac0b1d](https://github.com/googleapis/google-cloud-dotnet/commit/9ac0b1d): docs: minor formatting fixes to Cloud Functions reference docs
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+- [Commit 6aa7606](https://github.com/googleapis/google-cloud-dotnet/commit/6aa7606):
+  - fix: Updating behavior of source_upload_url during Get/List function calls
+  - Regenerating cloud functions docs
+
 # Version 1.1.0, released 2021-05-05
 
 No API surface changes; just dependency updates.
