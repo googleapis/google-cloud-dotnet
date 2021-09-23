@@ -1,5 +1,14 @@
 # Version history
 
+# Version 1.4.0, released 2021-09-23
+
+- [Commit 6b21a68](https://github.com/googleapis/google-cloud-dotnet/commit/6b21a68):
+  - docs: clarified some LRO types
+  - docs: fixed some wrong update mask descriptions
+- [Commit 29077ad](https://github.com/googleapis/google-cloud-dotnet/commit/29077ad): chore: Configure Dialogflow CX for Ruby clients
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+- [Commit 992c711](https://github.com/googleapis/google-cloud-dotnet/commit/992c711): feat: added support for DLP templates; expose `Locations` service to get/list avaliable locations of Dialogflow products
+
 # Version 1.3.0, released 2021-08-10
 
 - [Commit c2e92a3](https://github.com/googleapis/google-cloud-dotnet/commit/c2e92a3):
