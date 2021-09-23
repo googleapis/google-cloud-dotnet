@@ -1,5 +1,10 @@
 # Version history
 
+# Version 1.2.0, released 2021-09-23
+
+- [Commit 1577824](https://github.com/googleapis/google-cloud-dotnet/commit/1577824): feat: support version reporting API
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.1.0, released 2021-05-26
 
 No API surface changes; just dependency updates.
