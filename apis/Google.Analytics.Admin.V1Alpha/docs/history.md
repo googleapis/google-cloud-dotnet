@@ -1,5 +1,23 @@
 # Version history
 
+# Version 1.0.0-alpha09, released 2021-09-23
+
+- [Commit 31dfcff](https://github.com/googleapis/google-cloud-dotnet/commit/31dfcff):
+  - feat: add `GetDataRetentionSettings`, `UpdateDataRetentionSettings` methods to the API
+  - feat: add `GetDisplayVideo360AdvertiserLink`, `ListDisplayVideo360AdvertiserLinks`, `CreateDisplayVideo360AdvertiserLink`, `DeleteDisplayVideo360AdvertiserLink` methods to the API
+  - feat: add `GetDisplayVideo360AdvertiserLinkProposal`, `ListDisplayVideo360AdvertiserLinkProposals`,`DeleteDisplayVideo360AdvertiserLinkProposal`, `CancelDisplayVideo360AdvertiserLinkProposal` methods to the API
+  - feat: add `LinkProposalStatusDetails`, `DisplayVideo360AdvertiserLinkProposal`, `DisplayVideo360AdvertiserLink`
+  - `LinkProposalState`, `LinkProposalInitiatingProduct`, `ServiceLevel`, `DataRetentionSettings` types to the API
+  - feat: add `service_level` field to `Property` type
+  - feat: add `display_video_360_advertiser_link`, `display_video_360_advertiser_link_proposal`, `data_retention_settings` fields to `ChangeHistoryChange.resource` oneof field.
+  - feat: add `custom` output only field to `ConversionEvent` type
+  - feat: change `measurement_unit` field to mutable in `CustomMetric` type
+  - fix!: remove `UpdateFirebaseLink` method from the API
+  - fix!: rename `is_deletable` field of `ConversionEvent` type to `deletable`
+  - fix!: rename `email_address` field of `GoogleAdsLink` type to `creator_email_address`
+  - fix!: remove `maximum_user_access` field from `FirebaseLink` type
+  - fix!: remove `MaximumUserAccess` enum from the API
+
 # Version 1.0.0-alpha08, released 2021-08-18
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
