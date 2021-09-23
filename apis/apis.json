@@ -2624,7 +2624,7 @@
       "protoPath": "google/cloud/speech/v1p1beta1",
       "productName": "Google Cloud Speech",
       "productUrl": "https://cloud.google.com/speech",
-      "version": "2.0.0-beta05",
+      "version": "2.0.0-beta06",
       "releaseLevelOverride": "beta",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
@@ -2633,7 +2633,7 @@
         "Speech"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.2.0"
+        "Google.LongRunning": "2.3.0"
       }
     },
     {

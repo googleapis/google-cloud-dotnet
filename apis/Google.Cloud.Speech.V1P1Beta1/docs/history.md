@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.0.0-beta06, released 2021-09-23
+
+- [Commit 3f9793d](https://github.com/googleapis/google-cloud-dotnet/commit/3f9793d): feat: Add transcript normalization
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.0.0-beta05, released 2021-07-28
 
 - [Commit 1b4497f](https://github.com/googleapis/google-cloud-dotnet/commit/1b4497f):
