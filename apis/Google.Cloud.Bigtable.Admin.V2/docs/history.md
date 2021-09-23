@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.5.0, released 2021-09-23
+
+- [Commit b3c1df4](https://github.com/googleapis/google-cloud-dotnet/commit/b3c1df4): feat: Publish new fields to support cluster group routing for Cloud Bigtable
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+- [Commit 3e536db](https://github.com/googleapis/google-cloud-dotnet/commit/3e536db): docs: update the comments in Cloud Bigtable RestoreTable API to reflect the new API capability
+
 # Version 2.4.0, released 2021-05-05
 
 - [Commit 9b48308](https://github.com/googleapis/google-cloud-dotnet/commit/9b48308): fix(retry): restore grpc_service_config for CreateBackup and {Restore,Snapshot}Table
