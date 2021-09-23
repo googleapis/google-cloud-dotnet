@@ -102,7 +102,7 @@ If unset, the default value depends on the detected platform:
 * `gce_instance` on Google Compute Engine (GCE).
 * `global` on all other platforms.
 
-(See [MonitoredResourceBuilder.cs](https://github.com/googleapis/gax-dotnet/blob/master/src/Google.Api.Gax.Grpc/MonitoredResourceBuilder.cs) for details)
+(See [MonitoredResourceBuilder.cs](https://github.com/googleapis/gax-dotnet/blob/main/src/Google.Api.Gax.Grpc/MonitoredResourceBuilder.cs) for details)
 
 ### resourceLabel
 
