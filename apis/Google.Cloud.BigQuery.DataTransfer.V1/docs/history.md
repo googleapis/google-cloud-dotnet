@@ -1,5 +1,10 @@
 # Version history
 
+# Version 3.2.0, released 2021-09-23
+
+- [Commit edaadae](https://github.com/googleapis/google-cloud-dotnet/commit/edaadae): docs: Improvements to various message and field descriptions
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 3.1.0, released 2021-05-25
 
 - [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation

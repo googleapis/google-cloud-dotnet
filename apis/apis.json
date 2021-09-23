@@ -287,7 +287,7 @@
       "protoPath": "google/cloud/bigquery/datatransfer/v1",
       "productName": "Google BigQuery Data Transfer",
       "productUrl": "https://cloud.google.com/bigquery/transfer/",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the BigQuery Data Transfer API, which transfers data from partner SaaS applications to Google BigQuery on a scheduled, managed basis.",
       "dependencies": {
