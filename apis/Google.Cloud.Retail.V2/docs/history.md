@@ -1,5 +1,14 @@
 # Version history
 
+# Version 1.3.0, released 2021-09-23
+
+- [Commit 672325d](https://github.com/googleapis/google-cloud-dotnet/commit/672325d):
+  - docs: Keep the API doc up-to-date
+  - feat: update grpc service config settings to reflect correct API deadlines
+  - chore: remove relative private links from search service comments to prevent crashing client lib generation tool
+- [Commit 51b50d0](https://github.com/googleapis/google-cloud-dotnet/commit/51b50d0): docs: Keep the API doc up-to-date
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 1.2.0, released 2021-08-10
 
 - [Commit 130477c](https://github.com/googleapis/google-cloud-dotnet/commit/130477c): docs(retail): Quote several literal expressions for better rendering
