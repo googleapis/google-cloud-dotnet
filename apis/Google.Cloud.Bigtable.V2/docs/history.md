@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-09-23
+
+- [Commit 2a57d32](https://github.com/googleapis/google-cloud-dotnet/commit/2a57d32): docs: Fix the documentation for BigtableServiceApiSettings
+
 # Version 2.3.0, released 2021-08-18
 
 - [Commit b58fa0b](https://github.com/googleapis/google-cloud-dotnet/commit/b58fa0b): Fix Bigtable for self-signed JWTs
