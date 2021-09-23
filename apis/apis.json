@@ -1233,7 +1233,7 @@
     },
     {
       "id": "Google.Cloud.Gaming.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Game Services",
       "productUrl": "https://cloud.google.com/solutions/gaming",
@@ -1244,7 +1244,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.LongRunning": "2.2.0",
+        "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
