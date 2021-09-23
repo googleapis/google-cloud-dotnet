@@ -1,5 +1,13 @@
 # Version history
 
+# Version 1.4.0, released 2021-09-23
+
+- [Commit e84109d](https://github.com/googleapis/google-cloud-dotnet/commit/e84109d):
+  - feat: Add script field to BuildStep message
+  - feat: Update cloudbuild proto with the service_account for BYOSA Triggers.
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+- [Commit 26753cf](https://github.com/googleapis/google-cloud-dotnet/commit/26753cf): feat: Add ability to configure BuildTriggers to create Builds that require approval before executing and ApproveBuild API to approve or reject pending Builds
+
 # Version 1.3.0, released 2021-07-29
 
 - [Commit 0ded664](https://github.com/googleapis/google-cloud-dotnet/commit/0ded664): docs: Add a new build phase `SETUPBUILD` for timing information
