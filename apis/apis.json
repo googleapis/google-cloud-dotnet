@@ -953,7 +953,7 @@
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
-      "version": "3.4.0",
+      "version": "3.5.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Dialogflow API.",
       "tags": [
@@ -962,7 +962,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.LongRunning": "2.2.0",
+        "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
       "testDependencies": {
