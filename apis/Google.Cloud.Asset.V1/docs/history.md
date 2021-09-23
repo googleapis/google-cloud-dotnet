@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.10.0, released 2021-09-23
+
+- [Commit b71303f](https://github.com/googleapis/google-cloud-dotnet/commit/b71303f): feat: Release of relationships in v1, Add content type Relationship to support relationship search
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.9.0, released 2021-08-10
 
 - [Commit ba29ee0](https://github.com/googleapis/google-cloud-dotnet/commit/ba29ee0):
