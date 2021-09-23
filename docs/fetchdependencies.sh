@@ -16,7 +16,7 @@ git -C dependencies reset -- README.md .gitignore
 git -C dependencies checkout README.md .gitignore
 
 echo "Cloning repositories"
-git clone https://github.com/googleapis/gax-dotnet dependencies/gax-dotnet --quiet --depth=1 -b master
+git clone https://github.com/googleapis/gax-dotnet dependencies/gax-dotnet --quiet --depth=1 -b main
 git clone https://github.com/google/protobuf dependencies/protobuf --quiet --depth=1 -b $PROTOBUF_BRANCH
 git clone https://github.com/grpc/grpc dependencies/grpc --quiet --depth=1 -b $GRPC_BRANCH
 
