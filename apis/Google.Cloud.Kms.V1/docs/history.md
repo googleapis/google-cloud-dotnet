@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.5.0, released 2021-09-23
+
+- [Commit b91de3f](https://github.com/googleapis/google-cloud-dotnet/commit/b91de3f): feat: add support for Key Reimport
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.4.0, released 2021-08-10
 
 - [Commit f62f458](https://github.com/googleapis/google-cloud-dotnet/commit/f62f458): feat: add support for HMAC, Variable Key Destruction, and GenerateRandom
