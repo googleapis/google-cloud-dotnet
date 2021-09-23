@@ -1786,6 +1786,29 @@
       "protoPath": "google/cloud/networkmanagement/v1"
     },
     {
+      "id": "Google.Cloud.NetworkSecurity.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Network Security",
+      "productUrl": "https://cloud.google.com/traffic-director/docs/security-overview",
+      "description": "Recommended Google client library to access the Google Cloud Network Security API version v1beta1, which provides security management for Traffic Director.",
+      "tags": [
+        "network",
+        "security",
+        "traffic-director",
+        "authentication",
+        "encryption",
+        "management",
+        "microservices",
+        "mesh"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/networksecurity/v1beta1"
+    },
+    {
       "id": "Google.Cloud.Notebooks.V1Beta1",
       "version": "1.0.0-beta04",
       "type": "grpc",
