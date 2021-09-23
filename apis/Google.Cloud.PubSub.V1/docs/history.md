@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.7.0, released 2021-09-23
+
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+- [Commit 4cc3e58](https://github.com/googleapis/google-cloud-dotnet/commit/4cc3e58): feat: Add topic retention options
+
 # Version 2.6.0, released 2021-08-10
 
 - [Commit 61c5c17](https://github.com/googleapis/google-cloud-dotnet/commit/61c5c17): chore: Remove unused fields in PublisherClient
