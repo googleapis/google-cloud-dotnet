@@ -1,0 +1,23 @@
+[
+  {
+    "method": "ListAuthorizationPolicies",
+    "client": "NetworkSecurityClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListServerTlsPolicies",
+    "client": "NetworkSecurityClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  },
+  {
+    "method": "ListClientTlsPolicies",
+    "client": "NetworkSecurityClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
