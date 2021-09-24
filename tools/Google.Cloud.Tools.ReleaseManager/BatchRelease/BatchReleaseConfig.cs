@@ -46,6 +46,11 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         // Library selection criteria. These properties are effectively mutually exclusive.
 
         /// <summary>
+        /// Release everything that has changed and already has at least one release.
+        /// </summary>
+        public ReleaseAllCriterion ReleaseAll { get; set; }
+
+        /// <summary>
         /// Find all libraries with changes matching the given set of commits.
         /// </summary>
         public KnownCommitsCriterion KnownCommits { get; set; }
@@ -54,22 +59,6 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// Match exactly the APIs specified.
         /// </summary>
         public List<string> SpecifiedApis { get; set; }
-
-        /// <summary>
-        /// Validates that this configuration is reasonable.
-        /// </summary>
-        public void Validate()
-        {
-            var specifiedCriteria = new object[]
-            {
-                KnownCommits,
-                SpecifiedApis
-            }.Count(c => c is object);
-            if (specifiedCriteria != 1)
-            {
-                throw new UserErrorException("A batch release must specify exactly one criterion.");
-            }
-        }
 
         internal IEnumerable<IBatchCriterion> GetCriteria()
         {
@@ -80,6 +69,10 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             if (SpecifiedApis is object)
             {
                 yield return new SpecifiedApisCriterion(SpecifiedApis);
+            }
+            if (ReleaseAll is object)
+            {
+                yield return ReleaseAll;
             }
         }
     }
