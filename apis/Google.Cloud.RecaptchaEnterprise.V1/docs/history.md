@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.4.0, released 2021-09-24
+
+- [Commit 20d6309](https://github.com/googleapis/google-cloud-dotnet/commit/20d6309): feat: add GetMetrics and MigrateKey methods to reCAPTCHA enterprise API
+
 # Version 1.3.0, released 2021-09-01
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
