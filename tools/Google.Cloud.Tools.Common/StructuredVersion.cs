@@ -30,6 +30,14 @@ namespace Google.Cloud.Tools.Common
         public int Patch { get; }
         public int? Build { get; }
         public string Prerelease { get; }
+        public bool IsStable => Prerelease is null;
+
+        /// <summary>
+        /// A non-release version (in google-cloud-dotnet) is something like 1.0.0-beta00 or 2.0.0-beta00.
+        /// It's where we start, and how we signal "we're going to have a major version bump but we're not ready
+        /// for a release yet".
+        /// </summary>
+        public bool IsNonRelease => Prerelease?.EndsWith("00") == true;
 
         private StructuredVersion(int major, int minor, int patch, int? build, string prerelease)
         {

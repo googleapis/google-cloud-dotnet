@@ -50,38 +50,62 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
                 var prefix = api.Id + "-";
-                var lastVersion = tags
+
+                var taggedVersions = tags
                     .Where(tag => tag.StartsWith(prefix))
                     .Select(tag => tag.Split(new char[] { '-' }, 2)[1])
                     .Where(v => !v.StartsWith("0")) // We can reasonably ignore old 0.x versions
                     .Select(StructuredVersion.FromString)
                     .OrderBy(v => v)
-                    .LastOrDefault();
+                    .ToList();
 
-                if (lastVersion is null)
+                var comparisons = GetComparisons(api.StructuredVersion, taggedVersions);
+                foreach (var (oldVersion, requiredLevel) in comparisons)
                 {
-                    Console.WriteLine("No previous versions released; ignoring.");
-                    continue;
+                    var actualLevel = CheckCompatibility(api, oldVersion);
+                    if (actualLevel < requiredLevel)
+                    {
+                        throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
+                    }
                 }
+            }
+        }
 
-                var newVersion = api.StructuredVersion;
+        // Visible for testing
+        static internal IEnumerable<(StructuredVersion, Level)> GetComparisons(StructuredVersion newVersion, List<StructuredVersion> taggedVersions)
+        {
+            // e.g. 1.0.0-beta00, 2.0.0-beta00. Initial not-even-beta libraries, and preparing for new major version.
+            var isNonRelease = newVersion.IsNonRelease;
 
-                // If we're releasing a new version, we should check against the previous one.
-                // (For example, if this PR creates 1.2.0, then check against 1.1.0.)
-                // Otherwise, just expect minor changes.
-                Level requiredLevel = Level.Minor;
-                if (!lastVersion.Equals(newVersion))
+            // Whether pre-release or not, and whether new or not, if there's a previous stable version we should compare against it.
+            if (newVersion.Major > 1 || newVersion.Minor > 0 || newVersion.Patch > 0)
+            {
+                var latestStable = taggedVersions.LastOrDefault(v => v.IsStable);
+                if (latestStable is object)
                 {
-                    requiredLevel =
-                        lastVersion.Major != newVersion.Major ? Level.Major   // Major version bump: anything goes
-                        : lastVersion.Minor != newVersion.Minor ? Level.Minor // Minor version bump: minor changes are okay
-                        : Level.Identical;                                    // Patch version bump: API should be identical
+                    var level =
+                        newVersion.Major != latestStable.Major ? Level.Major
+                        : newVersion.Minor != latestStable.Minor ? Level.Minor
+                        : Level.Identical;
+                    yield return (latestStable, level);
                 }
+            }
 
-                var actualLevel = CheckCompatibility(api, lastVersion);
-                if (actualLevel < requiredLevel)
+            // If the new version is already a tag, we compare with that.
+            var compareWithSelf = taggedVersions.Contains(newVersion);
+            if (compareWithSelf)
+            {
+                yield return (newVersion, newVersion.IsStable ? Level.Minor : Level.Major);
+            }
+            else if (!newVersion.IsNonRelease)
+            {
+                // This is a release PR: the version doesn't already exist, and it isn't a *-beta00 version.
+                // If there's any existing release with the same major/minor/patch (which must necessarily be a pre-release), compare with that, allowing any changes.
+                // (We're already checking against the appropriate stable version, if any.)
+                var latestSameMajorMinorPatch = taggedVersions.LastOrDefault(v => v.Major == newVersion.Major && v.Minor == newVersion.Minor && v.Patch == newVersion.Patch);
+                if (latestSameMajorMinorPatch is object)
                 {
-                    throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
+                    yield return (latestSameMajorMinorPatch, Level.Major);
                 }
             }
         }
