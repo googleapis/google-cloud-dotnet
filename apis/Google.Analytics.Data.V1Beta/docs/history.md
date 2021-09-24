@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.0.0-beta06, released 2021-09-24
+
+- [Commit 75ffe93](https://github.com/googleapis/google-cloud-dotnet/commit/75ffe93):
+  - feat: add `CheckCompatibility` method to the API
+  - feat: add `DimensionCompatibility`, `MetricCompatibility`, `Compatibility` types to the API
+  - feat: add `category` field to `DimensionMetadata`, `MetricMetadata` types
+
 # Version 1.0.0-beta05, released 2021-08-18
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
