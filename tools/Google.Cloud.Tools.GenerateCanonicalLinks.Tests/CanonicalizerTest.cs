@@ -64,6 +64,8 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks.Tests
         [InlineData("Google.Cloud.Debugger.V2", "api/toc.html")]
         [InlineData("Google.Apis.Storage.v1", "api/Google.Apis.Storage.v1.html")]
         [InlineData("Google.Apis.AdSense.v1_4", "api/Google.Apis.AdSense.v1_4.AccountsResource.html")]
+        [InlineData("Google.Apis.Auth.AspNetCore", "api/Microsoft.Extensions.DependencyInjection.GoogleOpenIdConnectExtensions.html")]
+        [InlineData("Google.Apis.Logging.v2", "api/Google.Apis.CloudResourceManager.v2.CloudResourceManagerBaseServiceRequest-1.AltEnum.html")]
         public void GetUrl_NotOnDevsite(string package, string page) =>
             Assert.Null(Canonicalizer.GetUrl(package, page));
     }

@@ -38,6 +38,7 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
         };
 
         // Note: list rather than a dictionary, as order is important.
+        // This is a list of prefixes of *pages* and how they map to packages.
         private static readonly List<(string prefix, string package)> Prefixes = new List<(string, string)>
         {
             { ("Grpc", "Grpc.Core") },
@@ -153,6 +154,13 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             var parts = page.Split('.');
             // Single-part pages are always guides.
             if (parts.Length == 1)
+            {
+                return package;
+            }
+
+            // Anything that's in a package beginning with Google.Apis but isn't just "Google.Apis"
+            // will be ignored by the calling code. It's not on DevSite.
+            if (package.StartsWith("Google.Apis"))
             {
                 return package;
             }
