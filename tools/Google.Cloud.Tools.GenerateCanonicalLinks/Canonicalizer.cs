@@ -77,6 +77,16 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             // The Google.Cloud.Common package doesn't have a version number after it;
             // it's easiest to just fix that here.
             { ("Google.Cloud.Common", "Google.Cloud.Common") },
+
+            // REST libraries that are duplicated within Google.Cloud packages on googleapis.dev
+            { ("Google.Apis.Storage.v1", "Google.Apis.Storage.v1") },
+            { ("Google.Apis.Bigquery.v2", "Google.Apis.Bigquery.v2") },
+            { ("Google.Apis.Translate.v2", "Google.Apis.Translate.v2") },
+        };
+
+        private static readonly HashSet<string> KnownNonDevSitePackages = new HashSet<string>
+        {
+            "Google.Cloud.EntityFrameworkCore.Spanner"
         };
 
         /// <summary>
@@ -96,6 +106,12 @@ namespace Google.Cloud.Tools.GenerateCanonicalLinks
             {
                 // Last-but one value is the package name, e.g. Google.Cloud.Speech.V1
                 package = packageParts[^2];
+            }
+
+            // Some packages aren't on devsite, but cause tricky situations if we try to handle them later.
+            if (KnownNonDevSitePackages.Contains(package))
+            {
+                return null;
             }
 
             // DevSite doesn't have toc.html files
