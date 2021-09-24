@@ -1,5 +1,15 @@
 # Version history
 
+# Version 1.0.0-beta07, released 2021-09-24
+
+- [Commit aff9821](https://github.com/googleapis/google-cloud-dotnet/commit/aff9821):
+  - feat: Add Canada Regions And Support compliance regime
+  - fix: ResourceType CONSUMER_PROJECT is deprecated
+  - feat: ResourceType CONSUMER_FOLDER and KEYRING are added
+  - feat: display_name is added to ResourceSettings
+  - fix: billing_account is now optional in Workload
+  - feat: resource_settings is added to CreateWorkloadOperationMetadata
+
 # Version 1.0.0-beta06, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
