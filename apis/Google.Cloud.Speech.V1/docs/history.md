@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.5.0, released 2021-09-24
+
+- [Commit 09c3f7d](https://github.com/googleapis/google-cloud-dotnet/commit/09c3f7d): feat: add output_config request field
+
 # Version 2.4.0, released 2021-09-06
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
