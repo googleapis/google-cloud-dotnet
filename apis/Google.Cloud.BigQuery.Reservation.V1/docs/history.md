@@ -1,5 +1,18 @@
 # Version history
 
+# Version 1.4.0, released 2021-09-24
+
+- [Commit 7c0622f](https://github.com/googleapis/google-cloud-dotnet/commit/7c0622f):
+  - feat: Deprecated SearchAssignments in favor of SearchAllAssignments
+  - feat: Reservation objects now contain a creation time and an update time
+  - feat: Added commitment_start_time to capacity commitments
+  - feat: Force deleting capacity commitments is allowed while reservations with active assignments exist
+  - feat: ML_EXTERNAL job type is supported
+  - feat: Optional id can be passed into CreateCapacityCommitment and CreateAssignment
+  - docs: Clarified docs for None assignments
+  - fix!: Fixed pattern for BiReservation object
+  - BREAKING_CHANGE: Changed from `bireservation` to `biReservation`
+
 # Version 1.3.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
