@@ -20,7 +20,7 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 {
-    public sealed class KnownCommitsCriterion: IBatchCriterion
+    public sealed class KnownCommitsCriterion : IBatchCriterion
     {
         /// <summary>
         /// If set, override the natural history with this text.
