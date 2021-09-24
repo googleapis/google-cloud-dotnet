@@ -1899,7 +1899,7 @@
     },
     {
       "id": "Google.Cloud.OsConfig.V1Alpha",
-      "version": "1.0.0-alpha02",
+      "version": "1.0.0-alpha03",
       "type": "grpc",
       "productName": "Google Cloud OS Config",
       "productUrl": "https://cloud.google.com/compute/docs/osconfig/rest",
@@ -1912,7 +1912,7 @@
         "Configuration"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.2.0"
+        "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/osconfig/v1alpha"
