@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.4.0, released 2021-09-24
+
+- [Commit 7210495](https://github.com/googleapis/google-cloud-dotnet/commit/7210495):
+  - feat: add API ImportCustomer for Cloud Channel API
+  - docs: update comments for a few fields
+
 # Version 1.3.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
