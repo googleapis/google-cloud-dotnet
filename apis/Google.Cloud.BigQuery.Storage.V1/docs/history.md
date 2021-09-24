@@ -1,5 +1,13 @@
 # Version history
 
+# Version 2.5.0, released 2021-09-24
+
+- [Commit d200346](https://github.com/googleapis/google-cloud-dotnet/commit/d200346): fix: add missing read api retry setting on SplitReadStream
+- [Commit c896df1](https://github.com/googleapis/google-cloud-dotnet/commit/c896df1): feat: add BigQuery Storage Write API v1
+- [Commit beebb6a](https://github.com/googleapis/google-cloud-dotnet/commit/beebb6a):
+  - docs: Align session length with public documentation
+  - feat: Expose estimated bytes that a session will scan.
+
 # Version 2.4.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
