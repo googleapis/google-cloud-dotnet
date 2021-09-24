@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.5.0, released 2021-09-24
+
+- [Commit 4d51dc2](https://github.com/googleapis/google-cloud-dotnet/commit/4d51dc2): build: change links to make them absolute
+
 # Version 1.4.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
