@@ -11,6 +11,7 @@ declare -r DOTCOVER_VERSION=2019.3.4
 declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.15.8
 declare -r GRPC_VERSION=2.39.1
+declare -r GAPIC_GENERATOR_VERSION=1.3.10
 
 # Tools that only run under Windows (at the moment)
 declare -r DOCFX=$TOOL_PACKAGES/docfx.$DOCFX_VERSION/docfx.exe
@@ -138,9 +139,11 @@ install_microgenerator() {
     # TODO: Use a specific tag, or even a NuGet package eventually
     elif [ -d $GENERATOR_ROOT ]
     then
-      git -C $GENERATOR_ROOT pull -q
+      git -C $GENERATOR_ROOT fetch -q --tags
+      git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
     else
-      git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -b master --depth 1
+      git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -q
+      git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
     fi
 
     # The dotnet restore step isn't generally required when cloning from elsewhere,
