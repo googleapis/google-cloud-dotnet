@@ -21,7 +21,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     public class PublicAccessPreventionTest
     {
         private const string EnforcedValue = "enforced";
+        // TODO: Remove Unspecified once the change to inherited has been fully rolled out.
         private const string UnspecifiedValue = "unspecified";
+        private const string InheritedValue = "inherited";
         private static readonly Policy.BindingsData AllUsersViewer = new Policy.BindingsData
         {
             Members = new[] { "allUsers" },
@@ -38,7 +40,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             string bucketName = _fixture.GenerateBucketName();
             Bucket bucket = _fixture.CreateBucket(bucketName, false);
-            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue);
+            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null 
+                || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue
+                || bucket.IamConfiguration.PublicAccessPrevention == InheritedValue);
 
             // Enforce PAP
             client.PatchBucket(CreateBucketRepresentation(bucketName, EnforcedValue));
@@ -75,11 +79,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             string bucketName = _fixture.GenerateBucketName();
             Bucket bucket = _fixture.CreateBucket(bucketName, false);
-            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue);
+            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null 
+                || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue
+                || bucket.IamConfiguration.PublicAccessPrevention == InheritedValue);
 
             // Enforce PAP, then unenforce it
             client.PatchBucket(CreateBucketRepresentation(bucketName, EnforcedValue));
-            client.PatchBucket(CreateBucketRepresentation(bucketName, UnspecifiedValue));
+            client.PatchBucket(CreateBucketRepresentation(bucketName, InheritedValue));
 
             // Now we should be able to allow all users to view objects.
             var policy = client.GetBucketIamPolicy(bucketName);
