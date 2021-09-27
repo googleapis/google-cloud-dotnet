@@ -58,11 +58,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 #if NETCOREAPP3_1
             // Sample: UseGoogleDiagnostics_Core3
             var hostBuilder = Host.CreateDefaultBuilder()
-                .ConfigureWebHostDefaults(webBuilder => webBuilder
+                .ConfigureWebHostDefaults(webBuilder => webBuilder.ConfigureServices(services =>
                     // Replace ProjectId with your Google Cloud Project ID.
                     // Replace Service with a name or identifier for the service.
                     // Replace Version with a version for the service.
-                    .UseGoogleDiagnostics(ProjectId, Service, Version)
+                    services.AddGoogleDiagnosticsForAspNetCore(ProjectId, Service, Version))
                     .UseStartup<Startup>());
             // End sample
             hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 // Replace ProjectId with your Google Cloud Project ID.
                 // Replace Service with a name or identifier for the service.
                 // Replace Version with a version for the service.
-                .UseGoogleDiagnostics(ProjectId, Service, Version)
+                .ConfigureServices(services => services.AddGoogleDiagnosticsForAspNetCore(ProjectId, Service, Version))
                 .UseStartup<Startup>();
             // End sample
 #else

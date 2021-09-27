@@ -29,7 +29,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Extensions to configure Google Diagnostics on the <see cref="IWebHostBuilder"/>.
     /// </summary>
-    [Obsolete("Alternatives to be provided in the next commit.")]
+#if NETCOREAPP3_1
+    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreGoogleDiagnosticsExtensions instead.")]
+#elif NETSTANDARD2_0
+    [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreGoogleDiagnosticsExtensions instead.")]
+#else
+#error unknown target framework
+#endif
     public static class GoogleDiagnosticsWebHostBuilderExtensions
     {
         /// <summary>
@@ -54,6 +60,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="traceOptions">The options for tracing. May be null, in which case default options will be used.</param>
         /// <param name="errorReportingOptions">The options for error reporting. May be null, in which case default options will be used.</param>
         /// <returns>The <see cref="IWebHostBuilder"/> instance.</returns>
+#if NETCOREAPP3_1
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreGoogleDiagnosticsExtensions instead.")]
+#elif NETSTANDARD2_0
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreGoogleDiagnosticsExtensions instead.")]
+#else
+#error unknown target framework
+#endif
         public static IWebHostBuilder UseGoogleDiagnostics(
             this IWebHostBuilder builder,
             string projectId = null,
@@ -101,6 +114,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// May be null or return a null value for the options; in either of these cases the default options will be used.
         /// </param>
         /// <returns>The <see cref="IWebHostBuilder"/> instance.</returns>
+#if NETCOREAPP3_1
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore3.AspNetCoreGoogleDiagnosticsExtensions instead.")]
+#elif NETSTANDARD2_0
+        [Obsolete("Use Google.Cloud.Diagnostics.AspNetCore.AspNetCoreGoogleDiagnosticsExtensions instead.")]
+#else
+#error unknown target framework
+#endif
         public static IWebHostBuilder UseGoogleDiagnostics(
             this IWebHostBuilder builder,
             Func<WebHostBuilderContext, string> projectIdGetter,
