@@ -50,7 +50,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public void UseGoogleDiagnostics_ConfiguresServices()
         {
-            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder.UseGoogleDiagnostics("tmp", "app", "1.0.0"));
+            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder.ConfigureServices(
+                services => services.AddGoogleDiagnosticsForAspNetCore("tmp", "app", "1.0.0")));
 
             using var server = GetTestServer(hostBuilder);
             var services = GetServices(server);
@@ -81,12 +82,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 }
             };
             // We won't be able to detect the right monitored resource, so specify it explicitly.
-#pragma warning disable CS0618 // Type or member is obsolete
-            var loggerOptions = LoggerOptions.Create(monitoredResource: resource);
-#pragma warning restore CS0618 // Type or member is obsolete
-            var hostBuilder = GetHostBuilder(
-                webHostBuilder => webHostBuilder.UseGoogleDiagnostics(
-                    TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version, loggerOptions));
+            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder.ConfigureServices(
+                services => services.AddGoogleDiagnosticsForAspNetCore(
+                    TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version,
+                    loggingOptions: LoggingOptions.Create(monitoredResource: resource))));
 
             using var server = GetTestServer(hostBuilder);
             using var client = server.CreateClient();
@@ -107,11 +106,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 { "version_id", EntryData.Version }
             };
 
-            var hostBuilder = GetHostBuilder(webHostBuilder => 
-                webHostBuilder.UseGoogleDiagnostics(
-                    ctx => ctx.Configuration["project_id"], ctx => ctx.Configuration["module_id"], ctx => ctx.Configuration["version_id"]))
-                .ConfigureAppConfiguration((hostContext, configBuilder) => 
-                    configBuilder.AddInMemoryCollection(configurationData));
+            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder
+                .ConfigureServices((ctx, services) => services.AddGoogleDiagnosticsForAspNetCore(
+                    ctx.Configuration["project_id"], ctx.Configuration["module_id"], ctx.Configuration["version_id"]))
+                .ConfigureAppConfiguration((hostContext, configBuilder) => configBuilder.AddInMemoryCollection(configurationData)));
 
             using var server = GetTestServer(hostBuilder);
             using var client = server.CreateClient();
