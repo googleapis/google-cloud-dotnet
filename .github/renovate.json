@@ -5,7 +5,6 @@
   ],
   "ignorePaths": [
     "apis/Google.Analytics.Admin.V1Alpha/Google.Analytics.Admin.V1Alpha/**",
-    "apis/Google.Analytics.Data.V1Alpha/Google.Analytics.Data.V1Alpha/**",
     "apis/Google.Analytics.Data.V1Beta/Google.Analytics.Data.V1Beta/**",
     "apis/Google.Apps.Script.Type/Google.Apps.Script.Type/**",
     "apis/Google.Area120.Tables.V1Alpha1/Google.Area120.Tables.V1Alpha1/**",
