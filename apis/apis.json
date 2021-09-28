@@ -577,6 +577,7 @@
       "id": "Google.Cloud.ContactCenterInsights.V1",
       "version": "1.0.0-beta02",
       "type": "grpc",
+      "autoGenerator": "OwlBot",
       "productName": "Contact Center AI Insights",
       "productUrl": "https://cloud.google.com/contact-center/insights/docs",
       "description": "Recommended Google client library to access the Google Contact Center AI Insights API, which helps users detect and visualize patterns in their contact center data. Understanding conversational data drives business value, improves operational efficiency, and provides a voice for customer feedback.",
@@ -931,6 +932,7 @@
       "id": "Google.Cloud.Dialogflow.Cx.V3",
       "version": "1.4.0",
       "type": "grpc",
+      "autoGenerator": "OwlBot",
       "productName": "Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow/cx/docs",
       "description": "Builds conversational interfaces (for example, chatbots, and voice-powered apps and devices).",
@@ -1173,6 +1175,7 @@
     {
       "id": "Google.Cloud.Firestore.V1",
       "generator": "micro",
+      "autoGenerator": "OwlBot",
       "protoPath": "google/firestore/v1",
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
