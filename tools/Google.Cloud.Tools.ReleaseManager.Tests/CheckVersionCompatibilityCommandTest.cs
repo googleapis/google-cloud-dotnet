@@ -171,6 +171,9 @@ namespace Google.Cloud.Tools.ReleaseManager.Tests
                 { "2.0.0", Level.Minor },
                 { "2.1.0-beta01", Level.Major }
             },
+
+            // This affected https://github.com/googleapis/google-cloud-dotnet/pull/7157
+            new TestCase("3.12.0", "3.11.0", "3.12.0") {  { "3.12.0", Level.Minor } },
         };
 
         [Theory]
