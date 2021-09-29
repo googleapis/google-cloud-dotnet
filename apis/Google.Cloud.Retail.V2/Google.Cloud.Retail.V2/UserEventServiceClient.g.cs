@@ -68,6 +68,12 @@ namespace Google.Cloud.Retail.V2
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
@@ -83,6 +89,12 @@ namespace Google.Cloud.Retail.V2
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>
@@ -98,6 +110,12 @@ namespace Google.Cloud.Retail.V2
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 30000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 30 seconds.</description></item>
         /// </list>
         /// </remarks>
@@ -131,6 +149,12 @@ namespace Google.Cloud.Retail.V2
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 300000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 300 seconds.</description></item>
         /// </list>
         /// </remarks>
@@ -164,6 +188,12 @@ namespace Google.Cloud.Retail.V2
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 5 seconds.</description></item>
         /// </list>
         /// </remarks>

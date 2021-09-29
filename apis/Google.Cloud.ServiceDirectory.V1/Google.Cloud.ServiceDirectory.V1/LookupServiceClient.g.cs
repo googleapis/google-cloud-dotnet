@@ -59,6 +59,12 @@ namespace Google.Cloud.ServiceDirectory.V1
         /// <item><description>Retry delay multiplier: 1.3</description></item>
         /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
         /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
         /// <item><description>Timeout: 15 seconds.</description></item>
         /// </list>
         /// </remarks>
