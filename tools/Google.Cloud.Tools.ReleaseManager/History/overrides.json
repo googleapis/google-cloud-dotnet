@@ -27,4 +27,5 @@
   "7b76d4e": "skip",
   "f5e5ec7": "skip", // Rename GrpcCtorCompatibility.g.cs
   "84832b8": "skip", // Regenerate with later protoc; adds GeneratedCodeAttribute
+  "5105bbd": "skip", // Regenerate for retry status code documentation
 }
