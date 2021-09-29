@@ -29,6 +29,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     internal class GitCommit
     {
         private const string AutosynthEmail = "yoshi-automation@google.com";
+        private static readonly Regex OwlBotEmailRegex = new Regex(@"\d+\+gcf-owl-bot\[bot\]@users\.noreply\.github\.com");
 
         /// <summary>
         /// A commit line consisting of just "Version history:" indicates that all the lines
@@ -64,7 +65,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             // Autosynth includes helpful metadata about the original internal and googleapis commit.
             // The googleapis commit can be useful in terms of having better formatting of release notes,
             // but either way, we should skip "Committer" lines and anything after "PiperOrigin-RevId".
-            if (_libGit2Commit.Author.Email == AutosynthEmail)
+            if (_libGit2Commit.Author.Email == AutosynthEmail || OwlBotEmailRegex.IsMatch(_libGit2Commit.Author.Email))
             {
                 var sourceLink = messageLines.FirstOrDefault(line => line.StartsWith("Source-Link: https://github.com/googleapis/googleapis"));
                 // Work around autosynth putting everything on one line
