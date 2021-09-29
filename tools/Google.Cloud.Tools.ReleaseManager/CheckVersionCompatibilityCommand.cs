@@ -78,10 +78,12 @@ namespace Google.Cloud.Tools.ReleaseManager
             var isNonRelease = newVersion.IsNonRelease;
 
             // Whether pre-release or not, and whether new or not, if there's a previous stable version we should compare against it.
+            // Exception: if the latest stable version is the new version, we don't need to compare here as we'll compare later.
+            // (And the natural comparison here would be incorrect, as it would insist on an identical comparison.)
             if (newVersion.Major > 1 || newVersion.Minor > 0 || newVersion.Patch > 0)
             {
                 var latestStable = taggedVersions.LastOrDefault(v => v.IsStable);
-                if (latestStable is object)
+                if (latestStable is object && !latestStable.Equals(newVersion))
                 {
                     var level =
                         newVersion.Major != latestStable.Major ? Level.Major
