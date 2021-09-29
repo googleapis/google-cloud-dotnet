@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.0.0-beta03, released 2021-09-29
+
+- [Commit ddab19e](https://github.com/googleapis/google-cloud-dotnet/commit/ddab19e):
+  - feat: add metadata from dialogflow related to transcript segment
+  - feat: add sentiment data for transcript segment
+  - feat: add obfuscated if from dialogflow
+
 # Version 1.0.0-beta02, released 2021-09-23
 
 - [Commit 37fa769](https://github.com/googleapis/google-cloud-dotnet/commit/37fa769):
