@@ -566,9 +566,9 @@ namespace Google.Cloud.Filestore.V1
         /// or for all locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve instance information,
-        /// in the format `projects/{project_id}/locations/{location}`. In Cloud
-        /// Filestore, locations map to GCP zones, for example **us-west1-b**. To
+        /// Required. The project and location for which to retrieve instance
+        /// information, in the format `projects/{project_id}/locations/{location}`. In
+        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
         /// retrieve instance information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
@@ -595,9 +595,9 @@ namespace Google.Cloud.Filestore.V1
         /// or for all locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve instance information,
-        /// in the format `projects/{project_id}/locations/{location}`. In Cloud
-        /// Filestore, locations map to GCP zones, for example **us-west1-b**. To
+        /// Required. The project and location for which to retrieve instance
+        /// information, in the format `projects/{project_id}/locations/{location}`. In
+        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
         /// retrieve instance information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
@@ -624,9 +624,9 @@ namespace Google.Cloud.Filestore.V1
         /// or for all locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve instance information,
-        /// in the format `projects/{project_id}/locations/{location}`. In Cloud
-        /// Filestore, locations map to GCP zones, for example **us-west1-b**. To
+        /// Required. The project and location for which to retrieve instance
+        /// information, in the format `projects/{project_id}/locations/{location}`. In
+        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
         /// retrieve instance information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
@@ -653,9 +653,9 @@ namespace Google.Cloud.Filestore.V1
         /// or for all locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve instance information,
-        /// in the format `projects/{project_id}/locations/{location}`. In Cloud
-        /// Filestore, locations map to GCP zones, for example **us-west1-b**. To
+        /// Required. The project and location for which to retrieve instance
+        /// information, in the format `projects/{project_id}/locations/{location}`. In
+        /// Cloud Filestore, locations map to GCP zones, for example **us-west1-b**. To
         /// retrieve instance information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
@@ -1356,11 +1356,11 @@ namespace Google.Cloud.Filestore.V1
         /// locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve backup information,
-        /// in the format `projects/{project_number}/locations/{location}`.
-        /// In Cloud Filestore, backup locations map to GCP regions,
-        /// for example **us-west1**.
-        /// To retrieve backup information for all locations, use "-" for the
+        /// Required. The project and location for which to retrieve backup
+        /// information, in the format
+        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
+        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
+        /// backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -1386,11 +1386,11 @@ namespace Google.Cloud.Filestore.V1
         /// locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve backup information,
-        /// in the format `projects/{project_number}/locations/{location}`.
-        /// In Cloud Filestore, backup locations map to GCP regions,
-        /// for example **us-west1**.
-        /// To retrieve backup information for all locations, use "-" for the
+        /// Required. The project and location for which to retrieve backup
+        /// information, in the format
+        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
+        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
+        /// backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -1416,11 +1416,11 @@ namespace Google.Cloud.Filestore.V1
         /// locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve backup information,
-        /// in the format `projects/{project_number}/locations/{location}`.
-        /// In Cloud Filestore, backup locations map to GCP regions,
-        /// for example **us-west1**.
-        /// To retrieve backup information for all locations, use "-" for the
+        /// Required. The project and location for which to retrieve backup
+        /// information, in the format
+        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
+        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
+        /// backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -1446,11 +1446,11 @@ namespace Google.Cloud.Filestore.V1
         /// locations.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve backup information,
-        /// in the format `projects/{project_number}/locations/{location}`.
-        /// In Cloud Filestore, backup locations map to GCP regions,
-        /// for example **us-west1**.
-        /// To retrieve backup information for all locations, use "-" for the
+        /// Required. The project and location for which to retrieve backup
+        /// information, in the format
+        /// `projects/{project_number}/locations/{location}`. In Cloud Filestore,
+        /// backup locations map to GCP regions, for example **us-west1**. To retrieve
+        /// backup information for all locations, use "-" for the
         /// `{location}` value.
         /// </param>
         /// <param name="pageToken">
@@ -2002,8 +2002,8 @@ namespace Google.Cloud.Filestore.V1
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.  At least one path must be supplied in this
-        /// field.
+        /// Required. Mask of fields to update.  At least one path must be supplied in
+        /// this field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2021,8 +2021,8 @@ namespace Google.Cloud.Filestore.V1
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.  At least one path must be supplied in this
-        /// field.
+        /// Required. Mask of fields to update.  At least one path must be supplied in
+        /// this field.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2040,8 +2040,8 @@ namespace Google.Cloud.Filestore.V1
         /// Required. A [backup resource][google.cloud.filestore.v1.Backup]
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.  At least one path must be supplied in this
-        /// field.
+        /// Required. Mask of fields to update.  At least one path must be supplied in
+        /// this field.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
