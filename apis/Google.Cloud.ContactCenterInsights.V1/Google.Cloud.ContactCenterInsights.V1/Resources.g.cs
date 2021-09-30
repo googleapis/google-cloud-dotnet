@@ -621,7 +621,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int MediumFieldNumber = 9;
     private global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium medium_ = global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium.Unspecified;
     /// <summary>
-    /// Immutable. The conversation medium.
+    /// Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium Medium {
@@ -1359,7 +1359,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// </summary>
       public enum Medium {
         /// <summary>
-        /// Default value.
+        /// Default value, if unspecified will default to PHONE_CALL.
         /// </summary>
         [pbr::OriginalName("MEDIUM_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
