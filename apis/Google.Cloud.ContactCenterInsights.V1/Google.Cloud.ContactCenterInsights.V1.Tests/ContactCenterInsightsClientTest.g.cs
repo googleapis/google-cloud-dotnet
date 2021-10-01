@@ -2677,7 +2677,9 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         1623286560
                     },
                 },
+#pragma warning disable CS0612
                 IssueMatches =
+#pragma warning restore CS0612
                 {
                     {
                         "key8a0b6e3c",
@@ -2722,7 +2724,9 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         1623286560
                     },
                 },
+#pragma warning disable CS0612
                 IssueMatches =
+#pragma warning restore CS0612
                 {
                     {
                         "key8a0b6e3c",
@@ -2768,7 +2772,9 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         1623286560
                     },
                 },
+#pragma warning disable CS0612
                 IssueMatches =
+#pragma warning restore CS0612
                 {
                     {
                         "key8a0b6e3c",
@@ -2812,7 +2818,9 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         1623286560
                     },
                 },
+#pragma warning disable CS0612
                 IssueMatches =
+#pragma warning restore CS0612
                 {
                     {
                         "key8a0b6e3c",
@@ -2858,7 +2866,9 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         1623286560
                     },
                 },
+#pragma warning disable CS0612
                 IssueMatches =
+#pragma warning restore CS0612
                 {
                     {
                         "key8a0b6e3c",
@@ -2902,7 +2912,9 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         1623286560
                     },
                 },
+#pragma warning disable CS0612
                 IssueMatches =
+#pragma warning restore CS0612
                 {
                     {
                         "key8a0b6e3c",
