@@ -555,6 +555,8 @@ $@"
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+squash: true
+
 deep-remove-regex:
     - /owl-bot-staging
 
