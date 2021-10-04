@@ -691,4 +691,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class DeployFlowRequest
+    {
+        /// <summary>
+        /// <see cref="EnvironmentName"/>-typed view over the <see cref="Environment"/> resource name property.
+        /// </summary>
+        public EnvironmentName EnvironmentAsEnvironmentName
+        {
+            get => string.IsNullOrEmpty(Environment) ? null : EnvironmentName.Parse(Environment, allowUnparsed: true);
+            set => Environment = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="VersionName"/>-typed view over the <see cref="FlowVersion"/> resource name property.
+        /// </summary>
+        public VersionName FlowVersionAsVersionName
+        {
+            get => string.IsNullOrEmpty(FlowVersion) ? null : VersionName.Parse(FlowVersion, allowUnparsed: true);
+            set => FlowVersion = value?.ToString() ?? "";
+        }
+    }
 }

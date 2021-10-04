@@ -244,6 +244,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Exports the specified agent to a binary file.
+      ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
@@ -266,6 +267,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// Replaces the current agent with a new one. Note that all existing resources
       /// in agent (e.g. intents, entity types, flows) will be removed.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train flows prior to sending them queries. See the
       /// [training
@@ -610,6 +620,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Exports the specified agent to a binary file.
+      ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
@@ -630,6 +641,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Exports the specified agent to a binary file.
+      ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
@@ -648,6 +660,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Exports the specified agent to a binary file.
+      ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
@@ -668,6 +681,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       /// <summary>
       /// Exports the specified agent to a binary file.
+      ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
@@ -690,6 +704,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// Replaces the current agent with a new one. Note that all existing resources
       /// in agent (e.g. intents, entity types, flows) will be removed.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train flows prior to sending them queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
@@ -710,6 +733,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       /// Replaces the current agent with a new one. Note that all existing resources
       /// in agent (e.g. intents, entity types, flows) will be removed.
       ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
+      ///
       /// Note: You should always train flows prior to sending them queries. See the
       /// [training
       /// documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
@@ -727,6 +759,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// Replaces the current agent with a new one. Note that all existing resources
       /// in agent (e.g. intents, entity types, flows) will be removed.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train flows prior to sending them queries. See the
       /// [training
@@ -747,6 +788,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       ///
       /// Replaces the current agent with a new one. Note that all existing resources
       /// in agent (e.g. intents, entity types, flows) will be removed.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: An empty [Struct
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+      /// - `response`: An [Empty
+      ///   message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
       ///
       /// Note: You should always train flows prior to sending them queries. See the
       /// [training
