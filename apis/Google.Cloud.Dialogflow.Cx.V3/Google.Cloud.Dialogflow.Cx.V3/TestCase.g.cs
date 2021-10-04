@@ -9546,6 +9546,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
   /// <summary>
   /// Metadata returned for the [TestCases.ExportTestCases][google.cloud.dialogflow.cx.v3.TestCases.ExportTestCases] long running
   /// operation.
+  /// This message currently has no fields.
   /// </summary>
   public sealed partial class ExportTestCasesMetadata : pb::IMessage<ExportTestCasesMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

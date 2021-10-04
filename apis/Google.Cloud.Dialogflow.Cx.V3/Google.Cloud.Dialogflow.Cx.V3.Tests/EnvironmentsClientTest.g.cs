@@ -47,6 +47,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new Environment.Types.VersionConfig(),
                 },
+                TestCasesConfig = new Environment.Types.TestCasesConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
@@ -74,6 +75,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new Environment.Types.VersionConfig(),
                 },
+                TestCasesConfig = new Environment.Types.TestCasesConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
@@ -103,6 +105,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new Environment.Types.VersionConfig(),
                 },
+                TestCasesConfig = new Environment.Types.TestCasesConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
@@ -130,6 +133,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new Environment.Types.VersionConfig(),
                 },
+                TestCasesConfig = new Environment.Types.TestCasesConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
@@ -159,6 +163,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new Environment.Types.VersionConfig(),
                 },
+                TestCasesConfig = new Environment.Types.TestCasesConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);
@@ -186,6 +191,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
                 {
                     new Environment.Types.VersionConfig(),
                 },
+                TestCasesConfig = new Environment.Types.TestCasesConfig(),
             };
             mockGrpcClient.Setup(x => x.GetEnvironmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Environment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             EnvironmentsClient client = new EnvironmentsClientImpl(mockGrpcClient.Object, null);

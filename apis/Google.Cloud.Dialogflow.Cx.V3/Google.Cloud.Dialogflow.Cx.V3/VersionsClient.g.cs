@@ -606,6 +606,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -615,6 +622,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -624,6 +638,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -659,6 +680,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
         /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
@@ -679,6 +707,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
         /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
@@ -699,6 +734,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
         /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
@@ -715,6 +757,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
         /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
@@ -735,6 +784,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
         /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
@@ -755,6 +811,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
         /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
@@ -968,6 +1031,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -977,6 +1049,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -986,6 +1067,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1021,6 +1111,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
         /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
@@ -1037,6 +1136,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
         /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
@@ -1053,6 +1161,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
         /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
@@ -1066,6 +1183,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
         /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
@@ -1082,6 +1208,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
         /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
@@ -1098,6 +1233,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
         /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
@@ -1245,6 +1389,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1257,6 +1408,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1320,6 +1478,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1332,6 +1499,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         /// <summary>
         /// Loads resources in the specified version to the draft flow.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: An empty [Struct
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct)
+        /// - `response`: An [Empty
+        /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

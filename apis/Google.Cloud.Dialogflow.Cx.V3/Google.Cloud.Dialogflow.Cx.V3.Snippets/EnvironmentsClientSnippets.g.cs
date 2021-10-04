@@ -1410,5 +1410,72 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for DeployFlow</summary>
+        public void DeployFlowRequestObject()
+        {
+            // Snippet: DeployFlow(DeployFlowRequest, CallSettings)
+            // Create client
+            EnvironmentsClient environmentsClient = EnvironmentsClient.Create();
+            // Initialize request argument(s)
+            DeployFlowRequest request = new DeployFlowRequest
+            {
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                FlowVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+            };
+            // Make the request
+            Operation<DeployFlowResponse, DeployFlowMetadata> response = environmentsClient.DeployFlow(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployFlowResponse, DeployFlowMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployFlowResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployFlowResponse, DeployFlowMetadata> retrievedResponse = environmentsClient.PollOnceDeployFlow(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployFlowResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployFlowAsync</summary>
+        public async Task DeployFlowRequestObjectAsync()
+        {
+            // Snippet: DeployFlowAsync(DeployFlowRequest, CallSettings)
+            // Additional: DeployFlowAsync(DeployFlowRequest, CancellationToken)
+            // Create client
+            EnvironmentsClient environmentsClient = await EnvironmentsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployFlowRequest request = new DeployFlowRequest
+            {
+                EnvironmentAsEnvironmentName = EnvironmentName.FromProjectLocationAgentEnvironment("[PROJECT]", "[LOCATION]", "[AGENT]", "[ENVIRONMENT]"),
+                FlowVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+            };
+            // Make the request
+            Operation<DeployFlowResponse, DeployFlowMetadata> response = await environmentsClient.DeployFlowAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployFlowResponse, DeployFlowMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployFlowResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployFlowResponse, DeployFlowMetadata> retrievedResponse = await environmentsClient.PollOnceDeployFlowAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployFlowResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
