@@ -30,14 +30,6 @@ copy_one_api() {
   STAGING_DIR=owl-bot-staging/$1
   PACKAGE_DIR=apis/$1
 
-  # All source files need the extension .g.cs.  Some will only be generated with the
-  # extension .cs.  Rename files that end only in .cs.
-  for cs_file in $(find "$STAGING_DIR" -name '*.cs'); do
-    if [[ $cs_file != *.g.cs ]]; then
-      mv $cs_file $(echo $cs_file | sed -E 's/.cs$/.g.cs/g')
-    fi
-  done
-
   # Remove the newly generated standalone snippets until they are ready for surfacing.
   rm -rf "$STAGING_DIR/$1.StandaloneSnippets"
 
