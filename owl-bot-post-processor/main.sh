@@ -17,7 +17,10 @@
 #    $ ./owlbot-post-processor/main.sh
 
 # This script does two things:
-# 1. Copies files from the /owl-bot-staging directory.
+# 1. Based on the presence or absence of pregeneration.sh or
+#    midmicrogeneration.sh in the API directory:
+#    - Regenerate using generateapis.sh if either file is present.
+#    - Copy files from the /owl-bot-staging directory otherwise.
 # 2. Invokes ../generate-projects.sh to generate .csproj files.
 
 set -ex
@@ -29,6 +32,42 @@ copy_one_api() {
   PACKAGE=$1
   STAGING_DIR=owl-bot-staging/$1
   PACKAGE_DIR=apis/$1
+
+  # We don't expect googleapis-gen to contain the right (or potentially
+  # even valid) code for APIs which have pre/mid-generation tweak scripts.
+  # It's not clear whether they'll even be fully generated in googleapis-gen,
+  # but for now we can still use OwlBot to notice that something has changed,
+  # and simply running our local generation script against the right commit
+  # for googleapis/googleapis.
+  if [[ -f $PACKAGE_DIR/pregeneration.sh || -f $PACKAGE_DIR/midmicrogeneration.sh ]]
+  then
+    # Determine the commit for googleapis to use based on the Source-Link in
+    # the comment from the last commit in the local directory.
+    GOOGLEAPIS_COMMIT=$(git show --format=%B -s \
+       | grep "^Source-Link: https://github.com/googleapis/googleapis/commit/" \
+       | sed 's/.*\/commit\///g')
+    if [[ $GOOGLEAPIS_COMMIT == "" ]]
+    then
+      echo "No googleapis commit to generate $PACKAGE from"
+      exit 1
+    fi
+    
+    # Clone googleapis into the staging directory, as a suitable temporary directory
+    git clone https://github.com/googleapis/googleapis $STAGING_DIR/googleapis
+    
+    # Check out the commit
+    git -C $STAGING_DIR/googleapis checkout $GOOGLEAPIS_COMMIT
+    
+    # The generation script uses the SYNTHTOOL_GOOGLEAPIS environment variable:
+    # if the variable is present, it's expected to be googleapis/googleapis at
+    # the appropriate commit (which is exactly what we've got)
+    SYNTHTOOL_GOOGLEAPIS=$PWD/$STAGING_DIR/googleapis ./generateapis.sh $PACKAGE
+    
+    # If that worked, we can remove the staging directory for this API completely;
+    # we're done (but there may be other APIs).
+    rm -rf $STAGING_DIR
+    return
+  fi
 
   # Remove the newly generated standalone snippets until they are ready for surfacing.
   rm -rf "$STAGING_DIR/$1.StandaloneSnippets"
