@@ -21,8 +21,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
     public class PublicAccessPreventionTest
     {
         private const string EnforcedValue = "enforced";
-        // TODO: Remove Unspecified once the change to inherited has been fully rolled out.
-        private const string UnspecifiedValue = "unspecified";
         private const string InheritedValue = "inherited";
         private static readonly Policy.BindingsData AllUsersViewer = new Policy.BindingsData
         {
@@ -40,8 +38,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             string bucketName = _fixture.GenerateBucketName();
             Bucket bucket = _fixture.CreateBucket(bucketName, false);
-            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null 
-                || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue
+            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null
                 || bucket.IamConfiguration.PublicAccessPrevention == InheritedValue);
 
             // Enforce PAP
@@ -79,8 +76,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             string bucketName = _fixture.GenerateBucketName();
             Bucket bucket = _fixture.CreateBucket(bucketName, false);
-            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null 
-                || bucket.IamConfiguration.PublicAccessPrevention == UnspecifiedValue
+            Assert.True(bucket.IamConfiguration.PublicAccessPrevention == null
                 || bucket.IamConfiguration.PublicAccessPrevention == InheritedValue);
 
             // Enforce PAP, then unenforce it
