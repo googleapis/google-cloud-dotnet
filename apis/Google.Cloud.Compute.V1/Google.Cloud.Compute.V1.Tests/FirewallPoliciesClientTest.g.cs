@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -27,717 +28,10 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedFirewallPoliciesClientTest
     {
         [xunit::FactAttribute]
-        public void AddAssociationRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddAssociationFirewallPolicyRequest request = new AddAssociationFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                ReplaceExistingAssociation = true,
-                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddAssociation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddAssociation(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddAssociationRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddAssociationFirewallPolicyRequest request = new AddAssociationFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                ReplaceExistingAssociation = true,
-                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddAssociationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddAssociationAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AddAssociation()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddAssociationFirewallPolicyRequest request = new AddAssociationFirewallPolicyRequest
-            {
-                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddAssociation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddAssociation(request.FirewallPolicy, request.FirewallPolicyAssociationResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddAssociationAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddAssociationFirewallPolicyRequest request = new AddAssociationFirewallPolicyRequest
-            {
-                FirewallPolicyAssociationResource = new FirewallPolicyAssociation(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddAssociationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddAssociationAsync(request.FirewallPolicy, request.FirewallPolicyAssociationResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddAssociationAsync(request.FirewallPolicy, request.FirewallPolicyAssociationResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AddRuleRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddRuleFirewallPolicyRequest request = new AddRuleFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddRule(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddRuleRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddRuleFirewallPolicyRequest request = new AddRuleFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddRuleAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AddRule()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddRuleFirewallPolicyRequest request = new AddRuleFirewallPolicyRequest
-            {
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddRule(request.FirewallPolicy, request.FirewallPolicyRuleResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddRuleAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            AddRuleFirewallPolicyRequest request = new AddRuleFirewallPolicyRequest
-            {
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddRuleAsync(request.FirewallPolicy, request.FirewallPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddRuleAsync(request.FirewallPolicy, request.FirewallPolicyRuleResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CloneRulesRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            CloneRulesFirewallPolicyRequest request = new CloneRulesFirewallPolicyRequest
-            {
-                SourceFirewallPolicy = "source_firewall_policy9e4c1490",
-                RequestId = "request_id362c8df6",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CloneRules(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CloneRules(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CloneRulesRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            CloneRulesFirewallPolicyRequest request = new CloneRulesFirewallPolicyRequest
-            {
-                SourceFirewallPolicy = "source_firewall_policy9e4c1490",
-                RequestId = "request_id362c8df6",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CloneRulesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.CloneRulesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.CloneRulesAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CloneRules()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            CloneRulesFirewallPolicyRequest request = new CloneRulesFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CloneRules(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CloneRules(request.FirewallPolicy);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CloneRulesAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            CloneRulesFirewallPolicyRequest request = new CloneRulesFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CloneRulesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.CloneRulesAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.CloneRulesAsync(request.FirewallPolicy, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Delete()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request.FirewallPolicy);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            DeleteFirewallPolicyRequest request = new DeleteFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request.FirewallPolicy, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -776,6 +70,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -816,6 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -854,6 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -894,6 +191,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetAssociationRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 Name = "name1c9368b0",
@@ -918,6 +216,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAssociationRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 Name = "name1c9368b0",
@@ -944,6 +243,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetAssociation()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -967,6 +267,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAssociationAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -992,6 +293,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -1017,6 +319,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -1044,6 +347,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -1068,6 +372,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -1094,6 +399,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRuleRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 Priority = 1546225849,
@@ -1130,6 +436,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRuleRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 Priority = 1546225849,
@@ -1168,6 +475,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRule()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -1203,6 +511,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRuleAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -1237,185 +546,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void InsertRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            InsertFirewallPolicyRequest request = new InsertFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                ParentId = "parent_id8279e36b",
-                FirewallPolicyResource = new FirewallPolicy(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            InsertFirewallPolicyRequest request = new InsertFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                ParentId = "parent_id8279e36b",
-                FirewallPolicyResource = new FirewallPolicy(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Insert()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            InsertFirewallPolicyRequest request = new InsertFirewallPolicyRequest
-            {
-                FirewallPolicyResource = new FirewallPolicy(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request.FirewallPolicyResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            InsertFirewallPolicyRequest request = new InsertFirewallPolicyRequest
-            {
-                FirewallPolicyResource = new FirewallPolicy(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request.FirewallPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request.FirewallPolicyResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void ListAssociationsRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest
             {
                 TargetResource = "target_resource7041731f",
@@ -1439,6 +573,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ListAssociationsRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest
             {
                 TargetResource = "target_resource7041731f",
@@ -1464,6 +599,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void ListAssociations()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest { };
             FirewallPoliciesListAssociationsResponse expectedResponse = new FirewallPoliciesListAssociationsResponse
             {
@@ -1484,6 +620,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ListAssociationsAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest { };
             FirewallPoliciesListAssociationsResponse expectedResponse = new FirewallPoliciesListAssociationsResponse
             {
@@ -1503,895 +640,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void MoveRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            MoveFirewallPolicyRequest request = new MoveFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                ParentId = "parent_id8279e36b",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Move(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Move(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task MoveRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            MoveFirewallPolicyRequest request = new MoveFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                ParentId = "parent_id8279e36b",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.MoveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.MoveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.MoveAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Move()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            MoveFirewallPolicyRequest request = new MoveFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Move(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Move(request.FirewallPolicy);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task MoveAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            MoveFirewallPolicyRequest request = new MoveFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.MoveAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.MoveAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.MoveAsync(request.FirewallPolicy, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void PatchRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchFirewallPolicyRequest request = new PatchFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicyResource = new FirewallPolicy(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchFirewallPolicyRequest request = new PatchFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicyResource = new FirewallPolicy(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Patch()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchFirewallPolicyRequest request = new PatchFirewallPolicyRequest
-            {
-                FirewallPolicyResource = new FirewallPolicy(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request.FirewallPolicy, request.FirewallPolicyResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchFirewallPolicyRequest request = new PatchFirewallPolicyRequest
-            {
-                FirewallPolicyResource = new FirewallPolicy(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request.FirewallPolicy, request.FirewallPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request.FirewallPolicy, request.FirewallPolicyResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void PatchRuleRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchRuleFirewallPolicyRequest request = new PatchRuleFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                Priority = 1546225849,
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.PatchRule(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchRuleRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchRuleFirewallPolicyRequest request = new PatchRuleFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                Priority = 1546225849,
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchRuleAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void PatchRule()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchRuleFirewallPolicyRequest request = new PatchRuleFirewallPolicyRequest
-            {
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.PatchRule(request.FirewallPolicy, request.FirewallPolicyRuleResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchRuleAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            PatchRuleFirewallPolicyRequest request = new PatchRuleFirewallPolicyRequest
-            {
-                FirewallPolicyRuleResource = new FirewallPolicyRule(),
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchRuleAsync(request.FirewallPolicy, request.FirewallPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchRuleAsync(request.FirewallPolicy, request.FirewallPolicyRuleResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void RemoveAssociationRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveAssociationFirewallPolicyRequest request = new RemoveAssociationFirewallPolicyRequest
-            {
-                Name = "name1c9368b0",
-                RequestId = "request_id362c8df6",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveAssociation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.RemoveAssociation(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task RemoveAssociationRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveAssociationFirewallPolicyRequest request = new RemoveAssociationFirewallPolicyRequest
-            {
-                Name = "name1c9368b0",
-                RequestId = "request_id362c8df6",
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveAssociationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.RemoveAssociationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.RemoveAssociationAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void RemoveAssociation()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveAssociationFirewallPolicyRequest request = new RemoveAssociationFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveAssociation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.RemoveAssociation(request.FirewallPolicy);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task RemoveAssociationAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveAssociationFirewallPolicyRequest request = new RemoveAssociationFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveAssociationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.RemoveAssociationAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.RemoveAssociationAsync(request.FirewallPolicy, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void RemoveRuleRequestObject()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveRuleFirewallPolicyRequest request = new RemoveRuleFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                Priority = 1546225849,
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.RemoveRule(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task RemoveRuleRequestObjectAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveRuleFirewallPolicyRequest request = new RemoveRuleFirewallPolicyRequest
-            {
-                RequestId = "request_id362c8df6",
-                Priority = 1546225849,
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.RemoveRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.RemoveRuleAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void RemoveRule()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveRuleFirewallPolicyRequest request = new RemoveRuleFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveRule(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.RemoveRule(request.FirewallPolicy);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task RemoveRuleAsync()
-        {
-            moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            RemoveRuleFirewallPolicyRequest request = new RemoveRuleFirewallPolicyRequest
-            {
-                FirewallPolicy = "firewall_policy1f9c9144",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveRuleAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            FirewallPoliciesClient client = new FirewallPoliciesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.RemoveRuleAsync(request.FirewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.RemoveRuleAsync(request.FirewallPolicy, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -2417,6 +669,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -2444,6 +697,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -2469,6 +723,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -2496,6 +751,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -2519,6 +775,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -2544,6 +801,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -2567,6 +825,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",

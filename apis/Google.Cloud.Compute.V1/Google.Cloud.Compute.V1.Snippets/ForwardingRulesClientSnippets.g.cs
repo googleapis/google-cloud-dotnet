@@ -21,6 +21,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedForwardingRulesClientSnippets
@@ -234,7 +235,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ForwardingRule = "",
             };
             // Make the request
-            Operation response = forwardingRulesClient.Delete(request);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -254,7 +271,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ForwardingRule = "",
             };
             // Make the request
-            Operation response = await forwardingRulesClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -269,7 +302,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string forwardingRule = "";
             // Make the request
-            Operation response = forwardingRulesClient.Delete(project, region, forwardingRule);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.Delete(project, region, forwardingRule);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -285,7 +334,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string forwardingRule = "";
             // Make the request
-            Operation response = await forwardingRulesClient.DeleteAsync(project, region, forwardingRule);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.DeleteAsync(project, region, forwardingRule);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -372,7 +437,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
-            Operation response = forwardingRulesClient.Insert(request);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -392,7 +473,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
-            Operation response = await forwardingRulesClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -407,7 +504,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             ForwardingRule forwardingRuleResource = new ForwardingRule();
             // Make the request
-            Operation response = forwardingRulesClient.Insert(project, region, forwardingRuleResource);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.Insert(project, region, forwardingRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -423,7 +536,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             ForwardingRule forwardingRuleResource = new ForwardingRule();
             // Make the request
-            Operation response = await forwardingRulesClient.InsertAsync(project, region, forwardingRuleResource);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.InsertAsync(project, region, forwardingRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -639,7 +768,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
-            Operation response = forwardingRulesClient.Patch(request);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -660,7 +805,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ForwardingRuleResource = new ForwardingRule(),
             };
             // Make the request
-            Operation response = await forwardingRulesClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -676,7 +837,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string forwardingRule = "";
             ForwardingRule forwardingRuleResource = new ForwardingRule();
             // Make the request
-            Operation response = forwardingRulesClient.Patch(project, region, forwardingRule, forwardingRuleResource);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.Patch(project, region, forwardingRule, forwardingRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -693,7 +870,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string forwardingRule = "";
             ForwardingRule forwardingRuleResource = new ForwardingRule();
             // Make the request
-            Operation response = await forwardingRulesClient.PatchAsync(project, region, forwardingRule, forwardingRuleResource);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.PatchAsync(project, region, forwardingRule, forwardingRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -713,7 +906,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
             };
             // Make the request
-            Operation response = forwardingRulesClient.SetLabels(request);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.SetLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -734,7 +943,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
             };
             // Make the request
-            Operation response = await forwardingRulesClient.SetLabelsAsync(request);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.SetLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -750,7 +975,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string resource = "";
             RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest();
             // Make the request
-            Operation response = forwardingRulesClient.SetLabels(project, region, resource, regionSetLabelsRequestResource);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.SetLabels(project, region, resource, regionSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -767,7 +1008,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string resource = "";
             RegionSetLabelsRequest regionSetLabelsRequestResource = new RegionSetLabelsRequest();
             // Make the request
-            Operation response = await forwardingRulesClient.SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -787,7 +1044,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 TargetReferenceResource = new TargetReference(),
             };
             // Make the request
-            Operation response = forwardingRulesClient.SetTarget(request);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.SetTarget(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceSetTarget(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -808,7 +1081,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 TargetReferenceResource = new TargetReference(),
             };
             // Make the request
-            Operation response = await forwardingRulesClient.SetTargetAsync(request);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.SetTargetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceSetTargetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -824,7 +1113,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string forwardingRule = "";
             TargetReference targetReferenceResource = new TargetReference();
             // Make the request
-            Operation response = forwardingRulesClient.SetTarget(project, region, forwardingRule, targetReferenceResource);
+            lro::Operation<Operation, Operation> response = forwardingRulesClient.SetTarget(project, region, forwardingRule, targetReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = forwardingRulesClient.PollOnceSetTarget(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -841,7 +1146,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string forwardingRule = "";
             TargetReference targetReferenceResource = new TargetReference();
             // Make the request
-            Operation response = await forwardingRulesClient.SetTargetAsync(project, region, forwardingRule, targetReferenceResource);
+            lro::Operation<Operation, Operation> response = await forwardingRulesClient.SetTargetAsync(project, region, forwardingRule, targetReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await forwardingRulesClient.PollOnceSetTargetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

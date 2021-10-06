@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -27,191 +28,10 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedRegionNetworkEndpointGroupsClientTest
     {
         [xunit::FactAttribute]
-        public void DeleteRequestObject()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            DeleteRegionNetworkEndpointGroupRequest request = new DeleteRegionNetworkEndpointGroupRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteRequestObjectAsync()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            DeleteRegionNetworkEndpointGroupRequest request = new DeleteRegionNetworkEndpointGroupRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Delete()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            DeleteRegionNetworkEndpointGroupRequest request = new DeleteRegionNetworkEndpointGroupRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request.Project, request.Region, request.NetworkEndpointGroup);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteAsync()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            DeleteRegionNetworkEndpointGroupRequest request = new DeleteRegionNetworkEndpointGroupRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroup = "network_endpoint_groupdf1fb34e",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request.Project, request.Region, request.NetworkEndpointGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request.Project, request.Region, request.NetworkEndpointGroup, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",
@@ -255,6 +75,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",
@@ -300,6 +121,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",
@@ -343,6 +165,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",
@@ -380,188 +203,6 @@ namespace Google.Cloud.Compute.V1.Tests
             NetworkEndpointGroup responseCallSettings = await client.GetAsync(request.Project, request.Region, request.NetworkEndpointGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             NetworkEndpointGroup responseCancellationToken = await client.GetAsync(request.Project, request.Region, request.NetworkEndpointGroup, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void InsertRequestObject()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            InsertRegionNetworkEndpointGroupRequest request = new InsertRegionNetworkEndpointGroupRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroupResource = new NetworkEndpointGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertRequestObjectAsync()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            InsertRegionNetworkEndpointGroupRequest request = new InsertRegionNetworkEndpointGroupRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroupResource = new NetworkEndpointGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Insert()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            InsertRegionNetworkEndpointGroupRequest request = new InsertRegionNetworkEndpointGroupRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroupResource = new NetworkEndpointGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request.Project, request.Region, request.NetworkEndpointGroupResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertAsync()
-        {
-            moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            InsertRegionNetworkEndpointGroupRequest request = new InsertRegionNetworkEndpointGroupRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                NetworkEndpointGroupResource = new NetworkEndpointGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionNetworkEndpointGroupsClient client = new RegionNetworkEndpointGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request.Project, request.Region, request.NetworkEndpointGroupResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request.Project, request.Region, request.NetworkEndpointGroupResource, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
