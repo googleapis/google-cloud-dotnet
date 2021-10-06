@@ -495,6 +495,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Snippets
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                AllowMissing = false,
             };
             // Make the request
             transcoderServiceClient.DeleteJob(request);
@@ -512,6 +513,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Snippets
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                AllowMissing = false,
             };
             // Make the request
             await transcoderServiceClient.DeleteJobAsync(request);
@@ -1048,6 +1050,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Snippets
             DeleteJobTemplateRequest request = new DeleteJobTemplateRequest
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                AllowMissing = false,
             };
             // Make the request
             transcoderServiceClient.DeleteJobTemplate(request);
@@ -1065,6 +1068,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Snippets
             DeleteJobTemplateRequest request = new DeleteJobTemplateRequest
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                AllowMissing = false,
             };
             // Make the request
             await transcoderServiceClient.DeleteJobTemplateAsync(request);

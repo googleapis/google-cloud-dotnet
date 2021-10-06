@@ -402,6 +402,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                AllowMissing = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -417,6 +418,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             DeleteJobRequest request = new DeleteJobRequest
             {
                 JobName = JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                AllowMissing = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -759,6 +761,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             DeleteJobTemplateRequest request = new DeleteJobTemplateRequest
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                AllowMissing = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -774,6 +777,7 @@ namespace Google.Cloud.Video.Transcoder.V1.Tests
             DeleteJobTemplateRequest request = new DeleteJobTemplateRequest
             {
                 JobTemplateName = JobTemplateName.FromProjectLocationJobTemplate("[PROJECT]", "[LOCATION]", "[JOB_TEMPLATE]"),
+                AllowMissing = true,
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteJobTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
