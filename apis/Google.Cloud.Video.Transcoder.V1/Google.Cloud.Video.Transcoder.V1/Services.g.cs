@@ -38,78 +38,79 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0",
             "ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkiRAoNR2V0Sm9iUmVxdWVzdBIz",
             "CgRuYW1lGAEgASgJQiXgQQL6QR8KHXRyYW5zY29kZXIuZ29vZ2xlYXBpcy5j",
-            "b20vSm9iIkcKEERlbGV0ZUpvYlJlcXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC",
-            "+kEfCh10cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29tL0pvYiJ1ChBMaXN0Sm9i",
-            "c1Jlc3BvbnNlEjMKBGpvYnMYASADKAsyJS5nb29nbGUuY2xvdWQudmlkZW8u",
-            "dHJhbnNjb2Rlci52MS5Kb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMK",
-            "C3VucmVhY2hhYmxlGAMgAygJIr0BChhDcmVhdGVKb2JUZW1wbGF0ZVJlcXVl",
-            "c3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVh",
-            "cGlzLmNvbS9Mb2NhdGlvbhJICgxqb2JfdGVtcGxhdGUYAiABKAsyLS5nb29n",
-            "bGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2JUZW1wbGF0ZUID4EEC",
-            "EhwKD2pvYl90ZW1wbGF0ZV9pZBgDIAEoCUID4EECIp0BChdMaXN0Sm9iVGVt",
-            "cGxhdGVzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRp",
-            "b25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEo",
-            "BRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCRIQCghvcmRl",
-            "cl9ieRgFIAEoCSJUChVHZXRKb2JUZW1wbGF0ZVJlcXVlc3QSOwoEbmFtZRgB",
-            "IAEoCUIt4EEC+kEnCiV0cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29tL0pvYlRl",
-            "bXBsYXRlIlcKGERlbGV0ZUpvYlRlbXBsYXRlUmVxdWVzdBI7CgRuYW1lGAEg",
-            "ASgJQi3gQQL6QScKJXRyYW5zY29kZXIuZ29vZ2xlYXBpcy5jb20vSm9iVGVt",
-            "cGxhdGUijgEKGExpc3RKb2JUZW1wbGF0ZXNSZXNwb25zZRJECg1qb2JfdGVt",
-            "cGxhdGVzGAEgAygLMi0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
-            "djEuSm9iVGVtcGxhdGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3Vu",
-            "cmVhY2hhYmxlGAMgAygJMpIMChFUcmFuc2NvZGVyU2VydmljZRKqAQoJQ3Jl",
-            "YXRlSm9iEjIuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuQ3Jl",
-            "YXRlSm9iUmVxdWVzdBolLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
-            "LnYxLkpvYiJCgtPkkwIvIigvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9qb2JzOgNqb2LaQQpwYXJlbnQsam9iEqwBCghMaXN0Sm9icxIx",
-            "Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkxpc3RKb2JzUmVx",
-            "dWVzdBoyLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkxpc3RK",
-            "b2JzUmVzcG9uc2UiOYLT5JMCKhIoL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vam9ic9pBBnBhcmVudBKZAQoGR2V0Sm9iEi8uZ29vZ2xl",
-            "LmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuR2V0Sm9iUmVxdWVzdBolLmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkpvYiI3gtPkkwIqEigv",
-            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyp92kEEbmFt",
-            "ZRKQAQoJRGVsZXRlSm9iEjIuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29k",
-            "ZXIudjEuRGVsZXRlSm9iUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSI3gtPkkwIqKigvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9q",
-            "b2JzLyp92kEEbmFtZRLsAQoRQ3JlYXRlSm9iVGVtcGxhdGUSOi5nb29nbGUu",
-            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5DcmVhdGVKb2JUZW1wbGF0ZVJl",
-            "cXVlc3QaLS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2JU",
-            "ZW1wbGF0ZSJsgtPkkwJAIjAvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
-            "aW9ucy8qfS9qb2JUZW1wbGF0ZXM6DGpvYl90ZW1wbGF0ZdpBI3BhcmVudCxq",
-            "b2JfdGVtcGxhdGUsam9iX3RlbXBsYXRlX2lkEswBChBMaXN0Sm9iVGVtcGxh",
-            "dGVzEjkuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuTGlzdEpv",
-            "YlRlbXBsYXRlc1JlcXVlc3QaOi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNj",
-            "b2Rlci52MS5MaXN0Sm9iVGVtcGxhdGVzUmVzcG9uc2UiQYLT5JMCMhIwL3Yx",
-            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vam9iVGVtcGxhdGVz",
-            "2kEGcGFyZW50ErkBCg5HZXRKb2JUZW1wbGF0ZRI3Lmdvb2dsZS5jbG91ZC52",
-            "aWRlby50cmFuc2NvZGVyLnYxLkdldEpvYlRlbXBsYXRlUmVxdWVzdBotLmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkpvYlRlbXBsYXRlIj+C",
-            "0+STAjISMC92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYlRl",
-            "bXBsYXRlcy8qfdpBBG5hbWUSqAEKEURlbGV0ZUpvYlRlbXBsYXRlEjouZ29v",
-            "Z2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuRGVsZXRlSm9iVGVtcGxh",
-            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ij+C0+STAjIqMC92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2pvYlRlbXBsYXRlcy8q",
-            "fdpBBG5hbWUaTcpBGXRyYW5zY29kZXIuZ29vZ2xlYXBpcy5jb23SQS5odHRw",
-            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQvAB",
-            "CiRjb20uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjFCDVNlcnZp",
-            "Y2VzUHJvdG9QAVpKZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
-            "YXBpcy9jbG91ZC92aWRlby90cmFuc2NvZGVyL3YxO3RyYW5zY29kZXKqAiBH",
-            "b29nbGUuQ2xvdWQuVmlkZW8uVHJhbnNjb2Rlci5WMcoCIEdvb2dsZVxDbG91",
-            "ZFxWaWRlb1xUcmFuc2NvZGVyXFYx6gIkR29vZ2xlOjpDbG91ZDo6VmlkZW86",
-            "OlRyYW5zY29kZXI6OlYxYgZwcm90bzM="));
+            "b20vSm9iIl4KEERlbGV0ZUpvYlJlcXVlc3QSMwoEbmFtZRgBIAEoCUIl4EEC",
+            "+kEfCh10cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29tL0pvYhIVCg1hbGxvd19t",
+            "aXNzaW5nGAIgASgIInUKEExpc3RKb2JzUmVzcG9uc2USMwoEam9icxgBIAMo",
+            "CzIlLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkpvYhIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkivQEK",
+            "GENyZWF0ZUpvYlRlbXBsYXRlUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBB",
+            "AvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEkgKDGpv",
+            "Yl90ZW1wbGF0ZRgCIAEoCzItLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
+            "ZGVyLnYxLkpvYlRlbXBsYXRlQgPgQQISHAoPam9iX3RlbXBsYXRlX2lkGAMg",
+            "ASgJQgPgQQIinQEKF0xpc3RKb2JUZW1wbGF0ZXNSZXF1ZXN0EjkKBnBhcmVu",
+            "dBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9j",
+            "YXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkS",
+            "DgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJIlQKFUdldEpvYlRl",
+            "bXBsYXRlUmVxdWVzdBI7CgRuYW1lGAEgASgJQi3gQQL6QScKJXRyYW5zY29k",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vSm9iVGVtcGxhdGUibgoYRGVsZXRlSm9iVGVt",
+            "cGxhdGVSZXF1ZXN0EjsKBG5hbWUYASABKAlCLeBBAvpBJwoldHJhbnNjb2Rl",
+            "ci5nb29nbGVhcGlzLmNvbS9Kb2JUZW1wbGF0ZRIVCg1hbGxvd19taXNzaW5n",
+            "GAIgASgIIo4BChhMaXN0Sm9iVGVtcGxhdGVzUmVzcG9uc2USRAoNam9iX3Rl",
+            "bXBsYXRlcxgBIAMoCzItLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVy",
+            "LnYxLkpvYlRlbXBsYXRlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1",
+            "bnJlYWNoYWJsZRgDIAMoCTKSDAoRVHJhbnNjb2RlclNlcnZpY2USqgEKCUNy",
+            "ZWF0ZUpvYhIyLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkNy",
+            "ZWF0ZUpvYlJlcXVlc3QaJS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
+            "ci52MS5Kb2IiQoLT5JMCLyIoL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vam9iczoDam9i2kEKcGFyZW50LGpvYhKsAQoITGlzdEpvYnMS",
+            "MS5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5MaXN0Sm9ic1Jl",
+            "cXVlc3QaMi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5MaXN0",
+            "Sm9ic1Jlc3BvbnNlIjmC0+STAioSKC92MS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L2pvYnPaQQZwYXJlbnQSmQEKBkdldEpvYhIvLmdvb2ds",
+            "ZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkdldEpvYlJlcXVlc3QaJS5n",
+            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2IiN4LT5JMCKhIo",
+            "L3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qfdpBBG5h",
+            "bWUSkAEKCURlbGV0ZUpvYhIyLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2Nv",
+            "ZGVyLnYxLkRlbGV0ZUpvYlJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiN4LT5JMCKiooL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "am9icy8qfdpBBG5hbWUS7AEKEUNyZWF0ZUpvYlRlbXBsYXRlEjouZ29vZ2xl",
+            "LmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuQ3JlYXRlSm9iVGVtcGxhdGVS",
+            "ZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuSm9i",
+            "VGVtcGxhdGUibILT5JMCQCIwL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
+            "dGlvbnMvKn0vam9iVGVtcGxhdGVzOgxqb2JfdGVtcGxhdGXaQSNwYXJlbnQs",
+            "am9iX3RlbXBsYXRlLGpvYl90ZW1wbGF0ZV9pZBLMAQoQTGlzdEpvYlRlbXBs",
+            "YXRlcxI5Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkxpc3RK",
+            "b2JUZW1wbGF0ZXNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
+            "Y29kZXIudjEuTGlzdEpvYlRlbXBsYXRlc1Jlc3BvbnNlIkGC0+STAjISMC92",
+            "MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2pvYlRlbXBsYXRl",
+            "c9pBBnBhcmVudBK5AQoOR2V0Sm9iVGVtcGxhdGUSNy5nb29nbGUuY2xvdWQu",
+            "dmlkZW8udHJhbnNjb2Rlci52MS5HZXRKb2JUZW1wbGF0ZVJlcXVlc3QaLS5n",
+            "b29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5Kb2JUZW1wbGF0ZSI/",
+            "gtPkkwIyEjAvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JU",
+            "ZW1wbGF0ZXMvKn3aQQRuYW1lEqgBChFEZWxldGVKb2JUZW1wbGF0ZRI6Lmdv",
+            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkRlbGV0ZUpvYlRlbXBs",
+            "YXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI/gtPkkwIyKjAv",
+            "djEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JUZW1wbGF0ZXMv",
+            "Kn3aQQRuYW1lGk3KQRl0cmFuc2NvZGVyLmdvb2dsZWFwaXMuY29t0kEuaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULw",
+            "AQokY29tLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxQg1TZXJ2",
+            "aWNlc1Byb3RvUAFaSmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
+            "ZWFwaXMvY2xvdWQvdmlkZW8vdHJhbnNjb2Rlci92MTt0cmFuc2NvZGVyqgIg",
+            "R29vZ2xlLkNsb3VkLlZpZGVvLlRyYW5zY29kZXIuVjHKAiBHb29nbGVcQ2xv",
+            "dWRcVmlkZW9cVHJhbnNjb2RlclxWMeoCJEdvb2dsZTo6Q2xvdWQ6OlZpZGVv",
+            "OjpUcmFuc2NvZGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest), global::Google.Cloud.Video.Transcoder.V1.CreateJobRequest.Parser, new[]{ "Parent", "Job" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest), global::Google.Cloud.Video.Transcoder.V1.ListJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.GetJobRequest), global::Google.Cloud.Video.Transcoder.V1.GetJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest), global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest), global::Google.Cloud.Video.Transcoder.V1.DeleteJobRequest.Parser, new[]{ "Name", "AllowMissing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse), global::Google.Cloud.Video.Transcoder.V1.ListJobsResponse.Parser, new[]{ "Jobs", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest), global::Google.Cloud.Video.Transcoder.V1.CreateJobTemplateRequest.Parser, new[]{ "Parent", "JobTemplate", "JobTemplateId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest), global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest), global::Google.Cloud.Video.Transcoder.V1.GetJobTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest), global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest), global::Google.Cloud.Video.Transcoder.V1.DeleteJobTemplateRequest.Parser, new[]{ "Name", "AllowMissing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse), global::Google.Cloud.Video.Transcoder.V1.ListJobTemplatesResponse.Parser, new[]{ "JobTemplates", "NextPageToken", "Unreachable" }, null, null, null, null)
           }));
     }
@@ -894,6 +895,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteJobRequest(DeleteJobRequest other) : this() {
       name_ = other.name_;
+      allowMissing_ = other.allowMissing_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -917,6 +919,21 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
 
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 2;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the job is not found, the request will succeed but no
+    /// action will be taken on the server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteJobRequest);
@@ -931,6 +948,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (AllowMissing != other.AllowMissing) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -938,6 +956,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -958,6 +977,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (AllowMissing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AllowMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -971,6 +994,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (AllowMissing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AllowMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -982,6 +1009,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -996,6 +1026,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1015,6 +1048,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1031,6 +1068,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            AllowMissing = input.ReadBool();
             break;
           }
         }
@@ -2095,6 +2136,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteJobTemplateRequest(DeleteJobTemplateRequest other) : this() {
       name_ = other.name_;
+      allowMissing_ = other.allowMissing_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2118,6 +2160,21 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
 
+    /// <summary>Field number for the "allow_missing" field.</summary>
+    public const int AllowMissingFieldNumber = 2;
+    private bool allowMissing_;
+    /// <summary>
+    /// If set to true, and the job template is not found, the request will succeed
+    /// but no action will be taken on the server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AllowMissing {
+      get { return allowMissing_; }
+      set {
+        allowMissing_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DeleteJobTemplateRequest);
@@ -2132,6 +2189,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (AllowMissing != other.AllowMissing) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2139,6 +2197,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2159,6 +2218,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (AllowMissing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AllowMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2172,6 +2235,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (AllowMissing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(AllowMissing);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2183,6 +2250,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (AllowMissing != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2197,6 +2267,9 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.AllowMissing != false) {
+        AllowMissing = other.AllowMissing;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2216,6 +2289,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            AllowMissing = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2232,6 +2309,10 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            AllowMissing = input.ReadBool();
             break;
           }
         }

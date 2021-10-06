@@ -77,135 +77,123 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             "SAASRQoMYXVkaW9fc3RyZWFtGAIgASgLMi0uZ29vZ2xlLmNsb3VkLnZpZGVv",
             "LnRyYW5zY29kZXIudjEuQXVkaW9TdHJlYW1IABJDCgt0ZXh0X3N0cmVhbRgD",
             "IAEoCzIsLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlRleHRT",
-            "dHJlYW1IAEITChFlbGVtZW50YXJ5X3N0cmVhbSLpAQoJTXV4U3RyZWFtEgsK",
+            "dHJlYW1IAEITChFlbGVtZW50YXJ5X3N0cmVhbSKnAQoJTXV4U3RyZWFtEgsK",
             "A2tleRgBIAEoCRIRCglmaWxlX25hbWUYAiABKAkSEQoJY29udGFpbmVyGAMg",
             "ASgJEhoKEmVsZW1lbnRhcnlfc3RyZWFtcxgEIAMoCRJLChBzZWdtZW50X3Nl",
             "dHRpbmdzGAUgASgLMjEuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
-            "djEuU2VnbWVudFNldHRpbmdzEkAKCmVuY3J5cHRpb24YBiABKAsyLC5nb29n",
-            "bGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5FbmNyeXB0aW9uIsUBCghN",
-            "YW5pZmVzdBIRCglmaWxlX25hbWUYASABKAkSSgoEdHlwZRgCIAEoDjI3Lmdv",
-            "b2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLk1hbmlmZXN0Lk1hbmlm",
-            "ZXN0VHlwZUID4EECEhgKC211eF9zdHJlYW1zGAMgAygJQgPgQQIiQAoMTWFu",
-            "aWZlc3RUeXBlEh0KGU1BTklGRVNUX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNI",
-            "TFMQARIICgREQVNIEAIiIgoRUHVic3ViRGVzdGluYXRpb24SDQoFdG9waWMY",
-            "ASABKAki/QIKC1Nwcml0ZVNoZWV0Eg4KBmZvcm1hdBgBIAEoCRIYCgtmaWxl",
-            "X3ByZWZpeBgCIAEoCUID4EECEiAKE3Nwcml0ZV93aWR0aF9waXhlbHMYAyAB",
-            "KAVCA+BBAhIhChRzcHJpdGVfaGVpZ2h0X3BpeGVscxgEIAEoBUID4EECEhQK",
-            "DGNvbHVtbl9jb3VudBgFIAEoBRIRCglyb3dfY291bnQYBiABKAUSNAoRc3Rh",
-            "cnRfdGltZV9vZmZzZXQYByABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SMgoPZW5kX3RpbWVfb2Zmc2V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uEhUKC3RvdGFsX2NvdW50GAkgASgFSAASLQoIaW50ZXJ2YWwY",
-            "CiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABIPCgdxdWFsaXR5",
-            "GAsgASgFQhUKE2V4dHJhY3Rpb25fc3RyYXRlZ3kiiwkKB092ZXJsYXkSPgoF",
-            "aW1hZ2UYASABKAsyLy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52",
-            "MS5PdmVybGF5LkltYWdlEkcKCmFuaW1hdGlvbnMYAiADKAsyMy5nb29nbGUu",
-            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5PdmVybGF5LkFuaW1hdGlvbhos",
-            "ChROb3JtYWxpemVkQ29vcmRpbmF0ZRIJCgF4GAEgASgBEgkKAXkYAiABKAEa",
-            "fAoFSW1hZ2USEAoDdXJpGAEgASgJQgPgQQISUgoKcmVzb2x1dGlvbhgCIAEo",
+            "djEuU2VnbWVudFNldHRpbmdzIsUBCghNYW5pZmVzdBIRCglmaWxlX25hbWUY",
+            "ASABKAkSSgoEdHlwZRgCIAEoDjI3Lmdvb2dsZS5jbG91ZC52aWRlby50cmFu",
+            "c2NvZGVyLnYxLk1hbmlmZXN0Lk1hbmlmZXN0VHlwZUID4EECEhgKC211eF9z",
+            "dHJlYW1zGAMgAygJQgPgQQIiQAoMTWFuaWZlc3RUeXBlEh0KGU1BTklGRVNU",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIHCgNITFMQARIICgREQVNIEAIiIgoRUHVi",
+            "c3ViRGVzdGluYXRpb24SDQoFdG9waWMYASABKAki/QIKC1Nwcml0ZVNoZWV0",
+            "Eg4KBmZvcm1hdBgBIAEoCRIYCgtmaWxlX3ByZWZpeBgCIAEoCUID4EECEiAK",
+            "E3Nwcml0ZV93aWR0aF9waXhlbHMYAyABKAVCA+BBAhIhChRzcHJpdGVfaGVp",
+            "Z2h0X3BpeGVscxgEIAEoBUID4EECEhQKDGNvbHVtbl9jb3VudBgFIAEoBRIR",
+            "Cglyb3dfY291bnQYBiABKAUSNAoRc3RhcnRfdGltZV9vZmZzZXQYByABKAsy",
+            "GS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24SMgoPZW5kX3RpbWVfb2Zmc2V0",
+            "GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEhUKC3RvdGFsX2Nv",
+            "dW50GAkgASgFSAASLQoIaW50ZXJ2YWwYCiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb25IABIPCgdxdWFsaXR5GAsgASgFQhUKE2V4dHJhY3Rpb25f",
+            "c3RyYXRlZ3kiiwkKB092ZXJsYXkSPgoFaW1hZ2UYASABKAsyLy5nb29nbGUu",
+            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5PdmVybGF5LkltYWdlEkcKCmFu",
+            "aW1hdGlvbnMYAiADKAsyMy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rl",
+            "ci52MS5PdmVybGF5LkFuaW1hdGlvbhosChROb3JtYWxpemVkQ29vcmRpbmF0",
+            "ZRIJCgF4GAEgASgBEgkKAXkYAiABKAEafAoFSW1hZ2USEAoDdXJpGAEgASgJ",
+            "QgPgQQISUgoKcmVzb2x1dGlvbhgCIAEoCzI+Lmdvb2dsZS5jbG91ZC52aWRl",
+            "by50cmFuc2NvZGVyLnYxLk92ZXJsYXkuTm9ybWFsaXplZENvb3JkaW5hdGUS",
+            "DQoFYWxwaGEYAyABKAEakwEKD0FuaW1hdGlvblN0YXRpYxJKCgJ4eRgBIAEo",
             "CzI+Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLk92ZXJsYXku",
-            "Tm9ybWFsaXplZENvb3JkaW5hdGUSDQoFYWxwaGEYAyABKAEakwEKD0FuaW1h",
-            "dGlvblN0YXRpYxJKCgJ4eRgBIAEoCzI+Lmdvb2dsZS5jbG91ZC52aWRlby50",
-            "cmFuc2NvZGVyLnYxLk92ZXJsYXkuTm9ybWFsaXplZENvb3JkaW5hdGUSNAoR",
-            "c3RhcnRfdGltZV9vZmZzZXQYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24akQIKDUFuaW1hdGlvbkZhZGUSSgoJZmFkZV90eXBlGAEgASgOMjIu",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuT3ZlcmxheS5GYWRl",
-            "VHlwZUID4EECEkoKAnh5GAIgASgLMj4uZ29vZ2xlLmNsb3VkLnZpZGVvLnRy",
-            "YW5zY29kZXIudjEuT3ZlcmxheS5Ob3JtYWxpemVkQ29vcmRpbmF0ZRI0ChFz",
-            "dGFydF90aW1lX29mZnNldBgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhIyCg9lbmRfdGltZV9vZmZzZXQYBCABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24aRAoMQW5pbWF0aW9uRW5kEjQKEXN0YXJ0X3RpbWVfb2Zm",
-            "c2V0GAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGpgCCglBbmlt",
-            "YXRpb24SVQoQYW5pbWF0aW9uX3N0YXRpYxgBIAEoCzI5Lmdvb2dsZS5jbG91",
-            "ZC52aWRlby50cmFuc2NvZGVyLnYxLk92ZXJsYXkuQW5pbWF0aW9uU3RhdGlj",
-            "SAASUQoOYW5pbWF0aW9uX2ZhZGUYAiABKAsyNy5nb29nbGUuY2xvdWQudmlk",
-            "ZW8udHJhbnNjb2Rlci52MS5PdmVybGF5LkFuaW1hdGlvbkZhZGVIABJPCg1h",
-            "bmltYXRpb25fZW5kGAMgASgLMjYuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5z",
-            "Y29kZXIudjEuT3ZlcmxheS5BbmltYXRpb25FbmRIAEIQCg5hbmltYXRpb25f",
-            "dHlwZSJACghGYWRlVHlwZRIZChVGQURFX1RZUEVfVU5TUEVDSUZJRUQQABIL",
-            "CgdGQURFX0lOEAESDAoIRkFERV9PVVQQAiL0BgoTUHJlcHJvY2Vzc2luZ0Nv",
-            "bmZpZxJKCgVjb2xvchgBIAEoCzI7Lmdvb2dsZS5jbG91ZC52aWRlby50cmFu",
-            "c2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25maWcuQ29sb3ISTgoHZGVub2lz",
-            "ZRgCIAEoCzI9Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlBy",
-            "ZXByb2Nlc3NpbmdDb25maWcuRGVub2lzZRJOCgdkZWJsb2NrGAMgASgLMj0u",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2lu",
-            "Z0NvbmZpZy5EZWJsb2NrEkoKBWF1ZGlvGAQgASgLMjsuZ29vZ2xlLmNsb3Vk",
-            "LnZpZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5BdWRp",
-            "bxJICgRjcm9wGAUgASgLMjouZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29k",
-            "ZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5Dcm9wEkYKA3BhZBgGIAEoCzI5",
+            "Tm9ybWFsaXplZENvb3JkaW5hdGUSNAoRc3RhcnRfdGltZV9vZmZzZXQYAiAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24akQIKDUFuaW1hdGlvbkZh",
+            "ZGUSSgoJZmFkZV90eXBlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLnZpZGVvLnRy",
+            "YW5zY29kZXIudjEuT3ZlcmxheS5GYWRlVHlwZUID4EECEkoKAnh5GAIgASgL",
+            "Mj4uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuT3ZlcmxheS5O",
+            "b3JtYWxpemVkQ29vcmRpbmF0ZRI0ChFzdGFydF90aW1lX29mZnNldBgDIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIyCg9lbmRfdGltZV9vZmZz",
+            "ZXQYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24aRAoMQW5pbWF0",
+            "aW9uRW5kEjQKEXN0YXJ0X3RpbWVfb2Zmc2V0GAEgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uGpgCCglBbmltYXRpb24SVQoQYW5pbWF0aW9uX3N0",
+            "YXRpYxgBIAEoCzI5Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYx",
+            "Lk92ZXJsYXkuQW5pbWF0aW9uU3RhdGljSAASUQoOYW5pbWF0aW9uX2ZhZGUY",
+            "AiABKAsyNy5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5PdmVy",
+            "bGF5LkFuaW1hdGlvbkZhZGVIABJPCg1hbmltYXRpb25fZW5kGAMgASgLMjYu",
+            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuT3ZlcmxheS5Bbmlt",
+            "YXRpb25FbmRIAEIQCg5hbmltYXRpb25fdHlwZSJACghGYWRlVHlwZRIZChVG",
+            "QURFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdGQURFX0lOEAESDAoIRkFERV9P",
+            "VVQQAiL0BgoTUHJlcHJvY2Vzc2luZ0NvbmZpZxJKCgVjb2xvchgBIAEoCzI7",
             "Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLlByZXByb2Nlc3Np",
-            "bmdDb25maWcuUGFkGkEKBUNvbG9yEhIKCnNhdHVyYXRpb24YASABKAESEAoI",
-            "Y29udHJhc3QYAiABKAESEgoKYnJpZ2h0bmVzcxgDIAEoARopCgdEZW5vaXNl",
-            "EhAKCHN0cmVuZ3RoGAEgASgBEgwKBHR1bmUYAiABKAkaLAoHRGVibG9jaxIQ",
-            "CghzdHJlbmd0aBgBIAEoARIPCgdlbmFibGVkGAIgASgIGjwKBUF1ZGlvEgwK",
-            "BGx1ZnMYASABKAESEgoKaGlnaF9ib29zdBgCIAEoCBIRCglsb3dfYm9vc3QY",
-            "AyABKAgaXAoEQ3JvcBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9w",
-            "aXhlbHMYAiABKAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4",
-            "ZWxzGAQgASgFGlsKA1BhZBISCgp0b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRv",
-            "bV9waXhlbHMYAiABKAUSEwoLbGVmdF9waXhlbHMYAyABKAUSFAoMcmlnaHRf",
-            "cGl4ZWxzGAQgASgFIpUMCgtWaWRlb1N0cmVhbRJPCgRoMjY0GAEgASgLMj8u",
-            "Z29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9TdHJlYW0u",
-            "SDI2NENvZGVjU2V0dGluZ3NIABJPCgRoMjY1GAIgASgLMj8uZ29vZ2xlLmNs",
-            "b3VkLnZpZGVvLnRyYW5zY29kZXIudjEuVmlkZW9TdHJlYW0uSDI2NUNvZGVj",
-            "U2V0dGluZ3NIABJNCgN2cDkYAyABKAsyPi5nb29nbGUuY2xvdWQudmlkZW8u",
-            "dHJhbnNjb2Rlci52MS5WaWRlb1N0cmVhbS5WcDlDb2RlY1NldHRpbmdzSAAa",
-            "+QMKEUgyNjRDb2RlY1NldHRpbmdzEhQKDHdpZHRoX3BpeGVscxgBIAEoBRIV",
-            "Cg1oZWlnaHRfcGl4ZWxzGAIgASgFEhcKCmZyYW1lX3JhdGUYAyABKAFCA+BB",
-            "AhIYCgtiaXRyYXRlX2JwcxgEIAEoBUID4EECEhQKDHBpeGVsX2Zvcm1hdBgF",
-            "IAEoCRIZChFyYXRlX2NvbnRyb2xfbW9kZRgGIAEoCRIRCgljcmZfbGV2ZWwY",
-            "ByABKAUSFgoOYWxsb3dfb3Blbl9nb3AYCCABKAgSGQoPZ29wX2ZyYW1lX2Nv",
-            "dW50GAkgASgFSAASMQoMZ29wX2R1cmF0aW9uGAogASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uSAASFwoPZW5hYmxlX3R3b19wYXNzGAsgASgIEhUK",
-            "DXZidl9zaXplX2JpdHMYDCABKAUSGQoRdmJ2X2Z1bGxuZXNzX2JpdHMYDSAB",
-            "KAUSFQoNZW50cm9weV9jb2RlchgOIAEoCRIRCgliX3B5cmFtaWQYDyABKAgS",
-            "FQoNYl9mcmFtZV9jb3VudBgQIAEoBRITCgthcV9zdHJlbmd0aBgRIAEoARIP",
-            "Cgdwcm9maWxlGBIgASgJEgwKBHR1bmUYEyABKAkSDgoGcHJlc2V0GBQgASgJ",
-            "QgoKCGdvcF9tb2RlGuIDChFIMjY1Q29kZWNTZXR0aW5ncxIUCgx3aWR0aF9w",
-            "aXhlbHMYASABKAUSFQoNaGVpZ2h0X3BpeGVscxgCIAEoBRIXCgpmcmFtZV9y",
-            "YXRlGAMgASgBQgPgQQISGAoLYml0cmF0ZV9icHMYBCABKAVCA+BBAhIUCgxw",
-            "aXhlbF9mb3JtYXQYBSABKAkSGQoRcmF0ZV9jb250cm9sX21vZGUYBiABKAkS",
-            "EQoJY3JmX2xldmVsGAcgASgFEhYKDmFsbG93X29wZW5fZ29wGAggASgIEhkK",
-            "D2dvcF9mcmFtZV9jb3VudBgJIAEoBUgAEjEKDGdvcF9kdXJhdGlvbhgKIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEhcKD2VuYWJsZV90d29f",
-            "cGFzcxgLIAEoCBIVCg12YnZfc2l6ZV9iaXRzGAwgASgFEhkKEXZidl9mdWxs",
-            "bmVzc19iaXRzGA0gASgFEhEKCWJfcHlyYW1pZBgOIAEoCBIVCg1iX2ZyYW1l",
-            "X2NvdW50GA8gASgFEhMKC2FxX3N0cmVuZ3RoGBAgASgBEg8KB3Byb2ZpbGUY",
-            "ESABKAkSDAoEdHVuZRgSIAEoCRIOCgZwcmVzZXQYEyABKAlCCgoIZ29wX21v",
-            "ZGUaoQIKEFZwOUNvZGVjU2V0dGluZ3MSFAoMd2lkdGhfcGl4ZWxzGAEgASgF",
-            "EhUKDWhlaWdodF9waXhlbHMYAiABKAUSFwoKZnJhbWVfcmF0ZRgDIAEoAUID",
-            "4EECEhgKC2JpdHJhdGVfYnBzGAQgASgFQgPgQQISFAoMcGl4ZWxfZm9ybWF0",
-            "GAUgASgJEhkKEXJhdGVfY29udHJvbF9tb2RlGAYgASgJEhEKCWNyZl9sZXZl",
-            "bBgHIAEoBRIZCg9nb3BfZnJhbWVfY291bnQYCCABKAVIABIxCgxnb3BfZHVy",
-            "YXRpb24YCSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABIPCgdw",
-            "cm9maWxlGAogASgJQgoKCGdvcF9tb2RlQhAKDmNvZGVjX3NldHRpbmdzIvEC",
-            "CgtBdWRpb1N0cmVhbRINCgVjb2RlYxgBIAEoCRIYCgtiaXRyYXRlX2JwcxgC",
-            "IAEoBUID4EECEhUKDWNoYW5uZWxfY291bnQYAyABKAUSFgoOY2hhbm5lbF9s",
-            "YXlvdXQYBCADKAkSSwoHbWFwcGluZxgFIAMoCzI6Lmdvb2dsZS5jbG91ZC52",
-            "aWRlby50cmFuc2NvZGVyLnYxLkF1ZGlvU3RyZWFtLkF1ZGlvTWFwcGluZxIZ",
-            "ChFzYW1wbGVfcmF0ZV9oZXJ0ehgGIAEoBRqhAQoMQXVkaW9NYXBwaW5nEhUK",
-            "CGF0b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJQgPgQQIS",
-            "GAoLaW5wdXRfdHJhY2sYAyABKAVCA+BBAhIaCg1pbnB1dF9jaGFubmVsGAQg",
-            "ASgFQgPgQQISGwoOb3V0cHV0X2NoYW5uZWwYBSABKAVCA+BBAhIPCgdnYWlu",
-            "X2RiGAYgASgBIr4BCgpUZXh0U3RyZWFtEg0KBWNvZGVjGAEgASgJEkkKB21h",
-            "cHBpbmcYAyADKAsyOC5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52",
-            "MS5UZXh0U3RyZWFtLlRleHRNYXBwaW5nGlYKC1RleHRNYXBwaW5nEhUKCGF0",
-            "b21fa2V5GAEgASgJQgPgQQISFgoJaW5wdXRfa2V5GAIgASgJQgPgQQISGAoL",
-            "aW5wdXRfdHJhY2sYAyABKAVCA+BBAiJoCg9TZWdtZW50U2V0dGluZ3MSMwoQ",
-            "c2VnbWVudF9kdXJhdGlvbhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhIgChNpbmRpdmlkdWFsX3NlZ21lbnRzGAMgASgIQgPgQQIi3QMKCkVu",
-            "Y3J5cHRpb24SEAoDa2V5GAEgASgJQgPgQQISDwoCaXYYAiABKAlCA+BBAhJQ",
-            "CgdhZXNfMTI4GAMgASgLMj0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29k",
-            "ZXIudjEuRW5jcnlwdGlvbi5BZXMxMjhFbmNyeXB0aW9uSAASVgoKc2FtcGxl",
-            "X2FlcxgEIAEoCzJALmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYx",
-            "LkVuY3J5cHRpb24uU2FtcGxlQWVzRW5jcnlwdGlvbkgAElYKCW1wZWdfY2Vu",
-            "YxgFIAEoCzJBLmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkVu",
-            "Y3J5cHRpb24uTXBlZ0NvbW1vbkVuY3J5cHRpb25IABooChBBZXMxMjhFbmNy",
-            "eXB0aW9uEhQKB2tleV91cmkYASABKAlCA+BBAhorChNTYW1wbGVBZXNFbmNy",
-            "eXB0aW9uEhQKB2tleV91cmkYASABKAlCA+BBAhpAChRNcGVnQ29tbW9uRW5j",
-            "cnlwdGlvbhITCgZrZXlfaWQYASABKAlCA+BBAhITCgZzY2hlbWUYAiABKAlC",
-            "A+BBAkIRCg9lbmNyeXB0aW9uX21vZGVChAEKJGNvbS5nb29nbGUuY2xvdWQu",
-            "dmlkZW8udHJhbnNjb2Rlci52MUIOUmVzb3VyY2VzUHJvdG9QAVpKZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92aWRlby90",
-            "cmFuc2NvZGVyL3YxO3RyYW5zY29kZXJiBnByb3RvMw=="));
+            "bmdDb25maWcuQ29sb3ISTgoHZGVub2lzZRgCIAEoCzI9Lmdvb2dsZS5jbG91",
+            "ZC52aWRlby50cmFuc2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25maWcuRGVu",
+            "b2lzZRJOCgdkZWJsb2NrGAMgASgLMj0uZ29vZ2xlLmNsb3VkLnZpZGVvLnRy",
+            "YW5zY29kZXIudjEuUHJlcHJvY2Vzc2luZ0NvbmZpZy5EZWJsb2NrEkoKBWF1",
+            "ZGlvGAQgASgLMjsuZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEu",
+            "UHJlcHJvY2Vzc2luZ0NvbmZpZy5BdWRpbxJICgRjcm9wGAUgASgLMjouZ29v",
+            "Z2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIudjEuUHJlcHJvY2Vzc2luZ0Nv",
+            "bmZpZy5Dcm9wEkYKA3BhZBgGIAEoCzI5Lmdvb2dsZS5jbG91ZC52aWRlby50",
+            "cmFuc2NvZGVyLnYxLlByZXByb2Nlc3NpbmdDb25maWcuUGFkGkEKBUNvbG9y",
+            "EhIKCnNhdHVyYXRpb24YASABKAESEAoIY29udHJhc3QYAiABKAESEgoKYnJp",
+            "Z2h0bmVzcxgDIAEoARopCgdEZW5vaXNlEhAKCHN0cmVuZ3RoGAEgASgBEgwK",
+            "BHR1bmUYAiABKAkaLAoHRGVibG9jaxIQCghzdHJlbmd0aBgBIAEoARIPCgdl",
+            "bmFibGVkGAIgASgIGjwKBUF1ZGlvEgwKBGx1ZnMYASABKAESEgoKaGlnaF9i",
+            "b29zdBgCIAEoCBIRCglsb3dfYm9vc3QYAyABKAgaXAoEQ3JvcBISCgp0b3Bf",
+            "cGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiABKAUSEwoLbGVmdF9w",
+            "aXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgFGlsKA1BhZBISCgp0",
+            "b3BfcGl4ZWxzGAEgASgFEhUKDWJvdHRvbV9waXhlbHMYAiABKAUSEwoLbGVm",
+            "dF9waXhlbHMYAyABKAUSFAoMcmlnaHRfcGl4ZWxzGAQgASgFIpUMCgtWaWRl",
+            "b1N0cmVhbRJPCgRoMjY0GAEgASgLMj8uZ29vZ2xlLmNsb3VkLnZpZGVvLnRy",
+            "YW5zY29kZXIudjEuVmlkZW9TdHJlYW0uSDI2NENvZGVjU2V0dGluZ3NIABJP",
+            "CgRoMjY1GAIgASgLMj8uZ29vZ2xlLmNsb3VkLnZpZGVvLnRyYW5zY29kZXIu",
+            "djEuVmlkZW9TdHJlYW0uSDI2NUNvZGVjU2V0dGluZ3NIABJNCgN2cDkYAyAB",
+            "KAsyPi5nb29nbGUuY2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5WaWRlb1N0",
+            "cmVhbS5WcDlDb2RlY1NldHRpbmdzSAAa+QMKEUgyNjRDb2RlY1NldHRpbmdz",
+            "EhQKDHdpZHRoX3BpeGVscxgBIAEoBRIVCg1oZWlnaHRfcGl4ZWxzGAIgASgF",
+            "EhcKCmZyYW1lX3JhdGUYAyABKAFCA+BBAhIYCgtiaXRyYXRlX2JwcxgEIAEo",
+            "BUID4EECEhQKDHBpeGVsX2Zvcm1hdBgFIAEoCRIZChFyYXRlX2NvbnRyb2xf",
+            "bW9kZRgGIAEoCRIRCgljcmZfbGV2ZWwYByABKAUSFgoOYWxsb3dfb3Blbl9n",
+            "b3AYCCABKAgSGQoPZ29wX2ZyYW1lX2NvdW50GAkgASgFSAASMQoMZ29wX2R1",
+            "cmF0aW9uGAogASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSAASFwoP",
+            "ZW5hYmxlX3R3b19wYXNzGAsgASgIEhUKDXZidl9zaXplX2JpdHMYDCABKAUS",
+            "GQoRdmJ2X2Z1bGxuZXNzX2JpdHMYDSABKAUSFQoNZW50cm9weV9jb2RlchgO",
+            "IAEoCRIRCgliX3B5cmFtaWQYDyABKAgSFQoNYl9mcmFtZV9jb3VudBgQIAEo",
+            "BRITCgthcV9zdHJlbmd0aBgRIAEoARIPCgdwcm9maWxlGBIgASgJEgwKBHR1",
+            "bmUYEyABKAkSDgoGcHJlc2V0GBQgASgJQgoKCGdvcF9tb2RlGuIDChFIMjY1",
+            "Q29kZWNTZXR0aW5ncxIUCgx3aWR0aF9waXhlbHMYASABKAUSFQoNaGVpZ2h0",
+            "X3BpeGVscxgCIAEoBRIXCgpmcmFtZV9yYXRlGAMgASgBQgPgQQISGAoLYml0",
+            "cmF0ZV9icHMYBCABKAVCA+BBAhIUCgxwaXhlbF9mb3JtYXQYBSABKAkSGQoR",
+            "cmF0ZV9jb250cm9sX21vZGUYBiABKAkSEQoJY3JmX2xldmVsGAcgASgFEhYK",
+            "DmFsbG93X29wZW5fZ29wGAggASgIEhkKD2dvcF9mcmFtZV9jb3VudBgJIAEo",
+            "BUgAEjEKDGdvcF9kdXJhdGlvbhgKIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5E",
+            "dXJhdGlvbkgAEhcKD2VuYWJsZV90d29fcGFzcxgLIAEoCBIVCg12YnZfc2l6",
+            "ZV9iaXRzGAwgASgFEhkKEXZidl9mdWxsbmVzc19iaXRzGA0gASgFEhEKCWJf",
+            "cHlyYW1pZBgOIAEoCBIVCg1iX2ZyYW1lX2NvdW50GA8gASgFEhMKC2FxX3N0",
+            "cmVuZ3RoGBAgASgBEg8KB3Byb2ZpbGUYESABKAkSDAoEdHVuZRgSIAEoCRIO",
+            "CgZwcmVzZXQYEyABKAlCCgoIZ29wX21vZGUaoQIKEFZwOUNvZGVjU2V0dGlu",
+            "Z3MSFAoMd2lkdGhfcGl4ZWxzGAEgASgFEhUKDWhlaWdodF9waXhlbHMYAiAB",
+            "KAUSFwoKZnJhbWVfcmF0ZRgDIAEoAUID4EECEhgKC2JpdHJhdGVfYnBzGAQg",
+            "ASgFQgPgQQISFAoMcGl4ZWxfZm9ybWF0GAUgASgJEhkKEXJhdGVfY29udHJv",
+            "bF9tb2RlGAYgASgJEhEKCWNyZl9sZXZlbBgHIAEoBRIZCg9nb3BfZnJhbWVf",
+            "Y291bnQYCCABKAVIABIxCgxnb3BfZHVyYXRpb24YCSABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb25IABIPCgdwcm9maWxlGAogASgJQgoKCGdvcF9t",
+            "b2RlQhAKDmNvZGVjX3NldHRpbmdzIvECCgtBdWRpb1N0cmVhbRINCgVjb2Rl",
+            "YxgBIAEoCRIYCgtiaXRyYXRlX2JwcxgCIAEoBUID4EECEhUKDWNoYW5uZWxf",
+            "Y291bnQYAyABKAUSFgoOY2hhbm5lbF9sYXlvdXQYBCADKAkSSwoHbWFwcGlu",
+            "ZxgFIAMoCzI6Lmdvb2dsZS5jbG91ZC52aWRlby50cmFuc2NvZGVyLnYxLkF1",
+            "ZGlvU3RyZWFtLkF1ZGlvTWFwcGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgG",
+            "IAEoBRqhAQoMQXVkaW9NYXBwaW5nEhUKCGF0b21fa2V5GAEgASgJQgPgQQIS",
+            "FgoJaW5wdXRfa2V5GAIgASgJQgPgQQISGAoLaW5wdXRfdHJhY2sYAyABKAVC",
+            "A+BBAhIaCg1pbnB1dF9jaGFubmVsGAQgASgFQgPgQQISGwoOb3V0cHV0X2No",
+            "YW5uZWwYBSABKAVCA+BBAhIPCgdnYWluX2RiGAYgASgBIr4BCgpUZXh0U3Ry",
+            "ZWFtEg0KBWNvZGVjGAEgASgJEkkKB21hcHBpbmcYAyADKAsyOC5nb29nbGUu",
+            "Y2xvdWQudmlkZW8udHJhbnNjb2Rlci52MS5UZXh0U3RyZWFtLlRleHRNYXBw",
+            "aW5nGlYKC1RleHRNYXBwaW5nEhUKCGF0b21fa2V5GAEgASgJQgPgQQISFgoJ",
+            "aW5wdXRfa2V5GAIgASgJQgPgQQISGAoLaW5wdXRfdHJhY2sYAyABKAVCA+BB",
+            "AiJoCg9TZWdtZW50U2V0dGluZ3MSMwoQc2VnbWVudF9kdXJhdGlvbhgBIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIgChNpbmRpdmlkdWFsX3Nl",
+            "Z21lbnRzGAMgASgIQgPgQQJChAEKJGNvbS5nb29nbGUuY2xvdWQudmlkZW8u",
+            "dHJhbnNjb2Rlci52MUIOUmVzb3VyY2VzUHJvdG9QAVpKZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92aWRlby90cmFuc2Nv",
+            "ZGVyL3YxO3RyYW5zY29kZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -217,7 +205,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.EditAtom), global::Google.Cloud.Video.Transcoder.V1.EditAtom.Parser, new[]{ "Key", "Inputs", "EndTimeOffset", "StartTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AdBreak), global::Google.Cloud.Video.Transcoder.V1.AdBreak.Parser, new[]{ "StartTimeOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.ElementaryStream), global::Google.Cloud.Video.Transcoder.V1.ElementaryStream.Parser, new[]{ "Key", "VideoStream", "AudioStream", "TextStream" }, new[]{ "ElementaryStream" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.MuxStream), global::Google.Cloud.Video.Transcoder.V1.MuxStream.Parser, new[]{ "Key", "FileName", "Container", "ElementaryStreams", "SegmentSettings", "Encryption" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.MuxStream), global::Google.Cloud.Video.Transcoder.V1.MuxStream.Parser, new[]{ "Key", "FileName", "Container", "ElementaryStreams", "SegmentSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Manifest), global::Google.Cloud.Video.Transcoder.V1.Manifest.Parser, new[]{ "FileName", "Type", "MuxStreams" }, null, new[]{ typeof(global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.ManifestType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.PubsubDestination), global::Google.Cloud.Video.Transcoder.V1.PubsubDestination.Parser, new[]{ "Topic" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.SpriteSheet), global::Google.Cloud.Video.Transcoder.V1.SpriteSheet.Parser, new[]{ "Format", "FilePrefix", "SpriteWidthPixels", "SpriteHeightPixels", "ColumnCount", "RowCount", "StartTimeOffset", "EndTimeOffset", "TotalCount", "Interval", "Quality" }, new[]{ "ExtractionStrategy" }, null, null, null),
@@ -238,10 +226,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings), global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings.Parser, new[]{ "WidthPixels", "HeightPixels", "FrameRate", "BitrateBps", "PixelFormat", "RateControlMode", "CrfLevel", "GopFrameCount", "GopDuration", "Profile" }, new[]{ "GopMode" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Parser, new[]{ "Codec", "BitrateBps", "ChannelCount", "ChannelLayout", "Mapping", "SampleRateHertz" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping), global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack", "InputChannel", "OutputChannel", "GainDb" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream), global::Google.Cloud.Video.Transcoder.V1.TextStream.Parser, new[]{ "Codec", "Mapping" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping), global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping.Parser, new[]{ "AtomKey", "InputKey", "InputTrack" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.SegmentSettings), global::Google.Cloud.Video.Transcoder.V1.SegmentSettings.Parser, new[]{ "SegmentDuration", "IndividualSegments" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Encryption), global::Google.Cloud.Video.Transcoder.V1.Encryption.Parser, new[]{ "Key", "Iv", "Aes128", "SampleAes", "MpegCenc" }, new[]{ "EncryptionMode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption), global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption.Parser, new[]{ "KeyUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption), global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption.Parser, new[]{ "KeyUri" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption), global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption.Parser, new[]{ "KeyId", "Scheme" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Video.Transcoder.V1.SegmentSettings), global::Google.Cloud.Video.Transcoder.V1.SegmentSettings.Parser, new[]{ "SegmentDuration", "IndividualSegments" }, null, null, null, null)
           }));
     }
     #endregion
@@ -311,7 +296,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name of the job.
-    /// Format: `projects/{project}/locations/{location}/jobs/{job}`
+    /// Format: `projects/{project_number}/locations/{location}/jobs/{job}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -994,7 +979,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// <summary>
     /// The resource name of the job template.
     /// Format:
-    /// `projects/{project}/locations/{location}/jobTemplates/{job_template}`
+    /// `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2984,7 +2969,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       container_ = other.container_;
       elementaryStreams_ = other.elementaryStreams_.Clone();
       segmentSettings_ = other.segmentSettings_ != null ? other.segmentSettings_.Clone() : null;
-      encryption_ = other.encryption_ != null ? other.encryption_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2998,7 +2982,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private string key_ = "";
     /// <summary>
     /// A unique key for this multiplexed stream. HLS media manifests will be
-    /// named `MuxStream.key` with the `".m3u8"` extension suffix.
+    /// named `MuxStream.key` with the `.m3u8` extension suffix.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Key {
@@ -3016,7 +3000,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// extension suffix corresponding to the `MuxStream.container`.
     ///
     /// Individual segments also have an incremental 10-digit zero-padded suffix
-    /// starting from 0 before the extension, such as `"mux_stream0000000123.ts"`.
+    /// starting from 0 before the extension, such as `mux_stream0000000123.ts`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FileName {
@@ -3030,13 +3014,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int ContainerFieldNumber = 3;
     private string container_ = "";
     /// <summary>
-    /// The container format. The default is `"mp4"`
+    /// The container format. The default is `mp4`
     ///
     /// Supported container formats:
-    /// - 'ts'
-    /// - 'fmp4'- the corresponding file extension is `".m4s"`
-    /// - 'mp4'
-    /// - 'vtt'
+    ///
+    /// - `ts`
+    /// - `fmp4`- the corresponding file extension is `.m4s`
+    /// - `mp4`
+    /// - `vtt`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Container {
@@ -3063,27 +3048,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int SegmentSettingsFieldNumber = 5;
     private global::Google.Cloud.Video.Transcoder.V1.SegmentSettings segmentSettings_;
     /// <summary>
-    /// Segment settings for `"ts"`, `"fmp4"` and `"vtt"`.
+    /// Segment settings for `ts`, `fmp4` and `vtt`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Video.Transcoder.V1.SegmentSettings SegmentSettings {
       get { return segmentSettings_; }
       set {
         segmentSettings_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "encryption" field.</summary>
-    public const int EncryptionFieldNumber = 6;
-    private global::Google.Cloud.Video.Transcoder.V1.Encryption encryption_;
-    /// <summary>
-    /// Encryption settings.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Video.Transcoder.V1.Encryption Encryption {
-      get { return encryption_; }
-      set {
-        encryption_ = value;
       }
     }
 
@@ -3105,7 +3076,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (Container != other.Container) return false;
       if(!elementaryStreams_.Equals(other.elementaryStreams_)) return false;
       if (!object.Equals(SegmentSettings, other.SegmentSettings)) return false;
-      if (!object.Equals(Encryption, other.Encryption)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3117,7 +3087,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       if (Container.Length != 0) hash ^= Container.GetHashCode();
       hash ^= elementaryStreams_.GetHashCode();
       if (segmentSettings_ != null) hash ^= SegmentSettings.GetHashCode();
-      if (encryption_ != null) hash ^= Encryption.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3151,10 +3120,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SegmentSettings);
       }
-      if (encryption_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Encryption);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3181,10 +3146,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(SegmentSettings);
       }
-      if (encryption_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(Encryption);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3206,9 +3167,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       size += elementaryStreams_.CalculateSize(_repeated_elementaryStreams_codec);
       if (segmentSettings_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SegmentSettings);
-      }
-      if (encryption_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Encryption);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3236,12 +3194,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
           SegmentSettings = new global::Google.Cloud.Video.Transcoder.V1.SegmentSettings();
         }
         SegmentSettings.MergeFrom(other.SegmentSettings);
-      }
-      if (other.encryption_ != null) {
-        if (encryption_ == null) {
-          Encryption = new global::Google.Cloud.Video.Transcoder.V1.Encryption();
-        }
-        Encryption.MergeFrom(other.Encryption);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3280,13 +3232,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
             input.ReadMessage(SegmentSettings);
             break;
           }
-          case 50: {
-            if (encryption_ == null) {
-              Encryption = new global::Google.Cloud.Video.Transcoder.V1.Encryption();
-            }
-            input.ReadMessage(Encryption);
-            break;
-          }
         }
       }
     #endif
@@ -3322,13 +3267,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
               SegmentSettings = new global::Google.Cloud.Video.Transcoder.V1.SegmentSettings();
             }
             input.ReadMessage(SegmentSettings);
-            break;
-          }
-          case 50: {
-            if (encryption_ == null) {
-              Encryption = new global::Google.Cloud.Video.Transcoder.V1.Encryption();
-            }
-            input.ReadMessage(Encryption);
             break;
           }
         }
@@ -3385,7 +3323,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int FileNameFieldNumber = 1;
     private string fileName_ = "";
     /// <summary>
-    /// The name of the generated file. The default is `"manifest"` with the
+    /// The name of the generated file. The default is `manifest` with the
     /// extension suffix corresponding to the `Manifest.type`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3400,7 +3338,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int TypeFieldNumber = 2;
     private global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.ManifestType type_ = global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.ManifestType.Unspecified;
     /// <summary>
-    /// Required. Type of the manifest, can be "HLS" or "DASH".
+    /// Required. Type of the manifest, can be `HLS` or `DASH`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.ManifestType Type {
@@ -3591,7 +3529,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      /// The manifest type can be either `"HLS"` or `"DASH"`.
+      /// The manifest type can be either `HLS` or `DASH`.
       /// </summary>
       public enum ManifestType {
         /// <summary>
@@ -3599,11 +3537,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// </summary>
         [pbr::OriginalName("MANIFEST_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Create `"HLS"` manifest. The corresponding file extension is `".m3u8"`.
+        /// Create `HLS` manifest. The corresponding file extension is `.m3u8`.
         /// </summary>
         [pbr::OriginalName("HLS")] Hls = 1,
         /// <summary>
-        /// Create `"DASH"` manifest. The corresponding file extension is `".mpd"`.
+        /// Create `DASH` manifest. The corresponding file extension is `.mpd`.
         /// </summary>
         [pbr::OriginalName("DASH")] Dash = 2,
       }
@@ -3854,10 +3792,11 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int FormatFieldNumber = 1;
     private string format_ = "";
     /// <summary>
-    /// Format type. The default is `"jpeg"`.
+    /// Format type. The default is `jpeg`.
     ///
     /// Supported formats:
-    /// - 'jpeg'
+    ///
+    /// - `jpeg`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Format {
@@ -3874,7 +3813,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Required. File name prefix for the generated sprite sheets.
     ///
     /// Each sprite sheet has an incremental 10-digit zero-padded suffix starting
-    /// from 0 before the extension, such as `"sprite_sheet0000000123.jpeg"`.
+    /// from 0 before the extension, such as `sprite_sheet0000000123.jpeg`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FilePrefix {
@@ -7010,11 +6949,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int TuneFieldNumber = 2;
         private string tune_ = "";
         /// <summary>
-        /// Set the denoiser mode. The default is `"standard"`.
+        /// Set the denoiser mode. The default is `standard`.
         ///
         /// Supported denoiser modes:
-        /// - 'standard'
-        /// - 'grain'
+        ///
+        /// - `standard`
+        /// - `grain`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Tune {
@@ -8707,8 +8647,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int BitrateBpsFieldNumber = 4;
         private int bitrateBps_;
         /// <summary>
-        /// Required. The video bitrate in bits per second. Must be between 1 and
-        /// 1,000,000,000.
+        /// Required. The video bitrate in bits per second. The minimum value is 1,000.
+        /// The maximum value is 800,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int BitrateBps {
@@ -8722,18 +8662,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int PixelFormatFieldNumber = 5;
         private string pixelFormat_ = "";
         /// <summary>
-        /// Pixel format to use. The default is `"yuv420p"`.
+        /// Pixel format to use. The default is `yuv420p`.
         ///
         /// Supported pixel formats:
-        /// - 'yuv420p' pixel format.
-        /// - 'yuv422p' pixel format.
-        /// - 'yuv444p' pixel format.
-        /// - 'yuv420p10' 10-bit HDR pixel format.
-        /// - 'yuv422p10' 10-bit HDR pixel format.
-        /// - 'yuv444p10' 10-bit HDR pixel format.
-        /// - 'yuv420p12' 12-bit HDR pixel format.
-        /// - 'yuv422p12' 12-bit HDR pixel format.
-        /// - 'yuv444p12' 12-bit HDR pixel format.
+        ///
+        /// - `yuv420p` pixel format
+        /// - `yuv422p` pixel format
+        /// - `yuv444p` pixel format
+        /// - `yuv420p10` 10-bit HDR pixel format
+        /// - `yuv422p10` 10-bit HDR pixel format
+        /// - `yuv444p10` 10-bit HDR pixel format
+        /// - `yuv420p12` 12-bit HDR pixel format
+        /// - `yuv422p12` 12-bit HDR pixel format
+        /// - `yuv444p12` 12-bit HDR pixel format
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string PixelFormat {
@@ -8747,11 +8688,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int RateControlModeFieldNumber = 6;
         private string rateControlMode_ = "";
         /// <summary>
-        /// Specify the `rate_control_mode`. The default is `"vbr"`.
+        /// Specify the `rate_control_mode`. The default is `vbr`.
         ///
         /// Supported rate control modes:
-        /// - 'vbr' - variable bitrate
-        /// - 'crf' - constant rate factor
+        ///
+        /// - `vbr` - variable bitrate
+        /// - `crf` - constant rate factor
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string RateControlMode {
@@ -8810,7 +8752,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int GopDurationFieldNumber = 10;
         /// <summary>
         /// Select the GOP size based on the specified duration. The default is
-        /// `"3s"`. Note that `gopDuration` must be less than or equal to
+        /// `3s`. Note that `gopDuration` must be less than or equal to
         /// [`segmentDuration`](#SegmentSettings), and
         /// [`segmentDuration`](#SegmentSettings) must be divisible by
         /// `gopDuration`.
@@ -8829,7 +8771,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private bool enableTwoPass_;
         /// <summary>
         /// Use two-pass encoding strategy to achieve better video quality.
-        /// `VideoStream.rate_control_mode` must be `"vbr"`. The default is `false`.
+        /// `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool EnableTwoPass {
@@ -8874,11 +8816,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int EntropyCoderFieldNumber = 14;
         private string entropyCoder_ = "";
         /// <summary>
-        /// The entropy coder to use. The default is `"cabac"`.
+        /// The entropy coder to use. The default is `cabac`.
         ///
         /// Supported entropy coders:
-        /// - 'cavlc'
-        /// - 'cabac'
+        ///
+        /// - `cavlc`
+        /// - `cabac`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string EntropyCoder {
@@ -8947,8 +8890,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// *   `high` (default)
         ///
         /// The available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Profile){:
-        /// class="external" }. Note that certain values for this field may cause the
+        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune).
+        /// Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H264CodecSettings`
         /// message.
         /// </summary>
@@ -8965,8 +8908,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private string tune_ = "";
         /// <summary>
         /// Enforces the specified codec tune. The available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune){:
-        /// class="external" }. Note that certain values for this field may cause the
+        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Tune).
+        /// Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H264CodecSettings`
         /// message.
         /// </summary>
@@ -8984,8 +8927,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// <summary>
         /// Enforces the specified codec preset. The default is `veryfast`. The
         /// available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset){:
-        /// class="external" }. Note that certain values for this field may cause the
+        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset).
+        /// Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H264CodecSettings`
         /// message.
         /// </summary>
@@ -9735,8 +9678,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int BitrateBpsFieldNumber = 4;
         private int bitrateBps_;
         /// <summary>
-        /// Required. The video bitrate in bits per second. Must be between 1 and
-        /// 1,000,000,000.
+        /// Required. The video bitrate in bits per second. The minimum value is 1,000.
+        /// The maximum value is 800,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int BitrateBps {
@@ -9750,18 +9693,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int PixelFormatFieldNumber = 5;
         private string pixelFormat_ = "";
         /// <summary>
-        /// Pixel format to use. The default is `"yuv420p"`.
+        /// Pixel format to use. The default is `yuv420p`.
         ///
         /// Supported pixel formats:
-        /// - 'yuv420p' pixel format.
-        /// - 'yuv422p' pixel format.
-        /// - 'yuv444p' pixel format.
-        /// - 'yuv420p10' 10-bit HDR pixel format.
-        /// - 'yuv422p10' 10-bit HDR pixel format.
-        /// - 'yuv444p10' 10-bit HDR pixel format.
-        /// - 'yuv420p12' 12-bit HDR pixel format.
-        /// - 'yuv422p12' 12-bit HDR pixel format.
-        /// - 'yuv444p12' 12-bit HDR pixel format.
+        ///
+        /// - `yuv420p` pixel format
+        /// - `yuv422p` pixel format
+        /// - `yuv444p` pixel format
+        /// - `yuv420p10` 10-bit HDR pixel format
+        /// - `yuv422p10` 10-bit HDR pixel format
+        /// - `yuv444p10` 10-bit HDR pixel format
+        /// - `yuv420p12` 12-bit HDR pixel format
+        /// - `yuv422p12` 12-bit HDR pixel format
+        /// - `yuv444p12` 12-bit HDR pixel format
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string PixelFormat {
@@ -9775,11 +9719,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int RateControlModeFieldNumber = 6;
         private string rateControlMode_ = "";
         /// <summary>
-        /// Specify the `rate_control_mode`. The default is `"vbr"`.
+        /// Specify the `rate_control_mode`. The default is `vbr`.
         ///
         /// Supported rate control modes:
-        /// - 'vbr' - variable bitrate
-        /// - 'crf' - constant rate factor
+        ///
+        /// - `vbr` - variable bitrate
+        /// - `crf` - constant rate factor
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string RateControlMode {
@@ -9838,7 +9783,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int GopDurationFieldNumber = 10;
         /// <summary>
         /// Select the GOP size based on the specified duration. The default is
-        /// `"3s"`. Note that `gopDuration` must be less than or equal to
+        /// `3s`. Note that `gopDuration` must be less than or equal to
         /// [`segmentDuration`](#SegmentSettings), and
         /// [`segmentDuration`](#SegmentSettings) must be divisible by
         /// `gopDuration`.
@@ -9857,7 +9802,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private bool enableTwoPass_;
         /// <summary>
         /// Use two-pass encoding strategy to achieve better video quality.
-        /// `VideoStream.rate_control_mode` must be `"vbr"`. The default is `false`.
+        /// `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool EnableTwoPass {
@@ -9952,30 +9897,28 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Enforces the specified codec profile. The following profiles are
         /// supported:
         ///
-        /// 8bit profiles
-        /// *   `main` (default)
-        /// *   `main-intra`
-        /// *   `mainstillpicture`
-        ///
-        /// 10bit profiles
-        /// *   `main10` (default)
-        /// *   `main10-intra`
-        /// *   `main422-10`
-        /// *   `main422-10-intra`
-        /// *   `main444-10`
-        /// *   `main444-10-intra`
-        ///
-        /// 12bit profiles
-        /// *   `main12` (default)
-        /// *   `main12-intra`
-        /// *   `main422-12`
-        /// *   `main422-12-intra`
-        /// *   `main444-12`
-        /// *   `main444-12-intra`
+        /// *   8-bit profiles
+        ///     *   `main` (default)
+        ///     *   `main-intra`
+        ///     *   `mainstillpicture`
+        /// *   10-bit profiles
+        ///     *   `main10` (default)
+        ///     *   `main10-intra`
+        ///     *   `main422-10`
+        ///     *   `main422-10-intra`
+        ///     *   `main444-10`
+        ///     *   `main444-10-intra`
+        /// *   12-bit profiles
+        ///     *   `main12` (default)
+        ///     *   `main12-intra`
+        ///     *   `main422-12`
+        ///     *   `main422-12-intra`
+        ///     *   `main444-12`
+        ///     *   `main444-12-intra`
         ///
         /// The available options are
-        /// [FFmpeg-compatible](https://x265.readthedocs.io/){:
-        /// class="external" }. Note that certain values for this field may cause the
+        /// [FFmpeg-compatible](https://x265.readthedocs.io/).
+        /// Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H265CodecSettings`
         /// message.
         /// </summary>
@@ -9992,8 +9935,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private string tune_ = "";
         /// <summary>
         /// Enforces the specified codec tune. The available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.265){:
-        /// class="external" }. Note that certain values for this field may cause the
+        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.265).
+        /// Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H265CodecSettings`
         /// message.
         /// </summary>
@@ -10011,8 +9954,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// <summary>
         /// Enforces the specified codec preset. The default is `veryfast`. The
         /// available options are
-        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.265){:
-        /// class="external" }. Note that certain values for this field may cause the
+        /// [FFmpeg-compatible](https://trac.ffmpeg.org/wiki/Encode/H.265).
+        /// Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `H265CodecSettings`
         /// message.
         /// </summary>
@@ -10729,8 +10672,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int BitrateBpsFieldNumber = 4;
         private int bitrateBps_;
         /// <summary>
-        /// Required. The video bitrate in bits per second. Must be between 1 and
-        /// 1,000,000,000.
+        /// Required. The video bitrate in bits per second. The minimum value is 1,000.
+        /// The maximum value is 480,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int BitrateBps {
@@ -10744,18 +10687,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int PixelFormatFieldNumber = 5;
         private string pixelFormat_ = "";
         /// <summary>
-        /// Pixel format to use. The default is `"yuv420p"`.
+        /// Pixel format to use. The default is `yuv420p`.
         ///
         /// Supported pixel formats:
-        /// - 'yuv420p' pixel format.
-        /// - 'yuv422p' pixel format.
-        /// - 'yuv444p' pixel format.
-        /// - 'yuv420p10' 10-bit HDR pixel format.
-        /// - 'yuv422p10' 10-bit HDR pixel format.
-        /// - 'yuv444p10' 10-bit HDR pixel format.
-        /// - 'yuv420p12' 12-bit HDR pixel format.
-        /// - 'yuv422p12' 12-bit HDR pixel format.
-        /// - 'yuv444p12' 12-bit HDR pixel format.
+        ///
+        /// - `yuv420p` pixel format
+        /// - `yuv422p` pixel format
+        /// - `yuv444p` pixel format
+        /// - `yuv420p10` 10-bit HDR pixel format
+        /// - `yuv422p10` 10-bit HDR pixel format
+        /// - `yuv444p10` 10-bit HDR pixel format
+        /// - `yuv420p12` 12-bit HDR pixel format
+        /// - `yuv422p12` 12-bit HDR pixel format
+        /// - `yuv444p12` 12-bit HDR pixel format
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string PixelFormat {
@@ -10769,11 +10713,12 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int RateControlModeFieldNumber = 6;
         private string rateControlMode_ = "";
         /// <summary>
-        /// Specify the `rate_control_mode`. The default is `"vbr"`.
+        /// Specify the `rate_control_mode`. The default is `vbr`.
         ///
         /// Supported rate control modes:
-        /// - 'vbr' - variable bitrate
-        /// - 'crf' - constant rate factor
+        ///
+        /// - `vbr` - variable bitrate
+        /// - `crf` - constant rate factor
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string RateControlMode {
@@ -10817,7 +10762,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         public const int GopDurationFieldNumber = 9;
         /// <summary>
         /// Select the GOP size based on the specified duration. The default is
-        /// `"3s"`. Note that `gopDuration` must be less than or equal to
+        /// `3s`. Note that `gopDuration` must be less than or equal to
         /// [`segmentDuration`](#SegmentSettings), and
         /// [`segmentDuration`](#SegmentSettings) must be divisible by
         /// `gopDuration`.
@@ -10844,8 +10789,8 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// *   `profile3`
         ///
         /// The available options are
-        /// [WebM-compatible](https://www.webmproject.org/vp9/profiles/){:
-        /// class="external" }. Note that certain values for this field may cause the
+        /// [WebM-compatible](https://www.webmproject.org/vp9/profiles/).
+        /// Note that certain values for this field may cause the
         /// transcoder to override other fields you set in the `Vp9CodecSettings`
         /// message.
         /// </summary>
@@ -11288,15 +11233,16 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int CodecFieldNumber = 1;
     private string codec_ = "";
     /// <summary>
-    /// The codec for this audio stream. The default is `"aac"`.
+    /// The codec for this audio stream. The default is `aac`.
     ///
     /// Supported audio codecs:
-    /// - 'aac'
-    /// - 'aac-he'
-    /// - 'aac-he-v2'
-    /// - 'mp3'
-    /// - 'ac3'
-    /// - 'eac3'
+    ///
+    /// - `aac`
+    /// - `aac-he`
+    /// - `aac-he-v2`
+    /// - `mp3`
+    /// - `ac3`
+    /// - `eac3`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Codec {
@@ -11345,12 +11291,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// supported by the specified format. The default is `["fl", "fr"]`.
     ///
     /// Supported channel names:
-    /// - 'fl' - Front left channel
-    /// - 'fr' - Front right channel
-    /// - 'sl' - Side left channel
-    /// - 'sr' - Side right channel
-    /// - 'fc' - Front center channel
-    /// - 'lfe' - Low frequency
+    ///
+    /// - `fl` - Front left channel
+    /// - `fr` - Front right channel
+    /// - `sl` - Side left channel
+    /// - `sr` - Side right channel
+    /// - `fc` - Front center channel
+    /// - `lfe` - Low frequency
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ChannelLayout {
@@ -12035,14 +11982,15 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int CodecFieldNumber = 1;
     private string codec_ = "";
     /// <summary>
-    /// The codec for this text stream. The default is `"webvtt"`.
+    /// The codec for this text stream. The default is `webvtt`.
     ///
     /// Supported text codecs:
-    /// - 'srt'
-    /// - 'ttml'
-    /// - 'cea608'
-    /// - 'cea708'
-    /// - 'webvtt'
+    ///
+    /// - `srt`
+    /// - `ttml`
+    /// - `cea608`
+    /// - `cea708`
+    /// - `webvtt`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Codec {
@@ -12467,7 +12415,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
   }
 
   /// <summary>
-  /// Segment settings for `"ts"`, `"fmp4"` and `"vtt"`.
+  /// Segment settings for `ts`, `fmp4` and `vtt`.
   /// </summary>
   public sealed partial class SegmentSettings : pb::IMessage<SegmentSettings>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12512,7 +12460,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     public const int SegmentDurationFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration segmentDuration_;
     /// <summary>
-    /// Duration of the segments in seconds. The default is `"6.0s"`. Note that
+    /// Duration of the segments in seconds. The default is `6.0s`. Note that
     /// `segmentDuration` must be greater than or equal to
     /// [`gopDuration`](#videostream), and `segmentDuration` must be divisible by
     /// [`gopDuration`](#videostream).
@@ -12692,1001 +12640,6 @@ namespace Google.Cloud.Video.Transcoder.V1 {
       }
     }
     #endif
-
-  }
-
-  /// <summary>
-  /// Encryption settings.
-  /// </summary>
-  public sealed partial class Encryption : pb::IMessage<Encryption>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Encryption> _parser = new pb::MessageParser<Encryption>(() => new Encryption());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Encryption> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[18]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Encryption() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Encryption(Encryption other) : this() {
-      key_ = other.key_;
-      iv_ = other.iv_;
-      switch (other.EncryptionModeCase) {
-        case EncryptionModeOneofCase.Aes128:
-          Aes128 = other.Aes128.Clone();
-          break;
-        case EncryptionModeOneofCase.SampleAes:
-          SampleAes = other.SampleAes.Clone();
-          break;
-        case EncryptionModeOneofCase.MpegCenc:
-          MpegCenc = other.MpegCenc.Clone();
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Encryption Clone() {
-      return new Encryption(this);
-    }
-
-    /// <summary>Field number for the "key" field.</summary>
-    public const int KeyFieldNumber = 1;
-    private string key_ = "";
-    /// <summary>
-    /// Required. 128 bit encryption key represented as lowercase hexadecimal digits.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Key {
-      get { return key_; }
-      set {
-        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "iv" field.</summary>
-    public const int IvFieldNumber = 2;
-    private string iv_ = "";
-    /// <summary>
-    /// Required. 128 bit Initialization Vector (IV) represented as lowercase hexadecimal
-    /// digits.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Iv {
-      get { return iv_; }
-      set {
-        iv_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "aes_128" field.</summary>
-    public const int Aes128FieldNumber = 3;
-    /// <summary>
-    /// Configuration for AES-128 encryption.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption Aes128 {
-      get { return encryptionModeCase_ == EncryptionModeOneofCase.Aes128 ? (global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption) encryptionMode_ : null; }
-      set {
-        encryptionMode_ = value;
-        encryptionModeCase_ = value == null ? EncryptionModeOneofCase.None : EncryptionModeOneofCase.Aes128;
-      }
-    }
-
-    /// <summary>Field number for the "sample_aes" field.</summary>
-    public const int SampleAesFieldNumber = 4;
-    /// <summary>
-    /// Configuration for SAMPLE-AES encryption.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption SampleAes {
-      get { return encryptionModeCase_ == EncryptionModeOneofCase.SampleAes ? (global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption) encryptionMode_ : null; }
-      set {
-        encryptionMode_ = value;
-        encryptionModeCase_ = value == null ? EncryptionModeOneofCase.None : EncryptionModeOneofCase.SampleAes;
-      }
-    }
-
-    /// <summary>Field number for the "mpeg_cenc" field.</summary>
-    public const int MpegCencFieldNumber = 5;
-    /// <summary>
-    /// Configuration for MPEG Common Encryption (MPEG-CENC).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption MpegCenc {
-      get { return encryptionModeCase_ == EncryptionModeOneofCase.MpegCenc ? (global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption) encryptionMode_ : null; }
-      set {
-        encryptionMode_ = value;
-        encryptionModeCase_ = value == null ? EncryptionModeOneofCase.None : EncryptionModeOneofCase.MpegCenc;
-      }
-    }
-
-    private object encryptionMode_;
-    /// <summary>Enum of possible cases for the "encryption_mode" oneof.</summary>
-    public enum EncryptionModeOneofCase {
-      None = 0,
-      Aes128 = 3,
-      SampleAes = 4,
-      MpegCenc = 5,
-    }
-    private EncryptionModeOneofCase encryptionModeCase_ = EncryptionModeOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public EncryptionModeOneofCase EncryptionModeCase {
-      get { return encryptionModeCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearEncryptionMode() {
-      encryptionModeCase_ = EncryptionModeOneofCase.None;
-      encryptionMode_ = null;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Encryption);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Encryption other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Key != other.Key) return false;
-      if (Iv != other.Iv) return false;
-      if (!object.Equals(Aes128, other.Aes128)) return false;
-      if (!object.Equals(SampleAes, other.SampleAes)) return false;
-      if (!object.Equals(MpegCenc, other.MpegCenc)) return false;
-      if (EncryptionModeCase != other.EncryptionModeCase) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Key.Length != 0) hash ^= Key.GetHashCode();
-      if (Iv.Length != 0) hash ^= Iv.GetHashCode();
-      if (encryptionModeCase_ == EncryptionModeOneofCase.Aes128) hash ^= Aes128.GetHashCode();
-      if (encryptionModeCase_ == EncryptionModeOneofCase.SampleAes) hash ^= SampleAes.GetHashCode();
-      if (encryptionModeCase_ == EncryptionModeOneofCase.MpegCenc) hash ^= MpegCenc.GetHashCode();
-      hash ^= (int) encryptionModeCase_;
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Key.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Key);
-      }
-      if (Iv.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Iv);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.Aes128) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Aes128);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.SampleAes) {
-        output.WriteRawTag(34);
-        output.WriteMessage(SampleAes);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.MpegCenc) {
-        output.WriteRawTag(42);
-        output.WriteMessage(MpegCenc);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Key.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Key);
-      }
-      if (Iv.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Iv);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.Aes128) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Aes128);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.SampleAes) {
-        output.WriteRawTag(34);
-        output.WriteMessage(SampleAes);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.MpegCenc) {
-        output.WriteRawTag(42);
-        output.WriteMessage(MpegCenc);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Key.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
-      }
-      if (Iv.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Iv);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.Aes128) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Aes128);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.SampleAes) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleAes);
-      }
-      if (encryptionModeCase_ == EncryptionModeOneofCase.MpegCenc) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MpegCenc);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Encryption other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Key.Length != 0) {
-        Key = other.Key;
-      }
-      if (other.Iv.Length != 0) {
-        Iv = other.Iv;
-      }
-      switch (other.EncryptionModeCase) {
-        case EncryptionModeOneofCase.Aes128:
-          if (Aes128 == null) {
-            Aes128 = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption();
-          }
-          Aes128.MergeFrom(other.Aes128);
-          break;
-        case EncryptionModeOneofCase.SampleAes:
-          if (SampleAes == null) {
-            SampleAes = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption();
-          }
-          SampleAes.MergeFrom(other.SampleAes);
-          break;
-        case EncryptionModeOneofCase.MpegCenc:
-          if (MpegCenc == null) {
-            MpegCenc = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption();
-          }
-          MpegCenc.MergeFrom(other.MpegCenc);
-          break;
-      }
-
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Key = input.ReadString();
-            break;
-          }
-          case 18: {
-            Iv = input.ReadString();
-            break;
-          }
-          case 26: {
-            global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption subBuilder = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption();
-            if (encryptionModeCase_ == EncryptionModeOneofCase.Aes128) {
-              subBuilder.MergeFrom(Aes128);
-            }
-            input.ReadMessage(subBuilder);
-            Aes128 = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption subBuilder = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption();
-            if (encryptionModeCase_ == EncryptionModeOneofCase.SampleAes) {
-              subBuilder.MergeFrom(SampleAes);
-            }
-            input.ReadMessage(subBuilder);
-            SampleAes = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption subBuilder = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption();
-            if (encryptionModeCase_ == EncryptionModeOneofCase.MpegCenc) {
-              subBuilder.MergeFrom(MpegCenc);
-            }
-            input.ReadMessage(subBuilder);
-            MpegCenc = subBuilder;
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Key = input.ReadString();
-            break;
-          }
-          case 18: {
-            Iv = input.ReadString();
-            break;
-          }
-          case 26: {
-            global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption subBuilder = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.Aes128Encryption();
-            if (encryptionModeCase_ == EncryptionModeOneofCase.Aes128) {
-              subBuilder.MergeFrom(Aes128);
-            }
-            input.ReadMessage(subBuilder);
-            Aes128 = subBuilder;
-            break;
-          }
-          case 34: {
-            global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption subBuilder = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.SampleAesEncryption();
-            if (encryptionModeCase_ == EncryptionModeOneofCase.SampleAes) {
-              subBuilder.MergeFrom(SampleAes);
-            }
-            input.ReadMessage(subBuilder);
-            SampleAes = subBuilder;
-            break;
-          }
-          case 42: {
-            global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption subBuilder = new global::Google.Cloud.Video.Transcoder.V1.Encryption.Types.MpegCommonEncryption();
-            if (encryptionModeCase_ == EncryptionModeOneofCase.MpegCenc) {
-              subBuilder.MergeFrom(MpegCenc);
-            }
-            input.ReadMessage(subBuilder);
-            MpegCenc = subBuilder;
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the Encryption message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      /// <summary>
-      /// Configuration for AES-128 encryption.
-      /// </summary>
-      public sealed partial class Aes128Encryption : pb::IMessage<Aes128Encryption>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<Aes128Encryption> _parser = new pb::MessageParser<Aes128Encryption>(() => new Aes128Encryption());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Aes128Encryption> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.Transcoder.V1.Encryption.Descriptor.NestedTypes[0]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Aes128Encryption() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Aes128Encryption(Aes128Encryption other) : this() {
-          keyUri_ = other.keyUri_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Aes128Encryption Clone() {
-          return new Aes128Encryption(this);
-        }
-
-        /// <summary>Field number for the "key_uri" field.</summary>
-        public const int KeyUriFieldNumber = 1;
-        private string keyUri_ = "";
-        /// <summary>
-        /// Required. URI of the key delivery service. This URI is inserted into the M3U8
-        /// header.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string KeyUri {
-          get { return keyUri_; }
-          set {
-            keyUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as Aes128Encryption);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Aes128Encryption other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (KeyUri != other.KeyUri) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (KeyUri.Length != 0) hash ^= KeyUri.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          if (KeyUri.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(KeyUri);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (KeyUri.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(KeyUri);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (KeyUri.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyUri);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Aes128Encryption other) {
-          if (other == null) {
-            return;
-          }
-          if (other.KeyUri.Length != 0) {
-            KeyUri = other.KeyUri;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                KeyUri = input.ReadString();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                KeyUri = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
-      /// Configuration for SAMPLE-AES encryption.
-      /// </summary>
-      public sealed partial class SampleAesEncryption : pb::IMessage<SampleAesEncryption>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<SampleAesEncryption> _parser = new pb::MessageParser<SampleAesEncryption>(() => new SampleAesEncryption());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<SampleAesEncryption> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.Transcoder.V1.Encryption.Descriptor.NestedTypes[1]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public SampleAesEncryption() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public SampleAesEncryption(SampleAesEncryption other) : this() {
-          keyUri_ = other.keyUri_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public SampleAesEncryption Clone() {
-          return new SampleAesEncryption(this);
-        }
-
-        /// <summary>Field number for the "key_uri" field.</summary>
-        public const int KeyUriFieldNumber = 1;
-        private string keyUri_ = "";
-        /// <summary>
-        /// Required. URI of the key delivery service. This URI is inserted into the M3U8
-        /// header.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string KeyUri {
-          get { return keyUri_; }
-          set {
-            keyUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as SampleAesEncryption);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(SampleAesEncryption other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (KeyUri != other.KeyUri) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (KeyUri.Length != 0) hash ^= KeyUri.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          if (KeyUri.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(KeyUri);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (KeyUri.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(KeyUri);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (KeyUri.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyUri);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(SampleAesEncryption other) {
-          if (other == null) {
-            return;
-          }
-          if (other.KeyUri.Length != 0) {
-            KeyUri = other.KeyUri;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                KeyUri = input.ReadString();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                KeyUri = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-      /// <summary>
-      /// Configuration for MPEG Common Encryption (MPEG-CENC).
-      /// </summary>
-      public sealed partial class MpegCommonEncryption : pb::IMessage<MpegCommonEncryption>
-      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          , pb::IBufferMessage
-      #endif
-      {
-        private static readonly pb::MessageParser<MpegCommonEncryption> _parser = new pb::MessageParser<MpegCommonEncryption>(() => new MpegCommonEncryption());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<MpegCommonEncryption> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Video.Transcoder.V1.Encryption.Descriptor.NestedTypes[2]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public MpegCommonEncryption() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public MpegCommonEncryption(MpegCommonEncryption other) : this() {
-          keyId_ = other.keyId_;
-          scheme_ = other.scheme_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public MpegCommonEncryption Clone() {
-          return new MpegCommonEncryption(this);
-        }
-
-        /// <summary>Field number for the "key_id" field.</summary>
-        public const int KeyIdFieldNumber = 1;
-        private string keyId_ = "";
-        /// <summary>
-        /// Required. 128 bit Key ID represented as lowercase hexadecimal digits for use with
-        /// common encryption.
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string KeyId {
-          get { return keyId_; }
-          set {
-            keyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "scheme" field.</summary>
-        public const int SchemeFieldNumber = 2;
-        private string scheme_ = "";
-        /// <summary>
-        /// Required. Specify the encryption scheme.
-        ///
-        /// Supported encryption schemes:
-        /// - 'cenc'
-        /// - 'cbcs'
-        /// </summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Scheme {
-          get { return scheme_; }
-          set {
-            scheme_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as MpegCommonEncryption);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(MpegCommonEncryption other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (KeyId != other.KeyId) return false;
-          if (Scheme != other.Scheme) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (KeyId.Length != 0) hash ^= KeyId.GetHashCode();
-          if (Scheme.Length != 0) hash ^= Scheme.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          output.WriteRawMessage(this);
-        #else
-          if (KeyId.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(KeyId);
-          }
-          if (Scheme.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(Scheme);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (KeyId.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(KeyId);
-          }
-          if (Scheme.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(Scheme);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(ref output);
-          }
-        }
-        #endif
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (KeyId.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyId);
-          }
-          if (Scheme.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Scheme);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(MpegCommonEncryption other) {
-          if (other == null) {
-            return;
-          }
-          if (other.KeyId.Length != 0) {
-            KeyId = other.KeyId;
-          }
-          if (other.Scheme.Length != 0) {
-            Scheme = other.Scheme;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-          input.ReadRawMessage(this);
-        #else
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                KeyId = input.ReadString();
-                break;
-              }
-              case 18: {
-                Scheme = input.ReadString();
-                break;
-              }
-            }
-          }
-        #endif
-        }
-
-        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-                break;
-              case 10: {
-                KeyId = input.ReadString();
-                break;
-              }
-              case 18: {
-                Scheme = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-        #endif
-
-      }
-
-    }
-    #endregion
 
   }
 
