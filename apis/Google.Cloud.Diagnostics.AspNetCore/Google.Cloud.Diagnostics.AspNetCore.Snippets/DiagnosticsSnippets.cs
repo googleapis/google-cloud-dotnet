@@ -15,7 +15,6 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
-using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using System;
@@ -106,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Traces_Block()
         {
-            var uri = $"/TraceSamples/{nameof(TraceSamplesController.TraceHelloWorld)}/{_testId}";
+            var uri = $"/TraceSamplesConstructor/{nameof(TraceSamplesConstructorController.TraceHelloWorld)}/{_testId}";
             var response = await _client.GetAsync(uri);
 
             var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);

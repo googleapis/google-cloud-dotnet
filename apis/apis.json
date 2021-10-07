@@ -912,8 +912,7 @@
       },
       "testDependencies": {
         "Google.Cloud.ErrorReporting.V1Beta1": "2.0.0-beta04"
-      },
-      "noVersionHistory": true
+      }
     },
     {
       "id": "Google.Cloud.Dialogflow.Cx.V3",
