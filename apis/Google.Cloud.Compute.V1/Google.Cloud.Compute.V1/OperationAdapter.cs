@@ -135,6 +135,11 @@ namespace Google.Cloud.Compute.V1
         internal static Method<GetGlobalOperationRequest, Operation> GetMethod => __Method_Get;
     }
 
+    partial class RegionOperations
+    {
+        internal static Method<GetRegionOperationRequest, Operation> GetMethod => __Method_Get;
+    }
+
     partial class GlobalOrganizationOperations
     {
         internal static Method<GetGlobalOrganizationOperationRequest, Operation> GetMethod => __Method_Get;

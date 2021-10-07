@@ -16,25 +16,15 @@ using lro = Google.LongRunning;
 
 namespace Google.Cloud.Compute.V1
 {
-    public static partial class Addresses
+    partial class Addresses
     {
-        public partial class AddressesClient
+        partial class AddressesClient
         {
             /// <summary>
-            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// Creates an OperationsClient that delegates to RegionOperationsClient.
             /// </summary>
-            /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient()
-            {
-                var newCallInvoker = ForwardingCallInvoker<lro::GetOperationRequest>.Create(
-                    CallInvoker,
-                    "/google.longrunning.Operations/GetOperation", // Hard-coded in the generator?
-                    RegionOperations.GetMethod,
-                    GetRegionOperationRequest.ParseLroRequest,
-                    (request, response) => response.ToLroResponse(request.Name));
-                return new lro::Operations.OperationsClient(newCallInvoker);
-            }
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 

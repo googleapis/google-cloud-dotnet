@@ -20,7 +20,24 @@ namespace Google.Cloud.Compute.V1
 {
     partial class RegionOperations
     {
-        internal static Method<GetRegionOperationRequest, Operation> GetMethod => __Method_Get;
+        partial class RegionOperationsClient
+        {
+            /// <summary>
+            /// Creates a Google.LongRunning.OperationsClient using the specified CallInvoker, but
+            /// redirecting Google.LongRunning RPCs to RegionOperations RPCs. (Currently just Get, but
+            /// could be others in the future.)
+            /// </summary>
+            internal static lro::Operations.OperationsClient CreateOperationsClient(CallInvoker callInvoker)
+            {
+                var newCallInvoker = ForwardingCallInvoker<lro::GetOperationRequest>.Create(
+                    callInvoker,
+                    "/google.longrunning.Operations/GetOperation", // Hard-coded in the generator?
+                    __Method_Get,
+                    GetRegionOperationRequest.ParseLroRequest,
+                    (request, response) => response.ToLroResponse(request.Name));
+                return new lro::Operations.OperationsClient(newCallInvoker);
+            }
+        }
     }
 
     partial class GetRegionOperationRequest
