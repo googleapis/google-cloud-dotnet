@@ -17,19 +17,19 @@ for the permissions needed for Logging and Error Reporting.
 See [API Permissions for PatchTraces](https://cloud.google.com/trace/docs/iam#api_permissions)
 for the permissions needed for Tracing.
 
-# Note
-The Google.Cloud.Diagnostics.AspNetCore package attempts to collect the filename and line number when
-entries are collected. However, to be able to collect this information PDBs must be included with
-the deployed code.
+> **Note**  
+> The Google.Cloud.Diagnostics.AspNetCore package attempts to collect the filename and line number when
+> entries are collected. However, to be able to collect this information PDBs must be included with
+> the deployed code.
 
-# Note
-When running on environments that limit or disable CPU usage for background activities, for instance
-[Google Cloud Run](https://cloud.google.com/run/docs/tips/general#avoiding_background_activities), take care
-not to use the timed buffer options for any of Logging, Tracing or Error Reporting. Take into account
-that the timed buffer is used for all of these components by default so you will need to explicitly
-configure the buffers by using the `Google.Cloud.Diagnostics.AspNetCore.LoggerOptions`,
-`Google.Cloud.Diagnostics.Common.TraceOptions` and `Google.Cloud.Diagnostics.Common.ErrorReportingOptions` classes.
-Below you'll find examples of how to configure the buffers.
+> **Note**  
+> When running on environments that limit or disable CPU usage for background activities, for instance
+> [Google Cloud Run](https://cloud.google.com/run/docs/tips/general#avoiding_background_activities), take care
+> not to use the timed buffer options for any of Logging, Tracing or Error Reporting. Take into account
+> that the timed buffer is used for all of these components by default so you will need to explicitly
+> configure the buffers by using the `Google.Cloud.Diagnostics.AspNetCore.LoggerOptions`,
+> `Google.Cloud.Diagnostics.Common.TraceOptions` and `Google.Cloud.Diagnostics.Common.ErrorReportingOptions` classes.
+> Below you'll find examples of how to configure the buffers.
 
 # Getting started
 
