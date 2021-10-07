@@ -1,9 +1,20 @@
 {{title}}
 
-`Google.Cloud.Diagnostics.AspNetCore` is an ASP.NET Core instrumentation library for Google Logging, Error Reporting and Tracing.
-It allows for simple integration of Google observability components into ASP.NET Core 2.1+ applications with minimal code changes.
+`Google.Cloud.Diagnostics.AspNetCore` is an ASP.NET Core instrumentation library for Google Logging,
+Error Reporting and Tracing. It allows for simple integration of Google observability components into ASP.NET Core 2.1+ applications
+with minimal custom code.
 
 Note: ASP.NET Core 2.1 is the long-term support release of ASP.NET Core 2.x.
+
+[`Google.Cloud.Diagnostics.Common`](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Diagnostics.Common/latest) and
+[`Google.Cloud.Diagnostics.AspNetCore3`](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Diagnostics.AspNetCore3/latest)
+are the recommended instrumentations libraries if you are writing non ASP.NET Core .NET Standard 2.0+ or ASP.NET Core 3.1+
+applications respectively.
+
+`Google.Cloud.Diagnostics.Common` documentation is still relevant when using `Google.Cloud.Diagnostics.AspNetCore`,
+as tracing, logging and error reporting is done in the same manner when using either of the packages.
+Configuration of `Google.Cloud.Diagnostics.AspNetCore` and some aspects related to ASP.NET Core applications
+being web applications are covered in this document.
 
 {{version}}
 
@@ -17,19 +28,20 @@ for the permissions needed for Logging and Error Reporting.
 See [API Permissions for PatchTraces](https://cloud.google.com/trace/docs/iam#api_permissions)
 for the permissions needed for Tracing.
 
-# Note
-The Google.Cloud.Diagnostics.AspNetCore package attempts to collect the filename and line number when
-entries are collected. However, to be able to collect this information PDBs must be included with
-the deployed code.
+> **Note**  
+> The `Google.Cloud.Diagnostics.AspNetCore` package attempts to collect the filename and line number when
+> error entries are collected. However, to be able to collect this information PDBs must be included with
+> the deployed code.
 
-# Note
-When running on environments that limit or disable CPU usage for background activities, for instance
-[Google Cloud Run](https://cloud.google.com/run/docs/tips/general#avoiding_background_activities), take care
-not to use the timed buffer options for any of Logging, Tracing or Error Reporting. Take into account
-that the timed buffer is used for all of these components by default so you will need to explicitly
-configure the buffers by using the `Google.Cloud.Diagnostics.AspNetCore.LoggerOptions`,
-`Google.Cloud.Diagnostics.Common.TraceOptions` and `Google.Cloud.Diagnostics.Common.ErrorReportingOptions` classes.
-Below you'll find examples of how to configure the buffers.
+> **Note**  
+> Some environments limit or disable CPU usage for background activities, while some others allow you to
+> configure CPU allocation for request processing only.
+> When running on environments with limited CPU for backgrounf activities, take care not to use the
+> timed buffer options for any of Logging, Tracing or Error Reporting. Take into account that the timed buffer
+> is used for all of these components by default so you will need to explicitly configure the buffers by using
+> the `Google.Cloud.Diagnostics.Common.LoggerOptions`, `Google.Cloud.Diagnostics.Common.TraceOptions` and
+> `Google.Cloud.Diagnostics.Common.ErrorReportingOptions` classes.
+> Here you can read more about [CPU allocation in Google Cloud Run](https://cloud.google.com/run/docs/tips/general#background-activity).
 
 # Getting started
 
@@ -147,18 +159,12 @@ Logger.
 
 # Tracing
 
-## Initializing Tracing
+## Configuration
+
+You only need to use the `AddGoogleTraceForAspNetCore` extension method on an `IServiceCollection`.
+You usually do this on the `ConfigureServices` method of your `Startup` class.
 
 {{sample:Trace.RegisterGoogleTracer}}
-
-## Troubleshooting Tracing
-
-Just as with logging, trace is most easily diagnosed by removing
-buffering and propagating exceptions immediately.
-
-{{sample:Trace.Troubleshooting}}
-
-The options can be specified wherever you are configuring tracing.
 
 ## Tracing in Controllers
 
@@ -170,35 +176,6 @@ can inject the `IManagedTracer` into the action method using the `[FromServices]
 {{sample:Trace.TraceMVCConstructor}}
 
 {{sample:Trace.TraceMVCMethod}}
-
-## Manual Tracing
-
-{{sample:Trace.UseTracer}}
-
-{{sample:Trace.UseTracerRunIn}}
-
-## Trace Outgoing HTTP Requests (recommended)
-
-The [recommended way of creating HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1) in ASP.NET Core 2.0 and upwards is to use the
-`System.Net.Http.IHttpClientFactory` defined in the Microsoft.Extensions.Http package.
-The following example demonstrates how to register and use an HttpClient using Google Trace so that it traces
-outgoing requests.
-
-### Configuration
-
-{{sample:Trace.ConfigureHttpClient}}
-
-### Usage
-
-{{sample:Trace.TraceOutgoingClientFactory}}
-
-## Trace Outgoing HTTP Requests (alternative)
-
-Alternatively, if you need to construct `HttpClient` objects manually,
-`TraceHeaderPropagatingHandler` can be used to propagate trace
-headers:
-
-{{sample:Trace.TraceOutgoing}}
 
 ## Using Tracing with other than Google's own trace header
 
@@ -227,6 +204,9 @@ before returning a response with the updated (as modified by the request handlin
 
 ### Custom trace context for outgoing HTTP requests
 
+See also [`Google.Cloud.Diagnostics.Common`](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Diagnostics.Common/latest)
+documentation for Outgoing HTTP Requests.
+
 If your application itself performs HTTP requests to other services and you want to propagate trace context
 information in a format other than Google's trace header, you can use dependency injection to register a
 `System.Action<System.Net.Http.HttpRequestMessage, Google.Cloud.Diagnostics.Common.ITraceContext>` that will be
@@ -246,35 +226,4 @@ The following is for demonstration purposes only. We assume that trace context i
 that is propagated in a `custom_trace_id` header. This is of no use in the real world.
 
 {{sample:Trace.CustomTraceContext}}
-
-## Using Google Trace in applications not based in ASP.NET Core
-
-If you want to use Google Cloud Trace in applications not based on ASP.NET Core you may use the
-`Google.Cloud.Diagnostics.Common` package directly and .NET's dependency injection mechanism.
-You can read more about .NET dependency injection in non ASP.NET Core apps in the
-[Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage).
-
-Note that this is useful for both installed applications and services that process incoming messages
-other than HTTP requests, such as a service reacting to Pub/Sub messages.
-
-Following you'll see a very simplified example of how you could set up Google Cloud Trace for these
-types of applications.
-
-- Configure Google Cloud Trace. You can set tracing options the same as you would do for ASP.NET Core apps.
-
-{{sample:StandaloneTrace.Configure}}
-
-- Build and start a `Microsoft.Extensions.Hosting.IHost`.
-
-{{sample:StandaloneTrace.Start}}
-
-- Create a tracing context when appropiate, for instance, when you receive a Pub/Sub message. You can create
-an empty tracing context (with all null values) if there's none. The tracer will create a tracing context
-depending on configuration options like QPS, etc.
-
-{{sample:StandaloneTrace.IncomingContext}}
-
-- Trace normally in your code
-
-{{sample:StandaloneTrace.Trace}}
 
