@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPacketMirroringRequest request = new GetPacketMirroringRequest
             {
                 PacketMirroring = "packet_mirroringf2de2a5f",
@@ -65,7 +65,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPacketMirroringRequest request = new GetPacketMirroringRequest
             {
                 PacketMirroring = "packet_mirroringf2de2a5f",
@@ -101,7 +101,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPacketMirroringRequest request = new GetPacketMirroringRequest
             {
                 PacketMirroring = "packet_mirroringf2de2a5f",
@@ -135,7 +135,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPacketMirroringRequest request = new GetPacketMirroringRequest
             {
                 PacketMirroring = "packet_mirroringf2de2a5f",
@@ -171,7 +171,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsPacketMirroringRequest request = new TestIamPermissionsPacketMirroringRequest
             {
                 Region = "regionedb20d96",
@@ -197,7 +197,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsPacketMirroringRequest request = new TestIamPermissionsPacketMirroringRequest
             {
                 Region = "regionedb20d96",
@@ -225,7 +225,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsPacketMirroringRequest request = new TestIamPermissionsPacketMirroringRequest
             {
                 Region = "regionedb20d96",
@@ -251,7 +251,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<PacketMirrorings.PacketMirroringsClient> mockGrpcClient = new moq::Mock<PacketMirrorings.PacketMirroringsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsPacketMirroringRequest request = new TestIamPermissionsPacketMirroringRequest
             {
                 Region = "regionedb20d96",

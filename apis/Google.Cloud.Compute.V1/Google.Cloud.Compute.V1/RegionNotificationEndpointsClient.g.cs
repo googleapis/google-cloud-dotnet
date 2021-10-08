@@ -726,8 +726,8 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             RegionNotificationEndpointsSettings effectiveSettings = settings ?? RegionNotificationEndpointsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
             _callDelete = clientHelper.BuildApiCall<DeleteRegionNotificationEndpointRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("notification_endpoint", request => request.NotificationEndpoint);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -778,7 +778,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteRegionNotificationEndpointRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRegionNotificationEndpointRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -790,7 +793,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteRegionNotificationEndpointRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRegionNotificationEndpointRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -829,7 +835,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertRegionNotificationEndpointRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertRegionNotificationEndpointRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -841,7 +850,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertRegionNotificationEndpointRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertRegionNotificationEndpointRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -893,11 +905,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to RegionOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateRegionalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

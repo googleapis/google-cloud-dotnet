@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient> mockGrpcClient = new moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPublicAdvertisedPrefixeRequest request = new GetPublicAdvertisedPrefixeRequest
             {
                 PublicAdvertisedPrefix = "public_advertised_prefix53682ff1",
@@ -66,7 +66,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient> mockGrpcClient = new moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPublicAdvertisedPrefixeRequest request = new GetPublicAdvertisedPrefixeRequest
             {
                 PublicAdvertisedPrefix = "public_advertised_prefix53682ff1",
@@ -103,7 +103,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient> mockGrpcClient = new moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPublicAdvertisedPrefixeRequest request = new GetPublicAdvertisedPrefixeRequest
             {
                 PublicAdvertisedPrefix = "public_advertised_prefix53682ff1",
@@ -138,7 +138,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient> mockGrpcClient = new moq::Mock<PublicAdvertisedPrefixes.PublicAdvertisedPrefixesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetPublicAdvertisedPrefixeRequest request = new GetPublicAdvertisedPrefixeRequest
             {
                 PublicAdvertisedPrefix = "public_advertised_prefix53682ff1",

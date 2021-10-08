@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<BackendBuckets.BackendBucketsClient> mockGrpcClient = new moq::Mock<BackendBuckets.BackendBucketsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetBackendBucketRequest request = new GetBackendBucketRequest
             {
                 BackendBucket = "backend_bucket53dda99e",
@@ -64,7 +64,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<BackendBuckets.BackendBucketsClient> mockGrpcClient = new moq::Mock<BackendBuckets.BackendBucketsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetBackendBucketRequest request = new GetBackendBucketRequest
             {
                 BackendBucket = "backend_bucket53dda99e",
@@ -99,7 +99,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<BackendBuckets.BackendBucketsClient> mockGrpcClient = new moq::Mock<BackendBuckets.BackendBucketsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetBackendBucketRequest request = new GetBackendBucketRequest
             {
                 BackendBucket = "backend_bucket53dda99e",
@@ -132,7 +132,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<BackendBuckets.BackendBucketsClient> mockGrpcClient = new moq::Mock<BackendBuckets.BackendBucketsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetBackendBucketRequest request = new GetBackendBucketRequest
             {
                 BackendBucket = "backend_bucket53dda99e",

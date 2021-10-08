@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -94,7 +94,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -159,7 +159,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -222,7 +222,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -287,7 +287,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetHealthRequestObject()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
@@ -318,7 +318,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetHealthRequestObjectAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
@@ -351,7 +351,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetHealth()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
@@ -382,7 +382,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetHealthAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),

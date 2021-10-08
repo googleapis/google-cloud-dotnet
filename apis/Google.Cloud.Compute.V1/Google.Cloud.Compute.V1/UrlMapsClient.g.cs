@@ -1318,11 +1318,11 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             UrlMapsSettings effectiveSettings = settings ?? UrlMapsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            InvalidateCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InvalidateCacheOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchOperationsSettings);
-            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
+            InvalidateCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InvalidateCacheOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdateOperationsSettings);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListUrlMapsRequest, UrlMapsAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
@@ -1434,7 +1434,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1446,7 +1449,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1485,7 +1491,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1497,7 +1506,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>InvalidateCache</c>.</summary>
@@ -1514,7 +1526,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> InvalidateCache(InvalidateCacheUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InvalidateCacheUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInvalidateCache.Sync(request, callSettings).ToGlobalOperation(request.Project), InvalidateCacheOperationsClient);
+            Operation response = _callInvalidateCache.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InvalidateCacheOperationsClient);
         }
 
         /// <summary>
@@ -1528,7 +1543,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InvalidateCacheAsync(InvalidateCacheUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InvalidateCacheUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInvalidateCache.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), InvalidateCacheOperationsClient);
+            Operation response = await _callInvalidateCache.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InvalidateCacheOperationsClient);
         }
 
         /// <summary>
@@ -1567,7 +1585,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Patch(PatchUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatch.Sync(request, callSettings).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -1579,7 +1600,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatch.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Update</c>.</summary>
@@ -1594,7 +1618,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Update(UpdateUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callUpdate.Sync(request, callSettings).ToGlobalOperation(request.Project), UpdateOperationsClient);
+            Operation response = _callUpdate.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
 
         /// <summary>
@@ -1606,7 +1633,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateUrlMapRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateUrlMapRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callUpdate.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), UpdateOperationsClient);
+            Operation response = await _callUpdate.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
 
         /// <summary>
@@ -1668,11 +1698,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

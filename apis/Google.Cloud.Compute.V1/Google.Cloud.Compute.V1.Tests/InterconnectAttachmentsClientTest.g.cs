@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
                 Region = "regionedb20d96",
@@ -86,7 +86,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
                 Region = "regionedb20d96",
@@ -143,7 +143,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
                 Region = "regionedb20d96",
@@ -198,7 +198,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient> mockGrpcClient = new moq::Mock<InterconnectAttachments.InterconnectAttachmentsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectAttachmentRequest request = new GetInterconnectAttachmentRequest
             {
                 Region = "regionedb20d96",

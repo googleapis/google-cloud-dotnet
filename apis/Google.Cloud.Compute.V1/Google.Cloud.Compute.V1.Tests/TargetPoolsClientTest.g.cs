@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetPoolRequest request = new GetTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",
@@ -70,7 +70,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetPoolRequest request = new GetTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",
@@ -111,7 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetPoolRequest request = new GetTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetPoolRequest request = new GetTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",
@@ -191,7 +191,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetHealthRequestObject()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",
@@ -215,7 +215,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetHealthRequestObjectAsync()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",
@@ -241,7 +241,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetHealth()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",
@@ -265,7 +265,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetHealthAsync()
         {
             moq::Mock<TargetPools.TargetPoolsClient> mockGrpcClient = new moq::Mock<TargetPools.TargetPoolsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthTargetPoolRequest request = new GetHealthTargetPoolRequest
             {
                 TargetPool = "target_pool65e437ac",

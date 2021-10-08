@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 Project = "projectaa6ff846",
@@ -90,7 +90,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 Project = "projectaa6ff846",
@@ -151,7 +151,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 Project = "projectaa6ff846",
@@ -210,7 +210,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 Project = "projectaa6ff846",
@@ -271,7 +271,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySnapshotRequest request = new GetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -298,7 +298,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySnapshotRequest request = new GetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -327,7 +327,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySnapshotRequest request = new GetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -353,7 +353,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySnapshotRequest request = new GetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -381,7 +381,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -408,7 +408,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -437,7 +437,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -464,7 +464,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySnapshotRequest request = new SetIamPolicySnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -493,7 +493,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -518,7 +518,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -545,7 +545,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
                 Resource = "resource164eab96",
@@ -570,7 +570,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<Snapshots.SnapshotsClient> mockGrpcClient = new moq::Mock<Snapshots.SnapshotsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSnapshotRequest request = new TestIamPermissionsSnapshotRequest
             {
                 Resource = "resource164eab96",

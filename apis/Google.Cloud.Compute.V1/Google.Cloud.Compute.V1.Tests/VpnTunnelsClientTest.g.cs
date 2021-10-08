@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<VpnTunnels.VpnTunnelsClient> mockGrpcClient = new moq::Mock<VpnTunnels.VpnTunnelsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnTunnelRequest request = new GetVpnTunnelRequest
             {
                 Region = "regionedb20d96",
@@ -80,7 +80,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<VpnTunnels.VpnTunnelsClient> mockGrpcClient = new moq::Mock<VpnTunnels.VpnTunnelsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnTunnelRequest request = new GetVpnTunnelRequest
             {
                 Region = "regionedb20d96",
@@ -131,7 +131,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<VpnTunnels.VpnTunnelsClient> mockGrpcClient = new moq::Mock<VpnTunnels.VpnTunnelsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnTunnelRequest request = new GetVpnTunnelRequest
             {
                 Region = "regionedb20d96",
@@ -180,7 +180,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<VpnTunnels.VpnTunnelsClient> mockGrpcClient = new moq::Mock<VpnTunnels.VpnTunnelsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnTunnelRequest request = new GetVpnTunnelRequest
             {
                 Region = "regionedb20d96",

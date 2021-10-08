@@ -690,7 +690,7 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             RegionInstanceGroupsSettings effectiveSettings = settings ?? RegionInstanceGroupsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            SetNamedPortsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetNamedPortsOperationsSettings);
+            SetNamedPortsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetNamedPortsOperationsSettings);
             _callGet = clientHelper.BuildApiCall<GetRegionInstanceGroupRequest, InstanceGroup>(grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("instance_group", request => request.InstanceGroup);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
@@ -813,7 +813,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetNamedPorts(SetNamedPortsRegionInstanceGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNamedPortsRegionInstanceGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetNamedPorts.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), SetNamedPortsOperationsClient);
+            Operation response = _callSetNamedPorts.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetNamedPortsOperationsClient);
         }
 
         /// <summary>
@@ -825,7 +828,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetNamedPortsAsync(SetNamedPortsRegionInstanceGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetNamedPortsRegionInstanceGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetNamedPorts.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), SetNamedPortsOperationsClient);
+            Operation response = await _callSetNamedPorts.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetNamedPortsOperationsClient);
         }
     }
 
@@ -871,11 +877,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to RegionOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateRegionalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

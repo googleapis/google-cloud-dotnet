@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetUrlMapRequest request = new GetUrlMapRequest
             {
                 Project = "projectaa6ff846",
@@ -66,7 +66,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetUrlMapRequest request = new GetUrlMapRequest
             {
                 Project = "projectaa6ff846",
@@ -103,7 +103,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetUrlMapRequest request = new GetUrlMapRequest
             {
                 Project = "projectaa6ff846",
@@ -138,7 +138,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetUrlMapRequest request = new GetUrlMapRequest
             {
                 Project = "projectaa6ff846",
@@ -175,7 +175,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void ValidateRequestObject()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateUrlMapRequest request = new ValidateUrlMapRequest
             {
                 Project = "projectaa6ff846",
@@ -197,7 +197,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ValidateRequestObjectAsync()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateUrlMapRequest request = new ValidateUrlMapRequest
             {
                 Project = "projectaa6ff846",
@@ -221,7 +221,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Validate()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateUrlMapRequest request = new ValidateUrlMapRequest
             {
                 Project = "projectaa6ff846",
@@ -243,7 +243,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ValidateAsync()
         {
             moq::Mock<UrlMaps.UrlMapsClient> mockGrpcClient = new moq::Mock<UrlMaps.UrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateUrlMapRequest request = new ValidateUrlMapRequest
             {
                 Project = "projectaa6ff846",

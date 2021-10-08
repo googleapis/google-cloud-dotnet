@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiskRequest request = new GetDiskRequest
             {
                 Disk = "disk028b6875",
@@ -109,7 +109,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiskRequest request = new GetDiskRequest
             {
                 Disk = "disk028b6875",
@@ -189,7 +189,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiskRequest request = new GetDiskRequest
             {
                 Disk = "disk028b6875",
@@ -267,7 +267,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiskRequest request = new GetDiskRequest
             {
                 Disk = "disk028b6875",
@@ -347,7 +347,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyDiskRequest request = new GetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -375,7 +375,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyDiskRequest request = new GetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -405,7 +405,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyDiskRequest request = new GetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -432,7 +432,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyDiskRequest request = new GetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -461,7 +461,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -489,7 +489,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -519,7 +519,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -547,7 +547,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyDiskRequest request = new SetIamPolicyDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -577,7 +577,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -603,7 +603,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -631,7 +631,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",
@@ -657,7 +657,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<Disks.DisksClient> mockGrpcClient = new moq::Mock<Disks.DisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsDiskRequest request = new TestIamPermissionsDiskRequest
             {
                 Zone = "zone255f4ea8",

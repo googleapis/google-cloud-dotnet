@@ -1432,12 +1432,12 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             SecurityPoliciesSettings effectiveSettings = settings ?? SecurityPoliciesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddRuleOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchOperationsSettings);
-            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchRuleOperationsSettings);
-            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveRuleOperationsSettings);
+            AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings);
+            RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings);
             _callAddRule = clientHelper.BuildApiCall<AddRuleSecurityPolicyRequest, Operation>(grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("security_policy", request => request.SecurityPolicy);
             Modify_ApiCall(ref _callAddRule);
             Modify_AddRuleApiCall(ref _callAddRule);
@@ -1530,7 +1530,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> AddRule(AddRuleSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddRuleSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callAddRule.Sync(request, callSettings).ToGlobalOperation(request.Project), AddRuleOperationsClient);
+            Operation response = _callAddRule.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddRuleOperationsClient);
         }
 
         /// <summary>
@@ -1542,7 +1545,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> AddRuleAsync(AddRuleSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddRuleSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callAddRule.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), AddRuleOperationsClient);
+            Operation response = await _callAddRule.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddRuleOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
@@ -1557,7 +1563,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1569,7 +1578,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1632,7 +1644,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1644,7 +1659,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1707,7 +1725,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Patch(PatchSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatch.Sync(request, callSettings).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -1719,7 +1740,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatch.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>PatchRule</c>.</summary>
@@ -1734,7 +1758,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> PatchRule(PatchRuleSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchRuleSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatchRule.Sync(request, callSettings).ToGlobalOperation(request.Project), PatchRuleOperationsClient);
+            Operation response = _callPatchRule.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchRuleOperationsClient);
         }
 
         /// <summary>
@@ -1746,7 +1773,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchRuleAsync(PatchRuleSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchRuleSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatchRule.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), PatchRuleOperationsClient);
+            Operation response = await _callPatchRule.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchRuleOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>RemoveRule</c>.</summary>
@@ -1761,7 +1791,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> RemoveRule(RemoveRuleSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveRuleSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callRemoveRule.Sync(request, callSettings).ToGlobalOperation(request.Project), RemoveRuleOperationsClient);
+            Operation response = _callRemoveRule.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveRuleOperationsClient);
         }
 
         /// <summary>
@@ -1773,7 +1806,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> RemoveRuleAsync(RemoveRuleSecurityPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveRuleSecurityPolicyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callRemoveRule.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), RemoveRuleOperationsClient);
+            Operation response = await _callRemoveRule.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveRuleOperationsClient);
         }
     }
 
@@ -1801,11 +1837,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

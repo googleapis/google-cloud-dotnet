@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -800,6 +801,23 @@ namespace Google.Cloud.Compute.V1
         {
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public static partial class RegionOperations
+    {
+        public partial class RegionOperationsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/>using the specified call
+            /// invoker, but redirecting Google.LongRunning RPCs to RegionOperations RPCs.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            internal static lro::Operations.OperationsClient CreateOperationsClient(grpccore::CallInvoker callInvoker)
+            {
+                grpccore::CallInvoker forwardingCallInvoker = ForwardingCallInvoker<lro::GetOperationRequest>.Create(callInvoker, "/google.longrunning.Operations/GetOperation", __Method_Get, GetRegionOperationRequest.ParseLroRequest, (request, response) => response.ToLroResponse(request.Name));
+                return new lro::Operations.OperationsClient(forwardingCallInvoker);
+            }
         }
     }
 }

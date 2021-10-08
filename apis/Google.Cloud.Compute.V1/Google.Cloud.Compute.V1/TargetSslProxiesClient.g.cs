@@ -1271,12 +1271,12 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             TargetSslProxiesSettings effectiveSettings = settings ?? TargetSslProxiesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            SetBackendServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetBackendServiceOperationsSettings);
-            SetProxyHeaderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetProxyHeaderOperationsSettings);
-            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSslCertificatesOperationsSettings);
-            SetSslPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSslPolicyOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
+            SetBackendServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetBackendServiceOperationsSettings);
+            SetProxyHeaderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetProxyHeaderOperationsSettings);
+            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslCertificatesOperationsSettings);
+            SetSslPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSslPolicyOperationsSettings);
             _callDelete = clientHelper.BuildApiCall<DeleteTargetSslProxyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("target_ssl_proxy", request => request.TargetSslProxy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1355,7 +1355,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1367,7 +1370,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1406,7 +1412,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1418,7 +1427,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1457,7 +1469,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetBackendService(SetBackendServiceTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetBackendServiceTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetBackendService.Sync(request, callSettings).ToGlobalOperation(request.Project), SetBackendServiceOperationsClient);
+            Operation response = _callSetBackendService.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetBackendServiceOperationsClient);
         }
 
         /// <summary>
@@ -1469,7 +1484,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetBackendServiceAsync(SetBackendServiceTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetBackendServiceTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetBackendService.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetBackendServiceOperationsClient);
+            Operation response = await _callSetBackendService.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetBackendServiceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetProxyHeader</c>.</summary>
@@ -1484,7 +1502,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetProxyHeader(SetProxyHeaderTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetProxyHeaderTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetProxyHeader.Sync(request, callSettings).ToGlobalOperation(request.Project), SetProxyHeaderOperationsClient);
+            Operation response = _callSetProxyHeader.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetProxyHeaderOperationsClient);
         }
 
         /// <summary>
@@ -1496,7 +1517,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetProxyHeaderAsync(SetProxyHeaderTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetProxyHeaderTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetProxyHeader.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetProxyHeaderOperationsClient);
+            Operation response = await _callSetProxyHeader.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetProxyHeaderOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetSslCertificates</c>.</summary>
@@ -1511,7 +1535,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetSslCertificates(SetSslCertificatesTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSslCertificatesTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetSslCertificates.Sync(request, callSettings).ToGlobalOperation(request.Project), SetSslCertificatesOperationsClient);
+            Operation response = _callSetSslCertificates.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSslCertificatesOperationsClient);
         }
 
         /// <summary>
@@ -1523,7 +1550,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetSslCertificatesAsync(SetSslCertificatesTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSslCertificatesTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetSslCertificates.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetSslCertificatesOperationsClient);
+            Operation response = await _callSetSslCertificates.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSslCertificatesOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetSslPolicy</c>.</summary>
@@ -1538,7 +1568,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetSslPolicy(SetSslPolicyTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSslPolicyTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetSslPolicy.Sync(request, callSettings).ToGlobalOperation(request.Project), SetSslPolicyOperationsClient);
+            Operation response = _callSetSslPolicy.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSslPolicyOperationsClient);
         }
 
         /// <summary>
@@ -1550,7 +1583,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetSslPolicyAsync(SetSslPolicyTargetSslProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSslPolicyTargetSslProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetSslPolicy.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetSslPolicyOperationsClient);
+            Operation response = await _callSetSslPolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSslPolicyOperationsClient);
         }
     }
 
@@ -1578,11 +1614,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<GlobalAddresses.GlobalAddressesClient> mockGrpcClient = new moq::Mock<GlobalAddresses.GlobalAddressesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalAddressRequest request = new GetGlobalAddressRequest
             {
                 Project = "projectaa6ff846",
@@ -68,7 +68,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<GlobalAddresses.GlobalAddressesClient> mockGrpcClient = new moq::Mock<GlobalAddresses.GlobalAddressesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalAddressRequest request = new GetGlobalAddressRequest
             {
                 Project = "projectaa6ff846",
@@ -107,7 +107,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<GlobalAddresses.GlobalAddressesClient> mockGrpcClient = new moq::Mock<GlobalAddresses.GlobalAddressesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalAddressRequest request = new GetGlobalAddressRequest
             {
                 Project = "projectaa6ff846",
@@ -144,7 +144,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<GlobalAddresses.GlobalAddressesClient> mockGrpcClient = new moq::Mock<GlobalAddresses.GlobalAddressesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalAddressRequest request = new GetGlobalAddressRequest
             {
                 Project = "projectaa6ff846",

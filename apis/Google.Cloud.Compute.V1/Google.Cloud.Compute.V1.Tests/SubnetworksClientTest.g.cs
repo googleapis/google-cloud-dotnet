@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -75,7 +75,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -121,7 +121,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -165,7 +165,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSubnetworkRequest request = new GetSubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -211,7 +211,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySubnetworkRequest request = new GetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -239,7 +239,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySubnetworkRequest request = new GetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -269,7 +269,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySubnetworkRequest request = new GetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -296,7 +296,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicySubnetworkRequest request = new GetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -325,7 +325,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -353,7 +353,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -383,7 +383,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -411,7 +411,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicySubnetworkRequest request = new SetIamPolicySubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -441,7 +441,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -467,7 +467,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -495,7 +495,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",
@@ -521,7 +521,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<Subnetworks.SubnetworksClient> mockGrpcClient = new moq::Mock<Subnetworks.SubnetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsSubnetworkRequest request = new TestIamPermissionsSubnetworkRequest
             {
                 Region = "regionedb20d96",

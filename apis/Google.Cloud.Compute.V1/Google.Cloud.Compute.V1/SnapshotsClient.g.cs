@@ -997,8 +997,8 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             SnapshotsSettings effectiveSettings = settings ?? SnapshotsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetLabelsOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetLabelsOperationsSettings);
             _callDelete = clientHelper.BuildApiCall<DeleteSnapshotRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("snapshot", request => request.Snapshot);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1072,7 +1072,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSnapshotRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1086,7 +1089,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSnapshotRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1197,7 +1203,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetLabels(SetLabelsSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsSnapshotRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetLabels.Sync(request, callSettings).ToGlobalOperation(request.Project), SetLabelsOperationsClient);
+            Operation response = _callSetLabels.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>
@@ -1209,7 +1218,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsSnapshotRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsSnapshotRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetLabels.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetLabelsOperationsClient);
+            Operation response = await _callSetLabels.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>
@@ -1261,11 +1273,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

@@ -1712,13 +1712,13 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             TargetPoolsSettings effectiveSettings = settings ?? TargetPoolsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddHealthCheckOperationsSettings);
-            AddInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddInstanceOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            RemoveHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveHealthCheckOperationsSettings);
-            RemoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemoveInstanceOperationsSettings);
-            SetBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetBackupOperationsSettings);
+            AddHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddHealthCheckOperationsSettings);
+            AddInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddInstanceOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
+            RemoveHealthCheckOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveHealthCheckOperationsSettings);
+            RemoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveInstanceOperationsSettings);
+            SetBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetBackupOperationsSettings);
             _callAddHealthCheck = clientHelper.BuildApiCall<AddHealthCheckTargetPoolRequest, Operation>(grpcClient.AddHealthCheckAsync, grpcClient.AddHealthCheck, effectiveSettings.AddHealthCheckSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_pool", request => request.TargetPool);
             Modify_ApiCall(ref _callAddHealthCheck);
             Modify_AddHealthCheckApiCall(ref _callAddHealthCheck);
@@ -1818,7 +1818,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> AddHealthCheck(AddHealthCheckTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddHealthCheckTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callAddHealthCheck.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), AddHealthCheckOperationsClient);
+            Operation response = _callAddHealthCheck.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddHealthCheckOperationsClient);
         }
 
         /// <summary>
@@ -1830,7 +1833,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> AddHealthCheckAsync(AddHealthCheckTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddHealthCheckTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callAddHealthCheck.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), AddHealthCheckOperationsClient);
+            Operation response = await _callAddHealthCheck.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddHealthCheckOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>AddInstance</c>.</summary>
@@ -1845,7 +1851,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> AddInstance(AddInstanceTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddInstanceTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callAddInstance.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), AddInstanceOperationsClient);
+            Operation response = _callAddInstance.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddInstanceOperationsClient);
         }
 
         /// <summary>
@@ -1857,7 +1866,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> AddInstanceAsync(AddInstanceTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddInstanceTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callAddInstance.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), AddInstanceOperationsClient);
+            Operation response = await _callAddInstance.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddInstanceOperationsClient);
         }
 
         /// <summary>
@@ -1898,7 +1910,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1910,7 +1925,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1973,7 +1991,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1985,7 +2006,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -2024,7 +2048,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> RemoveHealthCheck(RemoveHealthCheckTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveHealthCheckTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callRemoveHealthCheck.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), RemoveHealthCheckOperationsClient);
+            Operation response = _callRemoveHealthCheck.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveHealthCheckOperationsClient);
         }
 
         /// <summary>
@@ -2036,7 +2063,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> RemoveHealthCheckAsync(RemoveHealthCheckTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveHealthCheckTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callRemoveHealthCheck.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), RemoveHealthCheckOperationsClient);
+            Operation response = await _callRemoveHealthCheck.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveHealthCheckOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>RemoveInstance</c>.</summary>
@@ -2051,7 +2081,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> RemoveInstance(RemoveInstanceTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveInstanceTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callRemoveInstance.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), RemoveInstanceOperationsClient);
+            Operation response = _callRemoveInstance.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveInstanceOperationsClient);
         }
 
         /// <summary>
@@ -2063,7 +2096,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> RemoveInstanceAsync(RemoveInstanceTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveInstanceTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callRemoveInstance.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), RemoveInstanceOperationsClient);
+            Operation response = await _callRemoveInstance.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveInstanceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetBackup</c>.</summary>
@@ -2078,7 +2114,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetBackup(SetBackupTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetBackupTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetBackup.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), SetBackupOperationsClient);
+            Operation response = _callSetBackup.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetBackupOperationsClient);
         }
 
         /// <summary>
@@ -2090,7 +2129,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetBackupAsync(SetBackupTargetPoolRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetBackupTargetPoolRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetBackup.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), SetBackupOperationsClient);
+            Operation response = await _callSetBackup.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetBackupOperationsClient);
         }
     }
 
@@ -2136,11 +2178,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to RegionOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateRegionalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

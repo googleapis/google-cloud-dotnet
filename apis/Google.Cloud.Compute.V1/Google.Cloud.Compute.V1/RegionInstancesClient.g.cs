@@ -377,7 +377,7 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             RegionInstancesSettings effectiveSettings = settings ?? RegionInstancesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BulkInsertOperationsSettings);
+            BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.BulkInsertOperationsSettings);
             _callBulkInsert = clientHelper.BuildApiCall<BulkInsertRegionInstanceRequest, Operation>(grpcClient.BulkInsertAsync, grpcClient.BulkInsert, effectiveSettings.BulkInsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callBulkInsert);
             Modify_BulkInsertApiCall(ref _callBulkInsert);
@@ -407,7 +407,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> BulkInsert(BulkInsertRegionInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BulkInsertRegionInstanceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callBulkInsert.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), BulkInsertOperationsClient);
+            Operation response = _callBulkInsert.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkInsertOperationsClient);
         }
 
         /// <summary>
@@ -419,7 +422,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(BulkInsertRegionInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BulkInsertRegionInstanceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callBulkInsert.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), BulkInsertOperationsClient);
+            Operation response = await _callBulkInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkInsertOperationsClient);
         }
     }
 
@@ -429,11 +435,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to RegionOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateRegionalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetReservationRequest request = new GetReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -64,7 +64,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetReservationRequest request = new GetReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -99,7 +99,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetReservationRequest request = new GetReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -132,7 +132,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetReservationRequest request = new GetReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -167,7 +167,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyReservationRequest request = new GetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -195,7 +195,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyReservationRequest request = new GetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -225,7 +225,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyReservationRequest request = new GetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -252,7 +252,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyReservationRequest request = new GetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -281,7 +281,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyReservationRequest request = new SetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -309,7 +309,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyReservationRequest request = new SetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -339,7 +339,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyReservationRequest request = new SetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -367,7 +367,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyReservationRequest request = new SetIamPolicyReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -397,7 +397,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsReservationRequest request = new TestIamPermissionsReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -423,7 +423,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsReservationRequest request = new TestIamPermissionsReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -451,7 +451,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsReservationRequest request = new TestIamPermissionsReservationRequest
             {
                 Zone = "zone255f4ea8",
@@ -477,7 +477,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<Reservations.ReservationsClient> mockGrpcClient = new moq::Mock<Reservations.ReservationsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsReservationRequest request = new TestIamPermissionsReservationRequest
             {
                 Zone = "zone255f4ea8",

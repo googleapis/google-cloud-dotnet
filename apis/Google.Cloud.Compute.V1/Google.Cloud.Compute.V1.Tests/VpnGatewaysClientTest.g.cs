@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnGatewayRequest request = new GetVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -72,7 +72,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnGatewayRequest request = new GetVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -115,7 +115,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnGatewayRequest request = new GetVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -156,7 +156,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetVpnGatewayRequest request = new GetVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -199,7 +199,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetStatusRequestObject()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetStatusVpnGatewayRequest request = new GetStatusVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -221,7 +221,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetStatusRequestObjectAsync()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetStatusVpnGatewayRequest request = new GetStatusVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -245,7 +245,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetStatus()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetStatusVpnGatewayRequest request = new GetStatusVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -267,7 +267,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetStatusAsync()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetStatusVpnGatewayRequest request = new GetStatusVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -291,7 +291,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsVpnGatewayRequest request = new TestIamPermissionsVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -317,7 +317,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsVpnGatewayRequest request = new TestIamPermissionsVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -345,7 +345,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsVpnGatewayRequest request = new TestIamPermissionsVpnGatewayRequest
             {
                 Region = "regionedb20d96",
@@ -371,7 +371,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<VpnGateways.VpnGatewaysClient> mockGrpcClient = new moq::Mock<VpnGateways.VpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsVpnGatewayRequest request = new TestIamPermissionsVpnGatewayRequest
             {
                 Region = "regionedb20d96",

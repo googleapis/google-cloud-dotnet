@@ -3159,20 +3159,20 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             InstanceGroupManagersSettings effectiveSettings = settings ?? InstanceGroupManagersSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AbandonInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AbandonInstancesOperationsSettings);
-            ApplyUpdatesToInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ApplyUpdatesToInstancesOperationsSettings);
-            CreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstancesOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            DeleteInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstancesOperationsSettings);
-            DeletePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePerInstanceConfigsOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchOperationsSettings);
-            PatchPerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchPerInstanceConfigsOperationsSettings);
-            RecreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RecreateInstancesOperationsSettings);
-            ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResizeOperationsSettings);
-            SetInstanceTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetInstanceTemplateOperationsSettings);
-            SetTargetPoolsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetTargetPoolsOperationsSettings);
-            UpdatePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePerInstanceConfigsOperationsSettings);
+            AbandonInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AbandonInstancesOperationsSettings);
+            ApplyUpdatesToInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ApplyUpdatesToInstancesOperationsSettings);
+            CreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.CreateInstancesOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings);
+            DeleteInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteInstancesOperationsSettings);
+            DeletePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeletePerInstanceConfigsOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PatchOperationsSettings);
+            PatchPerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PatchPerInstanceConfigsOperationsSettings);
+            RecreateInstancesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.RecreateInstancesOperationsSettings);
+            ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResizeOperationsSettings);
+            SetInstanceTemplateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetInstanceTemplateOperationsSettings);
+            SetTargetPoolsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetTargetPoolsOperationsSettings);
+            UpdatePerInstanceConfigsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdatePerInstanceConfigsOperationsSettings);
             _callAbandonInstances = clientHelper.BuildApiCall<AbandonInstancesInstanceGroupManagerRequest, Operation>(grpcClient.AbandonInstancesAsync, grpcClient.AbandonInstances, effectiveSettings.AbandonInstancesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance_group_manager", request => request.InstanceGroupManager);
             Modify_ApiCall(ref _callAbandonInstances);
             Modify_AbandonInstancesApiCall(ref _callAbandonInstances);
@@ -3339,7 +3339,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> AbandonInstances(AbandonInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AbandonInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callAbandonInstances.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), AbandonInstancesOperationsClient);
+            Operation response = _callAbandonInstances.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AbandonInstancesOperationsClient);
         }
 
         /// <summary>
@@ -3355,7 +3358,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> AbandonInstancesAsync(AbandonInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AbandonInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callAbandonInstances.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), AbandonInstancesOperationsClient);
+            Operation response = await _callAbandonInstances.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AbandonInstancesOperationsClient);
         }
 
         /// <summary>
@@ -3396,7 +3402,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> ApplyUpdatesToInstances(ApplyUpdatesToInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ApplyUpdatesToInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callApplyUpdatesToInstances.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), ApplyUpdatesToInstancesOperationsClient);
+            Operation response = _callApplyUpdatesToInstances.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ApplyUpdatesToInstancesOperationsClient);
         }
 
         /// <summary>
@@ -3408,7 +3417,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> ApplyUpdatesToInstancesAsync(ApplyUpdatesToInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ApplyUpdatesToInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callApplyUpdatesToInstances.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), ApplyUpdatesToInstancesOperationsClient);
+            Operation response = await _callApplyUpdatesToInstances.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ApplyUpdatesToInstancesOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>CreateInstances</c>.</summary>
@@ -3423,7 +3435,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> CreateInstances(CreateInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callCreateInstances.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), CreateInstancesOperationsClient);
+            Operation response = _callCreateInstances.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), CreateInstancesOperationsClient);
         }
 
         /// <summary>
@@ -3435,7 +3450,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> CreateInstancesAsync(CreateInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callCreateInstances.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), CreateInstancesOperationsClient);
+            Operation response = await _callCreateInstances.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), CreateInstancesOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
@@ -3450,7 +3468,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -3462,7 +3483,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteInstances</c>.</summary>
@@ -3481,7 +3505,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> DeleteInstances(DeleteInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDeleteInstances.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), DeleteInstancesOperationsClient);
+            Operation response = _callDeleteInstances.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteInstancesOperationsClient);
         }
 
         /// <summary>
@@ -3497,7 +3524,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteInstancesAsync(DeleteInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDeleteInstances.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), DeleteInstancesOperationsClient);
+            Operation response = await _callDeleteInstances.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteInstancesOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeletePerInstanceConfigs</c>.</summary>
@@ -3512,7 +3542,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> DeletePerInstanceConfigs(DeletePerInstanceConfigsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeletePerInstanceConfigsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDeletePerInstanceConfigs.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), DeletePerInstanceConfigsOperationsClient);
+            Operation response = _callDeletePerInstanceConfigs.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeletePerInstanceConfigsOperationsClient);
         }
 
         /// <summary>
@@ -3524,7 +3557,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeletePerInstanceConfigsAsync(DeletePerInstanceConfigsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeletePerInstanceConfigsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDeletePerInstanceConfigs.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), DeletePerInstanceConfigsOperationsClient);
+            Operation response = await _callDeletePerInstanceConfigs.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeletePerInstanceConfigsOperationsClient);
         }
 
         /// <summary>
@@ -3565,7 +3601,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -3579,7 +3618,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -3690,7 +3732,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Patch(PatchInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatch.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), PatchOperationsClient);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -3702,7 +3747,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatch.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), PatchOperationsClient);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>PatchPerInstanceConfigs</c>.</summary>
@@ -3717,7 +3765,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> PatchPerInstanceConfigs(PatchPerInstanceConfigsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchPerInstanceConfigsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatchPerInstanceConfigs.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), PatchPerInstanceConfigsOperationsClient);
+            Operation response = _callPatchPerInstanceConfigs.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchPerInstanceConfigsOperationsClient);
         }
 
         /// <summary>
@@ -3729,7 +3780,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchPerInstanceConfigsAsync(PatchPerInstanceConfigsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchPerInstanceConfigsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatchPerInstanceConfigs.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), PatchPerInstanceConfigsOperationsClient);
+            Operation response = await _callPatchPerInstanceConfigs.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchPerInstanceConfigsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>RecreateInstances</c>.</summary>
@@ -3748,7 +3802,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> RecreateInstances(RecreateInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RecreateInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callRecreateInstances.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), RecreateInstancesOperationsClient);
+            Operation response = _callRecreateInstances.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RecreateInstancesOperationsClient);
         }
 
         /// <summary>
@@ -3764,7 +3821,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> RecreateInstancesAsync(RecreateInstancesInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RecreateInstancesInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callRecreateInstances.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), RecreateInstancesOperationsClient);
+            Operation response = await _callRecreateInstances.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RecreateInstancesOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Resize</c>.</summary>
@@ -3787,7 +3847,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Resize(ResizeInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResizeInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callResize.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), ResizeOperationsClient);
+            Operation response = _callResize.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResizeOperationsClient);
         }
 
         /// <summary>
@@ -3807,7 +3870,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> ResizeAsync(ResizeInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResizeInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callResize.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), ResizeOperationsClient);
+            Operation response = await _callResize.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResizeOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetInstanceTemplate</c>.</summary>
@@ -3822,7 +3888,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetInstanceTemplate(SetInstanceTemplateInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetInstanceTemplateInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetInstanceTemplate.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), SetInstanceTemplateOperationsClient);
+            Operation response = _callSetInstanceTemplate.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetInstanceTemplateOperationsClient);
         }
 
         /// <summary>
@@ -3834,7 +3903,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetInstanceTemplateAsync(SetInstanceTemplateInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetInstanceTemplateInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetInstanceTemplate.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), SetInstanceTemplateOperationsClient);
+            Operation response = await _callSetInstanceTemplate.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetInstanceTemplateOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetTargetPools</c>.</summary>
@@ -3849,7 +3921,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetTargetPools(SetTargetPoolsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTargetPoolsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetTargetPools.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), SetTargetPoolsOperationsClient);
+            Operation response = _callSetTargetPools.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTargetPoolsOperationsClient);
         }
 
         /// <summary>
@@ -3861,7 +3936,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetTargetPoolsAsync(SetTargetPoolsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTargetPoolsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetTargetPools.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), SetTargetPoolsOperationsClient);
+            Operation response = await _callSetTargetPools.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTargetPoolsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>UpdatePerInstanceConfigs</c>.</summary>
@@ -3876,7 +3954,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> UpdatePerInstanceConfigs(UpdatePerInstanceConfigsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdatePerInstanceConfigsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callUpdatePerInstanceConfigs.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), UpdatePerInstanceConfigsOperationsClient);
+            Operation response = _callUpdatePerInstanceConfigs.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdatePerInstanceConfigsOperationsClient);
         }
 
         /// <summary>
@@ -3888,7 +3969,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> UpdatePerInstanceConfigsAsync(UpdatePerInstanceConfigsInstanceGroupManagerRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdatePerInstanceConfigsInstanceGroupManagerRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callUpdatePerInstanceConfigs.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), UpdatePerInstanceConfigsOperationsClient);
+            Operation response = await _callUpdatePerInstanceConfigs.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdatePerInstanceConfigsOperationsClient);
         }
     }
 
@@ -3989,11 +4073,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to ZoneOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateZonalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForZoneOperations() =>
+                ZoneOperations.ZoneOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

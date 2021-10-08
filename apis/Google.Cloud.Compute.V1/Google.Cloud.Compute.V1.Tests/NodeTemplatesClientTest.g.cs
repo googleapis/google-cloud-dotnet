@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -77,7 +77,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -125,7 +125,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -171,7 +171,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeTemplateRequest request = new GetNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -219,7 +219,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeTemplateRequest request = new GetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -247,7 +247,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeTemplateRequest request = new GetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -277,7 +277,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeTemplateRequest request = new GetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -304,7 +304,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeTemplateRequest request = new GetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -333,7 +333,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -361,7 +361,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -391,7 +391,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -419,7 +419,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeTemplateRequest request = new SetIamPolicyNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -449,7 +449,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -475,7 +475,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -503,7 +503,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",
@@ -529,7 +529,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<NodeTemplates.NodeTemplatesClient> mockGrpcClient = new moq::Mock<NodeTemplates.NodeTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeTemplateRequest request = new TestIamPermissionsNodeTemplateRequest
             {
                 Region = "regionedb20d96",

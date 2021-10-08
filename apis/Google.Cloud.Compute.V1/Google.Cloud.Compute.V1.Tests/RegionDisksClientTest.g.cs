@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -109,7 +109,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -189,7 +189,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -267,7 +267,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -347,7 +347,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -375,7 +375,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -405,7 +405,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -432,7 +432,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -461,7 +461,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -489,7 +489,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -519,7 +519,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -547,7 +547,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -577,7 +577,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -603,7 +603,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -631,7 +631,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -657,7 +657,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",

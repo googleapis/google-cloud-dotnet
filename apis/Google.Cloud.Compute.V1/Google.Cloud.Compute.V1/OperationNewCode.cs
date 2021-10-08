@@ -15,6 +15,8 @@
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 
+// Note: this will eventually be generated in ComputeLroAdaptation.g.cs. It's the last bit of generator work we need to do.
+
 namespace Google.Cloud.Compute.V1
 {
     partial class Operation
@@ -24,8 +26,8 @@ namespace Google.Cloud.Compute.V1
             // TODO: Work this out much more carefully. In particular, consider whether a Compute LRO can complete successfully with errors...
             var proto = new lro::Operation
             {
-                // Derived from [(google.cloud.operation_field) = STATUS] and 
-                Done = Status == Operation.Types.Status.Done,
+                // Derived from [(google.cloud.operation_field) = STATUS]
+                Done = Status == Types.Status.Done,
                 // Taken from [(google.cloud.operation_field) = NAME]
                 Name = name,
                 // Always pack the raw response as metadata

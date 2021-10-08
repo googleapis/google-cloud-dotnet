@@ -1126,11 +1126,11 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             GlobalForwardingRulesSettings effectiveSettings = settings ?? GlobalForwardingRulesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchOperationsSettings);
-            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetLabelsOperationsSettings);
-            SetTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetTargetOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetLabelsOperationsSettings);
+            SetTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetTargetOperationsSettings);
             _callDelete = clientHelper.BuildApiCall<DeleteGlobalForwardingRuleRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("forwarding_rule", request => request.ForwardingRule);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1202,7 +1202,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1214,7 +1217,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1253,7 +1259,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1265,7 +1274,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1304,7 +1316,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Patch(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatch.Sync(request, callSettings).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -1316,7 +1331,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatch.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>
@@ -1331,7 +1349,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetLabels(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetLabels.Sync(request, callSettings).ToGlobalOperation(request.Project), SetLabelsOperationsClient);
+            Operation response = _callSetLabels.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>
@@ -1343,7 +1364,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetLabels.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetLabelsOperationsClient);
+            Operation response = await _callSetLabels.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetTarget</c>.</summary>
@@ -1358,7 +1382,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetTarget(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTargetGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetTarget.Sync(request, callSettings).ToGlobalOperation(request.Project), SetTargetOperationsClient);
+            Operation response = _callSetTarget.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTargetOperationsClient);
         }
 
         /// <summary>
@@ -1370,7 +1397,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetTargetAsync(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTargetGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetTarget.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetTargetOperationsClient);
+            Operation response = await _callSetTarget.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTargetOperationsClient);
         }
     }
 
@@ -1390,11 +1420,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

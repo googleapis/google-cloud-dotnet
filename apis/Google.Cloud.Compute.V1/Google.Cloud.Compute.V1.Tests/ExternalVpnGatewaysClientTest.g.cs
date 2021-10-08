@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExternalVpnGatewayRequest request = new GetExternalVpnGatewayRequest
             {
                 ExternalVpnGateway = "external_vpn_gatewaycc117eb0",
@@ -70,7 +70,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExternalVpnGatewayRequest request = new GetExternalVpnGatewayRequest
             {
                 ExternalVpnGateway = "external_vpn_gatewaycc117eb0",
@@ -111,7 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExternalVpnGatewayRequest request = new GetExternalVpnGatewayRequest
             {
                 ExternalVpnGateway = "external_vpn_gatewaycc117eb0",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetExternalVpnGatewayRequest request = new GetExternalVpnGatewayRequest
             {
                 ExternalVpnGateway = "external_vpn_gatewaycc117eb0",
@@ -191,7 +191,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsExternalVpnGatewayRequest request = new TestIamPermissionsExternalVpnGatewayRequest
             {
                 Resource = "resource164eab96",
@@ -216,7 +216,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsExternalVpnGatewayRequest request = new TestIamPermissionsExternalVpnGatewayRequest
             {
                 Resource = "resource164eab96",
@@ -243,7 +243,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsExternalVpnGatewayRequest request = new TestIamPermissionsExternalVpnGatewayRequest
             {
                 Resource = "resource164eab96",
@@ -268,7 +268,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient> mockGrpcClient = new moq::Mock<ExternalVpnGateways.ExternalVpnGatewaysClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsExternalVpnGatewayRequest request = new TestIamPermissionsExternalVpnGatewayRequest
             {
                 Resource = "resource164eab96",

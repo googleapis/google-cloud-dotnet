@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterRequest request = new GetRouterRequest
             {
                 Region = "regionedb20d96",
@@ -71,7 +71,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterRequest request = new GetRouterRequest
             {
                 Region = "regionedb20d96",
@@ -113,7 +113,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterRequest request = new GetRouterRequest
             {
                 Region = "regionedb20d96",
@@ -153,7 +153,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterRequest request = new GetRouterRequest
             {
                 Region = "regionedb20d96",
@@ -195,7 +195,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRouterStatusRequestObject()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterStatusRouterRequest request = new GetRouterStatusRouterRequest
             {
                 Region = "regionedb20d96",
@@ -218,7 +218,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRouterStatusRequestObjectAsync()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterStatusRouterRequest request = new GetRouterStatusRouterRequest
             {
                 Region = "regionedb20d96",
@@ -243,7 +243,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRouterStatus()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterStatusRouterRequest request = new GetRouterStatusRouterRequest
             {
                 Region = "regionedb20d96",
@@ -266,7 +266,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRouterStatusAsync()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRouterStatusRouterRequest request = new GetRouterStatusRouterRequest
             {
                 Region = "regionedb20d96",
@@ -291,7 +291,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void PreviewRequestObject()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewRouterRequest request = new PreviewRouterRequest
             {
                 Region = "regionedb20d96",
@@ -314,7 +314,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task PreviewRequestObjectAsync()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewRouterRequest request = new PreviewRouterRequest
             {
                 Region = "regionedb20d96",
@@ -339,7 +339,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Preview()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewRouterRequest request = new PreviewRouterRequest
             {
                 Region = "regionedb20d96",
@@ -362,7 +362,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task PreviewAsync()
         {
             moq::Mock<Routers.RoutersClient> mockGrpcClient = new moq::Mock<Routers.RoutersClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             PreviewRouterRequest request = new PreviewRouterRequest
             {
                 Region = "regionedb20d96",

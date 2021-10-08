@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -108,7 +108,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -187,7 +187,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -264,7 +264,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -343,7 +343,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetEffectiveFirewallsRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -370,7 +370,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetEffectiveFirewallsRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -399,7 +399,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetEffectiveFirewalls()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -426,7 +426,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetEffectiveFirewallsAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsInstanceRequest request = new GetEffectiveFirewallsInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -455,7 +455,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetGuestAttributesRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGuestAttributesInstanceRequest request = new GetGuestAttributesInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -484,7 +484,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetGuestAttributesRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGuestAttributesInstanceRequest request = new GetGuestAttributesInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -515,7 +515,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetGuestAttributes()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGuestAttributesInstanceRequest request = new GetGuestAttributesInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -542,7 +542,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetGuestAttributesAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGuestAttributesInstanceRequest request = new GetGuestAttributesInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -571,7 +571,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceRequest request = new GetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -599,7 +599,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceRequest request = new GetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -629,7 +629,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceRequest request = new GetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -656,7 +656,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceRequest request = new GetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -685,7 +685,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetScreenshotRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetScreenshotInstanceRequest request = new GetScreenshotInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -708,7 +708,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetScreenshotRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetScreenshotInstanceRequest request = new GetScreenshotInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -733,7 +733,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetScreenshot()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetScreenshotInstanceRequest request = new GetScreenshotInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -756,7 +756,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetScreenshotAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetScreenshotInstanceRequest request = new GetScreenshotInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -781,7 +781,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetSerialPortOutputRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSerialPortOutputInstanceRequest request = new GetSerialPortOutputInstanceRequest
             {
                 Port = -78310000,
@@ -809,7 +809,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetSerialPortOutputRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSerialPortOutputInstanceRequest request = new GetSerialPortOutputInstanceRequest
             {
                 Port = -78310000,
@@ -839,7 +839,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetSerialPortOutput()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSerialPortOutputInstanceRequest request = new GetSerialPortOutputInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -865,7 +865,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetSerialPortOutputAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSerialPortOutputInstanceRequest request = new GetSerialPortOutputInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -893,7 +893,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetShieldedInstanceIdentityRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetShieldedInstanceIdentityInstanceRequest request = new GetShieldedInstanceIdentityInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -917,7 +917,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetShieldedInstanceIdentityRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetShieldedInstanceIdentityInstanceRequest request = new GetShieldedInstanceIdentityInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -943,7 +943,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetShieldedInstanceIdentity()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetShieldedInstanceIdentityInstanceRequest request = new GetShieldedInstanceIdentityInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -967,7 +967,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetShieldedInstanceIdentityAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetShieldedInstanceIdentityInstanceRequest request = new GetShieldedInstanceIdentityInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -993,7 +993,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceRequest request = new SetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -1021,7 +1021,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceRequest request = new SetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -1051,7 +1051,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceRequest request = new SetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -1079,7 +1079,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceRequest request = new SetIamPolicyInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -1109,7 +1109,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceRequest request = new TestIamPermissionsInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -1135,7 +1135,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceRequest request = new TestIamPermissionsInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -1163,7 +1163,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceRequest request = new TestIamPermissionsInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceRequest request = new TestIamPermissionsInstanceRequest
             {
                 Zone = "zone255f4ea8",

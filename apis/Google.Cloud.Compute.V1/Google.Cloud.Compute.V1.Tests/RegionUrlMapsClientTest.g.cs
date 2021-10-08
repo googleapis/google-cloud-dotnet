@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionUrlMapRequest request = new GetRegionUrlMapRequest
             {
                 Region = "regionedb20d96",
@@ -67,7 +67,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionUrlMapRequest request = new GetRegionUrlMapRequest
             {
                 Region = "regionedb20d96",
@@ -105,7 +105,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionUrlMapRequest request = new GetRegionUrlMapRequest
             {
                 Region = "regionedb20d96",
@@ -141,7 +141,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionUrlMapRequest request = new GetRegionUrlMapRequest
             {
                 Region = "regionedb20d96",
@@ -179,7 +179,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void ValidateRequestObject()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateRegionUrlMapRequest request = new ValidateRegionUrlMapRequest
             {
                 RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest(),
@@ -202,7 +202,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ValidateRequestObjectAsync()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateRegionUrlMapRequest request = new ValidateRegionUrlMapRequest
             {
                 RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest(),
@@ -227,7 +227,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Validate()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateRegionUrlMapRequest request = new ValidateRegionUrlMapRequest
             {
                 RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest(),
@@ -250,7 +250,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ValidateAsync()
         {
             moq::Mock<RegionUrlMaps.RegionUrlMapsClient> mockGrpcClient = new moq::Mock<RegionUrlMaps.RegionUrlMapsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ValidateRegionUrlMapRequest request = new ValidateRegionUrlMapRequest
             {
                 RegionUrlMapsValidateRequestResource = new RegionUrlMapsValidateRequest(),

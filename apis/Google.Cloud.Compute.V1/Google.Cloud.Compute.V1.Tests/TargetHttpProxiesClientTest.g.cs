@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<TargetHttpProxies.TargetHttpProxiesClient> mockGrpcClient = new moq::Mock<TargetHttpProxies.TargetHttpProxiesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetHttpProxyRequest request = new GetTargetHttpProxyRequest
             {
                 TargetHttpProxy = "target_http_proxy02d2fd7b",
@@ -61,7 +61,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<TargetHttpProxies.TargetHttpProxiesClient> mockGrpcClient = new moq::Mock<TargetHttpProxies.TargetHttpProxiesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetHttpProxyRequest request = new GetTargetHttpProxyRequest
             {
                 TargetHttpProxy = "target_http_proxy02d2fd7b",
@@ -93,7 +93,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<TargetHttpProxies.TargetHttpProxiesClient> mockGrpcClient = new moq::Mock<TargetHttpProxies.TargetHttpProxiesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetHttpProxyRequest request = new GetTargetHttpProxyRequest
             {
                 TargetHttpProxy = "target_http_proxy02d2fd7b",
@@ -123,7 +123,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<TargetHttpProxies.TargetHttpProxiesClient> mockGrpcClient = new moq::Mock<TargetHttpProxies.TargetHttpProxiesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetHttpProxyRequest request = new GetTargetHttpProxyRequest
             {
                 TargetHttpProxy = "target_http_proxy02d2fd7b",

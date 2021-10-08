@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkRequest request = new GetNetworkRequest
             {
                 Project = "projectaa6ff846",
@@ -70,7 +70,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkRequest request = new GetNetworkRequest
             {
                 Project = "projectaa6ff846",
@@ -111,7 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkRequest request = new GetNetworkRequest
             {
                 Project = "projectaa6ff846",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkRequest request = new GetNetworkRequest
             {
                 Project = "projectaa6ff846",
@@ -191,7 +191,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetEffectiveFirewallsRequestObject()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsNetworkRequest request = new GetEffectiveFirewallsNetworkRequest
             {
                 Project = "projectaa6ff846",
@@ -216,7 +216,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetEffectiveFirewallsRequestObjectAsync()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsNetworkRequest request = new GetEffectiveFirewallsNetworkRequest
             {
                 Project = "projectaa6ff846",
@@ -243,7 +243,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetEffectiveFirewalls()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsNetworkRequest request = new GetEffectiveFirewallsNetworkRequest
             {
                 Project = "projectaa6ff846",
@@ -268,7 +268,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetEffectiveFirewallsAsync()
         {
             moq::Mock<Networks.NetworksClient> mockGrpcClient = new moq::Mock<Networks.NetworksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetEffectiveFirewallsNetworkRequest request = new GetEffectiveFirewallsNetworkRequest
             {
                 Project = "projectaa6ff846",

@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient> mockGrpcClient = new moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalForwardingRuleRequest request = new GetGlobalForwardingRuleRequest
             {
                 Project = "projectaa6ff846",
@@ -92,7 +92,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient> mockGrpcClient = new moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalForwardingRuleRequest request = new GetGlobalForwardingRuleRequest
             {
                 Project = "projectaa6ff846",
@@ -155,7 +155,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient> mockGrpcClient = new moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalForwardingRuleRequest request = new GetGlobalForwardingRuleRequest
             {
                 Project = "projectaa6ff846",
@@ -216,7 +216,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient> mockGrpcClient = new moq::Mock<GlobalForwardingRules.GlobalForwardingRulesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetGlobalForwardingRuleRequest request = new GetGlobalForwardingRuleRequest
             {
                 Project = "projectaa6ff846",

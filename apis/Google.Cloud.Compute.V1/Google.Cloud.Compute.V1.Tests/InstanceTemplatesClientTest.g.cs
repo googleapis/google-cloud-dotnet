@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceTemplateRequest request = new GetInstanceTemplateRequest
             {
                 Project = "projectaa6ff846",
@@ -60,7 +60,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceTemplateRequest request = new GetInstanceTemplateRequest
             {
                 Project = "projectaa6ff846",
@@ -91,7 +91,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceTemplateRequest request = new GetInstanceTemplateRequest
             {
                 Project = "projectaa6ff846",
@@ -120,7 +120,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceTemplateRequest request = new GetInstanceTemplateRequest
             {
                 Project = "projectaa6ff846",
@@ -151,7 +151,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceTemplateRequest request = new GetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -178,7 +178,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceTemplateRequest request = new GetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -207,7 +207,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceTemplateRequest request = new GetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -233,7 +233,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyInstanceTemplateRequest request = new GetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -261,7 +261,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceTemplateRequest request = new SetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -288,7 +288,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceTemplateRequest request = new SetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -317,7 +317,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceTemplateRequest request = new SetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -344,7 +344,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyInstanceTemplateRequest request = new SetIamPolicyInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -373,7 +373,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceTemplateRequest request = new TestIamPermissionsInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -398,7 +398,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceTemplateRequest request = new TestIamPermissionsInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -425,7 +425,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceTemplateRequest request = new TestIamPermissionsInstanceTemplateRequest
             {
                 Resource = "resource164eab96",
@@ -450,7 +450,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<InstanceTemplates.InstanceTemplatesClient> mockGrpcClient = new moq::Mock<InstanceTemplates.InstanceTemplatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsInstanceTemplateRequest request = new TestIamPermissionsInstanceTemplateRequest
             {
                 Resource = "resource164eab96",

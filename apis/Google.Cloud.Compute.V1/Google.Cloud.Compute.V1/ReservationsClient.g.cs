@@ -1292,9 +1292,9 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             ReservationsSettings effectiveSettings = settings ?? ReservationsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ResizeOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings);
+            ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResizeOperationsSettings);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListReservationsRequest, ReservationAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
@@ -1406,7 +1406,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteReservationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteReservationRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1418,7 +1421,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteReservationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteReservationRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1481,7 +1487,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertReservationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertReservationRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1493,7 +1502,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertReservationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertReservationRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1532,7 +1544,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Resize(ResizeReservationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResizeReservationRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callResize.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), ResizeOperationsClient);
+            Operation response = _callResize.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResizeOperationsClient);
         }
 
         /// <summary>
@@ -1544,7 +1559,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> ResizeAsync(ResizeReservationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResizeReservationRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callResize.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), ResizeOperationsClient);
+            Operation response = await _callResize.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResizeOperationsClient);
         }
 
         /// <summary>
@@ -1638,11 +1656,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to ZoneOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateZonalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForZoneOperations() =>
+                ZoneOperations.ZoneOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProjectRequest request = new GetProjectRequest
             {
                 Project = "projectaa6ff846",
@@ -66,7 +66,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProjectRequest request = new GetProjectRequest
             {
                 Project = "projectaa6ff846",
@@ -103,7 +103,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProjectRequest request = new GetProjectRequest
             {
                 Project = "projectaa6ff846",
@@ -138,7 +138,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetProjectRequest request = new GetProjectRequest
             {
                 Project = "projectaa6ff846",
@@ -175,7 +175,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetXpnHostRequestObject()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetXpnHostProjectRequest request = new GetXpnHostProjectRequest
             {
                 Project = "projectaa6ff846",
@@ -210,7 +210,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetXpnHostRequestObjectAsync()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetXpnHostProjectRequest request = new GetXpnHostProjectRequest
             {
                 Project = "projectaa6ff846",
@@ -247,7 +247,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetXpnHost()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetXpnHostProjectRequest request = new GetXpnHostProjectRequest
             {
                 Project = "projectaa6ff846",
@@ -282,7 +282,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetXpnHostAsync()
         {
             moq::Mock<Projects.ProjectsClient> mockGrpcClient = new moq::Mock<Projects.ProjectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetXpnHostProjectRequest request = new GetXpnHostProjectRequest
             {
                 Project = "projectaa6ff846",

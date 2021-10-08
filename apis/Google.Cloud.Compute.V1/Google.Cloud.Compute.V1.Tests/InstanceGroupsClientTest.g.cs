@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<InstanceGroups.InstanceGroupsClient> mockGrpcClient = new moq::Mock<InstanceGroups.InstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceGroupRequest request = new GetInstanceGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -65,7 +65,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<InstanceGroups.InstanceGroupsClient> mockGrpcClient = new moq::Mock<InstanceGroups.InstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceGroupRequest request = new GetInstanceGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -101,7 +101,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<InstanceGroups.InstanceGroupsClient> mockGrpcClient = new moq::Mock<InstanceGroups.InstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceGroupRequest request = new GetInstanceGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -135,7 +135,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<InstanceGroups.InstanceGroupsClient> mockGrpcClient = new moq::Mock<InstanceGroups.InstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceGroupRequest request = new GetInstanceGroupRequest
             {
                 Zone = "zone255f4ea8",

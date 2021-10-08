@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<RegionSslCertificates.RegionSslCertificatesClient> mockGrpcClient = new moq::Mock<RegionSslCertificates.RegionSslCertificatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionSslCertificateRequest request = new GetRegionSslCertificateRequest
             {
                 SslCertificate = "ssl_certificate25650c52",
@@ -69,7 +69,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionSslCertificates.RegionSslCertificatesClient> mockGrpcClient = new moq::Mock<RegionSslCertificates.RegionSslCertificatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionSslCertificateRequest request = new GetRegionSslCertificateRequest
             {
                 SslCertificate = "ssl_certificate25650c52",
@@ -109,7 +109,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionSslCertificates.RegionSslCertificatesClient> mockGrpcClient = new moq::Mock<RegionSslCertificates.RegionSslCertificatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionSslCertificateRequest request = new GetRegionSslCertificateRequest
             {
                 SslCertificate = "ssl_certificate25650c52",
@@ -147,7 +147,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionSslCertificates.RegionSslCertificatesClient> mockGrpcClient = new moq::Mock<RegionSslCertificates.RegionSslCertificatesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionSslCertificateRequest request = new GetRegionSslCertificateRequest
             {
                 SslCertificate = "ssl_certificate25650c52",

@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient> mockGrpcClient = new moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionInstanceGroupRequest request = new GetRegionInstanceGroupRequest
             {
                 InstanceGroup = "instance_group6bf5a5ef",
@@ -65,7 +65,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient> mockGrpcClient = new moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionInstanceGroupRequest request = new GetRegionInstanceGroupRequest
             {
                 InstanceGroup = "instance_group6bf5a5ef",
@@ -101,7 +101,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient> mockGrpcClient = new moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionInstanceGroupRequest request = new GetRegionInstanceGroupRequest
             {
                 InstanceGroup = "instance_group6bf5a5ef",
@@ -135,7 +135,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient> mockGrpcClient = new moq::Mock<RegionInstanceGroups.RegionInstanceGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionInstanceGroupRequest request = new GetRegionInstanceGroupRequest
             {
                 InstanceGroup = "instance_group6bf5a5ef",

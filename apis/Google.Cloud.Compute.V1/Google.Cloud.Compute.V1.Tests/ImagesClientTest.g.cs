@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -100,7 +100,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -171,7 +171,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -240,7 +240,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -311,7 +311,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetFromFamilyRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -380,7 +380,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetFromFamilyRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -451,7 +451,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetFromFamily()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -520,7 +520,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetFromFamilyAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -591,7 +591,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -618,7 +618,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -647,7 +647,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -673,7 +673,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -701,7 +701,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -728,7 +728,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -757,7 +757,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -784,7 +784,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -813,7 +813,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",
@@ -838,7 +838,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",
@@ -865,7 +865,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",
@@ -890,7 +890,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",

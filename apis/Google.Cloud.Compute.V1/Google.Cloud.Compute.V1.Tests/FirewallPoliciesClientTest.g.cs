@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -70,7 +70,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -111,7 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFirewallPolicyRequest request = new GetFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -191,7 +191,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetAssociationRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 Name = "name1c9368b0",
@@ -216,7 +216,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAssociationRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 Name = "name1c9368b0",
@@ -243,7 +243,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetAssociation()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -267,7 +267,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAssociationAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetAssociationFirewallPolicyRequest request = new GetAssociationFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -293,7 +293,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -319,7 +319,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -347,7 +347,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -372,7 +372,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyFirewallPolicyRequest request = new GetIamPolicyFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -399,7 +399,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRuleRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 Priority = 1546225849,
@@ -436,7 +436,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRuleRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 Priority = 1546225849,
@@ -475,7 +475,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRule()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -511,7 +511,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRuleAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleFirewallPolicyRequest request = new GetRuleFirewallPolicyRequest
             {
                 FirewallPolicy = "firewall_policy1f9c9144",
@@ -549,7 +549,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void ListAssociationsRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest
             {
                 TargetResource = "target_resource7041731f",
@@ -573,7 +573,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ListAssociationsRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest
             {
                 TargetResource = "target_resource7041731f",
@@ -599,7 +599,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void ListAssociations()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest { };
             FirewallPoliciesListAssociationsResponse expectedResponse = new FirewallPoliciesListAssociationsResponse
             {
@@ -620,7 +620,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ListAssociationsAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListAssociationsFirewallPolicyRequest request = new ListAssociationsFirewallPolicyRequest { };
             FirewallPoliciesListAssociationsResponse expectedResponse = new FirewallPoliciesListAssociationsResponse
             {
@@ -643,7 +643,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -669,7 +669,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -697,7 +697,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -723,7 +723,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyFirewallPolicyRequest request = new SetIamPolicyFirewallPolicyRequest
             {
                 GlobalOrganizationSetPolicyRequestResource = new GlobalOrganizationSetPolicyRequest(),
@@ -751,7 +751,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -775,7 +775,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -801,7 +801,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",
@@ -825,7 +825,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<FirewallPolicies.FirewallPoliciesClient> mockGrpcClient = new moq::Mock<FirewallPolicies.FirewallPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOrganizationOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsFirewallPolicyRequest request = new TestIamPermissionsFirewallPolicyRequest
             {
                 Resource = "resource164eab96",

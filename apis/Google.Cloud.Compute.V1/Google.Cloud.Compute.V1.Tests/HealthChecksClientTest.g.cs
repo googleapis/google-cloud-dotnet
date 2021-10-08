@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<HealthChecks.HealthChecksClient> mockGrpcClient = new moq::Mock<HealthChecks.HealthChecksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthCheckRequest request = new GetHealthCheckRequest
             {
                 Project = "projectaa6ff846",
@@ -70,7 +70,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<HealthChecks.HealthChecksClient> mockGrpcClient = new moq::Mock<HealthChecks.HealthChecksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthCheckRequest request = new GetHealthCheckRequest
             {
                 Project = "projectaa6ff846",
@@ -111,7 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<HealthChecks.HealthChecksClient> mockGrpcClient = new moq::Mock<HealthChecks.HealthChecksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthCheckRequest request = new GetHealthCheckRequest
             {
                 Project = "projectaa6ff846",
@@ -150,7 +150,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<HealthChecks.HealthChecksClient> mockGrpcClient = new moq::Mock<HealthChecks.HealthChecksClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthCheckRequest request = new GetHealthCheckRequest
             {
                 Project = "projectaa6ff846",

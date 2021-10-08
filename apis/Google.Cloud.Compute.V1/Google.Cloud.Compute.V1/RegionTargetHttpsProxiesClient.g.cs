@@ -1046,10 +1046,10 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             RegionTargetHttpsProxiesSettings effectiveSettings = settings ?? RegionTargetHttpsProxiesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSslCertificatesOperationsSettings);
-            SetUrlMapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetUrlMapOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
+            SetSslCertificatesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetSslCertificatesOperationsSettings);
+            SetUrlMapOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetUrlMapOperationsSettings);
             _callDelete = clientHelper.BuildApiCall<DeleteRegionTargetHttpsProxyRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("target_https_proxy", request => request.TargetHttpsProxy);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1114,7 +1114,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1126,7 +1129,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1165,7 +1171,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1177,7 +1186,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1216,7 +1228,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetSslCertificates(SetSslCertificatesRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSslCertificatesRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetSslCertificates.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), SetSslCertificatesOperationsClient);
+            Operation response = _callSetSslCertificates.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSslCertificatesOperationsClient);
         }
 
         /// <summary>
@@ -1228,7 +1243,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetSslCertificatesAsync(SetSslCertificatesRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSslCertificatesRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetSslCertificates.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), SetSslCertificatesOperationsClient);
+            Operation response = await _callSetSslCertificates.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSslCertificatesOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetUrlMap</c>.</summary>
@@ -1243,7 +1261,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetUrlMap(SetUrlMapRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetUrlMapRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetUrlMap.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), SetUrlMapOperationsClient);
+            Operation response = _callSetUrlMap.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetUrlMapOperationsClient);
         }
 
         /// <summary>
@@ -1255,7 +1276,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetUrlMapAsync(SetUrlMapRegionTargetHttpsProxyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetUrlMapRegionTargetHttpsProxyRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetUrlMap.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), SetUrlMapOperationsClient);
+            Operation response = await _callSetUrlMap.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetUrlMapOperationsClient);
         }
     }
 
@@ -1283,11 +1307,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to RegionOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateRegionalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

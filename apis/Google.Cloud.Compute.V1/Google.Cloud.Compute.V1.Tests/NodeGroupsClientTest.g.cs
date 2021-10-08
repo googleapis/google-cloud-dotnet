@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -67,7 +67,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -105,7 +105,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -141,7 +141,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -179,7 +179,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -207,7 +207,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -237,7 +237,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -264,7 +264,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -293,7 +293,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -321,7 +321,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -351,7 +351,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -379,7 +379,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -409,7 +409,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -435,7 +435,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -463,7 +463,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -489,7 +489,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",

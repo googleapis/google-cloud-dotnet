@@ -1777,15 +1777,15 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             ProjectsSettings effectiveSettings = settings ?? ProjectsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DisableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableXpnHostOperationsSettings);
-            DisableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DisableXpnResourceOperationsSettings);
-            EnableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableXpnHostOperationsSettings);
-            EnableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EnableXpnResourceOperationsSettings);
-            MoveDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveDiskOperationsSettings);
-            MoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveInstanceOperationsSettings);
-            SetCommonInstanceMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetCommonInstanceMetadataOperationsSettings);
-            SetDefaultNetworkTierOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetDefaultNetworkTierOperationsSettings);
-            SetUsageExportBucketOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetUsageExportBucketOperationsSettings);
+            DisableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnHostOperationsSettings);
+            DisableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DisableXpnResourceOperationsSettings);
+            EnableXpnHostOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnHostOperationsSettings);
+            EnableXpnResourceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.EnableXpnResourceOperationsSettings);
+            MoveDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveDiskOperationsSettings);
+            MoveInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.MoveInstanceOperationsSettings);
+            SetCommonInstanceMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetCommonInstanceMetadataOperationsSettings);
+            SetDefaultNetworkTierOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetDefaultNetworkTierOperationsSettings);
+            SetUsageExportBucketOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetUsageExportBucketOperationsSettings);
             _callDisableXpnHost = clientHelper.BuildApiCall<DisableXpnHostProjectRequest, Operation>(grpcClient.DisableXpnHostAsync, grpcClient.DisableXpnHost, effectiveSettings.DisableXpnHostSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callDisableXpnHost);
             Modify_DisableXpnHostApiCall(ref _callDisableXpnHost);
@@ -1899,7 +1899,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> DisableXpnHost(DisableXpnHostProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DisableXpnHostProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDisableXpnHost.Sync(request, callSettings).ToGlobalOperation(request.Project), DisableXpnHostOperationsClient);
+            Operation response = _callDisableXpnHost.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DisableXpnHostOperationsClient);
         }
 
         /// <summary>
@@ -1911,7 +1914,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DisableXpnHostAsync(DisableXpnHostProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DisableXpnHostProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDisableXpnHost.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DisableXpnHostOperationsClient);
+            Operation response = await _callDisableXpnHost.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DisableXpnHostOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DisableXpnResource</c>.</summary>
@@ -1926,7 +1932,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> DisableXpnResource(DisableXpnResourceProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DisableXpnResourceProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDisableXpnResource.Sync(request, callSettings).ToGlobalOperation(request.Project), DisableXpnResourceOperationsClient);
+            Operation response = _callDisableXpnResource.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DisableXpnResourceOperationsClient);
         }
 
         /// <summary>
@@ -1938,7 +1947,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DisableXpnResourceAsync(DisableXpnResourceProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DisableXpnResourceProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDisableXpnResource.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DisableXpnResourceOperationsClient);
+            Operation response = await _callDisableXpnResource.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DisableXpnResourceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>EnableXpnHost</c>.</summary>
@@ -1953,7 +1965,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> EnableXpnHost(EnableXpnHostProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_EnableXpnHostProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callEnableXpnHost.Sync(request, callSettings).ToGlobalOperation(request.Project), EnableXpnHostOperationsClient);
+            Operation response = _callEnableXpnHost.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), EnableXpnHostOperationsClient);
         }
 
         /// <summary>
@@ -1965,7 +1980,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> EnableXpnHostAsync(EnableXpnHostProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_EnableXpnHostProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callEnableXpnHost.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), EnableXpnHostOperationsClient);
+            Operation response = await _callEnableXpnHost.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), EnableXpnHostOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>EnableXpnResource</c>.</summary>
@@ -1980,7 +1998,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> EnableXpnResource(EnableXpnResourceProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_EnableXpnResourceProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callEnableXpnResource.Sync(request, callSettings).ToGlobalOperation(request.Project), EnableXpnResourceOperationsClient);
+            Operation response = _callEnableXpnResource.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), EnableXpnResourceOperationsClient);
         }
 
         /// <summary>
@@ -1992,7 +2013,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> EnableXpnResourceAsync(EnableXpnResourceProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_EnableXpnResourceProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callEnableXpnResource.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), EnableXpnResourceOperationsClient);
+            Operation response = await _callEnableXpnResource.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), EnableXpnResourceOperationsClient);
         }
 
         /// <summary>
@@ -2103,7 +2127,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> MoveDisk(MoveDiskProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_MoveDiskProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callMoveDisk.Sync(request, callSettings).ToGlobalOperation(request.Project), MoveDiskOperationsClient);
+            Operation response = _callMoveDisk.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), MoveDiskOperationsClient);
         }
 
         /// <summary>
@@ -2115,7 +2142,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> MoveDiskAsync(MoveDiskProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_MoveDiskProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callMoveDisk.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), MoveDiskOperationsClient);
+            Operation response = await _callMoveDisk.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), MoveDiskOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>MoveInstance</c>.</summary>
@@ -2130,7 +2160,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> MoveInstance(MoveInstanceProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_MoveInstanceProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callMoveInstance.Sync(request, callSettings).ToGlobalOperation(request.Project), MoveInstanceOperationsClient);
+            Operation response = _callMoveInstance.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), MoveInstanceOperationsClient);
         }
 
         /// <summary>
@@ -2142,7 +2175,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> MoveInstanceAsync(MoveInstanceProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_MoveInstanceProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callMoveInstance.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), MoveInstanceOperationsClient);
+            Operation response = await _callMoveInstance.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), MoveInstanceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetCommonInstanceMetadata</c>.</summary>
@@ -2157,7 +2193,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetCommonInstanceMetadata(SetCommonInstanceMetadataProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetCommonInstanceMetadataProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetCommonInstanceMetadata.Sync(request, callSettings).ToGlobalOperation(request.Project), SetCommonInstanceMetadataOperationsClient);
+            Operation response = _callSetCommonInstanceMetadata.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetCommonInstanceMetadataOperationsClient);
         }
 
         /// <summary>
@@ -2169,7 +2208,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetCommonInstanceMetadataAsync(SetCommonInstanceMetadataProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetCommonInstanceMetadataProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetCommonInstanceMetadata.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetCommonInstanceMetadataOperationsClient);
+            Operation response = await _callSetCommonInstanceMetadata.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetCommonInstanceMetadataOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetDefaultNetworkTier</c>.</summary>
@@ -2184,7 +2226,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetDefaultNetworkTier(SetDefaultNetworkTierProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetDefaultNetworkTierProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetDefaultNetworkTier.Sync(request, callSettings).ToGlobalOperation(request.Project), SetDefaultNetworkTierOperationsClient);
+            Operation response = _callSetDefaultNetworkTier.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetDefaultNetworkTierOperationsClient);
         }
 
         /// <summary>
@@ -2196,7 +2241,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetDefaultNetworkTierAsync(SetDefaultNetworkTierProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetDefaultNetworkTierProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetDefaultNetworkTier.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetDefaultNetworkTierOperationsClient);
+            Operation response = await _callSetDefaultNetworkTier.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetDefaultNetworkTierOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetUsageExportBucket</c>.</summary>
@@ -2211,7 +2259,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetUsageExportBucket(SetUsageExportBucketProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetUsageExportBucketProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetUsageExportBucket.Sync(request, callSettings).ToGlobalOperation(request.Project), SetUsageExportBucketOperationsClient);
+            Operation response = _callSetUsageExportBucket.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetUsageExportBucketOperationsClient);
         }
 
         /// <summary>
@@ -2223,7 +2274,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetUsageExportBucketAsync(SetUsageExportBucketProjectRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetUsageExportBucketProjectRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetUsageExportBucket.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetUsageExportBucketOperationsClient);
+            Operation response = await _callSetUsageExportBucket.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetUsageExportBucketOperationsClient);
         }
     }
 
@@ -2269,11 +2323,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

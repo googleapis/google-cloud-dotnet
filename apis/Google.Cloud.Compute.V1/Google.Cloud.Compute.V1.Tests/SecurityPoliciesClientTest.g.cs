@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSecurityPolicyRequest request = new GetSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -62,7 +62,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSecurityPolicyRequest request = new GetSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -95,7 +95,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSecurityPolicyRequest request = new GetSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -126,7 +126,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetSecurityPolicyRequest request = new GetSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -159,7 +159,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRuleRequestObject()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleSecurityPolicyRequest request = new GetRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -186,7 +186,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRuleRequestObjectAsync()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleSecurityPolicyRequest request = new GetRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -215,7 +215,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRule()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleSecurityPolicyRequest request = new GetRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -241,7 +241,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRuleAsync()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRuleSecurityPolicyRequest request = new GetRuleSecurityPolicyRequest
             {
                 SecurityPolicy = "security_policy76596315",
@@ -269,7 +269,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void ListPreconfiguredExpressionSetsRequestObject()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListPreconfiguredExpressionSetsSecurityPoliciesRequest request = new ListPreconfiguredExpressionSetsSecurityPoliciesRequest
             {
                 PageToken = "page_tokenf09e5538",
@@ -294,7 +294,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ListPreconfiguredExpressionSetsRequestObjectAsync()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListPreconfiguredExpressionSetsSecurityPoliciesRequest request = new ListPreconfiguredExpressionSetsSecurityPoliciesRequest
             {
                 PageToken = "page_tokenf09e5538",
@@ -321,7 +321,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void ListPreconfiguredExpressionSets()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListPreconfiguredExpressionSetsSecurityPoliciesRequest request = new ListPreconfiguredExpressionSetsSecurityPoliciesRequest
             {
                 Project = "projectaa6ff846",
@@ -341,7 +341,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task ListPreconfiguredExpressionSetsAsync()
         {
             moq::Mock<SecurityPolicies.SecurityPoliciesClient> mockGrpcClient = new moq::Mock<SecurityPolicies.SecurityPoliciesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ListPreconfiguredExpressionSetsSecurityPoliciesRequest request = new ListPreconfiguredExpressionSetsSecurityPoliciesRequest
             {
                 Project = "projectaa6ff846",

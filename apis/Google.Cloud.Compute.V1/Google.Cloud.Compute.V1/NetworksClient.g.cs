@@ -1587,13 +1587,13 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             NetworksSettings effectiveSettings = settings ?? NetworksSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddPeeringOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchOperationsSettings);
-            RemovePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RemovePeeringOperationsSettings);
-            SwitchToCustomModeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchToCustomModeOperationsSettings);
-            UpdatePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdatePeeringOperationsSettings);
+            AddPeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddPeeringOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            RemovePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemovePeeringOperationsSettings);
+            SwitchToCustomModeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SwitchToCustomModeOperationsSettings);
+            UpdatePeeringOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdatePeeringOperationsSettings);
             _callAddPeering = clientHelper.BuildApiCall<AddPeeringNetworkRequest, Operation>(grpcClient.AddPeeringAsync, grpcClient.AddPeering, effectiveSettings.AddPeeringSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network", request => request.Network);
             Modify_ApiCall(ref _callAddPeering);
             Modify_AddPeeringApiCall(ref _callAddPeering);
@@ -1693,7 +1693,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> AddPeering(AddPeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddPeeringNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callAddPeering.Sync(request, callSettings).ToGlobalOperation(request.Project), AddPeeringOperationsClient);
+            Operation response = _callAddPeering.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddPeeringOperationsClient);
         }
 
         /// <summary>
@@ -1705,7 +1708,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> AddPeeringAsync(AddPeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddPeeringNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callAddPeering.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), AddPeeringOperationsClient);
+            Operation response = await _callAddPeering.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddPeeringOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
@@ -1720,7 +1726,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1732,7 +1741,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1795,7 +1807,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1807,7 +1822,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1870,7 +1888,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Patch(PatchNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatch.Sync(request, callSettings).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -1882,7 +1903,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatch.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>RemovePeering</c>.</summary>
@@ -1897,7 +1921,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> RemovePeering(RemovePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemovePeeringNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callRemovePeering.Sync(request, callSettings).ToGlobalOperation(request.Project), RemovePeeringOperationsClient);
+            Operation response = _callRemovePeering.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemovePeeringOperationsClient);
         }
 
         /// <summary>
@@ -1909,7 +1936,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> RemovePeeringAsync(RemovePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemovePeeringNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callRemovePeering.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), RemovePeeringOperationsClient);
+            Operation response = await _callRemovePeering.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemovePeeringOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SwitchToCustomMode</c>.</summary>
@@ -1924,7 +1954,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SwitchToCustomMode(SwitchToCustomModeNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SwitchToCustomModeNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSwitchToCustomMode.Sync(request, callSettings).ToGlobalOperation(request.Project), SwitchToCustomModeOperationsClient);
+            Operation response = _callSwitchToCustomMode.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SwitchToCustomModeOperationsClient);
         }
 
         /// <summary>
@@ -1936,7 +1969,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SwitchToCustomModeAsync(SwitchToCustomModeNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SwitchToCustomModeNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSwitchToCustomMode.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SwitchToCustomModeOperationsClient);
+            Operation response = await _callSwitchToCustomMode.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SwitchToCustomModeOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>UpdatePeering</c>.</summary>
@@ -1951,7 +1987,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> UpdatePeering(UpdatePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdatePeeringNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callUpdatePeering.Sync(request, callSettings).ToGlobalOperation(request.Project), UpdatePeeringOperationsClient);
+            Operation response = _callUpdatePeering.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdatePeeringOperationsClient);
         }
 
         /// <summary>
@@ -1963,7 +2002,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> UpdatePeeringAsync(UpdatePeeringNetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdatePeeringNetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callUpdatePeering.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), UpdatePeeringOperationsClient);
+            Operation response = await _callUpdatePeering.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdatePeeringOperationsClient);
         }
     }
 
@@ -2009,11 +2051,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

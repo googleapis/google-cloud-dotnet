@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<TargetInstances.TargetInstancesClient> mockGrpcClient = new moq::Mock<TargetInstances.TargetInstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetInstanceRequest request = new GetTargetInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -61,7 +61,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<TargetInstances.TargetInstancesClient> mockGrpcClient = new moq::Mock<TargetInstances.TargetInstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetInstanceRequest request = new GetTargetInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -93,7 +93,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<TargetInstances.TargetInstancesClient> mockGrpcClient = new moq::Mock<TargetInstances.TargetInstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetInstanceRequest request = new GetTargetInstanceRequest
             {
                 Zone = "zone255f4ea8",
@@ -123,7 +123,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<TargetInstances.TargetInstancesClient> mockGrpcClient = new moq::Mock<TargetInstances.TargetInstancesClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTargetInstanceRequest request = new GetTargetInstanceRequest
             {
                 Zone = "zone255f4ea8",

@@ -1694,11 +1694,11 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             SubnetworksSettings effectiveSettings = settings ?? SubnetworksSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            ExpandIpCidrRangeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExpandIpCidrRangeOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchOperationsSettings);
-            SetPrivateIpGoogleAccessOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetPrivateIpGoogleAccessOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
+            ExpandIpCidrRangeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ExpandIpCidrRangeOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings);
+            SetPrivateIpGoogleAccessOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetPrivateIpGoogleAccessOperationsSettings);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListSubnetworksRequest, SubnetworkAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
@@ -1831,7 +1831,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1843,7 +1846,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>ExpandIpCidrRange</c>.</summary>
@@ -1858,7 +1864,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> ExpandIpCidrRange(ExpandIpCidrRangeSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ExpandIpCidrRangeSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callExpandIpCidrRange.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), ExpandIpCidrRangeOperationsClient);
+            Operation response = _callExpandIpCidrRange.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ExpandIpCidrRangeOperationsClient);
         }
 
         /// <summary>
@@ -1870,7 +1879,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> ExpandIpCidrRangeAsync(ExpandIpCidrRangeSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ExpandIpCidrRangeSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callExpandIpCidrRange.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), ExpandIpCidrRangeOperationsClient);
+            Operation response = await _callExpandIpCidrRange.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ExpandIpCidrRangeOperationsClient);
         }
 
         /// <summary>
@@ -1933,7 +1945,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1945,7 +1960,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -2008,7 +2026,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Patch(PatchSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatch.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), PatchOperationsClient);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -2020,7 +2041,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatch.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), PatchOperationsClient);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -2059,7 +2083,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetPrivateIpGoogleAccess(SetPrivateIpGoogleAccessSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetPrivateIpGoogleAccessSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetPrivateIpGoogleAccess.Sync(request, callSettings).ToRegionalOperation(request.Project, request.Region), SetPrivateIpGoogleAccessOperationsClient);
+            Operation response = _callSetPrivateIpGoogleAccess.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetPrivateIpGoogleAccessOperationsClient);
         }
 
         /// <summary>
@@ -2071,7 +2098,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetPrivateIpGoogleAccessAsync(SetPrivateIpGoogleAccessSubnetworkRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetPrivateIpGoogleAccessSubnetworkRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetPrivateIpGoogleAccess.Async(request, callSettings).ConfigureAwait(false)).ToRegionalOperation(request.Project, request.Region), SetPrivateIpGoogleAccessOperationsClient);
+            Operation response = await _callSetPrivateIpGoogleAccess.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetPrivateIpGoogleAccessOperationsClient);
         }
 
         /// <summary>
@@ -2159,11 +2189,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to RegionOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateRegionalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

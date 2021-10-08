@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -82,7 +82,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -135,7 +135,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -186,7 +186,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -239,7 +239,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetDiagnosticsRequestObject()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -260,7 +260,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetDiagnosticsRequestObjectAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -283,7 +283,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetDiagnostics()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -304,7 +304,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetDiagnosticsAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",

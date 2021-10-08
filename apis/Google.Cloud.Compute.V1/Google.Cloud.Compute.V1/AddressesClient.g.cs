@@ -902,7 +902,6 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteAddressRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAddressRequest(ref request, ref callSettings);
-
             Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
@@ -948,7 +947,7 @@ namespace Google.Cloud.Compute.V1
             Operation response = _callInsert.Sync(request, callSettings);
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
-            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -963,7 +962,7 @@ namespace Google.Cloud.Compute.V1
             Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
-            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1025,5 +1024,19 @@ namespace Google.Cloud.Compute.V1
         public scg::IEnumerator<Address> GetEnumerator() => Items.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class Addresses
+    {
+        public partial class AddressesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client, delegating to RegionOperations.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
+        }
     }
 }

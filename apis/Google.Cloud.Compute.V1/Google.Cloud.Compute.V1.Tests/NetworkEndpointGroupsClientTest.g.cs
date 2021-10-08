@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkEndpointGroupRequest request = new GetNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -75,7 +75,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkEndpointGroupRequest request = new GetNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -121,7 +121,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkEndpointGroupRequest request = new GetNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -165,7 +165,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNetworkEndpointGroupRequest request = new GetNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -211,7 +211,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNetworkEndpointGroupRequest request = new TestIamPermissionsNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -237,7 +237,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNetworkEndpointGroupRequest request = new TestIamPermissionsNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -265,7 +265,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNetworkEndpointGroupRequest request = new TestIamPermissionsNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -291,7 +291,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<NetworkEndpointGroups.NetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNetworkEndpointGroupRequest request = new TestIamPermissionsNetworkEndpointGroupRequest
             {
                 Zone = "zone255f4ea8",

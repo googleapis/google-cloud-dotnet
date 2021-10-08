@@ -1357,10 +1357,10 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             NetworkEndpointGroupsSettings effectiveSettings = settings ?? NetworkEndpointGroupsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AttachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AttachNetworkEndpointsOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            DetachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DetachNetworkEndpointsOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
+            AttachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachNetworkEndpointsOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings);
+            DetachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachNetworkEndpointsOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListNetworkEndpointGroupsRequest, NetworkEndpointGroupAggregatedList>(grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
@@ -1472,7 +1472,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> AttachNetworkEndpoints(AttachNetworkEndpointsNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AttachNetworkEndpointsNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callAttachNetworkEndpoints.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), AttachNetworkEndpointsOperationsClient);
+            Operation response = _callAttachNetworkEndpoints.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AttachNetworkEndpointsOperationsClient);
         }
 
         /// <summary>
@@ -1484,7 +1487,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> AttachNetworkEndpointsAsync(AttachNetworkEndpointsNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AttachNetworkEndpointsNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callAttachNetworkEndpoints.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), AttachNetworkEndpointsOperationsClient);
+            Operation response = await _callAttachNetworkEndpoints.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AttachNetworkEndpointsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
@@ -1499,7 +1505,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1511,7 +1520,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DetachNetworkEndpoints</c>.</summary>
@@ -1526,7 +1538,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> DetachNetworkEndpoints(DetachNetworkEndpointsNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DetachNetworkEndpointsNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDetachNetworkEndpoints.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), DetachNetworkEndpointsOperationsClient);
+            Operation response = _callDetachNetworkEndpoints.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DetachNetworkEndpointsOperationsClient);
         }
 
         /// <summary>
@@ -1538,7 +1553,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DetachNetworkEndpointsAsync(DetachNetworkEndpointsNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DetachNetworkEndpointsNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDetachNetworkEndpoints.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), DetachNetworkEndpointsOperationsClient);
+            Operation response = await _callDetachNetworkEndpoints.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DetachNetworkEndpointsOperationsClient);
         }
 
         /// <summary>
@@ -1577,7 +1595,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1589,7 +1610,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToZonalOperation(request.Project, request.Zone), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1712,11 +1736,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to ZoneOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateZonalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForZoneOperations() =>
+                ZoneOperations.ZoneOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

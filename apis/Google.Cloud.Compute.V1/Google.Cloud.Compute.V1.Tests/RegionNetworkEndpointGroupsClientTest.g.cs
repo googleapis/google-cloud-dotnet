@@ -31,7 +31,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetRequestObject()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",
@@ -75,7 +75,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",
@@ -121,7 +121,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",
@@ -165,7 +165,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient> mockGrpcClient = new moq::Mock<RegionNetworkEndpointGroups.RegionNetworkEndpointGroupsClient>(moq::MockBehavior.Strict);
-            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionNetworkEndpointGroupRequest request = new GetRegionNetworkEndpointGroupRequest
             {
                 Region = "regionedb20d96",

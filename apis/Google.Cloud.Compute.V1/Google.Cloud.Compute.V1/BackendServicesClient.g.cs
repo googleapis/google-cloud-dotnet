@@ -1628,13 +1628,13 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             BackendServicesSettings effectiveSettings = settings ?? BackendServicesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            AddSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddSignedUrlKeyOperationsSettings);
-            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOperationsSettings);
-            DeleteSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSignedUrlKeyOperationsSettings);
-            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InsertOperationsSettings);
-            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PatchOperationsSettings);
-            SetSecurityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetSecurityPolicyOperationsSettings);
-            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOperationsSettings);
+            AddSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddSignedUrlKeyOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            DeleteSignedUrlKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteSignedUrlKeyOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            SetSecurityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetSecurityPolicyOperationsSettings);
+            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.UpdateOperationsSettings);
             _callAddSignedUrlKey = clientHelper.BuildApiCall<AddSignedUrlKeyBackendServiceRequest, Operation>(grpcClient.AddSignedUrlKeyAsync, grpcClient.AddSignedUrlKey, effectiveSettings.AddSignedUrlKeySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_service", request => request.BackendService);
             Modify_ApiCall(ref _callAddSignedUrlKey);
             Modify_AddSignedUrlKeyApiCall(ref _callAddSignedUrlKey);
@@ -1734,7 +1734,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> AddSignedUrlKey(AddSignedUrlKeyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddSignedUrlKeyBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callAddSignedUrlKey.Sync(request, callSettings).ToGlobalOperation(request.Project), AddSignedUrlKeyOperationsClient);
+            Operation response = _callAddSignedUrlKey.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddSignedUrlKeyOperationsClient);
         }
 
         /// <summary>
@@ -1746,7 +1749,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> AddSignedUrlKeyAsync(AddSignedUrlKeyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddSignedUrlKeyBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callAddSignedUrlKey.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), AddSignedUrlKeyOperationsClient);
+            Operation response = await _callAddSignedUrlKey.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddSignedUrlKeyOperationsClient);
         }
 
         /// <summary>
@@ -1787,7 +1793,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Delete(DeleteBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDelete.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1799,7 +1808,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDelete.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteOperationsClient);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteSignedUrlKey</c>.</summary>
@@ -1814,7 +1826,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> DeleteSignedUrlKey(DeleteSignedUrlKeyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSignedUrlKeyBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callDeleteSignedUrlKey.Sync(request, callSettings).ToGlobalOperation(request.Project), DeleteSignedUrlKeyOperationsClient);
+            Operation response = _callDeleteSignedUrlKey.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteSignedUrlKeyOperationsClient);
         }
 
         /// <summary>
@@ -1826,7 +1841,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> DeleteSignedUrlKeyAsync(DeleteSignedUrlKeyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteSignedUrlKeyBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callDeleteSignedUrlKey.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), DeleteSignedUrlKeyOperationsClient);
+            Operation response = await _callDeleteSignedUrlKey.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteSignedUrlKeyOperationsClient);
         }
 
         /// <summary>
@@ -1897,7 +1915,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Insert(InsertBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callInsert.Sync(request, callSettings).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1909,7 +1930,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callInsert.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), InsertOperationsClient);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1948,7 +1972,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Patch(PatchBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callPatch.Sync(request, callSettings).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -1960,7 +1987,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callPatch.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), PatchOperationsClient);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SetSecurityPolicy</c>.</summary>
@@ -1975,7 +2005,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> SetSecurityPolicy(SetSecurityPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSecurityPolicyBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callSetSecurityPolicy.Sync(request, callSettings).ToGlobalOperation(request.Project), SetSecurityPolicyOperationsClient);
+            Operation response = _callSetSecurityPolicy.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSecurityPolicyOperationsClient);
         }
 
         /// <summary>
@@ -1987,7 +2020,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> SetSecurityPolicyAsync(SetSecurityPolicyBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSecurityPolicyBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callSetSecurityPolicy.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), SetSecurityPolicyOperationsClient);
+            Operation response = await _callSetSecurityPolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSecurityPolicyOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Update</c>.</summary>
@@ -2002,7 +2038,10 @@ namespace Google.Cloud.Compute.V1
         public override lro::Operation<Operation, Operation> Update(UpdateBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>(_callUpdate.Sync(request, callSettings).ToGlobalOperation(request.Project), UpdateOperationsClient);
+            Operation response = _callUpdate.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
 
         /// <summary>
@@ -2014,7 +2053,10 @@ namespace Google.Cloud.Compute.V1
         public override async stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateBackendServiceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateBackendServiceRequest(ref request, ref callSettings);
-            return new lro::Operation<Operation, Operation>((await _callUpdate.Async(request, callSettings).ConfigureAwait(false)).ToGlobalOperation(request.Project), UpdateOperationsClient);
+            Operation response = await _callUpdate.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
     }
 
@@ -2061,11 +2103,11 @@ namespace Google.Cloud.Compute.V1
         {
             /// <summary>
             /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
-            /// this client.
+            /// this client, delegating to GlobalOperations.
             /// </summary>
             /// <returns>A new Operations client for the same target as this client.</returns>
-            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
-                new lro::Operations.OperationsClient(OperationAdapter.CreateGlobalCallInvoker(CallInvoker));
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }
