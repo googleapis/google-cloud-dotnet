@@ -21,6 +21,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedInterconnectAttachmentsClientSnippets
@@ -234,7 +235,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InterconnectAttachment = "",
             };
             // Make the request
-            Operation response = interconnectAttachmentsClient.Delete(request);
+            lro::Operation<Operation, Operation> response = interconnectAttachmentsClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectAttachmentsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -254,7 +271,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InterconnectAttachment = "",
             };
             // Make the request
-            Operation response = await interconnectAttachmentsClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await interconnectAttachmentsClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectAttachmentsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -269,7 +302,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string interconnectAttachment = "";
             // Make the request
-            Operation response = interconnectAttachmentsClient.Delete(project, region, interconnectAttachment);
+            lro::Operation<Operation, Operation> response = interconnectAttachmentsClient.Delete(project, region, interconnectAttachment);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectAttachmentsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -285,7 +334,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string interconnectAttachment = "";
             // Make the request
-            Operation response = await interconnectAttachmentsClient.DeleteAsync(project, region, interconnectAttachment);
+            lro::Operation<Operation, Operation> response = await interconnectAttachmentsClient.DeleteAsync(project, region, interconnectAttachment);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectAttachmentsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -373,7 +438,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ValidateOnly = false,
             };
             // Make the request
-            Operation response = interconnectAttachmentsClient.Insert(request);
+            lro::Operation<Operation, Operation> response = interconnectAttachmentsClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectAttachmentsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -394,7 +475,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ValidateOnly = false,
             };
             // Make the request
-            Operation response = await interconnectAttachmentsClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await interconnectAttachmentsClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectAttachmentsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -409,7 +506,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment();
             // Make the request
-            Operation response = interconnectAttachmentsClient.Insert(project, region, interconnectAttachmentResource);
+            lro::Operation<Operation, Operation> response = interconnectAttachmentsClient.Insert(project, region, interconnectAttachmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectAttachmentsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -425,7 +538,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment();
             // Make the request
-            Operation response = await interconnectAttachmentsClient.InsertAsync(project, region, interconnectAttachmentResource);
+            lro::Operation<Operation, Operation> response = await interconnectAttachmentsClient.InsertAsync(project, region, interconnectAttachmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectAttachmentsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -641,7 +770,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InterconnectAttachment = "",
             };
             // Make the request
-            Operation response = interconnectAttachmentsClient.Patch(request);
+            lro::Operation<Operation, Operation> response = interconnectAttachmentsClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectAttachmentsClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -662,7 +807,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InterconnectAttachment = "",
             };
             // Make the request
-            Operation response = await interconnectAttachmentsClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await interconnectAttachmentsClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectAttachmentsClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -678,7 +839,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string interconnectAttachment = "";
             InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment();
             // Make the request
-            Operation response = interconnectAttachmentsClient.Patch(project, region, interconnectAttachment, interconnectAttachmentResource);
+            lro::Operation<Operation, Operation> response = interconnectAttachmentsClient.Patch(project, region, interconnectAttachment, interconnectAttachmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = interconnectAttachmentsClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -695,7 +872,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string interconnectAttachment = "";
             InterconnectAttachment interconnectAttachmentResource = new InterconnectAttachment();
             // Make the request
-            Operation response = await interconnectAttachmentsClient.PatchAsync(project, region, interconnectAttachment, interconnectAttachmentResource);
+            lro::Operation<Operation, Operation> response = await interconnectAttachmentsClient.PatchAsync(project, region, interconnectAttachment, interconnectAttachmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await interconnectAttachmentsClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

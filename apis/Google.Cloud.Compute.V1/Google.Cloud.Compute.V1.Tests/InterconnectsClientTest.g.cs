@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -27,187 +28,10 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedInterconnectsClientTest
     {
         [xunit::FactAttribute]
-        public void DeleteRequestObject()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            DeleteInterconnectRequest request = new DeleteInterconnectRequest
-            {
-                RequestId = "request_id362c8df6",
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteRequestObjectAsync()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            DeleteInterconnectRequest request = new DeleteInterconnectRequest
-            {
-                RequestId = "request_id362c8df6",
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Delete()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            DeleteInterconnectRequest request = new DeleteInterconnectRequest
-            {
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request.Project, request.Interconnect);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteAsync()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            DeleteInterconnectRequest request = new DeleteInterconnectRequest
-            {
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request.Project, request.Interconnect, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request.Project, request.Interconnect, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -258,6 +82,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -310,6 +135,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -360,6 +186,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInterconnectRequest request = new GetInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -412,6 +239,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetDiagnosticsRequestObject()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -432,6 +260,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetDiagnosticsRequestObjectAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -454,6 +283,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetDiagnostics()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -474,6 +304,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetDiagnosticsAsync()
         {
             moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetDiagnosticsInterconnectRequest request = new GetDiagnosticsInterconnectRequest
             {
                 Interconnect = "interconnect253e8bf5",
@@ -488,366 +319,6 @@ namespace Google.Cloud.Compute.V1.Tests
             InterconnectsGetDiagnosticsResponse responseCallSettings = await client.GetDiagnosticsAsync(request.Project, request.Interconnect, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             InterconnectsGetDiagnosticsResponse responseCancellationToken = await client.GetDiagnosticsAsync(request.Project, request.Interconnect, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void InsertRequestObject()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            InsertInterconnectRequest request = new InsertInterconnectRequest
-            {
-                RequestId = "request_id362c8df6",
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertRequestObjectAsync()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            InsertInterconnectRequest request = new InsertInterconnectRequest
-            {
-                RequestId = "request_id362c8df6",
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Insert()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            InsertInterconnectRequest request = new InsertInterconnectRequest
-            {
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request.Project, request.InterconnectResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertAsync()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            InsertInterconnectRequest request = new InsertInterconnectRequest
-            {
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request.Project, request.InterconnectResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request.Project, request.InterconnectResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void PatchRequestObject()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            PatchInterconnectRequest request = new PatchInterconnectRequest
-            {
-                RequestId = "request_id362c8df6",
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchRequestObjectAsync()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            PatchInterconnectRequest request = new PatchInterconnectRequest
-            {
-                RequestId = "request_id362c8df6",
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Patch()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            PatchInterconnectRequest request = new PatchInterconnectRequest
-            {
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request.Project, request.Interconnect, request.InterconnectResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchAsync()
-        {
-            moq::Mock<Interconnects.InterconnectsClient> mockGrpcClient = new moq::Mock<Interconnects.InterconnectsClient>(moq::MockBehavior.Strict);
-            PatchInterconnectRequest request = new PatchInterconnectRequest
-            {
-                Interconnect = "interconnect253e8bf5",
-                Project = "projectaa6ff846",
-                InterconnectResource = new Interconnect(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            InterconnectsClient client = new InterconnectsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request.Project, request.Interconnect, request.InterconnectResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request.Project, request.Interconnect, request.InterconnectResource, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

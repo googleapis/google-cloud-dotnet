@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedGlobalNetworkEndpointGroupsClientSnippets
@@ -39,7 +40,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroup = "",
             };
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.AttachNetworkEndpoints(request);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.AttachNetworkEndpoints(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceAttachNetworkEndpoints(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +76,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroup = "",
             };
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.AttachNetworkEndpointsAsync(request);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.AttachNetworkEndpointsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceAttachNetworkEndpointsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -74,7 +107,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string networkEndpointGroup = "";
             GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource = new GlobalNetworkEndpointGroupsAttachEndpointsRequest();
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.AttachNetworkEndpoints(project, networkEndpointGroup, globalNetworkEndpointGroupsAttachEndpointsRequestResource);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.AttachNetworkEndpoints(project, networkEndpointGroup, globalNetworkEndpointGroupsAttachEndpointsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceAttachNetworkEndpoints(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -90,7 +139,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string networkEndpointGroup = "";
             GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource = new GlobalNetworkEndpointGroupsAttachEndpointsRequest();
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.AttachNetworkEndpointsAsync(project, networkEndpointGroup, globalNetworkEndpointGroupsAttachEndpointsRequestResource);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.AttachNetworkEndpointsAsync(project, networkEndpointGroup, globalNetworkEndpointGroupsAttachEndpointsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceAttachNetworkEndpointsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -108,7 +173,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroup = "",
             };
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.Delete(request);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -127,7 +208,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroup = "",
             };
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -141,7 +238,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string networkEndpointGroup = "";
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.Delete(project, networkEndpointGroup);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.Delete(project, networkEndpointGroup);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -156,7 +269,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string networkEndpointGroup = "";
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.DeleteAsync(project, networkEndpointGroup);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.DeleteAsync(project, networkEndpointGroup);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -175,7 +304,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroup = "",
             };
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.DetachNetworkEndpoints(request);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.DetachNetworkEndpoints(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceDetachNetworkEndpoints(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -195,7 +340,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroup = "",
             };
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.DetachNetworkEndpointsAsync(request);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.DetachNetworkEndpointsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceDetachNetworkEndpointsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -210,7 +371,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string networkEndpointGroup = "";
             GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest();
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.DetachNetworkEndpoints(project, networkEndpointGroup, globalNetworkEndpointGroupsDetachEndpointsRequestResource);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.DetachNetworkEndpoints(project, networkEndpointGroup, globalNetworkEndpointGroupsDetachEndpointsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceDetachNetworkEndpoints(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -226,7 +403,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string networkEndpointGroup = "";
             GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource = new GlobalNetworkEndpointGroupsDetachEndpointsRequest();
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.DetachNetworkEndpointsAsync(project, networkEndpointGroup, globalNetworkEndpointGroupsDetachEndpointsRequestResource);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.DetachNetworkEndpointsAsync(project, networkEndpointGroup, globalNetworkEndpointGroupsDetachEndpointsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceDetachNetworkEndpointsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -308,7 +501,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroupResource = new NetworkEndpointGroup(),
             };
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.Insert(request);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -327,7 +536,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworkEndpointGroupResource = new NetworkEndpointGroup(),
             };
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -341,7 +566,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup();
             // Make the request
-            Operation response = globalNetworkEndpointGroupsClient.Insert(project, networkEndpointGroupResource);
+            lro::Operation<Operation, Operation> response = globalNetworkEndpointGroupsClient.Insert(project, networkEndpointGroupResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalNetworkEndpointGroupsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -356,7 +597,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             NetworkEndpointGroup networkEndpointGroupResource = new NetworkEndpointGroup();
             // Make the request
-            Operation response = await globalNetworkEndpointGroupsClient.InsertAsync(project, networkEndpointGroupResource);
+            lro::Operation<Operation, Operation> response = await globalNetworkEndpointGroupsClient.InsertAsync(project, networkEndpointGroupResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalNetworkEndpointGroupsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

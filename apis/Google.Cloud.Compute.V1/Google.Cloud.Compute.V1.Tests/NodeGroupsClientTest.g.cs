@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -27,563 +28,10 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedNodeGroupsClientTest
     {
         [xunit::FactAttribute]
-        public void AddNodesRequestObject()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            AddNodesNodeGroupRequest request = new AddNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddNodes(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddNodesRequestObjectAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            AddNodesNodeGroupRequest request = new AddNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddNodesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddNodesAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AddNodes()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            AddNodesNodeGroupRequest request = new AddNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddNodes(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsAddNodesRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddNodesAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            AddNodesNodeGroupRequest request = new AddNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                NodeGroupsAddNodesRequestResource = new NodeGroupsAddNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddNodesAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsAddNodesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddNodesAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsAddNodesRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteRequestObject()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodeGroupRequest request = new DeleteNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteRequestObjectAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodeGroupRequest request = new DeleteNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Delete()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodeGroupRequest request = new DeleteNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request.Project, request.Zone, request.NodeGroup);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodeGroupRequest request = new DeleteNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request.Project, request.Zone, request.NodeGroup, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request.Project, request.Zone, request.NodeGroup, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteNodesRequestObject()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodesNodeGroupRequest request = new DeleteNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.DeleteNodes(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteNodesRequestObjectAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodesNodeGroupRequest request = new DeleteNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteNodesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteNodesAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteNodes()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodesNodeGroupRequest request = new DeleteNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteNodes(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.DeleteNodes(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsDeleteNodesRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteNodesAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            DeleteNodesNodeGroupRequest request = new DeleteNodesNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                NodeGroupsDeleteNodesRequestResource = new NodeGroupsDeleteNodesRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteNodesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteNodesAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsDeleteNodesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteNodesAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsDeleteNodesRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -619,6 +67,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -656,6 +105,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -691,6 +141,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetNodeGroupRequest request = new GetNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -728,6 +179,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -755,6 +207,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -784,6 +237,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -810,6 +264,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyNodeGroupRequest request = new GetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -835,381 +290,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void InsertRequestObject()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            InsertNodeGroupRequest request = new InsertNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                InitialNodeCount = -1915714087,
-                Project = "projectaa6ff846",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertRequestObjectAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            InsertNodeGroupRequest request = new InsertNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                InitialNodeCount = -1915714087,
-                Project = "projectaa6ff846",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Insert()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            InsertNodeGroupRequest request = new InsertNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                InitialNodeCount = -1915714087,
-                Project = "projectaa6ff846",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request.Project, request.Zone, request.InitialNodeCount, request.NodeGroupResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            InsertNodeGroupRequest request = new InsertNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                InitialNodeCount = -1915714087,
-                Project = "projectaa6ff846",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request.Project, request.Zone, request.InitialNodeCount, request.NodeGroupResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request.Project, request.Zone, request.InitialNodeCount, request.NodeGroupResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void PatchRequestObject()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            PatchNodeGroupRequest request = new PatchNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchRequestObjectAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            PatchNodeGroupRequest request = new PatchNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Patch()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            PatchNodeGroupRequest request = new PatchNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request.Project, request.Zone, request.NodeGroup, request.NodeGroupResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            PatchNodeGroupRequest request = new PatchNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-                NodeGroupResource = new NodeGroup(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -1237,6 +321,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -1266,6 +351,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -1293,6 +379,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyNodeGroupRequest request = new SetIamPolicyNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -1319,195 +406,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetNodeTemplateRequestObject()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            SetNodeTemplateNodeGroupRequest request = new SetNodeTemplateNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetNodeTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetNodeTemplate(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task SetNodeTemplateRequestObjectAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            SetNodeTemplateNodeGroupRequest request = new SetNodeTemplateNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                RequestId = "request_id362c8df6",
-                NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetNodeTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.SetNodeTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.SetNodeTemplateAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void SetNodeTemplate()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            SetNodeTemplateNodeGroupRequest request = new SetNodeTemplateNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetNodeTemplate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetNodeTemplate(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsSetNodeTemplateRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task SetNodeTemplateAsync()
-        {
-            moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
-            SetNodeTemplateNodeGroupRequest request = new SetNodeTemplateNodeGroupRequest
-            {
-                Zone = "zone255f4ea8",
-                NodeGroupsSetNodeTemplateRequestResource = new NodeGroupsSetNodeTemplateRequest(),
-                Project = "projectaa6ff846",
-                NodeGroup = "node_groupa42a295a",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetNodeTemplateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.SetNodeTemplateAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsSetNodeTemplateRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.SetNodeTemplateAsync(request.Project, request.Zone, request.NodeGroup, request.NodeGroupsSetNodeTemplateRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -1533,6 +435,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -1560,6 +463,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",
@@ -1585,6 +489,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<NodeGroups.NodeGroupsClient> mockGrpcClient = new moq::Mock<NodeGroups.NodeGroupsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsNodeGroupRequest request = new TestIamPermissionsNodeGroupRequest
             {
                 Zone = "zone255f4ea8",

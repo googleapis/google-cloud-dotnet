@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -905,5 +906,22 @@ namespace Google.Cloud.Compute.V1
         public scg::IEnumerator<Operation> GetEnumerator() => Items.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class GlobalOperations
+    {
+        public partial class GlobalOperationsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/>using the specified call
+            /// invoker, but redirecting Google.LongRunning RPCs to GlobalOperations RPCs.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            internal static lro::Operations.OperationsClient CreateOperationsClient(grpccore::CallInvoker callInvoker)
+            {
+                grpccore::CallInvoker forwardingCallInvoker = gaxgrpc::ForwardingCallInvoker<lro::GetOperationRequest>.Create(callInvoker, "/google.longrunning.Operations/GetOperation", __Method_Get, GetGlobalOperationRequest.ParseLroRequest, (request, response) => response.ToLroResponse(request.Name));
+                return new lro::Operations.OperationsClient(forwardingCallInvoker);
+            }
+        }
     }
 }

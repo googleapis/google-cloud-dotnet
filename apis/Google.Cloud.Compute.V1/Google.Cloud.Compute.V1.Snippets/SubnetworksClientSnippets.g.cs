@@ -21,6 +21,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedSubnetworksClientSnippets
@@ -234,7 +235,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Subnetwork = "",
             };
             // Make the request
-            Operation response = subnetworksClient.Delete(request);
+            lro::Operation<Operation, Operation> response = subnetworksClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -254,7 +271,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Subnetwork = "",
             };
             // Make the request
-            Operation response = await subnetworksClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -269,7 +302,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string subnetwork = "";
             // Make the request
-            Operation response = subnetworksClient.Delete(project, region, subnetwork);
+            lro::Operation<Operation, Operation> response = subnetworksClient.Delete(project, region, subnetwork);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -285,7 +334,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string subnetwork = "";
             // Make the request
-            Operation response = await subnetworksClient.DeleteAsync(project, region, subnetwork);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.DeleteAsync(project, region, subnetwork);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -305,7 +370,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             // Make the request
-            Operation response = subnetworksClient.ExpandIpCidrRange(request);
+            lro::Operation<Operation, Operation> response = subnetworksClient.ExpandIpCidrRange(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceExpandIpCidrRange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -326,7 +407,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 SubnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest(),
             };
             // Make the request
-            Operation response = await subnetworksClient.ExpandIpCidrRangeAsync(request);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.ExpandIpCidrRangeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceExpandIpCidrRangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -342,7 +439,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string subnetwork = "";
             SubnetworksExpandIpCidrRangeRequest subnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest();
             // Make the request
-            Operation response = subnetworksClient.ExpandIpCidrRange(project, region, subnetwork, subnetworksExpandIpCidrRangeRequestResource);
+            lro::Operation<Operation, Operation> response = subnetworksClient.ExpandIpCidrRange(project, region, subnetwork, subnetworksExpandIpCidrRangeRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceExpandIpCidrRange(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -359,7 +472,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string subnetwork = "";
             SubnetworksExpandIpCidrRangeRequest subnetworksExpandIpCidrRangeRequestResource = new SubnetworksExpandIpCidrRangeRequest();
             // Make the request
-            Operation response = await subnetworksClient.ExpandIpCidrRangeAsync(project, region, subnetwork, subnetworksExpandIpCidrRangeRequestResource);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.ExpandIpCidrRangeAsync(project, region, subnetwork, subnetworksExpandIpCidrRangeRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceExpandIpCidrRangeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -516,7 +645,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = subnetworksClient.Insert(request);
+            lro::Operation<Operation, Operation> response = subnetworksClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -536,7 +681,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = await subnetworksClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -551,7 +712,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             Subnetwork subnetworkResource = new Subnetwork();
             // Make the request
-            Operation response = subnetworksClient.Insert(project, region, subnetworkResource);
+            lro::Operation<Operation, Operation> response = subnetworksClient.Insert(project, region, subnetworkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -567,7 +744,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             Subnetwork subnetworkResource = new Subnetwork();
             // Make the request
-            Operation response = await subnetworksClient.InsertAsync(project, region, subnetworkResource);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.InsertAsync(project, region, subnetworkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -976,7 +1169,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 DrainTimeoutSeconds = 0,
             };
             // Make the request
-            Operation response = subnetworksClient.Patch(request);
+            lro::Operation<Operation, Operation> response = subnetworksClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -998,7 +1207,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 DrainTimeoutSeconds = 0,
             };
             // Make the request
-            Operation response = await subnetworksClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1014,7 +1239,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string subnetwork = "";
             Subnetwork subnetworkResource = new Subnetwork();
             // Make the request
-            Operation response = subnetworksClient.Patch(project, region, subnetwork, subnetworkResource);
+            lro::Operation<Operation, Operation> response = subnetworksClient.Patch(project, region, subnetwork, subnetworkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1031,7 +1272,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string subnetwork = "";
             Subnetwork subnetworkResource = new Subnetwork();
             // Make the request
-            Operation response = await subnetworksClient.PatchAsync(project, region, subnetwork, subnetworkResource);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.PatchAsync(project, region, subnetwork, subnetworkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1123,7 +1380,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Subnetwork = "",
             };
             // Make the request
-            Operation response = subnetworksClient.SetPrivateIpGoogleAccess(request);
+            lro::Operation<Operation, Operation> response = subnetworksClient.SetPrivateIpGoogleAccess(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceSetPrivateIpGoogleAccess(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1144,7 +1417,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Subnetwork = "",
             };
             // Make the request
-            Operation response = await subnetworksClient.SetPrivateIpGoogleAccessAsync(request);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.SetPrivateIpGoogleAccessAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceSetPrivateIpGoogleAccessAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1160,7 +1449,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string subnetwork = "";
             SubnetworksSetPrivateIpGoogleAccessRequest subnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest();
             // Make the request
-            Operation response = subnetworksClient.SetPrivateIpGoogleAccess(project, region, subnetwork, subnetworksSetPrivateIpGoogleAccessRequestResource);
+            lro::Operation<Operation, Operation> response = subnetworksClient.SetPrivateIpGoogleAccess(project, region, subnetwork, subnetworksSetPrivateIpGoogleAccessRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = subnetworksClient.PollOnceSetPrivateIpGoogleAccess(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1177,7 +1482,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string subnetwork = "";
             SubnetworksSetPrivateIpGoogleAccessRequest subnetworksSetPrivateIpGoogleAccessRequestResource = new SubnetworksSetPrivateIpGoogleAccessRequest();
             // Make the request
-            Operation response = await subnetworksClient.SetPrivateIpGoogleAccessAsync(project, region, subnetwork, subnetworksSetPrivateIpGoogleAccessRequestResource);
+            lro::Operation<Operation, Operation> response = await subnetworksClient.SetPrivateIpGoogleAccessAsync(project, region, subnetwork, subnetworksSetPrivateIpGoogleAccessRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await subnetworksClient.PollOnceSetPrivateIpGoogleAccessAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

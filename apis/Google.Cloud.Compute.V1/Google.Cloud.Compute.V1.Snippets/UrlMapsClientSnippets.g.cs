@@ -21,6 +21,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedUrlMapsClientSnippets
@@ -233,7 +234,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = urlMapsClient.Delete(request);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -252,7 +269,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = await urlMapsClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -266,7 +299,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string urlMap = "";
             // Make the request
-            Operation response = urlMapsClient.Delete(project, urlMap);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Delete(project, urlMap);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -281,7 +330,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string urlMap = "";
             // Make the request
-            Operation response = await urlMapsClient.DeleteAsync(project, urlMap);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.DeleteAsync(project, urlMap);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -363,7 +428,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = urlMapsClient.Insert(request);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -382,7 +463,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = await urlMapsClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -396,7 +493,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             UrlMap urlMapResource = new UrlMap();
             // Make the request
-            Operation response = urlMapsClient.Insert(project, urlMapResource);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Insert(project, urlMapResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -411,7 +524,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             UrlMap urlMapResource = new UrlMap();
             // Make the request
-            Operation response = await urlMapsClient.InsertAsync(project, urlMapResource);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.InsertAsync(project, urlMapResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -430,7 +559,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = urlMapsClient.InvalidateCache(request);
+            lro::Operation<Operation, Operation> response = urlMapsClient.InvalidateCache(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceInvalidateCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -450,7 +595,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = await urlMapsClient.InvalidateCacheAsync(request);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.InvalidateCacheAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceInvalidateCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -465,7 +626,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string urlMap = "";
             CacheInvalidationRule cacheInvalidationRuleResource = new CacheInvalidationRule();
             // Make the request
-            Operation response = urlMapsClient.InvalidateCache(project, urlMap, cacheInvalidationRuleResource);
+            lro::Operation<Operation, Operation> response = urlMapsClient.InvalidateCache(project, urlMap, cacheInvalidationRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceInvalidateCache(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -481,7 +658,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string urlMap = "";
             CacheInvalidationRule cacheInvalidationRuleResource = new CacheInvalidationRule();
             // Make the request
-            Operation response = await urlMapsClient.InvalidateCacheAsync(project, urlMap, cacheInvalidationRuleResource);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.InvalidateCacheAsync(project, urlMap, cacheInvalidationRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceInvalidateCacheAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -692,7 +885,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = urlMapsClient.Patch(request);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -712,7 +921,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = await urlMapsClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -727,7 +952,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string urlMap = "";
             UrlMap urlMapResource = new UrlMap();
             // Make the request
-            Operation response = urlMapsClient.Patch(project, urlMap, urlMapResource);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Patch(project, urlMap, urlMapResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -743,7 +984,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string urlMap = "";
             UrlMap urlMapResource = new UrlMap();
             // Make the request
-            Operation response = await urlMapsClient.PatchAsync(project, urlMap, urlMapResource);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.PatchAsync(project, urlMap, urlMapResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -762,7 +1019,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = urlMapsClient.Update(request);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Update(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -782,7 +1055,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMap = "",
             };
             // Make the request
-            Operation response = await urlMapsClient.UpdateAsync(request);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.UpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -797,7 +1086,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string urlMap = "";
             UrlMap urlMapResource = new UrlMap();
             // Make the request
-            Operation response = urlMapsClient.Update(project, urlMap, urlMapResource);
+            lro::Operation<Operation, Operation> response = urlMapsClient.Update(project, urlMap, urlMapResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = urlMapsClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -813,7 +1118,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string urlMap = "";
             UrlMap urlMapResource = new UrlMap();
             // Make the request
-            Operation response = await urlMapsClient.UpdateAsync(project, urlMap, urlMapResource);
+            lro::Operation<Operation, Operation> response = await urlMapsClient.UpdateAsync(project, urlMap, urlMapResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await urlMapsClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

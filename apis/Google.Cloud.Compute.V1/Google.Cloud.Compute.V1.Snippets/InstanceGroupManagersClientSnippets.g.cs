@@ -21,6 +21,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedInstanceGroupManagersClientSnippets
@@ -41,7 +42,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersAbandonInstancesRequestResource = new InstanceGroupManagersAbandonInstancesRequest(),
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.AbandonInstances(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.AbandonInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceAbandonInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -62,7 +79,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersAbandonInstancesRequestResource = new InstanceGroupManagersAbandonInstancesRequest(),
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.AbandonInstancesAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.AbandonInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceAbandonInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -78,7 +111,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersAbandonInstancesRequest instanceGroupManagersAbandonInstancesRequestResource = new InstanceGroupManagersAbandonInstancesRequest();
             // Make the request
-            Operation response = instanceGroupManagersClient.AbandonInstances(project, zone, instanceGroupManager, instanceGroupManagersAbandonInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.AbandonInstances(project, zone, instanceGroupManager, instanceGroupManagersAbandonInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceAbandonInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -95,7 +144,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersAbandonInstancesRequest instanceGroupManagersAbandonInstancesRequestResource = new InstanceGroupManagersAbandonInstancesRequest();
             // Make the request
-            Operation response = await instanceGroupManagersClient.AbandonInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersAbandonInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.AbandonInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersAbandonInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceAbandonInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -308,7 +373,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest(),
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.ApplyUpdatesToInstances(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.ApplyUpdatesToInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceApplyUpdatesToInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -328,7 +409,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest(),
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.ApplyUpdatesToInstancesAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.ApplyUpdatesToInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceApplyUpdatesToInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -344,7 +441,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersApplyUpdatesRequest instanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest();
             // Make the request
-            Operation response = instanceGroupManagersClient.ApplyUpdatesToInstances(project, zone, instanceGroupManager, instanceGroupManagersApplyUpdatesRequestResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.ApplyUpdatesToInstances(project, zone, instanceGroupManager, instanceGroupManagersApplyUpdatesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceApplyUpdatesToInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -361,7 +474,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersApplyUpdatesRequest instanceGroupManagersApplyUpdatesRequestResource = new InstanceGroupManagersApplyUpdatesRequest();
             // Make the request
-            Operation response = await instanceGroupManagersClient.ApplyUpdatesToInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersApplyUpdatesRequestResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.ApplyUpdatesToInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersApplyUpdatesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceApplyUpdatesToInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -381,7 +510,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.CreateInstances(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.CreateInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceCreateInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -402,7 +547,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.CreateInstancesAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.CreateInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceCreateInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -418,7 +579,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersCreateInstancesRequest instanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest();
             // Make the request
-            Operation response = instanceGroupManagersClient.CreateInstances(project, zone, instanceGroupManager, instanceGroupManagersCreateInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.CreateInstances(project, zone, instanceGroupManager, instanceGroupManagersCreateInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceCreateInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -435,7 +612,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersCreateInstancesRequest instanceGroupManagersCreateInstancesRequestResource = new InstanceGroupManagersCreateInstancesRequest();
             // Make the request
-            Operation response = await instanceGroupManagersClient.CreateInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersCreateInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.CreateInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersCreateInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceCreateInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -454,7 +647,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.Delete(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -474,7 +683,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -489,7 +714,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string zone = "";
             string instanceGroupManager = "";
             // Make the request
-            Operation response = instanceGroupManagersClient.Delete(project, zone, instanceGroupManager);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Delete(project, zone, instanceGroupManager);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -505,7 +746,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string zone = "";
             string instanceGroupManager = "";
             // Make the request
-            Operation response = await instanceGroupManagersClient.DeleteAsync(project, zone, instanceGroupManager);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeleteAsync(project, zone, instanceGroupManager);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -525,7 +782,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.DeleteInstances(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.DeleteInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceDeleteInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -546,7 +819,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.DeleteInstancesAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeleteInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceDeleteInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -562,7 +851,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersDeleteInstancesRequest instanceGroupManagersDeleteInstancesRequestResource = new InstanceGroupManagersDeleteInstancesRequest();
             // Make the request
-            Operation response = instanceGroupManagersClient.DeleteInstances(project, zone, instanceGroupManager, instanceGroupManagersDeleteInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.DeleteInstances(project, zone, instanceGroupManager, instanceGroupManagersDeleteInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceDeleteInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -579,7 +884,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersDeleteInstancesRequest instanceGroupManagersDeleteInstancesRequestResource = new InstanceGroupManagersDeleteInstancesRequest();
             // Make the request
-            Operation response = await instanceGroupManagersClient.DeleteInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersDeleteInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeleteInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersDeleteInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceDeleteInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -598,7 +919,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq(),
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.DeletePerInstanceConfigs(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.DeletePerInstanceConfigs(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceDeletePerInstanceConfigs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -618,7 +955,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq(),
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.DeletePerInstanceConfigsAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeletePerInstanceConfigsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceDeletePerInstanceConfigsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -634,7 +987,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq();
             // Make the request
-            Operation response = instanceGroupManagersClient.DeletePerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersDeletePerInstanceConfigsReqResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.DeletePerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersDeletePerInstanceConfigsReqResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceDeletePerInstanceConfigs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -651,7 +1020,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReqResource = new InstanceGroupManagersDeletePerInstanceConfigsReq();
             // Make the request
-            Operation response = await instanceGroupManagersClient.DeletePerInstanceConfigsAsync(project, zone, instanceGroupManager, instanceGroupManagersDeletePerInstanceConfigsReqResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeletePerInstanceConfigsAsync(project, zone, instanceGroupManager, instanceGroupManagersDeletePerInstanceConfigsReqResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceDeletePerInstanceConfigsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -738,7 +1123,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagerResource = new InstanceGroupManager(),
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.Insert(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -758,7 +1159,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagerResource = new InstanceGroupManager(),
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -773,7 +1190,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string zone = "";
             InstanceGroupManager instanceGroupManagerResource = new InstanceGroupManager();
             // Make the request
-            Operation response = instanceGroupManagersClient.Insert(project, zone, instanceGroupManagerResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Insert(project, zone, instanceGroupManagerResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -789,7 +1222,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string zone = "";
             InstanceGroupManager instanceGroupManagerResource = new InstanceGroupManager();
             // Make the request
-            Operation response = await instanceGroupManagersClient.InsertAsync(project, zone, instanceGroupManagerResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.InsertAsync(project, zone, instanceGroupManagerResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1605,7 +2054,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagerResource = new InstanceGroupManager(),
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.Patch(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1626,7 +2091,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagerResource = new InstanceGroupManager(),
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1642,7 +2123,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManager instanceGroupManagerResource = new InstanceGroupManager();
             // Make the request
-            Operation response = instanceGroupManagersClient.Patch(project, zone, instanceGroupManager, instanceGroupManagerResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Patch(project, zone, instanceGroupManager, instanceGroupManagerResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1659,7 +2156,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManager instanceGroupManagerResource = new InstanceGroupManager();
             // Make the request
-            Operation response = await instanceGroupManagersClient.PatchAsync(project, zone, instanceGroupManager, instanceGroupManagerResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.PatchAsync(project, zone, instanceGroupManager, instanceGroupManagerResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1679,7 +2192,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq(),
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.PatchPerInstanceConfigs(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.PatchPerInstanceConfigs(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOncePatchPerInstanceConfigs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1700,7 +2229,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq(),
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.PatchPerInstanceConfigsAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.PatchPerInstanceConfigsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOncePatchPerInstanceConfigsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1716,7 +2261,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersPatchPerInstanceConfigsReq instanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq();
             // Make the request
-            Operation response = instanceGroupManagersClient.PatchPerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersPatchPerInstanceConfigsReqResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.PatchPerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersPatchPerInstanceConfigsReqResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOncePatchPerInstanceConfigs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1733,7 +2294,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersPatchPerInstanceConfigsReq instanceGroupManagersPatchPerInstanceConfigsReqResource = new InstanceGroupManagersPatchPerInstanceConfigsReq();
             // Make the request
-            Operation response = await instanceGroupManagersClient.PatchPerInstanceConfigsAsync(project, zone, instanceGroupManager, instanceGroupManagersPatchPerInstanceConfigsReqResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.PatchPerInstanceConfigsAsync(project, zone, instanceGroupManager, instanceGroupManagersPatchPerInstanceConfigsReqResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOncePatchPerInstanceConfigsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1753,7 +2330,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.RecreateInstances(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.RecreateInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceRecreateInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1774,7 +2367,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.RecreateInstancesAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.RecreateInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceRecreateInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1790,7 +2399,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersRecreateInstancesRequest instanceGroupManagersRecreateInstancesRequestResource = new InstanceGroupManagersRecreateInstancesRequest();
             // Make the request
-            Operation response = instanceGroupManagersClient.RecreateInstances(project, zone, instanceGroupManager, instanceGroupManagersRecreateInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.RecreateInstances(project, zone, instanceGroupManager, instanceGroupManagersRecreateInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceRecreateInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1807,7 +2432,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersRecreateInstancesRequest instanceGroupManagersRecreateInstancesRequestResource = new InstanceGroupManagersRecreateInstancesRequest();
             // Make the request
-            Operation response = await instanceGroupManagersClient.RecreateInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersRecreateInstancesRequestResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.RecreateInstancesAsync(project, zone, instanceGroupManager, instanceGroupManagersRecreateInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceRecreateInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1827,7 +2468,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.Resize(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Resize(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceResize(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1848,7 +2505,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.ResizeAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.ResizeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceResizeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1864,7 +2537,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             int size = 0;
             // Make the request
-            Operation response = instanceGroupManagersClient.Resize(project, zone, instanceGroupManager, size);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Resize(project, zone, instanceGroupManager, size);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceResize(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1881,7 +2570,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             int size = 0;
             // Make the request
-            Operation response = await instanceGroupManagersClient.ResizeAsync(project, zone, instanceGroupManager, size);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.ResizeAsync(project, zone, instanceGroupManager, size);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceResizeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1901,7 +2606,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.SetInstanceTemplate(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.SetInstanceTemplate(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceSetInstanceTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1922,7 +2643,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.SetInstanceTemplateAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.SetInstanceTemplateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceSetInstanceTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1938,7 +2675,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersSetInstanceTemplateRequest instanceGroupManagersSetInstanceTemplateRequestResource = new InstanceGroupManagersSetInstanceTemplateRequest();
             // Make the request
-            Operation response = instanceGroupManagersClient.SetInstanceTemplate(project, zone, instanceGroupManager, instanceGroupManagersSetInstanceTemplateRequestResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.SetInstanceTemplate(project, zone, instanceGroupManager, instanceGroupManagersSetInstanceTemplateRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceSetInstanceTemplate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1955,7 +2708,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersSetInstanceTemplateRequest instanceGroupManagersSetInstanceTemplateRequestResource = new InstanceGroupManagersSetInstanceTemplateRequest();
             // Make the request
-            Operation response = await instanceGroupManagersClient.SetInstanceTemplateAsync(project, zone, instanceGroupManager, instanceGroupManagersSetInstanceTemplateRequestResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.SetInstanceTemplateAsync(project, zone, instanceGroupManager, instanceGroupManagersSetInstanceTemplateRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceSetInstanceTemplateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1975,7 +2744,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest(),
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.SetTargetPools(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.SetTargetPools(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceSetTargetPools(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1996,7 +2781,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest(),
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.SetTargetPoolsAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.SetTargetPoolsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceSetTargetPoolsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2012,7 +2813,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersSetTargetPoolsRequest instanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest();
             // Make the request
-            Operation response = instanceGroupManagersClient.SetTargetPools(project, zone, instanceGroupManager, instanceGroupManagersSetTargetPoolsRequestResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.SetTargetPools(project, zone, instanceGroupManager, instanceGroupManagersSetTargetPoolsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceSetTargetPools(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2029,7 +2846,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersSetTargetPoolsRequest instanceGroupManagersSetTargetPoolsRequestResource = new InstanceGroupManagersSetTargetPoolsRequest();
             // Make the request
-            Operation response = await instanceGroupManagersClient.SetTargetPoolsAsync(project, zone, instanceGroupManager, instanceGroupManagersSetTargetPoolsRequestResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.SetTargetPoolsAsync(project, zone, instanceGroupManager, instanceGroupManagersSetTargetPoolsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceSetTargetPoolsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2049,7 +2882,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = instanceGroupManagersClient.UpdatePerInstanceConfigs(request);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.UpdatePerInstanceConfigs(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceUpdatePerInstanceConfigs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2070,7 +2919,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 InstanceGroupManager = "",
             };
             // Make the request
-            Operation response = await instanceGroupManagersClient.UpdatePerInstanceConfigsAsync(request);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.UpdatePerInstanceConfigsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceUpdatePerInstanceConfigsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2086,7 +2951,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersUpdatePerInstanceConfigsReq instanceGroupManagersUpdatePerInstanceConfigsReqResource = new InstanceGroupManagersUpdatePerInstanceConfigsReq();
             // Make the request
-            Operation response = instanceGroupManagersClient.UpdatePerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersUpdatePerInstanceConfigsReqResource);
+            lro::Operation<Operation, Operation> response = instanceGroupManagersClient.UpdatePerInstanceConfigs(project, zone, instanceGroupManager, instanceGroupManagersUpdatePerInstanceConfigsReqResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instanceGroupManagersClient.PollOnceUpdatePerInstanceConfigs(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -2103,7 +2984,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string instanceGroupManager = "";
             InstanceGroupManagersUpdatePerInstanceConfigsReq instanceGroupManagersUpdatePerInstanceConfigsReqResource = new InstanceGroupManagersUpdatePerInstanceConfigsReq();
             // Make the request
-            Operation response = await instanceGroupManagersClient.UpdatePerInstanceConfigsAsync(project, zone, instanceGroupManager, instanceGroupManagersUpdatePerInstanceConfigsReqResource);
+            lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.UpdatePerInstanceConfigsAsync(project, zone, instanceGroupManager, instanceGroupManagersUpdatePerInstanceConfigsReqResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instanceGroupManagersClient.PollOnceUpdatePerInstanceConfigsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }
