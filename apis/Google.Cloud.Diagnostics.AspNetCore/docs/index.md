@@ -78,11 +78,22 @@ as described below.
 
 # Error Reporting
 
-## Registering Error Reporting
+The error reporting component allows you to create error reports from exceptions thrown in your application.
+You can explicitly log exceptions you have caught, but the component will also log exceptions that haven't been
+caught/handled by your code.
+
+## Configuration
+
+You only need to use the `AddGoogleErrorReportingForAspNetCore` extension method on an `IServiceCollection`.
+You usually do this on the `ConfigureServices` method of your `Startup` class.
 
 {{sample:ErrorReporting.ReportUnhandledExceptions}}
 
+Error reports will be automatically created from uncaught exceptions and sent to Google Cloud Error Reporting.
+
 ## Log Exceptions
+
+You can also log exceptions explicitly.
 
 {{sample:ErrorReporting.LogExceptions}}
 

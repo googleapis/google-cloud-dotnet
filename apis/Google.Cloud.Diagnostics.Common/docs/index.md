@@ -42,6 +42,27 @@ for the permissions needed for Tracing.
 > You can read more about .NET dependency injection in non ASP.NET Core applications in the
 > [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage).
 
+# Error reporting
+
+The error reporting component allows you to create error reports from exceptions thrown in your application.
+
+## Configuration
+
+The first step is to configure the error reporting component for dependency injection.
+
+{{sample:ErrorReporting.Configure}}
+
+And then start the host. This will probably be done in your `Main` method.
+
+{{sample:ErrorReporting.Start}}
+
+## Logging exceptions
+
+Now you can log exceptions whenever they are thrown. Meaningful error reports will be created and sent to
+Google Cloud Error Reporting.
+
+{{sample:ErrorReporting.LogException}}
+
 # Tracing
 
 ## Configuration
@@ -50,7 +71,7 @@ The first step is to configure the tracing component for dependency injection.
 
 {{sample:Trace.Configure}}
 
-And then start the host. This will probably de done on your `Main` method.
+And then start the host. This will probably be done in your `Main` method.
 
 {{sample:Trace.Start}}
 
