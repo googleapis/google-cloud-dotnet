@@ -2229,5 +2229,98 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             await metricServiceClient.CreateTimeSeriesAsync(name, timeSeries);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateServiceTimeSeries</summary>
+        public void CreateServiceTimeSeriesRequestObject()
+        {
+            // Snippet: CreateServiceTimeSeries(CreateTimeSeriesRequest, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            metricServiceClient.CreateServiceTimeSeries(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceTimeSeriesAsync</summary>
+        public async Task CreateServiceTimeSeriesRequestObjectAsync()
+        {
+            // Snippet: CreateServiceTimeSeriesAsync(CreateTimeSeriesRequest, CallSettings)
+            // Additional: CreateServiceTimeSeriesAsync(CreateTimeSeriesRequest, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            await metricServiceClient.CreateServiceTimeSeriesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceTimeSeries</summary>
+        public void CreateServiceTimeSeries()
+        {
+            // Snippet: CreateServiceTimeSeries(string, IEnumerable<TimeSeries>, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]";
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
+            // Make the request
+            metricServiceClient.CreateServiceTimeSeries(name, timeSeries);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceTimeSeriesAsync</summary>
+        public async Task CreateServiceTimeSeriesAsync()
+        {
+            // Snippet: CreateServiceTimeSeriesAsync(string, IEnumerable<TimeSeries>, CallSettings)
+            // Additional: CreateServiceTimeSeriesAsync(string, IEnumerable<TimeSeries>, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]";
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
+            // Make the request
+            await metricServiceClient.CreateServiceTimeSeriesAsync(name, timeSeries);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceTimeSeries</summary>
+        public void CreateServiceTimeSeriesResourceNames()
+        {
+            // Snippet: CreateServiceTimeSeries(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+            // Create client
+            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
+            // Make the request
+            metricServiceClient.CreateServiceTimeSeries(name, timeSeries);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateServiceTimeSeriesAsync</summary>
+        public async Task CreateServiceTimeSeriesResourceNamesAsync()
+        {
+            // Snippet: CreateServiceTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+            // Additional: CreateServiceTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CancellationToken)
+            // Create client
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName name = ProjectName.FromProject("[PROJECT]");
+            IEnumerable<TimeSeries> timeSeries = new TimeSeries[] { new TimeSeries(), };
+            // Make the request
+            await metricServiceClient.CreateServiceTimeSeriesAsync(name, timeSeries);
+            // End snippet
+        }
     }
 }
