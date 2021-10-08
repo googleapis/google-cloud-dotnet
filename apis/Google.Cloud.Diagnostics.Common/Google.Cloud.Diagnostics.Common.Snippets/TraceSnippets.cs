@@ -166,7 +166,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host != null)
+                if (s_host is object)
                 {
                     await s_host.StopAsync();
                 }
@@ -210,7 +210,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host != null)
+                if (s_host is object)
                 {
                     await s_host.StopAsync();
                 }
@@ -253,7 +253,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host != null)
+                if (s_host is object)
                 {
                     await s_host.StopAsync();
                 }
@@ -294,7 +294,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host != null)
+                if (s_host is object)
                 {
                     await s_host.StopAsync();
                 }

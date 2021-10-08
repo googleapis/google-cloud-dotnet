@@ -50,10 +50,13 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// Checks that an <see cref="ErrorEvent"/> contains valid data,
         /// including HTTP Context data.
         /// </summary>
-        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName)
+        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName, bool verifyHttpContext = true)
         {
             VerifyErrorEventLogged(errorEvent, testId, functionName);
-            VerifyHttpContextLogged(errorEvent);
+            if (verifyHttpContext)
+            {
+                VerifyHttpContextLogged(errorEvent);
+            }
         }
 
         /// <summary>
