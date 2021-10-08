@@ -1207,5 +1207,104 @@ namespace Google.Cloud.Monitoring.V3.Tests
             await client.CreateTimeSeriesAsync(request.ProjectName, request.TimeSeries, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void CreateServiceTimeSeriesRequestObject()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateServiceTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.CreateServiceTimeSeries(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceTimeSeriesRequestObjectAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateServiceTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CreateServiceTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CreateServiceTimeSeriesAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceTimeSeries()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateServiceTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.CreateServiceTimeSeries(request.Name, request.TimeSeries);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceTimeSeriesAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateServiceTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CreateServiceTimeSeriesAsync(request.Name, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CreateServiceTimeSeriesAsync(request.Name, request.TimeSeries, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateServiceTimeSeriesResourceNames()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateServiceTimeSeries(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            client.CreateServiceTimeSeries(request.ProjectName, request.TimeSeries);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateServiceTimeSeriesResourceNamesAsync()
+        {
+            moq::Mock<MetricService.MetricServiceClient> mockGrpcClient = new moq::Mock<MetricService.MetricServiceClient>(moq::MockBehavior.Strict);
+            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
+            {
+                TimeSeries = { new TimeSeries(), },
+                ProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.CreateServiceTimeSeriesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            MetricServiceClient client = new MetricServiceClientImpl(mockGrpcClient.Object, null);
+            await client.CreateServiceTimeSeriesAsync(request.ProjectName, request.TimeSeries, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.CreateServiceTimeSeriesAsync(request.ProjectName, request.TimeSeries, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

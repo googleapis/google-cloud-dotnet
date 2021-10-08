@@ -55,6 +55,7 @@ namespace Google.Cloud.Monitoring.V3
             DeleteMetricDescriptorSettings = existing.DeleteMetricDescriptorSettings;
             ListTimeSeriesSettings = existing.ListTimeSeriesSettings;
             CreateTimeSeriesSettings = existing.CreateTimeSeriesSettings;
+            CreateServiceTimeSeriesSettings = existing.CreateServiceTimeSeriesSettings;
             OnCopy(existing);
         }
 
@@ -195,6 +196,19 @@ namespace Google.Cloud.Monitoring.V3
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CreateTimeSeriesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(12000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MetricServiceClient.CreateServiceTimeSeries</c> and <c>MetricServiceClient.CreateServiceTimeSeriesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateServiceTimeSeriesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="MetricServiceSettings"/> object.</returns>
@@ -1332,6 +1346,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1343,6 +1359,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1354,6 +1372,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1365,6 +1385,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1389,6 +1411,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1413,6 +1437,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1433,6 +1459,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1457,6 +1485,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1481,6 +1511,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1501,6 +1533,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1525,6 +1559,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1549,6 +1585,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1569,6 +1607,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1593,6 +1633,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1617,6 +1659,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1637,6 +1681,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1661,6 +1707,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -1685,6 +1733,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -2545,6 +2595,271 @@ namespace Google.Cloud.Monitoring.V3
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task CreateTimeSeriesAsync(gagr::ProjectName name, scg::IEnumerable<TimeSeries> timeSeries, st::CancellationToken cancellationToken) =>
             CreateTimeSeriesAsync(name, timeSeries, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CreateServiceTimeSeries(CreateTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CreateServiceTimeSeriesAsync(CreateTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CreateServiceTimeSeriesAsync(CreateTimeSeriesRequest request, st::CancellationToken cancellationToken) =>
+            CreateServiceTimeSeriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// </param>
+        /// <param name="timeSeries">
+        /// Required. The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
+        /// 
+        /// The maximum number of `TimeSeries` objects per `Create` request is 200.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CreateServiceTimeSeries(string name, scg::IEnumerable<TimeSeries> timeSeries, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServiceTimeSeries(new CreateTimeSeriesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                TimeSeries =
+                {
+                    gax::GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// </param>
+        /// <param name="timeSeries">
+        /// Required. The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
+        /// 
+        /// The maximum number of `TimeSeries` objects per `Create` request is 200.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CreateServiceTimeSeriesAsync(string name, scg::IEnumerable<TimeSeries> timeSeries, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServiceTimeSeriesAsync(new CreateTimeSeriesRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                TimeSeries =
+                {
+                    gax::GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// </param>
+        /// <param name="timeSeries">
+        /// Required. The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
+        /// 
+        /// The maximum number of `TimeSeries` objects per `Create` request is 200.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CreateServiceTimeSeriesAsync(string name, scg::IEnumerable<TimeSeries> timeSeries, st::CancellationToken cancellationToken) =>
+            CreateServiceTimeSeriesAsync(name, timeSeries, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// </param>
+        /// <param name="timeSeries">
+        /// Required. The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
+        /// 
+        /// The maximum number of `TimeSeries` objects per `Create` request is 200.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void CreateServiceTimeSeries(gagr::ProjectName name, scg::IEnumerable<TimeSeries> timeSeries, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServiceTimeSeries(new CreateTimeSeriesRequest
+            {
+                ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                TimeSeries =
+                {
+                    gax::GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// </param>
+        /// <param name="timeSeries">
+        /// Required. The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
+        /// 
+        /// The maximum number of `TimeSeries` objects per `Create` request is 200.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CreateServiceTimeSeriesAsync(gagr::ProjectName name, scg::IEnumerable<TimeSeries> timeSeries, gaxgrpc::CallSettings callSettings = null) =>
+            CreateServiceTimeSeriesAsync(new CreateTimeSeriesRequest
+            {
+                ProjectName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                TimeSeries =
+                {
+                    gax::GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The [project](https://cloud.google.com/monitoring/api/v3#project_name) on
+        /// which to execute the request. The format is:
+        /// 
+        /// projects/[PROJECT_ID_OR_NUMBER]
+        /// </param>
+        /// <param name="timeSeries">
+        /// Required. The new data to be added to a list of time series.
+        /// Adds at most one data point to each of several time series.  The new data
+        /// point must be more recent than any other point in its time series.  Each
+        /// `TimeSeries` value must fully specify a unique time series by supplying
+        /// all label values for the metric and the monitored resource.
+        /// 
+        /// The maximum number of `TimeSeries` objects per `Create` request is 200.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task CreateServiceTimeSeriesAsync(gagr::ProjectName name, scg::IEnumerable<TimeSeries> timeSeries, st::CancellationToken cancellationToken) =>
+            CreateServiceTimeSeriesAsync(name, timeSeries, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>MetricService client wrapper implementation, for convenient use.</summary>
@@ -2569,6 +2884,8 @@ namespace Google.Cloud.Monitoring.V3
         private readonly gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> _callListTimeSeries;
 
         private readonly gaxgrpc::ApiCall<CreateTimeSeriesRequest, wkt::Empty> _callCreateTimeSeries;
+
+        private readonly gaxgrpc::ApiCall<CreateTimeSeriesRequest, wkt::Empty> _callCreateServiceTimeSeries;
 
         /// <summary>
         /// Constructs a client wrapper for the MetricService service, with the specified gRPC client and settings.
@@ -2604,6 +2921,9 @@ namespace Google.Cloud.Monitoring.V3
             _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, wkt::Empty>(grpcClient.CreateTimeSeriesAsync, grpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateTimeSeries);
             Modify_CreateTimeSeriesApiCall(ref _callCreateTimeSeries);
+            _callCreateServiceTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, wkt::Empty>(grpcClient.CreateServiceTimeSeriesAsync, grpcClient.CreateServiceTimeSeries, effectiveSettings.CreateServiceTimeSeriesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCreateServiceTimeSeries);
+            Modify_CreateServiceTimeSeriesApiCall(ref _callCreateServiceTimeSeries);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2624,6 +2944,8 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_ListTimeSeriesApiCall(ref gaxgrpc::ApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse> call);
 
         partial void Modify_CreateTimeSeriesApiCall(ref gaxgrpc::ApiCall<CreateTimeSeriesRequest, wkt::Empty> call);
+
+        partial void Modify_CreateServiceTimeSeriesApiCall(ref gaxgrpc::ApiCall<CreateTimeSeriesRequest, wkt::Empty> call);
 
         partial void OnConstruction(MetricService.MetricServiceClient grpcClient, MetricServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2746,6 +3068,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -2760,6 +3084,8 @@ namespace Google.Cloud.Monitoring.V3
 
         /// <summary>
         /// Creates a new metric descriptor.
+        /// The creation is executed asynchronously and callers may check the returned
+        /// operation to track its progress.
         /// User-created metric descriptors define
         /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
         /// </summary>
@@ -2852,6 +3178,46 @@ namespace Google.Cloud.Monitoring.V3
         {
             Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
             return _callCreateTimeSeries.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void CreateServiceTimeSeries(CreateTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
+            _callCreateServiceTimeSeries.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates or adds data to one or more service time series. A service time
+        /// series is a time series for a metric from a Google Cloud service. The
+        /// response is empty if all time series in the request were written. If any
+        /// time series could not be written, a corresponding failure message is
+        /// included in the error response. This endpoint rejects writes to
+        /// user-defined metrics.
+        /// This method is only for use by Google Cloud services. Use
+        /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+        /// instead.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task CreateServiceTimeSeriesAsync(CreateTimeSeriesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
+            return _callCreateServiceTimeSeries.Async(request, callSettings);
         }
     }
 

@@ -157,6 +157,14 @@ namespace Google.Cloud.Monitoring.V3 {
         __Marshaller_google_monitoring_v3_CreateTimeSeriesRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CreateServiceTimeSeries = new grpc::Method<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateServiceTimeSeries",
+        __Marshaller_google_monitoring_v3_CreateTimeSeriesRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -217,6 +225,8 @@ namespace Google.Cloud.Monitoring.V3 {
 
       /// <summary>
       /// Creates a new metric descriptor.
+      /// The creation is executed asynchronously and callers may check the returned
+      /// operation to track its progress.
       /// User-created metric descriptors define
       /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
@@ -266,6 +276,26 @@ namespace Google.Cloud.Monitoring.V3 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates or adds data to one or more service time series. A service time
+      /// series is a time series for a metric from a Google Cloud service. The
+      /// response is empty if all time series in the request were written. If any
+      /// time series could not be written, a corresponding failure message is
+      /// included in the error response. This endpoint rejects writes to
+      /// user-defined metrics.
+      /// This method is only for use by Google Cloud services. Use
+      /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CreateServiceTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -493,6 +523,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new metric descriptor.
+      /// The creation is executed asynchronously and callers may check the returned
+      /// operation to track its progress.
       /// User-created metric descriptors define
       /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
@@ -508,6 +540,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new metric descriptor.
+      /// The creation is executed asynchronously and callers may check the returned
+      /// operation to track its progress.
       /// User-created metric descriptors define
       /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
@@ -521,6 +555,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new metric descriptor.
+      /// The creation is executed asynchronously and callers may check the returned
+      /// operation to track its progress.
       /// User-created metric descriptors define
       /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
@@ -536,6 +572,8 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       /// <summary>
       /// Creates a new metric descriptor.
+      /// The creation is executed asynchronously and callers may check the returned
+      /// operation to track its progress.
       /// User-created metric descriptors define
       /// [custom metrics](https://cloud.google.com/monitoring/custom-metrics).
       /// </summary>
@@ -711,6 +749,86 @@ namespace Google.Cloud.Monitoring.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTimeSeries, null, options, request);
       }
+      /// <summary>
+      /// Creates or adds data to one or more service time series. A service time
+      /// series is a time series for a metric from a Google Cloud service. The
+      /// response is empty if all time series in the request were written. If any
+      /// time series could not be written, a corresponding failure message is
+      /// included in the error response. This endpoint rejects writes to
+      /// user-defined metrics.
+      /// This method is only for use by Google Cloud services. Use
+      /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateServiceTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateServiceTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates or adds data to one or more service time series. A service time
+      /// series is a time series for a metric from a Google Cloud service. The
+      /// response is empty if all time series in the request were written. If any
+      /// time series could not be written, a corresponding failure message is
+      /// included in the error response. This endpoint rejects writes to
+      /// user-defined metrics.
+      /// This method is only for use by Google Cloud services. Use
+      /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateServiceTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateServiceTimeSeries, null, options, request);
+      }
+      /// <summary>
+      /// Creates or adds data to one or more service time series. A service time
+      /// series is a time series for a metric from a Google Cloud service. The
+      /// response is empty if all time series in the request were written. If any
+      /// time series could not be written, a corresponding failure message is
+      /// included in the error response. This endpoint rejects writes to
+      /// user-defined metrics.
+      /// This method is only for use by Google Cloud services. Use
+      /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateServiceTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateServiceTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates or adds data to one or more service time series. A service time
+      /// series is a time series for a metric from a Google Cloud service. The
+      /// response is empty if all time series in the request were written. If any
+      /// time series could not be written, a corresponding failure message is
+      /// included in the error response. This endpoint rejects writes to
+      /// user-defined metrics.
+      /// This method is only for use by Google Cloud services. Use
+      /// [projects.timeSeries.create][google.monitoring.v3.MetricService.CreateTimeSeries]
+      /// instead.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateServiceTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateServiceTimeSeries, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override MetricServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -732,7 +850,8 @@ namespace Google.Cloud.Monitoring.V3 {
           .AddMethod(__Method_CreateMetricDescriptor, serviceImpl.CreateMetricDescriptor)
           .AddMethod(__Method_DeleteMetricDescriptor, serviceImpl.DeleteMetricDescriptor)
           .AddMethod(__Method_ListTimeSeries, serviceImpl.ListTimeSeries)
-          .AddMethod(__Method_CreateTimeSeries, serviceImpl.CreateTimeSeries).Build();
+          .AddMethod(__Method_CreateTimeSeries, serviceImpl.CreateTimeSeries)
+          .AddMethod(__Method_CreateServiceTimeSeries, serviceImpl.CreateServiceTimeSeries).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -750,6 +869,7 @@ namespace Google.Cloud.Monitoring.V3 {
       serviceBinder.AddMethod(__Method_DeleteMetricDescriptor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMetricDescriptor));
       serviceBinder.AddMethod(__Method_ListTimeSeries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse>(serviceImpl.ListTimeSeries));
       serviceBinder.AddMethod(__Method_CreateTimeSeries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CreateTimeSeries));
+      serviceBinder.AddMethod(__Method_CreateServiceTimeSeries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CreateServiceTimeSeries));
     }
 
   }
