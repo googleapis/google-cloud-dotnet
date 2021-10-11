@@ -51,8 +51,9 @@ namespace Google.Cloud.Tools.ApiIndex.V1
             var options = Options.GetValueOrDefault("csharp_namespace") ?? new Api.Types.OptionValues();
 
             var allNamespaces = new HashSet<string>(options.ValueCounts.Keys);
-
-            var optionCount = options.ValueCounts.Sum(pair => pair.Value);
+            // In some cases we get a namespace value of "", which we should effectively treat as "not specified".
+            allNamespaces.Remove("");
+            var optionCount = options.ValueCounts.Where(pair => pair.Key != "").Sum(pair => pair.Value);
             if (options.ValueCounts.Sum(pair => pair.Value) != totalFiles)
             {
                 var namespaceFromProtoPackage = string.Join('.', Id.Split('.').Select(bit => ToUpperCamelCase(bit)));
