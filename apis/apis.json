@@ -196,6 +196,23 @@
       ]
     },
     {
+      "id": "Google.Cloud.AssuredWorkloads.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Assured Workloads",
+      "productUrl": "https://cloud.google.com/assured-workloads/docs",
+      "description": "Recommended Google client library to access the Google Cloud Assured Workloads API (v1)",
+      "tags": [
+        "regulation",
+        "compilance"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/assuredworkloads/v1"
+    },
+    {
       "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
       "version": "1.0.0-beta07",
       "type": "grpc",
