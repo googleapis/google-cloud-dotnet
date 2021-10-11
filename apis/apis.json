@@ -457,7 +457,7 @@
     },
     {
       "id": "Google.Cloud.BinaryAuthorization.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Binary Authorization",
       "productUrl": "https://cloud.google.com/binary-authorization/docs/reference/rpc",
