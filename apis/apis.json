@@ -152,6 +152,24 @@
       "protoPath": "google/appengine/v1"
     },
     {
+      "id": "Google.Cloud.ArtifactRegistry.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Artifact Registry",
+      "productUrl": "https://cloud.google.com/artifact-registry",
+      "description": "Recommended Google client library to access the Artifact Registry API v1, which stores and manages build artifacts in a scalable and integrated service built on Google infrastructure.",
+      "tags": [
+        "artifacts",
+        "registry",
+        "containers"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "2.2.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/devtools/artifactregistry/v1"
+    },
+    {
       "id": "Google.Cloud.ArtifactRegistry.V1Beta2",
       "version": "1.0.0-beta03",
       "type": "grpc",
