@@ -99,76 +99,34 @@ You can also log exceptions explicitly.
 
 # Logging
 
-## Initializing Logging
+Configuring and using Google Cloud Logging in ASP.NET Core applications is very similar to doing so in a
+non ASP.NET Core application. See the
+[`Google.Cloud.Diagnostics.Common`](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Diagnostics.Common/latest)
+documentation for more information.
 
-When configuring an `IWebHostBuilder` Logging can be initialized in
-two different ways:
+## Configuration
 
-Using `ConfigureServices`:
+Configuration of Google Cloud Logging in ASP.NET Core applications is almost the same as for
+non ASP.NET Core applications. You just build the Host as recommended for ASP.NET Core applications
+instead of using the general purpose host builder.
 
-{{sample:Logging.RegisterGoogleLogger2}}
+{{sample:Logging.ConfigureAspNetCore}}
 
-Or using `ConfigureLogging`:
-
-{{sample:Logging.RegisterGoogleLogger3}}
-
-Note that this approach does not support custom services (such as
-log entry label providers) being used as the service provider is
-not available within `ConfigureLogging`.
-
-Alternatively, logging can be configured within the application's
-`Startup.Configure` method:
-
-{{sample:Logging.RegisterGoogleLogger}}
+As an alternative, you can configure logging when you are configuring services for your application. This approach is useful
+if you are configuring services in a `Startup` class or similar. This alternative is used in the same way for ASP.NET Core and
+non ASP.NET Core applications alike.
 
 ## Log
 
-{{sample:Logging.UseGoogleLogger}}
+When logging, the main difference between ASP.NET Core and non ASP.NET Core applications is how you obtain a logger in container
+activated classes, like controllers, pages, etc. Your code does not have to explicitly resolve the dependency, instead the logger
+will get injected on construction.
 
-## Troubleshooting Logging
-
-Sometimes it is neccessary to diagnose log operations. It might be that logging is failing or that
-we simply cannot find where the logs are being stored in GCP. What follows are a couple of code samples
-that can be useful to find out what might be wrong with logging operations.
-
-### Propagating Exceptions
-
-By default the Google Logger won't propagate any exceptions thrown during logging. This is to protect the
-application from crashing if logging is not possible. But logging is an important aspect of most applications
-so at times we need to know if it's failing and why. The following
-example shows how to configure Google Logger so that it propagates exceptions thrown during logging.
-
-{{sample:Logging.RegisterGoogleLoggerPropagateExceptions}}
-
-The same `LoggerOptions` can be specified in any of the other ways
-of registering logging.
-
-### Finding out the URL where logs are written
-
-Depending on where your code is running and the options you provided
-for creating a Google Logger, it might be hard to find your logs in
-the GCP Console. We have provided a way for you to obtain the URL
-where your logs can be found.
-
-As the following code sample shows, you only need to pass a
-`System.IO.TextWriter` (typically `Console.Out` or `Console.Error`)
-as part of the options when registering logging. When the
-`GoogleLoggerProvider` is initialized, the URL where its logs can be
-found will be written to the given text writer.
-
-{{sample:Logging.RegisterGoogleLoggerWriteUrl}}
-
-Please note that since this is a Google Logger diagnostics feature,
-we don't respect settings for exception handling, i.e. we propagate
-any exception thrown while writing the URL to the given text writer
-so you know what might be happening. This feature should only be
-activated as a one off, if you are having trouble trying to find
-your logs in the GCP Console, and not as a permanent feature in
-production code. To deactivate this feature simply stop passing a
-`System.IO.TextWriter` as part of the options when creating a Google
-Logger.
+{{sample:Logging.Logging}}
 
 # Tracing
+
+The tracing component allows you to trace your application and send traces to Google Cloud Trace.
 
 ## Configuration
 
