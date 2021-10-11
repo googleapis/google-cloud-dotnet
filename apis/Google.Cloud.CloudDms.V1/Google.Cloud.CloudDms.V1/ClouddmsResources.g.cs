@@ -5115,7 +5115,7 @@ namespace Google.Cloud.CloudDms.V1 {
         /// </summary>
         [pbr::OriginalName("CREATING")] Creating = 3,
         /// <summary>
-        /// The migration job is created, not started and is fully editable.
+        /// The migration job is created and not started.
         /// </summary>
         [pbr::OriginalName("NOT_STARTED")] NotStarted = 4,
         /// <summary>
