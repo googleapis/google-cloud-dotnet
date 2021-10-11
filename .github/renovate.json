@@ -15,6 +15,7 @@
     "apis/Google.Cloud.AppEngine.V1/Google.Cloud.AppEngine.V1/**",
     "apis/Google.Cloud.ArtifactRegistry.V1Beta2/Google.Cloud.ArtifactRegistry.V1Beta2/**",
     "apis/Google.Cloud.Asset.V1/Google.Cloud.Asset.V1/**",
+    "apis/Google.Cloud.AssuredWorkloads.V1/Google.Cloud.AssuredWorkloads.V1/**",
     "apis/Google.Cloud.AssuredWorkloads.V1Beta1/Google.Cloud.AssuredWorkloads.V1Beta1/**",
     "apis/Google.Cloud.Audit/Google.Cloud.Audit/**",
     "apis/Google.Cloud.AutoML.V1/Google.Cloud.AutoML.V1/**",
