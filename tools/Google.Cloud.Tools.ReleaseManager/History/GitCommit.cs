@@ -67,12 +67,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             // but either way, we should skip "Committer" lines and anything after "PiperOrigin-RevId".
             if (_libGit2Commit.Author.Email == AutosynthEmail || OwlBotEmailRegex.IsMatch(_libGit2Commit.Author.Email))
             {
-                var sourceLink = messageLines.FirstOrDefault(line => line.StartsWith("Source-Link: https://github.com/googleapis/googleapis"));
+                var sourceLink = messageLines.FirstOrDefault(line => line.StartsWith("Source-Link: https://github.com/googleapis/googleapis/"));
                 // Work around autosynth putting everything on one line
                 if (sourceLink is object)
                 {
                     var commit = sourceLink.Split('/').Last();
-                    messageLines = GetGoogleApisCommitLines(commit);
+                    messageLines = GetGoogleApisCommitLines(commit) ?? messageLines;
                 }
                 messageLines = messageLines
                     .Where(line => !line.StartsWith("Committer: @"))
@@ -142,11 +142,19 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             // We could use Octokit etc, but we don't really need to, and it's simpler not to plumb it through.
             var client = new HttpClient();
             client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36");
-            var url = $"https://api.github.com/repos/googleapis/googleapis/git/commits/{hash}";
-            // Note: waiting in a console app should be fine.
-            string json = client.GetStringAsync(url).GetAwaiter().GetResult();
-            string message = (string) JObject.Parse(json)["message"];
-            return SplitCommitMessage(message);
+            try
+            {
+                var url = $"https://api.github.com/repos/googleapis/googleapis/git/commits/{hash}";
+                // Note: waiting in a console app should be fine.
+                string json = client.GetStringAsync(url).GetAwaiter().GetResult();
+                string message = (string) JObject.Parse(json)["message"];
+                return SplitCommitMessage(message);
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine($"WARNING: googleapis commit '{hash}' could not be fetched: {e.Message}");
+                return null;
+            }
         }
     }
 }
