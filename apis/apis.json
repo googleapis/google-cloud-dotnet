@@ -952,7 +952,7 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.Cx.V3",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "type": "grpc",
       "autoGenerator": "OwlBot",
       "productName": "Dialogflow",
