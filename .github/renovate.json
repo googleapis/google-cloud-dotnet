@@ -199,6 +199,18 @@
         "Microsoft.AspNetCore."
       ],
       "allowedVersions": "<3.2.0"
+    },
+    {
+      "matchPaths": [
+        "apis/Google.Cloud.Diagnostics.Common/**"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "excludePackageNames": [
+        "Microsoft.Extensions.Hosting"
+      ]
     }
   ],
   "schedule": [
