@@ -561,8 +561,12 @@ deep-remove-regex:
     - /owl-bot-staging
 
 deep-copy-regex:
-    - source: /{api.ProtoPath}/.*-csharp/(.*)
-      dest: /owl-bot-staging/{api.Id}/$1
+    - source: /{api.ProtoPath}/.*-csharp/{api.Id}
+      dest: /owl-bot-staging/{api.Id}/{api.Id}
+    - source: /{api.ProtoPath}/.*-csharp/{api.Id}.Tests
+      dest: /owl-bot-staging/{api.Id}/{api.Id}.Tests
+    - source: /{api.ProtoPath}/.*-csharp/{api.Id}.Snippets
+      dest: /owl-bot-staging/{api.Id}/{api.Id}.Snippets
 ";
             File.WriteAllText(owlBotConfigFile, content);
         }
