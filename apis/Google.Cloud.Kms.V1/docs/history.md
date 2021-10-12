@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.6.0, released 2021-10-12
+
+- [Commit 19b3652](https://github.com/googleapis/google-cloud-dotnet/commit/19b3652): feat: add RPC retry information for MacSign, MacVerify, and GenerateRandomBytes
+- [Commit 419bd7c](https://github.com/googleapis/google-cloud-dotnet/commit/419bd7c): feat: add OAEP+SHA1 to the list of supported algorithms
+
 # Version 2.5.0, released 2021-09-23
 
 - [Commit b91de3f](https://github.com/googleapis/google-cloud-dotnet/commit/b91de3f): feat: add support for Key Reimport
