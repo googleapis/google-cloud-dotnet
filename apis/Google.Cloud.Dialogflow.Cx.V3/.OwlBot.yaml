@@ -19,5 +19,9 @@ deep-remove-regex:
     - /owl-bot-staging
 
 deep-copy-regex:
-    - source: /google/cloud/dialogflow/cx/v3/.*-csharp/(.*)
-      dest: /owl-bot-staging/Google.Cloud.Dialogflow.Cx.V3/$1
+    - source: /google/cloud/dialogflow/cx/v3/.*-csharp/Google.Cloud.Dialogflow.Cx.V3
+      dest: /owl-bot-staging/Google.Cloud.Dialogflow.Cx.V3/Google.Cloud.Dialogflow.Cx.V3
+    - source: /google/cloud/dialogflow/cx/v3/.*-csharp/Google.Cloud.Dialogflow.Cx.V3.Tests
+      dest: /owl-bot-staging/Google.Cloud.Dialogflow.Cx.V3/Google.Cloud.Dialogflow.Cx.V3.Tests
+    - source: /google/cloud/dialogflow/cx/v3/.*-csharp/Google.Cloud.Dialogflow.Cx.V3.Snippets
+      dest: /owl-bot-staging/Google.Cloud.Dialogflow.Cx.V3/Google.Cloud.Dialogflow.Cx.V3.Snippets
