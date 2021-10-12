@@ -19,5 +19,9 @@ deep-remove-regex:
     - /owl-bot-staging
 
 deep-copy-regex:
-    - source: /google/cloud/contactcenterinsights/v1/.*-csharp/(.*)
-      dest: /owl-bot-staging/Google.Cloud.ContactCenterInsights.V1/$1
+    - source: /google/cloud/contactcenterinsights/v1/.*-csharp/Google.Cloud.ContactCenterInsights.V1
+      dest: /owl-bot-staging/Google.Cloud.ContactCenterInsights.V1/Google.Cloud.ContactCenterInsights.V1
+    - source: /google/cloud/contactcenterinsights/v1/.*-csharp/Google.Cloud.ContactCenterInsights.V1.Tests
+      dest: /owl-bot-staging/Google.Cloud.ContactCenterInsights.V1/Google.Cloud.ContactCenterInsights.V1.Tests
+    - source: /google/cloud/contactcenterinsights/v1/.*-csharp/Google.Cloud.ContactCenterInsights.V1.Snippets
+      dest: /owl-bot-staging/Google.Cloud.ContactCenterInsights.V1/Google.Cloud.ContactCenterInsights.V1.Snippets

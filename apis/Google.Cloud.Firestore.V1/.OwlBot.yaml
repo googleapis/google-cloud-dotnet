@@ -19,5 +19,9 @@ deep-remove-regex:
     - /owl-bot-staging
 
 deep-copy-regex:
-    - source: /google/firestore/v1/.*-csharp/(.*)
-      dest: /owl-bot-staging/Google.Cloud.Firestore.V1/$1
+    - source: /google/firestore/v1/.*-csharp/Google.Cloud.Firestore.V1
+      dest: /owl-bot-staging/Google.Cloud.Firestore.V1/Google.Cloud.Firestore.V1
+    - source: /google/firestore/v1/.*-csharp/Google.Cloud.Firestore.V1.Tests
+      dest: /owl-bot-staging/Google.Cloud.Firestore.V1/Google.Cloud.Firestore.V1.Tests
+    - source: /google/firestore/v1/.*-csharp/Google.Cloud.Firestore.V1.Snippets
+      dest: /owl-bot-staging/Google.Cloud.Firestore.V1/Google.Cloud.Firestore.V1.Snippets
