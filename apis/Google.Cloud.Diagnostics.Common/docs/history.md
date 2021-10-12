@@ -1,5 +1,29 @@
 # Version history
 
+# Version 4.3.0-beta04, released 2021-10-12
+
+- [Commit 6c3117a](https://github.com/googleapis/google-cloud-dotnet/commit/6c3117a): process: Add the correct license header.
+- [Commit 03eb674](https://github.com/googleapis/google-cloud-dotnet/commit/03eb674):
+  - refactor: Add better extension methods for Google Diagnostics.
+   - Make more of the old code obsolete.
+   - Delete in XML docs samples that quickly get outdated. We have snippets.
+- [Commit 53aa57a](https://github.com/googleapis/google-cloud-dotnet/commit/53aa57a):
+  - refactor: Add better extension methods for Diagnostics Logging.
+    - Make more of the old code obsolete.
+    - Fix naming conflicts between Common and AspNetCore*.
+    - Move non ASP.NET core tests to Common.
+    - Delete in XML docs samples that quickly get outdated. We have snippets.
+- [Commit 037af1a](https://github.com/googleapis/google-cloud-dotnet/commit/037af1a):
+  - refactor: Add better extension methods for Diagnostics Error Reporting.
+  - Make more of the old code obsolete.
+  - Delete in XML docs samples that quickly get outdated. We have snippets.
+- [Commit 1a5ef87](https://github.com/googleapis/google-cloud-dotnet/commit/1a5ef87):
+  - refactor: Add better extension methods for Diagnostics Tracing.
+  - Make more of the old code obsolete.
+  - Fix naming conflicts between Common and AspNetCore*.
+  - Move non ASP.NET core snippets to Common.
+  - Delete in XML docs samples that quickly get outdated. We have snippets.
+
 # Version 4.3.0-beta03, released 2021-07-22
 
 No API surface changes; just publishing docs from 4.3.0-beta02.
