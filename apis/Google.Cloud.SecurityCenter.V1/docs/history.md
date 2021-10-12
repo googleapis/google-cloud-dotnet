@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.7.0, released 2021-10-12
+
+- [Commit e1080c9](https://github.com/googleapis/google-cloud-dotnet/commit/e1080c9):
+  - feat: Added vulnerability field to the finding
+  - feat: Added type field to the resource which is surfaced in NotificationMessage
+
 # Version 2.6.0, released 2021-09-01
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
