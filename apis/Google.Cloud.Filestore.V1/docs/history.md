@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.2.0, released 2021-10-12
+
+- [Commit 4ab10f4](https://github.com/googleapis/google-cloud-dotnet/commit/4ab10f4): fix(filestore): add missing operation_metadata.proto import
+
 # Version 1.1.0, released 2021-09-23
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
