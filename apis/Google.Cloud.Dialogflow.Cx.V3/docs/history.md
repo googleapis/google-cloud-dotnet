@@ -1,5 +1,15 @@
 # Version history
 
+# Version 1.5.0, released 2021-10-12
+
+- [Commit 74b880a](https://github.com/googleapis/google-cloud-dotnet/commit/74b880a):
+  - feat: added deployment API
+  - feat: exposed DTMF input info in the query result
+  - docs: added notes on long running operation
+- [Commit de40ef5](https://github.com/googleapis/google-cloud-dotnet/commit/de40ef5):
+  - feat: update gapic-generator-csharp to 1.3.11
+  - feat: update rules_gapic to 0.8.0
+
 # Version 1.4.0, released 2021-09-23
 
 - [Commit 6b21a68](https://github.com/googleapis/google-cloud-dotnet/commit/6b21a68):
