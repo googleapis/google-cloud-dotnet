@@ -17,6 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using System.Net.Http;
@@ -56,25 +57,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         public DiagnosticsSnippetsTests()
         {
 #if NETCOREAPP3_1
-            // Sample: UseGoogleDiagnostics_Core3
             var hostBuilder = Host.CreateDefaultBuilder()
-                .ConfigureWebHostDefaults(webBuilder => webBuilder.ConfigureServices(services =>
-                    // Replace ProjectId with your Google Cloud Project ID.
-                    // Replace Service with a name or identifier for the service.
-                    // Replace Version with a version for the service.
-                    services.AddGoogleDiagnosticsForAspNetCore(ProjectId, Service, Version))
-                    .UseStartup<Startup>());
-            // End sample
+                .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<TestApplication.DiagnosticsStartup>());
             hostBuilder.ConfigureWebHost(webBuilder => webBuilder.UseTestServer());
 #elif NETCOREAPP2_1 || NET461
-            // Sample: UseGoogleDiagnostics
             var hostBuilder = new WebHostBuilder()
-                // Replace ProjectId with your Google Cloud Project ID.
-                // Replace Service with a name or identifier for the service.
-                // Replace Version with a version for the service.
-                .ConfigureServices(services => services.AddGoogleDiagnosticsForAspNetCore(ProjectId, Service, Version))
-                .UseStartup<Startup>();
-            // End sample
+                .UseStartup<TestApplication.DiagnosticsStartup>();
 #else
 #error unknown target framework
 #endif
@@ -83,6 +71,42 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
             _testId = IdGenerator.FromDateTime();
             _startTime = DateTimeOffset.UtcNow;
+        }
+
+        internal class TestApplication
+        {
+            private static readonly string ProjectId = TestEnvironment.GetTestProjectId();
+
+            // To hide some implementation details from the
+            // sample code, like how we are overriding the methods.
+            internal class DiagnosticsStartup : Startup
+            {
+                private readonly TestApplication application = new TestApplication();
+
+                public override void ConfigureServices(IServiceCollection services)
+                {
+                    application.ConfigureServices(services);
+                    base.ConfigureServices(services);
+                }
+            }
+
+            // Sample: Configure
+            public void ConfigureServices(IServiceCollection services)
+            {
+                // Replace ProjectId with your Google Cloud Project ID.
+                // Replace Service with a name or identifier for the service.
+                // Replace Version with a version for the service.
+                services.AddGoogleDiagnosticsForAspNetCore(ProjectId, Service, Version);
+
+                // Add any other services your application requires, for instance,
+                // depending on the version of ASP.NET Core you are using, you may
+                // need one of the following:
+
+                // services.AddMvc();
+
+                // services.AddControllersWithViews();
+            }
+            // End sample
         }
 
         /// <summary>
@@ -123,7 +147,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         [Fact]
         public async Task Logs_Information()
         {
-            await _client.GetAsync($"/LoggingSamples/LogInformation/{_testId}");
+            await _client.GetAsync($"/LoggingSamples/{nameof(LoggingSamplesController.LogInformation)}/{_testId}");
 
             LoggingSnippetsTests.PollAndVerifyLog(LogEntryPolling.Default, _startTime, _testId);
         }

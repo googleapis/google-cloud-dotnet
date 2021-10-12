@@ -29,7 +29,7 @@ using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Snippets
 {
-    public class LoggingSnippetsTests
+    public class LoggingSnippets
     {
         private const string ExpectedGcpLogBaseUrl = "https://console.cloud.google.com/logs/viewer";
 
@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         private readonly string _testId;
         private readonly DateTime _startTime;
 
-        public LoggingSnippetsTests()
+        public LoggingSnippets()
         {
             _testId = IdGenerator.FromDateTime();
             _startTime = DateTime.UtcNow;
@@ -153,21 +153,20 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         [MemberData(nameof(BasicLoggingConfigs))]
         public async Task LogsAsync(Func<IHostBuilder> hostBuilderCreator)
         {
-            // Naming it like a static variable so that it looks like that on sample code.
-            IHost s_host = null;
-            // To hide the diferentiating class.
+            IHost host = null;
+            // Hides that we use different classes so that we can have multiple CreateHostBuilder methods.
             Func<IHostBuilder> CreateHostBuilder = hostBuilderCreator;
 
             try
             {
                 // Sample: Start
-                s_host = CreateHostBuilder().Build();
-                await s_host.StartAsync();
+                host = CreateHostBuilder().Build();
+                await host.StartAsync();
                 // End sample
 
                 string userName = _testId;
                 // Sample: Logging
-                ILogger logger = s_host.Services.GetRequiredService<ILogger<Program>>();
+                ILogger logger = host.Services.GetRequiredService<ILogger<Program>>();
                 logger.LogInformation($"User {userName} logged in.");
                 // End sample
 
@@ -175,9 +174,9 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host is object)
+                if (host is object)
                 {
-                    await s_host.StopAsync();
+                    await host.StopAsync();
                 }
             }
         }
@@ -185,16 +184,16 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         [Fact]
         public async Task PropagatesExceptionAsync()
         {
-            IHost s_host = null;
+            IHost host = null;
 
             try
             {
                 var exception = await Assert.ThrowsAsync<AggregateException>(async () =>
                 {
-                    s_host = PropagateExceptionsHostBuilder.CreateHostBuilder().Build();
-                    await s_host.StartAsync();
+                    host = PropagateExceptionsHostBuilder.CreateHostBuilder().Build();
+                    await host.StartAsync();
 
-                    ILogger logger = s_host.Services.GetRequiredService<ILogger<Program>>();
+                    ILogger logger = host.Services.GetRequiredService<ILogger<Program>>();
                     logger.LogInformation(_testId);
                 });
 
@@ -203,9 +202,9 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host is object)
+                if (host is object)
                 {
-                    s_host.Dispose();
+                    host.Dispose();
                 }
             }
         }
@@ -213,7 +212,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         [Fact]
         public async Task WritesLogsUrlAsync()
         {
-            IHost s_host = null;
+            IHost host = null;
             TextWriter oldConsoleOut = Console.Out;
             try
             {
@@ -222,8 +221,8 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
 
                 // No need to make an actual call to the controller. Just starting up the server
                 // creates several loggers.
-                s_host = WritesLogsUrlHostBuilder.CreateHostBuilder().Build();
-                await s_host.StartAsync();
+                host = WritesLogsUrlHostBuilder.CreateHostBuilder().Build();
+                await host.StartAsync();
 
                 string writtenInfo = writer.ToString();
 
@@ -243,9 +242,9 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             finally
             {
                 Console.SetOut(oldConsoleOut);
-                if (s_host is object)
+                if (host is object)
                 {
-                    await s_host.StopAsync();
+                    await host.StopAsync();
                 }
             }
         }
