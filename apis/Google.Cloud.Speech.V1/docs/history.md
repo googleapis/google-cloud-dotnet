@@ -1,5 +1,11 @@
 # Version history
 
+# Version 2.6.0, released 2021-10-12
+
+- [Commit dc07468](https://github.com/googleapis/google-cloud-dotnet/commit/dc07468):
+  - feat: update gapic-generator-csharp to 1.3.11
+  - feat: update rules_gapic to 0.8.0
+
 # Version 2.5.0, released 2021-09-24
 
 - [Commit 09c3f7d](https://github.com/googleapis/google-cloud-dotnet/commit/09c3f7d): feat: add output_config request field
