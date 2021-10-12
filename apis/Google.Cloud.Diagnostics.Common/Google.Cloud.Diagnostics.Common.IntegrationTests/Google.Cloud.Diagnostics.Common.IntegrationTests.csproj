@@ -7,6 +7,7 @@
     <NoWarn>1701;1702;1705;xUnit2004;xUnit2013;AD0001</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Google.Api.Gax.Testing" Version="[3.5.0, 4.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj" />
     <PackageReference Include="Google.Cloud.ErrorReporting.V1Beta1" Version="[2.0.0-beta04, 3.0.0)" />
