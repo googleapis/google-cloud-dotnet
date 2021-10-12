@@ -29,7 +29,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     internal class GitCommit
     {
         private const string AutosynthEmail = "yoshi-automation@google.com";
-        private static readonly Regex OwlBotEmailRegex = new Regex(@"\d+\+gcf-owl-bot\[bot\]@users\.noreply\.github\.com");
+        private static readonly Regex OwlBotEmailRegex = new Regex(@".*gcf-owl-bot\[bot\]@users\.noreply\.github\.com");
 
         /// <summary>
         /// A commit line consisting of just "Version history:" indicates that all the lines
