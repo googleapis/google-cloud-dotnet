@@ -204,14 +204,21 @@
       "matchPaths": [
         "apis/Google.Cloud.Diagnostics.Common/**"
       ],
-      "matchUpdateTypes": [
-        "major",
-        "minor"
+      "matchPackageNames": [
+        "Microsoft.Extensions.Hosting"
+      ],
+      "matchCurrentVersion": "/^2\\./",
+      "allowedVersions": "<2.2.0"
+    },
+    {
+      "matchPaths": [
+        "apis/Google.Cloud.Diagnostics.Common/**"
       ],
       "matchPackageNames": [
         "Microsoft.Extensions.Hosting"
       ],
-      "allowedVersions": "<1.0.0"
+      "matchCurrentVersion": "/^3\\./",
+      "allowedVersions": "<3.2.0"
     }
   ],
   "schedule": [
