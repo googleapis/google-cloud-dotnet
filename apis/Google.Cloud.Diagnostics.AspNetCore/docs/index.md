@@ -45,36 +45,27 @@ for the permissions needed for Tracing.
 
 # Getting started
 
-## Initializing Google Diagnostics
+The easiest way to configure Google Cloud Diagnostics is using the `AddGoogleDiagnosticsForAspNetCore`
+overloaded extension method on `IServiceCollection`.
+This configures the Logging, Tracing and Error Reporting components, including neccesarry middlewares.
 
-The easiest way to initialize Google Diagnostics services is using
-the `UseGoogleDiagnostics` extentension method on `IWebHostBuilder`.
-This configures Logging, Tracing and Error Reporting middleware.
+If your application is running on Google App Engine, Google Kubernetes Engine, Google Cloud Run or 
+Google Compute Engine, you don't need to provide a value for `ProjectId`, `Service` and `Version`
+since they can be automatically obtained by the `AddGoogleDiagnosticsForAspNetCore` methods as far
+as they make sense for the environment. (Not every environment has the concept of a "service" or
+"version".) The values used will be the ones associated with the running application.
 
-If your application is runnng on Google App Engine, Google
-Kubernetes Engine, Google Cloud Run or Google Compute Engine, you
-don't need to provide a value for `ProjectId`, `Service` and
-`Version` since they can be automatically obtained by the
-`UseGoogleDiagnostics` method as far as they make sense for the
-environment. (Not every environment has the concept of a "service"
-or "version".) The values used will be the ones associated with the running application.
+If your application is running outside of GCP, including when it runs locally, then you'll need to provide the 
+`ProjectId` of the Google Cloud Project in which to store the diagnostic information as well as the `Service` and `Version`
+with which to identify your application.
 
-If your application is running outside of GCP, including when it
-runs locally, then you'll need to provide the `ProjectId` of the
-Google Cloud Project in which to store the diagnostic information as
-well as the `Service` and `Version` with which to identify your
-application.
+{{sample:Diagnostics.Configure}}
 
-{{sample:Diagnostics.UseGoogleDiagnostics}}
+You can still initialize the separate components using the extension methods described below.
+This can be useful if you only need to use some of the observability components.
 
-You can still initialize the separate components using the extension
-methods below. This can be useful if you only need to use some of
-the observability components.
-
-Optional parameters on `UseGoogleDiagnostics` are also available to
-specify options for each of the components (logging, tracing and
-error reporting). This is typically useful for diagnosing problems,
-as described below.
+Optional parameters on `AddGoogleDiagnosticsForAspNetCore` are also available to specify options for each
+of the components (logging, tracing and error reporting).
 
 # Error Reporting
 

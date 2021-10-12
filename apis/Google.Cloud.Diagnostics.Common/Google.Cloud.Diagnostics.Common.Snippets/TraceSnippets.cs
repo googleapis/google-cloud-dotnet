@@ -127,22 +127,21 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         [Fact]
         public async Task TraceIncomingAsync()
         {
-            // Naming it like a static variable so that it looks like that on sample code.
-            IHost s_host = null;
-            // To hide the diferentiating class.
+            IHost host = null;
+            // Hides that we use different classes so that we can have multiple CreateHostBuilder methods.
             Func<IHostBuilder> CreateHostBuilder = DefaultHostBuilder.CreateHostBuilder;
 
             try
             {
                 // Sample: Start
-                s_host = CreateHostBuilder().Build();
-                await s_host.StartAsync();
+                host = CreateHostBuilder().Build();
+                await host.StartAsync();
                 // End sample
 
                 object request = null;
                 // Sample: IncomingContext
                 ITraceContext traceContext = GetTraceContextFromIncomingRequest(request);
-                var tracerFactory = s_host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
+                var tracerFactory = host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
                 IManagedTracer tracer = tracerFactory(traceContext);
                 ContextTracerManager.SetCurrentTracer(tracer);
                 // End sample
@@ -152,7 +151,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                 using (tracer.StartSpan(_testId))
                 {
                     // Sample: Trace
-                    IManagedTracer currentTracer = s_host.Services.GetRequiredService<IManagedTracer>();
+                    IManagedTracer currentTracer = host.Services.GetRequiredService<IManagedTracer>();
                     using (currentTracer.StartSpan("testing_tracing"))
                     {
                         Console.WriteLine("Using Cloud Trace from a non ASP.NET Core app");
@@ -166,9 +165,9 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host is object)
+                if (host is object)
                 {
-                    await s_host.StopAsync();
+                    await host.StopAsync();
                 }
             }
         }
@@ -176,19 +175,16 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         [Fact]
         public async Task TraceSingleAsync()
         {
-            // Naming it like an instance variable so that it looks like that on sample code.
-            IHost s_host = null;
-            // To hide the diferentiating class.
-            Func<IHostBuilder> CreateHostBuilder = TroubleshootingHostBuilder.CreateHostBuilder;
+            IHost host = null;
 
             try
             {
-                s_host = CreateHostBuilder().Build();
-                await s_host.StartAsync();
+                host = TroubleshootingHostBuilder.CreateHostBuilder().Build();
+                await host.StartAsync();
 
                 // Sample: SingleContext
                 ITraceContext traceContext = new SimpleTraceContext(null, null, true);
-                var tracerFactory = s_host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
+                var tracerFactory = host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
                 IManagedTracer tracer = tracerFactory(traceContext);
                 ContextTracerManager.SetCurrentTracer(tracer);
                 // End sample
@@ -198,7 +194,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                 using (tracer.StartSpan(_testId))
                 {
                     // Sample: RunIn
-                    IManagedTracer currentTracer = s_host.Services.GetRequiredService<IManagedTracer>();
+                    IManagedTracer currentTracer = host.Services.GetRequiredService<IManagedTracer>();
                     currentTracer.RunInSpan(
                         () => Console.WriteLine("Using Cloud Trace from a non ASP.NET Core app"),
                         "testing_tracing");
@@ -210,9 +206,9 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host is object)
+                if (host is object)
                 {
-                    await s_host.StopAsync();
+                    await host.StopAsync();
                 }
             }
         }
@@ -220,18 +216,15 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         [Fact]
         public async Task TraceOutgoingAsync()
         {
-            // Naming it like a static variable so that it looks like that on sample code.
-            IHost s_host = null;
-            // To hide the diferentiating class.
-            Func<IHostBuilder> CreateHostBuilder = OutgoingHostBuilder.CreateHostBuilder;
+            IHost host = null;
 
             try
             {
-                s_host = CreateHostBuilder().Build();
-                await s_host.StartAsync();
+                host = OutgoingHostBuilder.CreateHostBuilder().Build();
+                await host.StartAsync();
 
                 ITraceContext traceContext = new SimpleTraceContext(null, null, true);
-                var tracerFactory = s_host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
+                var tracerFactory = host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
                 IManagedTracer tracer = tracerFactory(traceContext);
                 ContextTracerManager.SetCurrentTracer(tracer);
 
@@ -240,7 +233,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                 using (tracer.StartSpan(_testId))
                 {
                     // Sample: TraceOutgoingClientFactory
-                    IHttpClientFactory clientFactory = s_host.Services.GetRequiredService<IHttpClientFactory>();
+                    IHttpClientFactory clientFactory = host.Services.GetRequiredService<IHttpClientFactory>();
                     var httpClient = clientFactory.CreateClient("tracesOutgoing");
                     // Any code that makes outgoing requests.
                     var response = await httpClient.GetAsync("http://weather.com/");
@@ -253,9 +246,9 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host is object)
+                if (host is object)
                 {
-                    await s_host.StopAsync();
+                    await host.StopAsync();
                 }
             }
         }
@@ -264,17 +257,15 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
         public async Task TraceCustomOutgoingAsync()
         {
             // Naming it like a static variable so that it looks like that on sample code.
-            IHost s_host = null;
-            // To hide the diferentiating class.
-            Func<IHostBuilder> CreateHostBuilder = CustomgOutgoingHostBuilder.CreateHostBuilder;
+            IHost host = null;
 
             try
             {
-                s_host = CreateHostBuilder().Build();
-                await s_host.StartAsync();
+                host = CustomgOutgoingHostBuilder.CreateHostBuilder().Build();
+                await host.StartAsync();
 
                 ITraceContext traceContext = new SimpleTraceContext(null, null, true);
-                var tracerFactory = s_host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
+                var tracerFactory = host.Services.GetRequiredService<Func<ITraceContext, IManagedTracer>>();
                 IManagedTracer tracer = tracerFactory(traceContext);
                 ContextTracerManager.SetCurrentTracer(tracer);
 
@@ -282,7 +273,7 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
                 // But we don't show this in sample code.
                 using (tracer.StartSpan(_testId))
                 {
-                    IHttpClientFactory clientFactory = s_host.Services.GetRequiredService<IHttpClientFactory>();
+                    IHttpClientFactory clientFactory = host.Services.GetRequiredService<IHttpClientFactory>();
                     var httpClient = clientFactory.CreateClient("tracesOutgoing");
                     // Any code that makes outgoing requests.
                     var response = await httpClient.GetAsync("http://weather.com/");
@@ -294,9 +285,9 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
             finally
             {
-                if (s_host is object)
+                if (host is object)
                 {
-                    await s_host.StopAsync();
+                    await host.StopAsync();
                 }
             }
         }

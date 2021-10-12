@@ -42,6 +42,34 @@ for the permissions needed for Tracing.
 > You can read more about .NET dependency injection in non ASP.NET Core applications in the
 > [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage).
 
+# Getting started
+
+The easiest way to configure Google Cloud Diagnostics is using the `AddGoogleDiagnostics` extension
+methods on `IServiceCollection`.
+This configures the Logging, Tracing and Error Reporting components.
+
+If your application is running on Google App Engine, Google Kubernetes Engine, Google Cloud Run or 
+Google Compute Engine, you don't need to provide a value for `ProjectId`, `Service` and `Version`
+since they can be automatically obtained by the `AddGoogleDiagnostics` methods as far as they make sense for the
+environment. (Not every environment has the concept of a "service" or "version".)
+The values used will be the ones associated with the running application.
+
+If your application is running outside of GCP, including when it runs locally, then you'll need to provide the 
+`ProjectId` of the Google Cloud Project in which to store the diagnostic information as well as the `Service` and `Version`
+with which to identify your application.
+
+{{sample:Diagnostics.Configure}}
+
+Don't forget to start the host.
+
+{{sample:Diagnostics.Start}}
+
+You can still initialize the separate components using the extension methods described below.
+This can be useful if you only need to use some of the observability components.
+
+Optional parameters on `AddGoogleDiagnostics` are also available to specify options for each of the components
+(logging, tracing and error reporting).
+
 # Error reporting
 
 The error reporting component allows you to create error reports from exceptions thrown in your application.
@@ -94,7 +122,7 @@ For logging, youuse the configured Google Cloud Logger as you would any other `M
 
 ## Troubleshooting Logging
 
-Sometimes it is neccessary to diagnose log operations. It might be that logging is failing or that you simply cannot find
+Sometimes it is necessary to diagnose log operations. It might be that logging is failing or that you simply cannot find
 where the logs are being stored in Google Cloud Logging. What follows are a couple of code samples that can be useful to
 find out what might be wrong with logging operations.
 
