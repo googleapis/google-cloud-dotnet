@@ -208,9 +208,10 @@
         "major",
         "minor"
       ],
-      "excludePackageNames": [
+      "matchPackageNames": [
         "Microsoft.Extensions.Hosting"
-      ]
+      ],
+      "allowedVersions": "<1.0.0"
     }
   ],
   "schedule": [
