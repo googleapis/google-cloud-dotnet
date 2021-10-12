@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.6.0, released 2021-10-12
+
+- [Commit 03f91a3](https://github.com/googleapis/google-cloud-dotnet/commit/03f91a3): docs: recommend AnalyzeContent for future users
+
 # Version 3.5.0, released 2021-09-23
 
 - [Commit 6687459](https://github.com/googleapis/google-cloud-dotnet/commit/6687459): docs: clarified some LRO types
