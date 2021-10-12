@@ -977,7 +977,7 @@
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
-      "version": "3.5.0",
+      "version": "3.6.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Dialogflow API.",
       "tags": [
