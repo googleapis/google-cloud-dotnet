@@ -105,7 +105,6 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
 
                 ILogger logger = host.Services.GetRequiredService<ILogger<Program>>();
                 logger.LogInformation(_testId);
-                // End sample
 
                 LoggingSnippets.PollAndVerifyLog(LogEntryPolling.Default, _startTime, _testId);
             }
