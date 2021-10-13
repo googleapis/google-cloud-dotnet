@@ -97,7 +97,6 @@
       "id": "Google.Cloud.AIPlatform.V1",
       "version": "1.0.0-beta04",
       "type": "grpc",
-      "autoGenerator": "OwlBot",
       "productName": "Cloud AI Platform",
       "productUrl": "https://cloud.google.com/ai-platform/docs/",
       "description": "Recommended Google client library to access the AI Platform API, which allows you to train high-quality custom machine learning models with minimal machine learning expertise and effort.",
