@@ -46,6 +46,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     new ga::LabelDescriptor(),
                 },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
+                },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
@@ -72,6 +78,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Labels =
                 {
                     new ga::LabelDescriptor(),
+                },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
                 },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
@@ -102,6 +114,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     new ga::LabelDescriptor(),
                 },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
+                },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
@@ -128,6 +146,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Labels =
                 {
                     new ga::LabelDescriptor(),
+                },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
                 },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
@@ -158,6 +182,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     new ga::LabelDescriptor(),
                 },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
+                },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
@@ -184,6 +214,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Labels =
                 {
                     new ga::LabelDescriptor(),
+                },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
                 },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
@@ -214,6 +250,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 {
                     new ga::LabelDescriptor(),
                 },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
+                },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
             };
@@ -240,6 +282,12 @@ namespace Google.Cloud.Monitoring.V3.Tests
                 Labels =
                 {
                     new ga::LabelDescriptor(),
+                },
+#pragma warning disable CS0612
+                SupportedTiers =
+#pragma warning restore CS0612
+                {
+                    ServiceTier.Premium,
                 },
                 NotificationChannelDescriptorName = NotificationChannelDescriptorName.FromProjectChannelDescriptor("[PROJECT]", "[CHANNEL_DESCRIPTOR]"),
                 LaunchStage = ga::LaunchStage.Unspecified,
