@@ -25,18 +25,46 @@ namespace Google.Cloud.Dataproc.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvY2xvdWQvZGF0YXByb2MvdjEvc2hhcmVkLnByb3RvEhhnb29n",
-            "bGUuY2xvdWQuZGF0YXByb2MudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8qvwEKCUNv",
-            "bXBvbmVudBIZChVDT01QT05FTlRfVU5TUEVDSUZJRUQQABIMCghBTkFDT05E",
-            "QRAFEgoKBkRPQ0tFUhANEgkKBURSVUlEEAkSCQoFRkxJTksQDhIJCgVIQkFT",
-            "RRALEhAKDEhJVkVfV0VCSENBVBADEgsKB0pVUFlURVIQARIKCgZQUkVTVE8Q",
-            "BhIKCgZSQU5HRVIQDBIICgRTT0xSEAoSDAoIWkVQUEVMSU4QBBINCglaT09L",
-            "RUVQRVIQCEJvChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQgtTaGFy",
-            "ZWRQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL2RhdGFwcm9jL3YxO2RhdGFwcm9jYgZwcm90bzM="));
+            "bGUuY2xvdWQuZGF0YXByb2MudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
+            "b3IucHJvdG8ilAEKDVJ1bnRpbWVDb25maWcSUAoKcHJvcGVydGllcxgDIAMo",
+            "CzI3Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5SdW50aW1lQ29uZmlnLlBy",
+            "b3BlcnRpZXNFbnRyeUID4EEBGjEKD1Byb3BlcnRpZXNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqsBChFFbnZpcm9ubWVudENvbmZp",
+            "ZxJIChBleGVjdXRpb25fY29uZmlnGAEgASgLMikuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwcm9jLnYxLkV4ZWN1dGlvbkNvbmZpZ0ID4EEBEkwKEnBlcmlwaGVyYWxz",
+            "X2NvbmZpZxgCIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5QZXJp",
+            "cGhlcmFsc0NvbmZpZ0ID4EEBIqYBCg9FeGVjdXRpb25Db25maWcSHAoPc2Vy",
+            "dmljZV9hY2NvdW50GAIgASgJQgPgQQESGgoLbmV0d29ya191cmkYBCABKAlC",
+            "A+BBAUgAEh0KDnN1Ym5ldHdvcmtfdXJpGAUgASgJQgPgQQFIABIZCgxuZXR3",
+            "b3JrX3RhZ3MYBiADKAlCA+BBARIUCgdrbXNfa2V5GAcgASgJQgPgQQFCCQoH",
+            "bmV0d29yayI5ChhTcGFya0hpc3RvcnlTZXJ2ZXJDb25maWcSHQoQZGF0YXBy",
+            "b2NfY2x1c3RlchgBIAEoCUID4EEBIpEBChFQZXJpcGhlcmFsc0NvbmZpZxIe",
+            "ChFtZXRhc3RvcmVfc2VydmljZRgBIAEoCUID4EEBElwKG3NwYXJrX2hpc3Rv",
+            "cnlfc2VydmVyX2NvbmZpZxgCIAEoCzIyLmdvb2dsZS5jbG91ZC5kYXRhcHJv",
+            "Yy52MS5TcGFya0hpc3RvcnlTZXJ2ZXJDb25maWdCA+BBASKmAQoLUnVudGlt",
+            "ZUluZm8STAoJZW5kcG9pbnRzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "cm9jLnYxLlJ1bnRpbWVJbmZvLkVuZHBvaW50c0VudHJ5QgPgQQMSFwoKb3V0",
+            "cHV0X3VyaRgCIAEoCUID4EEDGjAKDkVuZHBvaW50c0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEqvwEKCUNvbXBvbmVudBIZChVDT01Q",
+            "T05FTlRfVU5TUEVDSUZJRUQQABIMCghBTkFDT05EQRAFEgoKBkRPQ0tFUhAN",
+            "EgkKBURSVUlEEAkSCQoFRkxJTksQDhIJCgVIQkFTRRALEhAKDEhJVkVfV0VC",
+            "SENBVBADEgsKB0pVUFlURVIQARIKCgZQUkVTVE8QBhIKCgZSQU5HRVIQDBII",
+            "CgRTT0xSEAoSDAoIWkVQUEVMSU4QBBINCglaT09LRUVQRVIQCCpKCg1GYWls",
+            "dXJlQWN0aW9uEh4KGkZBSUxVUkVfQUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJ",
+            "Tk9fQUNUSU9OEAESCgoGREVMRVRFEAJCbwocY29tLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcHJvYy52MUILU2hhcmVkUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kYXRhcHJvYy92MTtkYXRhcHJv",
+            "Y2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), }, null, null));
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataproc.V1.Component), typeof(global::Google.Cloud.Dataproc.V1.FailureAction), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RuntimeConfig), global::Google.Cloud.Dataproc.V1.RuntimeConfig.Parser, new[]{ "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.EnvironmentConfig), global::Google.Cloud.Dataproc.V1.EnvironmentConfig.Parser, new[]{ "ExecutionConfig", "PeripheralsConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ExecutionConfig), global::Google.Cloud.Dataproc.V1.ExecutionConfig.Parser, new[]{ "ServiceAccount", "NetworkUri", "SubnetworkUri", "NetworkTags", "KmsKey" }, new[]{ "Network" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig), global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig.Parser, new[]{ "DataprocCluster" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PeripheralsConfig), global::Google.Cloud.Dataproc.V1.PeripheralsConfig.Parser, new[]{ "MetastoreService", "SparkHistoryServerConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.RuntimeInfo), global::Google.Cloud.Dataproc.V1.RuntimeInfo.Parser, new[]{ "Endpoints", "OutputUri" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+          }));
     }
     #endregion
 
@@ -44,7 +72,6 @@ namespace Google.Cloud.Dataproc.V1 {
   #region Enums
   /// <summary>
   /// Cluster components that can be activated.
-  /// Next ID: 16.
   /// </summary>
   public enum Component {
     /// <summary>
@@ -103,6 +130,1405 @@ namespace Google.Cloud.Dataproc.V1 {
     /// The Zookeeper service.
     /// </summary>
     [pbr::OriginalName("ZOOKEEPER")] Zookeeper = 8,
+  }
+
+  /// <summary>
+  /// Actions in response to failure of a resource associated with a cluster.
+  /// </summary>
+  public enum FailureAction {
+    /// <summary>
+    /// When FailureAction is unspecified, failure action defaults to NO_ACTION.
+    /// </summary>
+    [pbr::OriginalName("FAILURE_ACTION_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Take no action on failure to create a cluster resource. NO_ACTION is the
+    /// default.
+    /// </summary>
+    [pbr::OriginalName("NO_ACTION")] NoAction = 1,
+    /// <summary>
+    /// Delete the failed cluster resource.
+    /// </summary>
+    [pbr::OriginalName("DELETE")] Delete = 2,
+  }
+
+  #endregion
+
+  #region Messages
+  /// <summary>
+  /// Runtime configuration for a workload.
+  /// </summary>
+  public sealed partial class RuntimeConfig : pb::IMessage<RuntimeConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RuntimeConfig> _parser = new pb::MessageParser<RuntimeConfig>(() => new RuntimeConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RuntimeConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RuntimeConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RuntimeConfig(RuntimeConfig other) : this() {
+      properties_ = other.properties_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RuntimeConfig Clone() {
+      return new RuntimeConfig(this);
+    }
+
+    /// <summary>Field number for the "properties" field.</summary>
+    public const int PropertiesFieldNumber = 3;
+    private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+    private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. A mapping of property names to values, which are used to configure workload
+    /// execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Properties {
+      get { return properties_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RuntimeConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RuntimeConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!Properties.Equals(other.Properties)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= Properties.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      properties_.WriteTo(output, _map_properties_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      properties_.WriteTo(ref output, _map_properties_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += properties_.CalculateSize(_map_properties_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RuntimeConfig other) {
+      if (other == null) {
+        return;
+      }
+      properties_.Add(other.properties_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            properties_.AddEntriesFrom(input, _map_properties_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            properties_.AddEntriesFrom(ref input, _map_properties_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Environment configuration for a workload.
+  /// </summary>
+  public sealed partial class EnvironmentConfig : pb::IMessage<EnvironmentConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnvironmentConfig> _parser = new pb::MessageParser<EnvironmentConfig>(() => new EnvironmentConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<EnvironmentConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EnvironmentConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EnvironmentConfig(EnvironmentConfig other) : this() {
+      executionConfig_ = other.executionConfig_ != null ? other.executionConfig_.Clone() : null;
+      peripheralsConfig_ = other.peripheralsConfig_ != null ? other.peripheralsConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public EnvironmentConfig Clone() {
+      return new EnvironmentConfig(this);
+    }
+
+    /// <summary>Field number for the "execution_config" field.</summary>
+    public const int ExecutionConfigFieldNumber = 1;
+    private global::Google.Cloud.Dataproc.V1.ExecutionConfig executionConfig_;
+    /// <summary>
+    /// Optional. Execution configuration for a workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dataproc.V1.ExecutionConfig ExecutionConfig {
+      get { return executionConfig_; }
+      set {
+        executionConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peripherals_config" field.</summary>
+    public const int PeripheralsConfigFieldNumber = 2;
+    private global::Google.Cloud.Dataproc.V1.PeripheralsConfig peripheralsConfig_;
+    /// <summary>
+    /// Optional. Peripherals configuration that workload has access to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dataproc.V1.PeripheralsConfig PeripheralsConfig {
+      get { return peripheralsConfig_; }
+      set {
+        peripheralsConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as EnvironmentConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(EnvironmentConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ExecutionConfig, other.ExecutionConfig)) return false;
+      if (!object.Equals(PeripheralsConfig, other.PeripheralsConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (executionConfig_ != null) hash ^= ExecutionConfig.GetHashCode();
+      if (peripheralsConfig_ != null) hash ^= PeripheralsConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (executionConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ExecutionConfig);
+      }
+      if (peripheralsConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PeripheralsConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (executionConfig_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ExecutionConfig);
+      }
+      if (peripheralsConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PeripheralsConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (executionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExecutionConfig);
+      }
+      if (peripheralsConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PeripheralsConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(EnvironmentConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.executionConfig_ != null) {
+        if (executionConfig_ == null) {
+          ExecutionConfig = new global::Google.Cloud.Dataproc.V1.ExecutionConfig();
+        }
+        ExecutionConfig.MergeFrom(other.ExecutionConfig);
+      }
+      if (other.peripheralsConfig_ != null) {
+        if (peripheralsConfig_ == null) {
+          PeripheralsConfig = new global::Google.Cloud.Dataproc.V1.PeripheralsConfig();
+        }
+        PeripheralsConfig.MergeFrom(other.PeripheralsConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (executionConfig_ == null) {
+              ExecutionConfig = new global::Google.Cloud.Dataproc.V1.ExecutionConfig();
+            }
+            input.ReadMessage(ExecutionConfig);
+            break;
+          }
+          case 18: {
+            if (peripheralsConfig_ == null) {
+              PeripheralsConfig = new global::Google.Cloud.Dataproc.V1.PeripheralsConfig();
+            }
+            input.ReadMessage(PeripheralsConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (executionConfig_ == null) {
+              ExecutionConfig = new global::Google.Cloud.Dataproc.V1.ExecutionConfig();
+            }
+            input.ReadMessage(ExecutionConfig);
+            break;
+          }
+          case 18: {
+            if (peripheralsConfig_ == null) {
+              PeripheralsConfig = new global::Google.Cloud.Dataproc.V1.PeripheralsConfig();
+            }
+            input.ReadMessage(PeripheralsConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Execution configuration for a workload.
+  /// </summary>
+  public sealed partial class ExecutionConfig : pb::IMessage<ExecutionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExecutionConfig> _parser = new pb::MessageParser<ExecutionConfig>(() => new ExecutionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ExecutionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecutionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecutionConfig(ExecutionConfig other) : this() {
+      serviceAccount_ = other.serviceAccount_;
+      networkTags_ = other.networkTags_.Clone();
+      kmsKey_ = other.kmsKey_;
+      switch (other.NetworkCase) {
+        case NetworkOneofCase.NetworkUri:
+          NetworkUri = other.NetworkUri;
+          break;
+        case NetworkOneofCase.SubnetworkUri:
+          SubnetworkUri = other.SubnetworkUri;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ExecutionConfig Clone() {
+      return new ExecutionConfig(this);
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 2;
+    private string serviceAccount_ = "";
+    /// <summary>
+    /// Optional. Service account that used to execute workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ServiceAccount {
+      get { return serviceAccount_; }
+      set {
+        serviceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "network_uri" field.</summary>
+    public const int NetworkUriFieldNumber = 4;
+    /// <summary>
+    /// Optional. Network URI to connect workload to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NetworkUri {
+      get { return networkCase_ == NetworkOneofCase.NetworkUri ? (string) network_ : ""; }
+      set {
+        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        networkCase_ = NetworkOneofCase.NetworkUri;
+      }
+    }
+
+    /// <summary>Field number for the "subnetwork_uri" field.</summary>
+    public const int SubnetworkUriFieldNumber = 5;
+    /// <summary>
+    /// Optional. Subnetwork URI to connect workload to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SubnetworkUri {
+      get { return networkCase_ == NetworkOneofCase.SubnetworkUri ? (string) network_ : ""; }
+      set {
+        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        networkCase_ = NetworkOneofCase.SubnetworkUri;
+      }
+    }
+
+    /// <summary>Field number for the "network_tags" field.</summary>
+    public const int NetworkTagsFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_networkTags_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> networkTags_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Tags used for network traffic control.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> NetworkTags {
+      get { return networkTags_; }
+    }
+
+    /// <summary>Field number for the "kms_key" field.</summary>
+    public const int KmsKeyFieldNumber = 7;
+    private string kmsKey_ = "";
+    /// <summary>
+    /// Optional. The Cloud KMS key to use for encryption.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string KmsKey {
+      get { return kmsKey_; }
+      set {
+        kmsKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object network_;
+    /// <summary>Enum of possible cases for the "network" oneof.</summary>
+    public enum NetworkOneofCase {
+      None = 0,
+      NetworkUri = 4,
+      SubnetworkUri = 5,
+    }
+    private NetworkOneofCase networkCase_ = NetworkOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetworkOneofCase NetworkCase {
+      get { return networkCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearNetwork() {
+      networkCase_ = NetworkOneofCase.None;
+      network_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ExecutionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ExecutionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ServiceAccount != other.ServiceAccount) return false;
+      if (NetworkUri != other.NetworkUri) return false;
+      if (SubnetworkUri != other.SubnetworkUri) return false;
+      if(!networkTags_.Equals(other.networkTags_)) return false;
+      if (KmsKey != other.KmsKey) return false;
+      if (NetworkCase != other.NetworkCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
+      if (networkCase_ == NetworkOneofCase.NetworkUri) hash ^= NetworkUri.GetHashCode();
+      if (networkCase_ == NetworkOneofCase.SubnetworkUri) hash ^= SubnetworkUri.GetHashCode();
+      hash ^= networkTags_.GetHashCode();
+      if (KmsKey.Length != 0) hash ^= KmsKey.GetHashCode();
+      hash ^= (int) networkCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ServiceAccount);
+      }
+      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+        output.WriteRawTag(34);
+        output.WriteString(NetworkUri);
+      }
+      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+        output.WriteRawTag(42);
+        output.WriteString(SubnetworkUri);
+      }
+      networkTags_.WriteTo(output, _repeated_networkTags_codec);
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KmsKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ServiceAccount);
+      }
+      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+        output.WriteRawTag(34);
+        output.WriteString(NetworkUri);
+      }
+      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+        output.WriteRawTag(42);
+        output.WriteString(SubnetworkUri);
+      }
+      networkTags_.WriteTo(ref output, _repeated_networkTags_codec);
+      if (KmsKey.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KmsKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ServiceAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
+      }
+      if (networkCase_ == NetworkOneofCase.NetworkUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkUri);
+      }
+      if (networkCase_ == NetworkOneofCase.SubnetworkUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SubnetworkUri);
+      }
+      size += networkTags_.CalculateSize(_repeated_networkTags_codec);
+      if (KmsKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ExecutionConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ServiceAccount.Length != 0) {
+        ServiceAccount = other.ServiceAccount;
+      }
+      networkTags_.Add(other.networkTags_);
+      if (other.KmsKey.Length != 0) {
+        KmsKey = other.KmsKey;
+      }
+      switch (other.NetworkCase) {
+        case NetworkOneofCase.NetworkUri:
+          NetworkUri = other.NetworkUri;
+          break;
+        case NetworkOneofCase.SubnetworkUri:
+          SubnetworkUri = other.SubnetworkUri;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 34: {
+            NetworkUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            SubnetworkUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            networkTags_.AddEntriesFrom(input, _repeated_networkTags_codec);
+            break;
+          }
+          case 58: {
+            KmsKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+          case 34: {
+            NetworkUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            SubnetworkUri = input.ReadString();
+            break;
+          }
+          case 50: {
+            networkTags_.AddEntriesFrom(ref input, _repeated_networkTags_codec);
+            break;
+          }
+          case 58: {
+            KmsKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Spark History Server configuration for the workload.
+  /// </summary>
+  public sealed partial class SparkHistoryServerConfig : pb::IMessage<SparkHistoryServerConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SparkHistoryServerConfig> _parser = new pb::MessageParser<SparkHistoryServerConfig>(() => new SparkHistoryServerConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SparkHistoryServerConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SparkHistoryServerConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SparkHistoryServerConfig(SparkHistoryServerConfig other) : this() {
+      dataprocCluster_ = other.dataprocCluster_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SparkHistoryServerConfig Clone() {
+      return new SparkHistoryServerConfig(this);
+    }
+
+    /// <summary>Field number for the "dataproc_cluster" field.</summary>
+    public const int DataprocClusterFieldNumber = 1;
+    private string dataprocCluster_ = "";
+    /// <summary>
+    /// Optional. Resource name of an existing Dataproc Cluster to act as a Spark History
+    /// Server for the workload.
+    ///
+    /// Example:
+    ///
+    /// * `projects/[project_id]/regions/[region]/clusters/[cluster_name]`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DataprocCluster {
+      get { return dataprocCluster_; }
+      set {
+        dataprocCluster_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SparkHistoryServerConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SparkHistoryServerConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DataprocCluster != other.DataprocCluster) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DataprocCluster.Length != 0) hash ^= DataprocCluster.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DataprocCluster.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DataprocCluster);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DataprocCluster.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DataprocCluster);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DataprocCluster.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataprocCluster);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SparkHistoryServerConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DataprocCluster.Length != 0) {
+        DataprocCluster = other.DataprocCluster;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DataprocCluster = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DataprocCluster = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Auxiliary services configuration for a workload.
+  /// </summary>
+  public sealed partial class PeripheralsConfig : pb::IMessage<PeripheralsConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PeripheralsConfig> _parser = new pb::MessageParser<PeripheralsConfig>(() => new PeripheralsConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PeripheralsConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PeripheralsConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PeripheralsConfig(PeripheralsConfig other) : this() {
+      metastoreService_ = other.metastoreService_;
+      sparkHistoryServerConfig_ = other.sparkHistoryServerConfig_ != null ? other.sparkHistoryServerConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PeripheralsConfig Clone() {
+      return new PeripheralsConfig(this);
+    }
+
+    /// <summary>Field number for the "metastore_service" field.</summary>
+    public const int MetastoreServiceFieldNumber = 1;
+    private string metastoreService_ = "";
+    /// <summary>
+    /// Optional. Resource name of an existing Dataproc Metastore service.
+    ///
+    /// Example:
+    ///
+    /// * `projects/[project_id]/locations/[region]/services/[service_id]`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string MetastoreService {
+      get { return metastoreService_; }
+      set {
+        metastoreService_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "spark_history_server_config" field.</summary>
+    public const int SparkHistoryServerConfigFieldNumber = 2;
+    private global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig sparkHistoryServerConfig_;
+    /// <summary>
+    /// Optional. The Spark History Server configuration for the workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig SparkHistoryServerConfig {
+      get { return sparkHistoryServerConfig_; }
+      set {
+        sparkHistoryServerConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PeripheralsConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PeripheralsConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MetastoreService != other.MetastoreService) return false;
+      if (!object.Equals(SparkHistoryServerConfig, other.SparkHistoryServerConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MetastoreService.Length != 0) hash ^= MetastoreService.GetHashCode();
+      if (sparkHistoryServerConfig_ != null) hash ^= SparkHistoryServerConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MetastoreService.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MetastoreService);
+      }
+      if (sparkHistoryServerConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SparkHistoryServerConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MetastoreService.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MetastoreService);
+      }
+      if (sparkHistoryServerConfig_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SparkHistoryServerConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MetastoreService.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MetastoreService);
+      }
+      if (sparkHistoryServerConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SparkHistoryServerConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PeripheralsConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MetastoreService.Length != 0) {
+        MetastoreService = other.MetastoreService;
+      }
+      if (other.sparkHistoryServerConfig_ != null) {
+        if (sparkHistoryServerConfig_ == null) {
+          SparkHistoryServerConfig = new global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig();
+        }
+        SparkHistoryServerConfig.MergeFrom(other.SparkHistoryServerConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MetastoreService = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (sparkHistoryServerConfig_ == null) {
+              SparkHistoryServerConfig = new global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig();
+            }
+            input.ReadMessage(SparkHistoryServerConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MetastoreService = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (sparkHistoryServerConfig_ == null) {
+              SparkHistoryServerConfig = new global::Google.Cloud.Dataproc.V1.SparkHistoryServerConfig();
+            }
+            input.ReadMessage(SparkHistoryServerConfig);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Runtime information about workload execution.
+  /// </summary>
+  public sealed partial class RuntimeInfo : pb::IMessage<RuntimeInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RuntimeInfo> _parser = new pb::MessageParser<RuntimeInfo>(() => new RuntimeInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RuntimeInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RuntimeInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RuntimeInfo(RuntimeInfo other) : this() {
+      endpoints_ = other.endpoints_.Clone();
+      outputUri_ = other.outputUri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RuntimeInfo Clone() {
+      return new RuntimeInfo(this);
+    }
+
+    /// <summary>Field number for the "endpoints" field.</summary>
+    public const int EndpointsFieldNumber = 1;
+    private static readonly pbc::MapField<string, string>.Codec _map_endpoints_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
+    private readonly pbc::MapField<string, string> endpoints_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Output only. Map of remote access endpoints (such as web interfaces and APIs) to their
+    /// URIs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, string> Endpoints {
+      get { return endpoints_; }
+    }
+
+    /// <summary>Field number for the "output_uri" field.</summary>
+    public const int OutputUriFieldNumber = 2;
+    private string outputUri_ = "";
+    /// <summary>
+    /// Output only. A URI pointing to the location of the stdout and stderr of the workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string OutputUri {
+      get { return outputUri_; }
+      set {
+        outputUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RuntimeInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RuntimeInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!Endpoints.Equals(other.Endpoints)) return false;
+      if (OutputUri != other.OutputUri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= Endpoints.GetHashCode();
+      if (OutputUri.Length != 0) hash ^= OutputUri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      endpoints_.WriteTo(output, _map_endpoints_codec);
+      if (OutputUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OutputUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      endpoints_.WriteTo(ref output, _map_endpoints_codec);
+      if (OutputUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OutputUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += endpoints_.CalculateSize(_map_endpoints_codec);
+      if (OutputUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputUri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RuntimeInfo other) {
+      if (other == null) {
+        return;
+      }
+      endpoints_.Add(other.endpoints_);
+      if (other.OutputUri.Length != 0) {
+        OutputUri = other.OutputUri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            endpoints_.AddEntriesFrom(input, _map_endpoints_codec);
+            break;
+          }
+          case 18: {
+            OutputUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            endpoints_.AddEntriesFrom(ref input, _map_endpoints_codec);
+            break;
+          }
+          case 18: {
+            OutputUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
   }
 
   #endregion

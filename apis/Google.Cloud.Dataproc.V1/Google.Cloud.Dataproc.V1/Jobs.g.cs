@@ -429,7 +429,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public static partial class Types {
       /// <summary>
       /// The Log4j level for job execution. When running an
-      /// [Apache Hive](http://hive.apache.org/) job, Cloud
+      /// [Apache Hive](https://hive.apache.org/) job, Cloud
       /// Dataproc configures the Hive client to an equivalent verbosity level.
       /// </summary>
       public enum Level {
@@ -4076,8 +4076,7 @@ namespace Google.Cloud.Dataproc.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> clusterLabels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. Cluster labels to identify a cluster where the job will be
-    /// submitted.
+    /// Optional. Cluster labels to identify a cluster where the job will be submitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> ClusterLabels {
@@ -4687,8 +4686,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// Optional. The ID of the Google Cloud Platform project that the job belongs
-    /// to. If specified, must match the request project ID.
+    /// Optional. The ID of the Google Cloud Platform project that the job belongs to. If
+    /// specified, must match the request project ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -5567,8 +5566,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DoneFieldNumber = 24;
     private bool done_;
     /// <summary>
-    /// Output only. Indicates whether the job is completed. If the value is
-    /// `false`, the job is still in progress. If `true`, the job is completed, and
+    /// Output only. Indicates whether the job is completed. If the value is `false`,
+    /// the job is still in progress. If `true`, the job is completed, and
     /// `status.state` field will indicate if it was successful, failed,
     /// or cancelled.
     /// </summary>
@@ -6342,8 +6341,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int MaxFailuresTotalFieldNumber = 2;
     private int maxFailuresTotal_;
     /// <summary>
-    /// Optional. Maximum number of times in total a driver may be restarted as a
-    /// result of driver exiting with non-zero code before job is reported failed.
+    /// Optional. Maximum number of times in total a driver may be restarted as a result of
+    /// driver exiting with non-zero code before job is reported failed.
     /// Maximum value is 240.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
