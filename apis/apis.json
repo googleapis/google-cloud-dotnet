@@ -974,6 +974,7 @@
     {
       "id": "Google.Cloud.Dialogflow.V2",
       "generator": "micro",
+      "autoGenerator": "OwlBot",
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
