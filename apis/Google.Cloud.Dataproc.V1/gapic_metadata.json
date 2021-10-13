@@ -44,6 +44,39 @@
         }
       }
     },
+    "BatchController": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BatchControllerClient",
+          "rpcs": {
+            "CreateBatch": {
+              "methods": [
+                "CreateBatch",
+                "CreateBatchAsync"
+              ]
+            },
+            "DeleteBatch": {
+              "methods": [
+                "DeleteBatch",
+                "DeleteBatchAsync"
+              ]
+            },
+            "GetBatch": {
+              "methods": [
+                "GetBatch",
+                "GetBatchAsync"
+              ]
+            },
+            "ListBatches": {
+              "methods": [
+                "ListBatches",
+                "ListBatchesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ClusterController": {
       "clients": {
         "grpc": {

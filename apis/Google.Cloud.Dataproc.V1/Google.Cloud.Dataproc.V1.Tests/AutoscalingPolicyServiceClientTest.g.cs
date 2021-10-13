@@ -44,6 +44,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -68,6 +75,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -94,6 +108,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -118,6 +139,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -144,6 +172,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -168,6 +203,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -194,6 +236,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -218,6 +267,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CreateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -243,6 +299,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -266,6 +329,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -291,6 +361,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -314,6 +391,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdateAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -339,6 +423,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -362,6 +453,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -387,6 +485,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -410,6 +515,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -435,6 +547,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);
@@ -458,6 +577,13 @@ namespace Google.Cloud.Dataproc.V1.Tests
                 BasicAlgorithm = new BasicAutoscalingAlgorithm(),
                 WorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
                 SecondaryWorkerConfig = new InstanceGroupAutoscalingPolicyConfig(),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetAutoscalingPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AutoscalingPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AutoscalingPolicyServiceClient client = new AutoscalingPolicyServiceClientImpl(mockGrpcClient.Object, null);

@@ -1635,8 +1635,8 @@ namespace Google.Cloud.Dataproc.V1 {
     ///
     /// The step id is used as prefix for job id, as job
     /// `goog-dataproc-workflow-step-id` label, and in
-    /// [prerequisiteStepIds][google.cloud.dataproc.v1.OrderedJob.prerequisite_step_ids]
-    /// field from other steps.
+    /// [prerequisiteStepIds][google.cloud.dataproc.v1.OrderedJob.prerequisite_step_ids] field from other
+    /// steps.
     ///
     /// The id must contain only letters (a-z, A-Z), numbers (0-9),
     /// underscores (_), and hyphens (-). Cannot begin or end with underscore
@@ -2404,10 +2404,10 @@ namespace Google.Cloud.Dataproc.V1 {
     /// A field is allowed to appear in at most one parameter's list of field
     /// paths.
     ///
-    /// A field path is similar in syntax to a
-    /// [google.protobuf.FieldMask][google.protobuf.FieldMask]. For example, a
-    /// field path that references the zone field of a workflow template's cluster
-    /// selector would be specified as `placement.clusterSelector.zone`.
+    /// A field path is similar in syntax to a [google.protobuf.FieldMask][google.protobuf.FieldMask].
+    /// For example, a field path that references the zone field of a workflow
+    /// template's cluster selector would be specified as
+    /// `placement.clusterSelector.zone`.
     ///
     /// Also, field paths can reference fields using the following syntax:
     ///
@@ -3504,8 +3504,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DagTimeoutFieldNumber = 12;
     private global::Google.Protobuf.WellKnownTypes.Duration dagTimeout_;
     /// <summary>
-    /// Output only. The timeout duration for the DAG of jobs, expressed in seconds
-    /// (see [JSON representation of
+    /// Output only. The timeout duration for the DAG of jobs, expressed in seconds (see
+    /// [JSON representation of
     /// duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3520,9 +3520,8 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DagStartTimeFieldNumber = 13;
     private global::Google.Protobuf.WellKnownTypes.Timestamp dagStartTime_;
     /// <summary>
-    /// Output only. DAG start time, only set for workflows with
-    /// [dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout] when
-    /// DAG begins.
+    /// Output only. DAG start time, only set for workflows with [dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout] when DAG
+    /// begins.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DagStartTime {
@@ -3536,9 +3535,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int DagEndTimeFieldNumber = 14;
     private global::Google.Protobuf.WellKnownTypes.Timestamp dagEndTime_;
     /// <summary>
-    /// Output only. DAG end time, only set for workflows with
-    /// [dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout] when
-    /// DAG ends.
+    /// Output only. DAG end time, only set for workflows with [dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout] when DAG ends.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DagEndTime {
