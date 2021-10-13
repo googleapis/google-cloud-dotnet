@@ -1,5 +1,10 @@
 # Version history
 
+# Version 4.3.0-beta06, released 2021-10-13
+
+Versions 4.3.0-beta04 and 4.3.0-beta05 were not released because of CI errors.
+This version contains all changes described for the unreleased version 4.3.0-beta04.
+
 # Version 4.3.0-beta05, released 2021-10-13
 
 Version 4.3.0-beta04 was not released because of a CI error.
