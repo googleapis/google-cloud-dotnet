@@ -1,5 +1,10 @@
 # Version history
 
+# Version 4.3.0-beta05, released 2021-10-13
+
+Version 4.3.0-beta04 was not released because of a CI error.
+This version contains all changes described for the unreleased version 4.3.0-beta04.
+
 # Version 4.3.0-beta04, released 2021-10-12
 
 - [Commit 6c3117a](https://github.com/googleapis/google-cloud-dotnet/commit/6c3117a): process: Add the correct license header.
