@@ -872,7 +872,7 @@
     },
     {
       "id": "Google.Cloud.Diagnostics.AspNetCore",
-      "version": "4.3.0-beta05",
+      "version": "4.3.0-beta06",
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netstandard2.0",
@@ -900,7 +900,7 @@
     },
     {
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
-      "version": "4.3.0-beta05",
+      "version": "4.3.0-beta06",
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netcoreapp3.1",
@@ -925,7 +925,7 @@
     },
     {
       "id": "Google.Cloud.Diagnostics.Common",
-      "version": "4.3.0-beta05",
+      "version": "4.3.0-beta06",
       "type": "other",
       "targetFrameworks": "netstandard2.0",
       "testTargetFrameworks": "netcoreapp2.1;netcoreapp3.1;net461",
