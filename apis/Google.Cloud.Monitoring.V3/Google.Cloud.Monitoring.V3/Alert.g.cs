@@ -2681,8 +2681,8 @@ namespace Google.Cloud.Monitoring.V3 {
             private string filter_ = "";
             /// <summary>
             /// Required. A logs-based filter. See [Advanced Logs
-            /// Queries](/logging/docs/view/advanced-queries) for how this filter
-            /// should be constructed.
+            /// Queries](https://cloud.google.com/logging/docs/view/advanced-queries)
+            /// for how this filter should be constructed.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string Filter {
@@ -2707,7 +2707,7 @@ namespace Google.Cloud.Monitoring.V3 {
             /// condition.
             ///
             /// Please see [the documentation on logs-based metric
-            /// `valueExtractor`s](/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor)
+            /// `valueExtractor`s](https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics#LogMetric.FIELDS.value_extractor)
             /// for syntax and examples.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
