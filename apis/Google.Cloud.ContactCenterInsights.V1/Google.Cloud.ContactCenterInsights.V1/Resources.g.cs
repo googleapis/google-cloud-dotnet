@@ -385,19 +385,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<Conversation> _parser = new pb::MessageParser<Conversation>(() => new Conversation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Conversation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Conversation() {
       OnConstruction();
     }
@@ -405,6 +409,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Conversation(Conversation other) : this() {
       name_ = other.name_;
       dataSource_ = other.dataSource_ != null ? other.dataSource_.Clone() : null;
@@ -440,6 +445,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Conversation Clone() {
       return new Conversation(this);
     }
@@ -450,6 +456,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Call-specific metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.CallMetadata CallMetadata {
       get { return metadataCase_ == MetadataOneofCase.CallMetadata ? (global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.CallMetadata) metadata_ : null; }
       set {
@@ -465,6 +472,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// conversation data and any associated analyses will be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
       get { return expirationCase_ == ExpirationOneofCase.ExpireTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) expiration_ : null; }
       set {
@@ -480,6 +488,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// be used to calculate the expire time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Ttl {
       get { return expirationCase_ == ExpirationOneofCase.Ttl ? (global::Google.Protobuf.WellKnownTypes.Duration) expiration_ : null; }
       set {
@@ -497,6 +506,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/conversations/{conversation}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -511,6 +521,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The source of the audio and transcription for the conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.ConversationDataSource DataSource {
       get { return dataSource_; }
       set {
@@ -525,6 +536,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The time at which the conversation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -539,6 +551,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The most recent time at which the conversation was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -553,6 +566,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The time at which the conversation started.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -567,6 +581,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// A user-specified language code for the conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -582,6 +597,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// the conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AgentId {
       get { return agentId_; }
       set {
@@ -599,6 +615,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// conversation is allowed, with a maximum of 256 characters per entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -610,6 +627,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The conversation transcript.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript Transcript {
       get { return transcript_; }
       set {
@@ -624,6 +642,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium Medium {
       get { return medium_; }
       set {
@@ -638,6 +657,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The duration of the conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Duration {
       get { return duration_; }
       set {
@@ -652,6 +672,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The number of turns in the conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TurnCount {
       get { return turnCount_; }
       set {
@@ -666,6 +687,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The conversation's latest analysis, if one exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.Analysis LatestAnalysis {
       get { return latestAnalysis_; }
       set {
@@ -683,6 +705,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// interaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.RuntimeAnnotation> RuntimeAnnotations {
       get { return runtimeAnnotations_; }
     }
@@ -698,6 +721,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/agent/{agent}/intents/{intent}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.ContactCenterInsights.V1.DialogflowIntent> DialogflowIntents {
       get { return dialogflowIntents_; }
     }
@@ -710,11 +734,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private MetadataOneofCase metadataCase_ = MetadataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MetadataOneofCase MetadataCase {
       get { return metadataCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMetadata() {
       metadataCase_ = MetadataOneofCase.None;
       metadata_ = null;
@@ -729,22 +755,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private ExpirationOneofCase expirationCase_ = ExpirationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExpirationOneofCase ExpirationCase {
       get { return expirationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearExpiration() {
       expirationCase_ = ExpirationOneofCase.None;
       expiration_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Conversation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Conversation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -776,6 +806,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (metadataCase_ == MetadataOneofCase.CallMetadata) hash ^= CallMetadata.GetHashCode();
@@ -805,11 +836,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -885,6 +918,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -956,6 +990,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (metadataCase_ == MetadataOneofCase.CallMetadata) {
@@ -1013,6 +1048,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Conversation other) {
       if (other == null) {
         return;
@@ -1105,6 +1141,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1230,6 +1267,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1353,6 +1391,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Conversation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Possible media for the conversation.
@@ -1383,19 +1422,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         private static readonly pb::MessageParser<CallMetadata> _parser = new pb::MessageParser<CallMetadata>(() => new CallMetadata());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<CallMetadata> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ContactCenterInsights.V1.Conversation.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CallMetadata() {
           OnConstruction();
         }
@@ -1403,6 +1446,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CallMetadata(CallMetadata other) : this() {
           customerChannel_ = other.customerChannel_;
           agentChannel_ = other.agentChannel_;
@@ -1410,6 +1454,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CallMetadata Clone() {
           return new CallMetadata(this);
         }
@@ -1421,6 +1466,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// The audio channel that contains the customer.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CustomerChannel {
           get { return customerChannel_; }
           set {
@@ -1435,6 +1481,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// The audio channel that contains the agent.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int AgentChannel {
           get { return agentChannel_; }
           set {
@@ -1443,11 +1490,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as CallMetadata);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(CallMetadata other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1461,6 +1510,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (CustomerChannel != 0) hash ^= CustomerChannel.GetHashCode();
@@ -1472,11 +1522,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1497,6 +1549,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (CustomerChannel != 0) {
             output.WriteRawTag(8);
@@ -1513,6 +1566,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (CustomerChannel != 0) {
@@ -1528,6 +1582,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(CallMetadata other) {
           if (other == null) {
             return;
@@ -1542,6 +1597,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1567,6 +1623,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1600,19 +1657,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         private static readonly pb::MessageParser<Transcript> _parser = new pb::MessageParser<Transcript>(() => new Transcript());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Transcript> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ContactCenterInsights.V1.Conversation.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Transcript() {
           OnConstruction();
         }
@@ -1620,12 +1681,14 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Transcript(Transcript other) : this() {
           transcriptSegments_ = other.transcriptSegments_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Transcript Clone() {
           return new Transcript(this);
         }
@@ -1639,16 +1702,19 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// A list of sequential transcript segments that comprise the conversation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript.Types.TranscriptSegment> TranscriptSegments {
           get { return transcriptSegments_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Transcript);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Transcript other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1661,6 +1727,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= transcriptSegments_.GetHashCode();
@@ -1671,11 +1738,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1689,6 +1758,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           transcriptSegments_.WriteTo(ref output, _repeated_transcriptSegments_codec);
           if (_unknownFields != null) {
@@ -1698,6 +1768,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += transcriptSegments_.CalculateSize(_repeated_transcriptSegments_codec);
@@ -1708,6 +1779,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Transcript other) {
           if (other == null) {
             return;
@@ -1717,6 +1789,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1738,6 +1811,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1757,6 +1831,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the Transcript message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// A segment of a full transcript.
@@ -1769,19 +1844,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             private static readonly pb::MessageParser<TranscriptSegment> _parser = new pb::MessageParser<TranscriptSegment>(() => new TranscriptSegment());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<TranscriptSegment> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TranscriptSegment() {
               OnConstruction();
             }
@@ -1789,6 +1868,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TranscriptSegment(TranscriptSegment other) : this() {
               messageTime_ = other.messageTime_ != null ? other.messageTime_.Clone() : null;
               text_ = other.text_;
@@ -1803,6 +1883,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TranscriptSegment Clone() {
               return new TranscriptSegment(this);
             }
@@ -1814,6 +1895,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// The time that the message occurred, if provided.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Protobuf.WellKnownTypes.Timestamp MessageTime {
               get { return messageTime_; }
               set {
@@ -1828,6 +1910,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// The text of this segment.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Text {
               get { return text_; }
               set {
@@ -1843,6 +1926,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// segment. A default value of 0.0 indicates that the value is unset.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public float Confidence {
               get { return confidence_; }
               set {
@@ -1859,6 +1943,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// A list of the word-specific information for each word in the segment.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript.Types.TranscriptSegment.Types.WordInfo> Words {
               get { return words_; }
             }
@@ -1872,6 +1957,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// Example: "en-US".
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string LanguageCode {
               get { return languageCode_; }
               set {
@@ -1889,6 +1975,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// channel tag of 0 indicates that the audio is mono.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int ChannelTag {
               get { return channelTag_; }
               set {
@@ -1903,6 +1990,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// The participant of this segment.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.ContactCenterInsights.V1.ConversationParticipant SegmentParticipant {
               get { return segmentParticipant_; }
               set {
@@ -1917,6 +2005,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// CCAI metadata relating to the current transcript segment.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript.Types.TranscriptSegment.Types.DialogflowSegmentMetadata DialogflowSegmentMetadata {
               get { return dialogflowSegmentMetadata_; }
               set {
@@ -1931,6 +2020,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             /// The sentiment for this transcript segment.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.ContactCenterInsights.V1.SentimentData Sentiment {
               get { return sentiment_; }
               set {
@@ -1939,11 +2029,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as TranscriptSegment);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(TranscriptSegment other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -1964,6 +2056,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (messageTime_ != null) hash ^= MessageTime.GetHashCode();
@@ -1982,11 +2075,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -2032,6 +2127,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Text.Length != 0) {
                 output.WriteRawTag(10);
@@ -2073,6 +2169,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (messageTime_ != null) {
@@ -2107,6 +2204,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(TranscriptSegment other) {
               if (other == null) {
                 return;
@@ -2152,6 +2250,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -2217,6 +2316,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -2280,6 +2380,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             #region Nested types
             /// <summary>Container for nested types declared in the TranscriptSegment message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Word-level info for words in a transcript.
@@ -2292,19 +2393,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 private static readonly pb::MessageParser<WordInfo> _parser = new pb::MessageParser<WordInfo>(() => new WordInfo());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<WordInfo> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript.Types.TranscriptSegment.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public WordInfo() {
                   OnConstruction();
                 }
@@ -2312,6 +2417,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public WordInfo(WordInfo other) : this() {
                   startOffset_ = other.startOffset_ != null ? other.startOffset_.Clone() : null;
                   endOffset_ = other.endOffset_ != null ? other.endOffset_.Clone() : null;
@@ -2321,6 +2427,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public WordInfo Clone() {
                   return new WordInfo(this);
                 }
@@ -2333,6 +2440,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 /// the total conversation.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Protobuf.WellKnownTypes.Duration StartOffset {
                   get { return startOffset_; }
                   set {
@@ -2348,6 +2456,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 /// total conversation.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Protobuf.WellKnownTypes.Duration EndOffset {
                   get { return endOffset_; }
                   set {
@@ -2362,6 +2471,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 /// The word itself. Includes punctuation marks that surround the word.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Word {
                   get { return word_; }
                   set {
@@ -2377,6 +2487,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 /// word. A default value of 0.0 indicates that the value is unset.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public float Confidence {
                   get { return confidence_; }
                   set {
@@ -2385,11 +2496,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as WordInfo);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(WordInfo other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -2405,6 +2518,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (startOffset_ != null) hash ^= StartOffset.GetHashCode();
@@ -2418,11 +2532,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -2451,6 +2567,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (startOffset_ != null) {
                     output.WriteRawTag(10);
@@ -2475,6 +2592,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (startOffset_ != null) {
@@ -2496,6 +2614,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(WordInfo other) {
                   if (other == null) {
                     return;
@@ -2522,6 +2641,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -2561,6 +2681,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -2608,19 +2729,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 private static readonly pb::MessageParser<DialogflowSegmentMetadata> _parser = new pb::MessageParser<DialogflowSegmentMetadata>(() => new DialogflowSegmentMetadata());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<DialogflowSegmentMetadata> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Transcript.Types.TranscriptSegment.Descriptor.NestedTypes[1]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public DialogflowSegmentMetadata() {
                   OnConstruction();
                 }
@@ -2628,12 +2753,14 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public DialogflowSegmentMetadata(DialogflowSegmentMetadata other) : this() {
                   smartReplyAllowlistCovered_ = other.smartReplyAllowlistCovered_;
                   _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public DialogflowSegmentMetadata Clone() {
                   return new DialogflowSegmentMetadata(this);
                 }
@@ -2646,6 +2773,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 /// reply allowlist in Agent Assist.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool SmartReplyAllowlistCovered {
                   get { return smartReplyAllowlistCovered_; }
                   set {
@@ -2654,11 +2782,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as DialogflowSegmentMetadata);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(DialogflowSegmentMetadata other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -2671,6 +2801,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (SmartReplyAllowlistCovered != false) hash ^= SmartReplyAllowlistCovered.GetHashCode();
@@ -2681,11 +2812,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -2702,6 +2835,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (SmartReplyAllowlistCovered != false) {
                     output.WriteRawTag(8);
@@ -2714,6 +2848,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (SmartReplyAllowlistCovered != false) {
@@ -2726,6 +2861,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(DialogflowSegmentMetadata other) {
                   if (other == null) {
                     return;
@@ -2737,6 +2873,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -2758,6 +2895,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -2802,19 +2940,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<Analysis> _parser = new pb::MessageParser<Analysis>(() => new Analysis());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Analysis> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Analysis() {
       OnConstruction();
     }
@@ -2822,6 +2964,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Analysis(Analysis other) : this() {
       name_ = other.name_;
       requestTime_ = other.requestTime_ != null ? other.requestTime_.Clone() : null;
@@ -2831,6 +2974,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Analysis Clone() {
       return new Analysis(this);
     }
@@ -2844,6 +2988,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2858,6 +3003,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The time at which the analysis was requested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp RequestTime {
       get { return requestTime_; }
       set {
@@ -2873,6 +3019,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// long-running operation completes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -2888,6 +3035,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// finishes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnalysisResult AnalysisResult {
       get { return analysisResult_; }
       set {
@@ -2896,11 +3044,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Analysis);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Analysis other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2916,6 +3066,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2929,11 +3080,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2962,6 +3115,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2986,6 +3140,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3007,6 +3162,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Analysis other) {
       if (other == null) {
         return;
@@ -3036,6 +3192,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3078,6 +3235,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3128,19 +3286,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<ConversationDataSource> _parser = new pb::MessageParser<ConversationDataSource>(() => new ConversationDataSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConversationDataSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationDataSource() {
       OnConstruction();
     }
@@ -3148,6 +3310,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationDataSource(ConversationDataSource other) : this() {
       switch (other.SourceCase) {
         case SourceOneofCase.GcsSource:
@@ -3162,6 +3325,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationDataSource Clone() {
       return new ConversationDataSource(this);
     }
@@ -3172,6 +3336,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// A Cloud Storage location specification for the audio and transcript.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.GcsSource GcsSource {
       get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.ContactCenterInsights.V1.GcsSource) source_ : null; }
       set {
@@ -3186,6 +3351,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The source when the conversation comes from Dialogflow.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.DialogflowSource DialogflowSource {
       get { return sourceCase_ == SourceOneofCase.DialogflowSource ? (global::Google.Cloud.ContactCenterInsights.V1.DialogflowSource) source_ : null; }
       set {
@@ -3203,22 +3369,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceOneofCase SourceCase {
       get { return sourceCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSource() {
       sourceCase_ = SourceOneofCase.None;
       source_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConversationDataSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConversationDataSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3233,6 +3403,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.GcsSource) hash ^= GcsSource.GetHashCode();
@@ -3245,11 +3416,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3270,6 +3443,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (sourceCase_ == SourceOneofCase.GcsSource) {
         output.WriteRawTag(10);
@@ -3286,6 +3460,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (sourceCase_ == SourceOneofCase.GcsSource) {
@@ -3301,6 +3476,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConversationDataSource other) {
       if (other == null) {
         return;
@@ -3324,6 +3500,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3359,6 +3536,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3402,19 +3580,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<GcsSource> _parser = new pb::MessageParser<GcsSource>(() => new GcsSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GcsSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsSource() {
       OnConstruction();
     }
@@ -3422,6 +3604,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsSource(GcsSource other) : this() {
       audioUri_ = other.audioUri_;
       transcriptUri_ = other.transcriptUri_;
@@ -3429,6 +3612,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsSource Clone() {
       return new GcsSource(this);
     }
@@ -3441,6 +3625,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AudioUri {
       get { return audioUri_; }
       set {
@@ -3456,6 +3641,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// transcript.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TranscriptUri {
       get { return transcriptUri_; }
       set {
@@ -3464,11 +3650,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GcsSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GcsSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3482,6 +3670,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (AudioUri.Length != 0) hash ^= AudioUri.GetHashCode();
@@ -3493,11 +3682,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3518,6 +3709,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AudioUri.Length != 0) {
         output.WriteRawTag(10);
@@ -3534,6 +3726,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (AudioUri.Length != 0) {
@@ -3549,6 +3742,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GcsSource other) {
       if (other == null) {
         return;
@@ -3563,6 +3757,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3588,6 +3783,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3621,19 +3817,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<DialogflowSource> _parser = new pb::MessageParser<DialogflowSource>(() => new DialogflowSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DialogflowSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowSource() {
       OnConstruction();
     }
@@ -3641,6 +3841,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowSource(DialogflowSource other) : this() {
       dialogflowConversation_ = other.dialogflowConversation_;
       audioUri_ = other.audioUri_;
@@ -3648,6 +3849,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowSource Clone() {
       return new DialogflowSource(this);
     }
@@ -3661,6 +3863,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/conversations/{conversation}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DialogflowConversation {
       get { return dialogflowConversation_; }
       set {
@@ -3676,6 +3879,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AudioUri {
       get { return audioUri_; }
       set {
@@ -3684,11 +3888,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DialogflowSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DialogflowSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3702,6 +3908,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DialogflowConversation.Length != 0) hash ^= DialogflowConversation.GetHashCode();
@@ -3713,11 +3920,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3738,6 +3947,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DialogflowConversation.Length != 0) {
         output.WriteRawTag(10);
@@ -3754,6 +3964,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DialogflowConversation.Length != 0) {
@@ -3769,6 +3980,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DialogflowSource other) {
       if (other == null) {
         return;
@@ -3783,6 +3995,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3808,6 +4021,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3841,19 +4055,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<AnalysisResult> _parser = new pb::MessageParser<AnalysisResult>(() => new AnalysisResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnalysisResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnalysisResult() {
       OnConstruction();
     }
@@ -3861,6 +4079,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnalysisResult(AnalysisResult other) : this() {
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       switch (other.MetadataCase) {
@@ -3873,6 +4092,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnalysisResult Clone() {
       return new AnalysisResult(this);
     }
@@ -3883,6 +4103,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Call-specific metadata created by the analysis.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnalysisResult.Types.CallAnalysisMetadata CallAnalysisMetadata {
       get { return metadataCase_ == MetadataOneofCase.CallAnalysisMetadata ? (global::Google.Cloud.ContactCenterInsights.V1.AnalysisResult.Types.CallAnalysisMetadata) metadata_ : null; }
       set {
@@ -3898,6 +4119,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The time at which the analysis ended.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -3913,22 +4135,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private MetadataOneofCase metadataCase_ = MetadataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MetadataOneofCase MetadataCase {
       get { return metadataCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMetadata() {
       metadataCase_ = MetadataOneofCase.None;
       metadata_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnalysisResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnalysisResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3943,6 +4169,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (metadataCase_ == MetadataOneofCase.CallAnalysisMetadata) hash ^= CallAnalysisMetadata.GetHashCode();
@@ -3955,11 +4182,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3980,6 +4209,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (endTime_ != null) {
         output.WriteRawTag(10);
@@ -3996,6 +4226,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (metadataCase_ == MetadataOneofCase.CallAnalysisMetadata) {
@@ -4011,6 +4242,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnalysisResult other) {
       if (other == null) {
         return;
@@ -4034,6 +4266,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4067,6 +4300,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4098,6 +4332,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the AnalysisResult message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Call-specific metadata created during analysis.
@@ -4110,19 +4345,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         private static readonly pb::MessageParser<CallAnalysisMetadata> _parser = new pb::MessageParser<CallAnalysisMetadata>(() => new CallAnalysisMetadata());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<CallAnalysisMetadata> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ContactCenterInsights.V1.AnalysisResult.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CallAnalysisMetadata() {
           OnConstruction();
         }
@@ -4130,6 +4369,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CallAnalysisMetadata(CallAnalysisMetadata other) : this() {
           annotations_ = other.annotations_.Clone();
           entities_ = other.entities_.Clone();
@@ -4141,6 +4381,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CallAnalysisMetadata Clone() {
           return new CallAnalysisMetadata(this);
         }
@@ -4154,6 +4395,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// A list of call annotations that apply to this call.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.CallAnnotation> Annotations {
           get { return annotations_; }
         }
@@ -4167,6 +4409,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// All the entities in the call.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.ContactCenterInsights.V1.Entity> Entities {
           get { return entities_; }
         }
@@ -4180,6 +4423,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// Overall conversation-level sentiment for each channel of the call.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.ConversationLevelSentiment> Sentiments {
           get { return sentiments_; }
         }
@@ -4193,6 +4437,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// All the matched intents in the call.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.ContactCenterInsights.V1.Intent> Intents {
           get { return intents_; }
         }
@@ -4206,6 +4451,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// All the matched phrase matchers in the call.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchData> PhraseMatchers {
           get { return phraseMatchers_; }
         }
@@ -4217,6 +4463,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// Overall conversation-level issue modeling result.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.ContactCenterInsights.V1.IssueModelResult IssueModelResult {
           get { return issueModelResult_; }
           set {
@@ -4225,11 +4472,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as CallAnalysisMetadata);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(CallAnalysisMetadata other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -4247,6 +4496,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= annotations_.GetHashCode();
@@ -4262,11 +4512,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -4288,6 +4540,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           annotations_.WriteTo(ref output, _repeated_annotations_codec);
           entities_.WriteTo(ref output, _map_entities_codec);
@@ -4305,6 +4558,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += annotations_.CalculateSize(_repeated_annotations_codec);
@@ -4322,6 +4576,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(CallAnalysisMetadata other) {
           if (other == null) {
             return;
@@ -4341,6 +4596,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -4385,6 +4641,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -4442,19 +4699,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<IssueModelResult> _parser = new pb::MessageParser<IssueModelResult>(() => new IssueModelResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IssueModelResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModelResult() {
       OnConstruction();
     }
@@ -4462,6 +4723,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModelResult(IssueModelResult other) : this() {
       issueModel_ = other.issueModel_;
       issues_ = other.issues_.Clone();
@@ -4469,6 +4731,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModelResult Clone() {
       return new IssueModelResult(this);
     }
@@ -4480,6 +4743,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Issue model that generates the result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IssueModel {
       get { return issueModel_; }
       set {
@@ -4496,16 +4760,19 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// All the matched issues.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.IssueAssignment> Issues {
       get { return issues_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IssueModelResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IssueModelResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4519,6 +4786,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (IssueModel.Length != 0) hash ^= IssueModel.GetHashCode();
@@ -4530,11 +4798,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4552,6 +4822,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IssueModel.Length != 0) {
         output.WriteRawTag(10);
@@ -4565,6 +4836,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (IssueModel.Length != 0) {
@@ -4578,6 +4850,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IssueModelResult other) {
       if (other == null) {
         return;
@@ -4590,6 +4863,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4615,6 +4889,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4648,19 +4923,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<ConversationLevelSentiment> _parser = new pb::MessageParser<ConversationLevelSentiment>(() => new ConversationLevelSentiment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConversationLevelSentiment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationLevelSentiment() {
       OnConstruction();
     }
@@ -4668,6 +4947,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationLevelSentiment(ConversationLevelSentiment other) : this() {
       channelTag_ = other.channelTag_;
       sentimentData_ = other.sentimentData_ != null ? other.sentimentData_.Clone() : null;
@@ -4675,6 +4955,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationLevelSentiment Clone() {
       return new ConversationLevelSentiment(this);
     }
@@ -4686,6 +4967,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The channel of the audio that the data applies to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ChannelTag {
       get { return channelTag_; }
       set {
@@ -4700,6 +4982,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying sentiment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.SentimentData SentimentData {
       get { return sentimentData_; }
       set {
@@ -4708,11 +4991,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConversationLevelSentiment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConversationLevelSentiment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4726,6 +5011,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ChannelTag != 0) hash ^= ChannelTag.GetHashCode();
@@ -4737,11 +5023,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4762,6 +5050,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ChannelTag != 0) {
         output.WriteRawTag(8);
@@ -4778,6 +5067,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ChannelTag != 0) {
@@ -4793,6 +5083,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConversationLevelSentiment other) {
       if (other == null) {
         return;
@@ -4810,6 +5101,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4838,6 +5130,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4874,19 +5167,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<IssueAssignment> _parser = new pb::MessageParser<IssueAssignment>(() => new IssueAssignment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IssueAssignment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueAssignment() {
       OnConstruction();
     }
@@ -4894,6 +5191,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueAssignment(IssueAssignment other) : this() {
       issue_ = other.issue_;
       score_ = other.score_;
@@ -4902,6 +5200,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueAssignment Clone() {
       return new IssueAssignment(this);
     }
@@ -4913,6 +5212,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Resource name of the assigned issue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Issue {
       get { return issue_; }
       set {
@@ -4928,6 +5228,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// currently bounded on [0,1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Score {
       get { return score_; }
       set {
@@ -4943,6 +5244,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// and immutable since then.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -4951,11 +5253,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IssueAssignment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IssueAssignment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4970,6 +5274,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Issue.Length != 0) hash ^= Issue.GetHashCode();
@@ -4982,11 +5287,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5011,6 +5318,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Issue.Length != 0) {
         output.WriteRawTag(10);
@@ -5031,6 +5339,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Issue.Length != 0) {
@@ -5049,6 +5358,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IssueAssignment other) {
       if (other == null) {
         return;
@@ -5066,6 +5376,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5095,6 +5406,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5132,19 +5444,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<CallAnnotation> _parser = new pb::MessageParser<CallAnnotation>(() => new CallAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CallAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CallAnnotation() {
       OnConstruction();
     }
@@ -5152,6 +5468,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CallAnnotation(CallAnnotation other) : this() {
       channelTag_ = other.channelTag_;
       annotationStartBoundary_ = other.annotationStartBoundary_ != null ? other.annotationStartBoundary_.Clone() : null;
@@ -5184,6 +5501,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CallAnnotation Clone() {
       return new CallAnnotation(this);
     }
@@ -5194,6 +5512,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying an interruption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.InterruptionData InterruptionData {
       get { return dataCase_ == DataOneofCase.InterruptionData ? (global::Google.Cloud.ContactCenterInsights.V1.InterruptionData) data_ : null; }
       set {
@@ -5208,6 +5527,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying sentiment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.SentimentData SentimentData {
       get { return dataCase_ == DataOneofCase.SentimentData ? (global::Google.Cloud.ContactCenterInsights.V1.SentimentData) data_ : null; }
       set {
@@ -5222,6 +5542,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying silence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.SilenceData SilenceData {
       get { return dataCase_ == DataOneofCase.SilenceData ? (global::Google.Cloud.ContactCenterInsights.V1.SilenceData) data_ : null; }
       set {
@@ -5236,6 +5557,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying a hold.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.HoldData HoldData {
       get { return dataCase_ == DataOneofCase.HoldData ? (global::Google.Cloud.ContactCenterInsights.V1.HoldData) data_ : null; }
       set {
@@ -5250,6 +5572,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying an entity mention.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.EntityMentionData EntityMentionData {
       get { return dataCase_ == DataOneofCase.EntityMentionData ? (global::Google.Cloud.ContactCenterInsights.V1.EntityMentionData) data_ : null; }
       set {
@@ -5264,6 +5587,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying an intent match.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.IntentMatchData IntentMatchData {
       get { return dataCase_ == DataOneofCase.IntentMatchData ? (global::Google.Cloud.ContactCenterInsights.V1.IntentMatchData) data_ : null; }
       set {
@@ -5278,6 +5602,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Data specifying a phrase match.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchData PhraseMatchData {
       get { return dataCase_ == DataOneofCase.PhraseMatchData ? (global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchData) data_ : null; }
       set {
@@ -5294,6 +5619,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// audio, this field is not populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ChannelTag {
       get { return channelTag_; }
       set {
@@ -5308,6 +5634,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The boundary in the conversation where the annotation starts, inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnnotationBoundary AnnotationStartBoundary {
       get { return annotationStartBoundary_; }
       set {
@@ -5322,6 +5649,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The boundary in the conversation where the annotation ends, inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnnotationBoundary AnnotationEndBoundary {
       get { return annotationEndBoundary_; }
       set {
@@ -5343,22 +5671,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataOneofCase DataCase {
       get { return dataCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearData() {
       dataCase_ = DataOneofCase.None;
       data_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CallAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CallAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5381,6 +5713,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (dataCase_ == DataOneofCase.InterruptionData) hash ^= InterruptionData.GetHashCode();
@@ -5401,11 +5734,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5458,6 +5793,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ChannelTag != 0) {
         output.WriteRawTag(8);
@@ -5506,6 +5842,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (dataCase_ == DataOneofCase.InterruptionData) {
@@ -5545,6 +5882,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CallAnnotation other) {
       if (other == null) {
         return;
@@ -5613,6 +5951,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5711,6 +6050,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5817,19 +6157,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<AnnotationBoundary> _parser = new pb::MessageParser<AnnotationBoundary>(() => new AnnotationBoundary());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnnotationBoundary> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationBoundary() {
       OnConstruction();
     }
@@ -5837,6 +6181,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationBoundary(AnnotationBoundary other) : this() {
       transcriptIndex_ = other.transcriptIndex_;
       switch (other.DetailedBoundaryCase) {
@@ -5849,6 +6194,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationBoundary Clone() {
       return new AnnotationBoundary(this);
     }
@@ -5860,6 +6206,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// transcript piece. This index starts at zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int WordIndex {
       get { return detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex ? (int) detailedBoundary_ : 0; }
       set {
@@ -5876,6 +6223,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// the boundary is located. This index starts at zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TranscriptIndex {
       get { return transcriptIndex_; }
       set {
@@ -5891,22 +6239,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private DetailedBoundaryOneofCase detailedBoundaryCase_ = DetailedBoundaryOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetailedBoundaryOneofCase DetailedBoundaryCase {
       get { return detailedBoundaryCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDetailedBoundary() {
       detailedBoundaryCase_ = DetailedBoundaryOneofCase.None;
       detailedBoundary_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnnotationBoundary);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnnotationBoundary other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5921,6 +6273,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex) hash ^= WordIndex.GetHashCode();
@@ -5933,11 +6286,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5958,6 +6313,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TranscriptIndex != 0) {
         output.WriteRawTag(8);
@@ -5974,6 +6330,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (detailedBoundaryCase_ == DetailedBoundaryOneofCase.WordIndex) {
@@ -5989,6 +6346,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnnotationBoundary other) {
       if (other == null) {
         return;
@@ -6006,6 +6364,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6031,6 +6390,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6066,19 +6426,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Entity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entity() {
       OnConstruction();
     }
@@ -6086,6 +6450,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entity(Entity other) : this() {
       displayName_ = other.displayName_;
       type_ = other.type_;
@@ -6096,6 +6461,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entity Clone() {
       return new Entity(this);
     }
@@ -6107,6 +6473,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The representative name for the entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -6121,6 +6488,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The entity type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.Entity.Types.Type Type {
       get { return type_; }
       set {
@@ -6141,6 +6509,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// associated with other entity types, see the Type table below.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -6157,6 +6526,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// salient.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Salience {
       get { return salience_; }
       set {
@@ -6171,6 +6541,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The aggregate sentiment expressed for this entity in the conversation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.SentimentData Sentiment {
       get { return sentiment_; }
       set {
@@ -6179,11 +6550,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Entity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Entity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6200,6 +6573,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
@@ -6214,11 +6588,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6248,6 +6624,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DisplayName.Length != 0) {
         output.WriteRawTag(10);
@@ -6273,6 +6650,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DisplayName.Length != 0) {
@@ -6295,6 +6673,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Entity other) {
       if (other == null) {
         return;
@@ -6319,6 +6698,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6359,6 +6739,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6397,6 +6778,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Entity message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The type of the entity. For most entity types, the associated metadata is a
@@ -6510,19 +6892,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<Intent> _parser = new pb::MessageParser<Intent>(() => new Intent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Intent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Intent() {
       OnConstruction();
     }
@@ -6530,6 +6916,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Intent(Intent other) : this() {
       id_ = other.id_;
       displayName_ = other.displayName_;
@@ -6537,6 +6924,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Intent Clone() {
       return new Intent(this);
     }
@@ -6548,6 +6936,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The unique identifier of the intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -6562,6 +6951,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The human-readable name of the intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -6570,11 +6960,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Intent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Intent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6588,6 +6980,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -6599,11 +6992,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6624,6 +7019,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -6640,6 +7036,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -6655,6 +7052,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Intent other) {
       if (other == null) {
         return;
@@ -6669,6 +7067,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6694,6 +7093,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6728,19 +7128,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<PhraseMatchData> _parser = new pb::MessageParser<PhraseMatchData>(() => new PhraseMatchData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PhraseMatchData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchData() {
       OnConstruction();
     }
@@ -6748,6 +7152,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchData(PhraseMatchData other) : this() {
       phraseMatcher_ = other.phraseMatcher_;
       displayName_ = other.displayName_;
@@ -6755,6 +7160,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchData Clone() {
       return new PhraseMatchData(this);
     }
@@ -6766,6 +7172,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The unique identifier (the resource name) of the phrase matcher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PhraseMatcher {
       get { return phraseMatcher_; }
       set {
@@ -6780,6 +7187,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The human-readable name of the phrase matcher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -6788,11 +7196,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PhraseMatchData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PhraseMatchData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6806,6 +7216,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PhraseMatcher.Length != 0) hash ^= PhraseMatcher.GetHashCode();
@@ -6817,11 +7228,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6842,6 +7255,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PhraseMatcher.Length != 0) {
         output.WriteRawTag(10);
@@ -6858,6 +7272,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PhraseMatcher.Length != 0) {
@@ -6873,6 +7288,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PhraseMatchData other) {
       if (other == null) {
         return;
@@ -6887,6 +7303,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6912,6 +7329,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6946,19 +7364,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<DialogflowIntent> _parser = new pb::MessageParser<DialogflowIntent>(() => new DialogflowIntent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DialogflowIntent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowIntent() {
       OnConstruction();
     }
@@ -6966,12 +7388,14 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowIntent(DialogflowIntent other) : this() {
       displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowIntent Clone() {
       return new DialogflowIntent(this);
     }
@@ -6983,6 +7407,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The human-readable name of the intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -6991,11 +7416,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DialogflowIntent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DialogflowIntent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7008,6 +7435,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
@@ -7018,11 +7446,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7039,6 +7469,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DisplayName.Length != 0) {
         output.WriteRawTag(10);
@@ -7051,6 +7482,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DisplayName.Length != 0) {
@@ -7063,6 +7495,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DialogflowIntent other) {
       if (other == null) {
         return;
@@ -7074,6 +7507,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7095,6 +7529,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7124,19 +7559,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<InterruptionData> _parser = new pb::MessageParser<InterruptionData>(() => new InterruptionData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InterruptionData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterruptionData() {
       OnConstruction();
     }
@@ -7144,21 +7583,25 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterruptionData(InterruptionData other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterruptionData Clone() {
       return new InterruptionData(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InterruptionData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InterruptionData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7170,6 +7613,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -7179,11 +7623,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7196,6 +7642,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -7204,6 +7651,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -7213,6 +7661,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InterruptionData other) {
       if (other == null) {
         return;
@@ -7221,6 +7670,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7238,6 +7688,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7263,19 +7714,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<SilenceData> _parser = new pb::MessageParser<SilenceData>(() => new SilenceData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SilenceData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SilenceData() {
       OnConstruction();
     }
@@ -7283,21 +7738,25 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SilenceData(SilenceData other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SilenceData Clone() {
       return new SilenceData(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SilenceData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SilenceData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7309,6 +7768,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -7318,11 +7778,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7335,6 +7797,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -7343,6 +7806,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -7352,6 +7816,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SilenceData other) {
       if (other == null) {
         return;
@@ -7360,6 +7825,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7377,6 +7843,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7402,19 +7869,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<HoldData> _parser = new pb::MessageParser<HoldData>(() => new HoldData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HoldData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HoldData() {
       OnConstruction();
     }
@@ -7422,21 +7893,25 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HoldData(HoldData other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HoldData Clone() {
       return new HoldData(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HoldData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HoldData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7448,6 +7923,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -7457,11 +7933,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7474,6 +7952,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -7482,6 +7961,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -7491,6 +7971,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HoldData other) {
       if (other == null) {
         return;
@@ -7499,6 +7980,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7516,6 +7998,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7542,19 +8025,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<EntityMentionData> _parser = new pb::MessageParser<EntityMentionData>(() => new EntityMentionData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EntityMentionData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntityMentionData() {
       OnConstruction();
     }
@@ -7562,6 +8049,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntityMentionData(EntityMentionData other) : this() {
       entityUniqueId_ = other.entityUniqueId_;
       type_ = other.type_;
@@ -7570,6 +8058,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntityMentionData Clone() {
       return new EntityMentionData(this);
     }
@@ -7582,6 +8071,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Can be used to retrieve the exact `Entity` this mention is attached to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EntityUniqueId {
       get { return entityUniqueId_; }
       set {
@@ -7596,6 +8086,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The type of the entity mention.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.EntityMentionData.Types.MentionType Type {
       get { return type_; }
       set {
@@ -7610,6 +8101,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Sentiment expressed for this mention of the entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.SentimentData Sentiment {
       get { return sentiment_; }
       set {
@@ -7618,11 +8110,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EntityMentionData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EntityMentionData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7637,6 +8131,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (EntityUniqueId.Length != 0) hash ^= EntityUniqueId.GetHashCode();
@@ -7649,11 +8144,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7678,6 +8175,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EntityUniqueId.Length != 0) {
         output.WriteRawTag(10);
@@ -7698,6 +8196,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (EntityUniqueId.Length != 0) {
@@ -7716,6 +8215,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EntityMentionData other) {
       if (other == null) {
         return;
@@ -7736,6 +8236,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7768,6 +8269,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7798,6 +8300,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the EntityMentionData message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The supported types of mentions.
@@ -7836,19 +8339,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<IntentMatchData> _parser = new pb::MessageParser<IntentMatchData>(() => new IntentMatchData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IntentMatchData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IntentMatchData() {
       OnConstruction();
     }
@@ -7856,12 +8363,14 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IntentMatchData(IntentMatchData other) : this() {
       intentUniqueId_ = other.intentUniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IntentMatchData Clone() {
       return new IntentMatchData(this);
     }
@@ -7874,6 +8383,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Can be used to retrieve the corresponding intent information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IntentUniqueId {
       get { return intentUniqueId_; }
       set {
@@ -7882,11 +8392,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IntentMatchData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IntentMatchData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7899,6 +8411,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (IntentUniqueId.Length != 0) hash ^= IntentUniqueId.GetHashCode();
@@ -7909,11 +8422,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7930,6 +8445,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IntentUniqueId.Length != 0) {
         output.WriteRawTag(10);
@@ -7942,6 +8458,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (IntentUniqueId.Length != 0) {
@@ -7954,6 +8471,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IntentMatchData other) {
       if (other == null) {
         return;
@@ -7965,6 +8483,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7986,6 +8505,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8015,19 +8535,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<SentimentData> _parser = new pb::MessageParser<SentimentData>(() => new SentimentData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SentimentData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SentimentData() {
       OnConstruction();
     }
@@ -8035,6 +8559,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SentimentData(SentimentData other) : this() {
       magnitude_ = other.magnitude_;
       score_ = other.score_;
@@ -8042,6 +8567,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SentimentData Clone() {
       return new SentimentData(this);
     }
@@ -8054,6 +8580,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// magnitude of sentiment regardless of score.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Magnitude {
       get { return magnitude_; }
       set {
@@ -8068,6 +8595,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The sentiment score between -1.0 (negative) and 1.0 (positive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Score {
       get { return score_; }
       set {
@@ -8076,11 +8604,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SentimentData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SentimentData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8094,6 +8624,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Magnitude != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Magnitude);
@@ -8105,11 +8636,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8130,6 +8663,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Magnitude != 0F) {
         output.WriteRawTag(13);
@@ -8146,6 +8680,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Magnitude != 0F) {
@@ -8161,6 +8696,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SentimentData other) {
       if (other == null) {
         return;
@@ -8175,6 +8711,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8200,6 +8737,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8233,19 +8771,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<IssueModel> _parser = new pb::MessageParser<IssueModel>(() => new IssueModel());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IssueModel> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModel() {
       OnConstruction();
     }
@@ -8253,6 +8795,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModel(IssueModel other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -8265,6 +8808,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModel Clone() {
       return new IssueModel(this);
     }
@@ -8278,6 +8822,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/issueModels/{issue_model}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -8292,6 +8837,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The representative name for the issue model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -8306,6 +8852,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The time at which this issue model was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -8320,6 +8867,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The most recent time at which the issue model was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -8334,6 +8882,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. State of the model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.IssueModel.Types.State State {
       get { return state_; }
       set {
@@ -8348,6 +8897,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Configs for the input data that used to create the issue model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.IssueModel.Types.InputDataConfig InputDataConfig {
       get { return inputDataConfig_; }
       set {
@@ -8362,6 +8912,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. Immutable. The issue model's label statistics on its training data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.IssueModelLabelStats TrainingStats {
       get { return trainingStats_; }
       set {
@@ -8370,11 +8921,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IssueModel);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IssueModel other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8393,6 +8946,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -8409,11 +8963,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8454,6 +9010,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -8490,6 +9047,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -8520,6 +9078,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IssueModel other) {
       if (other == null) {
         return;
@@ -8561,6 +9120,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8618,6 +9178,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8673,6 +9234,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the IssueModel message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// State of the model.
@@ -8716,19 +9278,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         private static readonly pb::MessageParser<InputDataConfig> _parser = new pb::MessageParser<InputDataConfig>(() => new InputDataConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<InputDataConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ContactCenterInsights.V1.IssueModel.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InputDataConfig() {
           OnConstruction();
         }
@@ -8736,6 +9302,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InputDataConfig(InputDataConfig other) : this() {
           medium_ = other.medium_;
           trainingConversationsCount_ = other.trainingConversationsCount_;
@@ -8744,6 +9311,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InputDataConfig Clone() {
           return new InputDataConfig(this);
         }
@@ -8758,6 +9326,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium Medium {
           get { return medium_; }
           set {
@@ -8772,6 +9341,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// Output only. Number of conversations used in training. Output only.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long TrainingConversationsCount {
           get { return trainingConversationsCount_; }
           set {
@@ -8787,6 +9357,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// specific subset.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Filter {
           get { return filter_; }
           set {
@@ -8795,11 +9366,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as InputDataConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(InputDataConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -8814,6 +9387,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Medium != global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium.Unspecified) hash ^= Medium.GetHashCode();
@@ -8826,11 +9400,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -8855,6 +9431,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Medium != global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium.Unspecified) {
             output.WriteRawTag(8);
@@ -8875,6 +9452,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Medium != global::Google.Cloud.ContactCenterInsights.V1.Conversation.Types.Medium.Unspecified) {
@@ -8893,6 +9471,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(InputDataConfig other) {
           if (other == null) {
             return;
@@ -8910,6 +9489,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -8939,6 +9519,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -8981,19 +9562,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<Issue> _parser = new pb::MessageParser<Issue>(() => new Issue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Issue> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Issue() {
       OnConstruction();
     }
@@ -9001,6 +9586,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Issue(Issue other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -9010,6 +9596,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Issue Clone() {
       return new Issue(this);
     }
@@ -9023,6 +9610,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/issueModels/{issue_model}/issues/{issue}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -9037,6 +9625,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The representative name for the issue.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -9051,6 +9640,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The time at which this issue was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -9065,6 +9655,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The most recent time that this issue was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -9073,11 +9664,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Issue);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Issue other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9093,6 +9686,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -9106,11 +9700,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9139,6 +9735,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -9163,6 +9760,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -9184,6 +9782,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Issue other) {
       if (other == null) {
         return;
@@ -9210,6 +9809,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9249,6 +9849,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9296,19 +9897,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<IssueModelLabelStats> _parser = new pb::MessageParser<IssueModelLabelStats>(() => new IssueModelLabelStats());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IssueModelLabelStats> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModelLabelStats() {
       OnConstruction();
     }
@@ -9316,6 +9921,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModelLabelStats(IssueModelLabelStats other) : this() {
       analyzedConversationsCount_ = other.analyzedConversationsCount_;
       unclassifiedConversationsCount_ = other.unclassifiedConversationsCount_;
@@ -9324,6 +9930,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IssueModelLabelStats Clone() {
       return new IssueModelLabelStats(this);
     }
@@ -9335,6 +9942,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Number of conversations the issue model has analyzed at this point in time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long AnalyzedConversationsCount {
       get { return analyzedConversationsCount_; }
       set {
@@ -9350,6 +9958,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// point in time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UnclassifiedConversationsCount {
       get { return unclassifiedConversationsCount_; }
       set {
@@ -9366,16 +9975,19 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Statistics on each issue. Key is the issue's resource name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.ContactCenterInsights.V1.IssueModelLabelStats.Types.IssueStats> IssueStats {
       get { return issueStats_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IssueModelLabelStats);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IssueModelLabelStats other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9390,6 +10002,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (AnalyzedConversationsCount != 0L) hash ^= AnalyzedConversationsCount.GetHashCode();
@@ -9402,11 +10015,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9428,6 +10043,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AnalyzedConversationsCount != 0L) {
         output.WriteRawTag(8);
@@ -9445,6 +10061,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (AnalyzedConversationsCount != 0L) {
@@ -9461,6 +10078,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IssueModelLabelStats other) {
       if (other == null) {
         return;
@@ -9476,6 +10094,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9505,6 +10124,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9532,6 +10152,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the IssueModelLabelStats message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Aggregated statistics about an issue.
@@ -9544,19 +10165,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         private static readonly pb::MessageParser<IssueStats> _parser = new pb::MessageParser<IssueStats>(() => new IssueStats());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<IssueStats> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ContactCenterInsights.V1.IssueModelLabelStats.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IssueStats() {
           OnConstruction();
         }
@@ -9564,6 +10189,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IssueStats(IssueStats other) : this() {
           issue_ = other.issue_;
           labeledConversationsCount_ = other.labeledConversationsCount_;
@@ -9571,6 +10197,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IssueStats Clone() {
           return new IssueStats(this);
         }
@@ -9584,6 +10211,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// projects/{project}/locations/{location}/issueModels/{issue_model}/issues/{issue}
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Issue {
           get { return issue_; }
           set {
@@ -9598,6 +10226,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// Number of conversations attached to the issue at this point in time.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long LabeledConversationsCount {
           get { return labeledConversationsCount_; }
           set {
@@ -9606,11 +10235,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as IssueStats);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(IssueStats other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -9624,6 +10255,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Issue.Length != 0) hash ^= Issue.GetHashCode();
@@ -9635,11 +10267,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -9660,6 +10294,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Issue.Length != 0) {
             output.WriteRawTag(10);
@@ -9676,6 +10311,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Issue.Length != 0) {
@@ -9691,6 +10327,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(IssueStats other) {
           if (other == null) {
             return;
@@ -9705,6 +10342,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -9730,6 +10368,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -9768,19 +10407,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<PhraseMatcher> _parser = new pb::MessageParser<PhraseMatcher>(() => new PhraseMatcher());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PhraseMatcher> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatcher() {
       OnConstruction();
     }
@@ -9788,6 +10431,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatcher(PhraseMatcher other) : this() {
       name_ = other.name_;
       revisionId_ = other.revisionId_;
@@ -9804,6 +10448,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatcher Clone() {
       return new PhraseMatcher(this);
     }
@@ -9817,6 +10462,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -9834,6 +10480,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Example: locations/global/phraseMatchers/my-first-matcher@1234567
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RevisionId {
       get { return revisionId_; }
       set {
@@ -9849,6 +10496,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// it will default to `revision_id`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VersionTag {
       get { return versionTag_; }
       set {
@@ -9864,6 +10512,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// when a new matcher is added.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp RevisionCreateTime {
       get { return revisionCreateTime_; }
       set {
@@ -9878,6 +10527,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The human-readable name of the phrase matcher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -9892,6 +10542,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Required. The type of this phrase matcher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.PhraseMatcher.Types.PhraseMatcherType Type {
       get { return type_; }
       set {
@@ -9906,6 +10557,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Applies the phrase matcher only when it is active.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Active {
       get { return active_; }
       set {
@@ -9922,6 +10574,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// A list of phase match rule groups that are included in this matcher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchRuleGroup> PhraseMatchRuleGroups {
       get { return phraseMatchRuleGroups_; }
     }
@@ -9933,6 +10586,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The most recent time at which the activation status was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ActivationUpdateTime {
       get { return activationUpdateTime_; }
       set {
@@ -9949,6 +10603,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// utterances in the transcript.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.ConversationParticipant.Types.Role RoleMatch {
       get { return roleMatch_; }
       set {
@@ -9963,6 +10618,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The most recent time at which the phrase matcher was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -9971,11 +10627,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PhraseMatcher);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PhraseMatcher other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9998,6 +10656,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -10018,11 +10677,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10076,6 +10737,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -10125,6 +10787,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -10165,6 +10828,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PhraseMatcher other) {
       if (other == null) {
         return;
@@ -10213,6 +10877,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10283,6 +10948,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10351,6 +11017,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PhraseMatcher message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies how to combine each phrase match rule group to determine whether
@@ -10387,19 +11054,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<PhraseMatchRuleGroup> _parser = new pb::MessageParser<PhraseMatchRuleGroup>(() => new PhraseMatchRuleGroup());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PhraseMatchRuleGroup> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRuleGroup() {
       OnConstruction();
     }
@@ -10407,6 +11078,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRuleGroup(PhraseMatchRuleGroup other) : this() {
       type_ = other.type_;
       phraseMatchRules_ = other.phraseMatchRules_.Clone();
@@ -10414,6 +11086,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRuleGroup Clone() {
       return new PhraseMatchRuleGroup(this);
     }
@@ -10425,6 +11098,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Required. The type of this phrase match rule group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchRuleGroup.Types.PhraseMatchRuleGroupType Type {
       get { return type_; }
       set {
@@ -10441,16 +11115,19 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// A list of phase match rules that are included in this group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchRule> PhraseMatchRules {
       get { return phraseMatchRules_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PhraseMatchRuleGroup);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PhraseMatchRuleGroup other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10464,6 +11141,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchRuleGroup.Types.PhraseMatchRuleGroupType.Unspecified) hash ^= Type.GetHashCode();
@@ -10475,11 +11153,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10497,6 +11177,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type != global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchRuleGroup.Types.PhraseMatchRuleGroupType.Unspecified) {
         output.WriteRawTag(8);
@@ -10510,6 +11191,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Type != global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchRuleGroup.Types.PhraseMatchRuleGroupType.Unspecified) {
@@ -10523,6 +11205,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PhraseMatchRuleGroup other) {
       if (other == null) {
         return;
@@ -10535,6 +11218,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10560,6 +11244,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10583,6 +11268,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PhraseMatchRuleGroup message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies how to combine each phrase match rule for whether there is a
@@ -10619,19 +11305,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<PhraseMatchRule> _parser = new pb::MessageParser<PhraseMatchRule>(() => new PhraseMatchRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PhraseMatchRule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRule() {
       OnConstruction();
     }
@@ -10639,6 +11329,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRule(PhraseMatchRule other) : this() {
       query_ = other.query_;
       negated_ = other.negated_;
@@ -10647,6 +11338,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRule Clone() {
       return new PhraseMatchRule(this);
     }
@@ -10658,6 +11350,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Required. The phrase to be matched.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Query {
       get { return query_; }
       set {
@@ -10673,6 +11366,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// present in the transcript segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Negated {
       get { return negated_; }
       set {
@@ -10688,6 +11382,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// the rule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.PhraseMatchRuleConfig Config {
       get { return config_; }
       set {
@@ -10696,11 +11391,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PhraseMatchRule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PhraseMatchRule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10715,6 +11412,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Query.Length != 0) hash ^= Query.GetHashCode();
@@ -10727,11 +11425,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10756,6 +11456,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Query.Length != 0) {
         output.WriteRawTag(10);
@@ -10776,6 +11477,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Query.Length != 0) {
@@ -10794,6 +11496,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PhraseMatchRule other) {
       if (other == null) {
         return;
@@ -10814,6 +11517,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10846,6 +11550,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10886,19 +11591,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<PhraseMatchRuleConfig> _parser = new pb::MessageParser<PhraseMatchRuleConfig>(() => new PhraseMatchRuleConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PhraseMatchRuleConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRuleConfig() {
       OnConstruction();
     }
@@ -10906,6 +11615,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRuleConfig(PhraseMatchRuleConfig other) : this() {
       switch (other.ConfigCase) {
         case ConfigOneofCase.ExactMatchConfig:
@@ -10917,6 +11627,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PhraseMatchRuleConfig Clone() {
       return new PhraseMatchRuleConfig(this);
     }
@@ -10927,6 +11638,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The configuration for the exact match rule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.ExactMatchConfig ExactMatchConfig {
       get { return configCase_ == ConfigOneofCase.ExactMatchConfig ? (global::Google.Cloud.ContactCenterInsights.V1.ExactMatchConfig) config_ : null; }
       set {
@@ -10943,22 +11655,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private ConfigOneofCase configCase_ = ConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigOneofCase ConfigCase {
       get { return configCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearConfig() {
       configCase_ = ConfigOneofCase.None;
       config_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PhraseMatchRuleConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PhraseMatchRuleConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10972,6 +11688,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (configCase_ == ConfigOneofCase.ExactMatchConfig) hash ^= ExactMatchConfig.GetHashCode();
@@ -10983,11 +11700,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11004,6 +11723,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (configCase_ == ConfigOneofCase.ExactMatchConfig) {
         output.WriteRawTag(10);
@@ -11016,6 +11736,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (configCase_ == ConfigOneofCase.ExactMatchConfig) {
@@ -11028,6 +11749,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PhraseMatchRuleConfig other) {
       if (other == null) {
         return;
@@ -11045,6 +11767,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11071,6 +11794,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11105,19 +11829,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<ExactMatchConfig> _parser = new pb::MessageParser<ExactMatchConfig>(() => new ExactMatchConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExactMatchConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExactMatchConfig() {
       OnConstruction();
     }
@@ -11125,12 +11853,14 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExactMatchConfig(ExactMatchConfig other) : this() {
       caseSensitive_ = other.caseSensitive_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExactMatchConfig Clone() {
       return new ExactMatchConfig(this);
     }
@@ -11142,6 +11872,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Whether to consider case sensitivity when performing an exact match.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CaseSensitive {
       get { return caseSensitive_; }
       set {
@@ -11150,11 +11881,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExactMatchConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExactMatchConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11167,6 +11900,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CaseSensitive != false) hash ^= CaseSensitive.GetHashCode();
@@ -11177,11 +11911,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11198,6 +11934,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CaseSensitive != false) {
         output.WriteRawTag(8);
@@ -11210,6 +11947,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CaseSensitive != false) {
@@ -11222,6 +11960,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExactMatchConfig other) {
       if (other == null) {
         return;
@@ -11233,6 +11972,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11254,6 +11994,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11283,19 +12024,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<Settings> _parser = new pb::MessageParser<Settings>(() => new Settings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Settings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Settings() {
       OnConstruction();
     }
@@ -11303,6 +12048,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Settings(Settings other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -11315,6 +12061,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Settings Clone() {
       return new Settings(this);
     }
@@ -11328,6 +12075,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/settings
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -11342,6 +12090,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The time at which the settings was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -11356,6 +12105,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Output only. The time at which the settings were last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -11372,6 +12122,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// is neither specified on the segment nor here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -11389,6 +12140,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Conversations with no expire time persist until they are deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration ConversationTtl {
       get { return conversationTtl_; }
       set {
@@ -11419,6 +12171,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/topics/{topic}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> PubsubNotificationSettings {
       get { return pubsubNotificationSettings_; }
     }
@@ -11430,6 +12183,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Default analysis settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.Settings.Types.AnalysisConfig AnalysisConfig {
       get { return analysisConfig_; }
       set {
@@ -11438,11 +12192,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Settings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Settings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11461,6 +12217,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -11477,11 +12234,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11519,6 +12278,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -11552,6 +12312,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -11580,6 +12341,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Settings other) {
       if (other == null) {
         return;
@@ -11619,6 +12381,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11676,6 +12439,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11731,6 +12495,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Settings message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Default configuration when creating Analyses in Insights.
@@ -11743,19 +12508,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         private static readonly pb::MessageParser<AnalysisConfig> _parser = new pb::MessageParser<AnalysisConfig>(() => new AnalysisConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AnalysisConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ContactCenterInsights.V1.Settings.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnalysisConfig() {
           OnConstruction();
         }
@@ -11763,12 +12532,14 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnalysisConfig(AnalysisConfig other) : this() {
           runtimeIntegrationAnalysisPercentage_ = other.runtimeIntegrationAnalysisPercentage_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnalysisConfig Clone() {
           return new AnalysisConfig(this);
         }
@@ -11781,6 +12552,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         /// to analyze automatically, between [0, 100].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double RuntimeIntegrationAnalysisPercentage {
           get { return runtimeIntegrationAnalysisPercentage_; }
           set {
@@ -11789,11 +12561,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AnalysisConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AnalysisConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -11806,6 +12580,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (RuntimeIntegrationAnalysisPercentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RuntimeIntegrationAnalysisPercentage);
@@ -11816,11 +12591,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -11837,6 +12614,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (RuntimeIntegrationAnalysisPercentage != 0D) {
             output.WriteRawTag(9);
@@ -11849,6 +12627,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (RuntimeIntegrationAnalysisPercentage != 0D) {
@@ -11861,6 +12640,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AnalysisConfig other) {
           if (other == null) {
             return;
@@ -11872,6 +12652,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -11893,6 +12674,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -11927,19 +12709,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<RuntimeAnnotation> _parser = new pb::MessageParser<RuntimeAnnotation>(() => new RuntimeAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RuntimeAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RuntimeAnnotation() {
       OnConstruction();
     }
@@ -11947,6 +12733,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RuntimeAnnotation(RuntimeAnnotation other) : this() {
       annotationId_ = other.annotationId_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -11975,6 +12762,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RuntimeAnnotation Clone() {
       return new RuntimeAnnotation(this);
     }
@@ -11985,6 +12773,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Agent Assist Article Suggestion data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.ArticleSuggestionData ArticleSuggestion {
       get { return dataCase_ == DataOneofCase.ArticleSuggestion ? (global::Google.Cloud.ContactCenterInsights.V1.ArticleSuggestionData) data_ : null; }
       set {
@@ -11999,6 +12788,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Agent Assist FAQ answer data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.FaqAnswerData FaqAnswer {
       get { return dataCase_ == DataOneofCase.FaqAnswer ? (global::Google.Cloud.ContactCenterInsights.V1.FaqAnswerData) data_ : null; }
       set {
@@ -12013,6 +12803,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Agent Assist Smart Reply data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.SmartReplyData SmartReply {
       get { return dataCase_ == DataOneofCase.SmartReply ? (global::Google.Cloud.ContactCenterInsights.V1.SmartReplyData) data_ : null; }
       set {
@@ -12027,6 +12818,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Agent Assist Smart Compose suggestion data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.SmartComposeSuggestionData SmartComposeSuggestion {
       get { return dataCase_ == DataOneofCase.SmartComposeSuggestion ? (global::Google.Cloud.ContactCenterInsights.V1.SmartComposeSuggestionData) data_ : null; }
       set {
@@ -12041,6 +12833,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Dialogflow interaction data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.DialogflowInteractionData DialogflowInteraction {
       get { return dataCase_ == DataOneofCase.DialogflowInteraction ? (global::Google.Cloud.ContactCenterInsights.V1.DialogflowInteractionData) data_ : null; }
       set {
@@ -12058,6 +12851,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/conversationDatasets/{dataset}/conversationDataItems/{data_item}/conversationAnnotations/{annotation}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AnnotationId {
       get { return annotationId_; }
       set {
@@ -12072,6 +12866,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The time at which this annotation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -12086,6 +12881,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The boundary in the conversation where the annotation starts, inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnnotationBoundary StartBoundary {
       get { return startBoundary_; }
       set {
@@ -12100,6 +12896,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The boundary in the conversation where the annotation ends, inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnnotationBoundary EndBoundary {
       get { return endBoundary_; }
       set {
@@ -12114,6 +12911,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The feedback that the customer has about the answer in `data`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnswerFeedback AnswerFeedback {
       get { return answerFeedback_; }
       set {
@@ -12133,22 +12931,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataOneofCase DataCase {
       get { return dataCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearData() {
       dataCase_ = DataOneofCase.None;
       data_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RuntimeAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RuntimeAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12171,6 +12973,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (dataCase_ == DataOneofCase.ArticleSuggestion) hash ^= ArticleSuggestion.GetHashCode();
@@ -12191,11 +12994,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12248,6 +13053,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AnnotationId.Length != 0) {
         output.WriteRawTag(10);
@@ -12296,6 +13102,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (dataCase_ == DataOneofCase.ArticleSuggestion) {
@@ -12335,6 +13142,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RuntimeAnnotation other) {
       if (other == null) {
         return;
@@ -12403,6 +13211,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12497,6 +13306,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12600,19 +13410,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<AnswerFeedback> _parser = new pb::MessageParser<AnswerFeedback>(() => new AnswerFeedback());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnswerFeedback> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnswerFeedback() {
       OnConstruction();
     }
@@ -12620,6 +13434,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnswerFeedback(AnswerFeedback other) : this() {
       correctnessLevel_ = other.correctnessLevel_;
       clicked_ = other.clicked_;
@@ -12628,6 +13443,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnswerFeedback Clone() {
       return new AnswerFeedback(this);
     }
@@ -12639,6 +13455,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The correctness level of an answer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.AnswerFeedback.Types.CorrectnessLevel CorrectnessLevel {
       get { return correctnessLevel_; }
       set {
@@ -12653,6 +13470,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Indicates whether an answer or item was clicked by the human agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Clicked {
       get { return clicked_; }
       set {
@@ -12668,6 +13486,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// agent desktop UI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Displayed {
       get { return displayed_; }
       set {
@@ -12676,11 +13495,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnswerFeedback);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnswerFeedback other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12695,6 +13516,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CorrectnessLevel != global::Google.Cloud.ContactCenterInsights.V1.AnswerFeedback.Types.CorrectnessLevel.Unspecified) hash ^= CorrectnessLevel.GetHashCode();
@@ -12707,11 +13529,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12736,6 +13560,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CorrectnessLevel != global::Google.Cloud.ContactCenterInsights.V1.AnswerFeedback.Types.CorrectnessLevel.Unspecified) {
         output.WriteRawTag(8);
@@ -12756,6 +13581,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CorrectnessLevel != global::Google.Cloud.ContactCenterInsights.V1.AnswerFeedback.Types.CorrectnessLevel.Unspecified) {
@@ -12774,6 +13600,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnswerFeedback other) {
       if (other == null) {
         return;
@@ -12791,6 +13618,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12820,6 +13648,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12847,6 +13676,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the AnswerFeedback message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The correctness level of an answer.
@@ -12886,19 +13716,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<ArticleSuggestionData> _parser = new pb::MessageParser<ArticleSuggestionData>(() => new ArticleSuggestionData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ArticleSuggestionData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ArticleSuggestionData() {
       OnConstruction();
     }
@@ -12906,6 +13740,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ArticleSuggestionData(ArticleSuggestionData other) : this() {
       title_ = other.title_;
       uri_ = other.uri_;
@@ -12917,6 +13752,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ArticleSuggestionData Clone() {
       return new ArticleSuggestionData(this);
     }
@@ -12928,6 +13764,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Article title.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Title {
       get { return title_; }
       set {
@@ -12942,6 +13779,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Article URI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
       get { return uri_; }
       set {
@@ -12958,6 +13796,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// certain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float ConfidenceScore {
       get { return confidenceScore_; }
       set {
@@ -12975,6 +13814,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// that it originates from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -12988,6 +13828,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/queryRecords/{query_record}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryRecord {
       get { return queryRecord_; }
       set {
@@ -13004,6 +13845,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Source {
       get { return source_; }
       set {
@@ -13012,11 +13854,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ArticleSuggestionData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ArticleSuggestionData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -13034,6 +13878,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -13049,11 +13894,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -13087,6 +13934,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Title.Length != 0) {
         output.WriteRawTag(10);
@@ -13116,6 +13964,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Title.Length != 0) {
@@ -13141,6 +13990,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ArticleSuggestionData other) {
       if (other == null) {
         return;
@@ -13165,6 +14015,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -13206,6 +14057,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -13255,19 +14107,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<FaqAnswerData> _parser = new pb::MessageParser<FaqAnswerData>(() => new FaqAnswerData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FaqAnswerData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaqAnswerData() {
       OnConstruction();
     }
@@ -13275,6 +14131,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaqAnswerData(FaqAnswerData other) : this() {
       answer_ = other.answer_;
       confidenceScore_ = other.confidenceScore_;
@@ -13286,6 +14143,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaqAnswerData Clone() {
       return new FaqAnswerData(this);
     }
@@ -13297,6 +14155,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The piece of text from the `source` knowledge base document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Answer {
       get { return answer_; }
       set {
@@ -13313,6 +14172,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// certain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float ConfidenceScore {
       get { return confidenceScore_; }
       set {
@@ -13327,6 +14187,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The corresponding FAQ question.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Question {
       get { return question_; }
       set {
@@ -13344,6 +14205,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// it originates from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -13357,6 +14219,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/queryRecords/{query_record}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryRecord {
       get { return queryRecord_; }
       set {
@@ -13373,6 +14236,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Source {
       get { return source_; }
       set {
@@ -13381,11 +14245,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FaqAnswerData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FaqAnswerData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -13403,6 +14269,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Answer.Length != 0) hash ^= Answer.GetHashCode();
@@ -13418,11 +14285,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -13456,6 +14325,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Answer.Length != 0) {
         output.WriteRawTag(10);
@@ -13485,6 +14355,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Answer.Length != 0) {
@@ -13510,6 +14381,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FaqAnswerData other) {
       if (other == null) {
         return;
@@ -13534,6 +14406,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -13575,6 +14448,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -13624,19 +14498,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<SmartReplyData> _parser = new pb::MessageParser<SmartReplyData>(() => new SmartReplyData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SmartReplyData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartReplyData() {
       OnConstruction();
     }
@@ -13644,6 +14522,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartReplyData(SmartReplyData other) : this() {
       reply_ = other.reply_;
       confidenceScore_ = other.confidenceScore_;
@@ -13653,6 +14532,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartReplyData Clone() {
       return new SmartReplyData(this);
     }
@@ -13664,6 +14544,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The content of the reply.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reply {
       get { return reply_; }
       set {
@@ -13680,6 +14561,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// certain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ConfidenceScore {
       get { return confidenceScore_; }
       set {
@@ -13697,6 +14579,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// which it originates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -13710,6 +14593,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/queryRecords/{query_record}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryRecord {
       get { return queryRecord_; }
       set {
@@ -13718,11 +14602,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SmartReplyData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SmartReplyData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -13738,6 +14624,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Reply.Length != 0) hash ^= Reply.GetHashCode();
@@ -13751,11 +14638,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -13781,6 +14670,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Reply.Length != 0) {
         output.WriteRawTag(10);
@@ -13802,6 +14692,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Reply.Length != 0) {
@@ -13821,6 +14712,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SmartReplyData other) {
       if (other == null) {
         return;
@@ -13839,6 +14731,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -13872,6 +14765,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -13913,19 +14807,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<SmartComposeSuggestionData> _parser = new pb::MessageParser<SmartComposeSuggestionData>(() => new SmartComposeSuggestionData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SmartComposeSuggestionData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartComposeSuggestionData() {
       OnConstruction();
     }
@@ -13933,6 +14831,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartComposeSuggestionData(SmartComposeSuggestionData other) : this() {
       suggestion_ = other.suggestion_;
       confidenceScore_ = other.confidenceScore_;
@@ -13942,6 +14841,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SmartComposeSuggestionData Clone() {
       return new SmartComposeSuggestionData(this);
     }
@@ -13953,6 +14853,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The content of the suggestion.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Suggestion {
       get { return suggestion_; }
       set {
@@ -13969,6 +14870,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// certain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ConfidenceScore {
       get { return confidenceScore_; }
       set {
@@ -13986,6 +14888,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// document from which it originates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -13999,6 +14902,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/queryRecords/{query_record}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryRecord {
       get { return queryRecord_; }
       set {
@@ -14007,11 +14911,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SmartComposeSuggestionData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SmartComposeSuggestionData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -14027,6 +14933,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Suggestion.Length != 0) hash ^= Suggestion.GetHashCode();
@@ -14040,11 +14947,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -14070,6 +14979,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Suggestion.Length != 0) {
         output.WriteRawTag(10);
@@ -14091,6 +15001,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Suggestion.Length != 0) {
@@ -14110,6 +15021,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SmartComposeSuggestionData other) {
       if (other == null) {
         return;
@@ -14128,6 +15040,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -14161,6 +15074,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -14202,19 +15116,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<DialogflowInteractionData> _parser = new pb::MessageParser<DialogflowInteractionData>(() => new DialogflowInteractionData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DialogflowInteractionData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowInteractionData() {
       OnConstruction();
     }
@@ -14222,6 +15140,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowInteractionData(DialogflowInteractionData other) : this() {
       dialogflowIntentId_ = other.dialogflowIntentId_;
       confidence_ = other.confidence_;
@@ -14229,6 +15148,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DialogflowInteractionData Clone() {
       return new DialogflowInteractionData(this);
     }
@@ -14241,6 +15161,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/agent/{agent}/intents/{intent}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DialogflowIntentId {
       get { return dialogflowIntentId_; }
       set {
@@ -14256,6 +15177,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// (completely certain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -14264,11 +15186,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DialogflowInteractionData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DialogflowInteractionData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -14282,6 +15206,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DialogflowIntentId.Length != 0) hash ^= DialogflowIntentId.GetHashCode();
@@ -14293,11 +15218,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -14318,6 +15245,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DialogflowIntentId.Length != 0) {
         output.WriteRawTag(10);
@@ -14334,6 +15262,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DialogflowIntentId.Length != 0) {
@@ -14349,6 +15278,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DialogflowInteractionData other) {
       if (other == null) {
         return;
@@ -14363,6 +15293,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -14388,6 +15319,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -14421,19 +15353,23 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     private static readonly pb::MessageParser<ConversationParticipant> _parser = new pb::MessageParser<ConversationParticipant>(() => new ConversationParticipant());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConversationParticipant> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ContactCenterInsights.V1.ResourcesReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationParticipant() {
       OnConstruction();
     }
@@ -14441,6 +15377,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationParticipant(ConversationParticipant other) : this() {
       dialogflowParticipant_ = other.dialogflowParticipant_;
       obfuscatedExternalUserId_ = other.obfuscatedExternalUserId_;
@@ -14458,6 +15395,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationParticipant Clone() {
       return new ConversationParticipant(this);
     }
@@ -14469,6 +15407,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// projects/{project}/locations/{location}/conversations/{conversation}/participants/{participant}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DialogflowParticipantName {
       get { return participantCase_ == ParticipantOneofCase.DialogflowParticipantName ? (string) participant_ : ""; }
       set {
@@ -14483,6 +15422,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// A user-specified ID representing the participant.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserId {
       get { return participantCase_ == ParticipantOneofCase.UserId ? (string) participant_ : ""; }
       set {
@@ -14501,6 +15441,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DialogflowParticipant {
       get { return dialogflowParticipant_; }
       set {
@@ -14515,6 +15456,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// Obfuscated user ID from Dialogflow.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ObfuscatedExternalUserId {
       get { return obfuscatedExternalUserId_; }
       set {
@@ -14529,6 +15471,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// The role of the participant.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ContactCenterInsights.V1.ConversationParticipant.Types.Role Role {
       get { return role_; }
       set {
@@ -14545,22 +15488,26 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
     private ParticipantOneofCase participantCase_ = ParticipantOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ParticipantOneofCase ParticipantCase {
       get { return participantCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearParticipant() {
       participantCase_ = ParticipantOneofCase.None;
       participant_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConversationParticipant);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConversationParticipant other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -14578,6 +15525,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (participantCase_ == ParticipantOneofCase.DialogflowParticipantName) hash ^= DialogflowParticipantName.GetHashCode();
@@ -14593,11 +15541,13 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -14630,6 +15580,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DialogflowParticipant.Length != 0) {
         output.WriteRawTag(10);
@@ -14658,6 +15609,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (participantCase_ == ParticipantOneofCase.DialogflowParticipantName) {
@@ -14682,6 +15634,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConversationParticipant other) {
       if (other == null) {
         return;
@@ -14708,6 +15661,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -14745,6 +15699,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -14780,6 +15735,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ConversationParticipant message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The role of the participant.
