@@ -1,5 +1,18 @@
 # Version history
 
+# Version 2.4.0, released 2021-10-14
+
+- [Commit 556147f](https://github.com/googleapis/google-cloud-dotnet/commit/556147f):
+  - fix: Reintroduce deprecated field/enum for backward compatibility
+  - docs: Use absolute link targets in comments
+- [Commit 4a255f9](https://github.com/googleapis/google-cloud-dotnet/commit/4a255f9): docs: fix typo in alert.proto
+- [Commit 3450957](https://github.com/googleapis/google-cloud-dotnet/commit/3450957): feat: add CreateServiceTimeSeries RPC
+- [Commit e724d81](https://github.com/googleapis/google-cloud-dotnet/commit/e724d81):
+  - feat: Added support for logs-based alerts: https://cloud.google.com/logging/docs/alerting/log-based-alerts
+  - feat: Added support for user-defined labels on cloud monitoring's Service and ServiceLevelObjective objects
+  - fix!: mark required fields in QueryTimeSeriesRequest as required
+- [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
+
 # Version 2.3.0, released 2021-04-29
 
 - [Commit 770bd47](https://github.com/googleapis/google-cloud-dotnet/commit/770bd47):
