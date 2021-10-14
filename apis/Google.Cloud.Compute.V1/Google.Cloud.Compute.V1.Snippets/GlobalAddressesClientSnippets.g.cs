@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedGlobalAddressesClientSnippets
@@ -38,7 +39,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Address = "",
             };
             // Make the request
-            Operation response = globalAddressesClient.Delete(request);
+            lro::Operation<Operation, Operation> response = globalAddressesClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -57,7 +74,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Address = "",
             };
             // Make the request
-            Operation response = await globalAddressesClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -71,7 +104,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string address = "";
             // Make the request
-            Operation response = globalAddressesClient.Delete(project, address);
+            lro::Operation<Operation, Operation> response = globalAddressesClient.Delete(project, address);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -86,7 +135,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string address = "";
             // Make the request
-            Operation response = await globalAddressesClient.DeleteAsync(project, address);
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.DeleteAsync(project, address);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -168,7 +233,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 AddressResource = new Address(),
             };
             // Make the request
-            Operation response = globalAddressesClient.Insert(request);
+            lro::Operation<Operation, Operation> response = globalAddressesClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -187,7 +268,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 AddressResource = new Address(),
             };
             // Make the request
-            Operation response = await globalAddressesClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -201,7 +298,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             Address addressResource = new Address();
             // Make the request
-            Operation response = globalAddressesClient.Insert(project, addressResource);
+            lro::Operation<Operation, Operation> response = globalAddressesClient.Insert(project, addressResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = globalAddressesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -216,7 +329,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             Address addressResource = new Address();
             // Make the request
-            Operation response = await globalAddressesClient.InsertAsync(project, addressResource);
+            lro::Operation<Operation, Operation> response = await globalAddressesClient.InsertAsync(project, addressResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await globalAddressesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

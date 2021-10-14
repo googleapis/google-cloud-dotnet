@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -46,12 +47,17 @@ namespace Google.Cloud.Compute.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             DeleteSettings = existing.DeleteSettings;
+            DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             InsertSettings = existing.InsertSettings;
+            InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
+            PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
             SetLabelsSettings = existing.SetLabelsSettings;
+            SetLabelsOperationsSettings = existing.SetLabelsOperationsSettings.Clone();
             SetTargetSettings = existing.SetTargetSettings;
+            SetTargetOperationsSettings = existing.SetTargetOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -68,6 +74,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalForwardingRulesClient.Delete</c> and
+        /// <c>GlobalForwardingRulesClient.DeleteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -94,6 +118,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings InsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalForwardingRulesClient.Insert</c> and
+        /// <c>GlobalForwardingRulesClient.InsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>GlobalForwardingRulesClient.List</c> and <c>GlobalForwardingRulesClient.ListAsync</c>.
         /// </summary>
@@ -118,6 +160,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings PatchSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalForwardingRulesClient.Patch</c> and
+        /// <c>GlobalForwardingRulesClient.PatchAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>GlobalForwardingRulesClient.SetLabels</c> and <c>GlobalForwardingRulesClient.SetLabelsAsync</c>.
         /// </summary>
@@ -130,6 +190,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SetLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalForwardingRulesClient.SetLabels</c> and
+        /// <c>GlobalForwardingRulesClient.SetLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetLabelsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>GlobalForwardingRulesClient.SetTarget</c> and <c>GlobalForwardingRulesClient.SetTargetAsync</c>.
         /// </summary>
@@ -140,6 +218,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetTargetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalForwardingRulesClient.SetTarget</c> and
+        /// <c>GlobalForwardingRulesClient.SetTargetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetTargetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="GlobalForwardingRulesSettings"/> object.</returns>
@@ -313,7 +409,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -322,7 +418,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -331,8 +427,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
             DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public virtual lro::OperationsClient DeleteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDelete(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes the specified GlobalForwardingRule resource.
@@ -345,7 +467,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(string project, string forwardingRule, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(string project, string forwardingRule, gaxgrpc::CallSettings callSettings = null) =>
             Delete(new DeleteGlobalForwardingRuleRequest
             {
                 ForwardingRule = gax::GaxPreconditions.CheckNotNullOrEmpty(forwardingRule, nameof(forwardingRule)),
@@ -363,7 +485,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string forwardingRule, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string forwardingRule, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAsync(new DeleteGlobalForwardingRuleRequest
             {
                 ForwardingRule = gax::GaxPreconditions.CheckNotNullOrEmpty(forwardingRule, nameof(forwardingRule)),
@@ -381,7 +503,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string forwardingRule, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string forwardingRule, st::CancellationToken cancellationToken) =>
             DeleteAsync(project, forwardingRule, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -467,7 +589,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -476,7 +598,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -485,8 +607,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
             InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public virtual lro::OperationsClient InsertOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
@@ -499,7 +647,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(string project, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(string project, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
             Insert(new InsertGlobalForwardingRuleRequest
             {
                 ForwardingRuleResource = gax::GaxPreconditions.CheckNotNull(forwardingRuleResource, nameof(forwardingRuleResource)),
@@ -517,7 +665,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
             InsertAsync(new InsertGlobalForwardingRuleRequest
             {
                 ForwardingRuleResource = gax::GaxPreconditions.CheckNotNull(forwardingRuleResource, nameof(forwardingRuleResource)),
@@ -535,7 +683,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, ForwardingRule forwardingRuleResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, ForwardingRule forwardingRuleResource, st::CancellationToken cancellationToken) =>
             InsertAsync(project, forwardingRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -610,7 +758,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Patch(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Patch(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -619,7 +767,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> PatchAsync(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -628,8 +776,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> PatchAsync(PatchGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
             PatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Patch</c>.</summary>
+        public virtual lro::OperationsClient PatchOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Patch</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePatch(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Patch</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePatchAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
         /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
@@ -645,7 +819,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Patch(string project, string forwardingRule, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Patch(string project, string forwardingRule, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
             Patch(new PatchGlobalForwardingRuleRequest
             {
                 ForwardingRule = gax::GaxPreconditions.CheckNotNullOrEmpty(forwardingRule, nameof(forwardingRule)),
@@ -667,7 +841,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> PatchAsync(string project, string forwardingRule, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string forwardingRule, ForwardingRule forwardingRuleResource, gaxgrpc::CallSettings callSettings = null) =>
             PatchAsync(new PatchGlobalForwardingRuleRequest
             {
                 ForwardingRule = gax::GaxPreconditions.CheckNotNullOrEmpty(forwardingRule, nameof(forwardingRule)),
@@ -689,7 +863,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> PatchAsync(string project, string forwardingRule, ForwardingRule forwardingRuleResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string forwardingRule, ForwardingRule forwardingRuleResource, st::CancellationToken cancellationToken) =>
             PatchAsync(project, forwardingRule, forwardingRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -698,7 +872,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetLabels(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetLabels(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -707,7 +881,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -716,8 +890,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
             SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>
+        public virtual lro::OperationsClient SetLabelsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetLabels(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
         /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
@@ -733,7 +933,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetLabels(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetLabels(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetLabels(new SetLabelsGlobalForwardingRuleRequest
             {
                 GlobalSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(globalSetLabelsRequestResource, nameof(globalSetLabelsRequestResource)),
@@ -755,7 +955,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetLabelsAsync(new SetLabelsGlobalForwardingRuleRequest
             {
                 GlobalSetLabelsRequestResource = gax::GaxPreconditions.CheckNotNull(globalSetLabelsRequestResource, nameof(globalSetLabelsRequestResource)),
@@ -777,7 +977,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(string project, string resource, GlobalSetLabelsRequest globalSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
             SetLabelsAsync(project, resource, globalSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -786,7 +986,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetTarget(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetTarget(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -795,7 +995,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTargetAsync(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTargetAsync(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -804,8 +1004,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTargetAsync(SetTargetGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTargetAsync(SetTargetGlobalForwardingRuleRequest request, st::CancellationToken cancellationToken) =>
             SetTargetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetTarget</c>.</summary>
+        public virtual lro::OperationsClient SetTargetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetTarget</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetTarget(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetTargetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetTarget</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetTargetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetTargetOperationsClient, callSettings);
 
         /// <summary>
         /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
@@ -821,7 +1047,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetTarget(string project, string forwardingRule, TargetReference targetReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetTarget(string project, string forwardingRule, TargetReference targetReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
             SetTarget(new SetTargetGlobalForwardingRuleRequest
             {
                 ForwardingRule = gax::GaxPreconditions.CheckNotNullOrEmpty(forwardingRule, nameof(forwardingRule)),
@@ -843,7 +1069,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTargetAsync(string project, string forwardingRule, TargetReference targetReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTargetAsync(string project, string forwardingRule, TargetReference targetReferenceResource, gaxgrpc::CallSettings callSettings = null) =>
             SetTargetAsync(new SetTargetGlobalForwardingRuleRequest
             {
                 ForwardingRule = gax::GaxPreconditions.CheckNotNullOrEmpty(forwardingRule, nameof(forwardingRule)),
@@ -865,7 +1091,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTargetAsync(string project, string forwardingRule, TargetReference targetReferenceResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTargetAsync(string project, string forwardingRule, TargetReference targetReferenceResource, st::CancellationToken cancellationToken) =>
             SetTargetAsync(project, forwardingRule, targetReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
@@ -900,6 +1126,11 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             GlobalForwardingRulesSettings effectiveSettings = settings ?? GlobalForwardingRulesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
+            PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings);
+            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetLabelsOperationsSettings);
+            SetTargetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.SetTargetOperationsSettings);
             _callDelete = clientHelper.BuildApiCall<DeleteGlobalForwardingRuleRequest, Operation>(grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("forwarding_rule", request => request.ForwardingRule);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -959,16 +1190,22 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_SetTargetGlobalForwardingRuleRequest(ref SetTargetGlobalForwardingRuleRequest request, ref gaxgrpc::CallSettings settings);
 
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public override lro::OperationsClient DeleteOperationsClient { get; }
+
         /// <summary>
         /// Deletes the specified GlobalForwardingRule resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Delete(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Delete(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callDelete.Sync(request, callSettings);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -977,10 +1214,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> DeleteAsync(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callDelete.Async(request, callSettings);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1007,16 +1247,22 @@ namespace Google.Cloud.Compute.V1
             return _callGet.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public override lro::OperationsClient InsertOperationsClient { get; }
+
         /// <summary>
         /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Insert(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Insert(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callInsert.Sync(request, callSettings);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1025,10 +1271,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> InsertAsync(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callInsert.Async(request, callSettings);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1055,16 +1304,22 @@ namespace Google.Cloud.Compute.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGlobalForwardingRulesRequest, ForwardingRuleList, ForwardingRule>(_callList, request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>Patch</c>.</summary>
+        public override lro::OperationsClient PatchOperationsClient { get; }
+
         /// <summary>
         /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Patch(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Patch(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callPatch.Sync(request, callSettings);
+            Operation response = _callPatch.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
         /// <summary>
@@ -1073,11 +1328,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> PatchAsync(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> PatchAsync(PatchGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PatchGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callPatch.Async(request, callSettings);
+            Operation response = await _callPatch.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>
+        public override lro::OperationsClient SetLabelsOperationsClient { get; }
 
         /// <summary>
         /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
@@ -1085,10 +1346,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetLabels(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetLabels(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callSetLabels.Sync(request, callSettings);
+            Operation response = _callSetLabels.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>
@@ -1097,11 +1361,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callSetLabels.Async(request, callSettings);
+            Operation response = await _callSetLabels.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetTarget</c>.</summary>
+        public override lro::OperationsClient SetTargetOperationsClient { get; }
 
         /// <summary>
         /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
@@ -1109,10 +1379,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetTarget(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetTarget(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTargetGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callSetTarget.Sync(request, callSettings);
+            Operation response = _callSetTarget.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTargetOperationsClient);
         }
 
         /// <summary>
@@ -1121,10 +1394,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetTargetAsync(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetTargetAsync(SetTargetGlobalForwardingRuleRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTargetGlobalForwardingRuleRequest(ref request, ref callSettings);
-            return _callSetTarget.Async(request, callSettings);
+            Operation response = await _callSetTarget.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTargetOperationsClient);
         }
     }
 
@@ -1135,6 +1411,20 @@ namespace Google.Cloud.Compute.V1
         {
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public static partial class GlobalForwardingRules
+    {
+        public partial class GlobalForwardingRulesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client, delegating to GlobalOperations.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

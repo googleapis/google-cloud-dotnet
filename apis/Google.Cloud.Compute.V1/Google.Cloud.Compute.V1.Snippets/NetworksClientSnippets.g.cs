@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedNetworksClientSnippets
@@ -39,7 +40,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest(),
             };
             // Make the request
-            Operation response = networksClient.AddPeering(request);
+            lro::Operation<Operation, Operation> response = networksClient.AddPeering(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceAddPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +76,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworksAddPeeringRequestResource = new NetworksAddPeeringRequest(),
             };
             // Make the request
-            Operation response = await networksClient.AddPeeringAsync(request);
+            lro::Operation<Operation, Operation> response = await networksClient.AddPeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceAddPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -74,7 +107,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             NetworksAddPeeringRequest networksAddPeeringRequestResource = new NetworksAddPeeringRequest();
             // Make the request
-            Operation response = networksClient.AddPeering(project, network, networksAddPeeringRequestResource);
+            lro::Operation<Operation, Operation> response = networksClient.AddPeering(project, network, networksAddPeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceAddPeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -90,7 +139,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             NetworksAddPeeringRequest networksAddPeeringRequestResource = new NetworksAddPeeringRequest();
             // Make the request
-            Operation response = await networksClient.AddPeeringAsync(project, network, networksAddPeeringRequestResource);
+            lro::Operation<Operation, Operation> response = await networksClient.AddPeeringAsync(project, network, networksAddPeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceAddPeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -108,7 +173,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = networksClient.Delete(request);
+            lro::Operation<Operation, Operation> response = networksClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -127,7 +208,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = await networksClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await networksClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -141,7 +238,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string network = "";
             // Make the request
-            Operation response = networksClient.Delete(project, network);
+            lro::Operation<Operation, Operation> response = networksClient.Delete(project, network);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -156,7 +269,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string network = "";
             // Make the request
-            Operation response = await networksClient.DeleteAsync(project, network);
+            lro::Operation<Operation, Operation> response = await networksClient.DeleteAsync(project, network);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -302,7 +431,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = networksClient.Insert(request);
+            lro::Operation<Operation, Operation> response = networksClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -321,7 +466,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = await networksClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await networksClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -335,7 +496,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             Network networkResource = new Network();
             // Make the request
-            Operation response = networksClient.Insert(project, networkResource);
+            lro::Operation<Operation, Operation> response = networksClient.Insert(project, networkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -350,7 +527,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             Network networkResource = new Network();
             // Make the request
-            Operation response = await networksClient.InsertAsync(project, networkResource);
+            lro::Operation<Operation, Operation> response = await networksClient.InsertAsync(project, networkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -763,7 +956,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = networksClient.Patch(request);
+            lro::Operation<Operation, Operation> response = networksClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -783,7 +992,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = await networksClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await networksClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -798,7 +1023,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             Network networkResource = new Network();
             // Make the request
-            Operation response = networksClient.Patch(project, network, networkResource);
+            lro::Operation<Operation, Operation> response = networksClient.Patch(project, network, networkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -814,7 +1055,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             Network networkResource = new Network();
             // Make the request
-            Operation response = await networksClient.PatchAsync(project, network, networkResource);
+            lro::Operation<Operation, Operation> response = await networksClient.PatchAsync(project, network, networkResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -833,7 +1090,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest(),
             };
             // Make the request
-            Operation response = networksClient.RemovePeering(request);
+            lro::Operation<Operation, Operation> response = networksClient.RemovePeering(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceRemovePeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -853,7 +1126,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NetworksRemovePeeringRequestResource = new NetworksRemovePeeringRequest(),
             };
             // Make the request
-            Operation response = await networksClient.RemovePeeringAsync(request);
+            lro::Operation<Operation, Operation> response = await networksClient.RemovePeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceRemovePeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -868,7 +1157,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             NetworksRemovePeeringRequest networksRemovePeeringRequestResource = new NetworksRemovePeeringRequest();
             // Make the request
-            Operation response = networksClient.RemovePeering(project, network, networksRemovePeeringRequestResource);
+            lro::Operation<Operation, Operation> response = networksClient.RemovePeering(project, network, networksRemovePeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceRemovePeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -884,7 +1189,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             NetworksRemovePeeringRequest networksRemovePeeringRequestResource = new NetworksRemovePeeringRequest();
             // Make the request
-            Operation response = await networksClient.RemovePeeringAsync(project, network, networksRemovePeeringRequestResource);
+            lro::Operation<Operation, Operation> response = await networksClient.RemovePeeringAsync(project, network, networksRemovePeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceRemovePeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -902,7 +1223,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = networksClient.SwitchToCustomMode(request);
+            lro::Operation<Operation, Operation> response = networksClient.SwitchToCustomMode(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceSwitchToCustomMode(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -921,7 +1258,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = await networksClient.SwitchToCustomModeAsync(request);
+            lro::Operation<Operation, Operation> response = await networksClient.SwitchToCustomModeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceSwitchToCustomModeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -935,7 +1288,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string network = "";
             // Make the request
-            Operation response = networksClient.SwitchToCustomMode(project, network);
+            lro::Operation<Operation, Operation> response = networksClient.SwitchToCustomMode(project, network);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceSwitchToCustomMode(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -950,7 +1319,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string network = "";
             // Make the request
-            Operation response = await networksClient.SwitchToCustomModeAsync(project, network);
+            lro::Operation<Operation, Operation> response = await networksClient.SwitchToCustomModeAsync(project, network);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceSwitchToCustomModeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -969,7 +1354,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = networksClient.UpdatePeering(request);
+            lro::Operation<Operation, Operation> response = networksClient.UpdatePeering(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceUpdatePeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -989,7 +1390,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Network = "",
             };
             // Make the request
-            Operation response = await networksClient.UpdatePeeringAsync(request);
+            lro::Operation<Operation, Operation> response = await networksClient.UpdatePeeringAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceUpdatePeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1004,7 +1421,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             NetworksUpdatePeeringRequest networksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest();
             // Make the request
-            Operation response = networksClient.UpdatePeering(project, network, networksUpdatePeeringRequestResource);
+            lro::Operation<Operation, Operation> response = networksClient.UpdatePeering(project, network, networksUpdatePeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networksClient.PollOnceUpdatePeering(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1020,7 +1453,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string network = "";
             NetworksUpdatePeeringRequest networksUpdatePeeringRequestResource = new NetworksUpdatePeeringRequest();
             // Make the request
-            Operation response = await networksClient.UpdatePeeringAsync(project, network, networksUpdatePeeringRequestResource);
+            lro::Operation<Operation, Operation> response = await networksClient.UpdatePeeringAsync(project, network, networksUpdatePeeringRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networksClient.PollOnceUpdatePeeringAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

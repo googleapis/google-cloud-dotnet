@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -44,16 +45,23 @@ namespace Google.Cloud.Compute.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AddResourcePoliciesSettings = existing.AddResourcePoliciesSettings;
+            AddResourcePoliciesOperationsSettings = existing.AddResourcePoliciesOperationsSettings.Clone();
             CreateSnapshotSettings = existing.CreateSnapshotSettings;
+            CreateSnapshotOperationsSettings = existing.CreateSnapshotOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
+            DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             InsertSettings = existing.InsertSettings;
+            InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             RemoveResourcePoliciesSettings = existing.RemoveResourcePoliciesSettings;
+            RemoveResourcePoliciesOperationsSettings = existing.RemoveResourcePoliciesOperationsSettings.Clone();
             ResizeSettings = existing.ResizeSettings;
+            ResizeOperationsSettings = existing.ResizeOperationsSettings.Clone();
             SetIamPolicySettings = existing.SetIamPolicySettings;
             SetLabelsSettings = existing.SetLabelsSettings;
+            SetLabelsOperationsSettings = existing.SetLabelsOperationsSettings.Clone();
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             OnCopy(existing);
         }
@@ -73,6 +81,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings AddResourcePoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.AddResourcePolicies</c> and
+        /// <c>RegionDisksClient.AddResourcePoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddResourcePoliciesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>RegionDisksClient.CreateSnapshot</c> and <c>RegionDisksClient.CreateSnapshotAsync</c>.
         /// </summary>
@@ -85,6 +111,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings CreateSnapshotSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.CreateSnapshot</c> and
+        /// <c>RegionDisksClient.CreateSnapshotAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateSnapshotOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegionDisksClient.Delete</c>
         ///  and <c>RegionDisksClient.DeleteAsync</c>.
         /// </summary>
@@ -95,6 +139,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.Delete</c> and
+        /// <c>RegionDisksClient.DeleteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegionDisksClient.Get</c>
@@ -133,6 +195,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings InsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.Insert</c> and
+        /// <c>RegionDisksClient.InsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegionDisksClient.List</c>
         /// and <c>RegionDisksClient.ListAsync</c>.
         /// </summary>
@@ -157,6 +237,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings RemoveResourcePoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.RemoveResourcePolicies</c> and
+        /// <c>RegionDisksClient.RemoveResourcePoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RemoveResourcePoliciesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RegionDisksClient.Resize</c>
         ///  and <c>RegionDisksClient.ResizeAsync</c>.
         /// </summary>
@@ -167,6 +265,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ResizeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.Resize</c> and
+        /// <c>RegionDisksClient.ResizeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ResizeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -191,6 +307,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RegionDisksClient.SetLabels</c> and
+        /// <c>RegionDisksClient.SetLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetLabelsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -372,7 +506,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AddResourcePolicies(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AddResourcePolicies(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -381,7 +515,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -390,8 +524,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(AddResourcePoliciesRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(AddResourcePoliciesRegionDiskRequest request, st::CancellationToken cancellationToken) =>
             AddResourcePoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddResourcePolicies</c>.</summary>
+        public virtual lro::OperationsClient AddResourcePoliciesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddResourcePolicies</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAddResourcePolicies(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddResourcePoliciesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddResourcePolicies</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAddResourcePoliciesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddResourcePoliciesOperationsClient, callSettings);
 
         /// <summary>
         /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
@@ -410,7 +571,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AddResourcePolicies(string project, string region, string disk, RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AddResourcePolicies(string project, string region, string disk, RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             AddResourcePolicies(new AddResourcePoliciesRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -436,7 +597,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(string project, string region, string disk, RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(string project, string region, string disk, RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             AddResourcePoliciesAsync(new AddResourcePoliciesRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -462,7 +623,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(string project, string region, string disk, RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(string project, string region, string disk, RegionDisksAddResourcePoliciesRequest regionDisksAddResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
             AddResourcePoliciesAsync(project, region, disk, regionDisksAddResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -471,7 +632,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation CreateSnapshot(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> CreateSnapshot(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -480,7 +641,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> CreateSnapshotAsync(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> CreateSnapshotAsync(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -489,8 +650,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> CreateSnapshotAsync(CreateSnapshotRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> CreateSnapshotAsync(CreateSnapshotRegionDiskRequest request, st::CancellationToken cancellationToken) =>
             CreateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateSnapshot</c>.</summary>
+        public virtual lro::OperationsClient CreateSnapshotOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceCreateSnapshot(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSnapshotOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateSnapshot</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceCreateSnapshotAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateSnapshotOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a snapshot of this regional disk.
@@ -509,7 +696,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation CreateSnapshot(string project, string region, string disk, Snapshot snapshotResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> CreateSnapshot(string project, string region, string disk, Snapshot snapshotResource, gaxgrpc::CallSettings callSettings = null) =>
             CreateSnapshot(new CreateSnapshotRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -535,7 +722,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> CreateSnapshotAsync(string project, string region, string disk, Snapshot snapshotResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> CreateSnapshotAsync(string project, string region, string disk, Snapshot snapshotResource, gaxgrpc::CallSettings callSettings = null) =>
             CreateSnapshotAsync(new CreateSnapshotRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -561,7 +748,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> CreateSnapshotAsync(string project, string region, string disk, Snapshot snapshotResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> CreateSnapshotAsync(string project, string region, string disk, Snapshot snapshotResource, st::CancellationToken cancellationToken) =>
             CreateSnapshotAsync(project, region, disk, snapshotResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -570,7 +757,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -579,7 +766,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -588,8 +775,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteRegionDiskRequest request, st::CancellationToken cancellationToken) =>
             DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public virtual lro::OperationsClient DeleteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDelete(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
@@ -605,7 +818,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(string project, string region, string disk, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(string project, string region, string disk, gaxgrpc::CallSettings callSettings = null) =>
             Delete(new DeleteRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -627,7 +840,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string region, string disk, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string region, string disk, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAsync(new DeleteRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -649,7 +862,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string region, string disk, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string region, string disk, st::CancellationToken cancellationToken) =>
             DeleteAsync(project, region, disk, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -834,7 +1047,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -843,7 +1056,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -852,8 +1065,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertRegionDiskRequest request, st::CancellationToken cancellationToken) =>
             InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public virtual lro::OperationsClient InsertOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a persistent regional disk in the specified project using the data included in the request.
@@ -869,7 +1108,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(string project, string region, Disk diskResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(string project, string region, Disk diskResource, gaxgrpc::CallSettings callSettings = null) =>
             Insert(new InsertRegionDiskRequest
             {
                 DiskResource = gax::GaxPreconditions.CheckNotNull(diskResource, nameof(diskResource)),
@@ -891,7 +1130,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, string region, Disk diskResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, string region, Disk diskResource, gaxgrpc::CallSettings callSettings = null) =>
             InsertAsync(new InsertRegionDiskRequest
             {
                 DiskResource = gax::GaxPreconditions.CheckNotNull(diskResource, nameof(diskResource)),
@@ -913,7 +1152,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, string region, Disk diskResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, string region, Disk diskResource, st::CancellationToken cancellationToken) =>
             InsertAsync(project, region, diskResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -996,7 +1235,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation RemoveResourcePolicies(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> RemoveResourcePolicies(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1005,7 +1244,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1014,8 +1253,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(RemoveResourcePoliciesRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(RemoveResourcePoliciesRegionDiskRequest request, st::CancellationToken cancellationToken) =>
             RemoveResourcePoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RemoveResourcePolicies</c>.</summary>
+        public virtual lro::OperationsClient RemoveResourcePoliciesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RemoveResourcePolicies</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceRemoveResourcePolicies(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveResourcePoliciesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RemoveResourcePolicies</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceRemoveResourcePoliciesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveResourcePoliciesOperationsClient, callSettings);
 
         /// <summary>
         /// Removes resource policies from a regional disk.
@@ -1034,7 +1300,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation RemoveResourcePolicies(string project, string region, string disk, RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> RemoveResourcePolicies(string project, string region, string disk, RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             RemoveResourcePolicies(new RemoveResourcePoliciesRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -1060,7 +1326,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(string project, string region, string disk, RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(string project, string region, string disk, RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             RemoveResourcePoliciesAsync(new RemoveResourcePoliciesRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -1086,7 +1352,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(string project, string region, string disk, RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(string project, string region, string disk, RegionDisksRemoveResourcePoliciesRequest regionDisksRemoveResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
             RemoveResourcePoliciesAsync(project, region, disk, regionDisksRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1095,7 +1361,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Resize(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Resize(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1104,7 +1370,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResizeAsync(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResizeAsync(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1113,8 +1379,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResizeAsync(ResizeRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResizeAsync(ResizeRegionDiskRequest request, st::CancellationToken cancellationToken) =>
             ResizeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Resize</c>.</summary>
+        public virtual lro::OperationsClient ResizeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Resize</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceResize(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResizeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Resize</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceResizeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResizeOperationsClient, callSettings);
 
         /// <summary>
         /// Resizes the specified regional persistent disk.
@@ -1133,7 +1425,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Resize(string project, string region, string disk, RegionDisksResizeRequest regionDisksResizeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Resize(string project, string region, string disk, RegionDisksResizeRequest regionDisksResizeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             Resize(new ResizeRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -1159,7 +1451,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResizeAsync(string project, string region, string disk, RegionDisksResizeRequest regionDisksResizeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResizeAsync(string project, string region, string disk, RegionDisksResizeRequest regionDisksResizeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             ResizeAsync(new ResizeRegionDiskRequest
             {
                 Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
@@ -1185,7 +1477,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResizeAsync(string project, string region, string disk, RegionDisksResizeRequest regionDisksResizeRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResizeAsync(string project, string region, string disk, RegionDisksResizeRequest regionDisksResizeRequestResource, st::CancellationToken cancellationToken) =>
             ResizeAsync(project, region, disk, regionDisksResizeRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1293,7 +1585,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetLabels(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetLabels(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1302,7 +1594,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1311,8 +1603,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsRegionDiskRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsRegionDiskRequest request, st::CancellationToken cancellationToken) =>
             SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>
+        public virtual lro::OperationsClient SetLabelsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetLabels(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
         /// Sets the labels on the target regional disk.
@@ -1331,7 +1649,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetLabels(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetLabels(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetLabels(new SetLabelsRegionDiskRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
@@ -1357,7 +1675,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetLabelsAsync(new SetLabelsRegionDiskRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
@@ -1383,7 +1701,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(string project, string region, string resource, RegionSetLabelsRequest regionSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
             SetLabelsAsync(project, region, resource, regionSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1526,6 +1844,13 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             RegionDisksSettings effectiveSettings = settings ?? RegionDisksSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings);
+            CreateSnapshotOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.CreateSnapshotOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings);
+            RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings);
+            ResizeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.ResizeOperationsSettings);
+            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.SetLabelsOperationsSettings);
             _callAddResourcePolicies = clientHelper.BuildApiCall<AddResourcePoliciesRegionDiskRequest, Operation>(grpcClient.AddResourcePoliciesAsync, grpcClient.AddResourcePolicies, effectiveSettings.AddResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("disk", request => request.Disk);
             Modify_ApiCall(ref _callAddResourcePolicies);
             Modify_AddResourcePoliciesApiCall(ref _callAddResourcePolicies);
@@ -1620,16 +1945,22 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_TestIamPermissionsRegionDiskRequest(ref TestIamPermissionsRegionDiskRequest request, ref gaxgrpc::CallSettings settings);
 
+        /// <summary>The long-running operations client for <c>AddResourcePolicies</c>.</summary>
+        public override lro::OperationsClient AddResourcePoliciesOperationsClient { get; }
+
         /// <summary>
         /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation AddResourcePolicies(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> AddResourcePolicies(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddResourcePoliciesRegionDiskRequest(ref request, ref callSettings);
-            return _callAddResourcePolicies.Sync(request, callSettings);
+            Operation response = _callAddResourcePolicies.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddResourcePoliciesOperationsClient);
         }
 
         /// <summary>
@@ -1638,11 +1969,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> AddResourcePoliciesAsync(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(AddResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddResourcePoliciesRegionDiskRequest(ref request, ref callSettings);
-            return _callAddResourcePolicies.Async(request, callSettings);
+            Operation response = await _callAddResourcePolicies.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddResourcePoliciesOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>CreateSnapshot</c>.</summary>
+        public override lro::OperationsClient CreateSnapshotOperationsClient { get; }
 
         /// <summary>
         /// Creates a snapshot of this regional disk.
@@ -1650,10 +1987,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation CreateSnapshot(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> CreateSnapshot(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSnapshotRegionDiskRequest(ref request, ref callSettings);
-            return _callCreateSnapshot.Sync(request, callSettings);
+            Operation response = _callCreateSnapshot.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), CreateSnapshotOperationsClient);
         }
 
         /// <summary>
@@ -1662,11 +2002,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> CreateSnapshotAsync(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> CreateSnapshotAsync(CreateSnapshotRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateSnapshotRegionDiskRequest(ref request, ref callSettings);
-            return _callCreateSnapshot.Async(request, callSettings);
+            Operation response = await _callCreateSnapshot.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), CreateSnapshotOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
         /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
@@ -1674,10 +2020,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Delete(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Delete(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRegionDiskRequest(ref request, ref callSettings);
-            return _callDelete.Sync(request, callSettings);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1686,10 +2035,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> DeleteAsync(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteRegionDiskRequest(ref request, ref callSettings);
-            return _callDelete.Async(request, callSettings);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -1740,16 +2092,22 @@ namespace Google.Cloud.Compute.V1
             return _callGetIamPolicy.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public override lro::OperationsClient InsertOperationsClient { get; }
+
         /// <summary>
         /// Creates a persistent regional disk in the specified project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Insert(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Insert(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertRegionDiskRequest(ref request, ref callSettings);
-            return _callInsert.Sync(request, callSettings);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1758,10 +2116,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> InsertAsync(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertRegionDiskRequest(ref request, ref callSettings);
-            return _callInsert.Async(request, callSettings);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1788,16 +2149,22 @@ namespace Google.Cloud.Compute.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRegionDisksRequest, DiskList, Disk>(_callList, request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>RemoveResourcePolicies</c>.</summary>
+        public override lro::OperationsClient RemoveResourcePoliciesOperationsClient { get; }
+
         /// <summary>
         /// Removes resource policies from a regional disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation RemoveResourcePolicies(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> RemoveResourcePolicies(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveResourcePoliciesRegionDiskRequest(ref request, ref callSettings);
-            return _callRemoveResourcePolicies.Sync(request, callSettings);
+            Operation response = _callRemoveResourcePolicies.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveResourcePoliciesOperationsClient);
         }
 
         /// <summary>
@@ -1806,11 +2173,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> RemoveResourcePoliciesAsync(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(RemoveResourcePoliciesRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveResourcePoliciesRegionDiskRequest(ref request, ref callSettings);
-            return _callRemoveResourcePolicies.Async(request, callSettings);
+            Operation response = await _callRemoveResourcePolicies.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveResourcePoliciesOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>Resize</c>.</summary>
+        public override lro::OperationsClient ResizeOperationsClient { get; }
 
         /// <summary>
         /// Resizes the specified regional persistent disk.
@@ -1818,10 +2191,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Resize(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Resize(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResizeRegionDiskRequest(ref request, ref callSettings);
-            return _callResize.Sync(request, callSettings);
+            Operation response = _callResize.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResizeOperationsClient);
         }
 
         /// <summary>
@@ -1830,10 +2206,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> ResizeAsync(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> ResizeAsync(ResizeRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResizeRegionDiskRequest(ref request, ref callSettings);
-            return _callResize.Async(request, callSettings);
+            Operation response = await _callResize.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResizeOperationsClient);
         }
 
         /// <summary>
@@ -1860,16 +2239,22 @@ namespace Google.Cloud.Compute.V1
             return _callSetIamPolicy.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>
+        public override lro::OperationsClient SetLabelsOperationsClient { get; }
+
         /// <summary>
         /// Sets the labels on the target regional disk.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetLabels(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetLabels(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsRegionDiskRequest(ref request, ref callSettings);
-            return _callSetLabels.Sync(request, callSettings);
+            Operation response = _callSetLabels.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>
@@ -1878,10 +2263,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetLabelsAsync(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsRegionDiskRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsRegionDiskRequest(ref request, ref callSettings);
-            return _callSetLabels.Async(request, callSettings);
+            Operation response = await _callSetLabels.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>
@@ -1916,6 +2304,20 @@ namespace Google.Cloud.Compute.V1
         {
             get => checked((int)MaxResults);
             set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public static partial class RegionDisks
+    {
+        public partial class RegionDisksClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client, delegating to RegionOperations.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForRegionOperations() =>
+                RegionOperations.RegionOperationsClient.CreateOperationsClient(CallInvoker);
         }
     }
 }

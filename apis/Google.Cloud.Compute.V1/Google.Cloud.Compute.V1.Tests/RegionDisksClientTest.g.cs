@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -27,563 +28,10 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedRegionDisksClientTest
     {
         [xunit::FactAttribute]
-        public void AddResourcePoliciesRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            AddResourcePoliciesRegionDiskRequest request = new AddResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddResourcePolicies(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddResourcePoliciesRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            AddResourcePoliciesRegionDiskRequest request = new AddResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddResourcePoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddResourcePoliciesAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void AddResourcePolicies()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            AddResourcePoliciesRegionDiskRequest request = new AddResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.AddResourcePolicies(request.Project, request.Region, request.Disk, request.RegionDisksAddResourcePoliciesRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task AddResourcePoliciesAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            AddResourcePoliciesRegionDiskRequest request = new AddResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksAddResourcePoliciesRequestResource = new RegionDisksAddResourcePoliciesRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.AddResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.AddResourcePoliciesAsync(request.Project, request.Region, request.Disk, request.RegionDisksAddResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.AddResourcePoliciesAsync(request.Project, request.Region, request.Disk, request.RegionDisksAddResourcePoliciesRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateSnapshotRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            CreateSnapshotRegionDiskRequest request = new CreateSnapshotRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                SnapshotResource = new Snapshot(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CreateSnapshot(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateSnapshotRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            CreateSnapshotRegionDiskRequest request = new CreateSnapshotRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                SnapshotResource = new Snapshot(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.CreateSnapshotAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.CreateSnapshotAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void CreateSnapshot()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            CreateSnapshotRegionDiskRequest request = new CreateSnapshotRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                SnapshotResource = new Snapshot(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateSnapshot(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.CreateSnapshot(request.Project, request.Region, request.Disk, request.SnapshotResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task CreateSnapshotAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            CreateSnapshotRegionDiskRequest request = new CreateSnapshotRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                SnapshotResource = new Snapshot(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.CreateSnapshotAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.CreateSnapshotAsync(request.Project, request.Region, request.Disk, request.SnapshotResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.CreateSnapshotAsync(request.Project, request.Region, request.Disk, request.SnapshotResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeleteRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            DeleteRegionDiskRequest request = new DeleteRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            DeleteRegionDiskRequest request = new DeleteRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Delete()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            DeleteRegionDiskRequest request = new DeleteRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request.Project, request.Region, request.Disk);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            DeleteRegionDiskRequest request = new DeleteRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request.Project, request.Region, request.Disk, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request.Project, request.Region, request.Disk, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -661,6 +109,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -740,6 +189,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -817,6 +267,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionDiskRequest request = new GetRegionDiskRequest
             {
                 Disk = "disk028b6875",
@@ -896,6 +347,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -923,6 +375,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -952,6 +405,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -978,6 +432,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyRegionDiskRequest request = new GetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1003,565 +458,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void InsertRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            InsertRegionDiskRequest request = new InsertRegionDiskRequest
-            {
-                DiskResource = new Disk(),
-                RequestId = "request_id362c8df6",
-                SourceImage = "source_image5e9c0c38",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            InsertRegionDiskRequest request = new InsertRegionDiskRequest
-            {
-                DiskResource = new Disk(),
-                RequestId = "request_id362c8df6",
-                SourceImage = "source_image5e9c0c38",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Insert()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            InsertRegionDiskRequest request = new InsertRegionDiskRequest
-            {
-                DiskResource = new Disk(),
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request.Project, request.Region, request.DiskResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            InsertRegionDiskRequest request = new InsertRegionDiskRequest
-            {
-                DiskResource = new Disk(),
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request.Project, request.Region, request.DiskResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request.Project, request.Region, request.DiskResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void RemoveResourcePoliciesRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            RemoveResourcePoliciesRegionDiskRequest request = new RemoveResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RegionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest(),
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.RemoveResourcePolicies(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task RemoveResourcePoliciesRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            RemoveResourcePoliciesRegionDiskRequest request = new RemoveResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RegionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest(),
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.RemoveResourcePoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.RemoveResourcePoliciesAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void RemoveResourcePolicies()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            RemoveResourcePoliciesRegionDiskRequest request = new RemoveResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RegionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest(),
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveResourcePolicies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.RemoveResourcePolicies(request.Project, request.Region, request.Disk, request.RegionDisksRemoveResourcePoliciesRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task RemoveResourcePoliciesAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            RemoveResourcePoliciesRegionDiskRequest request = new RemoveResourcePoliciesRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RegionDisksRemoveResourcePoliciesRequestResource = new RegionDisksRemoveResourcePoliciesRequest(),
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.RemoveResourcePoliciesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.RemoveResourcePoliciesAsync(request.Project, request.Region, request.Disk, request.RegionDisksRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.RemoveResourcePoliciesAsync(request.Project, request.Region, request.Disk, request.RegionDisksRemoveResourcePoliciesRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void ResizeRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ResizeRegionDiskRequest request = new ResizeRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Resize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Resize(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ResizeRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ResizeRegionDiskRequest request = new ResizeRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.ResizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.ResizeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.ResizeAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Resize()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ResizeRegionDiskRequest request = new ResizeRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Resize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Resize(request.Project, request.Region, request.Disk, request.RegionDisksResizeRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task ResizeAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            ResizeRegionDiskRequest request = new ResizeRegionDiskRequest
-            {
-                Disk = "disk028b6875",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                RegionDisksResizeRequestResource = new RegionDisksResizeRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.ResizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.ResizeAsync(request.Project, request.Region, request.Disk, request.RegionDisksResizeRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.ResizeAsync(request.Project, request.Region, request.Disk, request.RegionDisksResizeRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1589,6 +489,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1618,6 +519,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1645,6 +547,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyRegionDiskRequest request = new SetIamPolicyRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1671,195 +574,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetLabelsRequestObject()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            SetLabelsRegionDiskRequest request = new SetLabelsRegionDiskRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLabels(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task SetLabelsRequestObjectAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            SetLabelsRegionDiskRequest request = new SetLabelsRegionDiskRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.SetLabelsAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void SetLabels()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            SetLabelsRegionDiskRequest request = new SetLabelsRegionDiskRequest
-            {
-                Region = "regionedb20d96",
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLabels(request.Project, request.Region, request.Resource, request.RegionSetLabelsRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task SetLabelsAsync()
-        {
-            moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
-            SetLabelsRegionDiskRequest request = new SetLabelsRegionDiskRequest
-            {
-                Region = "regionedb20d96",
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                RegionSetLabelsRequestResource = new RegionSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionDisksClient client = new RegionDisksClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.SetLabelsAsync(request.Project, request.Region, request.Resource, request.RegionSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.SetLabelsAsync(request.Project, request.Region, request.Resource, request.RegionSetLabelsRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1885,6 +603,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1912,6 +631,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",
@@ -1937,6 +657,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<RegionDisks.RegionDisksClient> mockGrpcClient = new moq::Mock<RegionDisks.RegionDisksClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsRegionDiskRequest request = new TestIamPermissionsRegionDiskRequest
             {
                 Region = "regionedb20d96",

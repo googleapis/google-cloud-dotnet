@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -27,191 +28,10 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedRegionBackendServicesClientTest
     {
         [xunit::FactAttribute]
-        public void DeleteRequestObject()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteRequestObjectAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Delete()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request.Project, request.Region, request.BackendService);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            DeleteRegionBackendServiceRequest request = new DeleteRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request.Project, request.Region, request.BackendService, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request.Project, request.Region, request.BackendService, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -274,6 +94,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -338,6 +159,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -400,6 +222,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetRegionBackendServiceRequest request = new GetRegionBackendServiceRequest
             {
                 Region = "regionedb20d96",
@@ -464,6 +287,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetHealthRequestObject()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
@@ -494,6 +318,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetHealthRequestObjectAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
@@ -526,6 +351,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetHealth()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
@@ -556,6 +382,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetHealthAsync()
         {
             moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForRegionOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetHealthRegionBackendServiceRequest request = new GetHealthRegionBackendServiceRequest
             {
                 ResourceGroupReferenceResource = new ResourceGroupReference(),
@@ -580,560 +407,6 @@ namespace Google.Cloud.Compute.V1.Tests
             BackendServiceGroupHealth responseCallSettings = await client.GetHealthAsync(request.Project, request.Region, request.BackendService, request.ResourceGroupReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             BackendServiceGroupHealth responseCancellationToken = await client.GetHealthAsync(request.Project, request.Region, request.BackendService, request.ResourceGroupReferenceResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void InsertRequestObject()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertRequestObjectAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Insert()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request.Project, request.Region, request.BackendServiceResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            InsertRegionBackendServiceRequest request = new InsertRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request.Project, request.Region, request.BackendServiceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request.Project, request.Region, request.BackendServiceResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void PatchRequestObject()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchRequestObjectAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Patch()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request.Project, request.Region, request.BackendService, request.BackendServiceResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            PatchRegionBackendServiceRequest request = new PatchRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request.Project, request.Region, request.BackendService, request.BackendServiceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request.Project, request.Region, request.BackendService, request.BackendServiceResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void UpdateRequestObject()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Update(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task UpdateRequestObjectAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
-            {
-                RequestId = "request_id362c8df6",
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.UpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.UpdateAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Update()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Update(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Update(request.Project, request.Region, request.BackendService, request.BackendServiceResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task UpdateAsync()
-        {
-            moq::Mock<RegionBackendServices.RegionBackendServicesClient> mockGrpcClient = new moq::Mock<RegionBackendServices.RegionBackendServicesClient>(moq::MockBehavior.Strict);
-            UpdateRegionBackendServiceRequest request = new UpdateRegionBackendServiceRequest
-            {
-                Region = "regionedb20d96",
-                Project = "projectaa6ff846",
-                BackendService = "backend_serviceed490d45",
-                BackendServiceResource = new BackendService(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.UpdateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            RegionBackendServicesClient client = new RegionBackendServicesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.UpdateAsync(request.Project, request.Region, request.BackendService, request.BackendServiceResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.UpdateAsync(request.Project, request.Region, request.BackendService, request.BackendServiceResource, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

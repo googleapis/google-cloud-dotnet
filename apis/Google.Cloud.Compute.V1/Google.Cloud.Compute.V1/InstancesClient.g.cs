@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -45,13 +46,20 @@ namespace Google.Cloud.Compute.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AddAccessConfigSettings = existing.AddAccessConfigSettings;
+            AddAccessConfigOperationsSettings = existing.AddAccessConfigOperationsSettings.Clone();
             AddResourcePoliciesSettings = existing.AddResourcePoliciesSettings;
+            AddResourcePoliciesOperationsSettings = existing.AddResourcePoliciesOperationsSettings.Clone();
             AggregatedListSettings = existing.AggregatedListSettings;
             AttachDiskSettings = existing.AttachDiskSettings;
+            AttachDiskOperationsSettings = existing.AttachDiskOperationsSettings.Clone();
             BulkInsertSettings = existing.BulkInsertSettings;
+            BulkInsertOperationsSettings = existing.BulkInsertOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
+            DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             DeleteAccessConfigSettings = existing.DeleteAccessConfigSettings;
+            DeleteAccessConfigOperationsSettings = existing.DeleteAccessConfigOperationsSettings.Clone();
             DetachDiskSettings = existing.DetachDiskSettings;
+            DetachDiskOperationsSettings = existing.DetachDiskOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             GetEffectiveFirewallsSettings = existing.GetEffectiveFirewallsSettings;
             GetGuestAttributesSettings = existing.GetGuestAttributesSettings;
@@ -60,32 +68,55 @@ namespace Google.Cloud.Compute.V1
             GetSerialPortOutputSettings = existing.GetSerialPortOutputSettings;
             GetShieldedInstanceIdentitySettings = existing.GetShieldedInstanceIdentitySettings;
             InsertSettings = existing.InsertSettings;
+            InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             ListReferrersSettings = existing.ListReferrersSettings;
             RemoveResourcePoliciesSettings = existing.RemoveResourcePoliciesSettings;
+            RemoveResourcePoliciesOperationsSettings = existing.RemoveResourcePoliciesOperationsSettings.Clone();
             ResetSettings = existing.ResetSettings;
+            ResetOperationsSettings = existing.ResetOperationsSettings.Clone();
             SetDeletionProtectionSettings = existing.SetDeletionProtectionSettings;
+            SetDeletionProtectionOperationsSettings = existing.SetDeletionProtectionOperationsSettings.Clone();
             SetDiskAutoDeleteSettings = existing.SetDiskAutoDeleteSettings;
+            SetDiskAutoDeleteOperationsSettings = existing.SetDiskAutoDeleteOperationsSettings.Clone();
             SetIamPolicySettings = existing.SetIamPolicySettings;
             SetLabelsSettings = existing.SetLabelsSettings;
+            SetLabelsOperationsSettings = existing.SetLabelsOperationsSettings.Clone();
             SetMachineResourcesSettings = existing.SetMachineResourcesSettings;
+            SetMachineResourcesOperationsSettings = existing.SetMachineResourcesOperationsSettings.Clone();
             SetMachineTypeSettings = existing.SetMachineTypeSettings;
+            SetMachineTypeOperationsSettings = existing.SetMachineTypeOperationsSettings.Clone();
             SetMetadataSettings = existing.SetMetadataSettings;
+            SetMetadataOperationsSettings = existing.SetMetadataOperationsSettings.Clone();
             SetMinCpuPlatformSettings = existing.SetMinCpuPlatformSettings;
+            SetMinCpuPlatformOperationsSettings = existing.SetMinCpuPlatformOperationsSettings.Clone();
             SetSchedulingSettings = existing.SetSchedulingSettings;
+            SetSchedulingOperationsSettings = existing.SetSchedulingOperationsSettings.Clone();
             SetServiceAccountSettings = existing.SetServiceAccountSettings;
+            SetServiceAccountOperationsSettings = existing.SetServiceAccountOperationsSettings.Clone();
             SetShieldedInstanceIntegrityPolicySettings = existing.SetShieldedInstanceIntegrityPolicySettings;
+            SetShieldedInstanceIntegrityPolicyOperationsSettings = existing.SetShieldedInstanceIntegrityPolicyOperationsSettings.Clone();
             SetTagsSettings = existing.SetTagsSettings;
+            SetTagsOperationsSettings = existing.SetTagsOperationsSettings.Clone();
             SimulateMaintenanceEventSettings = existing.SimulateMaintenanceEventSettings;
+            SimulateMaintenanceEventOperationsSettings = existing.SimulateMaintenanceEventOperationsSettings.Clone();
             StartSettings = existing.StartSettings;
+            StartOperationsSettings = existing.StartOperationsSettings.Clone();
             StartWithEncryptionKeySettings = existing.StartWithEncryptionKeySettings;
+            StartWithEncryptionKeyOperationsSettings = existing.StartWithEncryptionKeyOperationsSettings.Clone();
             StopSettings = existing.StopSettings;
+            StopOperationsSettings = existing.StopOperationsSettings.Clone();
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             UpdateSettings = existing.UpdateSettings;
+            UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
             UpdateAccessConfigSettings = existing.UpdateAccessConfigSettings;
+            UpdateAccessConfigOperationsSettings = existing.UpdateAccessConfigOperationsSettings.Clone();
             UpdateDisplayDeviceSettings = existing.UpdateDisplayDeviceSettings;
+            UpdateDisplayDeviceOperationsSettings = existing.UpdateDisplayDeviceOperationsSettings.Clone();
             UpdateNetworkInterfaceSettings = existing.UpdateNetworkInterfaceSettings;
+            UpdateNetworkInterfaceOperationsSettings = existing.UpdateNetworkInterfaceOperationsSettings.Clone();
             UpdateShieldedInstanceConfigSettings = existing.UpdateShieldedInstanceConfigSettings;
+            UpdateShieldedInstanceConfigOperationsSettings = existing.UpdateShieldedInstanceConfigOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -104,6 +135,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings AddAccessConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.AddAccessConfig</c> and
+        /// <c>InstancesClient.AddAccessConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddAccessConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.AddResourcePolicies</c> and <c>InstancesClient.AddResourcePoliciesAsync</c>.
         /// </summary>
@@ -114,6 +163,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AddResourcePoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.AddResourcePolicies</c> and
+        /// <c>InstancesClient.AddResourcePoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddResourcePoliciesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -140,6 +207,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings AttachDiskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.AttachDisk</c> and
+        /// <c>InstancesClient.AttachDiskAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AttachDiskOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.BulkInsert</c>
         ///  and <c>InstancesClient.BulkInsertAsync</c>.
         /// </summary>
@@ -150,6 +235,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BulkInsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.BulkInsert</c> and
+        /// <c>InstancesClient.BulkInsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BulkInsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Delete</c>
@@ -164,6 +267,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings DeleteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Delete</c> and
+        /// <c>InstancesClient.DeleteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.DeleteAccessConfig</c> and <c>InstancesClient.DeleteAccessConfigAsync</c>.
         /// </summary>
@@ -176,6 +297,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings DeleteAccessConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.DeleteAccessConfig</c> and
+        /// <c>InstancesClient.DeleteAccessConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAccessConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.DetachDisk</c>
         ///  and <c>InstancesClient.DetachDiskAsync</c>.
         /// </summary>
@@ -186,6 +325,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DetachDiskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.DetachDisk</c> and
+        /// <c>InstancesClient.DetachDiskAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DetachDiskOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Get</c> and
@@ -285,6 +442,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings InsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Insert</c> and
+        /// <c>InstancesClient.InsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.List</c>
         /// and <c>InstancesClient.ListAsync</c>.
         /// </summary>
@@ -321,6 +496,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings RemoveResourcePoliciesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.RemoveResourcePolicies</c> and
+        /// <c>InstancesClient.RemoveResourcePoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RemoveResourcePoliciesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Reset</c>
         /// and <c>InstancesClient.ResetAsync</c>.
         /// </summary>
@@ -331,6 +524,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ResetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Reset</c> and <c>InstancesClient.ResetAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ResetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -345,6 +556,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SetDeletionProtectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetDeletionProtection</c> and
+        /// <c>InstancesClient.SetDeletionProtectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetDeletionProtectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.SetDiskAutoDelete</c> and <c>InstancesClient.SetDiskAutoDeleteAsync</c>.
         /// </summary>
@@ -355,6 +584,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetDiskAutoDeleteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetDiskAutoDelete</c> and
+        /// <c>InstancesClient.SetDiskAutoDeleteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetDiskAutoDeleteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -381,6 +628,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SetLabelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetLabels</c> and
+        /// <c>InstancesClient.SetLabelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetLabelsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.SetMachineResources</c> and <c>InstancesClient.SetMachineResourcesAsync</c>.
         /// </summary>
@@ -391,6 +656,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetMachineResourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetMachineResources</c> and
+        /// <c>InstancesClient.SetMachineResourcesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetMachineResourcesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -405,6 +688,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SetMachineTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetMachineType</c> and
+        /// <c>InstancesClient.SetMachineTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetMachineTypeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.SetMetadata</c>
         ///  and <c>InstancesClient.SetMetadataAsync</c>.
         /// </summary>
@@ -415,6 +716,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetMetadataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetMetadata</c> and
+        /// <c>InstancesClient.SetMetadataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetMetadataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -429,6 +748,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SetMinCpuPlatformSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetMinCpuPlatform</c> and
+        /// <c>InstancesClient.SetMinCpuPlatformAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetMinCpuPlatformOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.SetScheduling</c> and <c>InstancesClient.SetSchedulingAsync</c>.
         /// </summary>
@@ -441,6 +778,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SetSchedulingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetScheduling</c> and
+        /// <c>InstancesClient.SetSchedulingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetSchedulingOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.SetServiceAccount</c> and <c>InstancesClient.SetServiceAccountAsync</c>.
         /// </summary>
@@ -451,6 +806,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetServiceAccountSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetServiceAccount</c> and
+        /// <c>InstancesClient.SetServiceAccountAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetServiceAccountOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -466,6 +839,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SetShieldedInstanceIntegrityPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetShieldedInstanceIntegrityPolicy</c> and
+        /// <c>InstancesClient.SetShieldedInstanceIntegrityPolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetShieldedInstanceIntegrityPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.SetTags</c>
         /// and <c>InstancesClient.SetTagsAsync</c>.
         /// </summary>
@@ -476,6 +867,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SetTagsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SetTags</c> and
+        /// <c>InstancesClient.SetTagsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetTagsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -490,6 +899,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings SimulateMaintenanceEventSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.SimulateMaintenanceEvent</c> and
+        /// <c>InstancesClient.SimulateMaintenanceEventAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SimulateMaintenanceEventOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Start</c>
         /// and <c>InstancesClient.StartAsync</c>.
         /// </summary>
@@ -500,6 +927,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings StartSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Start</c> and <c>InstancesClient.StartAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -514,6 +959,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings StartWithEncryptionKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.StartWithEncryptionKey</c> and
+        /// <c>InstancesClient.StartWithEncryptionKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartWithEncryptionKeyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>InstancesClient.Stop</c>
         /// and <c>InstancesClient.StopAsync</c>.
         /// </summary>
@@ -524,6 +987,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings StopSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Stop</c> and <c>InstancesClient.StopAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -550,6 +1031,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings UpdateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.Update</c> and
+        /// <c>InstancesClient.UpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.UpdateAccessConfig</c> and <c>InstancesClient.UpdateAccessConfigAsync</c>.
         /// </summary>
@@ -560,6 +1059,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateAccessConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.UpdateAccessConfig</c> and
+        /// <c>InstancesClient.UpdateAccessConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAccessConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -574,6 +1091,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings UpdateDisplayDeviceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.UpdateDisplayDevice</c> and
+        /// <c>InstancesClient.UpdateDisplayDeviceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateDisplayDeviceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>InstancesClient.UpdateNetworkInterface</c> and <c>InstancesClient.UpdateNetworkInterfaceAsync</c>.
         /// </summary>
@@ -584,6 +1119,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateNetworkInterfaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.UpdateNetworkInterface</c> and
+        /// <c>InstancesClient.UpdateNetworkInterfaceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateNetworkInterfaceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -597,6 +1150,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateShieldedInstanceConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.UpdateShieldedInstanceConfig</c> and
+        /// <c>InstancesClient.UpdateShieldedInstanceConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateShieldedInstanceConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="InstancesSettings"/> object.</returns>
@@ -766,7 +1337,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AddAccessConfig(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AddAccessConfig(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -775,7 +1346,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddAccessConfigAsync(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddAccessConfigAsync(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -784,8 +1355,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddAccessConfigAsync(AddAccessConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddAccessConfigAsync(AddAccessConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
             AddAccessConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddAccessConfig</c>.</summary>
+        public virtual lro::OperationsClient AddAccessConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddAccessConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAddAccessConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddAccessConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddAccessConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAddAccessConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddAccessConfigOperationsClient, callSettings);
 
         /// <summary>
         /// Adds an access config to an instance's network interface.
@@ -807,7 +1404,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AddAccessConfig(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AddAccessConfig(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
             AddAccessConfig(new AddAccessConfigInstanceRequest
             {
                 AccessConfigResource = gax::GaxPreconditions.CheckNotNull(accessConfigResource, nameof(accessConfigResource)),
@@ -837,7 +1434,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
             AddAccessConfigAsync(new AddAccessConfigInstanceRequest
             {
                 AccessConfigResource = gax::GaxPreconditions.CheckNotNull(accessConfigResource, nameof(accessConfigResource)),
@@ -867,7 +1464,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, st::CancellationToken cancellationToken) =>
             AddAccessConfigAsync(project, zone, instance, networkInterface, accessConfigResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -876,7 +1473,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AddResourcePolicies(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AddResourcePolicies(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -885,7 +1482,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -894,8 +1491,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(AddResourcePoliciesInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(AddResourcePoliciesInstanceRequest request, st::CancellationToken cancellationToken) =>
             AddResourcePoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddResourcePolicies</c>.</summary>
+        public virtual lro::OperationsClient AddResourcePoliciesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddResourcePolicies</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAddResourcePolicies(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddResourcePoliciesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddResourcePolicies</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAddResourcePoliciesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddResourcePoliciesOperationsClient, callSettings);
 
         /// <summary>
         /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
@@ -914,7 +1538,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AddResourcePolicies(string project, string zone, string instance, InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AddResourcePolicies(string project, string zone, string instance, InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             AddResourcePolicies(new AddResourcePoliciesInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -940,7 +1564,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(string project, string zone, string instance, InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(string project, string zone, string instance, InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             AddResourcePoliciesAsync(new AddResourcePoliciesInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -966,7 +1590,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AddResourcePoliciesAsync(string project, string zone, string instance, InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(string project, string zone, string instance, InstancesAddResourcePoliciesRequest instancesAddResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
             AddResourcePoliciesAsync(project, zone, instance, instancesAddResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1045,7 +1669,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AttachDisk(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AttachDisk(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1054,7 +1678,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachDiskAsync(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachDiskAsync(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1063,8 +1687,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachDiskAsync(AttachDiskInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachDiskAsync(AttachDiskInstanceRequest request, st::CancellationToken cancellationToken) =>
             AttachDiskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AttachDisk</c>.</summary>
+        public virtual lro::OperationsClient AttachDiskOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AttachDisk</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAttachDisk(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AttachDiskOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AttachDisk</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAttachDiskAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AttachDiskOperationsClient, callSettings);
 
         /// <summary>
         /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
@@ -1083,7 +1733,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AttachDisk(string project, string zone, string instance, AttachedDisk attachedDiskResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AttachDisk(string project, string zone, string instance, AttachedDisk attachedDiskResource, gaxgrpc::CallSettings callSettings = null) =>
             AttachDisk(new AttachDiskInstanceRequest
             {
                 AttachedDiskResource = gax::GaxPreconditions.CheckNotNull(attachedDiskResource, nameof(attachedDiskResource)),
@@ -1109,7 +1759,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachDiskAsync(string project, string zone, string instance, AttachedDisk attachedDiskResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachDiskAsync(string project, string zone, string instance, AttachedDisk attachedDiskResource, gaxgrpc::CallSettings callSettings = null) =>
             AttachDiskAsync(new AttachDiskInstanceRequest
             {
                 AttachedDiskResource = gax::GaxPreconditions.CheckNotNull(attachedDiskResource, nameof(attachedDiskResource)),
@@ -1135,7 +1785,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachDiskAsync(string project, string zone, string instance, AttachedDisk attachedDiskResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachDiskAsync(string project, string zone, string instance, AttachedDisk attachedDiskResource, st::CancellationToken cancellationToken) =>
             AttachDiskAsync(project, zone, instance, attachedDiskResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1144,7 +1794,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation BulkInsert(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> BulkInsert(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1153,7 +1803,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> BulkInsertAsync(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1162,8 +1812,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> BulkInsertAsync(BulkInsertInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(BulkInsertInstanceRequest request, st::CancellationToken cancellationToken) =>
             BulkInsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BulkInsert</c>.</summary>
+        public virtual lro::OperationsClient BulkInsertOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BulkInsert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceBulkInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkInsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BulkInsert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceBulkInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BulkInsertOperationsClient, callSettings);
 
         /// <summary>
         /// Creates multiple instances. Count specifies the number of instances to create.
@@ -1179,7 +1855,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation BulkInsert(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> BulkInsert(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, gaxgrpc::CallSettings callSettings = null) =>
             BulkInsert(new BulkInsertInstanceRequest
             {
                 BulkInsertInstanceResourceResource = gax::GaxPreconditions.CheckNotNull(bulkInsertInstanceResourceResource, nameof(bulkInsertInstanceResourceResource)),
@@ -1201,7 +1877,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> BulkInsertAsync(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, gaxgrpc::CallSettings callSettings = null) =>
             BulkInsertAsync(new BulkInsertInstanceRequest
             {
                 BulkInsertInstanceResourceResource = gax::GaxPreconditions.CheckNotNull(bulkInsertInstanceResourceResource, nameof(bulkInsertInstanceResourceResource)),
@@ -1223,7 +1899,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> BulkInsertAsync(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(string project, string zone, BulkInsertInstanceResource bulkInsertInstanceResourceResource, st::CancellationToken cancellationToken) =>
             BulkInsertAsync(project, zone, bulkInsertInstanceResourceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1232,7 +1908,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1241,7 +1917,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1250,8 +1926,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteInstanceRequest request, st::CancellationToken cancellationToken) =>
             DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public virtual lro::OperationsClient DeleteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDelete(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes the specified Instance resource. For more information, see Deleting an instance.
@@ -1267,7 +1969,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             Delete(new DeleteInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -1289,7 +1991,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAsync(new DeleteInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -1311,7 +2013,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             DeleteAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1320,7 +2022,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation DeleteAccessConfig(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> DeleteAccessConfig(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1329,7 +2031,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAccessConfigAsync(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAccessConfigAsync(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1338,8 +2040,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAccessConfigAsync(DeleteAccessConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAccessConfigAsync(DeleteAccessConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
             DeleteAccessConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAccessConfig</c>.</summary>
+        public virtual lro::OperationsClient DeleteAccessConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAccessConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDeleteAccessConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAccessConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAccessConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteAccessConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAccessConfigOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes an access config from an instance's network interface.
@@ -1361,7 +2090,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation DeleteAccessConfig(string project, string zone, string instance, string accessConfig, string networkInterface, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> DeleteAccessConfig(string project, string zone, string instance, string accessConfig, string networkInterface, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAccessConfig(new DeleteAccessConfigInstanceRequest
             {
                 AccessConfig = gax::GaxPreconditions.CheckNotNullOrEmpty(accessConfig, nameof(accessConfig)),
@@ -1391,7 +2120,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAccessConfigAsync(string project, string zone, string instance, string accessConfig, string networkInterface, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAccessConfigAsync(string project, string zone, string instance, string accessConfig, string networkInterface, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAccessConfigAsync(new DeleteAccessConfigInstanceRequest
             {
                 AccessConfig = gax::GaxPreconditions.CheckNotNullOrEmpty(accessConfig, nameof(accessConfig)),
@@ -1421,7 +2150,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAccessConfigAsync(string project, string zone, string instance, string accessConfig, string networkInterface, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAccessConfigAsync(string project, string zone, string instance, string accessConfig, string networkInterface, st::CancellationToken cancellationToken) =>
             DeleteAccessConfigAsync(project, zone, instance, accessConfig, networkInterface, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1430,7 +2159,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation DetachDisk(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> DetachDisk(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1439,7 +2168,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachDiskAsync(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachDiskAsync(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1448,8 +2177,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachDiskAsync(DetachDiskInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachDiskAsync(DetachDiskInstanceRequest request, st::CancellationToken cancellationToken) =>
             DetachDiskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DetachDisk</c>.</summary>
+        public virtual lro::OperationsClient DetachDiskOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DetachDisk</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDetachDisk(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DetachDiskOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DetachDisk</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDetachDiskAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DetachDiskOperationsClient, callSettings);
 
         /// <summary>
         /// Detaches a disk from an instance.
@@ -1468,7 +2223,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation DetachDisk(string project, string zone, string instance, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> DetachDisk(string project, string zone, string instance, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
             DetachDisk(new DetachDiskInstanceRequest
             {
                 DeviceName = gax::GaxPreconditions.CheckNotNullOrEmpty(deviceName, nameof(deviceName)),
@@ -1494,7 +2249,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachDiskAsync(string project, string zone, string instance, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachDiskAsync(string project, string zone, string instance, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
             DetachDiskAsync(new DetachDiskInstanceRequest
             {
                 DeviceName = gax::GaxPreconditions.CheckNotNullOrEmpty(deviceName, nameof(deviceName)),
@@ -1520,7 +2275,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachDiskAsync(string project, string zone, string instance, string deviceName, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachDiskAsync(string project, string zone, string instance, string deviceName, st::CancellationToken cancellationToken) =>
             DetachDiskAsync(project, zone, instance, deviceName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2156,7 +2911,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2165,7 +2920,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2174,8 +2929,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceRequest request, st::CancellationToken cancellationToken) =>
             InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public virtual lro::OperationsClient InsertOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
         /// Creates an instance resource in the specified project using the data included in the request.
@@ -2191,7 +2972,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(string project, string zone, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(string project, string zone, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
             Insert(new InsertInstanceRequest
             {
                 InstanceResource = gax::GaxPreconditions.CheckNotNull(instanceResource, nameof(instanceResource)),
@@ -2213,7 +2994,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, string zone, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, string zone, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
             InsertAsync(new InsertInstanceRequest
             {
                 InstanceResource = gax::GaxPreconditions.CheckNotNull(instanceResource, nameof(instanceResource)),
@@ -2235,7 +3016,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, string zone, Instance instanceResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, string zone, Instance instanceResource, st::CancellationToken cancellationToken) =>
             InsertAsync(project, zone, instanceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2400,7 +3181,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation RemoveResourcePolicies(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> RemoveResourcePolicies(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2409,7 +3190,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2418,8 +3199,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(RemoveResourcePoliciesInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(RemoveResourcePoliciesInstanceRequest request, st::CancellationToken cancellationToken) =>
             RemoveResourcePoliciesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RemoveResourcePolicies</c>.</summary>
+        public virtual lro::OperationsClient RemoveResourcePoliciesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RemoveResourcePolicies</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceRemoveResourcePolicies(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveResourcePoliciesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RemoveResourcePolicies</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceRemoveResourcePoliciesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemoveResourcePoliciesOperationsClient, callSettings);
 
         /// <summary>
         /// Removes resource policies from an instance.
@@ -2438,7 +3246,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation RemoveResourcePolicies(string project, string zone, string instance, InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> RemoveResourcePolicies(string project, string zone, string instance, InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             RemoveResourcePolicies(new RemoveResourcePoliciesInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -2464,7 +3272,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(string project, string zone, string instance, InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(string project, string zone, string instance, InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             RemoveResourcePoliciesAsync(new RemoveResourcePoliciesInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -2490,7 +3298,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> RemoveResourcePoliciesAsync(string project, string zone, string instance, InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(string project, string zone, string instance, InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
             RemoveResourcePoliciesAsync(project, zone, instance, instancesRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2499,7 +3307,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Reset(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Reset(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2508,7 +3316,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResetAsync(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResetAsync(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2517,8 +3325,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResetAsync(ResetInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResetAsync(ResetInstanceRequest request, st::CancellationToken cancellationToken) =>
             ResetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Reset</c>.</summary>
+        public virtual lro::OperationsClient ResetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Reset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceReset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Reset</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceResetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResetOperationsClient, callSettings);
 
         /// <summary>
         /// Performs a reset on the instance. This is a hard reset the VM does not do a graceful shutdown. For more information, see Resetting an instance.
@@ -2534,7 +3368,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Reset(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Reset(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             Reset(new ResetInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -2556,7 +3390,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResetAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResetAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             ResetAsync(new ResetInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -2578,7 +3412,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> ResetAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResetAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             ResetAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2587,7 +3421,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetDeletionProtection(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetDeletionProtection(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2596,7 +3430,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDeletionProtectionAsync(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDeletionProtectionAsync(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2605,8 +3439,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDeletionProtectionAsync(SetDeletionProtectionInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDeletionProtectionAsync(SetDeletionProtectionInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetDeletionProtectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetDeletionProtection</c>.</summary>
+        public virtual lro::OperationsClient SetDeletionProtectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetDeletionProtection</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetDeletionProtection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetDeletionProtectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetDeletionProtection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetDeletionProtectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetDeletionProtectionOperationsClient, callSettings);
 
         /// <summary>
         /// Sets deletion protection on the instance.
@@ -2622,7 +3483,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetDeletionProtection(string project, string zone, string resource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetDeletionProtection(string project, string zone, string resource, gaxgrpc::CallSettings callSettings = null) =>
             SetDeletionProtection(new SetDeletionProtectionInstanceRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
@@ -2644,7 +3505,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDeletionProtectionAsync(string project, string zone, string resource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDeletionProtectionAsync(string project, string zone, string resource, gaxgrpc::CallSettings callSettings = null) =>
             SetDeletionProtectionAsync(new SetDeletionProtectionInstanceRequest
             {
                 Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
@@ -2666,7 +3527,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDeletionProtectionAsync(string project, string zone, string resource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDeletionProtectionAsync(string project, string zone, string resource, st::CancellationToken cancellationToken) =>
             SetDeletionProtectionAsync(project, zone, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2675,7 +3536,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetDiskAutoDelete(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetDiskAutoDelete(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2684,7 +3545,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDiskAutoDeleteAsync(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDiskAutoDeleteAsync(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2693,8 +3554,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDiskAutoDeleteAsync(SetDiskAutoDeleteInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDiskAutoDeleteAsync(SetDiskAutoDeleteInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetDiskAutoDeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetDiskAutoDelete</c>.</summary>
+        public virtual lro::OperationsClient SetDiskAutoDeleteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetDiskAutoDelete</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetDiskAutoDelete(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetDiskAutoDeleteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetDiskAutoDelete</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetDiskAutoDeleteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetDiskAutoDeleteOperationsClient, callSettings);
 
         /// <summary>
         /// Sets the auto-delete flag for a disk attached to an instance.
@@ -2716,7 +3604,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetDiskAutoDelete(string project, string zone, string instance, bool autoDelete, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetDiskAutoDelete(string project, string zone, string instance, bool autoDelete, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
             SetDiskAutoDelete(new SetDiskAutoDeleteInstanceRequest
             {
                 AutoDelete = autoDelete,
@@ -2746,7 +3634,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDiskAutoDeleteAsync(string project, string zone, string instance, bool autoDelete, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDiskAutoDeleteAsync(string project, string zone, string instance, bool autoDelete, string deviceName, gaxgrpc::CallSettings callSettings = null) =>
             SetDiskAutoDeleteAsync(new SetDiskAutoDeleteInstanceRequest
             {
                 AutoDelete = autoDelete,
@@ -2776,7 +3664,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetDiskAutoDeleteAsync(string project, string zone, string instance, bool autoDelete, string deviceName, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetDiskAutoDeleteAsync(string project, string zone, string instance, bool autoDelete, string deviceName, st::CancellationToken cancellationToken) =>
             SetDiskAutoDeleteAsync(project, zone, instance, autoDelete, deviceName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2884,7 +3772,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetLabels(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetLabels(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2893,7 +3781,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2902,8 +3790,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(SetLabelsInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>
+        public virtual lro::OperationsClient SetLabelsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetLabels(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetLabels</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetLabelsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetLabelsOperationsClient, callSettings);
 
         /// <summary>
         /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
@@ -2922,7 +3836,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetLabels(string project, string zone, string instance, InstancesSetLabelsRequest instancesSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetLabels(string project, string zone, string instance, InstancesSetLabelsRequest instancesSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetLabels(new SetLabelsInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -2948,7 +3862,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(string project, string zone, string instance, InstancesSetLabelsRequest instancesSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(string project, string zone, string instance, InstancesSetLabelsRequest instancesSetLabelsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetLabelsAsync(new SetLabelsInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -2974,7 +3888,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetLabelsAsync(string project, string zone, string instance, InstancesSetLabelsRequest instancesSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(string project, string zone, string instance, InstancesSetLabelsRequest instancesSetLabelsRequestResource, st::CancellationToken cancellationToken) =>
             SetLabelsAsync(project, zone, instance, instancesSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2983,7 +3897,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMachineResources(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMachineResources(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2992,7 +3906,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineResourcesAsync(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineResourcesAsync(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3001,8 +3915,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineResourcesAsync(SetMachineResourcesInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineResourcesAsync(SetMachineResourcesInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetMachineResourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetMachineResources</c>.</summary>
+        public virtual lro::OperationsClient SetMachineResourcesOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetMachineResources</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetMachineResources(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMachineResourcesOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetMachineResources</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetMachineResourcesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMachineResourcesOperationsClient, callSettings);
 
         /// <summary>
         /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
@@ -3021,7 +3962,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMachineResources(string project, string zone, string instance, InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMachineResources(string project, string zone, string instance, InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMachineResources(new SetMachineResourcesInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3047,7 +3988,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineResourcesAsync(string project, string zone, string instance, InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineResourcesAsync(string project, string zone, string instance, InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMachineResourcesAsync(new SetMachineResourcesInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3073,7 +4014,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineResourcesAsync(string project, string zone, string instance, InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineResourcesAsync(string project, string zone, string instance, InstancesSetMachineResourcesRequest instancesSetMachineResourcesRequestResource, st::CancellationToken cancellationToken) =>
             SetMachineResourcesAsync(project, zone, instance, instancesSetMachineResourcesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3082,7 +4023,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMachineType(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMachineType(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3091,7 +4032,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineTypeAsync(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineTypeAsync(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3100,8 +4041,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineTypeAsync(SetMachineTypeInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineTypeAsync(SetMachineTypeInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetMachineTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetMachineType</c>.</summary>
+        public virtual lro::OperationsClient SetMachineTypeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetMachineType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetMachineType(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMachineTypeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetMachineType</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetMachineTypeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMachineTypeOperationsClient, callSettings);
 
         /// <summary>
         /// Changes the machine type for a stopped instance to the machine type specified in the request.
@@ -3120,7 +4087,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMachineType(string project, string zone, string instance, InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMachineType(string project, string zone, string instance, InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMachineType(new SetMachineTypeInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3146,7 +4113,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineTypeAsync(string project, string zone, string instance, InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineTypeAsync(string project, string zone, string instance, InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMachineTypeAsync(new SetMachineTypeInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3172,7 +4139,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMachineTypeAsync(string project, string zone, string instance, InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMachineTypeAsync(string project, string zone, string instance, InstancesSetMachineTypeRequest instancesSetMachineTypeRequestResource, st::CancellationToken cancellationToken) =>
             SetMachineTypeAsync(project, zone, instance, instancesSetMachineTypeRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3181,7 +4148,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMetadata(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMetadata(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3190,7 +4157,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMetadataAsync(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMetadataAsync(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3199,8 +4166,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMetadataAsync(SetMetadataInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMetadataAsync(SetMetadataInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetMetadataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetMetadata</c>.</summary>
+        public virtual lro::OperationsClient SetMetadataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetMetadata(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMetadataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetMetadata</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetMetadataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMetadataOperationsClient, callSettings);
 
         /// <summary>
         /// Sets metadata for the specified instance to the data included in the request.
@@ -3219,7 +4212,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMetadata(string project, string zone, string instance, Metadata metadataResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMetadata(string project, string zone, string instance, Metadata metadataResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMetadata(new SetMetadataInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3245,7 +4238,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMetadataAsync(string project, string zone, string instance, Metadata metadataResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMetadataAsync(string project, string zone, string instance, Metadata metadataResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMetadataAsync(new SetMetadataInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3271,7 +4264,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMetadataAsync(string project, string zone, string instance, Metadata metadataResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMetadataAsync(string project, string zone, string instance, Metadata metadataResource, st::CancellationToken cancellationToken) =>
             SetMetadataAsync(project, zone, instance, metadataResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3280,7 +4273,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMinCpuPlatform(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMinCpuPlatform(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3289,7 +4282,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMinCpuPlatformAsync(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMinCpuPlatformAsync(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3298,8 +4291,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMinCpuPlatformAsync(SetMinCpuPlatformInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMinCpuPlatformAsync(SetMinCpuPlatformInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetMinCpuPlatformAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetMinCpuPlatform</c>.</summary>
+        public virtual lro::OperationsClient SetMinCpuPlatformOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetMinCpuPlatform</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetMinCpuPlatform(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMinCpuPlatformOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetMinCpuPlatform</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetMinCpuPlatformAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetMinCpuPlatformOperationsClient, callSettings);
 
         /// <summary>
         /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
@@ -3318,7 +4338,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetMinCpuPlatform(string project, string zone, string instance, InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetMinCpuPlatform(string project, string zone, string instance, InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMinCpuPlatform(new SetMinCpuPlatformInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3344,7 +4364,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMinCpuPlatformAsync(string project, string zone, string instance, InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMinCpuPlatformAsync(string project, string zone, string instance, InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetMinCpuPlatformAsync(new SetMinCpuPlatformInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3370,7 +4390,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetMinCpuPlatformAsync(string project, string zone, string instance, InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetMinCpuPlatformAsync(string project, string zone, string instance, InstancesSetMinCpuPlatformRequest instancesSetMinCpuPlatformRequestResource, st::CancellationToken cancellationToken) =>
             SetMinCpuPlatformAsync(project, zone, instance, instancesSetMinCpuPlatformRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3379,7 +4399,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetScheduling(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetScheduling(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3388,7 +4408,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetSchedulingAsync(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSchedulingAsync(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3397,8 +4417,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetSchedulingAsync(SetSchedulingInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSchedulingAsync(SetSchedulingInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetSchedulingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetScheduling</c>.</summary>
+        public virtual lro::OperationsClient SetSchedulingOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetScheduling</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetScheduling(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSchedulingOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetScheduling</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetSchedulingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetSchedulingOperationsClient, callSettings);
 
         /// <summary>
         /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
@@ -3417,7 +4463,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetScheduling(string project, string zone, string instance, Scheduling schedulingResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetScheduling(string project, string zone, string instance, Scheduling schedulingResource, gaxgrpc::CallSettings callSettings = null) =>
             SetScheduling(new SetSchedulingInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3443,7 +4489,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetSchedulingAsync(string project, string zone, string instance, Scheduling schedulingResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSchedulingAsync(string project, string zone, string instance, Scheduling schedulingResource, gaxgrpc::CallSettings callSettings = null) =>
             SetSchedulingAsync(new SetSchedulingInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3469,7 +4515,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetSchedulingAsync(string project, string zone, string instance, Scheduling schedulingResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetSchedulingAsync(string project, string zone, string instance, Scheduling schedulingResource, st::CancellationToken cancellationToken) =>
             SetSchedulingAsync(project, zone, instance, schedulingResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3478,7 +4524,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetServiceAccount(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetServiceAccount(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3487,7 +4533,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetServiceAccountAsync(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetServiceAccountAsync(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3496,8 +4542,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetServiceAccountAsync(SetServiceAccountInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetServiceAccountAsync(SetServiceAccountInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetServiceAccountAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetServiceAccount</c>.</summary>
+        public virtual lro::OperationsClient SetServiceAccountOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetServiceAccount</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetServiceAccount(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetServiceAccountOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetServiceAccount</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetServiceAccountAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetServiceAccountOperationsClient, callSettings);
 
         /// <summary>
         /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
@@ -3516,7 +4589,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetServiceAccount(string project, string zone, string instance, InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetServiceAccount(string project, string zone, string instance, InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetServiceAccount(new SetServiceAccountInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3542,7 +4615,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetServiceAccountAsync(string project, string zone, string instance, InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetServiceAccountAsync(string project, string zone, string instance, InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             SetServiceAccountAsync(new SetServiceAccountInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3568,7 +4641,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetServiceAccountAsync(string project, string zone, string instance, InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetServiceAccountAsync(string project, string zone, string instance, InstancesSetServiceAccountRequest instancesSetServiceAccountRequestResource, st::CancellationToken cancellationToken) =>
             SetServiceAccountAsync(project, zone, instance, instancesSetServiceAccountRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3577,7 +4650,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetShieldedInstanceIntegrityPolicy(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetShieldedInstanceIntegrityPolicy(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3586,7 +4659,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetShieldedInstanceIntegrityPolicyAsync(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetShieldedInstanceIntegrityPolicyAsync(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3595,8 +4668,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetShieldedInstanceIntegrityPolicyAsync(SetShieldedInstanceIntegrityPolicyInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetShieldedInstanceIntegrityPolicyAsync(SetShieldedInstanceIntegrityPolicyInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetShieldedInstanceIntegrityPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetShieldedInstanceIntegrityPolicy</c>.</summary>
+        public virtual lro::OperationsClient SetShieldedInstanceIntegrityPolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetShieldedInstanceIntegrityPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetShieldedInstanceIntegrityPolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetShieldedInstanceIntegrityPolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetShieldedInstanceIntegrityPolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetShieldedInstanceIntegrityPolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetShieldedInstanceIntegrityPolicyOperationsClient, callSettings);
 
         /// <summary>
         /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -3615,7 +4715,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetShieldedInstanceIntegrityPolicy(string project, string zone, string instance, ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetShieldedInstanceIntegrityPolicy(string project, string zone, string instance, ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
             SetShieldedInstanceIntegrityPolicy(new SetShieldedInstanceIntegrityPolicyInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3641,7 +4741,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetShieldedInstanceIntegrityPolicyAsync(string project, string zone, string instance, ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetShieldedInstanceIntegrityPolicyAsync(string project, string zone, string instance, ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource, gaxgrpc::CallSettings callSettings = null) =>
             SetShieldedInstanceIntegrityPolicyAsync(new SetShieldedInstanceIntegrityPolicyInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3667,7 +4767,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetShieldedInstanceIntegrityPolicyAsync(string project, string zone, string instance, ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetShieldedInstanceIntegrityPolicyAsync(string project, string zone, string instance, ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicyResource, st::CancellationToken cancellationToken) =>
             SetShieldedInstanceIntegrityPolicyAsync(project, zone, instance, shieldedInstanceIntegrityPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3676,7 +4776,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetTags(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetTags(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3685,7 +4785,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTagsAsync(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTagsAsync(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3694,8 +4794,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTagsAsync(SetTagsInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTagsAsync(SetTagsInstanceRequest request, st::CancellationToken cancellationToken) =>
             SetTagsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetTags</c>.</summary>
+        public virtual lro::OperationsClient SetTagsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>SetTags</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSetTags(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetTagsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetTags</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSetTagsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetTagsOperationsClient, callSettings);
 
         /// <summary>
         /// Sets network tags for the specified instance to the data included in the request.
@@ -3714,7 +4840,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SetTags(string project, string zone, string instance, Tags tagsResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SetTags(string project, string zone, string instance, Tags tagsResource, gaxgrpc::CallSettings callSettings = null) =>
             SetTags(new SetTagsInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3740,7 +4866,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTagsAsync(string project, string zone, string instance, Tags tagsResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTagsAsync(string project, string zone, string instance, Tags tagsResource, gaxgrpc::CallSettings callSettings = null) =>
             SetTagsAsync(new SetTagsInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3766,7 +4892,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SetTagsAsync(string project, string zone, string instance, Tags tagsResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SetTagsAsync(string project, string zone, string instance, Tags tagsResource, st::CancellationToken cancellationToken) =>
             SetTagsAsync(project, zone, instance, tagsResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3775,7 +4901,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SimulateMaintenanceEvent(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SimulateMaintenanceEvent(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3784,7 +4910,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SimulateMaintenanceEventAsync(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3793,8 +4919,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SimulateMaintenanceEventAsync(SimulateMaintenanceEventInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(SimulateMaintenanceEventInstanceRequest request, st::CancellationToken cancellationToken) =>
             SimulateMaintenanceEventAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SimulateMaintenanceEvent</c>.</summary>
+        public virtual lro::OperationsClient SimulateMaintenanceEventOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SimulateMaintenanceEvent</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceSimulateMaintenanceEvent(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SimulateMaintenanceEventOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SimulateMaintenanceEvent</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceSimulateMaintenanceEventAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SimulateMaintenanceEventOperationsClient, callSettings);
 
         /// <summary>
         /// Simulates a maintenance event on the instance.
@@ -3810,7 +4963,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation SimulateMaintenanceEvent(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> SimulateMaintenanceEvent(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             SimulateMaintenanceEvent(new SimulateMaintenanceEventInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3832,7 +4985,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SimulateMaintenanceEventAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             SimulateMaintenanceEventAsync(new SimulateMaintenanceEventInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3854,7 +5007,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> SimulateMaintenanceEventAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             SimulateMaintenanceEventAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3863,7 +5016,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Start(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Start(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3872,7 +5025,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartAsync(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsync(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3881,8 +5034,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartAsync(StartInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsync(StartInstanceRequest request, st::CancellationToken cancellationToken) =>
             StartAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Start</c>.</summary>
+        public virtual lro::OperationsClient StartOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Start</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceStart(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Start</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceStartAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartOperationsClient, callSettings);
 
         /// <summary>
         /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
@@ -3898,7 +5077,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Start(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Start(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             Start(new StartInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3920,7 +5099,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             StartAsync(new StartInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -3942,7 +5121,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             StartAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3951,7 +5130,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation StartWithEncryptionKey(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> StartWithEncryptionKey(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3960,7 +5139,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartWithEncryptionKeyAsync(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartWithEncryptionKeyAsync(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -3969,8 +5148,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartWithEncryptionKeyAsync(StartWithEncryptionKeyInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartWithEncryptionKeyAsync(StartWithEncryptionKeyInstanceRequest request, st::CancellationToken cancellationToken) =>
             StartWithEncryptionKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartWithEncryptionKey</c>.</summary>
+        public virtual lro::OperationsClient StartWithEncryptionKeyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartWithEncryptionKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceStartWithEncryptionKey(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartWithEncryptionKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartWithEncryptionKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceStartWithEncryptionKeyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartWithEncryptionKeyOperationsClient, callSettings);
 
         /// <summary>
         /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
@@ -3989,7 +5195,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation StartWithEncryptionKey(string project, string zone, string instance, InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> StartWithEncryptionKey(string project, string zone, string instance, InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             StartWithEncryptionKey(new StartWithEncryptionKeyInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4015,7 +5221,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartWithEncryptionKeyAsync(string project, string zone, string instance, InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartWithEncryptionKeyAsync(string project, string zone, string instance, InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             StartWithEncryptionKeyAsync(new StartWithEncryptionKeyInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4041,7 +5247,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StartWithEncryptionKeyAsync(string project, string zone, string instance, InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StartWithEncryptionKeyAsync(string project, string zone, string instance, InstancesStartWithEncryptionKeyRequest instancesStartWithEncryptionKeyRequestResource, st::CancellationToken cancellationToken) =>
             StartWithEncryptionKeyAsync(project, zone, instance, instancesStartWithEncryptionKeyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -4050,7 +5256,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Stop(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Stop(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4059,7 +5265,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StopAsync(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsync(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4068,8 +5274,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StopAsync(StopInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsync(StopInstanceRequest request, st::CancellationToken cancellationToken) =>
             StopAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Stop</c>.</summary>
+        public virtual lro::OperationsClient StopOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Stop</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceStop(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Stop</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceStopAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopOperationsClient, callSettings);
 
         /// <summary>
         /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
@@ -4085,7 +5317,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Stop(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Stop(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             Stop(new StopInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4107,7 +5339,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StopAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
             StopAsync(new StopInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4129,7 +5361,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> StopAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> StopAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             StopAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -4237,7 +5469,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Update(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Update(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4246,7 +5478,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAsync(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4255,8 +5487,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAsync(UpdateInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateInstanceRequest request, st::CancellationToken cancellationToken) =>
             UpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Update</c>.</summary>
+        public virtual lro::OperationsClient UpdateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Update</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Update</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
         /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
@@ -4275,7 +5533,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Update(string project, string zone, string instance, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Update(string project, string zone, string instance, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
             Update(new UpdateInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4301,7 +5559,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAsync(string project, string zone, string instance, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(string project, string zone, string instance, Instance instanceResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAsync(new UpdateInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4327,7 +5585,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAsync(string project, string zone, string instance, Instance instanceResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(string project, string zone, string instance, Instance instanceResource, st::CancellationToken cancellationToken) =>
             UpdateAsync(project, zone, instance, instanceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -4336,7 +5594,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateAccessConfig(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateAccessConfig(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4345,7 +5603,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAccessConfigAsync(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAccessConfigAsync(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4354,8 +5612,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAccessConfigAsync(UpdateAccessConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAccessConfigAsync(UpdateAccessConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
             UpdateAccessConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAccessConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateAccessConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAccessConfig</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdateAccessConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAccessConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAccessConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateAccessConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAccessConfigOperationsClient, callSettings);
 
         /// <summary>
         /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -4377,7 +5662,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateAccessConfig(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateAccessConfig(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAccessConfig(new UpdateAccessConfigInstanceRequest
             {
                 AccessConfigResource = gax::GaxPreconditions.CheckNotNull(accessConfigResource, nameof(accessConfigResource)),
@@ -4407,7 +5692,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateAccessConfigAsync(new UpdateAccessConfigInstanceRequest
             {
                 AccessConfigResource = gax::GaxPreconditions.CheckNotNull(accessConfigResource, nameof(accessConfigResource)),
@@ -4437,7 +5722,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAccessConfigAsync(string project, string zone, string instance, string networkInterface, AccessConfig accessConfigResource, st::CancellationToken cancellationToken) =>
             UpdateAccessConfigAsync(project, zone, instance, networkInterface, accessConfigResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -4446,7 +5731,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateDisplayDevice(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateDisplayDevice(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4455,7 +5740,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateDisplayDeviceAsync(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateDisplayDeviceAsync(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4464,8 +5749,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateDisplayDeviceAsync(UpdateDisplayDeviceInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateDisplayDeviceAsync(UpdateDisplayDeviceInstanceRequest request, st::CancellationToken cancellationToken) =>
             UpdateDisplayDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateDisplayDevice</c>.</summary>
+        public virtual lro::OperationsClient UpdateDisplayDeviceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateDisplayDevice</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdateDisplayDevice(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDisplayDeviceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateDisplayDevice</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateDisplayDeviceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDisplayDeviceOperationsClient, callSettings);
 
         /// <summary>
         /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -4484,7 +5796,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateDisplayDevice(string project, string zone, string instance, DisplayDevice displayDeviceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateDisplayDevice(string project, string zone, string instance, DisplayDevice displayDeviceResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateDisplayDevice(new UpdateDisplayDeviceInstanceRequest
             {
                 DisplayDeviceResource = gax::GaxPreconditions.CheckNotNull(displayDeviceResource, nameof(displayDeviceResource)),
@@ -4510,7 +5822,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateDisplayDeviceAsync(string project, string zone, string instance, DisplayDevice displayDeviceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateDisplayDeviceAsync(string project, string zone, string instance, DisplayDevice displayDeviceResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateDisplayDeviceAsync(new UpdateDisplayDeviceInstanceRequest
             {
                 DisplayDeviceResource = gax::GaxPreconditions.CheckNotNull(displayDeviceResource, nameof(displayDeviceResource)),
@@ -4536,7 +5848,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateDisplayDeviceAsync(string project, string zone, string instance, DisplayDevice displayDeviceResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateDisplayDeviceAsync(string project, string zone, string instance, DisplayDevice displayDeviceResource, st::CancellationToken cancellationToken) =>
             UpdateDisplayDeviceAsync(project, zone, instance, displayDeviceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -4545,7 +5857,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateNetworkInterface(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateNetworkInterface(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4554,7 +5866,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateNetworkInterfaceAsync(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNetworkInterfaceAsync(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4563,8 +5875,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateNetworkInterfaceAsync(UpdateNetworkInterfaceInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNetworkInterfaceAsync(UpdateNetworkInterfaceInstanceRequest request, st::CancellationToken cancellationToken) =>
             UpdateNetworkInterfaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateNetworkInterface</c>.</summary>
+        public virtual lro::OperationsClient UpdateNetworkInterfaceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateNetworkInterface</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdateNetworkInterface(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateNetworkInterfaceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateNetworkInterface</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateNetworkInterfaceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateNetworkInterfaceOperationsClient, callSettings);
 
         /// <summary>
         /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
@@ -4586,7 +5925,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateNetworkInterface(string project, string zone, string instance, string networkInterface, NetworkInterface networkInterfaceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateNetworkInterface(string project, string zone, string instance, string networkInterface, NetworkInterface networkInterfaceResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateNetworkInterface(new UpdateNetworkInterfaceInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4616,7 +5955,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateNetworkInterfaceAsync(string project, string zone, string instance, string networkInterface, NetworkInterface networkInterfaceResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNetworkInterfaceAsync(string project, string zone, string instance, string networkInterface, NetworkInterface networkInterfaceResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateNetworkInterfaceAsync(new UpdateNetworkInterfaceInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4646,7 +5985,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateNetworkInterfaceAsync(string project, string zone, string instance, string networkInterface, NetworkInterface networkInterfaceResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNetworkInterfaceAsync(string project, string zone, string instance, string networkInterface, NetworkInterface networkInterfaceResource, st::CancellationToken cancellationToken) =>
             UpdateNetworkInterfaceAsync(project, zone, instance, networkInterface, networkInterfaceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -4655,7 +5994,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateShieldedInstanceConfig(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateShieldedInstanceConfig(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4664,7 +6003,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4673,8 +6012,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigInstanceRequest request, st::CancellationToken cancellationToken) =>
             UpdateShieldedInstanceConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateShieldedInstanceConfig</c>.</summary>
+        public virtual lro::OperationsClient UpdateShieldedInstanceConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateShieldedInstanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdateShieldedInstanceConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateShieldedInstanceConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateShieldedInstanceConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateShieldedInstanceConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateShieldedInstanceConfigOperationsClient, callSettings);
 
         /// <summary>
         /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -4693,7 +6059,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation UpdateShieldedInstanceConfig(string project, string zone, string instance, ShieldedInstanceConfig shieldedInstanceConfigResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> UpdateShieldedInstanceConfig(string project, string zone, string instance, ShieldedInstanceConfig shieldedInstanceConfigResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateShieldedInstanceConfig(new UpdateShieldedInstanceConfigInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4719,7 +6085,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateShieldedInstanceConfigAsync(string project, string zone, string instance, ShieldedInstanceConfig shieldedInstanceConfigResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateShieldedInstanceConfigAsync(string project, string zone, string instance, ShieldedInstanceConfig shieldedInstanceConfigResource, gaxgrpc::CallSettings callSettings = null) =>
             UpdateShieldedInstanceConfigAsync(new UpdateShieldedInstanceConfigInstanceRequest
             {
                 Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
@@ -4745,7 +6111,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> UpdateShieldedInstanceConfigAsync(string project, string zone, string instance, ShieldedInstanceConfig shieldedInstanceConfigResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateShieldedInstanceConfigAsync(string project, string zone, string instance, ShieldedInstanceConfig shieldedInstanceConfigResource, st::CancellationToken cancellationToken) =>
             UpdateShieldedInstanceConfigAsync(project, zone, instance, shieldedInstanceConfigResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
@@ -4849,6 +6215,36 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             InstancesSettings effectiveSettings = settings ?? InstancesSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            AddAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddAccessConfigOperationsSettings);
+            AddResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AddResourcePoliciesOperationsSettings);
+            AttachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.AttachDiskOperationsSettings);
+            BulkInsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.BulkInsertOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteOperationsSettings);
+            DeleteAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DeleteAccessConfigOperationsSettings);
+            DetachDiskOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.DetachDiskOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings);
+            RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings);
+            ResetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResetOperationsSettings);
+            SetDeletionProtectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDeletionProtectionOperationsSettings);
+            SetDiskAutoDeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDiskAutoDeleteOperationsSettings);
+            SetLabelsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetLabelsOperationsSettings);
+            SetMachineResourcesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMachineResourcesOperationsSettings);
+            SetMachineTypeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMachineTypeOperationsSettings);
+            SetMetadataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMetadataOperationsSettings);
+            SetMinCpuPlatformOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetMinCpuPlatformOperationsSettings);
+            SetSchedulingOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetSchedulingOperationsSettings);
+            SetServiceAccountOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetServiceAccountOperationsSettings);
+            SetShieldedInstanceIntegrityPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetShieldedInstanceIntegrityPolicyOperationsSettings);
+            SetTagsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetTagsOperationsSettings);
+            SimulateMaintenanceEventOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SimulateMaintenanceEventOperationsSettings);
+            StartOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartOperationsSettings);
+            StartWithEncryptionKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StartWithEncryptionKeyOperationsSettings);
+            StopOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StopOperationsSettings);
+            UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateOperationsSettings);
+            UpdateAccessConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateAccessConfigOperationsSettings);
+            UpdateDisplayDeviceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateDisplayDeviceOperationsSettings);
+            UpdateNetworkInterfaceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateNetworkInterfaceOperationsSettings);
+            UpdateShieldedInstanceConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateShieldedInstanceConfigOperationsSettings);
             _callAddAccessConfig = clientHelper.BuildApiCall<AddAccessConfigInstanceRequest, Operation>(grpcClient.AddAccessConfigAsync, grpcClient.AddAccessConfig, effectiveSettings.AddAccessConfigSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callAddAccessConfig);
             Modify_AddAccessConfigApiCall(ref _callAddAccessConfig);
@@ -5153,16 +6549,22 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_UpdateShieldedInstanceConfigInstanceRequest(ref UpdateShieldedInstanceConfigInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
+        /// <summary>The long-running operations client for <c>AddAccessConfig</c>.</summary>
+        public override lro::OperationsClient AddAccessConfigOperationsClient { get; }
+
         /// <summary>
         /// Adds an access config to an instance's network interface.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation AddAccessConfig(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> AddAccessConfig(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddAccessConfigInstanceRequest(ref request, ref callSettings);
-            return _callAddAccessConfig.Sync(request, callSettings);
+            Operation response = _callAddAccessConfig.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddAccessConfigOperationsClient);
         }
 
         /// <summary>
@@ -5171,11 +6573,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> AddAccessConfigAsync(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> AddAccessConfigAsync(AddAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddAccessConfigInstanceRequest(ref request, ref callSettings);
-            return _callAddAccessConfig.Async(request, callSettings);
+            Operation response = await _callAddAccessConfig.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddAccessConfigOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>AddResourcePolicies</c>.</summary>
+        public override lro::OperationsClient AddResourcePoliciesOperationsClient { get; }
 
         /// <summary>
         /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
@@ -5183,10 +6591,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation AddResourcePolicies(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> AddResourcePolicies(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddResourcePoliciesInstanceRequest(ref request, ref callSettings);
-            return _callAddResourcePolicies.Sync(request, callSettings);
+            Operation response = _callAddResourcePolicies.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddResourcePoliciesOperationsClient);
         }
 
         /// <summary>
@@ -5195,10 +6606,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> AddResourcePoliciesAsync(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> AddResourcePoliciesAsync(AddResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AddResourcePoliciesInstanceRequest(ref request, ref callSettings);
-            return _callAddResourcePolicies.Async(request, callSettings);
+            Operation response = await _callAddResourcePolicies.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddResourcePoliciesOperationsClient);
         }
 
         /// <summary>
@@ -5227,16 +6641,22 @@ namespace Google.Cloud.Compute.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListInstancesRequest, InstanceAggregatedList, scg::KeyValuePair<string, InstancesScopedList>>(_callAggregatedList, request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>AttachDisk</c>.</summary>
+        public override lro::OperationsClient AttachDiskOperationsClient { get; }
+
         /// <summary>
         /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation AttachDisk(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> AttachDisk(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AttachDiskInstanceRequest(ref request, ref callSettings);
-            return _callAttachDisk.Sync(request, callSettings);
+            Operation response = _callAttachDisk.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AttachDiskOperationsClient);
         }
 
         /// <summary>
@@ -5245,11 +6665,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> AttachDiskAsync(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> AttachDiskAsync(AttachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AttachDiskInstanceRequest(ref request, ref callSettings);
-            return _callAttachDisk.Async(request, callSettings);
+            Operation response = await _callAttachDisk.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AttachDiskOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>BulkInsert</c>.</summary>
+        public override lro::OperationsClient BulkInsertOperationsClient { get; }
 
         /// <summary>
         /// Creates multiple instances. Count specifies the number of instances to create.
@@ -5257,10 +6683,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation BulkInsert(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> BulkInsert(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BulkInsertInstanceRequest(ref request, ref callSettings);
-            return _callBulkInsert.Sync(request, callSettings);
+            Operation response = _callBulkInsert.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkInsertOperationsClient);
         }
 
         /// <summary>
@@ -5269,11 +6698,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> BulkInsertAsync(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> BulkInsertAsync(BulkInsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_BulkInsertInstanceRequest(ref request, ref callSettings);
-            return _callBulkInsert.Async(request, callSettings);
+            Operation response = await _callBulkInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), BulkInsertOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
         /// Deletes the specified Instance resource. For more information, see Deleting an instance.
@@ -5281,10 +6716,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Delete(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Delete(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceRequest(ref request, ref callSettings);
-            return _callDelete.Sync(request, callSettings);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -5293,11 +6731,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> DeleteAsync(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteInstanceRequest(ref request, ref callSettings);
-            return _callDelete.Async(request, callSettings);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>DeleteAccessConfig</c>.</summary>
+        public override lro::OperationsClient DeleteAccessConfigOperationsClient { get; }
 
         /// <summary>
         /// Deletes an access config from an instance's network interface.
@@ -5305,10 +6749,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation DeleteAccessConfig(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> DeleteAccessConfig(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAccessConfigInstanceRequest(ref request, ref callSettings);
-            return _callDeleteAccessConfig.Sync(request, callSettings);
+            Operation response = _callDeleteAccessConfig.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteAccessConfigOperationsClient);
         }
 
         /// <summary>
@@ -5317,11 +6764,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> DeleteAccessConfigAsync(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAccessConfigAsync(DeleteAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteAccessConfigInstanceRequest(ref request, ref callSettings);
-            return _callDeleteAccessConfig.Async(request, callSettings);
+            Operation response = await _callDeleteAccessConfig.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteAccessConfigOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>DetachDisk</c>.</summary>
+        public override lro::OperationsClient DetachDiskOperationsClient { get; }
 
         /// <summary>
         /// Detaches a disk from an instance.
@@ -5329,10 +6782,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation DetachDisk(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> DetachDisk(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DetachDiskInstanceRequest(ref request, ref callSettings);
-            return _callDetachDisk.Sync(request, callSettings);
+            Operation response = _callDetachDisk.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DetachDiskOperationsClient);
         }
 
         /// <summary>
@@ -5341,10 +6797,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> DetachDiskAsync(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> DetachDiskAsync(DetachDiskInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DetachDiskInstanceRequest(ref request, ref callSettings);
-            return _callDetachDisk.Async(request, callSettings);
+            Operation response = await _callDetachDisk.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DetachDiskOperationsClient);
         }
 
         /// <summary>
@@ -5515,16 +6974,22 @@ namespace Google.Cloud.Compute.V1
             return _callGetShieldedInstanceIdentity.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public override lro::OperationsClient InsertOperationsClient { get; }
+
         /// <summary>
         /// Creates an instance resource in the specified project using the data included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Insert(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Insert(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertInstanceRequest(ref request, ref callSettings);
-            return _callInsert.Sync(request, callSettings);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -5533,10 +6998,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> InsertAsync(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertInstanceRequest(ref request, ref callSettings);
-            return _callInsert.Async(request, callSettings);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -5587,16 +7055,22 @@ namespace Google.Cloud.Compute.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListReferrersInstancesRequest, InstanceListReferrers, Reference>(_callListReferrers, request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>RemoveResourcePolicies</c>.</summary>
+        public override lro::OperationsClient RemoveResourcePoliciesOperationsClient { get; }
+
         /// <summary>
         /// Removes resource policies from an instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation RemoveResourcePolicies(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> RemoveResourcePolicies(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveResourcePoliciesInstanceRequest(ref request, ref callSettings);
-            return _callRemoveResourcePolicies.Sync(request, callSettings);
+            Operation response = _callRemoveResourcePolicies.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveResourcePoliciesOperationsClient);
         }
 
         /// <summary>
@@ -5605,11 +7079,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> RemoveResourcePoliciesAsync(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(RemoveResourcePoliciesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveResourcePoliciesInstanceRequest(ref request, ref callSettings);
-            return _callRemoveResourcePolicies.Async(request, callSettings);
+            Operation response = await _callRemoveResourcePolicies.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveResourcePoliciesOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>Reset</c>.</summary>
+        public override lro::OperationsClient ResetOperationsClient { get; }
 
         /// <summary>
         /// Performs a reset on the instance. This is a hard reset the VM does not do a graceful shutdown. For more information, see Resetting an instance.
@@ -5617,10 +7097,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Reset(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Reset(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResetInstanceRequest(ref request, ref callSettings);
-            return _callReset.Sync(request, callSettings);
+            Operation response = _callReset.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResetOperationsClient);
         }
 
         /// <summary>
@@ -5629,11 +7112,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> ResetAsync(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> ResetAsync(ResetInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResetInstanceRequest(ref request, ref callSettings);
-            return _callReset.Async(request, callSettings);
+            Operation response = await _callReset.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResetOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetDeletionProtection</c>.</summary>
+        public override lro::OperationsClient SetDeletionProtectionOperationsClient { get; }
 
         /// <summary>
         /// Sets deletion protection on the instance.
@@ -5641,10 +7130,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetDeletionProtection(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetDeletionProtection(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetDeletionProtectionInstanceRequest(ref request, ref callSettings);
-            return _callSetDeletionProtection.Sync(request, callSettings);
+            Operation response = _callSetDeletionProtection.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetDeletionProtectionOperationsClient);
         }
 
         /// <summary>
@@ -5653,11 +7145,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetDeletionProtectionAsync(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetDeletionProtectionAsync(SetDeletionProtectionInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetDeletionProtectionInstanceRequest(ref request, ref callSettings);
-            return _callSetDeletionProtection.Async(request, callSettings);
+            Operation response = await _callSetDeletionProtection.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetDeletionProtectionOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetDiskAutoDelete</c>.</summary>
+        public override lro::OperationsClient SetDiskAutoDeleteOperationsClient { get; }
 
         /// <summary>
         /// Sets the auto-delete flag for a disk attached to an instance.
@@ -5665,10 +7163,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetDiskAutoDelete(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetDiskAutoDelete(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetDiskAutoDeleteInstanceRequest(ref request, ref callSettings);
-            return _callSetDiskAutoDelete.Sync(request, callSettings);
+            Operation response = _callSetDiskAutoDelete.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetDiskAutoDeleteOperationsClient);
         }
 
         /// <summary>
@@ -5677,10 +7178,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetDiskAutoDeleteAsync(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetDiskAutoDeleteAsync(SetDiskAutoDeleteInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetDiskAutoDeleteInstanceRequest(ref request, ref callSettings);
-            return _callSetDiskAutoDelete.Async(request, callSettings);
+            Operation response = await _callSetDiskAutoDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetDiskAutoDeleteOperationsClient);
         }
 
         /// <summary>
@@ -5707,16 +7211,22 @@ namespace Google.Cloud.Compute.V1
             return _callSetIamPolicy.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>SetLabels</c>.</summary>
+        public override lro::OperationsClient SetLabelsOperationsClient { get; }
+
         /// <summary>
         /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetLabels(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetLabels(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsInstanceRequest(ref request, ref callSettings);
-            return _callSetLabels.Sync(request, callSettings);
+            Operation response = _callSetLabels.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
 
         /// <summary>
@@ -5725,11 +7235,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetLabelsAsync(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetLabelsAsync(SetLabelsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetLabelsInstanceRequest(ref request, ref callSettings);
-            return _callSetLabels.Async(request, callSettings);
+            Operation response = await _callSetLabels.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetLabelsOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetMachineResources</c>.</summary>
+        public override lro::OperationsClient SetMachineResourcesOperationsClient { get; }
 
         /// <summary>
         /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
@@ -5737,10 +7253,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetMachineResources(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetMachineResources(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMachineResourcesInstanceRequest(ref request, ref callSettings);
-            return _callSetMachineResources.Sync(request, callSettings);
+            Operation response = _callSetMachineResources.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMachineResourcesOperationsClient);
         }
 
         /// <summary>
@@ -5749,11 +7268,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetMachineResourcesAsync(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetMachineResourcesAsync(SetMachineResourcesInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMachineResourcesInstanceRequest(ref request, ref callSettings);
-            return _callSetMachineResources.Async(request, callSettings);
+            Operation response = await _callSetMachineResources.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMachineResourcesOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetMachineType</c>.</summary>
+        public override lro::OperationsClient SetMachineTypeOperationsClient { get; }
 
         /// <summary>
         /// Changes the machine type for a stopped instance to the machine type specified in the request.
@@ -5761,10 +7286,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetMachineType(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetMachineType(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMachineTypeInstanceRequest(ref request, ref callSettings);
-            return _callSetMachineType.Sync(request, callSettings);
+            Operation response = _callSetMachineType.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMachineTypeOperationsClient);
         }
 
         /// <summary>
@@ -5773,11 +7301,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetMachineTypeAsync(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetMachineTypeAsync(SetMachineTypeInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMachineTypeInstanceRequest(ref request, ref callSettings);
-            return _callSetMachineType.Async(request, callSettings);
+            Operation response = await _callSetMachineType.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMachineTypeOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetMetadata</c>.</summary>
+        public override lro::OperationsClient SetMetadataOperationsClient { get; }
 
         /// <summary>
         /// Sets metadata for the specified instance to the data included in the request.
@@ -5785,10 +7319,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetMetadata(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetMetadata(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMetadataInstanceRequest(ref request, ref callSettings);
-            return _callSetMetadata.Sync(request, callSettings);
+            Operation response = _callSetMetadata.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMetadataOperationsClient);
         }
 
         /// <summary>
@@ -5797,11 +7334,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetMetadataAsync(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetMetadataAsync(SetMetadataInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMetadataInstanceRequest(ref request, ref callSettings);
-            return _callSetMetadata.Async(request, callSettings);
+            Operation response = await _callSetMetadata.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMetadataOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetMinCpuPlatform</c>.</summary>
+        public override lro::OperationsClient SetMinCpuPlatformOperationsClient { get; }
 
         /// <summary>
         /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
@@ -5809,10 +7352,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetMinCpuPlatform(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetMinCpuPlatform(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMinCpuPlatformInstanceRequest(ref request, ref callSettings);
-            return _callSetMinCpuPlatform.Sync(request, callSettings);
+            Operation response = _callSetMinCpuPlatform.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMinCpuPlatformOperationsClient);
         }
 
         /// <summary>
@@ -5821,11 +7367,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetMinCpuPlatformAsync(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetMinCpuPlatformAsync(SetMinCpuPlatformInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetMinCpuPlatformInstanceRequest(ref request, ref callSettings);
-            return _callSetMinCpuPlatform.Async(request, callSettings);
+            Operation response = await _callSetMinCpuPlatform.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetMinCpuPlatformOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetScheduling</c>.</summary>
+        public override lro::OperationsClient SetSchedulingOperationsClient { get; }
 
         /// <summary>
         /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
@@ -5833,10 +7385,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetScheduling(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetScheduling(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSchedulingInstanceRequest(ref request, ref callSettings);
-            return _callSetScheduling.Sync(request, callSettings);
+            Operation response = _callSetScheduling.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSchedulingOperationsClient);
         }
 
         /// <summary>
@@ -5845,11 +7400,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetSchedulingAsync(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetSchedulingAsync(SetSchedulingInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetSchedulingInstanceRequest(ref request, ref callSettings);
-            return _callSetScheduling.Async(request, callSettings);
+            Operation response = await _callSetScheduling.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetSchedulingOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetServiceAccount</c>.</summary>
+        public override lro::OperationsClient SetServiceAccountOperationsClient { get; }
 
         /// <summary>
         /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
@@ -5857,10 +7418,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetServiceAccount(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetServiceAccount(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetServiceAccountInstanceRequest(ref request, ref callSettings);
-            return _callSetServiceAccount.Sync(request, callSettings);
+            Operation response = _callSetServiceAccount.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetServiceAccountOperationsClient);
         }
 
         /// <summary>
@@ -5869,11 +7433,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetServiceAccountAsync(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetServiceAccountAsync(SetServiceAccountInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetServiceAccountInstanceRequest(ref request, ref callSettings);
-            return _callSetServiceAccount.Async(request, callSettings);
+            Operation response = await _callSetServiceAccount.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetServiceAccountOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetShieldedInstanceIntegrityPolicy</c>.</summary>
+        public override lro::OperationsClient SetShieldedInstanceIntegrityPolicyOperationsClient { get; }
 
         /// <summary>
         /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -5881,10 +7451,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetShieldedInstanceIntegrityPolicy(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetShieldedInstanceIntegrityPolicy(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetShieldedInstanceIntegrityPolicyInstanceRequest(ref request, ref callSettings);
-            return _callSetShieldedInstanceIntegrityPolicy.Sync(request, callSettings);
+            Operation response = _callSetShieldedInstanceIntegrityPolicy.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetShieldedInstanceIntegrityPolicyOperationsClient);
         }
 
         /// <summary>
@@ -5893,11 +7466,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetShieldedInstanceIntegrityPolicyAsync(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetShieldedInstanceIntegrityPolicyAsync(SetShieldedInstanceIntegrityPolicyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetShieldedInstanceIntegrityPolicyInstanceRequest(ref request, ref callSettings);
-            return _callSetShieldedInstanceIntegrityPolicy.Async(request, callSettings);
+            Operation response = await _callSetShieldedInstanceIntegrityPolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetShieldedInstanceIntegrityPolicyOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SetTags</c>.</summary>
+        public override lro::OperationsClient SetTagsOperationsClient { get; }
 
         /// <summary>
         /// Sets network tags for the specified instance to the data included in the request.
@@ -5905,10 +7484,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SetTags(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SetTags(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTagsInstanceRequest(ref request, ref callSettings);
-            return _callSetTags.Sync(request, callSettings);
+            Operation response = _callSetTags.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTagsOperationsClient);
         }
 
         /// <summary>
@@ -5917,11 +7499,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SetTagsAsync(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SetTagsAsync(SetTagsInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetTagsInstanceRequest(ref request, ref callSettings);
-            return _callSetTags.Async(request, callSettings);
+            Operation response = await _callSetTags.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SetTagsOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>SimulateMaintenanceEvent</c>.</summary>
+        public override lro::OperationsClient SimulateMaintenanceEventOperationsClient { get; }
 
         /// <summary>
         /// Simulates a maintenance event on the instance.
@@ -5929,10 +7517,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation SimulateMaintenanceEvent(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> SimulateMaintenanceEvent(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SimulateMaintenanceEventInstanceRequest(ref request, ref callSettings);
-            return _callSimulateMaintenanceEvent.Sync(request, callSettings);
+            Operation response = _callSimulateMaintenanceEvent.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SimulateMaintenanceEventOperationsClient);
         }
 
         /// <summary>
@@ -5941,11 +7532,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> SimulateMaintenanceEventAsync(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> SimulateMaintenanceEventAsync(SimulateMaintenanceEventInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SimulateMaintenanceEventInstanceRequest(ref request, ref callSettings);
-            return _callSimulateMaintenanceEvent.Async(request, callSettings);
+            Operation response = await _callSimulateMaintenanceEvent.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), SimulateMaintenanceEventOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>Start</c>.</summary>
+        public override lro::OperationsClient StartOperationsClient { get; }
 
         /// <summary>
         /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
@@ -5953,10 +7550,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Start(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Start(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StartInstanceRequest(ref request, ref callSettings);
-            return _callStart.Sync(request, callSettings);
+            Operation response = _callStart.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StartOperationsClient);
         }
 
         /// <summary>
@@ -5965,11 +7565,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> StartAsync(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> StartAsync(StartInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StartInstanceRequest(ref request, ref callSettings);
-            return _callStart.Async(request, callSettings);
+            Operation response = await _callStart.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StartOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>StartWithEncryptionKey</c>.</summary>
+        public override lro::OperationsClient StartWithEncryptionKeyOperationsClient { get; }
 
         /// <summary>
         /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
@@ -5977,10 +7583,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation StartWithEncryptionKey(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> StartWithEncryptionKey(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StartWithEncryptionKeyInstanceRequest(ref request, ref callSettings);
-            return _callStartWithEncryptionKey.Sync(request, callSettings);
+            Operation response = _callStartWithEncryptionKey.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StartWithEncryptionKeyOperationsClient);
         }
 
         /// <summary>
@@ -5989,11 +7598,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> StartWithEncryptionKeyAsync(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> StartWithEncryptionKeyAsync(StartWithEncryptionKeyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StartWithEncryptionKeyInstanceRequest(ref request, ref callSettings);
-            return _callStartWithEncryptionKey.Async(request, callSettings);
+            Operation response = await _callStartWithEncryptionKey.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StartWithEncryptionKeyOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>Stop</c>.</summary>
+        public override lro::OperationsClient StopOperationsClient { get; }
 
         /// <summary>
         /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
@@ -6001,10 +7616,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Stop(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Stop(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StopInstanceRequest(ref request, ref callSettings);
-            return _callStop.Sync(request, callSettings);
+            Operation response = _callStop.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StopOperationsClient);
         }
 
         /// <summary>
@@ -6013,10 +7631,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> StopAsync(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> StopAsync(StopInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StopInstanceRequest(ref request, ref callSettings);
-            return _callStop.Async(request, callSettings);
+            Operation response = await _callStop.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), StopOperationsClient);
         }
 
         /// <summary>
@@ -6043,16 +7664,22 @@ namespace Google.Cloud.Compute.V1
             return _callTestIamPermissions.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>Update</c>.</summary>
+        public override lro::OperationsClient UpdateOperationsClient { get; }
+
         /// <summary>
         /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Update(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Update(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
-            return _callUpdate.Sync(request, callSettings);
+            Operation response = _callUpdate.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
 
         /// <summary>
@@ -6061,11 +7688,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> UpdateAsync(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(UpdateInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateInstanceRequest(ref request, ref callSettings);
-            return _callUpdate.Async(request, callSettings);
+            Operation response = await _callUpdate.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>UpdateAccessConfig</c>.</summary>
+        public override lro::OperationsClient UpdateAccessConfigOperationsClient { get; }
 
         /// <summary>
         /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -6073,10 +7706,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation UpdateAccessConfig(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> UpdateAccessConfig(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAccessConfigInstanceRequest(ref request, ref callSettings);
-            return _callUpdateAccessConfig.Sync(request, callSettings);
+            Operation response = _callUpdateAccessConfig.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateAccessConfigOperationsClient);
         }
 
         /// <summary>
@@ -6085,11 +7721,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> UpdateAccessConfigAsync(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateAccessConfigAsync(UpdateAccessConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateAccessConfigInstanceRequest(ref request, ref callSettings);
-            return _callUpdateAccessConfig.Async(request, callSettings);
+            Operation response = await _callUpdateAccessConfig.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateAccessConfigOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>UpdateDisplayDevice</c>.</summary>
+        public override lro::OperationsClient UpdateDisplayDeviceOperationsClient { get; }
 
         /// <summary>
         /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -6097,10 +7739,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation UpdateDisplayDevice(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> UpdateDisplayDevice(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDisplayDeviceInstanceRequest(ref request, ref callSettings);
-            return _callUpdateDisplayDevice.Sync(request, callSettings);
+            Operation response = _callUpdateDisplayDevice.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateDisplayDeviceOperationsClient);
         }
 
         /// <summary>
@@ -6109,11 +7754,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> UpdateDisplayDeviceAsync(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateDisplayDeviceAsync(UpdateDisplayDeviceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateDisplayDeviceInstanceRequest(ref request, ref callSettings);
-            return _callUpdateDisplayDevice.Async(request, callSettings);
+            Operation response = await _callUpdateDisplayDevice.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateDisplayDeviceOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>UpdateNetworkInterface</c>.</summary>
+        public override lro::OperationsClient UpdateNetworkInterfaceOperationsClient { get; }
 
         /// <summary>
         /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
@@ -6121,10 +7772,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation UpdateNetworkInterface(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> UpdateNetworkInterface(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateNetworkInterfaceInstanceRequest(ref request, ref callSettings);
-            return _callUpdateNetworkInterface.Sync(request, callSettings);
+            Operation response = _callUpdateNetworkInterface.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateNetworkInterfaceOperationsClient);
         }
 
         /// <summary>
@@ -6133,11 +7787,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> UpdateNetworkInterfaceAsync(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateNetworkInterfaceAsync(UpdateNetworkInterfaceInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateNetworkInterfaceInstanceRequest(ref request, ref callSettings);
-            return _callUpdateNetworkInterface.Async(request, callSettings);
+            Operation response = await _callUpdateNetworkInterface.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateNetworkInterfaceOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>UpdateShieldedInstanceConfig</c>.</summary>
+        public override lro::OperationsClient UpdateShieldedInstanceConfigOperationsClient { get; }
 
         /// <summary>
         /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
@@ -6145,10 +7805,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation UpdateShieldedInstanceConfig(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> UpdateShieldedInstanceConfig(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateShieldedInstanceConfigInstanceRequest(ref request, ref callSettings);
-            return _callUpdateShieldedInstanceConfig.Sync(request, callSettings);
+            Operation response = _callUpdateShieldedInstanceConfig.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateShieldedInstanceConfigOperationsClient);
         }
 
         /// <summary>
@@ -6157,10 +7820,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateShieldedInstanceConfigAsync(UpdateShieldedInstanceConfigInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateShieldedInstanceConfigInstanceRequest(ref request, ref callSettings);
-            return _callUpdateShieldedInstanceConfig.Async(request, callSettings);
+            Operation response = await _callUpdateShieldedInstanceConfig.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateShieldedInstanceConfigOperationsClient);
         }
     }
 
@@ -6216,5 +7882,19 @@ namespace Google.Cloud.Compute.V1
         public scg::IEnumerator<Reference> GetEnumerator() => Items.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class Instances
+    {
+        public partial class InstancesClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client, delegating to ZoneOperations.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForZoneOperations() =>
+                ZoneOperations.ZoneOperationsClient.CreateOperationsClient(CallInvoker);
+        }
     }
 }

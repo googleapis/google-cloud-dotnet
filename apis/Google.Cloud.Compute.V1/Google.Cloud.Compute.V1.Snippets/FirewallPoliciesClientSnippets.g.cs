@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedFirewallPoliciesClientSnippets
@@ -39,7 +40,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.AddAssociation(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.AddAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceAddAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +76,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.AddAssociationAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.AddAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceAddAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -73,7 +106,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation();
             // Make the request
-            Operation response = firewallPoliciesClient.AddAssociation(firewallPolicy, firewallPolicyAssociationResource);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.AddAssociation(firewallPolicy, firewallPolicyAssociationResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceAddAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -88,7 +137,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicyAssociation firewallPolicyAssociationResource = new FirewallPolicyAssociation();
             // Make the request
-            Operation response = await firewallPoliciesClient.AddAssociationAsync(firewallPolicy, firewallPolicyAssociationResource);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.AddAssociationAsync(firewallPolicy, firewallPolicyAssociationResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceAddAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -106,7 +171,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.AddRule(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.AddRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceAddRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -125,7 +206,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.AddRuleAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.AddRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceAddRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -139,7 +236,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
             // Make the request
-            Operation response = firewallPoliciesClient.AddRule(firewallPolicy, firewallPolicyRuleResource);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.AddRule(firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceAddRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -154,7 +267,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
             // Make the request
-            Operation response = await firewallPoliciesClient.AddRuleAsync(firewallPolicy, firewallPolicyRuleResource);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.AddRuleAsync(firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceAddRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -172,7 +301,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.CloneRules(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.CloneRules(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceCloneRules(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -191,7 +336,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.CloneRulesAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.CloneRulesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceCloneRulesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -204,7 +365,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = firewallPoliciesClient.CloneRules(firewallPolicy);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.CloneRules(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceCloneRules(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -218,7 +395,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = await firewallPoliciesClient.CloneRulesAsync(firewallPolicy);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.CloneRulesAsync(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceCloneRulesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -235,7 +428,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.Delete(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -253,7 +462,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -266,7 +491,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = firewallPoliciesClient.Delete(firewallPolicy);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Delete(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -280,7 +521,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = await firewallPoliciesClient.DeleteAsync(firewallPolicy);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.DeleteAsync(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -538,7 +795,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicyResource = new FirewallPolicy(),
             };
             // Make the request
-            Operation response = firewallPoliciesClient.Insert(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -557,7 +830,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicyResource = new FirewallPolicy(),
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -570,7 +859,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             FirewallPolicy firewallPolicyResource = new FirewallPolicy();
             // Make the request
-            Operation response = firewallPoliciesClient.Insert(firewallPolicyResource);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Insert(firewallPolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -584,7 +889,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             FirewallPolicy firewallPolicyResource = new FirewallPolicy();
             // Make the request
-            Operation response = await firewallPoliciesClient.InsertAsync(firewallPolicyResource);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.InsertAsync(firewallPolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -840,7 +1161,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.Move(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Move(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceMove(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -859,7 +1196,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.MoveAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.MoveAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceMoveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -872,7 +1225,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = firewallPoliciesClient.Move(firewallPolicy);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Move(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceMove(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -886,7 +1255,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = await firewallPoliciesClient.MoveAsync(firewallPolicy);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.MoveAsync(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceMoveAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -904,7 +1289,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.Patch(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -923,7 +1324,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -937,7 +1354,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicy firewallPolicyResource = new FirewallPolicy();
             // Make the request
-            Operation response = firewallPoliciesClient.Patch(firewallPolicy, firewallPolicyResource);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.Patch(firewallPolicy, firewallPolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -952,7 +1385,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicy firewallPolicyResource = new FirewallPolicy();
             // Make the request
-            Operation response = await firewallPoliciesClient.PatchAsync(firewallPolicy, firewallPolicyResource);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.PatchAsync(firewallPolicy, firewallPolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -971,7 +1420,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.PatchRule(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.PatchRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOncePatchRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -991,7 +1456,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.PatchRuleAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.PatchRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOncePatchRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1005,7 +1486,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
             // Make the request
-            Operation response = firewallPoliciesClient.PatchRule(firewallPolicy, firewallPolicyRuleResource);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.PatchRule(firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOncePatchRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1020,7 +1517,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string firewallPolicy = "";
             FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
             // Make the request
-            Operation response = await firewallPoliciesClient.PatchRuleAsync(firewallPolicy, firewallPolicyRuleResource);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.PatchRuleAsync(firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOncePatchRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1038,7 +1551,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.RemoveAssociation(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.RemoveAssociation(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceRemoveAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1057,7 +1586,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.RemoveAssociationAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.RemoveAssociationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceRemoveAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1070,7 +1615,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = firewallPoliciesClient.RemoveAssociation(firewallPolicy);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.RemoveAssociation(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceRemoveAssociation(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1084,7 +1645,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = await firewallPoliciesClient.RemoveAssociationAsync(firewallPolicy);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.RemoveAssociationAsync(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceRemoveAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1102,7 +1679,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = firewallPoliciesClient.RemoveRule(request);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.RemoveRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceRemoveRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1121,7 +1714,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 FirewallPolicy = "",
             };
             // Make the request
-            Operation response = await firewallPoliciesClient.RemoveRuleAsync(request);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.RemoveRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceRemoveRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1134,7 +1743,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = firewallPoliciesClient.RemoveRule(firewallPolicy);
+            lro::Operation<Operation, Operation> response = firewallPoliciesClient.RemoveRule(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = firewallPoliciesClient.PollOnceRemoveRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -1148,7 +1773,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             // Initialize request argument(s)
             string firewallPolicy = "";
             // Make the request
-            Operation response = await firewallPoliciesClient.RemoveRuleAsync(firewallPolicy);
+            lro::Operation<Operation, Operation> response = await firewallPoliciesClient.RemoveRuleAsync(firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await firewallPoliciesClient.PollOnceRemoveRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -47,10 +48,14 @@ namespace Google.Cloud.Compute.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AttachNetworkEndpointsSettings = existing.AttachNetworkEndpointsSettings;
+            AttachNetworkEndpointsOperationsSettings = existing.AttachNetworkEndpointsOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
+            DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             DetachNetworkEndpointsSettings = existing.DetachNetworkEndpointsSettings;
+            DetachNetworkEndpointsOperationsSettings = existing.DetachNetworkEndpointsOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             InsertSettings = existing.InsertSettings;
+            InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             ListNetworkEndpointsSettings = existing.ListNetworkEndpointsSettings;
             OnCopy(existing);
@@ -72,6 +77,24 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings AttachNetworkEndpointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalNetworkEndpointGroupsClient.AttachNetworkEndpoints</c>
+        /// and <c>GlobalNetworkEndpointGroupsClient.AttachNetworkEndpointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AttachNetworkEndpointsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>GlobalNetworkEndpointGroupsClient.Delete</c> and <c>GlobalNetworkEndpointGroupsClient.DeleteAsync</c>.
         /// </summary>
@@ -82,6 +105,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalNetworkEndpointGroupsClient.Delete</c> and
+        /// <c>GlobalNetworkEndpointGroupsClient.DeleteAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -95,6 +136,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DetachNetworkEndpointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalNetworkEndpointGroupsClient.DetachNetworkEndpoints</c>
+        /// and <c>GlobalNetworkEndpointGroupsClient.DetachNetworkEndpointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DetachNetworkEndpointsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -119,6 +178,24 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings InsertSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>GlobalNetworkEndpointGroupsClient.Insert</c> and
+        /// <c>GlobalNetworkEndpointGroupsClient.InsertAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InsertOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -317,7 +394,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AttachNetworkEndpoints(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AttachNetworkEndpoints(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -326,7 +403,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachNetworkEndpointsAsync(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachNetworkEndpointsAsync(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -335,8 +412,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachNetworkEndpointsAsync(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachNetworkEndpointsAsync(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
             AttachNetworkEndpointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AttachNetworkEndpoints</c>.</summary>
+        public virtual lro::OperationsClient AttachNetworkEndpointsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AttachNetworkEndpoints</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAttachNetworkEndpoints(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AttachNetworkEndpointsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AttachNetworkEndpoints</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAttachNetworkEndpointsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AttachNetworkEndpointsOperationsClient, callSettings);
 
         /// <summary>
         /// Attach a network endpoint to the specified network endpoint group.
@@ -352,7 +456,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation AttachNetworkEndpoints(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> AttachNetworkEndpoints(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             AttachNetworkEndpoints(new AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest
             {
                 GlobalNetworkEndpointGroupsAttachEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(globalNetworkEndpointGroupsAttachEndpointsRequestResource, nameof(globalNetworkEndpointGroupsAttachEndpointsRequestResource)),
@@ -374,7 +478,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             AttachNetworkEndpointsAsync(new AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest
             {
                 GlobalNetworkEndpointGroupsAttachEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(globalNetworkEndpointGroupsAttachEndpointsRequestResource, nameof(globalNetworkEndpointGroupsAttachEndpointsRequestResource)),
@@ -396,7 +500,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> AttachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AttachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsAttachEndpointsRequest globalNetworkEndpointGroupsAttachEndpointsRequestResource, st::CancellationToken cancellationToken) =>
             AttachNetworkEndpointsAsync(project, networkEndpointGroup, globalNetworkEndpointGroupsAttachEndpointsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -405,7 +509,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -414,7 +518,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -423,8 +527,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(DeleteGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
             DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public virtual lro::OperationsClient DeleteOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDelete(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Delete</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
         /// Deletes the specified network endpoint group.Note that the NEG cannot be deleted if there are backend services referencing it.
@@ -437,7 +567,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Delete(string project, string networkEndpointGroup, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Delete(string project, string networkEndpointGroup, gaxgrpc::CallSettings callSettings = null) =>
             Delete(new DeleteGlobalNetworkEndpointGroupRequest
             {
                 NetworkEndpointGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(networkEndpointGroup, nameof(networkEndpointGroup)),
@@ -455,7 +585,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string networkEndpointGroup, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string networkEndpointGroup, gaxgrpc::CallSettings callSettings = null) =>
             DeleteAsync(new DeleteGlobalNetworkEndpointGroupRequest
             {
                 NetworkEndpointGroup = gax::GaxPreconditions.CheckNotNullOrEmpty(networkEndpointGroup, nameof(networkEndpointGroup)),
@@ -473,7 +603,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DeleteAsync(string project, string networkEndpointGroup, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(string project, string networkEndpointGroup, st::CancellationToken cancellationToken) =>
             DeleteAsync(project, networkEndpointGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -482,7 +612,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation DetachNetworkEndpoints(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> DetachNetworkEndpoints(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -491,7 +621,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachNetworkEndpointsAsync(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachNetworkEndpointsAsync(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -500,8 +630,35 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachNetworkEndpointsAsync(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachNetworkEndpointsAsync(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
             DetachNetworkEndpointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DetachNetworkEndpoints</c>.</summary>
+        public virtual lro::OperationsClient DetachNetworkEndpointsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DetachNetworkEndpoints</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDetachNetworkEndpoints(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DetachNetworkEndpointsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DetachNetworkEndpoints</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDetachNetworkEndpointsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DetachNetworkEndpointsOperationsClient, callSettings);
 
         /// <summary>
         /// Detach the network endpoint from the specified network endpoint group.
@@ -517,7 +674,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation DetachNetworkEndpoints(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> DetachNetworkEndpoints(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             DetachNetworkEndpoints(new DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest
             {
                 GlobalNetworkEndpointGroupsDetachEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(globalNetworkEndpointGroupsDetachEndpointsRequestResource, nameof(globalNetworkEndpointGroupsDetachEndpointsRequestResource)),
@@ -539,7 +696,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource, gaxgrpc::CallSettings callSettings = null) =>
             DetachNetworkEndpointsAsync(new DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest
             {
                 GlobalNetworkEndpointGroupsDetachEndpointsRequestResource = gax::GaxPreconditions.CheckNotNull(globalNetworkEndpointGroupsDetachEndpointsRequestResource, nameof(globalNetworkEndpointGroupsDetachEndpointsRequestResource)),
@@ -561,7 +718,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> DetachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DetachNetworkEndpointsAsync(string project, string networkEndpointGroup, GlobalNetworkEndpointGroupsDetachEndpointsRequest globalNetworkEndpointGroupsDetachEndpointsRequestResource, st::CancellationToken cancellationToken) =>
             DetachNetworkEndpointsAsync(project, networkEndpointGroup, globalNetworkEndpointGroupsDetachEndpointsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -647,7 +804,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -656,7 +813,7 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -665,8 +822,34 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(InsertGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertGlobalNetworkEndpointGroupRequest request, st::CancellationToken cancellationToken) =>
             InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public virtual lro::OperationsClient InsertOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceInsert(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Insert</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceInsertAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
         /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
@@ -679,7 +862,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Operation Insert(string project, NetworkEndpointGroup networkEndpointGroupResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Operation, Operation> Insert(string project, NetworkEndpointGroup networkEndpointGroupResource, gaxgrpc::CallSettings callSettings = null) =>
             Insert(new InsertGlobalNetworkEndpointGroupRequest
             {
                 NetworkEndpointGroupResource = gax::GaxPreconditions.CheckNotNull(networkEndpointGroupResource, nameof(networkEndpointGroupResource)),
@@ -697,7 +880,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, NetworkEndpointGroup networkEndpointGroupResource, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, NetworkEndpointGroup networkEndpointGroupResource, gaxgrpc::CallSettings callSettings = null) =>
             InsertAsync(new InsertGlobalNetworkEndpointGroupRequest
             {
                 NetworkEndpointGroupResource = gax::GaxPreconditions.CheckNotNull(networkEndpointGroupResource, nameof(networkEndpointGroupResource)),
@@ -715,7 +898,7 @@ namespace Google.Cloud.Compute.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Operation> InsertAsync(string project, NetworkEndpointGroup networkEndpointGroupResource, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> InsertAsync(string project, NetworkEndpointGroup networkEndpointGroupResource, st::CancellationToken cancellationToken) =>
             InsertAsync(project, networkEndpointGroupResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -896,6 +1079,10 @@ namespace Google.Cloud.Compute.V1
             GrpcClient = grpcClient;
             GlobalNetworkEndpointGroupsSettings effectiveSettings = settings ?? GlobalNetworkEndpointGroupsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            AttachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AttachNetworkEndpointsOperationsSettings);
+            DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings);
+            DetachNetworkEndpointsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DetachNetworkEndpointsOperationsSettings);
+            InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings);
             _callAttachNetworkEndpoints = clientHelper.BuildApiCall<AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest, Operation>(grpcClient.AttachNetworkEndpointsAsync, grpcClient.AttachNetworkEndpoints, effectiveSettings.AttachNetworkEndpointsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("network_endpoint_group", request => request.NetworkEndpointGroup);
             Modify_ApiCall(ref _callAttachNetworkEndpoints);
             Modify_AttachNetworkEndpointsApiCall(ref _callAttachNetworkEndpoints);
@@ -955,16 +1142,22 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest(ref ListNetworkEndpointsGlobalNetworkEndpointGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
+        /// <summary>The long-running operations client for <c>AttachNetworkEndpoints</c>.</summary>
+        public override lro::OperationsClient AttachNetworkEndpointsOperationsClient { get; }
+
         /// <summary>
         /// Attach a network endpoint to the specified network endpoint group.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation AttachNetworkEndpoints(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> AttachNetworkEndpoints(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callAttachNetworkEndpoints.Sync(request, callSettings);
+            Operation response = _callAttachNetworkEndpoints.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AttachNetworkEndpointsOperationsClient);
         }
 
         /// <summary>
@@ -973,11 +1166,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> AttachNetworkEndpointsAsync(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> AttachNetworkEndpointsAsync(AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_AttachNetworkEndpointsGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callAttachNetworkEndpoints.Async(request, callSettings);
+            Operation response = await _callAttachNetworkEndpoints.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AttachNetworkEndpointsOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>Delete</c>.</summary>
+        public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
         /// Deletes the specified network endpoint group.Note that the NEG cannot be deleted if there are backend services referencing it.
@@ -985,10 +1184,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Delete(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Delete(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callDelete.Sync(request, callSettings);
+            Operation response = _callDelete.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
         /// <summary>
@@ -997,11 +1199,17 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> DeleteAsync(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteAsync(DeleteGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callDelete.Async(request, callSettings);
+            Operation response = await _callDelete.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>DetachNetworkEndpoints</c>.</summary>
+        public override lro::OperationsClient DetachNetworkEndpointsOperationsClient { get; }
 
         /// <summary>
         /// Detach the network endpoint from the specified network endpoint group.
@@ -1009,10 +1217,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation DetachNetworkEndpoints(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> DetachNetworkEndpoints(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callDetachNetworkEndpoints.Sync(request, callSettings);
+            Operation response = _callDetachNetworkEndpoints.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DetachNetworkEndpointsOperationsClient);
         }
 
         /// <summary>
@@ -1021,10 +1232,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> DetachNetworkEndpointsAsync(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> DetachNetworkEndpointsAsync(DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DetachNetworkEndpointsGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callDetachNetworkEndpoints.Async(request, callSettings);
+            Operation response = await _callDetachNetworkEndpoints.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DetachNetworkEndpointsOperationsClient);
         }
 
         /// <summary>
@@ -1051,16 +1265,22 @@ namespace Google.Cloud.Compute.V1
             return _callGet.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>Insert</c>.</summary>
+        public override lro::OperationsClient InsertOperationsClient { get; }
+
         /// <summary>
         /// Creates a network endpoint group in the specified project using the parameters that are included in the request.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override Operation Insert(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override lro::Operation<Operation, Operation> Insert(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callInsert.Sync(request, callSettings);
+            Operation response = _callInsert.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1069,10 +1289,13 @@ namespace Google.Cloud.Compute.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task<Operation> InsertAsync(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override async stt::Task<lro::Operation<Operation, Operation>> InsertAsync(InsertGlobalNetworkEndpointGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_InsertGlobalNetworkEndpointGroupRequest(ref request, ref callSettings);
-            return _callInsert.Async(request, callSettings);
+            Operation response = await _callInsert.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), InsertOperationsClient);
         }
 
         /// <summary>
@@ -1160,5 +1383,19 @@ namespace Google.Cloud.Compute.V1
         public scg::IEnumerator<NetworkEndpointWithHealthStatus> GetEnumerator() => Items.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class GlobalNetworkEndpointGroups
+    {
+        public partial class GlobalNetworkEndpointGroupsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client, delegating to GlobalOperations.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClientForGlobalOperations() =>
+                GlobalOperations.GlobalOperationsClient.CreateOperationsClient(CallInvoker);
+        }
     }
 }

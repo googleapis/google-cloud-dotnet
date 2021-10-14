@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedRegionNotificationEndpointsClientSnippets
@@ -39,7 +40,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NotificationEndpoint = "",
             };
             // Make the request
-            Operation response = regionNotificationEndpointsClient.Delete(request);
+            lro::Operation<Operation, Operation> response = regionNotificationEndpointsClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionNotificationEndpointsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +76,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NotificationEndpoint = "",
             };
             // Make the request
-            Operation response = await regionNotificationEndpointsClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await regionNotificationEndpointsClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionNotificationEndpointsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -74,7 +107,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string notificationEndpoint = "";
             // Make the request
-            Operation response = regionNotificationEndpointsClient.Delete(project, region, notificationEndpoint);
+            lro::Operation<Operation, Operation> response = regionNotificationEndpointsClient.Delete(project, region, notificationEndpoint);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionNotificationEndpointsClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -90,7 +139,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string notificationEndpoint = "";
             // Make the request
-            Operation response = await regionNotificationEndpointsClient.DeleteAsync(project, region, notificationEndpoint);
+            lro::Operation<Operation, Operation> response = await regionNotificationEndpointsClient.DeleteAsync(project, region, notificationEndpoint);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionNotificationEndpointsClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -177,7 +242,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NotificationEndpointResource = new NotificationEndpoint(),
             };
             // Make the request
-            Operation response = regionNotificationEndpointsClient.Insert(request);
+            lro::Operation<Operation, Operation> response = regionNotificationEndpointsClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionNotificationEndpointsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -197,7 +278,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 NotificationEndpointResource = new NotificationEndpoint(),
             };
             // Make the request
-            Operation response = await regionNotificationEndpointsClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await regionNotificationEndpointsClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionNotificationEndpointsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -212,7 +309,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             NotificationEndpoint notificationEndpointResource = new NotificationEndpoint();
             // Make the request
-            Operation response = regionNotificationEndpointsClient.Insert(project, region, notificationEndpointResource);
+            lro::Operation<Operation, Operation> response = regionNotificationEndpointsClient.Insert(project, region, notificationEndpointResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionNotificationEndpointsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -228,7 +341,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             NotificationEndpoint notificationEndpointResource = new NotificationEndpoint();
             // Make the request
-            Operation response = await regionNotificationEndpointsClient.InsertAsync(project, region, notificationEndpointResource);
+            lro::Operation<Operation, Operation> response = await regionNotificationEndpointsClient.InsertAsync(project, region, notificationEndpointResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionNotificationEndpointsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

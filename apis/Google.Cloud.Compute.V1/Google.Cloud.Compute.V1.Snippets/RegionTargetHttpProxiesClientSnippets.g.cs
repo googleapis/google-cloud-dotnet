@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedRegionTargetHttpProxiesClientSnippets
@@ -39,7 +40,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = regionTargetHttpProxiesClient.Delete(request);
+            lro::Operation<Operation, Operation> response = regionTargetHttpProxiesClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionTargetHttpProxiesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +76,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = await regionTargetHttpProxiesClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await regionTargetHttpProxiesClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionTargetHttpProxiesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -74,7 +107,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string targetHttpProxy = "";
             // Make the request
-            Operation response = regionTargetHttpProxiesClient.Delete(project, region, targetHttpProxy);
+            lro::Operation<Operation, Operation> response = regionTargetHttpProxiesClient.Delete(project, region, targetHttpProxy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionTargetHttpProxiesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -90,7 +139,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string targetHttpProxy = "";
             // Make the request
-            Operation response = await regionTargetHttpProxiesClient.DeleteAsync(project, region, targetHttpProxy);
+            lro::Operation<Operation, Operation> response = await regionTargetHttpProxiesClient.DeleteAsync(project, region, targetHttpProxy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionTargetHttpProxiesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -177,7 +242,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = regionTargetHttpProxiesClient.Insert(request);
+            lro::Operation<Operation, Operation> response = regionTargetHttpProxiesClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionTargetHttpProxiesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -197,7 +278,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = await regionTargetHttpProxiesClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await regionTargetHttpProxiesClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionTargetHttpProxiesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -212,7 +309,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             TargetHttpProxy targetHttpProxyResource = new TargetHttpProxy();
             // Make the request
-            Operation response = regionTargetHttpProxiesClient.Insert(project, region, targetHttpProxyResource);
+            lro::Operation<Operation, Operation> response = regionTargetHttpProxiesClient.Insert(project, region, targetHttpProxyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionTargetHttpProxiesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -228,7 +341,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             TargetHttpProxy targetHttpProxyResource = new TargetHttpProxy();
             // Make the request
-            Operation response = await regionTargetHttpProxiesClient.InsertAsync(project, region, targetHttpProxyResource);
+            lro::Operation<Operation, Operation> response = await regionTargetHttpProxiesClient.InsertAsync(project, region, targetHttpProxyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionTargetHttpProxiesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -444,7 +573,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
-            Operation response = regionTargetHttpProxiesClient.SetUrlMap(request);
+            lro::Operation<Operation, Operation> response = regionTargetHttpProxiesClient.SetUrlMap(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionTargetHttpProxiesClient.PollOnceSetUrlMap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -465,7 +610,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 UrlMapReferenceResource = new UrlMapReference(),
             };
             // Make the request
-            Operation response = await regionTargetHttpProxiesClient.SetUrlMapAsync(request);
+            lro::Operation<Operation, Operation> response = await regionTargetHttpProxiesClient.SetUrlMapAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionTargetHttpProxiesClient.PollOnceSetUrlMapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -481,7 +642,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string targetHttpProxy = "";
             UrlMapReference urlMapReferenceResource = new UrlMapReference();
             // Make the request
-            Operation response = regionTargetHttpProxiesClient.SetUrlMap(project, region, targetHttpProxy, urlMapReferenceResource);
+            lro::Operation<Operation, Operation> response = regionTargetHttpProxiesClient.SetUrlMap(project, region, targetHttpProxy, urlMapReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionTargetHttpProxiesClient.PollOnceSetUrlMap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -498,7 +675,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string targetHttpProxy = "";
             UrlMapReference urlMapReferenceResource = new UrlMapReference();
             // Make the request
-            Operation response = await regionTargetHttpProxiesClient.SetUrlMapAsync(project, region, targetHttpProxy, urlMapReferenceResource);
+            lro::Operation<Operation, Operation> response = await regionTargetHttpProxiesClient.SetUrlMapAsync(project, region, targetHttpProxy, urlMapReferenceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionTargetHttpProxiesClient.PollOnceSetUrlMapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

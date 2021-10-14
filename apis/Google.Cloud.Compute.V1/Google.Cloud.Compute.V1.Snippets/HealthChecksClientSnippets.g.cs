@@ -21,6 +21,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedHealthChecksClientSnippets
@@ -233,7 +234,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 HealthCheck = "",
             };
             // Make the request
-            Operation response = healthChecksClient.Delete(request);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -252,7 +269,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 HealthCheck = "",
             };
             // Make the request
-            Operation response = await healthChecksClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -266,7 +299,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string healthCheck = "";
             // Make the request
-            Operation response = healthChecksClient.Delete(project, healthCheck);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Delete(project, healthCheck);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -281,7 +330,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string healthCheck = "";
             // Make the request
-            Operation response = await healthChecksClient.DeleteAsync(project, healthCheck);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.DeleteAsync(project, healthCheck);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -363,7 +428,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = healthChecksClient.Insert(request);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -382,7 +463,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = await healthChecksClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -396,7 +493,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             HealthCheck healthCheckResource = new HealthCheck();
             // Make the request
-            Operation response = healthChecksClient.Insert(project, healthCheckResource);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Insert(project, healthCheckResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -411,7 +524,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             HealthCheck healthCheckResource = new HealthCheck();
             // Make the request
-            Operation response = await healthChecksClient.InsertAsync(project, healthCheckResource);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.InsertAsync(project, healthCheckResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -622,7 +751,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 HealthCheck = "",
             };
             // Make the request
-            Operation response = healthChecksClient.Patch(request);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -642,7 +787,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 HealthCheck = "",
             };
             // Make the request
-            Operation response = await healthChecksClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -657,7 +818,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string healthCheck = "";
             HealthCheck healthCheckResource = new HealthCheck();
             // Make the request
-            Operation response = healthChecksClient.Patch(project, healthCheck, healthCheckResource);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Patch(project, healthCheck, healthCheckResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -673,7 +850,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string healthCheck = "";
             HealthCheck healthCheckResource = new HealthCheck();
             // Make the request
-            Operation response = await healthChecksClient.PatchAsync(project, healthCheck, healthCheckResource);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.PatchAsync(project, healthCheck, healthCheckResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -692,7 +885,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 HealthCheck = "",
             };
             // Make the request
-            Operation response = healthChecksClient.Update(request);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Update(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -712,7 +921,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 HealthCheck = "",
             };
             // Make the request
-            Operation response = await healthChecksClient.UpdateAsync(request);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.UpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -727,7 +952,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string healthCheck = "";
             HealthCheck healthCheckResource = new HealthCheck();
             // Make the request
-            Operation response = healthChecksClient.Update(project, healthCheck, healthCheckResource);
+            lro::Operation<Operation, Operation> response = healthChecksClient.Update(project, healthCheck, healthCheckResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = healthChecksClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -743,7 +984,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string healthCheck = "";
             HealthCheck healthCheckResource = new HealthCheck();
             // Make the request
-            Operation response = await healthChecksClient.UpdateAsync(project, healthCheck, healthCheckResource);
+            lro::Operation<Operation, Operation> response = await healthChecksClient.UpdateAsync(project, healthCheck, healthCheckResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await healthChecksClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

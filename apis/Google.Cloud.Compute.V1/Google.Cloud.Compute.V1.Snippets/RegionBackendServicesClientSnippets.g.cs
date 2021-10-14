@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedRegionBackendServicesClientSnippets
@@ -39,7 +40,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendService = "",
             };
             // Make the request
-            Operation response = regionBackendServicesClient.Delete(request);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -59,7 +76,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendService = "",
             };
             // Make the request
-            Operation response = await regionBackendServicesClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -74,7 +107,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string backendService = "";
             // Make the request
-            Operation response = regionBackendServicesClient.Delete(project, region, backendService);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Delete(project, region, backendService);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -90,7 +139,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             string backendService = "";
             // Make the request
-            Operation response = await regionBackendServicesClient.DeleteAsync(project, region, backendService);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.DeleteAsync(project, region, backendService);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -249,7 +314,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendServiceResource = new BackendService(),
             };
             // Make the request
-            Operation response = regionBackendServicesClient.Insert(request);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -269,7 +350,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendServiceResource = new BackendService(),
             };
             // Make the request
-            Operation response = await regionBackendServicesClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -284,7 +381,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             BackendService backendServiceResource = new BackendService();
             // Make the request
-            Operation response = regionBackendServicesClient.Insert(project, region, backendServiceResource);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Insert(project, region, backendServiceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -300,7 +413,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             BackendService backendServiceResource = new BackendService();
             // Make the request
-            Operation response = await regionBackendServicesClient.InsertAsync(project, region, backendServiceResource);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.InsertAsync(project, region, backendServiceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -516,7 +645,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendServiceResource = new BackendService(),
             };
             // Make the request
-            Operation response = regionBackendServicesClient.Patch(request);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Patch(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -537,7 +682,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendServiceResource = new BackendService(),
             };
             // Make the request
-            Operation response = await regionBackendServicesClient.PatchAsync(request);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.PatchAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -553,7 +714,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string backendService = "";
             BackendService backendServiceResource = new BackendService();
             // Make the request
-            Operation response = regionBackendServicesClient.Patch(project, region, backendService, backendServiceResource);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Patch(project, region, backendService, backendServiceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOncePatch(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -570,7 +747,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string backendService = "";
             BackendService backendServiceResource = new BackendService();
             // Make the request
-            Operation response = await regionBackendServicesClient.PatchAsync(project, region, backendService, backendServiceResource);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.PatchAsync(project, region, backendService, backendServiceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -590,7 +783,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendServiceResource = new BackendService(),
             };
             // Make the request
-            Operation response = regionBackendServicesClient.Update(request);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Update(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -611,7 +820,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 BackendServiceResource = new BackendService(),
             };
             // Make the request
-            Operation response = await regionBackendServicesClient.UpdateAsync(request);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.UpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -627,7 +852,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string backendService = "";
             BackendService backendServiceResource = new BackendService();
             // Make the request
-            Operation response = regionBackendServicesClient.Update(project, region, backendService, backendServiceResource);
+            lro::Operation<Operation, Operation> response = regionBackendServicesClient.Update(project, region, backendService, backendServiceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionBackendServicesClient.PollOnceUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -644,7 +885,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string backendService = "";
             BackendService backendServiceResource = new BackendService();
             // Make the request
-            Operation response = await regionBackendServicesClient.UpdateAsync(project, region, backendService, backendServiceResource);
+            lro::Operation<Operation, Operation> response = await regionBackendServicesClient.UpdateAsync(project, region, backendService, backendServiceResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionBackendServicesClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }
