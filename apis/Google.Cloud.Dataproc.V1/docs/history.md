@@ -1,5 +1,9 @@
 # Version history
 
+# Version 3.3.0, released 2021-10-14
+
+- [Commit 7c1e526](https://github.com/googleapis/google-cloud-dotnet/commit/7c1e526): feat: add Dataproc Serverless for Spark Batches API
+
 # Version 3.2.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
