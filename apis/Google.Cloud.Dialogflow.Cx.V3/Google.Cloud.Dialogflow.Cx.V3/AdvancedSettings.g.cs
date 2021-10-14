@@ -63,19 +63,23 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     private static readonly pb::MessageParser<AdvancedSettings> _parser = new pb::MessageParser<AdvancedSettings>(() => new AdvancedSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AdvancedSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdvancedSettings() {
       OnConstruction();
     }
@@ -83,12 +87,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdvancedSettings(AdvancedSettings other) : this() {
       loggingSettings_ = other.loggingSettings_ != null ? other.loggingSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdvancedSettings Clone() {
       return new AdvancedSettings(this);
     }
@@ -104,6 +110,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// - Agent level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Types.LoggingSettings LoggingSettings {
       get { return loggingSettings_; }
       set {
@@ -112,11 +119,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AdvancedSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AdvancedSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -129,6 +138,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (loggingSettings_ != null) hash ^= LoggingSettings.GetHashCode();
@@ -139,11 +149,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -160,6 +172,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (loggingSettings_ != null) {
         output.WriteRawTag(50);
@@ -172,6 +185,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (loggingSettings_ != null) {
@@ -184,6 +198,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AdvancedSettings other) {
       if (other == null) {
         return;
@@ -198,6 +213,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -222,6 +238,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -244,6 +261,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     #region Nested types
     /// <summary>Container for nested types declared in the AdvancedSettings message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Define behaviors on logging.
@@ -256,19 +274,23 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         private static readonly pb::MessageParser<LoggingSettings> _parser = new pb::MessageParser<LoggingSettings>(() => new LoggingSettings());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<LoggingSettings> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettings.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public LoggingSettings() {
           OnConstruction();
         }
@@ -276,6 +298,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public LoggingSettings(LoggingSettings other) : this() {
           enableStackdriverLogging_ = other.enableStackdriverLogging_;
           enableInteractionLogging_ = other.enableInteractionLogging_;
@@ -283,6 +306,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public LoggingSettings Clone() {
           return new LoggingSettings(this);
         }
@@ -294,6 +318,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// If true, StackDriver logging is currently enabled.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool EnableStackdriverLogging {
           get { return enableStackdriverLogging_; }
           set {
@@ -308,6 +333,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         /// If true, DF Interaction logging is currently enabled.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool EnableInteractionLogging {
           get { return enableInteractionLogging_; }
           set {
@@ -316,11 +342,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as LoggingSettings);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(LoggingSettings other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -334,6 +362,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (EnableStackdriverLogging != false) hash ^= EnableStackdriverLogging.GetHashCode();
@@ -345,11 +374,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -370,6 +401,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (EnableStackdriverLogging != false) {
             output.WriteRawTag(16);
@@ -386,6 +418,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (EnableStackdriverLogging != false) {
@@ -401,6 +434,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(LoggingSettings other) {
           if (other == null) {
             return;
@@ -415,6 +449,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -440,6 +475,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
