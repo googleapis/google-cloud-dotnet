@@ -1,5 +1,19 @@
 # Version history
 
+# Version 1.0.0-beta03, released 2021-10-14
+
+- [Commit 77a75b3](https://github.com/googleapis/google-cloud-dotnet/commit/77a75b3): feat!: Generate idiomatic LROs for Google.Cloud.Compute.V1
+
+BREAKING CHANGE: All RPCs representing long running operations
+(LROs) are now exposed using the `Operation<,>` type in the
+Google.LongRunning package. This allows code using the Compute API
+to be equivalent to that of LROs in other packages, even though
+behind the scenes they don't follow the exact same pattern.
+
+In particular, this makes it much easier to wait for an operation to
+complete without writing any manual polling code. However, it is a
+breaking change compared with the previous beta releases.
+
 # Version 1.0.0-beta02, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
