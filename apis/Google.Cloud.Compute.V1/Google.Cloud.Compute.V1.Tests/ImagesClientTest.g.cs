@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using lro = Google.LongRunning;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -27,369 +28,10 @@ namespace Google.Cloud.Compute.V1.Tests
     public sealed class GeneratedImagesClientTest
     {
         [xunit::FactAttribute]
-        public void DeleteRequestObject()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeleteImageRequest request = new DeleteImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteRequestObjectAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeleteImageRequest request = new DeleteImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Delete()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeleteImageRequest request = new DeleteImageRequest
-            {
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Delete(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Delete(request.Project, request.Image);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeleteAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeleteImageRequest request = new DeleteImageRequest
-            {
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeleteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeleteAsync(request.Project, request.Image, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeleteAsync(request.Project, request.Image, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void DeprecateRequestObject()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeprecateImageRequest request = new DeprecateImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                DeprecationStatusResource = new DeprecationStatus(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Deprecate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Deprecate(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeprecateRequestObjectAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeprecateImageRequest request = new DeprecateImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                DeprecationStatusResource = new DeprecationStatus(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeprecateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeprecateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeprecateAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Deprecate()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeprecateImageRequest request = new DeprecateImageRequest
-            {
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                DeprecationStatusResource = new DeprecationStatus(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Deprecate(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Deprecate(request.Project, request.Image, request.DeprecationStatusResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task DeprecateAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            DeprecateImageRequest request = new DeprecateImageRequest
-            {
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                DeprecationStatusResource = new DeprecationStatus(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.DeprecateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.DeprecateAsync(request.Project, request.Image, request.DeprecationStatusResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.DeprecateAsync(request.Project, request.Image, request.DeprecationStatusResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void GetRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -458,6 +100,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -528,6 +171,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void Get()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -596,6 +240,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetImageRequest request = new GetImageRequest
             {
                 Image = "image225a8078",
@@ -666,6 +311,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetFromFamilyRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -734,6 +380,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetFromFamilyRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -804,6 +451,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetFromFamily()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -872,6 +520,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetFromFamilyAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFromFamilyImageRequest request = new GetFromFamilyImageRequest
             {
                 Project = "projectaa6ff846",
@@ -942,6 +591,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicyRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -968,6 +618,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -996,6 +647,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void GetIamPolicy()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -1021,6 +673,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task GetIamPolicyAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetIamPolicyImageRequest request = new GetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -1045,371 +698,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void InsertRequestObject()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            InsertImageRequest request = new InsertImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                ForceCreate = false,
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertRequestObjectAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            InsertImageRequest request = new InsertImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                ForceCreate = false,
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Insert()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            InsertImageRequest request = new InsertImageRequest
-            {
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Insert(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Insert(request.Project, request.ImageResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task InsertAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            InsertImageRequest request = new InsertImageRequest
-            {
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.InsertAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.InsertAsync(request.Project, request.ImageResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.InsertAsync(request.Project, request.ImageResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void PatchRequestObject()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            PatchImageRequest request = new PatchImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchRequestObjectAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            PatchImageRequest request = new PatchImageRequest
-            {
-                RequestId = "request_id362c8df6",
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void Patch()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            PatchImageRequest request = new PatchImageRequest
-            {
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.Patch(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.Patch(request.Project, request.Image, request.ImageResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task PatchAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            PatchImageRequest request = new PatchImageRequest
-            {
-                Image = "image225a8078",
-                Project = "projectaa6ff846",
-                ImageResource = new Image(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.PatchAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.PatchAsync(request.Project, request.Image, request.ImageResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.PatchAsync(request.Project, request.Image, request.ImageResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -1436,6 +728,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -1464,6 +757,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void SetIamPolicy()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -1490,6 +784,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task SetIamPolicyAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             SetIamPolicyImageRequest request = new SetIamPolicyImageRequest
             {
                 Resource = "resource164eab96",
@@ -1515,189 +810,10 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
-        public void SetLabelsRequestObject()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            SetLabelsImageRequest request = new SetLabelsImageRequest
-            {
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLabels(request);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task SetLabelsRequestObjectAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            SetLabelsImageRequest request = new SetLabelsImageRequest
-            {
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.SetLabelsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.SetLabelsAsync(request, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public void SetLabels()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            SetLabelsImageRequest request = new SetLabelsImageRequest
-            {
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation response = client.SetLabels(request.Project, request.Resource, request.GlobalSetLabelsRequestResource);
-            xunit::Assert.Same(expectedResponse, response);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
-        public async stt::Task SetLabelsAsync()
-        {
-            moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
-            SetLabelsImageRequest request = new SetLabelsImageRequest
-            {
-                Resource = "resource164eab96",
-                Project = "projectaa6ff846",
-                GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
-            };
-            Operation expectedResponse = new Operation
-            {
-                Id = 11672635353343658936UL,
-                Kind = "kindf7aa39d9",
-                Name = "name1c9368b0",
-                User = "userb1cb11ee",
-                Zone = "zone255f4ea8",
-                CreationTimestamp = "creation_timestamp235e59a1",
-                StartTime = "start_timebd8dd9c4",
-                OperationGroupId = "operation_group_idd2040cf0",
-                TargetLink = "target_link9b435dc0",
-                Progress = 278622268,
-                Error = new Error(),
-                EndTime = "end_time89285d30",
-                Region = "regionedb20d96",
-                OperationType = "operation_typeece9e153",
-                Status = Operation.Types.Status.Pending,
-                HttpErrorMessage = "http_error_messageb5ef3c7f",
-                TargetId = 6263187990225347157UL,
-                ClientOperationId = "client_operation_id4e51b631",
-                StatusMessage = "status_message2c618f86",
-                HttpErrorStatusCode = 1766362655,
-                Description = "description2cf9da67",
-                InsertTime = "insert_time7467185a",
-                SelfLink = "self_link7e87f12d",
-                Warnings = { new Warnings(), },
-            };
-            mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
-            ImagesClient client = new ImagesClientImpl(mockGrpcClient.Object, null);
-            Operation responseCallSettings = await client.SetLabelsAsync(request.Project, request.Resource, request.GlobalSetLabelsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
-            xunit::Assert.Same(expectedResponse, responseCallSettings);
-            Operation responseCancellationToken = await client.SetLabelsAsync(request.Project, request.Resource, request.GlobalSetLabelsRequestResource, st::CancellationToken.None);
-            xunit::Assert.Same(expectedResponse, responseCancellationToken);
-            mockGrpcClient.VerifyAll();
-        }
-
-        [xunit::FactAttribute]
         public void TestIamPermissionsRequestObject()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",
@@ -1722,6 +838,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsRequestObjectAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",
@@ -1748,6 +865,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public void TestIamPermissions()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",
@@ -1772,6 +890,7 @@ namespace Google.Cloud.Compute.V1.Tests
         public async stt::Task TestIamPermissionsAsync()
         {
             moq::Mock<Images.ImagesClient> mockGrpcClient = new moq::Mock<Images.ImagesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForGlobalOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             TestIamPermissionsImageRequest request = new TestIamPermissionsImageRequest
             {
                 Resource = "resource164eab96",

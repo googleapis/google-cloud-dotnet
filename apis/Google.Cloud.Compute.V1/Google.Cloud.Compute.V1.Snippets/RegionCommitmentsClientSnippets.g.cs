@@ -21,6 +21,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedRegionCommitmentsClientSnippets
@@ -302,7 +303,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 CommitmentResource = new Commitment(),
             };
             // Make the request
-            Operation response = regionCommitmentsClient.Insert(request);
+            lro::Operation<Operation, Operation> response = regionCommitmentsClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionCommitmentsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -322,7 +339,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 CommitmentResource = new Commitment(),
             };
             // Make the request
-            Operation response = await regionCommitmentsClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await regionCommitmentsClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionCommitmentsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -337,7 +370,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             Commitment commitmentResource = new Commitment();
             // Make the request
-            Operation response = regionCommitmentsClient.Insert(project, region, commitmentResource);
+            lro::Operation<Operation, Operation> response = regionCommitmentsClient.Insert(project, region, commitmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionCommitmentsClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -353,7 +402,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string region = "";
             Commitment commitmentResource = new Commitment();
             // Make the request
-            Operation response = await regionCommitmentsClient.InsertAsync(project, region, commitmentResource);
+            lro::Operation<Operation, Operation> response = await regionCommitmentsClient.InsertAsync(project, region, commitmentResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionCommitmentsClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 

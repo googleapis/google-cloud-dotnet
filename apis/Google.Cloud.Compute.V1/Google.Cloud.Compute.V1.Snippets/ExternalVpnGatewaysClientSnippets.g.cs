@@ -20,6 +20,7 @@ namespace Google.Cloud.Compute.V1.Snippets
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+    using lro = Google.LongRunning;
 
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedExternalVpnGatewaysClientSnippets
@@ -38,7 +39,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = externalVpnGatewaysClient.Delete(request);
+            lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.Delete(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = externalVpnGatewaysClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -57,7 +74,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 Project = "",
             };
             // Make the request
-            Operation response = await externalVpnGatewaysClient.DeleteAsync(request);
+            lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.DeleteAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await externalVpnGatewaysClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -71,7 +104,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string externalVpnGateway = "";
             // Make the request
-            Operation response = externalVpnGatewaysClient.Delete(project, externalVpnGateway);
+            lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.Delete(project, externalVpnGateway);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = externalVpnGatewaysClient.PollOnceDelete(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -86,7 +135,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             string externalVpnGateway = "";
             // Make the request
-            Operation response = await externalVpnGatewaysClient.DeleteAsync(project, externalVpnGateway);
+            lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.DeleteAsync(project, externalVpnGateway);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await externalVpnGatewaysClient.PollOnceDeleteAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -168,7 +233,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ExternalVpnGatewayResource = new ExternalVpnGateway(),
             };
             // Make the request
-            Operation response = externalVpnGatewaysClient.Insert(request);
+            lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.Insert(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = externalVpnGatewaysClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -187,7 +268,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 ExternalVpnGatewayResource = new ExternalVpnGateway(),
             };
             // Make the request
-            Operation response = await externalVpnGatewaysClient.InsertAsync(request);
+            lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.InsertAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await externalVpnGatewaysClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -201,7 +298,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             ExternalVpnGateway externalVpnGatewayResource = new ExternalVpnGateway();
             // Make the request
-            Operation response = externalVpnGatewaysClient.Insert(project, externalVpnGatewayResource);
+            lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.Insert(project, externalVpnGatewayResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = externalVpnGatewaysClient.PollOnceInsert(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -216,7 +329,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string project = "";
             ExternalVpnGateway externalVpnGatewayResource = new ExternalVpnGateway();
             // Make the request
-            Operation response = await externalVpnGatewaysClient.InsertAsync(project, externalVpnGatewayResource);
+            lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.InsertAsync(project, externalVpnGatewayResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await externalVpnGatewaysClient.PollOnceInsertAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -426,7 +555,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
-            Operation response = externalVpnGatewaysClient.SetLabels(request);
+            lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.SetLabels(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = externalVpnGatewaysClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -445,7 +590,23 @@ namespace Google.Cloud.Compute.V1.Snippets
                 GlobalSetLabelsRequestResource = new GlobalSetLabelsRequest(),
             };
             // Make the request
-            Operation response = await externalVpnGatewaysClient.SetLabelsAsync(request);
+            lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.SetLabelsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await externalVpnGatewaysClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -460,7 +621,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string resource = "";
             GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
             // Make the request
-            Operation response = externalVpnGatewaysClient.SetLabels(project, resource, globalSetLabelsRequestResource);
+            lro::Operation<Operation, Operation> response = externalVpnGatewaysClient.SetLabels(project, resource, globalSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = externalVpnGatewaysClient.PollOnceSetLabels(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -476,7 +653,23 @@ namespace Google.Cloud.Compute.V1.Snippets
             string resource = "";
             GlobalSetLabelsRequest globalSetLabelsRequestResource = new GlobalSetLabelsRequest();
             // Make the request
-            Operation response = await externalVpnGatewaysClient.SetLabelsAsync(project, resource, globalSetLabelsRequestResource);
+            lro::Operation<Operation, Operation> response = await externalVpnGatewaysClient.SetLabelsAsync(project, resource, globalSetLabelsRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await externalVpnGatewaysClient.PollOnceSetLabelsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
