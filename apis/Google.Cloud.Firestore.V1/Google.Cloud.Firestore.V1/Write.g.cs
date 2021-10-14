@@ -93,19 +93,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<Write> _parser = new pb::MessageParser<Write>(() => new Write());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Write> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Write() {
       OnConstruction();
     }
@@ -113,6 +117,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Write(Write other) : this() {
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       updateTransforms_ = other.updateTransforms_.Clone();
@@ -133,6 +138,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Write Clone() {
       return new Write(this);
     }
@@ -143,6 +149,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// A document to write.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.Document Update {
       get { return operationCase_ == OperationOneofCase.Update ? (global::Google.Cloud.Firestore.V1.Document) operation_ : null; }
       set {
@@ -158,6 +165,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Delete {
       get { return operationCase_ == OperationOneofCase.Delete ? (string) operation_ : ""; }
       set {
@@ -172,6 +180,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// Applies a transformation to a document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.DocumentTransform Transform {
       get { return operationCase_ == OperationOneofCase.Transform ? (global::Google.Cloud.Firestore.V1.DocumentTransform) operation_ : null; }
       set {
@@ -196,6 +205,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The field paths in this mask must not contain a reserved field name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.DocumentMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -216,6 +226,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// document atomically and in order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform> UpdateTransforms {
       get { return updateTransforms_; }
     }
@@ -229,6 +240,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The write will fail if this is set and not met by the target document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.Precondition CurrentDocument {
       get { return currentDocument_; }
       set {
@@ -246,22 +258,26 @@ namespace Google.Cloud.Firestore.V1 {
     }
     private OperationOneofCase operationCase_ = OperationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperationOneofCase OperationCase {
       get { return operationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearOperation() {
       operationCase_ = OperationOneofCase.None;
       operation_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Write);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Write other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -280,6 +296,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (operationCase_ == OperationOneofCase.Update) hash ^= Update.GetHashCode();
@@ -296,11 +313,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -334,6 +353,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (operationCase_ == OperationOneofCase.Update) {
         output.WriteRawTag(10);
@@ -363,6 +383,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (operationCase_ == OperationOneofCase.Update) {
@@ -388,6 +409,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Write other) {
       if (other == null) {
         return;
@@ -427,6 +449,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -484,6 +507,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -549,19 +573,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<DocumentTransform> _parser = new pb::MessageParser<DocumentTransform>(() => new DocumentTransform());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DocumentTransform> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentTransform() {
       OnConstruction();
     }
@@ -569,6 +597,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentTransform(DocumentTransform other) : this() {
       document_ = other.document_;
       fieldTransforms_ = other.fieldTransforms_.Clone();
@@ -576,6 +605,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentTransform Clone() {
       return new DocumentTransform(this);
     }
@@ -587,6 +617,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The name of the document to transform.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Document {
       get { return document_; }
       set {
@@ -605,16 +636,19 @@ namespace Google.Cloud.Firestore.V1 {
     /// This must not be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform> FieldTransforms {
       get { return fieldTransforms_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DocumentTransform);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DocumentTransform other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -628,6 +662,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Document.Length != 0) hash ^= Document.GetHashCode();
@@ -639,11 +674,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -661,6 +698,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Document.Length != 0) {
         output.WriteRawTag(10);
@@ -674,6 +712,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Document.Length != 0) {
@@ -687,6 +726,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DocumentTransform other) {
       if (other == null) {
         return;
@@ -699,6 +739,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -724,6 +765,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -747,6 +789,7 @@ namespace Google.Cloud.Firestore.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the DocumentTransform message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A transformation of a field of the document.
@@ -759,19 +802,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<FieldTransform> _parser = new pb::MessageParser<FieldTransform>(() => new FieldTransform());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<FieldTransform> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.DocumentTransform.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldTransform() {
           OnConstruction();
         }
@@ -779,6 +826,7 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldTransform(FieldTransform other) : this() {
           fieldPath_ = other.fieldPath_;
           switch (other.TransformTypeCase) {
@@ -806,6 +854,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldTransform Clone() {
           return new FieldTransform(this);
         }
@@ -818,6 +867,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// reference.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string FieldPath {
           get { return fieldPath_; }
           set {
@@ -831,6 +881,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// Sets the field to the given server value.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue SetToServerValue {
           get { return transformTypeCase_ == TransformTypeOneofCase.SetToServerValue ? (global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue) transformType_ : global::Google.Cloud.Firestore.V1.DocumentTransform.Types.FieldTransform.Types.ServerValue.Unspecified; }
           set {
@@ -854,6 +905,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// to the largest magnitude positive/negative integer.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.Value Increment {
           get { return transformTypeCase_ == TransformTypeOneofCase.Increment ? (global::Google.Cloud.Firestore.V1.Value) transformType_ : null; }
           set {
@@ -879,6 +931,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The maximum of any numeric value x and NaN is NaN.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.Value Maximum {
           get { return transformTypeCase_ == TransformTypeOneofCase.Maximum ? (global::Google.Cloud.Firestore.V1.Value) transformType_ : null; }
           set {
@@ -904,6 +957,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The minimum of any numeric value x and NaN is NaN.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.Value Minimum {
           get { return transformTypeCase_ == TransformTypeOneofCase.Minimum ? (global::Google.Cloud.Firestore.V1.Value) transformType_ : null; }
           set {
@@ -929,6 +983,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The corresponding transform_result will be the null value.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.ArrayValue AppendMissingElements {
           get { return transformTypeCase_ == TransformTypeOneofCase.AppendMissingElements ? (global::Google.Cloud.Firestore.V1.ArrayValue) transformType_ : null; }
           set {
@@ -952,6 +1007,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The corresponding transform_result will be the null value.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.ArrayValue RemoveAllFromArray {
           get { return transformTypeCase_ == TransformTypeOneofCase.RemoveAllFromArray ? (global::Google.Cloud.Firestore.V1.ArrayValue) transformType_ : null; }
           set {
@@ -973,22 +1029,26 @@ namespace Google.Cloud.Firestore.V1 {
         }
         private TransformTypeOneofCase transformTypeCase_ = TransformTypeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TransformTypeOneofCase TransformTypeCase {
           get { return transformTypeCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearTransformType() {
           transformTypeCase_ = TransformTypeOneofCase.None;
           transformType_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as FieldTransform);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(FieldTransform other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1008,6 +1068,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
@@ -1025,11 +1086,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1070,6 +1133,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (FieldPath.Length != 0) {
             output.WriteRawTag(10);
@@ -1106,6 +1170,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (FieldPath.Length != 0) {
@@ -1136,6 +1201,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(FieldTransform other) {
           if (other == null) {
             return;
@@ -1183,6 +1249,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1254,6 +1321,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1323,6 +1391,7 @@ namespace Google.Cloud.Firestore.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the FieldTransform message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// A value that is calculated by the server.
@@ -1361,19 +1430,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<WriteResult> _parser = new pb::MessageParser<WriteResult>(() => new WriteResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WriteResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WriteResult() {
       OnConstruction();
     }
@@ -1381,6 +1454,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WriteResult(WriteResult other) : this() {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       transformResults_ = other.transformResults_.Clone();
@@ -1388,6 +1462,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WriteResult Clone() {
       return new WriteResult(this);
     }
@@ -1403,6 +1478,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// previous update_time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -1420,16 +1496,19 @@ namespace Google.Cloud.Firestore.V1 {
     /// same order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value> TransformResults {
       get { return transformResults_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WriteResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WriteResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1443,6 +1522,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -1454,11 +1534,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1476,6 +1558,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (updateTime_ != null) {
         output.WriteRawTag(10);
@@ -1489,6 +1572,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (updateTime_ != null) {
@@ -1502,6 +1586,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WriteResult other) {
       if (other == null) {
         return;
@@ -1517,6 +1602,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1545,6 +1631,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1587,19 +1674,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<DocumentChange> _parser = new pb::MessageParser<DocumentChange>(() => new DocumentChange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DocumentChange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentChange() {
       OnConstruction();
     }
@@ -1607,6 +1698,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentChange(DocumentChange other) : this() {
       document_ = other.document_ != null ? other.document_.Clone() : null;
       targetIds_ = other.targetIds_.Clone();
@@ -1615,6 +1707,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentChange Clone() {
       return new DocumentChange(this);
     }
@@ -1628,6 +1721,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// If `mask` is set, contains only fields that were updated or added.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.Document Document {
       get { return document_; }
       set {
@@ -1644,6 +1738,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// A set of target IDs of targets that match this document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> TargetIds {
       get { return targetIds_; }
     }
@@ -1657,16 +1752,19 @@ namespace Google.Cloud.Firestore.V1 {
     /// A set of target IDs for targets that no longer match this document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> RemovedTargetIds {
       get { return removedTargetIds_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DocumentChange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DocumentChange other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1681,6 +1779,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
@@ -1693,11 +1792,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1716,6 +1817,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (document_ != null) {
         output.WriteRawTag(10);
@@ -1730,6 +1832,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (document_ != null) {
@@ -1744,6 +1847,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DocumentChange other) {
       if (other == null) {
         return;
@@ -1760,6 +1864,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1794,6 +1899,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1842,19 +1948,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<DocumentDelete> _parser = new pb::MessageParser<DocumentDelete>(() => new DocumentDelete());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DocumentDelete> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentDelete() {
       OnConstruction();
     }
@@ -1862,6 +1972,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentDelete(DocumentDelete other) : this() {
       document_ = other.document_;
       removedTargetIds_ = other.removedTargetIds_.Clone();
@@ -1870,6 +1981,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentDelete Clone() {
       return new DocumentDelete(this);
     }
@@ -1881,6 +1993,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The resource name of the [Document][google.firestore.v1.Document] that was deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Document {
       get { return document_; }
       set {
@@ -1897,6 +2010,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// A set of target IDs for targets that previously matched this entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> RemovedTargetIds {
       get { return removedTargetIds_; }
     }
@@ -1910,6 +2024,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// Greater or equal to the `commit_time` of the delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
       get { return readTime_; }
       set {
@@ -1918,11 +2033,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DocumentDelete);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DocumentDelete other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1937,6 +2054,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Document.Length != 0) hash ^= Document.GetHashCode();
@@ -1949,11 +2067,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1975,6 +2095,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Document.Length != 0) {
         output.WriteRawTag(10);
@@ -1992,6 +2113,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Document.Length != 0) {
@@ -2008,6 +2130,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DocumentDelete other) {
       if (other == null) {
         return;
@@ -2026,6 +2149,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2059,6 +2183,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2107,19 +2232,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<DocumentRemove> _parser = new pb::MessageParser<DocumentRemove>(() => new DocumentRemove());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DocumentRemove> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentRemove() {
       OnConstruction();
     }
@@ -2127,6 +2256,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentRemove(DocumentRemove other) : this() {
       document_ = other.document_;
       removedTargetIds_ = other.removedTargetIds_.Clone();
@@ -2135,6 +2265,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DocumentRemove Clone() {
       return new DocumentRemove(this);
     }
@@ -2146,6 +2277,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The resource name of the [Document][google.firestore.v1.Document] that has gone out of view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Document {
       get { return document_; }
       set {
@@ -2162,6 +2294,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// A set of target IDs for targets that previously matched this document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> RemovedTargetIds {
       get { return removedTargetIds_; }
     }
@@ -2175,6 +2308,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// Greater or equal to the `commit_time` of the change/delete/remove.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReadTime {
       get { return readTime_; }
       set {
@@ -2183,11 +2317,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DocumentRemove);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DocumentRemove other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2202,6 +2338,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Document.Length != 0) hash ^= Document.GetHashCode();
@@ -2214,11 +2351,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2240,6 +2379,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Document.Length != 0) {
         output.WriteRawTag(10);
@@ -2257,6 +2397,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Document.Length != 0) {
@@ -2273,6 +2414,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DocumentRemove other) {
       if (other == null) {
         return;
@@ -2291,6 +2433,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2324,6 +2467,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2365,19 +2509,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<ExistenceFilter> _parser = new pb::MessageParser<ExistenceFilter>(() => new ExistenceFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExistenceFilter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.WriteReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExistenceFilter() {
       OnConstruction();
     }
@@ -2385,6 +2533,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExistenceFilter(ExistenceFilter other) : this() {
       targetId_ = other.targetId_;
       count_ = other.count_;
@@ -2392,6 +2541,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExistenceFilter Clone() {
       return new ExistenceFilter(this);
     }
@@ -2403,6 +2553,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The target ID to which this filter applies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TargetId {
       get { return targetId_; }
       set {
@@ -2420,6 +2571,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// client must manually determine which documents no longer match the target.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Count {
       get { return count_; }
       set {
@@ -2428,11 +2580,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExistenceFilter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExistenceFilter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2446,6 +2600,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TargetId != 0) hash ^= TargetId.GetHashCode();
@@ -2457,11 +2612,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2482,6 +2639,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TargetId != 0) {
         output.WriteRawTag(8);
@@ -2498,6 +2656,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TargetId != 0) {
@@ -2513,6 +2672,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExistenceFilter other) {
       if (other == null) {
         return;
@@ -2527,6 +2687,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2552,6 +2713,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
