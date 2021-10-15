@@ -20,6 +20,11 @@
 #   docker build -t gcr.io/cloud-devrel-public-resources/owlbot-dotnet .
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic
 
+# Additional tooling required to regenerate.
+RUN apt-get update
+RUN apt-get install -y unzip
+RUN apt-get install -y python3
+
 # Note: main.sh is not packed into the docker image.  This command
 # invokes the current main.sh in the repo.
 CMD ["./owl-bot-post-processor/main.sh"]
