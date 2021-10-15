@@ -1910,6 +1910,328 @@ namespace Google.Cloud.Translate.V3
             lro::Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchTranslateDocumentOperationsClient, callSettings);
 
         /// <summary>
+        /// Translates a large volume of document in asynchronous batch mode.
+        /// This function provides real-time output as the inputs are being processed.
+        /// If caller cancels a request, the partial results (for an input file, it's
+        /// all or nothing) may still be available on the specified output location.
+        /// 
+        /// This call returns immediately and you can use
+        /// google.longrunning.Operation.name to poll the status of the call.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// 
+        /// The `global` location is not supported for batch translation.
+        /// 
+        /// Only AutoML Translation models or glossaries within the same region (have
+        /// the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
+        /// error is returned.
+        /// </param>
+        /// <param name="sourceLanguageCode">
+        /// Required. The BCP-47 language code of the input document if known, for
+        /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// </param>
+        /// <param name="targetLanguageCodes">
+        /// Required. The BCP-47 language code to use for translation of the input
+        /// document. Specify up to 10 language codes here.
+        /// </param>
+        /// <param name="inputConfigs">
+        /// Required. Input configurations.
+        /// The total number of files matched should be &amp;lt;= 100.
+        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The files must use UTF-8 encoding.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. Output configuration.
+        /// If 2 input configs match to the same file (that is, same input path),
+        /// we don't generate output for duplicate inputs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> BatchTranslateDocument(string parent, string sourceLanguageCode, scg::IEnumerable<string> targetLanguageCodes, scg::IEnumerable<BatchDocumentInputConfig> inputConfigs, BatchDocumentOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            BatchTranslateDocument(new BatchTranslateDocumentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SourceLanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceLanguageCode, nameof(sourceLanguageCode)),
+                TargetLanguageCodes =
+                {
+                    gax::GaxPreconditions.CheckNotNull(targetLanguageCodes, nameof(targetLanguageCodes)),
+                },
+                InputConfigs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(inputConfigs, nameof(inputConfigs)),
+                },
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Translates a large volume of document in asynchronous batch mode.
+        /// This function provides real-time output as the inputs are being processed.
+        /// If caller cancels a request, the partial results (for an input file, it's
+        /// all or nothing) may still be available on the specified output location.
+        /// 
+        /// This call returns immediately and you can use
+        /// google.longrunning.Operation.name to poll the status of the call.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// 
+        /// The `global` location is not supported for batch translation.
+        /// 
+        /// Only AutoML Translation models or glossaries within the same region (have
+        /// the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
+        /// error is returned.
+        /// </param>
+        /// <param name="sourceLanguageCode">
+        /// Required. The BCP-47 language code of the input document if known, for
+        /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// </param>
+        /// <param name="targetLanguageCodes">
+        /// Required. The BCP-47 language code to use for translation of the input
+        /// document. Specify up to 10 language codes here.
+        /// </param>
+        /// <param name="inputConfigs">
+        /// Required. Input configurations.
+        /// The total number of files matched should be &amp;lt;= 100.
+        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The files must use UTF-8 encoding.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. Output configuration.
+        /// If 2 input configs match to the same file (that is, same input path),
+        /// we don't generate output for duplicate inputs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata>> BatchTranslateDocumentAsync(string parent, string sourceLanguageCode, scg::IEnumerable<string> targetLanguageCodes, scg::IEnumerable<BatchDocumentInputConfig> inputConfigs, BatchDocumentOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            BatchTranslateDocumentAsync(new BatchTranslateDocumentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SourceLanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceLanguageCode, nameof(sourceLanguageCode)),
+                TargetLanguageCodes =
+                {
+                    gax::GaxPreconditions.CheckNotNull(targetLanguageCodes, nameof(targetLanguageCodes)),
+                },
+                InputConfigs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(inputConfigs, nameof(inputConfigs)),
+                },
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Translates a large volume of document in asynchronous batch mode.
+        /// This function provides real-time output as the inputs are being processed.
+        /// If caller cancels a request, the partial results (for an input file, it's
+        /// all or nothing) may still be available on the specified output location.
+        /// 
+        /// This call returns immediately and you can use
+        /// google.longrunning.Operation.name to poll the status of the call.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// 
+        /// The `global` location is not supported for batch translation.
+        /// 
+        /// Only AutoML Translation models or glossaries within the same region (have
+        /// the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
+        /// error is returned.
+        /// </param>
+        /// <param name="sourceLanguageCode">
+        /// Required. The BCP-47 language code of the input document if known, for
+        /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// </param>
+        /// <param name="targetLanguageCodes">
+        /// Required. The BCP-47 language code to use for translation of the input
+        /// document. Specify up to 10 language codes here.
+        /// </param>
+        /// <param name="inputConfigs">
+        /// Required. Input configurations.
+        /// The total number of files matched should be &amp;lt;= 100.
+        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The files must use UTF-8 encoding.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. Output configuration.
+        /// If 2 input configs match to the same file (that is, same input path),
+        /// we don't generate output for duplicate inputs.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata>> BatchTranslateDocumentAsync(string parent, string sourceLanguageCode, scg::IEnumerable<string> targetLanguageCodes, scg::IEnumerable<BatchDocumentInputConfig> inputConfigs, BatchDocumentOutputConfig outputConfig, st::CancellationToken cancellationToken) =>
+            BatchTranslateDocumentAsync(parent, sourceLanguageCode, targetLanguageCodes, inputConfigs, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Translates a large volume of document in asynchronous batch mode.
+        /// This function provides real-time output as the inputs are being processed.
+        /// If caller cancels a request, the partial results (for an input file, it's
+        /// all or nothing) may still be available on the specified output location.
+        /// 
+        /// This call returns immediately and you can use
+        /// google.longrunning.Operation.name to poll the status of the call.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// 
+        /// The `global` location is not supported for batch translation.
+        /// 
+        /// Only AutoML Translation models or glossaries within the same region (have
+        /// the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
+        /// error is returned.
+        /// </param>
+        /// <param name="sourceLanguageCode">
+        /// Required. The BCP-47 language code of the input document if known, for
+        /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// </param>
+        /// <param name="targetLanguageCodes">
+        /// Required. The BCP-47 language code to use for translation of the input
+        /// document. Specify up to 10 language codes here.
+        /// </param>
+        /// <param name="inputConfigs">
+        /// Required. Input configurations.
+        /// The total number of files matched should be &amp;lt;= 100.
+        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The files must use UTF-8 encoding.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. Output configuration.
+        /// If 2 input configs match to the same file (that is, same input path),
+        /// we don't generate output for duplicate inputs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> BatchTranslateDocument(gagr::LocationName parent, string sourceLanguageCode, scg::IEnumerable<string> targetLanguageCodes, scg::IEnumerable<BatchDocumentInputConfig> inputConfigs, BatchDocumentOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            BatchTranslateDocument(new BatchTranslateDocumentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SourceLanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceLanguageCode, nameof(sourceLanguageCode)),
+                TargetLanguageCodes =
+                {
+                    gax::GaxPreconditions.CheckNotNull(targetLanguageCodes, nameof(targetLanguageCodes)),
+                },
+                InputConfigs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(inputConfigs, nameof(inputConfigs)),
+                },
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Translates a large volume of document in asynchronous batch mode.
+        /// This function provides real-time output as the inputs are being processed.
+        /// If caller cancels a request, the partial results (for an input file, it's
+        /// all or nothing) may still be available on the specified output location.
+        /// 
+        /// This call returns immediately and you can use
+        /// google.longrunning.Operation.name to poll the status of the call.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// 
+        /// The `global` location is not supported for batch translation.
+        /// 
+        /// Only AutoML Translation models or glossaries within the same region (have
+        /// the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
+        /// error is returned.
+        /// </param>
+        /// <param name="sourceLanguageCode">
+        /// Required. The BCP-47 language code of the input document if known, for
+        /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// </param>
+        /// <param name="targetLanguageCodes">
+        /// Required. The BCP-47 language code to use for translation of the input
+        /// document. Specify up to 10 language codes here.
+        /// </param>
+        /// <param name="inputConfigs">
+        /// Required. Input configurations.
+        /// The total number of files matched should be &amp;lt;= 100.
+        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The files must use UTF-8 encoding.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. Output configuration.
+        /// If 2 input configs match to the same file (that is, same input path),
+        /// we don't generate output for duplicate inputs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata>> BatchTranslateDocumentAsync(gagr::LocationName parent, string sourceLanguageCode, scg::IEnumerable<string> targetLanguageCodes, scg::IEnumerable<BatchDocumentInputConfig> inputConfigs, BatchDocumentOutputConfig outputConfig, gaxgrpc::CallSettings callSettings = null) =>
+            BatchTranslateDocumentAsync(new BatchTranslateDocumentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SourceLanguageCode = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceLanguageCode, nameof(sourceLanguageCode)),
+                TargetLanguageCodes =
+                {
+                    gax::GaxPreconditions.CheckNotNull(targetLanguageCodes, nameof(targetLanguageCodes)),
+                },
+                InputConfigs =
+                {
+                    gax::GaxPreconditions.CheckNotNull(inputConfigs, nameof(inputConfigs)),
+                },
+                OutputConfig = gax::GaxPreconditions.CheckNotNull(outputConfig, nameof(outputConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Translates a large volume of document in asynchronous batch mode.
+        /// This function provides real-time output as the inputs are being processed.
+        /// If caller cancels a request, the partial results (for an input file, it's
+        /// all or nothing) may still be available on the specified output location.
+        /// 
+        /// This call returns immediately and you can use
+        /// google.longrunning.Operation.name to poll the status of the call.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Location to make a regional call.
+        /// 
+        /// Format: `projects/{project-number-or-id}/locations/{location-id}`.
+        /// 
+        /// The `global` location is not supported for batch translation.
+        /// 
+        /// Only AutoML Translation models or glossaries within the same region (have
+        /// the same location-id) can be used, otherwise an INVALID_ARGUMENT (400)
+        /// error is returned.
+        /// </param>
+        /// <param name="sourceLanguageCode">
+        /// Required. The BCP-47 language code of the input document if known, for
+        /// example, "en-US" or "sr-Latn". Supported language codes are listed in
+        /// Language Support (https://cloud.google.com/translate/docs/languages).
+        /// </param>
+        /// <param name="targetLanguageCodes">
+        /// Required. The BCP-47 language code to use for translation of the input
+        /// document. Specify up to 10 language codes here.
+        /// </param>
+        /// <param name="inputConfigs">
+        /// Required. Input configurations.
+        /// The total number of files matched should be &amp;lt;= 100.
+        /// The total content size to translate should be &amp;lt;= 100M Unicode codepoints.
+        /// The files must use UTF-8 encoding.
+        /// </param>
+        /// <param name="outputConfig">
+        /// Required. Output configuration.
+        /// If 2 input configs match to the same file (that is, same input path),
+        /// we don't generate output for duplicate inputs.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata>> BatchTranslateDocumentAsync(gagr::LocationName parent, string sourceLanguageCode, scg::IEnumerable<string> targetLanguageCodes, scg::IEnumerable<BatchDocumentInputConfig> inputConfigs, BatchDocumentOutputConfig outputConfig, st::CancellationToken cancellationToken) =>
+            BatchTranslateDocumentAsync(parent, sourceLanguageCode, targetLanguageCodes, inputConfigs, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a glossary and returns the long-running operation. Returns
         /// NOT_FOUND, if the project doesn't exist.
         /// </summary>
