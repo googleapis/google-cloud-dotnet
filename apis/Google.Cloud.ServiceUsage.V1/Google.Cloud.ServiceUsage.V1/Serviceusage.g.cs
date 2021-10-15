@@ -1217,7 +1217,7 @@ namespace Google.Cloud.ServiceUsage.V1 {
     /// <summary>
     /// Requested size of the next page of data.
     /// Requested page size cannot exceed 200.
-    ///  If not set, the default page size is 50.
+    /// If not set, the default page size is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
