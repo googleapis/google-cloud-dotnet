@@ -13,5 +13,5 @@ steps:
         '-f', 'owl-bot-post-processor/Dockerfile', '.' ]
     # Push the docker image.
 images:
-  - gcr.io/cloud-devrel-public-resources/owlbot-nodejs:$SHORT_SHA
-  - gcr.io/cloud-devrel-public-resources/owlbot-nodejs:latest
+  - gcr.io/cloud-devrel-public-resources/owlbot-dotnet:$SHORT_SHA
+  - gcr.io/cloud-devrel-public-resources/owlbot-dotnet:latest
