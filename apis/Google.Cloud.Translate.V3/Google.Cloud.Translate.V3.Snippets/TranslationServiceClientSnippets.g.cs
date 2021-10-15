@@ -651,6 +651,152 @@ namespace Google.Cloud.Translate.V3.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for BatchTranslateDocument</summary>
+        public void BatchTranslateDocument()
+        {
+            // Snippet: BatchTranslateDocument(string, string, IEnumerable<string>, IEnumerable<BatchDocumentInputConfig>, BatchDocumentOutputConfig, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string sourceLanguageCode = "";
+            IEnumerable<string> targetLanguageCodes = new string[] { "", };
+            IEnumerable<BatchDocumentInputConfig> inputConfigs = new BatchDocumentInputConfig[]
+            {
+                new BatchDocumentInputConfig(),
+            };
+            BatchDocumentOutputConfig outputConfig = new BatchDocumentOutputConfig();
+            // Make the request
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = translationServiceClient.BatchTranslateDocument(parent, sourceLanguageCode, targetLanguageCodes, inputConfigs, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchTranslateDocumentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> retrievedResponse = translationServiceClient.PollOnceBatchTranslateDocument(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchTranslateDocumentResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchTranslateDocumentAsync</summary>
+        public async Task BatchTranslateDocumentAsync()
+        {
+            // Snippet: BatchTranslateDocumentAsync(string, string, IEnumerable<string>, IEnumerable<BatchDocumentInputConfig>, BatchDocumentOutputConfig, CallSettings)
+            // Additional: BatchTranslateDocumentAsync(string, string, IEnumerable<string>, IEnumerable<BatchDocumentInputConfig>, BatchDocumentOutputConfig, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string sourceLanguageCode = "";
+            IEnumerable<string> targetLanguageCodes = new string[] { "", };
+            IEnumerable<BatchDocumentInputConfig> inputConfigs = new BatchDocumentInputConfig[]
+            {
+                new BatchDocumentInputConfig(),
+            };
+            BatchDocumentOutputConfig outputConfig = new BatchDocumentOutputConfig();
+            // Make the request
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = await translationServiceClient.BatchTranslateDocumentAsync(parent, sourceLanguageCode, targetLanguageCodes, inputConfigs, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchTranslateDocumentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> retrievedResponse = await translationServiceClient.PollOnceBatchTranslateDocumentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchTranslateDocumentResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchTranslateDocument</summary>
+        public void BatchTranslateDocumentResourceNames()
+        {
+            // Snippet: BatchTranslateDocument(LocationName, string, IEnumerable<string>, IEnumerable<BatchDocumentInputConfig>, BatchDocumentOutputConfig, CallSettings)
+            // Create client
+            TranslationServiceClient translationServiceClient = TranslationServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string sourceLanguageCode = "";
+            IEnumerable<string> targetLanguageCodes = new string[] { "", };
+            IEnumerable<BatchDocumentInputConfig> inputConfigs = new BatchDocumentInputConfig[]
+            {
+                new BatchDocumentInputConfig(),
+            };
+            BatchDocumentOutputConfig outputConfig = new BatchDocumentOutputConfig();
+            // Make the request
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = translationServiceClient.BatchTranslateDocument(parent, sourceLanguageCode, targetLanguageCodes, inputConfigs, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BatchTranslateDocumentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> retrievedResponse = translationServiceClient.PollOnceBatchTranslateDocument(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchTranslateDocumentResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchTranslateDocumentAsync</summary>
+        public async Task BatchTranslateDocumentResourceNamesAsync()
+        {
+            // Snippet: BatchTranslateDocumentAsync(LocationName, string, IEnumerable<string>, IEnumerable<BatchDocumentInputConfig>, BatchDocumentOutputConfig, CallSettings)
+            // Additional: BatchTranslateDocumentAsync(LocationName, string, IEnumerable<string>, IEnumerable<BatchDocumentInputConfig>, BatchDocumentOutputConfig, CancellationToken)
+            // Create client
+            TranslationServiceClient translationServiceClient = await TranslationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string sourceLanguageCode = "";
+            IEnumerable<string> targetLanguageCodes = new string[] { "", };
+            IEnumerable<BatchDocumentInputConfig> inputConfigs = new BatchDocumentInputConfig[]
+            {
+                new BatchDocumentInputConfig(),
+            };
+            BatchDocumentOutputConfig outputConfig = new BatchDocumentOutputConfig();
+            // Make the request
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> response = await translationServiceClient.BatchTranslateDocumentAsync(parent, sourceLanguageCode, targetLanguageCodes, inputConfigs, outputConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BatchTranslateDocumentResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BatchTranslateDocumentResponse, BatchTranslateDocumentMetadata> retrievedResponse = await translationServiceClient.PollOnceBatchTranslateDocumentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BatchTranslateDocumentResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateGlossary</summary>
         public void CreateGlossaryRequestObject()
         {
