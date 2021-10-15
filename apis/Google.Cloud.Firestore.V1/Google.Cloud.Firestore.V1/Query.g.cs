@@ -107,19 +107,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<StructuredQuery> _parser = new pb::MessageParser<StructuredQuery>(() => new StructuredQuery());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StructuredQuery> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StructuredQuery() {
       OnConstruction();
     }
@@ -127,6 +131,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StructuredQuery(StructuredQuery other) : this() {
       select_ = other.select_ != null ? other.select_.Clone() : null;
       from_ = other.from_.Clone();
@@ -140,6 +145,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StructuredQuery Clone() {
       return new StructuredQuery(this);
     }
@@ -151,6 +157,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The projection to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Projection Select {
       get { return select_; }
       set {
@@ -167,6 +174,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The collections to query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CollectionSelector> From {
       get { return from_; }
     }
@@ -178,6 +186,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// The filter to apply.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter Where {
       get { return where_; }
       set {
@@ -211,6 +220,7 @@ namespace Google.Cloud.Firestore.V1 {
     ///    `SELECT * FROM Foo WHERE A > 1 ORDER BY A, __name__`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Order> OrderBy {
       get { return orderBy_; }
     }
@@ -222,6 +232,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// A starting point for the query results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.Cursor StartAt {
       get { return startAt_; }
       set {
@@ -236,6 +247,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// A end point for the query results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Firestore.V1.Cursor EndAt {
       get { return endAt_; }
       set {
@@ -253,6 +265,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Offset {
       get { return offset_; }
       set {
@@ -271,6 +284,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// Must be >= 0 if specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int? Limit {
       get { return limit_; }
       set {
@@ -280,11 +294,13 @@ namespace Google.Cloud.Firestore.V1 {
 
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StructuredQuery);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StructuredQuery other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -304,6 +320,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (select_ != null) hash ^= Select.GetHashCode();
@@ -321,11 +338,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -363,6 +382,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (select_ != null) {
         output.WriteRawTag(10);
@@ -396,6 +416,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (select_ != null) {
@@ -425,6 +446,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StructuredQuery other) {
       if (other == null) {
         return;
@@ -467,6 +489,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -531,6 +554,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -593,6 +617,7 @@ namespace Google.Cloud.Firestore.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the StructuredQuery message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A sort direction.
@@ -623,19 +648,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<CollectionSelector> _parser = new pb::MessageParser<CollectionSelector>(() => new CollectionSelector());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<CollectionSelector> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CollectionSelector() {
           OnConstruction();
         }
@@ -643,6 +672,7 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CollectionSelector(CollectionSelector other) : this() {
           collectionId_ = other.collectionId_;
           allDescendants_ = other.allDescendants_;
@@ -650,6 +680,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CollectionSelector Clone() {
           return new CollectionSelector(this);
         }
@@ -662,6 +693,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// When set, selects only collections with this ID.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string CollectionId {
           get { return collectionId_; }
           set {
@@ -678,6 +710,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// When true, selects all descendant collections.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllDescendants {
           get { return allDescendants_; }
           set {
@@ -686,11 +719,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as CollectionSelector);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(CollectionSelector other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -704,6 +739,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (CollectionId.Length != 0) hash ^= CollectionId.GetHashCode();
@@ -715,11 +751,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -740,6 +778,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (CollectionId.Length != 0) {
             output.WriteRawTag(18);
@@ -756,6 +795,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (CollectionId.Length != 0) {
@@ -771,6 +811,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(CollectionSelector other) {
           if (other == null) {
             return;
@@ -785,6 +826,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -810,6 +852,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -843,19 +886,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Filter> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Filter() {
           OnConstruction();
         }
@@ -863,6 +910,7 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Filter(Filter other) : this() {
           switch (other.FilterTypeCase) {
             case FilterTypeOneofCase.CompositeFilter:
@@ -880,6 +928,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Filter Clone() {
           return new Filter(this);
         }
@@ -890,6 +939,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// A composite filter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter CompositeFilter {
           get { return filterTypeCase_ == FilterTypeOneofCase.CompositeFilter ? (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter) filterType_ : null; }
           set {
@@ -904,6 +954,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// A filter on a document field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter FieldFilter {
           get { return filterTypeCase_ == FilterTypeOneofCase.FieldFilter ? (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter) filterType_ : null; }
           set {
@@ -918,6 +969,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// A filter that takes exactly one argument.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter UnaryFilter {
           get { return filterTypeCase_ == FilterTypeOneofCase.UnaryFilter ? (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter) filterType_ : null; }
           set {
@@ -936,22 +988,26 @@ namespace Google.Cloud.Firestore.V1 {
         }
         private FilterTypeOneofCase filterTypeCase_ = FilterTypeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FilterTypeOneofCase FilterTypeCase {
           get { return filterTypeCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearFilterType() {
           filterTypeCase_ = FilterTypeOneofCase.None;
           filterType_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Filter);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Filter other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -967,6 +1023,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (filterTypeCase_ == FilterTypeOneofCase.CompositeFilter) hash ^= CompositeFilter.GetHashCode();
@@ -980,11 +1037,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1009,6 +1068,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (filterTypeCase_ == FilterTypeOneofCase.CompositeFilter) {
             output.WriteRawTag(10);
@@ -1029,6 +1089,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (filterTypeCase_ == FilterTypeOneofCase.CompositeFilter) {
@@ -1047,6 +1108,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Filter other) {
           if (other == null) {
             return;
@@ -1076,6 +1138,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1120,6 +1183,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1172,19 +1236,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<CompositeFilter> _parser = new pb::MessageParser<CompositeFilter>(() => new CompositeFilter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<CompositeFilter> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CompositeFilter() {
           OnConstruction();
         }
@@ -1192,6 +1260,7 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CompositeFilter(CompositeFilter other) : this() {
           op_ = other.op_;
           filters_ = other.filters_.Clone();
@@ -1199,6 +1268,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CompositeFilter Clone() {
           return new CompositeFilter(this);
         }
@@ -1210,6 +1280,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The operator for combining multiple filters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator Op {
           get { return op_; }
           set {
@@ -1227,16 +1298,19 @@ namespace Google.Cloud.Firestore.V1 {
         /// Must contain at least one filter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Filter> Filters {
           get { return filters_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as CompositeFilter);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(CompositeFilter other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1250,6 +1324,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
@@ -1261,11 +1336,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1283,6 +1360,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified) {
             output.WriteRawTag(8);
@@ -1296,6 +1374,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.CompositeFilter.Types.Operator.Unspecified) {
@@ -1309,6 +1388,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(CompositeFilter other) {
           if (other == null) {
             return;
@@ -1321,6 +1401,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1346,6 +1427,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1369,6 +1451,7 @@ namespace Google.Cloud.Firestore.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the CompositeFilter message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// A composite filter operator.
@@ -1400,19 +1483,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<FieldFilter> _parser = new pb::MessageParser<FieldFilter>(() => new FieldFilter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<FieldFilter> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldFilter() {
           OnConstruction();
         }
@@ -1420,6 +1507,7 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldFilter(FieldFilter other) : this() {
           field_ = other.field_ != null ? other.field_.Clone() : null;
           op_ = other.op_;
@@ -1428,6 +1516,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldFilter Clone() {
           return new FieldFilter(this);
         }
@@ -1439,6 +1528,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The field to filter by.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference Field {
           get { return field_; }
           set {
@@ -1453,6 +1543,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The operator to filter by.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldFilter.Types.Operator Op {
           get { return op_; }
           set {
@@ -1467,6 +1558,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The value to compare to.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.Value Value {
           get { return value_; }
           set {
@@ -1475,11 +1567,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as FieldFilter);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(FieldFilter other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1494,6 +1588,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (field_ != null) hash ^= Field.GetHashCode();
@@ -1506,11 +1601,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1535,6 +1632,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (field_ != null) {
             output.WriteRawTag(10);
@@ -1555,6 +1653,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (field_ != null) {
@@ -1573,6 +1672,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(FieldFilter other) {
           if (other == null) {
             return;
@@ -1596,6 +1696,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1631,6 +1732,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1664,6 +1766,7 @@ namespace Google.Cloud.Firestore.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the FieldFilter message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// A field filter operator.
@@ -1770,19 +1873,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<UnaryFilter> _parser = new pb::MessageParser<UnaryFilter>(() => new UnaryFilter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<UnaryFilter> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public UnaryFilter() {
           OnConstruction();
         }
@@ -1790,6 +1897,7 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public UnaryFilter(UnaryFilter other) : this() {
           op_ = other.op_;
           switch (other.OperandTypeCase) {
@@ -1802,6 +1910,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public UnaryFilter Clone() {
           return new UnaryFilter(this);
         }
@@ -1813,6 +1922,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The unary operator to apply.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator Op {
           get { return op_; }
           set {
@@ -1826,6 +1936,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The field to which to apply the operator.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference Field {
           get { return operandTypeCase_ == OperandTypeOneofCase.Field ? (global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference) operandType_ : null; }
           set {
@@ -1842,22 +1953,26 @@ namespace Google.Cloud.Firestore.V1 {
         }
         private OperandTypeOneofCase operandTypeCase_ = OperandTypeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OperandTypeOneofCase OperandTypeCase {
           get { return operandTypeCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearOperandType() {
           operandTypeCase_ = OperandTypeOneofCase.None;
           operandType_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as UnaryFilter);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(UnaryFilter other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1872,6 +1987,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified) hash ^= Op.GetHashCode();
@@ -1884,11 +2000,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1909,6 +2027,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified) {
             output.WriteRawTag(8);
@@ -1925,6 +2044,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Op != global::Google.Cloud.Firestore.V1.StructuredQuery.Types.UnaryFilter.Types.Operator.Unspecified) {
@@ -1940,6 +2060,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(UnaryFilter other) {
           if (other == null) {
             return;
@@ -1960,6 +2081,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1990,6 +2112,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2018,6 +2141,7 @@ namespace Google.Cloud.Firestore.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the UnaryFilter message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// A unary operator.
@@ -2071,19 +2195,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<Order> _parser = new pb::MessageParser<Order>(() => new Order());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Order> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Order() {
           OnConstruction();
         }
@@ -2091,6 +2219,7 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Order(Order other) : this() {
           field_ = other.field_ != null ? other.field_.Clone() : null;
           direction_ = other.direction_;
@@ -2098,6 +2227,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Order Clone() {
           return new Order(this);
         }
@@ -2109,6 +2239,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The field to order by.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference Field {
           get { return field_; }
           set {
@@ -2123,6 +2254,7 @@ namespace Google.Cloud.Firestore.V1 {
         /// The direction to order by. Defaults to `ASCENDING`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Firestore.V1.StructuredQuery.Types.Direction Direction {
           get { return direction_; }
           set {
@@ -2131,11 +2263,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Order);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Order other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2149,6 +2283,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (field_ != null) hash ^= Field.GetHashCode();
@@ -2160,11 +2295,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2185,6 +2322,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (field_ != null) {
             output.WriteRawTag(10);
@@ -2201,6 +2339,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (field_ != null) {
@@ -2216,6 +2355,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Order other) {
           if (other == null) {
             return;
@@ -2233,6 +2373,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2261,6 +2402,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2297,19 +2439,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<FieldReference> _parser = new pb::MessageParser<FieldReference>(() => new FieldReference());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<FieldReference> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldReference() {
           OnConstruction();
         }
@@ -2317,12 +2463,14 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldReference(FieldReference other) : this() {
           fieldPath_ = other.fieldPath_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FieldReference Clone() {
           return new FieldReference(this);
         }
@@ -2331,6 +2479,7 @@ namespace Google.Cloud.Firestore.V1 {
         public const int FieldPathFieldNumber = 2;
         private string fieldPath_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string FieldPath {
           get { return fieldPath_; }
           set {
@@ -2339,11 +2488,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as FieldReference);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(FieldReference other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2356,6 +2507,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (FieldPath.Length != 0) hash ^= FieldPath.GetHashCode();
@@ -2366,11 +2518,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2387,6 +2541,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (FieldPath.Length != 0) {
             output.WriteRawTag(18);
@@ -2399,6 +2554,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (FieldPath.Length != 0) {
@@ -2411,6 +2567,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(FieldReference other) {
           if (other == null) {
             return;
@@ -2422,6 +2579,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2443,6 +2601,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2472,19 +2631,23 @@ namespace Google.Cloud.Firestore.V1 {
         private static readonly pb::MessageParser<Projection> _parser = new pb::MessageParser<Projection>(() => new Projection());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Projection> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Firestore.V1.StructuredQuery.Descriptor.NestedTypes[7]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Projection() {
           OnConstruction();
         }
@@ -2492,12 +2655,14 @@ namespace Google.Cloud.Firestore.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Projection(Projection other) : this() {
           fields_ = other.fields_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Projection Clone() {
           return new Projection(this);
         }
@@ -2514,16 +2679,19 @@ namespace Google.Cloud.Firestore.V1 {
         /// of the document, use `['__name__']`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.StructuredQuery.Types.FieldReference> Fields {
           get { return fields_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Projection);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Projection other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2536,6 +2704,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= fields_.GetHashCode();
@@ -2546,11 +2715,13 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2564,6 +2735,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           fields_.WriteTo(ref output, _repeated_fields_codec);
           if (_unknownFields != null) {
@@ -2573,6 +2745,7 @@ namespace Google.Cloud.Firestore.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += fields_.CalculateSize(_repeated_fields_codec);
@@ -2583,6 +2756,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Projection other) {
           if (other == null) {
             return;
@@ -2592,6 +2766,7 @@ namespace Google.Cloud.Firestore.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2613,6 +2788,7 @@ namespace Google.Cloud.Firestore.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2647,19 +2823,23 @@ namespace Google.Cloud.Firestore.V1 {
     private static readonly pb::MessageParser<Cursor> _parser = new pb::MessageParser<Cursor>(() => new Cursor());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Cursor> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Firestore.V1.QueryReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Cursor() {
       OnConstruction();
     }
@@ -2667,6 +2847,7 @@ namespace Google.Cloud.Firestore.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Cursor(Cursor other) : this() {
       values_ = other.values_.Clone();
       before_ = other.before_;
@@ -2674,6 +2855,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Cursor Clone() {
       return new Cursor(this);
     }
@@ -2690,6 +2872,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// Can contain fewer values than specified in the order by clause.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Firestore.V1.Value> Values {
       get { return values_; }
     }
@@ -2702,6 +2885,7 @@ namespace Google.Cloud.Firestore.V1 {
     /// to the sort order defined by the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Before {
       get { return before_; }
       set {
@@ -2710,11 +2894,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Cursor);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Cursor other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2728,6 +2914,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= values_.GetHashCode();
@@ -2739,11 +2926,13 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2761,6 +2950,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       values_.WriteTo(ref output, _repeated_values_codec);
       if (Before != false) {
@@ -2774,6 +2964,7 @@ namespace Google.Cloud.Firestore.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += values_.CalculateSize(_repeated_values_codec);
@@ -2787,6 +2978,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Cursor other) {
       if (other == null) {
         return;
@@ -2799,6 +2991,7 @@ namespace Google.Cloud.Firestore.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2824,6 +3017,7 @@ namespace Google.Cloud.Firestore.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
