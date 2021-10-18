@@ -3699,7 +3699,7 @@ namespace Google.Cloud.Kms.V1
         /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
         /// <param name="digest">
-        /// Required. The digest of the data to sign. The digest must be produced with
+        /// Optional. The digest of the data to sign. The digest must be produced with
         /// the same digest algorithm as specified by the key version's
         /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
         /// </param>
@@ -3709,7 +3709,7 @@ namespace Google.Cloud.Kms.V1
             AsymmetricSign(new AsymmetricSignRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                Digest = gax::GaxPreconditions.CheckNotNull(digest, nameof(digest)),
+                Digest = digest,
             }, callSettings);
 
         /// <summary>
@@ -3721,7 +3721,7 @@ namespace Google.Cloud.Kms.V1
         /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
         /// <param name="digest">
-        /// Required. The digest of the data to sign. The digest must be produced with
+        /// Optional. The digest of the data to sign. The digest must be produced with
         /// the same digest algorithm as specified by the key version's
         /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
         /// </param>
@@ -3731,7 +3731,7 @@ namespace Google.Cloud.Kms.V1
             AsymmetricSignAsync(new AsymmetricSignRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                Digest = gax::GaxPreconditions.CheckNotNull(digest, nameof(digest)),
+                Digest = digest,
             }, callSettings);
 
         /// <summary>
@@ -3743,7 +3743,7 @@ namespace Google.Cloud.Kms.V1
         /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
         /// <param name="digest">
-        /// Required. The digest of the data to sign. The digest must be produced with
+        /// Optional. The digest of the data to sign. The digest must be produced with
         /// the same digest algorithm as specified by the key version's
         /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
         /// </param>
@@ -3761,7 +3761,7 @@ namespace Google.Cloud.Kms.V1
         /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
         /// <param name="digest">
-        /// Required. The digest of the data to sign. The digest must be produced with
+        /// Optional. The digest of the data to sign. The digest must be produced with
         /// the same digest algorithm as specified by the key version's
         /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
         /// </param>
@@ -3771,7 +3771,7 @@ namespace Google.Cloud.Kms.V1
             AsymmetricSign(new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                Digest = gax::GaxPreconditions.CheckNotNull(digest, nameof(digest)),
+                Digest = digest,
             }, callSettings);
 
         /// <summary>
@@ -3783,7 +3783,7 @@ namespace Google.Cloud.Kms.V1
         /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
         /// <param name="digest">
-        /// Required. The digest of the data to sign. The digest must be produced with
+        /// Optional. The digest of the data to sign. The digest must be produced with
         /// the same digest algorithm as specified by the key version's
         /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
         /// </param>
@@ -3793,7 +3793,7 @@ namespace Google.Cloud.Kms.V1
             AsymmetricSignAsync(new AsymmetricSignRequest
             {
                 CryptoKeyVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                Digest = gax::GaxPreconditions.CheckNotNull(digest, nameof(digest)),
+                Digest = digest,
             }, callSettings);
 
         /// <summary>
@@ -3805,7 +3805,7 @@ namespace Google.Cloud.Kms.V1
         /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
         /// </param>
         /// <param name="digest">
-        /// Required. The digest of the data to sign. The digest must be produced with
+        /// Optional. The digest of the data to sign. The digest must be produced with
         /// the same digest algorithm as specified by the key version's
         /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
         /// </param>
