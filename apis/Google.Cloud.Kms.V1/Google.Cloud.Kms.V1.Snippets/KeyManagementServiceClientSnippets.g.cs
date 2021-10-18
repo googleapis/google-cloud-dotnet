@@ -2624,6 +2624,8 @@ namespace Google.Cloud.Kms.V1.Snippets
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Digest = new Digest(),
                 DigestCrc32C = 0L,
+                Data = ByteString.Empty,
+                DataCrc32C = 0L,
             };
             // Make the request
             AsymmetricSignResponse response = keyManagementServiceClient.AsymmetricSign(request);
@@ -2643,6 +2645,8 @@ namespace Google.Cloud.Kms.V1.Snippets
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 Digest = new Digest(),
                 DigestCrc32C = 0L,
+                Data = ByteString.Empty,
+                DataCrc32C = 0L,
             };
             // Make the request
             AsymmetricSignResponse response = await keyManagementServiceClient.AsymmetricSignAsync(request);
