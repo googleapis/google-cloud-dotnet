@@ -3,7 +3,7 @@
 //     source: google/cloud/domains/v1beta1/domains.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -76,6 +76,12 @@ namespace Google.Cloud.Domains.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest> __Marshaller_google_cloud_domains_v1beta1_RetrieveTransferParametersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse> __Marshaller_google_cloud_domains_v1beta1_RetrieveTransferParametersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest> __Marshaller_google_cloud_domains_v1beta1_TransferDomainRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse> __Marshaller_google_cloud_domains_v1beta1_ListRegistrationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse.Parser));
@@ -124,6 +130,22 @@ namespace Google.Cloud.Domains.V1Beta1 {
         __ServiceName,
         "RegisterDomain",
         __Marshaller_google_cloud_domains_v1beta1_RegisterDomainRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest, global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse> __Method_RetrieveTransferParameters = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest, global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RetrieveTransferParameters",
+        __Marshaller_google_cloud_domains_v1beta1_RetrieveTransferParametersRequest,
+        __Marshaller_google_cloud_domains_v1beta1_RetrieveTransferParametersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest, global::Google.LongRunning.Operation> __Method_TransferDomain = new grpc::Method<global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TransferDomain",
+        __Marshaller_google_cloud_domains_v1beta1_TransferDomainRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -270,6 +292,53 @@ namespace Google.Cloud.Domains.V1Beta1 {
       }
 
       /// <summary>
+      /// Gets parameters needed to transfer a domain name from another registrar to
+      /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+      /// Domains is not supported.
+      ///
+      /// Use the returned values to call `TransferDomain`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse> RetrieveTransferParameters(global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Transfers a domain name from another registrar to Cloud Domains.  For
+      /// domains managed by Google Domains, transferring to Cloud Domains is not
+      /// supported.
+      ///
+      /// Before calling this method, go to the domain's current registrar to unlock
+      /// the domain for transfer and retrieve the domain's transfer authorization
+      /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+      /// unlocked and to get values needed to build a call to this method.
+      ///
+      /// A successful call creates a `Registration` resource in state
+      /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+      /// process. The registrant can often speed up this process by approving the
+      /// transfer through the current registrar, either by clicking a link in an
+      /// email from the registrar or by visiting the registrar's website.
+      ///
+      /// A few minutes after transfer approval, the resource transitions to state
+      /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+      /// rejected or the request expires without being approved, the resource can
+      /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+      /// the resource and retry the transfer.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TransferDomain(global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists the `Registration` resources in a project.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -348,20 +417,15 @@ namespace Google.Cloud.Domains.V1Beta1 {
       }
 
       /// <summary>
-      /// Exports a `Registration` that you no longer want to use with
-      /// Cloud Domains. You can continue to use the domain in
-      /// [Google Domains](https://domains.google/) until it expires.
+      /// Exports a `Registration` resource, such that it is no longer managed by
+      /// Cloud Domains.
       ///
-      /// If the export is successful:
-      ///
-      /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-      /// managed by Cloud Domains
-      /// * Because individual users can own domains in Google Domains, the calling
-      /// user becomes the domain's sole owner. Permissions for the domain are
-      /// subsequently managed in Google Domains.
-      /// * Without further action, the domain does not renew automatically.
-      /// The new owner can set up billing in Google Domains to renew the domain
-      /// if needed.
+      /// When an active domain is successfully exported, you can continue to use the
+      /// domain in [Google Domains](https://domains.google/) until it expires. The
+      /// calling user becomes the domain's sole owner in Google Domains, and
+      /// permissions for the domain are subsequently managed there. The domain does
+      /// not renew automatically unless the new owner sets up billing in Google
+      /// Domains.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -375,10 +439,23 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <summary>
       /// Deletes a `Registration` resource.
       ///
-      /// This method only works on resources in one of the following states:
+      /// This method works on any `Registration` resource using [Subscription or
+      /// Commitment billing](/domains/pricing#billing-models), provided that the
+      /// resource was created at least 1 day in the past.
+      ///
+      /// For `Registration` resources using
+      /// [Monthly billing](/domains/pricing#billing-models), this method works if:
       ///
       /// * `state` is `EXPORTED` with `expire_time` in the past
       /// * `state` is `REGISTRATION_FAILED`
+      /// * `state` is `TRANSFER_FAILED`
+      ///
+      /// When an active registration is successfully deleted, you can continue to
+      /// use the domain in [Google Domains](https://domains.google/) until it
+      /// expires. The calling user becomes the domain's sole owner in Google
+      /// Domains, and permissions for the domain are subsequently managed there. The
+      /// domain does not renew automatically unless the new owner sets up billing in
+      /// Google Domains.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -660,6 +737,194 @@ namespace Google.Cloud.Domains.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RegisterDomainAsync(global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RegisterDomain, null, options, request);
+      }
+      /// <summary>
+      /// Gets parameters needed to transfer a domain name from another registrar to
+      /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+      /// Domains is not supported.
+      ///
+      /// Use the returned values to call `TransferDomain`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse RetrieveTransferParameters(global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveTransferParameters(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets parameters needed to transfer a domain name from another registrar to
+      /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+      /// Domains is not supported.
+      ///
+      /// Use the returned values to call `TransferDomain`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse RetrieveTransferParameters(global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RetrieveTransferParameters, null, options, request);
+      }
+      /// <summary>
+      /// Gets parameters needed to transfer a domain name from another registrar to
+      /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+      /// Domains is not supported.
+      ///
+      /// Use the returned values to call `TransferDomain`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveTransferParametersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets parameters needed to transfer a domain name from another registrar to
+      /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+      /// Domains is not supported.
+      ///
+      /// Use the returned values to call `TransferDomain`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RetrieveTransferParameters, null, options, request);
+      }
+      /// <summary>
+      /// Transfers a domain name from another registrar to Cloud Domains.  For
+      /// domains managed by Google Domains, transferring to Cloud Domains is not
+      /// supported.
+      ///
+      /// Before calling this method, go to the domain's current registrar to unlock
+      /// the domain for transfer and retrieve the domain's transfer authorization
+      /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+      /// unlocked and to get values needed to build a call to this method.
+      ///
+      /// A successful call creates a `Registration` resource in state
+      /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+      /// process. The registrant can often speed up this process by approving the
+      /// transfer through the current registrar, either by clicking a link in an
+      /// email from the registrar or by visiting the registrar's website.
+      ///
+      /// A few minutes after transfer approval, the resource transitions to state
+      /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+      /// rejected or the request expires without being approved, the resource can
+      /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+      /// the resource and retry the transfer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TransferDomain(global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TransferDomain(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Transfers a domain name from another registrar to Cloud Domains.  For
+      /// domains managed by Google Domains, transferring to Cloud Domains is not
+      /// supported.
+      ///
+      /// Before calling this method, go to the domain's current registrar to unlock
+      /// the domain for transfer and retrieve the domain's transfer authorization
+      /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+      /// unlocked and to get values needed to build a call to this method.
+      ///
+      /// A successful call creates a `Registration` resource in state
+      /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+      /// process. The registrant can often speed up this process by approving the
+      /// transfer through the current registrar, either by clicking a link in an
+      /// email from the registrar or by visiting the registrar's website.
+      ///
+      /// A few minutes after transfer approval, the resource transitions to state
+      /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+      /// rejected or the request expires without being approved, the resource can
+      /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+      /// the resource and retry the transfer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation TransferDomain(global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TransferDomain, null, options, request);
+      }
+      /// <summary>
+      /// Transfers a domain name from another registrar to Cloud Domains.  For
+      /// domains managed by Google Domains, transferring to Cloud Domains is not
+      /// supported.
+      ///
+      /// Before calling this method, go to the domain's current registrar to unlock
+      /// the domain for transfer and retrieve the domain's transfer authorization
+      /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+      /// unlocked and to get values needed to build a call to this method.
+      ///
+      /// A successful call creates a `Registration` resource in state
+      /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+      /// process. The registrant can often speed up this process by approving the
+      /// transfer through the current registrar, either by clicking a link in an
+      /// email from the registrar or by visiting the registrar's website.
+      ///
+      /// A few minutes after transfer approval, the resource transitions to state
+      /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+      /// rejected or the request expires without being approved, the resource can
+      /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+      /// the resource and retry the transfer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TransferDomainAsync(global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TransferDomainAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Transfers a domain name from another registrar to Cloud Domains.  For
+      /// domains managed by Google Domains, transferring to Cloud Domains is not
+      /// supported.
+      ///
+      /// Before calling this method, go to the domain's current registrar to unlock
+      /// the domain for transfer and retrieve the domain's transfer authorization
+      /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+      /// unlocked and to get values needed to build a call to this method.
+      ///
+      /// A successful call creates a `Registration` resource in state
+      /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+      /// process. The registrant can often speed up this process by approving the
+      /// transfer through the current registrar, either by clicking a link in an
+      /// email from the registrar or by visiting the registrar's website.
+      ///
+      /// A few minutes after transfer approval, the resource transitions to state
+      /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+      /// rejected or the request expires without being approved, the resource can
+      /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+      /// the resource and retry the transfer.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TransferDomainAsync(global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TransferDomain, null, options, request);
       }
       /// <summary>
       /// Lists the `Registration` resources in a project.
@@ -974,20 +1239,15 @@ namespace Google.Cloud.Domains.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ConfigureContactSettings, null, options, request);
       }
       /// <summary>
-      /// Exports a `Registration` that you no longer want to use with
-      /// Cloud Domains. You can continue to use the domain in
-      /// [Google Domains](https://domains.google/) until it expires.
+      /// Exports a `Registration` resource, such that it is no longer managed by
+      /// Cloud Domains.
       ///
-      /// If the export is successful:
-      ///
-      /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-      /// managed by Cloud Domains
-      /// * Because individual users can own domains in Google Domains, the calling
-      /// user becomes the domain's sole owner. Permissions for the domain are
-      /// subsequently managed in Google Domains.
-      /// * Without further action, the domain does not renew automatically.
-      /// The new owner can set up billing in Google Domains to renew the domain
-      /// if needed.
+      /// When an active domain is successfully exported, you can continue to use the
+      /// domain in [Google Domains](https://domains.google/) until it expires. The
+      /// calling user becomes the domain's sole owner in Google Domains, and
+      /// permissions for the domain are subsequently managed there. The domain does
+      /// not renew automatically unless the new owner sets up billing in Google
+      /// Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1000,20 +1260,15 @@ namespace Google.Cloud.Domains.V1Beta1 {
         return ExportRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports a `Registration` that you no longer want to use with
-      /// Cloud Domains. You can continue to use the domain in
-      /// [Google Domains](https://domains.google/) until it expires.
+      /// Exports a `Registration` resource, such that it is no longer managed by
+      /// Cloud Domains.
       ///
-      /// If the export is successful:
-      ///
-      /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-      /// managed by Cloud Domains
-      /// * Because individual users can own domains in Google Domains, the calling
-      /// user becomes the domain's sole owner. Permissions for the domain are
-      /// subsequently managed in Google Domains.
-      /// * Without further action, the domain does not renew automatically.
-      /// The new owner can set up billing in Google Domains to renew the domain
-      /// if needed.
+      /// When an active domain is successfully exported, you can continue to use the
+      /// domain in [Google Domains](https://domains.google/) until it expires. The
+      /// calling user becomes the domain's sole owner in Google Domains, and
+      /// permissions for the domain are subsequently managed there. The domain does
+      /// not renew automatically unless the new owner sets up billing in Google
+      /// Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1024,20 +1279,15 @@ namespace Google.Cloud.Domains.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExportRegistration, null, options, request);
       }
       /// <summary>
-      /// Exports a `Registration` that you no longer want to use with
-      /// Cloud Domains. You can continue to use the domain in
-      /// [Google Domains](https://domains.google/) until it expires.
+      /// Exports a `Registration` resource, such that it is no longer managed by
+      /// Cloud Domains.
       ///
-      /// If the export is successful:
-      ///
-      /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-      /// managed by Cloud Domains
-      /// * Because individual users can own domains in Google Domains, the calling
-      /// user becomes the domain's sole owner. Permissions for the domain are
-      /// subsequently managed in Google Domains.
-      /// * Without further action, the domain does not renew automatically.
-      /// The new owner can set up billing in Google Domains to renew the domain
-      /// if needed.
+      /// When an active domain is successfully exported, you can continue to use the
+      /// domain in [Google Domains](https://domains.google/) until it expires. The
+      /// calling user becomes the domain's sole owner in Google Domains, and
+      /// permissions for the domain are subsequently managed there. The domain does
+      /// not renew automatically unless the new owner sets up billing in Google
+      /// Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1050,20 +1300,15 @@ namespace Google.Cloud.Domains.V1Beta1 {
         return ExportRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports a `Registration` that you no longer want to use with
-      /// Cloud Domains. You can continue to use the domain in
-      /// [Google Domains](https://domains.google/) until it expires.
+      /// Exports a `Registration` resource, such that it is no longer managed by
+      /// Cloud Domains.
       ///
-      /// If the export is successful:
-      ///
-      /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-      /// managed by Cloud Domains
-      /// * Because individual users can own domains in Google Domains, the calling
-      /// user becomes the domain's sole owner. Permissions for the domain are
-      /// subsequently managed in Google Domains.
-      /// * Without further action, the domain does not renew automatically.
-      /// The new owner can set up billing in Google Domains to renew the domain
-      /// if needed.
+      /// When an active domain is successfully exported, you can continue to use the
+      /// domain in [Google Domains](https://domains.google/) until it expires. The
+      /// calling user becomes the domain's sole owner in Google Domains, and
+      /// permissions for the domain are subsequently managed there. The domain does
+      /// not renew automatically unless the new owner sets up billing in Google
+      /// Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1076,10 +1321,23 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <summary>
       /// Deletes a `Registration` resource.
       ///
-      /// This method only works on resources in one of the following states:
+      /// This method works on any `Registration` resource using [Subscription or
+      /// Commitment billing](/domains/pricing#billing-models), provided that the
+      /// resource was created at least 1 day in the past.
+      ///
+      /// For `Registration` resources using
+      /// [Monthly billing](/domains/pricing#billing-models), this method works if:
       ///
       /// * `state` is `EXPORTED` with `expire_time` in the past
       /// * `state` is `REGISTRATION_FAILED`
+      /// * `state` is `TRANSFER_FAILED`
+      ///
+      /// When an active registration is successfully deleted, you can continue to
+      /// use the domain in [Google Domains](https://domains.google/) until it
+      /// expires. The calling user becomes the domain's sole owner in Google
+      /// Domains, and permissions for the domain are subsequently managed there. The
+      /// domain does not renew automatically unless the new owner sets up billing in
+      /// Google Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1094,10 +1352,23 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <summary>
       /// Deletes a `Registration` resource.
       ///
-      /// This method only works on resources in one of the following states:
+      /// This method works on any `Registration` resource using [Subscription or
+      /// Commitment billing](/domains/pricing#billing-models), provided that the
+      /// resource was created at least 1 day in the past.
+      ///
+      /// For `Registration` resources using
+      /// [Monthly billing](/domains/pricing#billing-models), this method works if:
       ///
       /// * `state` is `EXPORTED` with `expire_time` in the past
       /// * `state` is `REGISTRATION_FAILED`
+      /// * `state` is `TRANSFER_FAILED`
+      ///
+      /// When an active registration is successfully deleted, you can continue to
+      /// use the domain in [Google Domains](https://domains.google/) until it
+      /// expires. The calling user becomes the domain's sole owner in Google
+      /// Domains, and permissions for the domain are subsequently managed there. The
+      /// domain does not renew automatically unless the new owner sets up billing in
+      /// Google Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1110,10 +1381,23 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <summary>
       /// Deletes a `Registration` resource.
       ///
-      /// This method only works on resources in one of the following states:
+      /// This method works on any `Registration` resource using [Subscription or
+      /// Commitment billing](/domains/pricing#billing-models), provided that the
+      /// resource was created at least 1 day in the past.
+      ///
+      /// For `Registration` resources using
+      /// [Monthly billing](/domains/pricing#billing-models), this method works if:
       ///
       /// * `state` is `EXPORTED` with `expire_time` in the past
       /// * `state` is `REGISTRATION_FAILED`
+      /// * `state` is `TRANSFER_FAILED`
+      ///
+      /// When an active registration is successfully deleted, you can continue to
+      /// use the domain in [Google Domains](https://domains.google/) until it
+      /// expires. The calling user becomes the domain's sole owner in Google
+      /// Domains, and permissions for the domain are subsequently managed there. The
+      /// domain does not renew automatically unless the new owner sets up billing in
+      /// Google Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1128,10 +1412,23 @@ namespace Google.Cloud.Domains.V1Beta1 {
       /// <summary>
       /// Deletes a `Registration` resource.
       ///
-      /// This method only works on resources in one of the following states:
+      /// This method works on any `Registration` resource using [Subscription or
+      /// Commitment billing](/domains/pricing#billing-models), provided that the
+      /// resource was created at least 1 day in the past.
+      ///
+      /// For `Registration` resources using
+      /// [Monthly billing](/domains/pricing#billing-models), this method works if:
       ///
       /// * `state` is `EXPORTED` with `expire_time` in the past
       /// * `state` is `REGISTRATION_FAILED`
+      /// * `state` is `TRANSFER_FAILED`
+      ///
+      /// When an active registration is successfully deleted, you can continue to
+      /// use the domain in [Google Domains](https://domains.google/) until it
+      /// expires. The calling user becomes the domain's sole owner in Google
+      /// Domains, and permissions for the domain are subsequently managed there. The
+      /// domain does not renew automatically unless the new owner sets up billing in
+      /// Google Domains.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1282,6 +1579,8 @@ namespace Google.Cloud.Domains.V1Beta1 {
           .AddMethod(__Method_SearchDomains, serviceImpl.SearchDomains)
           .AddMethod(__Method_RetrieveRegisterParameters, serviceImpl.RetrieveRegisterParameters)
           .AddMethod(__Method_RegisterDomain, serviceImpl.RegisterDomain)
+          .AddMethod(__Method_RetrieveTransferParameters, serviceImpl.RetrieveTransferParameters)
+          .AddMethod(__Method_TransferDomain, serviceImpl.TransferDomain)
           .AddMethod(__Method_ListRegistrations, serviceImpl.ListRegistrations)
           .AddMethod(__Method_GetRegistration, serviceImpl.GetRegistration)
           .AddMethod(__Method_UpdateRegistration, serviceImpl.UpdateRegistration)
@@ -1304,6 +1603,8 @@ namespace Google.Cloud.Domains.V1Beta1 {
       serviceBinder.AddMethod(__Method_SearchDomains, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.SearchDomainsRequest, global::Google.Cloud.Domains.V1Beta1.SearchDomainsResponse>(serviceImpl.SearchDomains));
       serviceBinder.AddMethod(__Method_RetrieveRegisterParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest, global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse>(serviceImpl.RetrieveRegisterParameters));
       serviceBinder.AddMethod(__Method_RegisterDomain, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest, global::Google.LongRunning.Operation>(serviceImpl.RegisterDomain));
+      serviceBinder.AddMethod(__Method_RetrieveTransferParameters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest, global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse>(serviceImpl.RetrieveTransferParameters));
+      serviceBinder.AddMethod(__Method_TransferDomain, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest, global::Google.LongRunning.Operation>(serviceImpl.TransferDomain));
       serviceBinder.AddMethod(__Method_ListRegistrations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest, global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse>(serviceImpl.ListRegistrations));
       serviceBinder.AddMethod(__Method_GetRegistration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest, global::Google.Cloud.Domains.V1Beta1.Registration>(serviceImpl.GetRegistration));
       serviceBinder.AddMethod(__Method_UpdateRegistration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Domains.V1Beta1.UpdateRegistrationRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateRegistration));

@@ -31,7 +31,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
             "cmNlLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
             "bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9w",
             "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS90eXBlL21vbmV5LnBy",
-            "b3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byLnCAoMUmVn",
+            "b3RvGiBnb29nbGUvdHlwZS9wb3N0YWxfYWRkcmVzcy5wcm90byKTCQoMUmVn",
             "aXN0cmF0aW9uEhEKBG5hbWUYASABKAlCA+BBAxIbCgtkb21haW5fbmFtZRgC",
             "IAEoCUIG4EEC4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
             "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC2V4cGlyZV90aW1lGAYgASgLMhou",
@@ -50,215 +50,249 @@ namespace Google.Cloud.Domains.V1Beta1 {
             "dHRpbmdzQgPgQQMSTAoRc3VwcG9ydGVkX3ByaXZhY3kYDiADKA4yLC5nb29n",
             "bGUuY2xvdWQuZG9tYWlucy52MWJldGExLkNvbnRhY3RQcml2YWN5QgPgQQMa",
             "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASJ6CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhgKFFJFR0lTVFJB",
-            "VElPTl9QRU5ESU5HEAESFwoTUkVHSVNUUkFUSU9OX0ZBSUxFRBACEgoKBkFD",
-            "VElWRRAGEg0KCVNVU1BFTkRFRBAHEgwKCEVYUE9SVEVEEAgiSQoFSXNzdWUS",
-            "FQoRSVNTVUVfVU5TUEVDSUZJRUQQABITCg9DT05UQUNUX1NVUFBPUlQQARIU",
-            "ChBVTlZFUklGSUVEX0VNQUlMEAI6bupBawojZG9tYWlucy5nb29nbGVhcGlz",
-            "LmNvbS9SZWdpc3RyYXRpb24SRHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9yZWdpc3RyYXRpb25zL3tyZWdpc3RyYXRpb259IpsC",
-            "ChJNYW5hZ2VtZW50U2V0dGluZ3MSWwoOcmVuZXdhbF9tZXRob2QYAyABKA4y",
-            "Pi5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLk1hbmFnZW1lbnRTZXR0",
-            "aW5ncy5SZW5ld2FsTWV0aG9kQgPgQQMSTAoTdHJhbnNmZXJfbG9ja19zdGF0",
-            "ZRgEIAEoDjIvLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuVHJhbnNm",
-            "ZXJMb2NrU3RhdGUiWgoNUmVuZXdhbE1ldGhvZBIeChpSRU5FV0FMX01FVEhP",
-            "RF9VTlNQRUNJRklFRBAAEhUKEUFVVE9NQVRJQ19SRU5FV0FMEAESEgoOTUFO",
-            "VUFMX1JFTkVXQUwQAiKBCgoLRG5zU2V0dGluZ3MSSQoKY3VzdG9tX2RucxgB",
-            "IAEoCzIzLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuRG5zU2V0dGlu",
-            "Z3MuQ3VzdG9tRG5zSAASWAoSZ29vZ2xlX2RvbWFpbnNfZG5zGAIgASgLMjou",
-            "Z29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5EbnNTZXR0aW5ncy5Hb29n",
-            "bGVEb21haW5zRG5zSAASSgoMZ2x1ZV9yZWNvcmRzGAQgAygLMjQuZ29vZ2xl",
-            "LmNsb3VkLmRvbWFpbnMudjFiZXRhMS5EbnNTZXR0aW5ncy5HbHVlUmVjb3Jk",
-            "Gm4KCUN1c3RvbURucxIZCgxuYW1lX3NlcnZlcnMYASADKAlCA+BBAhJGCgpk",
-            "c19yZWNvcmRzGAIgAygLMjIuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRh",
-            "MS5EbnNTZXR0aW5ncy5Ec1JlY29yZBrEAQoQR29vZ2xlRG9tYWluc0RucxIZ",
-            "CgxuYW1lX3NlcnZlcnMYASADKAlCA+BBAxJICghkc19zdGF0ZRgCIAEoDjIx",
-            "Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuRG5zU2V0dGluZ3MuRHNT",
-            "dGF0ZUID4EECEksKCmRzX3JlY29yZHMYAyADKAsyMi5nb29nbGUuY2xvdWQu",
-            "ZG9tYWlucy52MWJldGExLkRuc1NldHRpbmdzLkRzUmVjb3JkQgPgQQMaiAQK",
-            "CERzUmVjb3JkEg8KB2tleV90YWcYASABKAUSTwoJYWxnb3JpdGhtGAIgASgO",
-            "MjwuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5EbnNTZXR0aW5ncy5E",
-            "c1JlY29yZC5BbGdvcml0aG0SUgoLZGlnZXN0X3R5cGUYAyABKA4yPS5nb29n",
-            "bGUuY2xvdWQuZG9tYWlucy52MWJldGExLkRuc1NldHRpbmdzLkRzUmVjb3Jk",
-            "LkRpZ2VzdFR5cGUSDgoGZGlnZXN0GAQgASgJItoBCglBbGdvcml0aG0SGQoV",
-            "QUxHT1JJVEhNX1VOU1BFQ0lGSUVEEAASBwoDRFNBEAMSBwoDRUNDEAQSCwoH",
-            "UlNBU0hBMRAFEhAKDERTQU5TRUMzU0hBMRAGEhQKEFJTQVNIQTFOU0VDM1NI",
-            "QTEQBxINCglSU0FTSEEyNTYQCBINCglSU0FTSEE1MTIQChILCgdFQ0NHT1NU",
-            "EAwSEwoPRUNEU0FQMjU2U0hBMjU2EA0SEwoPRUNEU0FQMzg0U0hBMzg0EA4S",
-            "CwoHRUQyNTUxORAPEgkKBUVENDQ4EBAiWQoKRGlnZXN0VHlwZRIbChdESUdF",
-            "U1RfVFlQRV9VTlNQRUNJRklFRBAAEggKBFNIQTEQARIKCgZTSEEyNTYQAhIM",
-            "CghHT1NUMzQxMRADEgoKBlNIQTM4NBAEGlQKCkdsdWVSZWNvcmQSFgoJaG9z",
-            "dF9uYW1lGAEgASgJQgPgQQISFgoOaXB2NF9hZGRyZXNzZXMYAiADKAkSFgoO",
-            "aXB2Nl9hZGRyZXNzZXMYAyADKAkiWQoHRHNTdGF0ZRIYChREU19TVEFURV9V",
-            "TlNQRUNJRklFRBAAEhoKFkRTX1JFQ09SRFNfVU5QVUJMSVNIRUQQARIYChRE",
-            "U19SRUNPUkRTX1BVQkxJU0hFRBACQg4KDGRuc19wcm92aWRlciLfAwoPQ29u",
-            "dGFjdFNldHRpbmdzEkIKB3ByaXZhY3kYASABKA4yLC5nb29nbGUuY2xvdWQu",
-            "ZG9tYWlucy52MWJldGExLkNvbnRhY3RQcml2YWN5QgPgQQISVgoScmVnaXN0",
-            "cmFudF9jb250YWN0GAIgASgLMjUuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFi",
-            "ZXRhMS5Db250YWN0U2V0dGluZ3MuQ29udGFjdEID4EECElEKDWFkbWluX2Nv",
-            "bnRhY3QYAyABKAsyNS5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkNv",
-            "bnRhY3RTZXR0aW5ncy5Db250YWN0QgPgQQISVQoRdGVjaG5pY2FsX2NvbnRh",
-            "Y3QYBCABKAsyNS5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkNvbnRh",
-            "Y3RTZXR0aW5ncy5Db250YWN0QgPgQQIahQEKB0NvbnRhY3QSNwoOcG9zdGFs",
-            "X2FkZHJlc3MYASABKAsyGi5nb29nbGUudHlwZS5Qb3N0YWxBZGRyZXNzQgPg",
-            "QQISEgoFZW1haWwYAiABKAlCA+BBAhIZCgxwaG9uZV9udW1iZXIYAyABKAlC",
-            "A+BBAhISCgpmYXhfbnVtYmVyGAQgASgJImcKFFNlYXJjaERvbWFpbnNSZXF1",
-            "ZXN0EhIKBXF1ZXJ5GAEgASgJQgPgQQISOwoIbG9jYXRpb24YAiABKAlCKeBB",
-            "AvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uImYKFVNl",
-            "YXJjaERvbWFpbnNSZXNwb25zZRJNChNyZWdpc3Rlcl9wYXJhbWV0ZXJzGAEg",
-            "AygLMjAuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5SZWdpc3RlclBh",
-            "cmFtZXRlcnMiegohUmV0cmlldmVSZWdpc3RlclBhcmFtZXRlcnNSZXF1ZXN0",
-            "EhgKC2RvbWFpbl9uYW1lGAEgASgJQgPgQQISOwoIbG9jYXRpb24YAiABKAlC",
-            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uInMK",
-            "IlJldHJpZXZlUmVnaXN0ZXJQYXJhbWV0ZXJzUmVzcG9uc2USTQoTcmVnaXN0",
-            "ZXJfcGFyYW1ldGVycxgBIAEoCzIwLmdvb2dsZS5jbG91ZC5kb21haW5zLnYx",
-            "YmV0YTEuUmVnaXN0ZXJQYXJhbWV0ZXJzIukCChVSZWdpc3RlckRvbWFpblJl",
-            "cXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29n",
-            "bGVhcGlzLmNvbS9Mb2NhdGlvbhJFCgxyZWdpc3RyYXRpb24YAiABKAsyKi5n",
-            "b29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLlJlZ2lzdHJhdGlvbkID4EEC",
-            "EkIKDmRvbWFpbl9ub3RpY2VzGAMgAygOMiouZ29vZ2xlLmNsb3VkLmRvbWFp",
-            "bnMudjFiZXRhMS5Eb21haW5Ob3RpY2USRAoPY29udGFjdF9ub3RpY2VzGAQg",
-            "AygOMisuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5Db250YWN0Tm90",
-            "aWNlEi0KDHllYXJseV9wcmljZRgFIAEoCzISLmdvb2dsZS50eXBlLk1vbmV5",
-            "QgPgQQISFQoNdmFsaWRhdGVfb25seRgGIAEoCCKMAQoYTGlzdFJlZ2lzdHJh",
-            "dGlvbnNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlv",
-            "bnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJIncKGUxpc3RS",
-            "ZWdpc3RyYXRpb25zUmVzcG9uc2USQQoNcmVnaXN0cmF0aW9ucxgBIAMoCzIq",
-            "Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuUmVnaXN0cmF0aW9uEhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJTChZHZXRSZWdpc3RyYXRpb25SZXF1",
-            "ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZG9tYWlucy5nb29nbGVhcGlz",
-            "LmNvbS9SZWdpc3RyYXRpb24ikwEKGVVwZGF0ZVJlZ2lzdHJhdGlvblJlcXVl",
-            "c3QSQAoMcmVnaXN0cmF0aW9uGAEgASgLMiouZ29vZ2xlLmNsb3VkLmRvbWFp",
-            "bnMudjFiZXRhMS5SZWdpc3RyYXRpb24SNAoLdXBkYXRlX21hc2sYAiABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIi7AEKIkNvbmZpZ3Vy",
-            "ZU1hbmFnZW1lbnRTZXR0aW5nc1JlcXVlc3QSQQoMcmVnaXN0cmF0aW9uGAEg",
-            "ASgJQivgQQL6QSUKI2RvbWFpbnMuZ29vZ2xlYXBpcy5jb20vUmVnaXN0cmF0",
-            "aW9uEk0KE21hbmFnZW1lbnRfc2V0dGluZ3MYAiABKAsyMC5nb29nbGUuY2xv",
-            "dWQuZG9tYWlucy52MWJldGExLk1hbmFnZW1lbnRTZXR0aW5ncxI0Cgt1cGRh",
-            "dGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
-            "AiLuAQobQ29uZmlndXJlRG5zU2V0dGluZ3NSZXF1ZXN0EkEKDHJlZ2lzdHJh",
+            "ASKlAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIYChRSRUdJU1RS",
+            "QVRJT05fUEVORElORxABEhcKE1JFR0lTVFJBVElPTl9GQUlMRUQQAhIUChBU",
+            "UkFOU0ZFUl9QRU5ESU5HEAMSEwoPVFJBTlNGRVJfRkFJTEVEEAQSCgoGQUNU",
+            "SVZFEAYSDQoJU1VTUEVOREVEEAcSDAoIRVhQT1JURUQQCCJJCgVJc3N1ZRIV",
+            "ChFJU1NVRV9VTlNQRUNJRklFRBAAEhMKD0NPTlRBQ1RfU1VQUE9SVBABEhQK",
+            "EFVOVkVSSUZJRURfRU1BSUwQAjpu6kFrCiNkb21haW5zLmdvb2dsZWFwaXMu",
+            "Y29tL1JlZ2lzdHJhdGlvbhJEcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3JlZ2lzdHJhdGlvbnMve3JlZ2lzdHJhdGlvbn0imwIK",
+            "Ek1hbmFnZW1lbnRTZXR0aW5ncxJbCg5yZW5ld2FsX21ldGhvZBgDIAEoDjI+",
+            "Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuTWFuYWdlbWVudFNldHRp",
+            "bmdzLlJlbmV3YWxNZXRob2RCA+BBAxJMChN0cmFuc2Zlcl9sb2NrX3N0YXRl",
+            "GAQgASgOMi8uZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5UcmFuc2Zl",
+            "ckxvY2tTdGF0ZSJaCg1SZW5ld2FsTWV0aG9kEh4KGlJFTkVXQUxfTUVUSE9E",
+            "X1VOU1BFQ0lGSUVEEAASFQoRQVVUT01BVElDX1JFTkVXQUwQARISCg5NQU5V",
+            "QUxfUkVORVdBTBACIsYKCgtEbnNTZXR0aW5ncxJJCgpjdXN0b21fZG5zGAEg",
+            "ASgLMjMuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5EbnNTZXR0aW5n",
+            "cy5DdXN0b21EbnNIABJYChJnb29nbGVfZG9tYWluc19kbnMYAiABKAsyOi5n",
+            "b29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkRuc1NldHRpbmdzLkdvb2ds",
+            "ZURvbWFpbnNEbnNIABJKCgxnbHVlX3JlY29yZHMYBCADKAsyNC5nb29nbGUu",
+            "Y2xvdWQuZG9tYWlucy52MWJldGExLkRuc1NldHRpbmdzLkdsdWVSZWNvcmQa",
+            "bgoJQ3VzdG9tRG5zEhkKDG5hbWVfc2VydmVycxgBIAMoCUID4EECEkYKCmRz",
+            "X3JlY29yZHMYAiADKAsyMi5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGEx",
+            "LkRuc1NldHRpbmdzLkRzUmVjb3JkGsQBChBHb29nbGVEb21haW5zRG5zEhkK",
+            "DG5hbWVfc2VydmVycxgBIAMoCUID4EEDEkgKCGRzX3N0YXRlGAIgASgOMjEu",
+            "Z29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5EbnNTZXR0aW5ncy5Ec1N0",
+            "YXRlQgPgQQISSwoKZHNfcmVjb3JkcxgDIAMoCzIyLmdvb2dsZS5jbG91ZC5k",
+            "b21haW5zLnYxYmV0YTEuRG5zU2V0dGluZ3MuRHNSZWNvcmRCA+BBAxrNBAoI",
+            "RHNSZWNvcmQSDwoHa2V5X3RhZxgBIAEoBRJPCglhbGdvcml0aG0YAiABKA4y",
+            "PC5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkRuc1NldHRpbmdzLkRz",
+            "UmVjb3JkLkFsZ29yaXRobRJSCgtkaWdlc3RfdHlwZRgDIAEoDjI9Lmdvb2ds",
+            "ZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuRG5zU2V0dGluZ3MuRHNSZWNvcmQu",
+            "RGlnZXN0VHlwZRIOCgZkaWdlc3QYBCABKAkinwIKCUFsZ29yaXRobRIZChVB",
+            "TEdPUklUSE1fVU5TUEVDSUZJRUQQABIKCgZSU0FNRDUQARIGCgJESBACEgcK",
+            "A0RTQRADEgcKA0VDQxAEEgsKB1JTQVNIQTEQBRIQCgxEU0FOU0VDM1NIQTEQ",
+            "BhIUChBSU0FTSEExTlNFQzNTSEExEAcSDQoJUlNBU0hBMjU2EAgSDQoJUlNB",
+            "U0hBNTEyEAoSCwoHRUNDR09TVBAMEhMKD0VDRFNBUDI1NlNIQTI1NhANEhMK",
+            "D0VDRFNBUDM4NFNIQTM4NBAOEgsKB0VEMjU1MTkQDxIJCgVFRDQ0OBAQEg0K",
+            "CElORElSRUNUEPwBEg8KClBSSVZBVEVETlMQ/QESDwoKUFJJVkFURU9JRBD+",
+            "ASJZCgpEaWdlc3RUeXBlEhsKF0RJR0VTVF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
+            "CAoEU0hBMRABEgoKBlNIQTI1NhACEgwKCEdPU1QzNDExEAMSCgoGU0hBMzg0",
+            "EAQaVAoKR2x1ZVJlY29yZBIWCglob3N0X25hbWUYASABKAlCA+BBAhIWCg5p",
+            "cHY0X2FkZHJlc3NlcxgCIAMoCRIWCg5pcHY2X2FkZHJlc3NlcxgDIAMoCSJZ",
+            "CgdEc1N0YXRlEhgKFERTX1NUQVRFX1VOU1BFQ0lGSUVEEAASGgoWRFNfUkVD",
+            "T1JEU19VTlBVQkxJU0hFRBABEhgKFERTX1JFQ09SRFNfUFVCTElTSEVEEAJC",
+            "DgoMZG5zX3Byb3ZpZGVyIt8DCg9Db250YWN0U2V0dGluZ3MSQgoHcHJpdmFj",
+            "eRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuQ29udGFj",
+            "dFByaXZhY3lCA+BBAhJWChJyZWdpc3RyYW50X2NvbnRhY3QYAiABKAsyNS5n",
+            "b29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkNvbnRhY3RTZXR0aW5ncy5D",
+            "b250YWN0QgPgQQISUQoNYWRtaW5fY29udGFjdBgDIAEoCzI1Lmdvb2dsZS5j",
+            "bG91ZC5kb21haW5zLnYxYmV0YTEuQ29udGFjdFNldHRpbmdzLkNvbnRhY3RC",
+            "A+BBAhJVChF0ZWNobmljYWxfY29udGFjdBgEIAEoCzI1Lmdvb2dsZS5jbG91",
+            "ZC5kb21haW5zLnYxYmV0YTEuQ29udGFjdFNldHRpbmdzLkNvbnRhY3RCA+BB",
+            "AhqFAQoHQ29udGFjdBI3Cg5wb3N0YWxfYWRkcmVzcxgBIAEoCzIaLmdvb2ds",
+            "ZS50eXBlLlBvc3RhbEFkZHJlc3NCA+BBAhISCgVlbWFpbBgCIAEoCUID4EEC",
+            "EhkKDHBob25lX251bWJlchgDIAEoCUID4EECEhIKCmZheF9udW1iZXIYBCAB",
+            "KAkiZwoUU2VhcmNoRG9tYWluc1JlcXVlc3QSEgoFcXVlcnkYASABKAlCA+BB",
+            "AhI7Cghsb2NhdGlvbhgCIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
+            "YXBpcy5jb20vTG9jYXRpb24iZgoVU2VhcmNoRG9tYWluc1Jlc3BvbnNlEk0K",
+            "E3JlZ2lzdGVyX3BhcmFtZXRlcnMYASADKAsyMC5nb29nbGUuY2xvdWQuZG9t",
+            "YWlucy52MWJldGExLlJlZ2lzdGVyUGFyYW1ldGVycyJ6CiFSZXRyaWV2ZVJl",
+            "Z2lzdGVyUGFyYW1ldGVyc1JlcXVlc3QSGAoLZG9tYWluX25hbWUYASABKAlC",
+            "A+BBAhI7Cghsb2NhdGlvbhgCIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29v",
+            "Z2xlYXBpcy5jb20vTG9jYXRpb24icwoiUmV0cmlldmVSZWdpc3RlclBhcmFt",
+            "ZXRlcnNSZXNwb25zZRJNChNyZWdpc3Rlcl9wYXJhbWV0ZXJzGAEgASgLMjAu",
+            "Z29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5SZWdpc3RlclBhcmFtZXRl",
+            "cnMi6QIKFVJlZ2lzdGVyRG9tYWluUmVxdWVzdBI5CgZwYXJlbnQYASABKAlC",
+            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEkUK",
+            "DHJlZ2lzdHJhdGlvbhgCIAEoCzIqLmdvb2dsZS5jbG91ZC5kb21haW5zLnYx",
+            "YmV0YTEuUmVnaXN0cmF0aW9uQgPgQQISQgoOZG9tYWluX25vdGljZXMYAyAD",
+            "KA4yKi5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkRvbWFpbk5vdGlj",
+            "ZRJECg9jb250YWN0X25vdGljZXMYBCADKA4yKy5nb29nbGUuY2xvdWQuZG9t",
+            "YWlucy52MWJldGExLkNvbnRhY3ROb3RpY2USLQoMeWVhcmx5X3ByaWNlGAUg",
+            "ASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXlCA+BBAhIVCg12YWxpZGF0ZV9vbmx5",
+            "GAYgASgIInoKIVJldHJpZXZlVHJhbnNmZXJQYXJhbWV0ZXJzUmVxdWVzdBIY",
+            "Cgtkb21haW5fbmFtZRgBIAEoCUID4EECEjsKCGxvY2F0aW9uGAIgASgJQing",
+            "QQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbiJzCiJS",
+            "ZXRyaWV2ZVRyYW5zZmVyUGFyYW1ldGVyc1Jlc3BvbnNlEk0KE3RyYW5zZmVy",
+            "X3BhcmFtZXRlcnMYASABKAsyMC5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJl",
+            "dGExLlRyYW5zZmVyUGFyYW1ldGVycyLyAgoVVHJhbnNmZXJEb21haW5SZXF1",
+            "ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
+            "YXBpcy5jb20vTG9jYXRpb24SRQoMcmVnaXN0cmF0aW9uGAIgASgLMiouZ29v",
+            "Z2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5SZWdpc3RyYXRpb25CA+BBAhJE",
+            "Cg9jb250YWN0X25vdGljZXMYAyADKA4yKy5nb29nbGUuY2xvdWQuZG9tYWlu",
+            "cy52MWJldGExLkNvbnRhY3ROb3RpY2USLQoMeWVhcmx5X3ByaWNlGAQgASgL",
+            "MhIuZ29vZ2xlLnR5cGUuTW9uZXlCA+BBAhJLChJhdXRob3JpemF0aW9uX2Nv",
+            "ZGUYBSABKAsyLy5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkF1dGhv",
+            "cml6YXRpb25Db2RlEhUKDXZhbGlkYXRlX29ubHkYBiABKAgijAEKGExpc3RS",
+            "ZWdpc3RyYXRpb25zUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwoh",
+            "bG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6",
+            "ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCSJ3",
+            "ChlMaXN0UmVnaXN0cmF0aW9uc1Jlc3BvbnNlEkEKDXJlZ2lzdHJhdGlvbnMY",
+            "ASADKAsyKi5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLlJlZ2lzdHJh",
+            "dGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiUwoWR2V0UmVnaXN0cmF0",
+            "aW9uUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI2RvbWFpbnMuZ29v",
+            "Z2xlYXBpcy5jb20vUmVnaXN0cmF0aW9uIpMBChlVcGRhdGVSZWdpc3RyYXRp",
+            "b25SZXF1ZXN0EkAKDHJlZ2lzdHJhdGlvbhgBIAEoCzIqLmdvb2dsZS5jbG91",
+            "ZC5kb21haW5zLnYxYmV0YTEuUmVnaXN0cmF0aW9uEjQKC3VwZGF0ZV9tYXNr",
+            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECIuwBCiJD",
+            "b25maWd1cmVNYW5hZ2VtZW50U2V0dGluZ3NSZXF1ZXN0EkEKDHJlZ2lzdHJh",
             "dGlvbhgBIAEoCUIr4EEC+kElCiNkb21haW5zLmdvb2dsZWFwaXMuY29tL1Jl",
-            "Z2lzdHJhdGlvbhI/CgxkbnNfc2V0dGluZ3MYAiABKAsyKS5nb29nbGUuY2xv",
-            "dWQuZG9tYWlucy52MWJldGExLkRuc1NldHRpbmdzEjQKC3VwZGF0ZV9tYXNr",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEhUKDXZh",
-            "bGlkYXRlX29ubHkYBCABKAgiwAIKH0NvbmZpZ3VyZUNvbnRhY3RTZXR0aW5n",
-            "c1JlcXVlc3QSQQoMcmVnaXN0cmF0aW9uGAEgASgJQivgQQL6QSUKI2RvbWFp",
-            "bnMuZ29vZ2xlYXBpcy5jb20vUmVnaXN0cmF0aW9uEkcKEGNvbnRhY3Rfc2V0",
-            "dGluZ3MYAiABKAsyLS5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkNv",
-            "bnRhY3RTZXR0aW5ncxI0Cgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBAhJECg9jb250YWN0X25vdGljZXMYBCAD",
-            "KA4yKy5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkNvbnRhY3ROb3Rp",
-            "Y2USFQoNdmFsaWRhdGVfb25seRgFIAEoCCJWChlFeHBvcnRSZWdpc3RyYXRp",
-            "b25SZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZG9tYWlucy5nb29n",
-            "bGVhcGlzLmNvbS9SZWdpc3RyYXRpb24iVgoZRGVsZXRlUmVnaXN0cmF0aW9u",
-            "UmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI2RvbWFpbnMuZ29vZ2xl",
-            "YXBpcy5jb20vUmVnaXN0cmF0aW9uImUKIFJldHJpZXZlQXV0aG9yaXphdGlv",
-            "bkNvZGVSZXF1ZXN0EkEKDHJlZ2lzdHJhdGlvbhgBIAEoCUIr4EEC+kElCiNk",
-            "b21haW5zLmdvb2dsZWFwaXMuY29tL1JlZ2lzdHJhdGlvbiJiCh1SZXNldEF1",
-            "dGhvcml6YXRpb25Db2RlUmVxdWVzdBJBCgxyZWdpc3RyYXRpb24YASABKAlC",
-            "K+BBAvpBJQojZG9tYWlucy5nb29nbGVhcGlzLmNvbS9SZWdpc3RyYXRpb24i",
-            "oQMKElJlZ2lzdGVyUGFyYW1ldGVycxITCgtkb21haW5fbmFtZRgBIAEoCRJT",
-            "CgxhdmFpbGFiaWxpdHkYAiABKA4yPS5nb29nbGUuY2xvdWQuZG9tYWlucy52",
-            "MWJldGExLlJlZ2lzdGVyUGFyYW1ldGVycy5BdmFpbGFiaWxpdHkSRwoRc3Vw",
-            "cG9ydGVkX3ByaXZhY3kYAyADKA4yLC5nb29nbGUuY2xvdWQuZG9tYWlucy52",
-            "MWJldGExLkNvbnRhY3RQcml2YWN5EkIKDmRvbWFpbl9ub3RpY2VzGAQgAygO",
-            "MiouZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5Eb21haW5Ob3RpY2US",
-            "KAoMeWVhcmx5X3ByaWNlGAUgASgLMhIuZ29vZ2xlLnR5cGUuTW9uZXkiagoM",
-            "QXZhaWxhYmlsaXR5EhwKGEFWQUlMQUJJTElUWV9VTlNQRUNJRklFRBAAEg0K",
-            "CUFWQUlMQUJMRRABEg8KC1VOQVZBSUxBQkxFEAISDwoLVU5TVVBQT1JURUQQ",
-            "AxILCgdVTktOT1dOEAQiIQoRQXV0aG9yaXphdGlvbkNvZGUSDAoEY29kZRgB",
-            "IAEoCSK8AQoRT3BlcmF0aW9uTWV0YWRhdGESLwoLY3JlYXRlX3RpbWUYASAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIOCgZ0YXJnZXQYAyAB",
-            "KAkSDAoEdmVyYhgEIAEoCRIVCg1zdGF0dXNfZGV0YWlsGAUgASgJEhMKC2Fw",
-            "aV92ZXJzaW9uGAYgASgJKn8KDkNvbnRhY3RQcml2YWN5Eh8KG0NPTlRBQ1Rf",
-            "UFJJVkFDWV9VTlNQRUNJRklFRBAAEhcKE1BVQkxJQ19DT05UQUNUX0RBVEEQ",
-            "ARIYChRQUklWQVRFX0NPTlRBQ1RfREFUQRACEhkKFVJFREFDVEVEX0NPTlRB",
-            "Q1RfREFUQRADKkEKDERvbWFpbk5vdGljZRIdChlET01BSU5fTk9USUNFX1VO",
-            "U1BFQ0lGSUVEEAASEgoOSFNUU19QUkVMT0FERUQQASpYCg1Db250YWN0Tm90",
-            "aWNlEh4KGkNPTlRBQ1RfTk9USUNFX1VOU1BFQ0lGSUVEEAASJwojUFVCTElD",
-            "X0NPTlRBQ1RfREFUQV9BQ0tOT1dMRURHRU1FTlQQASpSChFUcmFuc2Zlckxv",
-            "Y2tTdGF0ZRIjCh9UUkFOU0ZFUl9MT0NLX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "DAoIVU5MT0NLRUQQARIKCgZMT0NLRUQQAjKmGgoHRG9tYWlucxLZAQoNU2Vh",
-            "cmNoRG9tYWlucxIyLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuU2Vh",
-            "cmNoRG9tYWluc1JlcXVlc3QaMy5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJl",
-            "dGExLlNlYXJjaERvbWFpbnNSZXNwb25zZSJfgtPkkwJIEkYvdjFiZXRhMS97",
-            "bG9jYXRpb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcmVnaXN0cmF0aW9u",
-            "czpzZWFyY2hEb21haW5z2kEObG9jYXRpb24scXVlcnkSkwIKGlJldHJpZXZl",
-            "UmVnaXN0ZXJQYXJhbWV0ZXJzEj8uZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFi",
-            "ZXRhMS5SZXRyaWV2ZVJlZ2lzdGVyUGFyYW1ldGVyc1JlcXVlc3QaQC5nb29n",
-            "bGUuY2xvdWQuZG9tYWlucy52MWJldGExLlJldHJpZXZlUmVnaXN0ZXJQYXJh",
-            "bWV0ZXJzUmVzcG9uc2UicoLT5JMCVRJTL3YxYmV0YTEve2xvY2F0aW9uPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyp9L3JlZ2lzdHJhdGlvbnM6cmV0cmlldmVS",
-            "ZWdpc3RlclBhcmFtZXRlcnPaQRRsb2NhdGlvbixkb21haW5fbmFtZRL4AQoO",
-            "UmVnaXN0ZXJEb21haW4SMy5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGEx",
-            "LlJlZ2lzdGVyRG9tYWluUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24ikQGC0+STAkQiPy92MWJldGExL3twYXJlbnQ9cHJvamVjdHMv",
-            "Ki9sb2NhdGlvbnMvKn0vcmVnaXN0cmF0aW9uczpyZWdpc3RlcjoBKtpBIHBh",
-            "cmVudCxyZWdpc3RyYXRpb24seWVhcmx5X3ByaWNlykEhCgxSZWdpc3RyYXRp",
-            "b24SEU9wZXJhdGlvbk1ldGFkYXRhEs0BChFMaXN0UmVnaXN0cmF0aW9ucxI2",
-            "Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuTGlzdFJlZ2lzdHJhdGlv",
-            "bnNSZXF1ZXN0GjcuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5MaXN0",
-            "UmVnaXN0cmF0aW9uc1Jlc3BvbnNlIkeC0+STAjgSNi92MWJldGExL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcmVnaXN0cmF0aW9uc9pBBnBh",
-            "cmVudBK6AQoPR2V0UmVnaXN0cmF0aW9uEjQuZ29vZ2xlLmNsb3VkLmRvbWFp",
-            "bnMudjFiZXRhMS5HZXRSZWdpc3RyYXRpb25SZXF1ZXN0GiouZ29vZ2xlLmNs",
-            "b3VkLmRvbWFpbnMudjFiZXRhMS5SZWdpc3RyYXRpb24iRYLT5JMCOBI2L3Yx",
-            "YmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZWdpc3RyYXRp",
-            "b25zLyp92kEEbmFtZRKHAgoSVXBkYXRlUmVnaXN0cmF0aW9uEjcuZ29vZ2xl",
-            "LmNsb3VkLmRvbWFpbnMudjFiZXRhMS5VcGRhdGVSZWdpc3RyYXRpb25SZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKYAYLT5JMCUzJD",
-            "L3YxYmV0YTEve3JlZ2lzdHJhdGlvbi5uYW1lPXByb2plY3RzLyovbG9jYXRp",
-            "b25zLyovcmVnaXN0cmF0aW9ucy8qfToMcmVnaXN0cmF0aW9u2kEYcmVnaXN0",
-            "cmF0aW9uLHVwZGF0ZV9tYXNrykEhCgxSZWdpc3RyYXRpb24SEU9wZXJhdGlv",
-            "bk1ldGFkYXRhErkCChtDb25maWd1cmVNYW5hZ2VtZW50U2V0dGluZ3MSQC5n",
-            "b29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLkNvbmZpZ3VyZU1hbmFnZW1l",
-            "bnRTZXR0aW5nc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIrgBgtPkkwJfIlovdjFiZXRhMS97cmVnaXN0cmF0aW9uPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfTpjb25maWd1cmVNYW5h",
-            "Z2VtZW50U2V0dGluZ3M6ASraQSxyZWdpc3RyYXRpb24sbWFuYWdlbWVudF9z",
-            "ZXR0aW5ncyx1cGRhdGVfbWFza8pBIQoMUmVnaXN0cmF0aW9uEhFPcGVyYXRp",
-            "b25NZXRhZGF0YRKdAgoUQ29uZmlndXJlRG5zU2V0dGluZ3MSOS5nb29nbGUu",
-            "Y2xvdWQuZG9tYWlucy52MWJldGExLkNvbmZpZ3VyZURuc1NldHRpbmdzUmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iqgGC0+STAlgi",
-            "Uy92MWJldGExL3tyZWdpc3RyYXRpb249cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9yZWdpc3RyYXRpb25zLyp9OmNvbmZpZ3VyZURuc1NldHRpbmdzOgEq2kEl",
-            "cmVnaXN0cmF0aW9uLGRuc19zZXR0aW5ncyx1cGRhdGVfbWFza8pBIQoMUmVn",
-            "aXN0cmF0aW9uEhFPcGVyYXRpb25NZXRhZGF0YRKtAgoYQ29uZmlndXJlQ29u",
-            "dGFjdFNldHRpbmdzEj0uZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5D",
-            "b25maWd1cmVDb250YWN0U2V0dGluZ3NSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKyAYLT5JMCXCJXL3YxYmV0YTEve3JlZ2lzdHJh",
-            "dGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06",
-            "Y29uZmlndXJlQ29udGFjdFNldHRpbmdzOgEq2kEpcmVnaXN0cmF0aW9uLGNv",
-            "bnRhY3Rfc2V0dGluZ3MsdXBkYXRlX21hc2vKQSEKDFJlZ2lzdHJhdGlvbhIR",
-            "T3BlcmF0aW9uTWV0YWRhdGES4QEKEkV4cG9ydFJlZ2lzdHJhdGlvbhI3Lmdv",
-            "b2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuRXhwb3J0UmVnaXN0cmF0aW9u",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ic4LT5JMC",
-            "QiI9L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZWdp",
-            "c3RyYXRpb25zLyp9OmV4cG9ydDoBKtpBBG5hbWXKQSEKDFJlZ2lzdHJhdGlv",
-            "bhIRT3BlcmF0aW9uTWV0YWRhdGES4AEKEkRlbGV0ZVJlZ2lzdHJhdGlvbhI3",
-            "Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuRGVsZXRlUmVnaXN0cmF0",
-            "aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icoLT",
-            "5JMCOCo2L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9y",
-            "ZWdpc3RyYXRpb25zLyp92kEEbmFtZcpBKgoVZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5EhFPcGVyYXRpb25NZXRhZGF0YRL9AQoZUmV0cmlldmVBdXRob3JpemF0",
-            "aW9uQ29kZRI+Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuUmV0cmll",
-            "dmVBdXRob3JpemF0aW9uQ29kZVJlcXVlc3QaLy5nb29nbGUuY2xvdWQuZG9t",
-            "YWlucy52MWJldGExLkF1dGhvcml6YXRpb25Db2RlIm+C0+STAloSWC92MWJl",
-            "dGExL3tyZWdpc3RyYXRpb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9yZWdp",
-            "c3RyYXRpb25zLyp9OnJldHJpZXZlQXV0aG9yaXphdGlvbkNvZGXaQQxyZWdp",
-            "c3RyYXRpb24S9wEKFlJlc2V0QXV0aG9yaXphdGlvbkNvZGUSOy5nb29nbGUu",
-            "Y2xvdWQuZG9tYWlucy52MWJldGExLlJlc2V0QXV0aG9yaXphdGlvbkNvZGVS",
-            "ZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5BdXRob3Jp",
-            "emF0aW9uQ29kZSJvgtPkkwJaIlUvdjFiZXRhMS97cmVnaXN0cmF0aW9uPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfTpyZXNldEF1",
-            "dGhvcml6YXRpb25Db2RlOgEq2kEMcmVnaXN0cmF0aW9uGkrKQRZkb21haW5z",
-            "Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZC1wbGF0Zm9ybUJ3CiBjb20uZ29vZ2xlLmNsb3VkLmRvbWFp",
-            "bnMudjFiZXRhMUIMRG9tYWluc1Byb3RvUAFaQ2dvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZG9tYWlucy92MWJldGExO2Rv",
-            "bWFpbnNiBnByb3RvMw=="));
+            "Z2lzdHJhdGlvbhJNChNtYW5hZ2VtZW50X3NldHRpbmdzGAIgASgLMjAuZ29v",
+            "Z2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5NYW5hZ2VtZW50U2V0dGluZ3MS",
+            "NAoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrQgPgQQIi7gEKG0NvbmZpZ3VyZURuc1NldHRpbmdzUmVxdWVzdBJBCgxy",
+            "ZWdpc3RyYXRpb24YASABKAlCK+BBAvpBJQojZG9tYWlucy5nb29nbGVhcGlz",
+            "LmNvbS9SZWdpc3RyYXRpb24SPwoMZG5zX3NldHRpbmdzGAIgASgLMikuZ29v",
+            "Z2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5EbnNTZXR0aW5ncxI0Cgt1cGRh",
+            "dGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
+            "AhIVCg12YWxpZGF0ZV9vbmx5GAQgASgIIsACCh9Db25maWd1cmVDb250YWN0",
+            "U2V0dGluZ3NSZXF1ZXN0EkEKDHJlZ2lzdHJhdGlvbhgBIAEoCUIr4EEC+kEl",
+            "CiNkb21haW5zLmdvb2dsZWFwaXMuY29tL1JlZ2lzdHJhdGlvbhJHChBjb250",
+            "YWN0X3NldHRpbmdzGAIgASgLMi0uZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFi",
+            "ZXRhMS5Db250YWN0U2V0dGluZ3MSNAoLdXBkYXRlX21hc2sYAyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISRAoPY29udGFjdF9ub3Rp",
+            "Y2VzGAQgAygOMisuZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5Db250",
+            "YWN0Tm90aWNlEhUKDXZhbGlkYXRlX29ubHkYBSABKAgiVgoZRXhwb3J0UmVn",
+            "aXN0cmF0aW9uUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI2RvbWFp",
+            "bnMuZ29vZ2xlYXBpcy5jb20vUmVnaXN0cmF0aW9uIlYKGURlbGV0ZVJlZ2lz",
+            "dHJhdGlvblJlcXVlc3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNkb21haW5z",
+            "Lmdvb2dsZWFwaXMuY29tL1JlZ2lzdHJhdGlvbiJlCiBSZXRyaWV2ZUF1dGhv",
+            "cml6YXRpb25Db2RlUmVxdWVzdBJBCgxyZWdpc3RyYXRpb24YASABKAlCK+BB",
+            "AvpBJQojZG9tYWlucy5nb29nbGVhcGlzLmNvbS9SZWdpc3RyYXRpb24iYgod",
+            "UmVzZXRBdXRob3JpemF0aW9uQ29kZVJlcXVlc3QSQQoMcmVnaXN0cmF0aW9u",
+            "GAEgASgJQivgQQL6QSUKI2RvbWFpbnMuZ29vZ2xlYXBpcy5jb20vUmVnaXN0",
+            "cmF0aW9uIqEDChJSZWdpc3RlclBhcmFtZXRlcnMSEwoLZG9tYWluX25hbWUY",
+            "ASABKAkSUwoMYXZhaWxhYmlsaXR5GAIgASgOMj0uZ29vZ2xlLmNsb3VkLmRv",
+            "bWFpbnMudjFiZXRhMS5SZWdpc3RlclBhcmFtZXRlcnMuQXZhaWxhYmlsaXR5",
+            "EkcKEXN1cHBvcnRlZF9wcml2YWN5GAMgAygOMiwuZ29vZ2xlLmNsb3VkLmRv",
+            "bWFpbnMudjFiZXRhMS5Db250YWN0UHJpdmFjeRJCCg5kb21haW5fbm90aWNl",
+            "cxgEIAMoDjIqLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuRG9tYWlu",
+            "Tm90aWNlEigKDHllYXJseV9wcmljZRgFIAEoCzISLmdvb2dsZS50eXBlLk1v",
+            "bmV5ImoKDEF2YWlsYWJpbGl0eRIcChhBVkFJTEFCSUxJVFlfVU5TUEVDSUZJ",
+            "RUQQABINCglBVkFJTEFCTEUQARIPCgtVTkFWQUlMQUJMRRACEg8KC1VOU1VQ",
+            "UE9SVEVEEAMSCwoHVU5LTk9XThAEIpsCChJUcmFuc2ZlclBhcmFtZXRlcnMS",
+            "EwoLZG9tYWluX25hbWUYASABKAkSGQoRY3VycmVudF9yZWdpc3RyYXIYAiAB",
+            "KAkSFAoMbmFtZV9zZXJ2ZXJzGAMgAygJEkwKE3RyYW5zZmVyX2xvY2tfc3Rh",
+            "dGUYBCABKA4yLy5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLlRyYW5z",
+            "ZmVyTG9ja1N0YXRlEkcKEXN1cHBvcnRlZF9wcml2YWN5GAUgAygOMiwuZ29v",
+            "Z2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5Db250YWN0UHJpdmFjeRIoCgx5",
+            "ZWFybHlfcHJpY2UYBiABKAsyEi5nb29nbGUudHlwZS5Nb25leSIhChFBdXRo",
+            "b3JpemF0aW9uQ29kZRIMCgRjb2RlGAEgASgJIrwBChFPcGVyYXRpb25NZXRh",
+            "ZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEg4KBnRhcmdldBgDIAEoCRIMCgR2ZXJiGAQgASgJEhUKDXN0",
+            "YXR1c19kZXRhaWwYBSABKAkSEwoLYXBpX3ZlcnNpb24YBiABKAkqfwoOQ29u",
+            "dGFjdFByaXZhY3kSHwobQ09OVEFDVF9QUklWQUNZX1VOU1BFQ0lGSUVEEAAS",
+            "FwoTUFVCTElDX0NPTlRBQ1RfREFUQRABEhgKFFBSSVZBVEVfQ09OVEFDVF9E",
+            "QVRBEAISGQoVUkVEQUNURURfQ09OVEFDVF9EQVRBEAMqQQoMRG9tYWluTm90",
+            "aWNlEh0KGURPTUFJTl9OT1RJQ0VfVU5TUEVDSUZJRUQQABISCg5IU1RTX1BS",
+            "RUxPQURFRBABKlgKDUNvbnRhY3ROb3RpY2USHgoaQ09OVEFDVF9OT1RJQ0Vf",
+            "VU5TUEVDSUZJRUQQABInCiNQVUJMSUNfQ09OVEFDVF9EQVRBX0FDS05PV0xF",
+            "REdFTUVOVBABKlIKEVRyYW5zZmVyTG9ja1N0YXRlEiMKH1RSQU5TRkVSX0xP",
+            "Q0tfU1RBVEVfVU5TUEVDSUZJRUQQABIMCghVTkxPQ0tFRBABEgoKBkxPQ0tF",
+            "RBACMsoeCgdEb21haW5zEtkBCg1TZWFyY2hEb21haW5zEjIuZ29vZ2xlLmNs",
+            "b3VkLmRvbWFpbnMudjFiZXRhMS5TZWFyY2hEb21haW5zUmVxdWVzdBozLmdv",
+            "b2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuU2VhcmNoRG9tYWluc1Jlc3Bv",
+            "bnNlIl+C0+STAkgSRi92MWJldGExL3tsb2NhdGlvbj1wcm9qZWN0cy8qL2xv",
+            "Y2F0aW9ucy8qfS9yZWdpc3RyYXRpb25zOnNlYXJjaERvbWFpbnPaQQ5sb2Nh",
+            "dGlvbixxdWVyeRKTAgoaUmV0cmlldmVSZWdpc3RlclBhcmFtZXRlcnMSPy5n",
+            "b29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLlJldHJpZXZlUmVnaXN0ZXJQ",
+            "YXJhbWV0ZXJzUmVxdWVzdBpALmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0",
+            "YTEuUmV0cmlldmVSZWdpc3RlclBhcmFtZXRlcnNSZXNwb25zZSJygtPkkwJV",
+            "ElMvdjFiZXRhMS97bG9jYXRpb249cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
+            "cmVnaXN0cmF0aW9uczpyZXRyaWV2ZVJlZ2lzdGVyUGFyYW1ldGVyc9pBFGxv",
+            "Y2F0aW9uLGRvbWFpbl9uYW1lEvgBCg5SZWdpc3RlckRvbWFpbhIzLmdvb2ds",
+            "ZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuUmVnaXN0ZXJEb21haW5SZXF1ZXN0",
+            "Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKRAYLT5JMCRCI/L3Yx",
+            "YmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9yZWdpc3Ry",
+            "YXRpb25zOnJlZ2lzdGVyOgEq2kEgcGFyZW50LHJlZ2lzdHJhdGlvbix5ZWFy",
+            "bHlfcHJpY2XKQSEKDFJlZ2lzdHJhdGlvbhIRT3BlcmF0aW9uTWV0YWRhdGES",
+            "kwIKGlJldHJpZXZlVHJhbnNmZXJQYXJhbWV0ZXJzEj8uZ29vZ2xlLmNsb3Vk",
+            "LmRvbWFpbnMudjFiZXRhMS5SZXRyaWV2ZVRyYW5zZmVyUGFyYW1ldGVyc1Jl",
+            "cXVlc3QaQC5nb29nbGUuY2xvdWQuZG9tYWlucy52MWJldGExLlJldHJpZXZl",
+            "VHJhbnNmZXJQYXJhbWV0ZXJzUmVzcG9uc2UicoLT5JMCVRJTL3YxYmV0YTEv",
+            "e2xvY2F0aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyp9L3JlZ2lzdHJhdGlv",
+            "bnM6cmV0cmlldmVUcmFuc2ZlclBhcmFtZXRlcnPaQRRsb2NhdGlvbixkb21h",
+            "aW5fbmFtZRKLAgoOVHJhbnNmZXJEb21haW4SMy5nb29nbGUuY2xvdWQuZG9t",
+            "YWlucy52MWJldGExLlRyYW5zZmVyRG9tYWluUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24ipAGC0+STAkQiPy92MWJldGExL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vcmVnaXN0cmF0aW9uczp0cmFu",
+            "c2ZlcjoBKtpBM3BhcmVudCxyZWdpc3RyYXRpb24seWVhcmx5X3ByaWNlLGF1",
+            "dGhvcml6YXRpb25fY29kZcpBIQoMUmVnaXN0cmF0aW9uEhFPcGVyYXRpb25N",
+            "ZXRhZGF0YRLNAQoRTGlzdFJlZ2lzdHJhdGlvbnMSNi5nb29nbGUuY2xvdWQu",
+            "ZG9tYWlucy52MWJldGExLkxpc3RSZWdpc3RyYXRpb25zUmVxdWVzdBo3Lmdv",
+            "b2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuTGlzdFJlZ2lzdHJhdGlvbnNS",
+            "ZXNwb25zZSJHgtPkkwI4EjYvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyp9L3JlZ2lzdHJhdGlvbnPaQQZwYXJlbnQSugEKD0dldFJl",
+            "Z2lzdHJhdGlvbhI0Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuR2V0",
+            "UmVnaXN0cmF0aW9uUmVxdWVzdBoqLmdvb2dsZS5jbG91ZC5kb21haW5zLnYx",
+            "YmV0YTEuUmVnaXN0cmF0aW9uIkWC0+STAjgSNi92MWJldGExL3tuYW1lPXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfdpBBG5hbWUS",
+            "hwIKElVwZGF0ZVJlZ2lzdHJhdGlvbhI3Lmdvb2dsZS5jbG91ZC5kb21haW5z",
+            "LnYxYmV0YTEuVXBkYXRlUmVnaXN0cmF0aW9uUmVxdWVzdBodLmdvb2dsZS5s",
+            "b25ncnVubmluZy5PcGVyYXRpb24imAGC0+STAlMyQy92MWJldGExL3tyZWdp",
+            "c3RyYXRpb24ubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3JlZ2lzdHJh",
+            "dGlvbnMvKn06DHJlZ2lzdHJhdGlvbtpBGHJlZ2lzdHJhdGlvbix1cGRhdGVf",
+            "bWFza8pBIQoMUmVnaXN0cmF0aW9uEhFPcGVyYXRpb25NZXRhZGF0YRK5Agob",
+            "Q29uZmlndXJlTWFuYWdlbWVudFNldHRpbmdzEkAuZ29vZ2xlLmNsb3VkLmRv",
+            "bWFpbnMudjFiZXRhMS5Db25maWd1cmVNYW5hZ2VtZW50U2V0dGluZ3NSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiK4AYLT5JMCXyJa",
+            "L3YxYmV0YTEve3JlZ2lzdHJhdGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L3JlZ2lzdHJhdGlvbnMvKn06Y29uZmlndXJlTWFuYWdlbWVudFNldHRpbmdz",
+            "OgEq2kEscmVnaXN0cmF0aW9uLG1hbmFnZW1lbnRfc2V0dGluZ3MsdXBkYXRl",
+            "X21hc2vKQSEKDFJlZ2lzdHJhdGlvbhIRT3BlcmF0aW9uTWV0YWRhdGESnQIK",
+            "FENvbmZpZ3VyZURuc1NldHRpbmdzEjkuZ29vZ2xlLmNsb3VkLmRvbWFpbnMu",
+            "djFiZXRhMS5Db25maWd1cmVEbnNTZXR0aW5nc1JlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqoBgtPkkwJYIlMvdjFiZXRhMS97cmVn",
+            "aXN0cmF0aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9u",
+            "cy8qfTpjb25maWd1cmVEbnNTZXR0aW5nczoBKtpBJXJlZ2lzdHJhdGlvbixk",
+            "bnNfc2V0dGluZ3MsdXBkYXRlX21hc2vKQSEKDFJlZ2lzdHJhdGlvbhIRT3Bl",
+            "cmF0aW9uTWV0YWRhdGESrQIKGENvbmZpZ3VyZUNvbnRhY3RTZXR0aW5ncxI9",
+            "Lmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuQ29uZmlndXJlQ29udGFj",
+            "dFNldHRpbmdzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
+            "b24isgGC0+STAlwiVy92MWJldGExL3tyZWdpc3RyYXRpb249cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9yZWdpc3RyYXRpb25zLyp9OmNvbmZpZ3VyZUNvbnRh",
+            "Y3RTZXR0aW5nczoBKtpBKXJlZ2lzdHJhdGlvbixjb250YWN0X3NldHRpbmdz",
+            "LHVwZGF0ZV9tYXNrykEhCgxSZWdpc3RyYXRpb24SEU9wZXJhdGlvbk1ldGFk",
+            "YXRhEuEBChJFeHBvcnRSZWdpc3RyYXRpb24SNy5nb29nbGUuY2xvdWQuZG9t",
+            "YWlucy52MWJldGExLkV4cG9ydFJlZ2lzdHJhdGlvblJlcXVlc3QaHS5nb29n",
+            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInOC0+STAkIiPS92MWJldGExL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfTpl",
+            "eHBvcnQ6ASraQQRuYW1lykEhCgxSZWdpc3RyYXRpb24SEU9wZXJhdGlvbk1l",
+            "dGFkYXRhEuABChJEZWxldGVSZWdpc3RyYXRpb24SNy5nb29nbGUuY2xvdWQu",
+            "ZG9tYWlucy52MWJldGExLkRlbGV0ZVJlZ2lzdHJhdGlvblJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInKC0+STAjgqNi92MWJldGEx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8q",
+            "fdpBBG5hbWXKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9u",
+            "TWV0YWRhdGES/QEKGVJldHJpZXZlQXV0aG9yaXphdGlvbkNvZGUSPi5nb29n",
+            "bGUuY2xvdWQuZG9tYWlucy52MWJldGExLlJldHJpZXZlQXV0aG9yaXphdGlv",
+            "bkNvZGVSZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmRvbWFpbnMudjFiZXRhMS5B",
+            "dXRob3JpemF0aW9uQ29kZSJvgtPkkwJaElgvdjFiZXRhMS97cmVnaXN0cmF0",
+            "aW9uPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVnaXN0cmF0aW9ucy8qfTpy",
+            "ZXRyaWV2ZUF1dGhvcml6YXRpb25Db2Rl2kEMcmVnaXN0cmF0aW9uEvcBChZS",
+            "ZXNldEF1dGhvcml6YXRpb25Db2RlEjsuZ29vZ2xlLmNsb3VkLmRvbWFpbnMu",
+            "djFiZXRhMS5SZXNldEF1dGhvcml6YXRpb25Db2RlUmVxdWVzdBovLmdvb2ds",
+            "ZS5jbG91ZC5kb21haW5zLnYxYmV0YTEuQXV0aG9yaXphdGlvbkNvZGUib4LT",
+            "5JMCWiJVL3YxYmV0YTEve3JlZ2lzdHJhdGlvbj1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL3JlZ2lzdHJhdGlvbnMvKn06cmVzZXRBdXRob3JpemF0aW9uQ29k",
+            "ZToBKtpBDHJlZ2lzdHJhdGlvbhpKykEWZG9tYWlucy5nb29nbGVhcGlzLmNv",
+            "bdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxh",
+            "dGZvcm1CdwogY29tLmdvb2dsZS5jbG91ZC5kb21haW5zLnYxYmV0YTFCDERv",
+            "bWFpbnNQcm90b1ABWkNnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL2RvbWFpbnMvdjFiZXRhMTtkb21haW5zYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Domains.V1Beta1.ContactPrivacy), typeof(global::Google.Cloud.Domains.V1Beta1.DomainNotice), typeof(global::Google.Cloud.Domains.V1Beta1.ContactNotice), typeof(global::Google.Cloud.Domains.V1Beta1.TransferLockState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -274,6 +308,9 @@ namespace Google.Cloud.Domains.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest), global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersRequest.Parser, new[]{ "DomainName", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse), global::Google.Cloud.Domains.V1Beta1.RetrieveRegisterParametersResponse.Parser, new[]{ "RegisterParameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest), global::Google.Cloud.Domains.V1Beta1.RegisterDomainRequest.Parser, new[]{ "Parent", "Registration", "DomainNotices", "ContactNotices", "YearlyPrice", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest), global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersRequest.Parser, new[]{ "DomainName", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse), global::Google.Cloud.Domains.V1Beta1.RetrieveTransferParametersResponse.Parser, new[]{ "TransferParameters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest), global::Google.Cloud.Domains.V1Beta1.TransferDomainRequest.Parser, new[]{ "Parent", "Registration", "ContactNotices", "YearlyPrice", "AuthorizationCode", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest), global::Google.Cloud.Domains.V1Beta1.ListRegistrationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse), global::Google.Cloud.Domains.V1Beta1.ListRegistrationsResponse.Parser, new[]{ "Registrations", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest), global::Google.Cloud.Domains.V1Beta1.GetRegistrationRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -286,6 +323,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest), global::Google.Cloud.Domains.V1Beta1.RetrieveAuthorizationCodeRequest.Parser, new[]{ "Registration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest), global::Google.Cloud.Domains.V1Beta1.ResetAuthorizationCodeRequest.Parser, new[]{ "Registration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.RegisterParameters), global::Google.Cloud.Domains.V1Beta1.RegisterParameters.Parser, new[]{ "DomainName", "Availability", "SupportedPrivacy", "DomainNotices", "YearlyPrice" }, null, new[]{ typeof(global::Google.Cloud.Domains.V1Beta1.RegisterParameters.Types.Availability) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.TransferParameters), global::Google.Cloud.Domains.V1Beta1.TransferParameters.Parser, new[]{ "DomainName", "CurrentRegistrar", "NameServers", "TransferLockState", "SupportedPrivacy", "YearlyPrice" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.AuthorizationCode), global::Google.Cloud.Domains.V1Beta1.AuthorizationCode.Parser, new[]{ "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Domains.V1Beta1.OperationMetadata), global::Google.Cloud.Domains.V1Beta1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusDetail", "ApiVersion" }, null, null, null, null)
           }));
@@ -388,11 +426,19 @@ namespace Google.Cloud.Domains.V1Beta1 {
   /// The `Registration` resource facilitates managing and configuring domain name
   /// registrations.
   ///
+  /// There are several ways to create a new `Registration` resource:
+  ///
   /// To create a new `Registration` resource, find a suitable domain name by
   /// calling the `SearchDomains` method with a query to see available domain name
   /// options. After choosing a name, call `RetrieveRegisterParameters` to
   /// ensure availability and obtain information like pricing, which is needed to
   /// build a call to `RegisterDomain`.
+  ///
+  /// Another way to create a new `Registration` is to transfer an existing
+  /// domain from another registrar. First, go to the current registrar to unlock
+  /// the domain for transfer and retrieve the domain's transfer authorization
+  /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+  /// unlocked and to get values needed to build a call to `TransferDomain`.
   /// </summary>
   public sealed partial class Registration : pb::IMessage<Registration>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -597,7 +643,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
     /// `contact_settings` field that change its `registrant_contact` or `privacy`
     /// fields require email confirmation by the `registrant_contact`
     /// before taking effect. This field is set only if there are pending updates
-    /// to the `contact_settings` that have not yet been confirmed. To confirm the
+    /// to the `contact_settings` that have not been confirmed. To confirm the
     /// changes, the `registrant_contact` must follow the instructions in the
     /// email they receive.
     /// </summary>
@@ -1058,6 +1104,16 @@ namespace Google.Cloud.Domains.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("REGISTRATION_FAILED")] RegistrationFailed = 2,
         /// <summary>
+        /// The domain is being transferred from another registrar to Cloud Domains.
+        /// </summary>
+        [pbr::OriginalName("TRANSFER_PENDING")] TransferPending = 3,
+        /// <summary>
+        /// The attempt to transfer the domain from another registrar to
+        /// Cloud Domains failed. You can delete resources in this state and retry
+        /// the transfer.
+        /// </summary>
+        [pbr::OriginalName("TRANSFER_FAILED")] TransferFailed = 4,
+        /// <summary>
         /// The domain is registered and operational. The domain renews automatically
         /// as long as it remains in this state.
         /// </summary>
@@ -1068,11 +1124,11 @@ namespace Google.Cloud.Domains.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("SUSPENDED")] Suspended = 7,
         /// <summary>
-        /// The domain has been exported from Cloud Domains to
+        /// The domain is no longer managed with Cloud Domains. It may have been
+        /// transferred to another registrar or exported for management in
         /// [Google Domains](https://domains.google/). You can no longer update it
-        /// with this API, and information shown about it may be stale. Without further action, domains in this
-        /// state expire at their `expire_time`. You can delete the resource
-        /// after the `expire_time` has passed.
+        /// with this API, and information shown about it may be stale. Domains in
+        /// this state are not automatically renewed by Cloud Domains.
         /// </summary>
         [pbr::OriginalName("EXPORTED")] Exported = 8,
       }
@@ -1095,7 +1151,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
         /// verify the email address, follow the
         /// instructions in the email the `registrant_contact` receives following
         /// registration. If you do not complete email verification within
-        /// 14 days of registration, the domain is suspended. To resend the
+        /// 15 days of registration, the domain is suspended. To resend the
         /// verification email, call ConfigureContactSettings and provide the current
         /// `registrant_contact.email`.
         /// </summary>
@@ -1337,8 +1393,8 @@ namespace Google.Cloud.Domains.V1Beta1 {
         /// <summary>
         /// The domain is automatically renewed each year .
         ///
-        /// To disable automatic renewals, export the domain by calling
-        /// `ExportRegistration` .
+        /// To disable automatic renewals, delete the resource by calling
+        /// `DeleteRegistration` or export it by calling `ExportRegistration`.
         /// </summary>
         [pbr::OriginalName("AUTOMATIC_RENEWAL")] AutomaticRenewal = 1,
         /// <summary>
@@ -2436,6 +2492,14 @@ namespace Google.Cloud.Domains.V1Beta1 {
             /// </summary>
             [pbr::OriginalName("ALGORITHM_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
+            /// RSA/MD5. Cannot be used for new deployments.
+            /// </summary>
+            [pbr::OriginalName("RSAMD5")] Rsamd5 = 1,
+            /// <summary>
+            /// Diffie-Hellman. Cannot be used for new deployments.
+            /// </summary>
+            [pbr::OriginalName("DH")] Dh = 2,
+            /// <summary>
             /// DSA/SHA1. Not recommended for new deployments.
             /// </summary>
             [pbr::OriginalName("DSA")] Dsa = 3,
@@ -2483,6 +2547,18 @@ namespace Google.Cloud.Domains.V1Beta1 {
             /// Ed448.
             /// </summary>
             [pbr::OriginalName("ED448")] Ed448 = 16,
+            /// <summary>
+            /// Reserved for Indirect Keys. Cannot be used for new deployments.
+            /// </summary>
+            [pbr::OriginalName("INDIRECT")] Indirect = 252,
+            /// <summary>
+            /// Private algorithm. Cannot be used for new deployments.
+            /// </summary>
+            [pbr::OriginalName("PRIVATEDNS")] Privatedns = 253,
+            /// <summary>
+            /// Private algorithm OID. Cannot be used for new deployments.
+            /// </summary>
+            [pbr::OriginalName("PRIVATEOID")] Privateoid = 254,
           }
 
           /// <summary>
@@ -2836,8 +2912,8 @@ namespace Google.Cloud.Domains.V1Beta1 {
     /// *Caution: Anyone with access to this email address, phone number,
     /// and/or postal address can take control of the domain.*
     ///
-    /// *Warning: For new `Registration`s, the registrant will receive an email
-    /// confirmation that they must complete within 14 days to avoid domain
+    /// *Warning: For new `Registration`s, the registrant receives an email
+    /// confirmation that they must complete within 15 days to avoid domain
     /// suspension.*
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4295,7 +4371,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice> contactNotices_ = new pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice>();
     /// <summary>
     /// The list of contact notices that the caller acknowledges. The notices
-    /// required here depend on the values specified in
+    /// needed here depend on the values specified in
     /// `registration.contact_settings`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4323,7 +4399,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
     public const int ValidateOnlyFieldNumber = 6;
     private bool validateOnly_;
     /// <summary>
-    /// When true, only validation will be performed, without actually registering
+    /// When true, only validation is performed, without actually registering
     /// the domain. Follows:
     /// https://cloud.google.com/apis/design/design_patterns#request_validation
     /// </summary>
@@ -4581,6 +4657,813 @@ namespace Google.Cloud.Domains.V1Beta1 {
   }
 
   /// <summary>
+  /// Request for the `RetrieveTransferParameters` method.
+  /// </summary>
+  public sealed partial class RetrieveTransferParametersRequest : pb::IMessage<RetrieveTransferParametersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RetrieveTransferParametersRequest> _parser = new pb::MessageParser<RetrieveTransferParametersRequest>(() => new RetrieveTransferParametersRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RetrieveTransferParametersRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RetrieveTransferParametersRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RetrieveTransferParametersRequest(RetrieveTransferParametersRequest other) : this() {
+      domainName_ = other.domainName_;
+      location_ = other.location_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RetrieveTransferParametersRequest Clone() {
+      return new RetrieveTransferParametersRequest(this);
+    }
+
+    /// <summary>Field number for the "domain_name" field.</summary>
+    public const int DomainNameFieldNumber = 1;
+    private string domainName_ = "";
+    /// <summary>
+    /// Required. The domain name. Unicode domain names must be expressed in Punycode format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DomainName {
+      get { return domainName_; }
+      set {
+        domainName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 2;
+    private string location_ = "";
+    /// <summary>
+    /// Required. The location. Must be in the format `projects/*/locations/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Location {
+      get { return location_; }
+      set {
+        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RetrieveTransferParametersRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RetrieveTransferParametersRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DomainName != other.DomainName) return false;
+      if (Location != other.Location) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DomainName.Length != 0) hash ^= DomainName.GetHashCode();
+      if (Location.Length != 0) hash ^= Location.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DomainName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DomainName);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DomainName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DomainName);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DomainName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DomainName);
+      }
+      if (Location.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RetrieveTransferParametersRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DomainName.Length != 0) {
+        DomainName = other.DomainName;
+      }
+      if (other.Location.Length != 0) {
+        Location = other.Location;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DomainName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Location = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DomainName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Location = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for the `RetrieveTransferParameters` method.
+  /// </summary>
+  public sealed partial class RetrieveTransferParametersResponse : pb::IMessage<RetrieveTransferParametersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RetrieveTransferParametersResponse> _parser = new pb::MessageParser<RetrieveTransferParametersResponse>(() => new RetrieveTransferParametersResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<RetrieveTransferParametersResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RetrieveTransferParametersResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RetrieveTransferParametersResponse(RetrieveTransferParametersResponse other) : this() {
+      transferParameters_ = other.transferParameters_ != null ? other.transferParameters_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public RetrieveTransferParametersResponse Clone() {
+      return new RetrieveTransferParametersResponse(this);
+    }
+
+    /// <summary>Field number for the "transfer_parameters" field.</summary>
+    public const int TransferParametersFieldNumber = 1;
+    private global::Google.Cloud.Domains.V1Beta1.TransferParameters transferParameters_;
+    /// <summary>
+    /// Parameters to use when calling the `TransferDomain` method.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Domains.V1Beta1.TransferParameters TransferParameters {
+      get { return transferParameters_; }
+      set {
+        transferParameters_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as RetrieveTransferParametersResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(RetrieveTransferParametersResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(TransferParameters, other.TransferParameters)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (transferParameters_ != null) hash ^= TransferParameters.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (transferParameters_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TransferParameters);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (transferParameters_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(TransferParameters);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (transferParameters_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransferParameters);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(RetrieveTransferParametersResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.transferParameters_ != null) {
+        if (transferParameters_ == null) {
+          TransferParameters = new global::Google.Cloud.Domains.V1Beta1.TransferParameters();
+        }
+        TransferParameters.MergeFrom(other.TransferParameters);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (transferParameters_ == null) {
+              TransferParameters = new global::Google.Cloud.Domains.V1Beta1.TransferParameters();
+            }
+            input.ReadMessage(TransferParameters);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (transferParameters_ == null) {
+              TransferParameters = new global::Google.Cloud.Domains.V1Beta1.TransferParameters();
+            }
+            input.ReadMessage(TransferParameters);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for the `TransferDomain` method.
+  /// </summary>
+  public sealed partial class TransferDomainRequest : pb::IMessage<TransferDomainRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TransferDomainRequest> _parser = new pb::MessageParser<TransferDomainRequest>(() => new TransferDomainRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TransferDomainRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransferDomainRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransferDomainRequest(TransferDomainRequest other) : this() {
+      parent_ = other.parent_;
+      registration_ = other.registration_ != null ? other.registration_.Clone() : null;
+      contactNotices_ = other.contactNotices_.Clone();
+      yearlyPrice_ = other.yearlyPrice_ != null ? other.yearlyPrice_.Clone() : null;
+      authorizationCode_ = other.authorizationCode_ != null ? other.authorizationCode_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransferDomainRequest Clone() {
+      return new TransferDomainRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent resource of the `Registration`. Must be in the
+    /// format `projects/*/locations/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "registration" field.</summary>
+    public const int RegistrationFieldNumber = 2;
+    private global::Google.Cloud.Domains.V1Beta1.Registration registration_;
+    /// <summary>
+    /// Required. The complete `Registration` resource to be created.
+    ///
+    /// You can leave `registration.dns_settings` unset to import the
+    /// domain's current DNS configuration from its current registrar. Use this
+    /// option only if you are sure that the domain's current DNS service
+    /// does not cease upon transfer, as is often the case for DNS services
+    /// provided for free by the registrar.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Domains.V1Beta1.Registration Registration {
+      get { return registration_; }
+      set {
+        registration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "contact_notices" field.</summary>
+    public const int ContactNoticesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Domains.V1Beta1.ContactNotice> _repeated_contactNotices_codec
+        = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Google.Cloud.Domains.V1Beta1.ContactNotice) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice> contactNotices_ = new pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice>();
+    /// <summary>
+    /// The list of contact notices that you acknowledge. The notices
+    /// needed here depend on the values specified in
+    /// `registration.contact_settings`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice> ContactNotices {
+      get { return contactNotices_; }
+    }
+
+    /// <summary>Field number for the "yearly_price" field.</summary>
+    public const int YearlyPriceFieldNumber = 4;
+    private global::Google.Type.Money yearlyPrice_;
+    /// <summary>
+    /// Required. Acknowledgement of the price to transfer or renew the domain for one year.
+    /// Call `RetrieveTransferParameters` to obtain the price, which you must
+    /// acknowledge.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Money YearlyPrice {
+      get { return yearlyPrice_; }
+      set {
+        yearlyPrice_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "authorization_code" field.</summary>
+    public const int AuthorizationCodeFieldNumber = 5;
+    private global::Google.Cloud.Domains.V1Beta1.AuthorizationCode authorizationCode_;
+    /// <summary>
+    /// The domain's transfer authorization code. You can obtain this from the
+    /// domain's current registrar.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Domains.V1Beta1.AuthorizationCode AuthorizationCode {
+      get { return authorizationCode_; }
+      set {
+        authorizationCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 6;
+    private bool validateOnly_;
+    /// <summary>
+    /// Validate the request without actually transferring the domain.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TransferDomainRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TransferDomainRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(Registration, other.Registration)) return false;
+      if(!contactNotices_.Equals(other.contactNotices_)) return false;
+      if (!object.Equals(YearlyPrice, other.YearlyPrice)) return false;
+      if (!object.Equals(AuthorizationCode, other.AuthorizationCode)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (registration_ != null) hash ^= Registration.GetHashCode();
+      hash ^= contactNotices_.GetHashCode();
+      if (yearlyPrice_ != null) hash ^= YearlyPrice.GetHashCode();
+      if (authorizationCode_ != null) hash ^= AuthorizationCode.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (registration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Registration);
+      }
+      contactNotices_.WriteTo(output, _repeated_contactNotices_codec);
+      if (yearlyPrice_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(YearlyPrice);
+      }
+      if (authorizationCode_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AuthorizationCode);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (registration_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Registration);
+      }
+      contactNotices_.WriteTo(ref output, _repeated_contactNotices_codec);
+      if (yearlyPrice_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(YearlyPrice);
+      }
+      if (authorizationCode_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(AuthorizationCode);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ValidateOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (registration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Registration);
+      }
+      size += contactNotices_.CalculateSize(_repeated_contactNotices_codec);
+      if (yearlyPrice_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(YearlyPrice);
+      }
+      if (authorizationCode_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AuthorizationCode);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TransferDomainRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.registration_ != null) {
+        if (registration_ == null) {
+          Registration = new global::Google.Cloud.Domains.V1Beta1.Registration();
+        }
+        Registration.MergeFrom(other.Registration);
+      }
+      contactNotices_.Add(other.contactNotices_);
+      if (other.yearlyPrice_ != null) {
+        if (yearlyPrice_ == null) {
+          YearlyPrice = new global::Google.Type.Money();
+        }
+        YearlyPrice.MergeFrom(other.YearlyPrice);
+      }
+      if (other.authorizationCode_ != null) {
+        if (authorizationCode_ == null) {
+          AuthorizationCode = new global::Google.Cloud.Domains.V1Beta1.AuthorizationCode();
+        }
+        AuthorizationCode.MergeFrom(other.AuthorizationCode);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (registration_ == null) {
+              Registration = new global::Google.Cloud.Domains.V1Beta1.Registration();
+            }
+            input.ReadMessage(Registration);
+            break;
+          }
+          case 26:
+          case 24: {
+            contactNotices_.AddEntriesFrom(input, _repeated_contactNotices_codec);
+            break;
+          }
+          case 34: {
+            if (yearlyPrice_ == null) {
+              YearlyPrice = new global::Google.Type.Money();
+            }
+            input.ReadMessage(YearlyPrice);
+            break;
+          }
+          case 42: {
+            if (authorizationCode_ == null) {
+              AuthorizationCode = new global::Google.Cloud.Domains.V1Beta1.AuthorizationCode();
+            }
+            input.ReadMessage(AuthorizationCode);
+            break;
+          }
+          case 48: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (registration_ == null) {
+              Registration = new global::Google.Cloud.Domains.V1Beta1.Registration();
+            }
+            input.ReadMessage(Registration);
+            break;
+          }
+          case 26:
+          case 24: {
+            contactNotices_.AddEntriesFrom(ref input, _repeated_contactNotices_codec);
+            break;
+          }
+          case 34: {
+            if (yearlyPrice_ == null) {
+              YearlyPrice = new global::Google.Type.Money();
+            }
+            input.ReadMessage(YearlyPrice);
+            break;
+          }
+          case 42: {
+            if (authorizationCode_ == null) {
+              AuthorizationCode = new global::Google.Cloud.Domains.V1Beta1.AuthorizationCode();
+            }
+            input.ReadMessage(AuthorizationCode);
+            break;
+          }
+          case 48: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request for the `ListRegistrations` method.
   /// </summary>
   public sealed partial class ListRegistrationsRequest : pb::IMessage<ListRegistrationsRequest>
@@ -4595,7 +5478,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4907,7 +5790,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5114,7 +5997,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5293,7 +6176,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5339,8 +6222,8 @@ namespace Google.Cloud.Domains.V1Beta1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Required. The field mask describing which fields to update as a comma-separated list.
-    /// For example, if only the labels are being updated, the `update_mask` would
-    /// be `"labels"`.
+    /// For example, if only the labels are being updated, the `update_mask` is
+    /// `"labels"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -5530,7 +6413,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5593,7 +6476,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
     /// <summary>
     /// Required. The field mask describing which fields to update as a comma-separated list.
     /// For example, if only the transfer lock is being updated, the `update_mask`
-    /// would be `"transfer_lock_state"`.
+    /// is `"transfer_lock_state"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -5807,7 +6690,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5871,13 +6754,13 @@ namespace Google.Cloud.Domains.V1Beta1 {
     /// <summary>
     /// Required. The field mask describing which fields to update as a comma-separated list.
     /// For example, if only the name servers are being updated for an existing
-    /// Custom DNS configuration, the `update_mask` would be
+    /// Custom DNS configuration, the `update_mask` is
     /// `"custom_dns.name_servers"`.
     ///
     /// When changing the DNS provider from one type to another, pass the new
     /// provider's field name as part of the field mask. For example, when changing
     /// from a Google Domains DNS configuration to a Custom DNS configuration, the
-    /// `update_mask` would be `"custom_dns"`. //
+    /// `update_mask` is `"custom_dns"`. //
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -6129,7 +7012,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6194,7 +7077,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
     /// <summary>
     /// Required. The field mask describing which fields to update as a comma-separated list.
     /// For example, if only the registrant contact is being updated, the
-    /// `update_mask` would be `"registrant_contact"`.
+    /// `update_mask` is `"registrant_contact"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -6211,7 +7094,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice> contactNotices_ = new pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice>();
     /// <summary>
     /// The list of contact notices that the caller acknowledges. The notices
-    /// required here depend on the values specified in `contact_settings`.
+    /// needed here depend on the values specified in `contact_settings`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactNotice> ContactNotices {
@@ -6476,7 +7359,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6655,7 +7538,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6834,7 +7717,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7013,7 +7896,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7192,7 +8075,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7541,6 +8424,370 @@ namespace Google.Cloud.Domains.V1Beta1 {
   }
 
   /// <summary>
+  /// Parameters required to transfer a domain from another registrar.
+  /// </summary>
+  public sealed partial class TransferParameters : pb::IMessage<TransferParameters>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TransferParameters> _parser = new pb::MessageParser<TransferParameters>(() => new TransferParameters());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TransferParameters> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransferParameters() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransferParameters(TransferParameters other) : this() {
+      domainName_ = other.domainName_;
+      currentRegistrar_ = other.currentRegistrar_;
+      nameServers_ = other.nameServers_.Clone();
+      transferLockState_ = other.transferLockState_;
+      supportedPrivacy_ = other.supportedPrivacy_.Clone();
+      yearlyPrice_ = other.yearlyPrice_ != null ? other.yearlyPrice_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TransferParameters Clone() {
+      return new TransferParameters(this);
+    }
+
+    /// <summary>Field number for the "domain_name" field.</summary>
+    public const int DomainNameFieldNumber = 1;
+    private string domainName_ = "";
+    /// <summary>
+    /// The domain name. Unicode domain names are expressed in Punycode format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DomainName {
+      get { return domainName_; }
+      set {
+        domainName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "current_registrar" field.</summary>
+    public const int CurrentRegistrarFieldNumber = 2;
+    private string currentRegistrar_ = "";
+    /// <summary>
+    /// The registrar that currently manages the domain.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string CurrentRegistrar {
+      get { return currentRegistrar_; }
+      set {
+        currentRegistrar_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name_servers" field.</summary>
+    public const int NameServersFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_nameServers_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> nameServers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The name servers that currently store the configuration of the domain.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> NameServers {
+      get { return nameServers_; }
+    }
+
+    /// <summary>Field number for the "transfer_lock_state" field.</summary>
+    public const int TransferLockStateFieldNumber = 4;
+    private global::Google.Cloud.Domains.V1Beta1.TransferLockState transferLockState_ = global::Google.Cloud.Domains.V1Beta1.TransferLockState.Unspecified;
+    /// <summary>
+    /// Indicates whether the domain is protected by a transfer lock. For a
+    /// transfer to succeed, this must show `UNLOCKED`. To unlock a domain,
+    /// go to its current registrar.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Domains.V1Beta1.TransferLockState TransferLockState {
+      get { return transferLockState_; }
+      set {
+        transferLockState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "supported_privacy" field.</summary>
+    public const int SupportedPrivacyFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Domains.V1Beta1.ContactPrivacy> _repeated_supportedPrivacy_codec
+        = pb::FieldCodec.ForEnum(42, x => (int) x, x => (global::Google.Cloud.Domains.V1Beta1.ContactPrivacy) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactPrivacy> supportedPrivacy_ = new pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactPrivacy>();
+    /// <summary>
+    /// Contact privacy options that the domain supports.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Domains.V1Beta1.ContactPrivacy> SupportedPrivacy {
+      get { return supportedPrivacy_; }
+    }
+
+    /// <summary>Field number for the "yearly_price" field.</summary>
+    public const int YearlyPriceFieldNumber = 6;
+    private global::Google.Type.Money yearlyPrice_;
+    /// <summary>
+    /// Price to transfer or renew the domain for one year.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Money YearlyPrice {
+      get { return yearlyPrice_; }
+      set {
+        yearlyPrice_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TransferParameters);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TransferParameters other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DomainName != other.DomainName) return false;
+      if (CurrentRegistrar != other.CurrentRegistrar) return false;
+      if(!nameServers_.Equals(other.nameServers_)) return false;
+      if (TransferLockState != other.TransferLockState) return false;
+      if(!supportedPrivacy_.Equals(other.supportedPrivacy_)) return false;
+      if (!object.Equals(YearlyPrice, other.YearlyPrice)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DomainName.Length != 0) hash ^= DomainName.GetHashCode();
+      if (CurrentRegistrar.Length != 0) hash ^= CurrentRegistrar.GetHashCode();
+      hash ^= nameServers_.GetHashCode();
+      if (TransferLockState != global::Google.Cloud.Domains.V1Beta1.TransferLockState.Unspecified) hash ^= TransferLockState.GetHashCode();
+      hash ^= supportedPrivacy_.GetHashCode();
+      if (yearlyPrice_ != null) hash ^= YearlyPrice.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DomainName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DomainName);
+      }
+      if (CurrentRegistrar.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CurrentRegistrar);
+      }
+      nameServers_.WriteTo(output, _repeated_nameServers_codec);
+      if (TransferLockState != global::Google.Cloud.Domains.V1Beta1.TransferLockState.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TransferLockState);
+      }
+      supportedPrivacy_.WriteTo(output, _repeated_supportedPrivacy_codec);
+      if (yearlyPrice_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(YearlyPrice);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DomainName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DomainName);
+      }
+      if (CurrentRegistrar.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CurrentRegistrar);
+      }
+      nameServers_.WriteTo(ref output, _repeated_nameServers_codec);
+      if (TransferLockState != global::Google.Cloud.Domains.V1Beta1.TransferLockState.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TransferLockState);
+      }
+      supportedPrivacy_.WriteTo(ref output, _repeated_supportedPrivacy_codec);
+      if (yearlyPrice_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(YearlyPrice);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DomainName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DomainName);
+      }
+      if (CurrentRegistrar.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrentRegistrar);
+      }
+      size += nameServers_.CalculateSize(_repeated_nameServers_codec);
+      if (TransferLockState != global::Google.Cloud.Domains.V1Beta1.TransferLockState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TransferLockState);
+      }
+      size += supportedPrivacy_.CalculateSize(_repeated_supportedPrivacy_codec);
+      if (yearlyPrice_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(YearlyPrice);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TransferParameters other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DomainName.Length != 0) {
+        DomainName = other.DomainName;
+      }
+      if (other.CurrentRegistrar.Length != 0) {
+        CurrentRegistrar = other.CurrentRegistrar;
+      }
+      nameServers_.Add(other.nameServers_);
+      if (other.TransferLockState != global::Google.Cloud.Domains.V1Beta1.TransferLockState.Unspecified) {
+        TransferLockState = other.TransferLockState;
+      }
+      supportedPrivacy_.Add(other.supportedPrivacy_);
+      if (other.yearlyPrice_ != null) {
+        if (yearlyPrice_ == null) {
+          YearlyPrice = new global::Google.Type.Money();
+        }
+        YearlyPrice.MergeFrom(other.YearlyPrice);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DomainName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CurrentRegistrar = input.ReadString();
+            break;
+          }
+          case 26: {
+            nameServers_.AddEntriesFrom(input, _repeated_nameServers_codec);
+            break;
+          }
+          case 32: {
+            TransferLockState = (global::Google.Cloud.Domains.V1Beta1.TransferLockState) input.ReadEnum();
+            break;
+          }
+          case 42:
+          case 40: {
+            supportedPrivacy_.AddEntriesFrom(input, _repeated_supportedPrivacy_codec);
+            break;
+          }
+          case 50: {
+            if (yearlyPrice_ == null) {
+              YearlyPrice = new global::Google.Type.Money();
+            }
+            input.ReadMessage(YearlyPrice);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DomainName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CurrentRegistrar = input.ReadString();
+            break;
+          }
+          case 26: {
+            nameServers_.AddEntriesFrom(ref input, _repeated_nameServers_codec);
+            break;
+          }
+          case 32: {
+            TransferLockState = (global::Google.Cloud.Domains.V1Beta1.TransferLockState) input.ReadEnum();
+            break;
+          }
+          case 42:
+          case 40: {
+            supportedPrivacy_.AddEntriesFrom(ref input, _repeated_supportedPrivacy_codec);
+            break;
+          }
+          case 50: {
+            if (yearlyPrice_ == null) {
+              YearlyPrice = new global::Google.Type.Money();
+            }
+            input.ReadMessage(YearlyPrice);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Defines an authorization code.
   /// </summary>
   public sealed partial class AuthorizationCode : pb::IMessage<AuthorizationCode>
@@ -7555,7 +8802,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7734,7 +8981,7 @@ namespace Google.Cloud.Domains.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Domains.V1Beta1.DomainsReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

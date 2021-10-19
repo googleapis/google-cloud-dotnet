@@ -52,6 +52,9 @@ namespace Google.Cloud.Domains.V1Beta1
             RetrieveRegisterParametersSettings = existing.RetrieveRegisterParametersSettings;
             RegisterDomainSettings = existing.RegisterDomainSettings;
             RegisterDomainOperationsSettings = existing.RegisterDomainOperationsSettings.Clone();
+            RetrieveTransferParametersSettings = existing.RetrieveTransferParametersSettings;
+            TransferDomainSettings = existing.TransferDomainSettings;
+            TransferDomainOperationsSettings = existing.TransferDomainOperationsSettings.Clone();
             ListRegistrationsSettings = existing.ListRegistrationsSettings;
             GetRegistrationSettings = existing.GetRegistrationSettings;
             UpdateRegistrationSettings = existing.UpdateRegistrationSettings;
@@ -123,6 +126,48 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RegisterDomainOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DomainsClient.RetrieveTransferParameters</c> and <c>DomainsClient.RetrieveTransferParametersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RetrieveTransferParametersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DomainsClient.TransferDomain</c> and <c>DomainsClient.TransferDomainAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TransferDomainSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DomainsClient.TransferDomain</c> and
+        /// <c>DomainsClient.TransferDomainAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings TransferDomainOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1115,6 +1160,615 @@ namespace Google.Cloud.Domains.V1Beta1
             RegisterDomainAsync(parent, registration, yearlyPrice, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveTransferParametersResponse RetrieveTransferParameters(RetrieveTransferParametersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(RetrieveTransferParametersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(RetrieveTransferParametersRequest request, st::CancellationToken cancellationToken) =>
+            RetrieveTransferParametersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The location. Must be in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="domainName">
+        /// Required. The domain name. Unicode domain names must be expressed in Punycode format.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveTransferParametersResponse RetrieveTransferParameters(string location, string domainName, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveTransferParameters(new RetrieveTransferParametersRequest
+            {
+                DomainName = gax::GaxPreconditions.CheckNotNullOrEmpty(domainName, nameof(domainName)),
+                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The location. Must be in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="domainName">
+        /// Required. The domain name. Unicode domain names must be expressed in Punycode format.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(string location, string domainName, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveTransferParametersAsync(new RetrieveTransferParametersRequest
+            {
+                DomainName = gax::GaxPreconditions.CheckNotNullOrEmpty(domainName, nameof(domainName)),
+                Location = gax::GaxPreconditions.CheckNotNullOrEmpty(location, nameof(location)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The location. Must be in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="domainName">
+        /// Required. The domain name. Unicode domain names must be expressed in Punycode format.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(string location, string domainName, st::CancellationToken cancellationToken) =>
+            RetrieveTransferParametersAsync(location, domainName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The location. Must be in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="domainName">
+        /// Required. The domain name. Unicode domain names must be expressed in Punycode format.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RetrieveTransferParametersResponse RetrieveTransferParameters(gagr::LocationName location, string domainName, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveTransferParameters(new RetrieveTransferParametersRequest
+            {
+                DomainName = gax::GaxPreconditions.CheckNotNullOrEmpty(domainName, nameof(domainName)),
+                LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The location. Must be in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="domainName">
+        /// Required. The domain name. Unicode domain names must be expressed in Punycode format.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(gagr::LocationName location, string domainName, gaxgrpc::CallSettings callSettings = null) =>
+            RetrieveTransferParametersAsync(new RetrieveTransferParametersRequest
+            {
+                DomainName = gax::GaxPreconditions.CheckNotNullOrEmpty(domainName, nameof(domainName)),
+                LocationAsLocationName = gax::GaxPreconditions.CheckNotNull(location, nameof(location)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="location">
+        /// Required. The location. Must be in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="domainName">
+        /// Required. The domain name. Unicode domain names must be expressed in Punycode format.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(gagr::LocationName location, string domainName, st::CancellationToken cancellationToken) =>
+            RetrieveTransferParametersAsync(location, domainName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Registration, OperationMetadata> TransferDomain(TransferDomainRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Registration, OperationMetadata>> TransferDomainAsync(TransferDomainRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Registration, OperationMetadata>> TransferDomainAsync(TransferDomainRequest request, st::CancellationToken cancellationToken) =>
+            TransferDomainAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>TransferDomain</c>.</summary>
+        public virtual lro::OperationsClient TransferDomainOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>TransferDomain</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Registration, OperationMetadata> PollOnceTransferDomain(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Registration, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TransferDomainOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>TransferDomain</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Registration, OperationMetadata>> PollOnceTransferDomainAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Registration, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), TransferDomainOperationsClient, callSettings);
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `Registration`. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="registration">
+        /// Required. The complete `Registration` resource to be created.
+        /// 
+        /// You can leave `registration.dns_settings` unset to import the
+        /// domain's current DNS configuration from its current registrar. Use this
+        /// option only if you are sure that the domain's current DNS service
+        /// does not cease upon transfer, as is often the case for DNS services
+        /// provided for free by the registrar.
+        /// </param>
+        /// <param name="yearlyPrice">
+        /// Required. Acknowledgement of the price to transfer or renew the domain for one year.
+        /// Call `RetrieveTransferParameters` to obtain the price, which you must
+        /// acknowledge.
+        /// </param>
+        /// <param name="authorizationCode">
+        /// The domain's transfer authorization code. You can obtain this from the
+        /// domain's current registrar.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Registration, OperationMetadata> TransferDomain(string parent, Registration registration, gt::Money yearlyPrice, AuthorizationCode authorizationCode, gaxgrpc::CallSettings callSettings = null) =>
+            TransferDomain(new TransferDomainRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Registration = gax::GaxPreconditions.CheckNotNull(registration, nameof(registration)),
+                YearlyPrice = gax::GaxPreconditions.CheckNotNull(yearlyPrice, nameof(yearlyPrice)),
+                AuthorizationCode = authorizationCode,
+            }, callSettings);
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `Registration`. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="registration">
+        /// Required. The complete `Registration` resource to be created.
+        /// 
+        /// You can leave `registration.dns_settings` unset to import the
+        /// domain's current DNS configuration from its current registrar. Use this
+        /// option only if you are sure that the domain's current DNS service
+        /// does not cease upon transfer, as is often the case for DNS services
+        /// provided for free by the registrar.
+        /// </param>
+        /// <param name="yearlyPrice">
+        /// Required. Acknowledgement of the price to transfer or renew the domain for one year.
+        /// Call `RetrieveTransferParameters` to obtain the price, which you must
+        /// acknowledge.
+        /// </param>
+        /// <param name="authorizationCode">
+        /// The domain's transfer authorization code. You can obtain this from the
+        /// domain's current registrar.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Registration, OperationMetadata>> TransferDomainAsync(string parent, Registration registration, gt::Money yearlyPrice, AuthorizationCode authorizationCode, gaxgrpc::CallSettings callSettings = null) =>
+            TransferDomainAsync(new TransferDomainRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Registration = gax::GaxPreconditions.CheckNotNull(registration, nameof(registration)),
+                YearlyPrice = gax::GaxPreconditions.CheckNotNull(yearlyPrice, nameof(yearlyPrice)),
+                AuthorizationCode = authorizationCode,
+            }, callSettings);
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `Registration`. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="registration">
+        /// Required. The complete `Registration` resource to be created.
+        /// 
+        /// You can leave `registration.dns_settings` unset to import the
+        /// domain's current DNS configuration from its current registrar. Use this
+        /// option only if you are sure that the domain's current DNS service
+        /// does not cease upon transfer, as is often the case for DNS services
+        /// provided for free by the registrar.
+        /// </param>
+        /// <param name="yearlyPrice">
+        /// Required. Acknowledgement of the price to transfer or renew the domain for one year.
+        /// Call `RetrieveTransferParameters` to obtain the price, which you must
+        /// acknowledge.
+        /// </param>
+        /// <param name="authorizationCode">
+        /// The domain's transfer authorization code. You can obtain this from the
+        /// domain's current registrar.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Registration, OperationMetadata>> TransferDomainAsync(string parent, Registration registration, gt::Money yearlyPrice, AuthorizationCode authorizationCode, st::CancellationToken cancellationToken) =>
+            TransferDomainAsync(parent, registration, yearlyPrice, authorizationCode, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `Registration`. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="registration">
+        /// Required. The complete `Registration` resource to be created.
+        /// 
+        /// You can leave `registration.dns_settings` unset to import the
+        /// domain's current DNS configuration from its current registrar. Use this
+        /// option only if you are sure that the domain's current DNS service
+        /// does not cease upon transfer, as is often the case for DNS services
+        /// provided for free by the registrar.
+        /// </param>
+        /// <param name="yearlyPrice">
+        /// Required. Acknowledgement of the price to transfer or renew the domain for one year.
+        /// Call `RetrieveTransferParameters` to obtain the price, which you must
+        /// acknowledge.
+        /// </param>
+        /// <param name="authorizationCode">
+        /// The domain's transfer authorization code. You can obtain this from the
+        /// domain's current registrar.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Registration, OperationMetadata> TransferDomain(gagr::LocationName parent, Registration registration, gt::Money yearlyPrice, AuthorizationCode authorizationCode, gaxgrpc::CallSettings callSettings = null) =>
+            TransferDomain(new TransferDomainRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Registration = gax::GaxPreconditions.CheckNotNull(registration, nameof(registration)),
+                YearlyPrice = gax::GaxPreconditions.CheckNotNull(yearlyPrice, nameof(yearlyPrice)),
+                AuthorizationCode = authorizationCode,
+            }, callSettings);
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `Registration`. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="registration">
+        /// Required. The complete `Registration` resource to be created.
+        /// 
+        /// You can leave `registration.dns_settings` unset to import the
+        /// domain's current DNS configuration from its current registrar. Use this
+        /// option only if you are sure that the domain's current DNS service
+        /// does not cease upon transfer, as is often the case for DNS services
+        /// provided for free by the registrar.
+        /// </param>
+        /// <param name="yearlyPrice">
+        /// Required. Acknowledgement of the price to transfer or renew the domain for one year.
+        /// Call `RetrieveTransferParameters` to obtain the price, which you must
+        /// acknowledge.
+        /// </param>
+        /// <param name="authorizationCode">
+        /// The domain's transfer authorization code. You can obtain this from the
+        /// domain's current registrar.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Registration, OperationMetadata>> TransferDomainAsync(gagr::LocationName parent, Registration registration, gt::Money yearlyPrice, AuthorizationCode authorizationCode, gaxgrpc::CallSettings callSettings = null) =>
+            TransferDomainAsync(new TransferDomainRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Registration = gax::GaxPreconditions.CheckNotNull(registration, nameof(registration)),
+                YearlyPrice = gax::GaxPreconditions.CheckNotNull(yearlyPrice, nameof(yearlyPrice)),
+                AuthorizationCode = authorizationCode,
+            }, callSettings);
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the `Registration`. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="registration">
+        /// Required. The complete `Registration` resource to be created.
+        /// 
+        /// You can leave `registration.dns_settings` unset to import the
+        /// domain's current DNS configuration from its current registrar. Use this
+        /// option only if you are sure that the domain's current DNS service
+        /// does not cease upon transfer, as is often the case for DNS services
+        /// provided for free by the registrar.
+        /// </param>
+        /// <param name="yearlyPrice">
+        /// Required. Acknowledgement of the price to transfer or renew the domain for one year.
+        /// Call `RetrieveTransferParameters` to obtain the price, which you must
+        /// acknowledge.
+        /// </param>
+        /// <param name="authorizationCode">
+        /// The domain's transfer authorization code. You can obtain this from the
+        /// domain's current registrar.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Registration, OperationMetadata>> TransferDomainAsync(gagr::LocationName parent, Registration registration, gt::Money yearlyPrice, AuthorizationCode authorizationCode, st::CancellationToken cancellationToken) =>
+            TransferDomainAsync(parent, registration, yearlyPrice, authorizationCode, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists the `Registration` resources in a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1425,8 +2079,8 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </param>
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
-        /// For example, if only the labels are being updated, the `update_mask` would
-        /// be `"labels"`.
+        /// For example, if only the labels are being updated, the `update_mask` is
+        /// `"labels"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1450,8 +2104,8 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </param>
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
-        /// For example, if only the labels are being updated, the `update_mask` would
-        /// be `"labels"`.
+        /// For example, if only the labels are being updated, the `update_mask` is
+        /// `"labels"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1475,8 +2129,8 @@ namespace Google.Cloud.Domains.V1Beta1
         /// </param>
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
-        /// For example, if only the labels are being updated, the `update_mask` would
-        /// be `"labels"`.
+        /// For example, if only the labels are being updated, the `update_mask` is
+        /// `"labels"`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1550,7 +2204,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the transfer lock is being updated, the `update_mask`
-        /// would be `"transfer_lock_state"`.
+        /// is `"transfer_lock_state"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1575,7 +2229,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the transfer lock is being updated, the `update_mask`
-        /// would be `"transfer_lock_state"`.
+        /// is `"transfer_lock_state"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1600,7 +2254,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the transfer lock is being updated, the `update_mask`
-        /// would be `"transfer_lock_state"`.
+        /// is `"transfer_lock_state"`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1620,7 +2274,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the transfer lock is being updated, the `update_mask`
-        /// would be `"transfer_lock_state"`.
+        /// is `"transfer_lock_state"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1645,7 +2299,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the transfer lock is being updated, the `update_mask`
-        /// would be `"transfer_lock_state"`.
+        /// is `"transfer_lock_state"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1670,7 +2324,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the transfer lock is being updated, the `update_mask`
-        /// would be `"transfer_lock_state"`.
+        /// is `"transfer_lock_state"`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1744,13 +2398,13 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the name servers are being updated for an existing
-        /// Custom DNS configuration, the `update_mask` would be
+        /// Custom DNS configuration, the `update_mask` is
         /// `"custom_dns.name_servers"`.
         /// 
         /// When changing the DNS provider from one type to another, pass the new
         /// provider's field name as part of the field mask. For example, when changing
         /// from a Google Domains DNS configuration to a Custom DNS configuration, the
-        /// `update_mask` would be `"custom_dns"`. //
+        /// `update_mask` is `"custom_dns"`. //
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1775,13 +2429,13 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the name servers are being updated for an existing
-        /// Custom DNS configuration, the `update_mask` would be
+        /// Custom DNS configuration, the `update_mask` is
         /// `"custom_dns.name_servers"`.
         /// 
         /// When changing the DNS provider from one type to another, pass the new
         /// provider's field name as part of the field mask. For example, when changing
         /// from a Google Domains DNS configuration to a Custom DNS configuration, the
-        /// `update_mask` would be `"custom_dns"`. //
+        /// `update_mask` is `"custom_dns"`. //
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1806,13 +2460,13 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the name servers are being updated for an existing
-        /// Custom DNS configuration, the `update_mask` would be
+        /// Custom DNS configuration, the `update_mask` is
         /// `"custom_dns.name_servers"`.
         /// 
         /// When changing the DNS provider from one type to another, pass the new
         /// provider's field name as part of the field mask. For example, when changing
         /// from a Google Domains DNS configuration to a Custom DNS configuration, the
-        /// `update_mask` would be `"custom_dns"`. //
+        /// `update_mask` is `"custom_dns"`. //
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1832,13 +2486,13 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the name servers are being updated for an existing
-        /// Custom DNS configuration, the `update_mask` would be
+        /// Custom DNS configuration, the `update_mask` is
         /// `"custom_dns.name_servers"`.
         /// 
         /// When changing the DNS provider from one type to another, pass the new
         /// provider's field name as part of the field mask. For example, when changing
         /// from a Google Domains DNS configuration to a Custom DNS configuration, the
-        /// `update_mask` would be `"custom_dns"`. //
+        /// `update_mask` is `"custom_dns"`. //
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1863,13 +2517,13 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the name servers are being updated for an existing
-        /// Custom DNS configuration, the `update_mask` would be
+        /// Custom DNS configuration, the `update_mask` is
         /// `"custom_dns.name_servers"`.
         /// 
         /// When changing the DNS provider from one type to another, pass the new
         /// provider's field name as part of the field mask. For example, when changing
         /// from a Google Domains DNS configuration to a Custom DNS configuration, the
-        /// `update_mask` would be `"custom_dns"`. //
+        /// `update_mask` is `"custom_dns"`. //
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1894,13 +2548,13 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the name servers are being updated for an existing
-        /// Custom DNS configuration, the `update_mask` would be
+        /// Custom DNS configuration, the `update_mask` is
         /// `"custom_dns.name_servers"`.
         /// 
         /// When changing the DNS provider from one type to another, pass the new
         /// provider's field name as part of the field mask. For example, when changing
         /// from a Google Domains DNS configuration to a Custom DNS configuration, the
-        /// `update_mask` would be `"custom_dns"`. //
+        /// `update_mask` is `"custom_dns"`. //
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1978,7 +2632,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the registrant contact is being updated, the
-        /// `update_mask` would be `"registrant_contact"`.
+        /// `update_mask` is `"registrant_contact"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2004,7 +2658,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the registrant contact is being updated, the
-        /// `update_mask` would be `"registrant_contact"`.
+        /// `update_mask` is `"registrant_contact"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2030,7 +2684,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the registrant contact is being updated, the
-        /// `update_mask` would be `"registrant_contact"`.
+        /// `update_mask` is `"registrant_contact"`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2051,7 +2705,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the registrant contact is being updated, the
-        /// `update_mask` would be `"registrant_contact"`.
+        /// `update_mask` is `"registrant_contact"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2077,7 +2731,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the registrant contact is being updated, the
-        /// `update_mask` would be `"registrant_contact"`.
+        /// `update_mask` is `"registrant_contact"`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2103,7 +2757,7 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <param name="updateMask">
         /// Required. The field mask describing which fields to update as a comma-separated list.
         /// For example, if only the registrant contact is being updated, the
-        /// `update_mask` would be `"registrant_contact"`.
+        /// `update_mask` is `"registrant_contact"`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2111,20 +2765,15 @@ namespace Google.Cloud.Domains.V1Beta1
             ConfigureContactSettingsAsync(registration, contactSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2133,20 +2782,15 @@ namespace Google.Cloud.Domains.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2155,20 +2799,15 @@ namespace Google.Cloud.Domains.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2204,20 +2843,15 @@ namespace Google.Cloud.Domains.V1Beta1
             lro::Operation<Registration, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportRegistrationOperationsClient, callSettings);
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to export,
@@ -2232,20 +2866,15 @@ namespace Google.Cloud.Domains.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to export,
@@ -2260,20 +2889,15 @@ namespace Google.Cloud.Domains.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to export,
@@ -2285,20 +2909,15 @@ namespace Google.Cloud.Domains.V1Beta1
             ExportRegistrationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to export,
@@ -2313,20 +2932,15 @@ namespace Google.Cloud.Domains.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to export,
@@ -2341,20 +2955,15 @@ namespace Google.Cloud.Domains.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to export,
@@ -2368,10 +2977,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2382,10 +3004,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2396,10 +3031,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2437,10 +3085,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to delete,
@@ -2457,10 +3118,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to delete,
@@ -2477,10 +3151,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to delete,
@@ -2494,10 +3181,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to delete,
@@ -2514,10 +3214,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to delete,
@@ -2534,10 +3247,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the `Registration` to delete,
@@ -2846,6 +3572,10 @@ namespace Google.Cloud.Domains.V1Beta1
 
         private readonly gaxgrpc::ApiCall<RegisterDomainRequest, lro::Operation> _callRegisterDomain;
 
+        private readonly gaxgrpc::ApiCall<RetrieveTransferParametersRequest, RetrieveTransferParametersResponse> _callRetrieveTransferParameters;
+
+        private readonly gaxgrpc::ApiCall<TransferDomainRequest, lro::Operation> _callTransferDomain;
+
         private readonly gaxgrpc::ApiCall<ListRegistrationsRequest, ListRegistrationsResponse> _callListRegistrations;
 
         private readonly gaxgrpc::ApiCall<GetRegistrationRequest, Registration> _callGetRegistration;
@@ -2877,6 +3607,7 @@ namespace Google.Cloud.Domains.V1Beta1
             DomainsSettings effectiveSettings = settings ?? DomainsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             RegisterDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RegisterDomainOperationsSettings);
+            TransferDomainOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TransferDomainOperationsSettings);
             UpdateRegistrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateRegistrationOperationsSettings);
             ConfigureManagementSettingsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ConfigureManagementSettingsOperationsSettings);
             ConfigureDnsSettingsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ConfigureDnsSettingsOperationsSettings);
@@ -2892,6 +3623,12 @@ namespace Google.Cloud.Domains.V1Beta1
             _callRegisterDomain = clientHelper.BuildApiCall<RegisterDomainRequest, lro::Operation>(grpcClient.RegisterDomainAsync, grpcClient.RegisterDomain, effectiveSettings.RegisterDomainSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callRegisterDomain);
             Modify_RegisterDomainApiCall(ref _callRegisterDomain);
+            _callRetrieveTransferParameters = clientHelper.BuildApiCall<RetrieveTransferParametersRequest, RetrieveTransferParametersResponse>(grpcClient.RetrieveTransferParametersAsync, grpcClient.RetrieveTransferParameters, effectiveSettings.RetrieveTransferParametersSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callRetrieveTransferParameters);
+            Modify_RetrieveTransferParametersApiCall(ref _callRetrieveTransferParameters);
+            _callTransferDomain = clientHelper.BuildApiCall<TransferDomainRequest, lro::Operation>(grpcClient.TransferDomainAsync, grpcClient.TransferDomain, effectiveSettings.TransferDomainSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callTransferDomain);
+            Modify_TransferDomainApiCall(ref _callTransferDomain);
             _callListRegistrations = clientHelper.BuildApiCall<ListRegistrationsRequest, ListRegistrationsResponse>(grpcClient.ListRegistrationsAsync, grpcClient.ListRegistrations, effectiveSettings.ListRegistrationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRegistrations);
             Modify_ListRegistrationsApiCall(ref _callListRegistrations);
@@ -2933,6 +3670,10 @@ namespace Google.Cloud.Domains.V1Beta1
 
         partial void Modify_RegisterDomainApiCall(ref gaxgrpc::ApiCall<RegisterDomainRequest, lro::Operation> call);
 
+        partial void Modify_RetrieveTransferParametersApiCall(ref gaxgrpc::ApiCall<RetrieveTransferParametersRequest, RetrieveTransferParametersResponse> call);
+
+        partial void Modify_TransferDomainApiCall(ref gaxgrpc::ApiCall<TransferDomainRequest, lro::Operation> call);
+
         partial void Modify_ListRegistrationsApiCall(ref gaxgrpc::ApiCall<ListRegistrationsRequest, ListRegistrationsResponse> call);
 
         partial void Modify_GetRegistrationApiCall(ref gaxgrpc::ApiCall<GetRegistrationRequest, Registration> call);
@@ -2963,6 +3704,10 @@ namespace Google.Cloud.Domains.V1Beta1
         partial void Modify_RetrieveRegisterParametersRequest(ref RetrieveRegisterParametersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RegisterDomainRequest(ref RegisterDomainRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RetrieveTransferParametersRequest(ref RetrieveTransferParametersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TransferDomainRequest(ref TransferDomainRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRegistrationsRequest(ref ListRegistrationsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3091,6 +3836,107 @@ namespace Google.Cloud.Domains.V1Beta1
         {
             Modify_RegisterDomainRequest(ref request, ref callSettings);
             return new lro::Operation<Registration, OperationMetadata>(await _callRegisterDomain.Async(request, callSettings).ConfigureAwait(false), RegisterDomainOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RetrieveTransferParametersResponse RetrieveTransferParameters(RetrieveTransferParametersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveTransferParametersRequest(ref request, ref callSettings);
+            return _callRetrieveTransferParameters.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets parameters needed to transfer a domain name from another registrar to
+        /// Cloud Domains. For domains managed by Google Domains, transferring to Cloud
+        /// Domains is not supported.
+        /// 
+        /// 
+        /// Use the returned values to call `TransferDomain`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RetrieveTransferParametersResponse> RetrieveTransferParametersAsync(RetrieveTransferParametersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveTransferParametersRequest(ref request, ref callSettings);
+            return _callRetrieveTransferParameters.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>TransferDomain</c>.</summary>
+        public override lro::OperationsClient TransferDomainOperationsClient { get; }
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Registration, OperationMetadata> TransferDomain(TransferDomainRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TransferDomainRequest(ref request, ref callSettings);
+            return new lro::Operation<Registration, OperationMetadata>(_callTransferDomain.Sync(request, callSettings), TransferDomainOperationsClient);
+        }
+
+        /// <summary>
+        /// Transfers a domain name from another registrar to Cloud Domains.  For
+        /// domains managed by Google Domains, transferring to Cloud Domains is not
+        /// supported.
+        /// 
+        /// 
+        /// Before calling this method, go to the domain's current registrar to unlock
+        /// the domain for transfer and retrieve the domain's transfer authorization
+        /// code. Then call `RetrieveTransferParameters` to confirm that the domain is
+        /// unlocked and to get values needed to build a call to this method.
+        /// 
+        /// A successful call creates a `Registration` resource in state
+        /// `TRANSFER_PENDING`. It can take several days to complete the transfer
+        /// process. The registrant can often speed up this process by approving the
+        /// transfer through the current registrar, either by clicking a link in an
+        /// email from the registrar or by visiting the registrar's website.
+        /// 
+        /// A few minutes after transfer approval, the resource transitions to state
+        /// `ACTIVE`, indicating that the transfer was successful. If the transfer is
+        /// rejected or the request expires without being approved, the resource can
+        /// end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete
+        /// the resource and retry the transfer.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Registration, OperationMetadata>> TransferDomainAsync(TransferDomainRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TransferDomainRequest(ref request, ref callSettings);
+            return new lro::Operation<Registration, OperationMetadata>(await _callTransferDomain.Async(request, callSettings).ConfigureAwait(false), TransferDomainOperationsClient);
         }
 
         /// <summary>
@@ -3265,20 +4111,15 @@ namespace Google.Cloud.Domains.V1Beta1
         public override lro::OperationsClient ExportRegistrationOperationsClient { get; }
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3290,20 +4131,15 @@ namespace Google.Cloud.Domains.V1Beta1
         }
 
         /// <summary>
-        /// Exports a `Registration` that you no longer want to use with
-        /// Cloud Domains. You can continue to use the domain in
-        /// [Google Domains](https://domains.google/) until it expires.
+        /// Exports a `Registration` resource, such that it is no longer managed by
+        /// Cloud Domains.
         /// 
-        /// If the export is successful:
-        /// 
-        /// * The resource's `state` becomes `EXPORTED`, meaning that it is no longer
-        /// managed by Cloud Domains
-        /// * Because individual users can own domains in Google Domains, the calling
-        /// user becomes the domain's sole owner. Permissions for the domain are
-        /// subsequently managed in Google Domains.
-        /// * Without further action, the domain does not renew automatically.
-        /// The new owner can set up billing in Google Domains to renew the domain
-        /// if needed.
+        /// When an active domain is successfully exported, you can continue to use the
+        /// domain in [Google Domains](https://domains.google/) until it expires. The
+        /// calling user becomes the domain's sole owner in Google Domains, and
+        /// permissions for the domain are subsequently managed there. The domain does
+        /// not renew automatically unless the new owner sets up billing in Google
+        /// Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3320,10 +4156,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3337,10 +4186,23 @@ namespace Google.Cloud.Domains.V1Beta1
         /// <summary>
         /// Deletes a `Registration` resource.
         /// 
-        /// This method only works on resources in one of the following states:
+        /// This method works on any `Registration` resource using [Subscription or
+        /// Commitment billing](/domains/pricing#billing-models), provided that the
+        /// resource was created at least 1 day in the past.
+        /// 
+        /// For `Registration` resources using
+        /// [Monthly billing](/domains/pricing#billing-models), this method works if:
         /// 
         /// * `state` is `EXPORTED` with `expire_time` in the past
         /// * `state` is `REGISTRATION_FAILED`
+        /// * `state` is `TRANSFER_FAILED`
+        /// 
+        /// When an active registration is successfully deleted, you can continue to
+        /// use the domain in [Google Domains](https://domains.google/) until it
+        /// expires. The calling user becomes the domain's sole owner in Google
+        /// Domains, and permissions for the domain are subsequently managed there. The
+        /// domain does not renew automatically unless the new owner sets up billing in
+        /// Google Domains.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

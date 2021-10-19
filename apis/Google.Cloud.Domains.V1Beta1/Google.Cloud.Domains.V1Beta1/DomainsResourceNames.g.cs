@@ -310,6 +310,30 @@ namespace Google.Cloud.Domains.V1Beta1
         }
     }
 
+    public partial class RetrieveTransferParametersRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            set => Location = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class TransferDomainRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListRegistrationsRequest
     {
         /// <summary>
