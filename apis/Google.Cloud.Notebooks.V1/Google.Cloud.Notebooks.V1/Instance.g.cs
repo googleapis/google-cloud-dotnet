@@ -2495,8 +2495,9 @@ namespace Google.Cloud.Notebooks.V1 {
         /// SCSI. For performance characteristics of SCSI over NVMe, see Local SSD
         /// performance.
         /// Valid values:
-        ///     NVME
-        ///     SCSI
+        ///
+        /// * NVME
+        /// * SCSI
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Interface {
@@ -2543,8 +2544,9 @@ namespace Google.Cloud.Notebooks.V1 {
         /// The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If
         /// not specified, the default is to attach the disk in READ_WRITE mode.
         /// Valid values:
-        ///     READ_ONLY
-        ///     READ_WRITE
+        ///
+        /// * READ_ONLY
+        /// * READ_WRITE
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Mode {
@@ -2575,8 +2577,9 @@ namespace Google.Cloud.Notebooks.V1 {
         /// <summary>
         /// Indicates the type of the disk, either SCRATCH or PERSISTENT.
         /// Valid values:
-        ///     PERSISTENT
-        ///     SCRATCH
+        ///
+        /// * PERSISTENT
+        /// * SCRATCH
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Type {
@@ -3003,12 +3006,13 @@ namespace Google.Cloud.Notebooks.V1 {
             /// The ID of a supported feature. Read  Enabling guest operating system
             /// features to see a list of available options.
             /// Valid values:
-            ///     FEATURE_TYPE_UNSPECIFIED
-            ///     MULTI_IP_SUBNET
-            ///     SECURE_BOOT
-            ///     UEFI_COMPATIBLE
-            ///     VIRTIO_SCSI_MULTIQUEUE
-            ///     WINDOWS
+            ///
+            /// * FEATURE_TYPE_UNSPECIFIED
+            /// * MULTI_IP_SUBNET
+            /// * SECURE_BOOT
+            /// * UEFI_COMPATIBLE
+            /// * VIRTIO_SCSI_MULTIQUEUE
+            /// * WINDOWS
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public string Type {
