@@ -312,6 +312,138 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
         }
 
         [xunit::FactAttribute]
+        public void RetrieveTransferParametersRequestObject()
+        {
+            moq::Mock<Domains.DomainsClient> mockGrpcClient = new moq::Mock<Domains.DomainsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "domain_nameea17a44f",
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            RetrieveTransferParametersResponse expectedResponse = new RetrieveTransferParametersResponse
+            {
+                TransferParameters = new TransferParameters(),
+            };
+            mockGrpcClient.Setup(x => x.RetrieveTransferParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            RetrieveTransferParametersResponse response = client.RetrieveTransferParameters(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetrieveTransferParametersRequestObjectAsync()
+        {
+            moq::Mock<Domains.DomainsClient> mockGrpcClient = new moq::Mock<Domains.DomainsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "domain_nameea17a44f",
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            RetrieveTransferParametersResponse expectedResponse = new RetrieveTransferParametersResponse
+            {
+                TransferParameters = new TransferParameters(),
+            };
+            mockGrpcClient.Setup(x => x.RetrieveTransferParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveTransferParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            RetrieveTransferParametersResponse responseCallSettings = await client.RetrieveTransferParametersAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetrieveTransferParametersResponse responseCancellationToken = await client.RetrieveTransferParametersAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RetrieveTransferParameters()
+        {
+            moq::Mock<Domains.DomainsClient> mockGrpcClient = new moq::Mock<Domains.DomainsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "domain_nameea17a44f",
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            RetrieveTransferParametersResponse expectedResponse = new RetrieveTransferParametersResponse
+            {
+                TransferParameters = new TransferParameters(),
+            };
+            mockGrpcClient.Setup(x => x.RetrieveTransferParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            RetrieveTransferParametersResponse response = client.RetrieveTransferParameters(request.Location, request.DomainName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetrieveTransferParametersAsync()
+        {
+            moq::Mock<Domains.DomainsClient> mockGrpcClient = new moq::Mock<Domains.DomainsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "domain_nameea17a44f",
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            RetrieveTransferParametersResponse expectedResponse = new RetrieveTransferParametersResponse
+            {
+                TransferParameters = new TransferParameters(),
+            };
+            mockGrpcClient.Setup(x => x.RetrieveTransferParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveTransferParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            RetrieveTransferParametersResponse responseCallSettings = await client.RetrieveTransferParametersAsync(request.Location, request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetrieveTransferParametersResponse responseCancellationToken = await client.RetrieveTransferParametersAsync(request.Location, request.DomainName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void RetrieveTransferParametersResourceNames()
+        {
+            moq::Mock<Domains.DomainsClient> mockGrpcClient = new moq::Mock<Domains.DomainsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "domain_nameea17a44f",
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            RetrieveTransferParametersResponse expectedResponse = new RetrieveTransferParametersResponse
+            {
+                TransferParameters = new TransferParameters(),
+            };
+            mockGrpcClient.Setup(x => x.RetrieveTransferParameters(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            RetrieveTransferParametersResponse response = client.RetrieveTransferParameters(request.LocationAsLocationName, request.DomainName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task RetrieveTransferParametersResourceNamesAsync()
+        {
+            moq::Mock<Domains.DomainsClient> mockGrpcClient = new moq::Mock<Domains.DomainsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "domain_nameea17a44f",
+                LocationAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            RetrieveTransferParametersResponse expectedResponse = new RetrieveTransferParametersResponse
+            {
+                TransferParameters = new TransferParameters(),
+            };
+            mockGrpcClient.Setup(x => x.RetrieveTransferParametersAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<RetrieveTransferParametersResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DomainsClient client = new DomainsClientImpl(mockGrpcClient.Object, null);
+            RetrieveTransferParametersResponse responseCallSettings = await client.RetrieveTransferParametersAsync(request.LocationAsLocationName, request.DomainName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            RetrieveTransferParametersResponse responseCancellationToken = await client.RetrieveTransferParametersAsync(request.LocationAsLocationName, request.DomainName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GetRegistrationRequestObject()
         {
             moq::Mock<Domains.DomainsClient> mockGrpcClient = new moq::Mock<Domains.DomainsClient>(moq::MockBehavior.Strict);
@@ -326,7 +458,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 DomainName = "domain_nameea17a44f",
                 CreateTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
-                State = Registration.Types.State.Unspecified,
+                State = Registration.Types.State.Suspended,
                 Issues =
                 {
                     Registration.Types.Issue.UnverifiedEmail,
@@ -369,7 +501,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 DomainName = "domain_nameea17a44f",
                 CreateTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
-                State = Registration.Types.State.Unspecified,
+                State = Registration.Types.State.Suspended,
                 Issues =
                 {
                     Registration.Types.Issue.UnverifiedEmail,
@@ -414,7 +546,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 DomainName = "domain_nameea17a44f",
                 CreateTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
-                State = Registration.Types.State.Unspecified,
+                State = Registration.Types.State.Suspended,
                 Issues =
                 {
                     Registration.Types.Issue.UnverifiedEmail,
@@ -457,7 +589,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 DomainName = "domain_nameea17a44f",
                 CreateTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
-                State = Registration.Types.State.Unspecified,
+                State = Registration.Types.State.Suspended,
                 Issues =
                 {
                     Registration.Types.Issue.UnverifiedEmail,
@@ -502,7 +634,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 DomainName = "domain_nameea17a44f",
                 CreateTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
-                State = Registration.Types.State.Unspecified,
+                State = Registration.Types.State.Suspended,
                 Issues =
                 {
                     Registration.Types.Issue.UnverifiedEmail,
@@ -545,7 +677,7 @@ namespace Google.Cloud.Domains.V1Beta1.Tests
                 DomainName = "domain_nameea17a44f",
                 CreateTime = new wkt::Timestamp(),
                 ExpireTime = new wkt::Timestamp(),
-                State = Registration.Types.State.Unspecified,
+                State = Registration.Types.State.Suspended,
                 Issues =
                 {
                     Registration.Types.Issue.UnverifiedEmail,

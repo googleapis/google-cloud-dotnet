@@ -427,6 +427,310 @@ namespace Google.Cloud.Domains.V1Beta1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for RetrieveTransferParameters</summary>
+        public void RetrieveTransferParametersRequestObject()
+        {
+            // Snippet: RetrieveTransferParameters(RetrieveTransferParametersRequest, CallSettings)
+            // Create client
+            DomainsClient domainsClient = DomainsClient.Create();
+            // Initialize request argument(s)
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "",
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            RetrieveTransferParametersResponse response = domainsClient.RetrieveTransferParameters(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveTransferParametersAsync</summary>
+        public async Task RetrieveTransferParametersRequestObjectAsync()
+        {
+            // Snippet: RetrieveTransferParametersAsync(RetrieveTransferParametersRequest, CallSettings)
+            // Additional: RetrieveTransferParametersAsync(RetrieveTransferParametersRequest, CancellationToken)
+            // Create client
+            DomainsClient domainsClient = await DomainsClient.CreateAsync();
+            // Initialize request argument(s)
+            RetrieveTransferParametersRequest request = new RetrieveTransferParametersRequest
+            {
+                DomainName = "",
+                LocationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            RetrieveTransferParametersResponse response = await domainsClient.RetrieveTransferParametersAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveTransferParameters</summary>
+        public void RetrieveTransferParameters()
+        {
+            // Snippet: RetrieveTransferParameters(string, string, CallSettings)
+            // Create client
+            DomainsClient domainsClient = DomainsClient.Create();
+            // Initialize request argument(s)
+            string location = "projects/[PROJECT]/locations/[LOCATION]";
+            string domainName = "";
+            // Make the request
+            RetrieveTransferParametersResponse response = domainsClient.RetrieveTransferParameters(location, domainName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveTransferParametersAsync</summary>
+        public async Task RetrieveTransferParametersAsync()
+        {
+            // Snippet: RetrieveTransferParametersAsync(string, string, CallSettings)
+            // Additional: RetrieveTransferParametersAsync(string, string, CancellationToken)
+            // Create client
+            DomainsClient domainsClient = await DomainsClient.CreateAsync();
+            // Initialize request argument(s)
+            string location = "projects/[PROJECT]/locations/[LOCATION]";
+            string domainName = "";
+            // Make the request
+            RetrieveTransferParametersResponse response = await domainsClient.RetrieveTransferParametersAsync(location, domainName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveTransferParameters</summary>
+        public void RetrieveTransferParametersResourceNames()
+        {
+            // Snippet: RetrieveTransferParameters(LocationName, string, CallSettings)
+            // Create client
+            DomainsClient domainsClient = DomainsClient.Create();
+            // Initialize request argument(s)
+            LocationName location = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string domainName = "";
+            // Make the request
+            RetrieveTransferParametersResponse response = domainsClient.RetrieveTransferParameters(location, domainName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveTransferParametersAsync</summary>
+        public async Task RetrieveTransferParametersResourceNamesAsync()
+        {
+            // Snippet: RetrieveTransferParametersAsync(LocationName, string, CallSettings)
+            // Additional: RetrieveTransferParametersAsync(LocationName, string, CancellationToken)
+            // Create client
+            DomainsClient domainsClient = await DomainsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName location = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string domainName = "";
+            // Make the request
+            RetrieveTransferParametersResponse response = await domainsClient.RetrieveTransferParametersAsync(location, domainName);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TransferDomain</summary>
+        public void TransferDomainRequestObject()
+        {
+            // Snippet: TransferDomain(TransferDomainRequest, CallSettings)
+            // Create client
+            DomainsClient domainsClient = DomainsClient.Create();
+            // Initialize request argument(s)
+            TransferDomainRequest request = new TransferDomainRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Registration = new Registration(),
+                ContactNotices =
+                {
+                    ContactNotice.Unspecified,
+                },
+                YearlyPrice = new Money(),
+                AuthorizationCode = new AuthorizationCode(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Registration, OperationMetadata> response = domainsClient.TransferDomain(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Registration, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Registration result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Registration, OperationMetadata> retrievedResponse = domainsClient.PollOnceTransferDomain(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Registration retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TransferDomainAsync</summary>
+        public async Task TransferDomainRequestObjectAsync()
+        {
+            // Snippet: TransferDomainAsync(TransferDomainRequest, CallSettings)
+            // Additional: TransferDomainAsync(TransferDomainRequest, CancellationToken)
+            // Create client
+            DomainsClient domainsClient = await DomainsClient.CreateAsync();
+            // Initialize request argument(s)
+            TransferDomainRequest request = new TransferDomainRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Registration = new Registration(),
+                ContactNotices =
+                {
+                    ContactNotice.Unspecified,
+                },
+                YearlyPrice = new Money(),
+                AuthorizationCode = new AuthorizationCode(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Registration, OperationMetadata> response = await domainsClient.TransferDomainAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Registration, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Registration result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Registration, OperationMetadata> retrievedResponse = await domainsClient.PollOnceTransferDomainAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Registration retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TransferDomain</summary>
+        public void TransferDomain()
+        {
+            // Snippet: TransferDomain(string, Registration, Money, AuthorizationCode, CallSettings)
+            // Create client
+            DomainsClient domainsClient = DomainsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Registration registration = new Registration();
+            Money yearlyPrice = new Money();
+            AuthorizationCode authorizationCode = new AuthorizationCode();
+            // Make the request
+            Operation<Registration, OperationMetadata> response = domainsClient.TransferDomain(parent, registration, yearlyPrice, authorizationCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Registration, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Registration result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Registration, OperationMetadata> retrievedResponse = domainsClient.PollOnceTransferDomain(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Registration retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TransferDomainAsync</summary>
+        public async Task TransferDomainAsync()
+        {
+            // Snippet: TransferDomainAsync(string, Registration, Money, AuthorizationCode, CallSettings)
+            // Additional: TransferDomainAsync(string, Registration, Money, AuthorizationCode, CancellationToken)
+            // Create client
+            DomainsClient domainsClient = await DomainsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Registration registration = new Registration();
+            Money yearlyPrice = new Money();
+            AuthorizationCode authorizationCode = new AuthorizationCode();
+            // Make the request
+            Operation<Registration, OperationMetadata> response = await domainsClient.TransferDomainAsync(parent, registration, yearlyPrice, authorizationCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Registration, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Registration result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Registration, OperationMetadata> retrievedResponse = await domainsClient.PollOnceTransferDomainAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Registration retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TransferDomain</summary>
+        public void TransferDomainResourceNames()
+        {
+            // Snippet: TransferDomain(LocationName, Registration, Money, AuthorizationCode, CallSettings)
+            // Create client
+            DomainsClient domainsClient = DomainsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Registration registration = new Registration();
+            Money yearlyPrice = new Money();
+            AuthorizationCode authorizationCode = new AuthorizationCode();
+            // Make the request
+            Operation<Registration, OperationMetadata> response = domainsClient.TransferDomain(parent, registration, yearlyPrice, authorizationCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Registration, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Registration result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Registration, OperationMetadata> retrievedResponse = domainsClient.PollOnceTransferDomain(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Registration retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TransferDomainAsync</summary>
+        public async Task TransferDomainResourceNamesAsync()
+        {
+            // Snippet: TransferDomainAsync(LocationName, Registration, Money, AuthorizationCode, CallSettings)
+            // Additional: TransferDomainAsync(LocationName, Registration, Money, AuthorizationCode, CancellationToken)
+            // Create client
+            DomainsClient domainsClient = await DomainsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Registration registration = new Registration();
+            Money yearlyPrice = new Money();
+            AuthorizationCode authorizationCode = new AuthorizationCode();
+            // Make the request
+            Operation<Registration, OperationMetadata> response = await domainsClient.TransferDomainAsync(parent, registration, yearlyPrice, authorizationCode);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Registration, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Registration result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Registration, OperationMetadata> retrievedResponse = await domainsClient.PollOnceTransferDomainAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Registration retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListRegistrations</summary>
         public void ListRegistrationsRequestObject()
         {

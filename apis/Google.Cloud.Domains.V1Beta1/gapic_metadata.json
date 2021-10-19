@@ -76,10 +76,22 @@
                 "RetrieveRegisterParametersAsync"
               ]
             },
+            "RetrieveTransferParameters": {
+              "methods": [
+                "RetrieveTransferParameters",
+                "RetrieveTransferParametersAsync"
+              ]
+            },
             "SearchDomains": {
               "methods": [
                 "SearchDomains",
                 "SearchDomainsAsync"
+              ]
+            },
+            "TransferDomain": {
+              "methods": [
+                "TransferDomain",
+                "TransferDomainAsync"
               ]
             },
             "UpdateRegistration": {
