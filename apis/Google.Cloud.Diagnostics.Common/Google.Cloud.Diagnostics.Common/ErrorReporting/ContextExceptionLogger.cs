@@ -24,6 +24,18 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates an <see cref="IContextExceptionLogger"/>.
         /// </summary>
+        /// <param name="options">The error reporting options. May be null, in which case defaults will be used, in
+        /// particular, if running on Google Cloud, the Google Cloud project ID to log to will be detected from
+        /// the platform.</param>
+        /// <param name="serviceProvider">The service provider to obtain services from. May be null,
+        /// in which case some context information won't be added to the LogEntry.</param>
+        /// <returns>An <see cref="IContextExceptionLogger"/> for the given options.</returns>
+        public static IContextExceptionLogger Create(ErrorReportingServiceOptions options, IServiceProvider serviceProvider) =>
+            ErrorReportingContextExceptionLogger.Create(options, serviceProvider);
+
+        /// <summary>
+        /// Creates an <see cref="IContextExceptionLogger"/>.
+        /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID.  If unspecified and running
         /// on GAE or GCE the project ID will be detected from the platform.</param>
         /// <param name="serviceName"> An identifier of the service, such as the name of the executable or job. May be null.</param>
@@ -34,8 +46,14 @@ namespace Google.Cloud.Diagnostics.Common
         /// <returns>An <see cref="IContextExceptionLogger"/> for the given options.</returns>
         public static IContextExceptionLogger Create(
             string projectId, string serviceName, string version,
-            ErrorReportingOptions options, IServiceProvider serviceProvider) =>
-            ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, serviceProvider, options);
+            ErrorReportingOptions options, IServiceProvider serviceProvider) => Create(
+                new ErrorReportingServiceOptions
+                {
+                    ProjectId = projectId,
+                    ServiceName = serviceName,
+                    Version = version,
+                    Options = options
+                }, serviceProvider);
 
         /// <summary>
         /// Creates an <see cref="IContextExceptionLogger"/>.

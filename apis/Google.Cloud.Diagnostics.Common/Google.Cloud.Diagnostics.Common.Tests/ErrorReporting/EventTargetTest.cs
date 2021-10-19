@@ -16,6 +16,7 @@ using Google.Api;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Logging.V2;
 using Moq;
+using System;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -27,6 +28,41 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private static readonly LoggingServiceV2Client _loggingClient = new Mock<LoggingServiceV2Client>().Object;
 
         [Fact]
+        public void ForProject()
+        {
+            var eventTarget = EventTarget.ForProject(_projectId);
+
+            Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
+            Assert.Equal(_projectId, eventTarget.ProjectId);
+            Assert.NotNull(eventTarget.LogTarget);
+            Assert.Equal(LogTargetKind.Project, eventTarget.LogTarget.Kind);
+            Assert.Equal(_projectId, eventTarget.LogTarget.ProjectId);
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            Assert.Null(eventTarget.LoggingClient);
+            Assert.Null(eventTarget.LogName);
+            Assert.Null(eventTarget.MonitoredResource);
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
+
+        [Fact]
+        public void ForLogTarget()
+        {
+            var logTarget = LogTarget.ForOrganization(_organizationId);
+            var eventTarget = EventTarget.ForLogTarget(logTarget);
+
+            Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
+            Assert.Same(logTarget, eventTarget.LogTarget);
+
+#pragma warning disable CS0618 // Type or member is obsolete
+            Assert.Null(eventTarget.LoggingClient);
+            Assert.Null(eventTarget.LogName);
+            Assert.Null(eventTarget.MonitoredResource);
+#pragma warning restore CS0618 // Type or member is obsolete
+        }
+
+        [Fact]
+        [Obsolete("EventTarget.ForLogging and some of the EventTarget properties are obsolete.")]
         public void Logging_ProjectId()
         {
             var logName = "another-log";
@@ -44,6 +80,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        [Obsolete("EventTarget.ForLogging and some of the EventTarget properties are obsolete.")]
         public void Logging_LogTarget()
         {
             var logTarget = LogTarget.ForOrganization(_organizationId);

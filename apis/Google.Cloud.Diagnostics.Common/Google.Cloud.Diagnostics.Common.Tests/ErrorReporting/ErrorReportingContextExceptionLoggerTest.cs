@@ -39,6 +39,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private const ulong _spanId = 1;
 
         private static readonly bool _isWindows = TestEnvironment.IsWindows();
+        private static readonly Struct _serviceContext = ServiceContextUtils.CreateServiceContext(_service, _version);
 
         public ErrorReportingContextExceptionLoggerTest()
         {
@@ -50,49 +51,94 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
-        public void Log()
+        [Obsolete("Both EventTarget.ForLogging and ErrorReportingOptions.Create are obsolete.")]
+        public void Log_Compat()
         {
-            var options = ErrorReportingOptions.Create(
-                EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient()));
+            var eventTarget = EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient());
+            var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = new FakeConsumer();
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
-                consumer, _service, _version, options, null);
+                consumer, eventTarget, _serviceContext, options, null);
             logger.Log(CreateException(), new FakeContextWrapper());
 
-            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options);
+            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options, eventTarget);
+        }
+
+        [Fact]
+        public void Log()
+        {
+            var eventTarget = EventTarget.ForProject("pid");
+            var options = ErrorReportingOptions.CreateInstance();
+            var consumer = new FakeConsumer();
+
+            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
+                consumer, eventTarget, _serviceContext, options, null);
+            logger.Log(CreateException(), new FakeContextWrapper());
+
+            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options, eventTarget);
+        }
+
+        [Fact]
+        [Obsolete("Both EventTarget.ForLogging and ErrorReportingOptions.Create are obsolete.")]
+        public void Log_Simple_Compat()
+        {
+            var eventTarget = EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient());
+            var options = ErrorReportingOptions.Create(eventTarget);
+            var consumer = new FakeConsumer();
+
+            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
+                 consumer, eventTarget, _serviceContext, options, null);
+            logger.Log(CreateException(), new EmptyContextWrapper());
+
+            ValidateSingleEntry(consumer, "", "", "", options, eventTarget);
         }
 
         [Fact]
         public void Log_Simple()
         {
-            var options = ErrorReportingOptions.Create(
-                EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient()));
+            var eventTarget = EventTarget.ForProject("pid");
+            var options = ErrorReportingOptions.CreateInstance();
             var consumer = new FakeConsumer();
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
-                 consumer, _service, _version, options, null);
+                 consumer, eventTarget, _serviceContext, options, null);
             logger.Log(CreateException(), new EmptyContextWrapper());
 
-            ValidateSingleEntry(consumer, "", "", "", options);
+            ValidateSingleEntry(consumer, "", "", "", options, eventTarget);
         }
 
 
         [Fact]
-        public async Task LogAsync()
+        [Obsolete("Both EventTarget.ForLogging and ErrorReportingOptions.Create are obsolete.")]
+        public async Task LogAsync_Compat()
         {
-            var options = ErrorReportingOptions.Create(
-                EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient()));
+            var eventTarget = EventTarget.ForLogging("pid", loggingClient: new ThrowingLoggingClient());
+            var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = new FakeConsumer();
 
             IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
-                consumer, _service, _version, options, null);
+                consumer, eventTarget, _serviceContext, options, null);
             await logger.LogAsync(CreateException(), new FakeContextWrapper());
 
-            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options);
+            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options, eventTarget);
         }
 
-        private void ValidateSingleEntry(FakeConsumer consumer, string method, string uri, string userAgent, ErrorReportingOptions options)
+        [Fact]
+        public async Task LogAsync()
+        {
+            var eventTarget = EventTarget.ForProject("pid");
+            var options = ErrorReportingOptions.CreateInstance();
+            var consumer = new FakeConsumer();
+
+            IContextExceptionLogger logger = new ErrorReportingContextExceptionLogger(
+                consumer, eventTarget, _serviceContext, options, null);
+            await logger.LogAsync(CreateException(), new FakeContextWrapper());
+
+            ValidateSingleEntry(consumer, _method, _uri, _userAgent, options, eventTarget);
+        }
+
+        private void ValidateSingleEntry(FakeConsumer consumer, string method, string uri, string userAgent, ErrorReportingOptions options, EventTarget eventTarget)
         {
             var entries = consumer.Entries.ToList();
             if (entries.Count != 1)
@@ -101,12 +147,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             }
             var entry = entries[0];
             var json = entry.JsonPayload?.Fields;
-            var eventTarget = options.EventTarget;
 
-            Assert.Equal(eventTarget.LogTarget.GetFullLogName(eventTarget.LogName), entry.LogName);
+            Assert.Equal(eventTarget.LogTarget.GetFullLogName(options.LogName), entry.LogName);
             var currentSeconds = Timestamp.FromDateTime(DateTime.UtcNow).Seconds;
             Assert.InRange(entry.Timestamp.Seconds, currentSeconds - 10, currentSeconds);
-            Assert.Equal(eventTarget.MonitoredResource, entry.Resource);
+            Assert.Equal(options.MonitoredResource, entry.Resource);
             Assert.Equal(LogSeverity.Error, entry.Severity);
             Assert.Contains(_exceptionMessage, json["message"].StringValue);
 
