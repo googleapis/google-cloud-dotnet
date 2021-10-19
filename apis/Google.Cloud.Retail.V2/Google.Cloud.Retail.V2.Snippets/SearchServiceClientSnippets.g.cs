@@ -51,6 +51,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 DynamicFacetSpec = new SearchRequest.Types.DynamicFacetSpec(),
                 PageCategories = { "", },
                 CanonicalFilter = "",
+                SearchMode = SearchRequest.Types.SearchMode.Unspecified,
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -116,6 +117,7 @@ namespace Google.Cloud.Retail.V2.Snippets
                 DynamicFacetSpec = new SearchRequest.Types.DynamicFacetSpec(),
                 PageCategories = { "", },
                 CanonicalFilter = "",
+                SearchMode = SearchRequest.Types.SearchMode.Unspecified,
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
