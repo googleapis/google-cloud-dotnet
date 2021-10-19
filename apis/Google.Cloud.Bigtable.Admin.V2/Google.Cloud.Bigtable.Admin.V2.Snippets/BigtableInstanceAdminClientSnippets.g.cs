@@ -420,6 +420,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
                 Labels = { { "", "" }, },
+                CreateTime = new Timestamp(),
             };
             // Make the request
             Instance response = bigtableInstanceAdminClient.UpdateInstance(request);
@@ -441,6 +442,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Snippets
                 State = Instance.Types.State.NotKnown,
                 Type = Instance.Types.Type.Unspecified,
                 Labels = { { "", "" }, },
+                CreateTime = new Timestamp(),
             };
             // Make the request
             Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(request);
