@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Logging.V2;
+
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
@@ -20,10 +22,19 @@ namespace Google.Cloud.Diagnostics.Common
     public sealed class ErrorReportingServiceOptions
     {
         /// <summary>
-        /// The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project
-        /// ID will be detected from the platform.
+        /// The Google Cloud Project ID to store the logs in.
+        /// May be null if running on Google Cloud, in which case, and if <see cref="EventTarget"/> is
+        /// also null the project ID will be detected from the platform
+        /// and used to build the log target.
+        /// This is an alternate way to set <see cref="EventTarget"/> for <see cref="LogTargetKind.Project"/>.
         /// </summary>
-        public string ProjectId { get; set; }
+        public string ProjectId
+        {
+            get => EventTarget?.ProjectId;
+            set => EventTarget = value is null
+                ? EventTarget?.ProjectId is object ? null : EventTarget
+                : EventTarget.ForProject(value);
+        }
 
         /// <summary>
         /// An identifier of the service, such as the name of the executable or job. May be null.
@@ -34,6 +45,20 @@ namespace Google.Cloud.Diagnostics.Common
         /// Represents the source code version that the developer provided. May be null.
         /// </summary>
         public string Version { get; set; }
+
+        /// <summary>
+        /// Where to send error reports to. Will ultimately represent a Google Project or Organization.
+        /// May be set by setting <see cref="ProjectId"/>.
+        /// May be null if running on Google Cloud in which case the
+        /// Google Cloud Platform project ID will be detected from the platform
+        /// and used to build the event target.
+        /// </summary>
+        public EventTarget EventTarget { get; set; }
+
+        /// <summary>
+        /// A client to log entries with. May be null.
+        /// </summary>
+        public LoggingServiceV2Client Client { get; set; }
 
         /// <summary>
         /// Error reporting options for exception logging. May be null.

@@ -164,7 +164,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                         ServiceName = EntryData.Service,
                         Version = EntryData.Version,
                         // This is just so that our validator finds the log entries associated to errors.
-                        Options = ErrorReportingOptions.Create(EventTarget.ForLogging(ProjectId, "aspnetcore"))
+                        Options = ErrorReportingOptions.CreateInstance(logName: "aspnetcore")
                     }));
         }
     }

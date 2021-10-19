@@ -16,11 +16,12 @@ using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Logging.V2;
+using System;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// The location error events will be sent to.
+    /// The type of location error events will be sent to.
     /// </summary>
     public enum EventTargetKind
     {
@@ -33,26 +34,81 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     public sealed class EventTarget
     {
-        /// <summary>The default log name, this is the log that error events will be written to.</summary>
-        internal const string LogNameDefault = "stackdriver-error-reporting";
+        private EventTarget(LogTarget target)
+        {
+            GaxPreconditions.CheckNotNull(target, nameof(target));
+            Kind = EventTargetKind.Logging;
+            LogTarget = target;
+        }
 
-        /// <summary>The location to send error events to.</summary>
-        public EventTargetKind Kind { get; private set; }
+        /// <summary>
+        /// Default constructor. Which does nothing and has never do.
+        /// Obsolete.
+        /// </summary>
+        [Obsolete("Do not use as the instance built by this constructor is not valid and never has been.")]
+        public EventTarget() 
+        { }
+
+        /// <summary>The type of location to send error events to.</summary>
+        public EventTargetKind Kind { get; }
 
         /// <summary>The logging client.</summary>
+        [Obsolete("Please use Google.Cloud.Diagnostics.Common.ErrorReportingServiceOptions.Client instead.")]
         public LoggingServiceV2Client LoggingClient { get; private set; }
 
-        /// <summary>Where to log to, such as project or organization.</summary>
-        public LogTarget LogTarget { get; private set; }
+        /// <summary>
+        /// If this even target type is <see cref="EventTargetKind.Logging"/>, this is
+        /// the target log to send error reports to. It will be null otherwise.
+        /// Note that currently, only <see cref="EventTargetKind.Logging"/> is supported
+        /// then, in practice, this will never be null.
+        /// </summary>
+        public LogTarget LogTarget { get; }
 
         /// <summary>The name of the log.</summary>
+        [Obsolete("Please use Google.Cloud.Diagnostics.Common.ErrorReportingOptions.LogName instead.")]
         public string LogName { get; private set; }
 
-        /// <summary>The Google Cloud Platform project Id.</summary>
-        public string ProjectId { get; private set; }
+        /// <summary>
+        /// If <see cref="LogTarget"/> is of <see cref="LogTargetKind.Project"/>
+        /// this is <see cref="LogTarget.ProjectId"/>. Null otherwise.
+        /// </summary>
+        public string ProjectId { get => LogTarget?.ProjectId; }
 
         /// <summary>The resource being monitored.</summary>
+        [Obsolete("Please use Google.Cloud.Diagnostics.Common.ErrorReportingOptions.MonitoredResource instead.")]
         public MonitoredResource MonitoredResource { get; private set; }
+
+        /// <summary>
+        /// Creates a new <see cref="EventTarget"/> instance that will report to the Google Cloud Logging API.
+        /// The events are then automatically propagated to the Google Cloud Error Logging API from the 
+        /// Google Cloud Logging API.
+        /// </summary>
+        /// <remarks>
+        /// For more information see "Formatting Log Error Messages"
+        /// (https://cloud.google.com/error-reporting/docs/formatting-error-messages).
+        /// </remarks>
+        /// <param name="projectId">
+        /// The project ID to create the underlying <see cref="LogTarget"/> from.
+        /// Must not be null.
+        /// </param>
+        public static EventTarget ForProject(string projectId) =>
+            new EventTarget(LogTarget.ForProject(projectId));
+
+        /// <summary>
+        /// Creates a new <see cref="EventTarget"/> instance that will report to the Google Cloud Logging API.
+        /// The events are then automatically propagated to the Google Cloud Error Logging API from the 
+        /// Google Cloud Logging API.
+        /// </summary>
+        /// <remarks>
+        /// For more information see "Formatting Log Error Messages"
+        /// (https://cloud.google.com/error-reporting/docs/formatting-error-messages).
+        /// </remarks>
+        /// <param name="target">
+        /// The <see cref="LogTarget"/> to create the <see cref="EventTarget"/> from.
+        /// Must not be null.
+        /// </param>
+        public static EventTarget ForLogTarget(LogTarget target) =>
+            new EventTarget(target);
 
         /// <summary>
         /// Creates a new <see cref="EventTarget"/> instance that will report to the Google Cloud Logging API.
@@ -71,7 +127,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
-        public static EventTarget ForLogging(string projectId = null, string logName = LogNameDefault,
+        [Obsolete("Please use Google.Cloud.Diagnostics.Common.EventTarget.FromProject instead.")]
+        public static EventTarget ForLogging(string projectId = null, string logName = ErrorReportingOptions.LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
             projectId = Project.GetAndCheckProjectId(projectId, monitoredResource);
@@ -94,17 +151,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
-        public static EventTarget ForLogging(LogTarget logTarget, string logName = LogNameDefault,
+        [Obsolete("Please use Google.Cloud.Diagnostics.Common.EventTarget.FromLogTarget instead.")]
+        public static EventTarget ForLogging(LogTarget logTarget, string logName = ErrorReportingOptions.LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
-            return new EventTarget
+            return new EventTarget (logTarget)
             {
-                Kind = EventTargetKind.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
-                LogTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform(),
-                ProjectId = logTarget.ProjectId,
             };
         }
     }

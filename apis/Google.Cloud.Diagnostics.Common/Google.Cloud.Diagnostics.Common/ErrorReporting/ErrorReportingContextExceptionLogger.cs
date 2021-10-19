@@ -45,41 +45,44 @@ namespace Google.Cloud.Diagnostics.Common
         private readonly TraceTarget _traceTarget;
 
         internal ErrorReportingContextExceptionLogger(
-            IConsumer<LogEntry> consumer, string serviceName, string version, ErrorReportingOptions options, IServiceProvider serviceProvider)
+            IConsumer<LogEntry> consumer, EventTarget eventTarget, Struct serviceContext, ErrorReportingOptions options, IServiceProvider serviceProvider)
         {
+            GaxPreconditions.CheckNotNull(eventTarget, nameof(eventTarget));
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _options = GaxPreconditions.CheckNotNull(options, nameof(options));
-            var eventTarget = options.EventTarget;
-            GaxPreconditions.CheckState(eventTarget.Kind == EventTargetKind.Logging, $"Invalid {nameof(EventTarget)}");
-            _logName = GaxPreconditions.CheckNotNull(eventTarget.LogTarget, nameof(eventTarget.LogTarget)).GetFullLogName(eventTarget.LogName);
-            _traceTarget = _traceTarget = eventTarget.LogTarget.Kind == LogTargetKind.Project ?
-                TraceTarget.ForProject(eventTarget.LogTarget.ProjectId) : null;
+            _serviceContext = GaxPreconditions.CheckNotNull(serviceContext, nameof(serviceContext));
 
-            _serviceContext = CreateServiceContext(serviceName, version) ?? new Struct();
+            _logName = eventTarget.LogTarget.GetFullLogName(options.LogName);
+            _traceTarget = eventTarget.LogTarget.Kind == LogTargetKind.Project ? TraceTarget.ForProject(eventTarget.ProjectId) : null;
 
             _serviceProvider = serviceProvider;
         }
 
-        /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingContextExceptionLogger"/>
-        /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. May be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job. May be null.</param>
-        /// <param name="version">Represents the source code version that the developer provided. May be null.</param>
-        /// <param name="serviceProvider">The service provider to obtain services from. May be null,
-        /// in which case some context information won't be added to the LogEntry.</param>
-        /// <param name="options">Optional, error reporting options.</param>
-        internal static IContextExceptionLogger Create(
-            string projectId, string serviceName, string version, IServiceProvider serviceProvider,
-            ErrorReportingOptions options = null)
+        internal static IContextExceptionLogger Create(ErrorReportingServiceOptions options, IServiceProvider serviceProvider)
         {
-            options = options ?? ErrorReportingOptions.Create(projectId);
-            return new ErrorReportingContextExceptionLogger(
-                options.CreateConsumer(),
-                Project.GetServiceName(serviceName, options.EventTarget?.MonitoredResource),
-                Project.GetServiceVersion(version, options.EventTarget?.MonitoredResource),
-                options,
-                serviceProvider);
+            options = options ?? new ErrorReportingServiceOptions();
+            var errorReportingOptions = options.Options ?? ErrorReportingOptions.CreateInstance();
+
+            var eventTarget = options.EventTarget
+#pragma warning disable CS0618 // Type or member is obsolete
+                ?? errorReportingOptions.EventTarget
+#pragma warning restore CS0618 // Type or member is obsolete
+                ?? EventTarget.ForProject(Project.GetAndCheckProjectId(null, errorReportingOptions.MonitoredResource));
+
+            var client = options.Client
+#pragma warning disable CS0618 // Type or member is obsolete
+                ?? eventTarget.LoggingClient
+#pragma warning restore CS0618 // Type or member is obsolete
+                ?? LoggingServiceV2Client.Create();
+
+            var serviceContext = CreateServiceContext(
+                Project.GetServiceName(options.ServiceName, errorReportingOptions.MonitoredResource),
+                Project.GetServiceName(options.Version, errorReportingOptions.MonitoredResource))
+                ?? new Struct();
+
+            IConsumer<LogEntry> consumer = LogConsumer.Create(client, errorReportingOptions.BufferOptions, errorReportingOptions.RetryOptions);
+
+            return new ErrorReportingContextExceptionLogger(consumer, eventTarget, serviceContext, errorReportingOptions, serviceProvider);
         }
 
         /// <inheritdoc />
@@ -176,7 +179,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             return new LogEntry
             {
-                Resource = _options.EventTarget.MonitoredResource,
+                Resource = _options.MonitoredResource,
                 LogName = _logName,
                 Severity = LogSeverity.Error,
                 Timestamp = timestamp,

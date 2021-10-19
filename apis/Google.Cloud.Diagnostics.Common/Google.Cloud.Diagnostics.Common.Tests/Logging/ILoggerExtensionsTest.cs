@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.Common.Tests.Logging
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class ILoggerExtensionsTest
     {
