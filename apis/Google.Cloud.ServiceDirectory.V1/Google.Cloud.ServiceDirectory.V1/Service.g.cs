@@ -104,7 +104,7 @@ namespace Google.Cloud.ServiceDirectory.V1 {
     private string name_ = "";
     /// <summary>
     /// Immutable. The resource name for the service in the format
-    /// 'projects/*/locations/*/namespaces/*/services/*'.
+    /// `projects/*/locations/*/namespaces/*/services/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
