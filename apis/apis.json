@@ -1078,7 +1078,7 @@
     },
     {
       "id": "Google.Cloud.Domains.V1Beta1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Cloud Domains",
       "productUrl": "https://cloud.google.com/domains/",
@@ -1087,7 +1087,7 @@
         "domains"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.2.0"
+        "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/domains/v1beta1"
