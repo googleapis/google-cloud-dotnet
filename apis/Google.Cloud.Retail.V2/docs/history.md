@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.4.0, released 2021-10-20
+
+- [Commit 3c5e164](https://github.com/googleapis/google-cloud-dotnet/commit/3c5e164):
+  - docs: Keep the API doc up-to-date
+  - feat: add search mode to search request. If not specified, a single search request triggers both product search and faceted search.
+  - feat: update grpc service config settings to reflect correct API deadlines
+
 # Version 1.3.0, released 2021-09-23
 
 - [Commit 672325d](https://github.com/googleapis/google-cloud-dotnet/commit/672325d):
