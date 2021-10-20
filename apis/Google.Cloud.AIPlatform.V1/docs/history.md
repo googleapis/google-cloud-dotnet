@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.0.0-beta05, released 2021-10-20
+
+- [Commit 43bcfc3](https://github.com/googleapis/google-cloud-dotnet/commit/43bcfc3):
+  - feat: add featurestore service to aiplatform v1
+  - feat: add metadata service to aiplatform v1
+  - docs: fix typo in alert.proto
+
 # Version 1.0.0-beta04, released 2021-09-24
 
 - [Commit 656f5ca](https://github.com/googleapis/google-cloud-dotnet/commit/656f5ca): feat: add Vizier service to aiplatform v1
