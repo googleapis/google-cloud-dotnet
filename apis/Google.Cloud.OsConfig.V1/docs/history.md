@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.5.0, released 2021-10-20
+
+- [Commit 5cd7c96](https://github.com/googleapis/google-cloud-dotnet/commit/5cd7c96): feat: Update osconfig v1 and v1alpha RecurringSchedule.Frequency with DAILY frequency
+
 # Version 1.4.0, released 2021-09-24
 
 - [Commit 7a79d5a](https://github.com/googleapis/google-cloud-dotnet/commit/7a79d5a): feat: add OSConfigZonalService API
