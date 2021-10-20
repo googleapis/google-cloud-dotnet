@@ -27,6 +27,9 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// The service that handles the CRUD of Vertex AI Dataset and its child
   /// resources.
   /// Service for managing datasets.
+  /// Service for managing datasets.
+  /// Service for managing datasets.
+  /// Service for managing datasets.
   /// </summary>
   public static partial class DatasetService
   {

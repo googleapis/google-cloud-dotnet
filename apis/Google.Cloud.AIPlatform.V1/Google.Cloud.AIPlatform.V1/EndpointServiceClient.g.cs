@@ -292,6 +292,9 @@ namespace Google.Cloud.AIPlatform.V1
     /// <remarks>
     /// A service for managing Vertex AI's Endpoints.
     /// Service for managing endpoints.
+    /// Service for managing endpoints.
+    /// Service for managing endpoints.
+    /// Service for managing endpoints.
     /// </remarks>
     public abstract partial class EndpointServiceClient
     {
@@ -1520,6 +1523,9 @@ namespace Google.Cloud.AIPlatform.V1
     /// <summary>EndpointService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// A service for managing Vertex AI's Endpoints.
+    /// Service for managing endpoints.
+    /// Service for managing endpoints.
+    /// Service for managing endpoints.
     /// Service for managing endpoints.
     /// </remarks>
     public sealed partial class EndpointServiceClientImpl : EndpointServiceClient

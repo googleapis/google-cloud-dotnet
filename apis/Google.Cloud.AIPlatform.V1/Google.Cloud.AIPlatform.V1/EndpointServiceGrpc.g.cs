@@ -26,6 +26,9 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// A service for managing Vertex AI's Endpoints.
   /// Service for managing endpoints.
+  /// Service for managing endpoints.
+  /// Service for managing endpoints.
+  /// Service for managing endpoints.
   /// </summary>
   public static partial class EndpointService
   {
