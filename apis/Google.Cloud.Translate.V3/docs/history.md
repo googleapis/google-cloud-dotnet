@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-10-20
+
+- [Commit 294aefe](https://github.com/googleapis/google-cloud-dotnet/commit/294aefe): fix: add model signature for batch document translation
+
 # Version 2.3.0, released 2021-08-31
 
 - [Commit 1440a7c](https://github.com/googleapis/google-cloud-dotnet/commit/1440a7c): feat: added v3 proto for online/batch document translation and updated v3beta1 proto for format conversion
