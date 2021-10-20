@@ -1,5 +1,9 @@
 # Version history
 
+# Version 4.3.0-beta07, released 2021-10-20
+
+- [Commit 6e34e22](https://github.com/googleapis/google-cloud-dotnet/commit/6e34e22): refactor: Fully standardize error reporting options.
+
 # Version 4.3.0-beta06, released 2021-10-13
 
 Versions 4.3.0-beta04 and 4.3.0-beta05 were not released because of CI errors.
