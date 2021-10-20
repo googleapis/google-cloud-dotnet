@@ -2442,7 +2442,7 @@
     },
     {
       "id": "Google.Cloud.ServiceControl.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Service Control",
       "productUrl": "https://cloud.google.com/service-infrastructure/docs/service-control/reference/rpc",
